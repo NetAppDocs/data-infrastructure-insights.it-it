@@ -1,0 +1,195 @@
+---
+sidebar: sidebar 
+permalink: task_config_user_dir_connect.html 
+keywords: collector, configure, LDAP, Active Directory, cloud secure 
+summary: Configurazione di workload Security Active Directory User Directory Collector 
+---
+= Configurazione di un servizio di raccolta directory utente Active Directory (ad)
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Workload Security può essere configurato per raccogliere gli attributi utente dai server Active Directory.
+
+.Prima di iniziare
+* Per eseguire questa attività, è necessario essere un amministratore di Data Infrastructure Insights o un proprietario dell'account.
+* È necessario disporre dell'indirizzo IP del server che ospita il server Active Directory.
+* Prima di configurare un connettore di directory utente, è necessario configurare un agente.
+
+
+.Procedura per la configurazione di un servizio di raccolta directory utente
+. Nel menu protezione del carico di lavoro, fare clic su: *Collector > User Directory Collector > + User Directory Collector* e selezionare *Active Directory*
++
+Viene visualizzata la schermata Add User Directory (Aggiungi directory utente).
+
+
+
+Configurare User Directory Collector inserendo i dati richiesti nelle seguenti tabelle:
+
+[cols="2*"]
+|===
+
+
+| Nome | Descrizione 
+
+
+| Nome | Nome univoco della directory utente. Ad esempio _GlobalADCollector_ 
+
+
+| Agente | Selezionare un agente configurato dall'elenco 
+
+
+| IP del server/Nome dominio | Indirizzo IP o FQDN (Fully-qualified Domain Name) del server che ospita la directory attiva 
+
+
+| Nome foresta | Livello di foresta della struttura di directory. Il nome della foresta consente di utilizzare entrambi i seguenti formati: _X. y.y.z_ => nome di dominio diretto così come lo si dispone sulla SVM. [Esempio: hq.companyname.com] _DC=x,DC=y,DC=z_ => nomi distinti relativi [esempio: DC=hq,DC= nomeazienda,DC=com] oppure è possibile specificare quanto segue: _OU=engineering,DC=hq,DC= companyname,DC=com_ [per filtrare in base all'ingegneria specifica dell'unità organizzativa] _CN=nome utente,OU=engineering,DC=companyname, DC=netapp, DC=com_ [per ottenere solo un utente specifico con <username> da OU <engineering>] _CN=utenti Acrobat,CN=utenti,DC=hq,DC=companyname,DC=companyname,DC=companyname,o=tutti gli utenti attendibili all'interno di quest'organizzazione sono supportati da Acrobat_S=i domini che sono supportati da Microsoft,S=i domini Microsoft,S=IT_. 
+
+
+| DN di binding | Utente autorizzato a cercare nella directory. Ad esempio: _username@companyname.com_ o _username@domainname.com_ inoltre, è richiesta l'autorizzazione di sola lettura del dominio. L'utente deve essere membro del gruppo di protezione _Controller di dominio di sola lettura_. 
+
+
+| ASSOCIARE la password | Password del server di directory (ad es. Password per il nome utente utilizzato in Bind DN) 
+
+
+| Protocollo | ldap, ldaps, ldap-start-tls 
+
+
+| Porte | Selezionare la porta 
+|===
+Se i nomi degli attributi predefiniti sono stati modificati in Active Directory, immettere i seguenti attributi richiesti per il server di directory. Nella maggior parte dei casi, questi nomi di attributi vengono _non_ modificati in Active Directory, nel qual caso è possibile semplicemente procedere con il nome dell'attributo predefinito.
+
+[cols="2*"]
+|===
+
+
+| Attributi | Nome dell'attributo nel server di directory 
+
+
+| Nome visualizzato | nome 
+
+
+| SID | objectsid 
+
+
+| Nome utente | SAMAccountName 
+|===
+Fare clic su Includi attributi facoltativi per aggiungere uno dei seguenti attributi:
+
+[cols="2*"]
+|===
+
+
+| Attributi | Nome attributo in Directory Server 
+
+
+| Indirizzo e-mail | mail 
+
+
+| Numero di telefono | numero di telefono 
+
+
+| Ruolo | titolo 
+
+
+| Paese | co 
+
+
+| Stato | stato 
+
+
+| Reparto | reparto 
+
+
+| Foto | thumbnailphoto 
+
+
+| ManagerDN | manager 
+
+
+| Gruppi | MemberOf 
+|===
+
+
+== Verifica della configurazione di User Directory Collector
+
+È possibile convalidare le autorizzazioni utente LDAP e le definizioni degli attributi utilizzando le seguenti procedure:
+
+* Utilizzare il seguente comando per convalidare l'autorizzazione utente LDAP per la sicurezza del carico di lavoro:
++
+`ldapsearch -o ldif-wrap=no -LLL -x -b "dc=netapp,dc=com" -h 10.235.40.29 -p 389 -D \Administrator@netapp.com -W`
+
+* Utilizzare ad Explorer per navigare in un database ad, visualizzare le proprietà e gli attributi degli oggetti, visualizzare le autorizzazioni, visualizzare lo schema di un oggetto, eseguire ricerche sofisticate che è possibile salvare ed eseguire nuovamente.
++
+** Installare link:https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer["AD Explorer"] su qualsiasi computer Windows in grado di connettersi al server ad.
+** Connettersi al server ad utilizzando il nome utente/la password del server di directory ad.
+
+
+
+
+image:cs_ADExample.png["CONNESSIONE AD"]
+
+
+
+== Risoluzione degli errori di configurazione di User Directory Collector
+
+La seguente tabella descrive i problemi noti e le risoluzioni che possono verificarsi durante la configurazione di Collector:
+
+[cols="2*"]
+|===
+| Problema: | Risoluzione: 
+
+
+| L'aggiunta di un connettore directory utente determina lo stato ‘Error’. Viene visualizzato il messaggio di errore "credenziali non valide fornite per il server LDAP". | Nome utente o password forniti non corretti. Modificare e fornire il nome utente e la password corretti. 
+
+
+| L'aggiunta di un connettore directory utente determina lo stato ‘Error’. L'errore dice: "Impossibile ottenere l'oggetto corrispondente a DN=DC=hq,DC=domainname,DC=com fornito come nome della foresta". | Nome di foresta specificato errato. Modificare e fornire il nome corretto della foresta. 
+
+
+| Gli attributi facoltativi dell'utente di dominio non vengono visualizzati nella pagina Profilo utente sicurezza workload. | Ciò è probabilmente dovuto a una mancata corrispondenza tra i nomi degli attributi facoltativi aggiunti in CloudSecure e i nomi degli attributi effettivi in Active Directory. Modificare e fornire i nomi degli attributi facoltativi corretti. 
+
+
+| Data collector in stato di errore con "Impossibile recuperare utenti LDAP. Motivo dell'errore: Impossibile connettersi al server, la connessione è nulla" | Riavviare il raccoglitore facendo clic sul pulsante _Restart_. 
+
+
+| L'aggiunta di un connettore directory utente determina lo stato ‘Error’. | Assicurarsi di aver fornito valori validi per i campi obbligatori (Server, nome-foresta, BIND-DN, BIND-Password). Assicurarsi che l'input bind-DN sia sempre fornito come ‘Amministratore@<domain_forest_name>’ o come account utente con privilegi di amministratore di dominio. 
+
+
+| L'aggiunta di un connettore directory utente determina lo stato ‘RETENTATIVO'. Mostra l'errore "Impossibile definire lo stato del raccoglitore, motivo comando TCP [Connect(localhost:35012,None,List(),some(,seconds),true)] non riuscito a causa di java.net.ConnectionException:Connection rifiutato." | IP o FQDN non corretti forniti per il server ad. Modificare e fornire l'indirizzo IP o l'FQDN corretto. 
+
+
+| L'aggiunta di un connettore directory utente determina lo stato ‘Error’. Viene visualizzato il messaggio di errore "Impossibile stabilire la connessione LDAP". | IP o FQDN non corretti forniti per il server ad. Modificare e fornire l'indirizzo IP o l'FQDN corretto. 
+
+
+| L'aggiunta di un connettore directory utente determina lo stato ‘Error’. L'errore indica che non è stato possibile caricare le impostazioni. Motivo: Si è verificato un errore nella configurazione dell'origine dati. Motivo specifico: /Connector/conf/application.conf: 70: ldap.ldap-port ha una STRINGA di tipo piuttosto che UN NUMERO" | Valore errato per la porta fornita. Provare a utilizzare i valori di porta predefiniti o il numero di porta corretto per il server ad. 
+
+
+| Ho iniziato con gli attributi obbligatori e ho funzionato. Dopo aver aggiunto i dati facoltativi, i dati degli attributi facoltativi non vengono recuperati da ad. | Ciò è probabilmente dovuto a una mancata corrispondenza tra gli attributi opzionali aggiunti in CloudSecure e i nomi degli attributi effettivi in Active Directory. Modificare e fornire il nome dell'attributo obbligatorio o facoltativo corretto. 
+
+
+| Dopo aver riavviato il collector, quando avverrà la sincronizzazione ad? | La sincronizzazione AD viene eseguita immediatamente dopo il riavvio del collector. Il recupero dei dati utente di circa 300.000 utenti richiede circa 15 minuti e viene aggiornato automaticamente ogni 12 ore. 
+
+
+| I dati dell'utente vengono sincronizzati da ad a CloudSecure. Quando verranno cancellati i dati? | I dati dell'utente vengono conservati per 13 mesi in caso di mancato aggiornamento. Se il tenant viene cancellato, i dati verranno cancellati. 
+
+
+| User Directory Connector si trova nello stato ‘Error’. "Connettore in stato di errore. Nome del servizio: UsersLdap. Motivo dell'errore: Impossibile recuperare gli utenti LDAP. Motivo del guasto: 80090308: LdapErr: DSID-0C090453, commento: AcceptSecurityContext error, data 52e, v3839" | Nome di foresta specificato errato. Vedere sopra per informazioni su come fornire il nome corretto della foresta. 
+
+
+| Il numero di telefono non viene inserito nella pagina del profilo utente. | Ciò è probabilmente dovuto a un problema di mappatura degli attributi con Active Directory. 1. Modificare il collettore di Active Directory specifico che sta recuperando le informazioni dell'utente da Active Directory. 2. Si noti che, in base agli attributi facoltativi, è presente un nome di campo "numero telefonico" mappato all'attributo di Active Directory "numero telefonico". 4. Utilizzare lo strumento Active Directory Explorer come descritto in precedenza per sfogliare Active Directory e visualizzare il nome dell'attributo corretto. 3. Assicurarsi che in Active Directory sia presente un attributo denominato 'numero telefonico' che abbia effettivamente il numero di telefono dell'utente. 5. Diciamo che in Active Directory è stato modificato in "numero di telefono". 6. Quindi, modificare il raccoglitore di elenchi di utenti CloudSecure. Nella sezione opzionale degli attributi, sostituire ‘Telephonenumber’ con ‘phonenumber’. 7. Salvare il collettore di Active Directory, il collettore si riavvierà e riceverà il numero di telefono dell'utente e lo visualizzerà nella pagina del profilo utente. 
+
+
+| Se il certificato di crittografia (SSL) è attivato sul server Active Directory (ad), il servizio di raccolta directory utente di workload Security non può connettersi al server ad. | Disattivare la crittografia ad Server prima di configurare un User Directory Collector. Una volta recuperato il dettaglio dell'utente, questo sarà disponibile per 13 mesi. Se il server ad si disconnette dopo aver recuperato i dettagli dell'utente, i nuovi utenti aggiunti in ad non verranno recuperati. Per recuperare di nuovo, è necessario connettere ad ad il raccoglitore di directory dell'utente. 
+
+
+| I dati di Active Directory sono presenti in CloudInsights Security. Eliminare tutte le informazioni utente da CloudInsights. | Non è possibile eliminare SOLO le informazioni utente di Active Directory da CloudInsights Security. Per eliminare l'utente, è necessario eliminare l'intero tenant. 
+|===

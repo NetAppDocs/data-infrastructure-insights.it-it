@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: task_dc_lenovo_hx.html 
+keywords: data collector, Lenovo, HX 
+summary: Configurazione del data collector Lenovo HX. 
+---
+= Data collector Lenovo HX
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector Lenovo HX acquisisce informazioni sull'inventario e sulle performance dai sistemi storage Lenovo HX.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessarie le seguenti informazioni:
+
+* Un nome univoco per il data collector
+* L'unità di acquisizione associata al data collector
+* Requisiti per la porta TCP 9440
+
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario e sulle prestazioni dal data collector Lenovo HX. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Container | Volume interno 
+
+
+| Nodo | Controller 
+
+
+| Condividere | Condivisione file 
+
+
+| Nutanix Distributed file System (NDFS) | Condividere 
+
+
+| Gruppo di volumi | LUN back-end 
+|===
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP esterno PRISM | Indirizzo IP utilizzato per la connessione al sistema di storage 
+
+
+| Nome utente | Nome utente per accedere al sistema di storage. L'impostazione predefinita è admin. 
+
+
+| Password | Password per il sistema storage Lenovo HX 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta TCP | Porta TCP utilizzata per la connessione a Lenovo HX. Il valore predefinito è 9440. 
+
+
+| Intervallo polling inventario | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+|===

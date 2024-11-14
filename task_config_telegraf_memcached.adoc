@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_memcached.html 
+keywords: telegraf, installation, install, memcached 
+summary: Configurazione del data collector Memcached 
+---
+= Data Collector Memcached
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere metriche da Memcached.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Memcached.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:MemcachedDCConfigWindows.png["Configurazione Memcached"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili nella link:https://github.com/memcached/memcached/wiki["Wiki Memcached"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Memcached | Server namespace | Nome nodo IP | Accettazione delle connessioni richieste di autenticazione gestite autenticazioni non riuscite byte utilizzati byte lettura (per sec) byte scritti (per sec) CAS Badval CAS accessi CAS errori requisiti di flusso (per sec) ottenere requisiti (per sec) requisiti impostati (per sec) requisiti di tocco (per sec) rese di connessione (per sec) Strutture di connessione connessioni aperte elementi memorizzati correnti Richieste di decr riscontri (per sec) Richieste di decr perse (per sec) Richieste di eliminazione riscontri (per sec) Richieste di eliminazione mancati (per sec) elementi sfratti validi elementi scaduti riscontri (per sec) Hash byte utilizzati Hash sta espandendo Hash Power Level Incr Requests Hits (per sec) Incr Requests miss (per sec) Server Max byte Listen Disabled Num Reclaimed Worker Threads Conteggio totale connessioni aperte totale elementi memorizzati Touch Hits Touch manca il tempo di attività del server 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ibm_xiv.html 
+keywords: IBM, XIV, SAN, A9000 
+summary: Configurazione di IBM XIV/A9000 Data Collector. 
+---
+= Configurazione del data collector IBM XIV/A9000
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector IBM XIV e A9000 (CLI) utilizza l'interfaccia della riga di comando XIV per raccogliere i dati di inventario, mentre la raccolta delle performance viene eseguita effettuando chiamate SMI-S all'array XIV/A9000, che esegue un provider SMI-S sulla porta 7778.
+
+
+
+== Terminologia
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco | Disco 
+
+
+| Sistema storage | Storage 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Volume | Volume 
+|===
+
+
+== Requisiti
+
+Per configurare e utilizzare questo data collector devono essere soddisfatti i seguenti requisiti:
+
+* Requisiti della porta: Porta TCP 7778
+* Nome utente e password di sola lettura
+* XIV CLI deve essere installato sull'AU
+
+
+
+
+== Requisiti relativi alle performance
+
+Di seguito sono riportati i requisiti per la raccolta delle performance:
+
+* Agente SMI-S 1.4 o superiore
+* CIMService compatibile con SMI-S in esecuzione su array. La maggior parte degli array XIV dispone di un CIMServer installato per impostazione predefinita.
+* È necessario fornire l'accesso utente per CIMServer. L'accesso deve avere accesso completo in lettura alla configurazione e alle proprietà dell'array.
+* Spazio dei nomi SMI-S. Il valore predefinito è root/ibm. È configurabile in CIMServer.
+* Requisiti delle porte: 5988 per HTTP, 5989 per HTTPS.
+* Fare riferimento al seguente collegamento su come creare un account per la raccolta delle prestazioni SMI-S: https://www.ibm.com/docs/en/products?topic=/com.ibm.tpc_V41.doc/fqz0_t_adding_cim_agent.html[]
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP XIV | Indirizzo IP o nome di dominio completo dello storage XIV 
+
+
+| Nome utente | Nome utente dello storage XIV 
+
+
+| Password | Password per lo storage XIV 
+
+
+| Percorso completo alla directory CLI XIV | Percorso completo della cartella contenente la CLI XIV 
+
+
+| Indirizzo IP host SMI-S. | Indirizzo IP dell'host SMI-S. 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 40 minuti. 
+
+
+| Protocollo SMI-S. | Protocollo utilizzato per connettersi al provider SMI-S. Visualizza anche la porta predefinita. 
+
+
+| Eseguire l'override della porta SMI-S. | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+
+
+| Nome utente | Nome utente dell'host del provider SMI-S. 
+
+
+| Password | Password per l'host del provider SMI-S. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

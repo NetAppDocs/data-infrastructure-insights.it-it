@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: task_export_query_results.html 
+summary: Come esportare i risultati di una query in un file .csv 
+keywords: query, queries, export, csv 
+---
+= Esportazione dei risultati della query in un file .CSV
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+È possibile esportare i risultati di qualsiasi query in un file .CSV, che consente di analizzare i dati o importarli in un'altra applicazione.
+
+.Fasi
+. Accedi a Data Infrastructure Insights.
+. Fare clic su *Query* e selezionare *Mostra tutte le query*.
++
+Viene visualizzata la pagina Query.
+
+. Fare clic su una query.
+. Fare clic su image:ExportButton.png["Pulsante Export (Esporta)"] per esportare i risultati della query in un file .CSV.
+
+
+
+NOTE: L'esportazione in .CSV è disponibile anche nel menu "Three dots" (tre punti) nei widget della tabella della dashboard e nella maggior parte delle tabelle delle landing page.
+
+I dati esportati rifletteranno il filtro corrente, le colonne e i nomi delle colonne visualizzati.
+
+Nota: Quando viene visualizzata una virgola nel nome di una risorsa, l'esportazione racchiude il nome tra virgolette, conservando il nome della risorsa e il formato .csv appropriato.
+
+Quando si apre un file .CSV esportato con Excel, se si dispone di un nome oggetto o di un altro campo nel formato NN:NN (due cifre seguite da due punti e altre due cifre), Excel a volte interpreta tale nome come formato orario, anziché come formato testo. Ciò può causare la visualizzazione di valori errati in tali colonne in Excel. Ad esempio, un oggetto denominato "81:45" viene visualizzato in Excel come "81:45:00".
+
+Per risolvere questo problema, importare il file .CSV in Excel seguendo la procedura riportata di seguito:
+
+. Aprire un nuovo foglio in Excel.
+. Nella scheda "dati", scegliere "da testo".
+. Individuare il file .CSV desiderato e fare clic su "Import" (Importa).
+. Nella procedura guidata di importazione, scegliere "delimitato" e fare clic su Avanti.
+. Scegliere "virgola" per il delimitatore e fare clic su Avanti.
+. Selezionare le colonne desiderate e scegliere "testo" per il formato dei dati della colonna.
+. Fare clic su fine.
++
+Gli oggetti devono essere visualizzati in Excel nel formato corretto.
+
+

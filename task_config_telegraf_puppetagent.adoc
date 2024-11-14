@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_puppetagent.html 
+keywords: telegraf, installation, install, Puppet 
+summary: Configurazione del data collector delle marionette 
+---
+= Puppet Agent Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Puppet Agent.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Puppet.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:PuppetDCConfigWindows.png["Configurazione delle marionette"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili in https://puppet.com/docs["Documentazione delle marionette"]
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+
+
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Agente di puppet | UUID nodo spazio dei nomi | Nome nodo posizione nodo versione IP stringa di configurazione versione Puppet | Modifiche eventi totali Eventi di errore Eventi di successo risorse totali risorse modificate risorse non riuscite riavvio risorse risorse Outofsync risorse riavviate risorse pianificate risorse ignorate tempo totale di ancoraggio tempo di recupero tempo di configurazione tempo di esecuzione tempo di esecuzione tempo di esecuzione file tempo di caricamento tempo di esecuzione tempo di esecuzione tempo tempo di esecuzione tempo tempo tempo di servizio tempo di gestione tempo totale Time User 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

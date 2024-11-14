@@ -1,0 +1,85 @@
+---
+sidebar: sidebar 
+permalink: reporting_data_retention.html 
+summary: Data retention di Data Infrastructure Insights per il reporting 
+keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying, retention 
+---
+= Come vengono conservati i dati storici per il reporting
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights conserva i dati cronologici da utilizzare in Reporting in base ai data mart e alla granularità dei dati, come illustrato nella tabella seguente.
+
+|===
+
+
+| Data mart | Oggetto misurato | Granularità | Periodo di conservazione 
+
+
+| Performance mart | Volumi e volumi interni | Ogni ora | 14 giorni 
+
+
+| Performance mart | Volumi e volumi interni | Ogni giorno | 13 mesi 
+
+
+| Performance mart | Applicazione | Ogni ora | 13 mesi 
+
+
+| Performance mart | Host | Ogni ora | 13 mesi 
+
+
+| Performance mart | Prestazioni dello switch per la porta | Ogni ora | 35 giorni 
+
+
+| Performance mart | Prestazioni dello switch per host, storage e nastro | Ogni ora | 13 mesi 
+
+
+| Performance mart | Nodo storage | Ogni ora | 14 giorni 
+
+
+| Performance mart | Nodo storage | Ogni giorno | 13 mesi 
+
+
+| Performance mart | Performance delle macchine virtuali | Ogni ora | 14 giorni 
+
+
+| Performance mart | Performance delle macchine virtuali | Ogni giorno | 13 mesi 
+
+
+| Performance mart | Performance dell'hypervisor | Ogni ora | 35 giorni 
+
+
+| Performance mart | Performance dell'hypervisor | Ogni giorno | 13 mesi 
+
+
+| Performance mart | Performance della VMDK | Ogni ora | 35 giorni 
+
+
+| Performance mart | Performance della VMDK | Ogni giorno | 13 mesi 
+
+
+| Performance mart | Performance del disco | Ogni ora | 14 giorni 
+
+
+| Performance mart | Performance del disco | Ogni giorno | 13 mesi 
+
+
+| Capacità | Tutti (tranne i singoli volumi) | Ogni giorno | 13 mesi 
+
+
+| Capacità | Tutti (tranne i singoli volumi) | Rappresentante mensile | 14 mesi e oltre 
+
+
+| Inventario Mart | Singoli volumi | Stato corrente | 1 giorno (o fino al prossimo ETL) 
+|===

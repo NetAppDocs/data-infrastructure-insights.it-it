@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: kubernetes_namespace_landing_page.html 
+keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, filtering, k8s, namespace 
+summary: Descrizione della landing page dello spazio dei nomi Kubernetes 
+---
+= Pagina dei dettagli dello spazio dei nomi Kubernetes
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La pagina dei dettagli dello spazio dei nomi Kubernetes fornisce un riepilogo di tutte le risorse utilizzate da uno spazio dei nomi, incluse tutte le risorse di storage back-end e i relativi utilizzi della capacità.
+
+Facendo clic su un collegamento a uno spazio dei nomi in qualsiasi pagina di Kubernetes Explorer, viene visualizzata una pagina dettagliata per tale spazio dei nomi.
+
+image:Kubernetes_Namespace_Detail_Example_2.png["Pagina dei dettagli dello spazio dei nomi"]
+
+Come le altre pagine Kubernetes Excplorer, puoi impostare un filtro in modo che si concentri su nodi specifici o altri oggetti, oltre a visualizzare una panoramica dello stato dei pod e dello spazio dei nomi, oltre a grafici che mostrano la domanda di CPU e memoria e la capacità del volume persistente, se applicabile.
+
+Infine, nella pagina viene visualizzata una tabella dei carichi di lavoro associati allo spazio dei nomi.
+
+Fare clic su qualsiasi collegamento nella pagina per esplorare ulteriormente o risolvere i problemi dell'ambiente Kubernetes.

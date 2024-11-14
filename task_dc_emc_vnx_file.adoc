@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_vnx_file.html 
+keywords: data collector, Celerra, EMC, DELL, VNX File 
+summary: Configurazione di DELL EMC Celerra Data Collector. 
+---
+= Data collector DELL EMC VNX file (precedentemente noto come Celerra Unified Storage System)
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Questo data collector acquisisce le informazioni di inventario dal file Storage System VNX. Per la configurazione, questo data collector richiede l'indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati file VNX. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Server di rete Celerra/Pool di storage Celerra | Pool di storage 
+
+
+| File System | Volume interno 
+
+
+| Data Mover. (Mover dati | Controller 
+
+
+| File System montato su un data mover | Condivisione file 
+
+
+| Esportazioni CIFS e NFS | Condividere 
+
+
+| Volume del disco | LUN back-end 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessari i seguenti elementi:
+
+* L'indirizzo IP del processore di storage
+* Nome utente e password di sola lettura
+* Porta SSH 22
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP del file VNX | Indirizzo IP o nome di dominio completo del file device VNX 
+
+
+| Nome utente | Nome utilizzato per accedere al file device VNX 
+
+
+| Password | Password utilizzata per accedere al file device VNX 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (minuti) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 20 minuti. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore: Impossibile continuare mentre è in corso l'aggiornamento DART | Soluzione possibile: Mettere in pausa il data collector e attendere il completamento dell'aggiornamento DART prima di tentare un'altra richiesta di acquisizione. 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

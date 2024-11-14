@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_haproxy.html 
+keywords: telegraf, installation, install, haproxy 
+summary: HAConfigurazione del data collector Proxy 
+---
+= HAProxy Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da HAProxy.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere HAProxy.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:HAProxyDCConfigLinux.png["Configurazione HAProxy"]
+
+
+
+== Setup (Configurazione)
+
+Il plug-in di Telegraf per HAProxy si basa sull'abilitazione delle statistiche HAProxy. Si tratta di una configurazione integrata in HAProxy, ma non è attivata subito. Se attivato, HAProxy espone un endpoint HTML che può essere visualizzato sul browser o scartato per l'estrazione dello stato di tutte le configurazioni HAProxy.
+
+
+
+=== Compatibilità:
+
+La configurazione è stata sviluppata con la versione 1.9 di HAProxy.
+
+
+
+=== Configurazione:
+
+Per abilitare le statistiche, modificare il file di configurazione hadproxy e aggiungere le seguenti righe dopo la sezione 'default', utilizzando il proprio utente/password e/o URL hadproxy:
+
+[listing]
+----
+stats enable
+stats auth myuser:mypassword
+stats uri  /haproxy?stats
+----
+Di seguito viene riportato un esempio semplificato di file di configurazione con le statistiche attivate:
+
+[listing]
+----
+global
+  daemon
+  maxconn 256
+
+defaults
+  mode http
+  stats enable
+  stats uri /haproxy?stats
+  stats auth myuser:mypassword
+  timeout connect 5000ms
+  timeout client 50000ms
+  timeout server 50000ms
+
+frontend http-in
+  bind *:80
+  default_backend servers
+
+frontend http-in9080
+  bind *:9080
+  default_backend servers_2
+
+backend servers
+  server server1 10.128.0.55:8080 check ssl verify none
+  server server2 10.128.0.56:8080 check ssl verify none
+
+backend servers_2
+  server server3 10.128.0.57:8080 check ssl verify none
+  server server4 10.128.0.58:8080 check ssl verify none
+----
+Per istruzioni complete e aggiornate, vedere la link:https://cbonte.github.io/haproxy-dconv/1.8/configuration.html#4-stats%20enable["Documentazione HAProxy"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| HAProxy Frontend | Proxy degli indirizzi dello spazio dei nomi | Nodo IP Node Name Proxy ID Mode Process id Sessions Rate Limit Server id Sessions Limit Status | Byte in byte in uscita cache riscontri cache ricerche cache byte di compressione bypassati byte di compressione in byte di compressione in uscita risposte di compressione velocità di connessione velocità di connessione connessioni max Richieste totali negate da richieste di regole di connessione negate da problemi di sicurezza risposte negate da problemi di sicurezza Richieste negate da richieste di regole di sessione errori risposte 1xx Risposte 2xx risposte 3xx risposte 4xx risposte 5xx risposte altre richieste intercettate sessioni Rate numero massimo di richieste Rate numero massimo di richieste Rate numero massimo di richieste sessioni totali sessioni numero massimo di sessioni totale di richieste riscritte 
+
+
+| Server HAProxy | Server proxy degli indirizzi dello spazio dei nomi | Nodo IP Node Name Check Time to Finish Check Fall Configuration Check Health Value Check Rise Configuration Check Status Proxy ID Last Change Time Last Session Time Mode Process id Server id Status Weight | Server attivi Server di backup byte in byte out Check Downs Check fails il client interrompe le connessioni tempo medio downtime totale Denied Responses errori di connessione Responses 1xx Responses 2xx Responses 3xx Responses 4xx Responses 5xx Responses Other Server Selected Total Queue Current Queue Max Time Sessions Average per Seconda sessione al secondo Max Connection Reuse Response Time Sessions Average Sessions Max Server Transfer Aborts Sessions Total Time Average Requests Repatches Requests Requests Requests Requests Rewrite 
+
+
+| HAProxy back-end | Proxy degli indirizzi dello spazio dei nomi | Nodo IP Node Name ID proxy Last Change Time Last Session Time Mode Process id Server id Sessions Limit Status Weight | Server attivi Server di backup byte in byte out cache Hits Lookup cache Check Downs il client interrompe la compressione byte bypassati byte di compressione in byte di compressione out risposte di compressione connessioni tempo medio downtime totale richieste negate da problemi di sicurezza risposte negate da problemi di sicurezza errori di connessione errori di risposta risposte 1xx risposte 2xx risposte 3xx risposte 4xx risposte 5xx risposte Altro server selezionato coda totale coda corrente coda massima durata media sessioni al secondo Richieste max connessione tempo di risposta tempo di risposta sessioni max Server Transfer interrompe le sessioni totale sessioni tempo totale media richieste di reinvio Richieste tentativi Riscrive 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: concept_cs_attack_simulator.html 
+keywords: ransomware, simulation, simulator, restrict, attack 
+summary: Utilizzando uno script, è possibile simulare un attacco ransomware per testare o dimostrare la sicurezza del carico di lavoro 
+---
+= Sicurezza del carico di lavoro: Simulazione di un attacco
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+È possibile utilizzare le istruzioni riportate in questa pagina per simulare un attacco per il test o la dimostrazione di workload Security utilizzando lo script ransomware Simulation incluso.
+
+
+
+== Cose da notare prima di iniziare
+
+* Lo script di simulazione ransomware funziona solo su Linux.
+* Lo script viene fornito con i file di installazione dell'agente workload Security. È disponibile su qualsiasi computer su cui è installato un agente workload Security.
+* È possibile eseguire lo script sul computer dell'agente workload Security; non è necessario preparare un'altra macchina Linux. Tuttavia, se si preferisce eseguire lo script su un altro sistema, è sufficiente copiare lo script ed eseguirlo.
+
+
+
+
+== Avere almeno 1,000 file di esempio
+
+Questo script deve essere eseguito su una SVM con una cartella contenente file da crittografare. Si consiglia di avere almeno 1,000 file all'interno di tale cartella e di qualsiasi sottocartella. I file non devono essere vuoti. Non creare i file e crittografarli utilizzando lo stesso utente. Workload Security considera questa attività a basso rischio e pertanto non genera un avviso (ad esempio, lo stesso utente modifica i file appena creati).
+
+Vedere di seguito le istruzioni per link:#create-files-programmatically["creare a livello di codice file non vuoti"].
+
+
+
+== Linee guida prima di eseguire il simulatore:
+
+. Assicurarsi che i file crittografati non siano vuoti.
+. Assicurarsi di crittografare > 50 file. Un numero limitato di file verrà ignorato.
+. Non eseguire più attacchi con lo stesso utente. Dopo alcune volte, workload Security apprenderà questo comportamento dell'utente e supporrà che si tratti del comportamento normale dell'utente.
+. Non crittografare i file creati dallo stesso utente. La modifica di un file appena creato da un utente non è considerata un'attività rischiosa. Utilizzare invece i file creati da un altro utente O attendere qualche ora tra la creazione e la crittografia dei file.
+
+
+
+
+== Preparare il sistema
+
+Per prima cosa, montare il volume di destinazione sulla macchina. È possibile montare un montaggio NFS o un'esportazione CIFS.
+
+Per montare l'esportazione NFS in Linux:
+
+....
+mount -t nfs -o vers=4.0 10.193.177.158:/svmvol1 /mntpt
+mount -t nfs -o vers=4.0 Vserver data IP>:/nfsvol /destinationlinuxfolder
+....
+Non montare NFS versione 4.1; non è supportato da Fpolicy.
+
+Per montare CIFS in Linux:
+
+ mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o username=raisa
+Quindi, configurare un Data Collector:
+
+. Configurare l'agente workload Security, se non è già stato fatto.
+. Configurare il data collector SVM se non è già stato fatto.
+
+
+
+
+== Eseguire lo script ransomware Simulator
+
+. Accedere (ssh) al computer dell'agente workload Security.
+. Accedere a: _/opt/netapp/cloudSecure/Agent/install_
+. Chiamare lo script del simulatore senza parametri per visualizzare l'utilizzo:
++
+....
+# pwd
+/opt/netapp/cloudsecure/agent/install
+# ./ransomware_simulator.sh
+Error: Invalid directory  provided.
+Usage: ./ransomware_simulator.sh [-e] [-d] [-i <input_directory>]
+       -e to encrypt files (default)
+       -d to restore files
+       -i <input_directory> - Files under the directory to be encrypted
+....
++
+....
+Encrypt command example: ./ransomware_simulator.sh -e -i /mnt/audit/reports/
+Decrypt command example: ./ransomware_simulator.sh -d -i /mnt/audit/reports/
+....
+
+
+
+
+== Crittografare i file di test
+
+Per crittografare i file, eseguire il seguente comando:
+
+....
+# ./ransomware_simulator.sh -e -i /root/for/
+Encryption key is saved in /opt/netapp/cloudsecure/cloudsecure-agent-1.251.0/install/encryption-key,
+which can be used for restoring the files.
+Encrypted /root/for/File000.txt
+Encrypted /root/for/File001.txt
+Encrypted /root/for/File002.txt
+...
+....
+
+
+== Ripristinare i file
+
+Per decrittare, eseguire il seguente comando:
+
+....
+[root@scspa2527575001 install]# ./ransomware_simulator.sh -d -i /root/for/
+File /root/for/File000.txt is restored.
+File /root/for/File001.txt is restored.
+File /root/for/File002.txt is restored.
+...
+....
+
+
+== Eseguire lo script più volte
+
+Dopo aver generato un attacco ransomware per un utente, passare a un altro utente per generare un attacco aggiuntivo. Workload Security apprende il comportamento dell'utente e non avvisa in caso di ripetuti attacchi ransomware entro un breve periodo di tempo per lo stesso utente.
+
+
+
+== Creare file a livello di codice
+
+Prima di creare i file, è necessario interrompere o sospendere l'elaborazione del Data Collector. Prima di aggiungere il data collector all'agente, attenersi alla procedura riportata di seguito. Se è già stato aggiunto il data collector, è sufficiente modificare il data collector, inserire una password non valida e salvarla. In questo modo, il data collector viene temporaneamente messo in stato di errore. NOTA: Annotare la password originale.
+
+
+NOTE: L'opzione consigliata è a link:task_add_collector_svm.html#play-pause-data-collector["mettere in pausa il raccoglitore"] prima di creare i file.]
+
+Prima di eseguire la simulazione, è necessario aggiungere i file da crittografare. È possibile copiare manualmente i file da crittografare nella cartella di destinazione oppure utilizzare uno script (vedere l'esempio seguente) per creare i file a livello di programmazione. Copiare almeno 1,000 file, indipendentemente dal metodo utilizzato.
+
+Se si sceglie di creare i file a livello di programmazione, attenersi alla seguente procedura:
+
+. Accedere alla casella Agente.
+. Montare un'esportazione NFS dalla SVM del filer alla macchina Agent. Su tale cartella.
+. In tale cartella creare un file denominato createfiles.sh
+. Copiare le seguenti righe nel file.
++
+....
+for i in {000..1000}
+do
+   echo hello > "File${i}.txt"
+done
+echo 3 > /proc/sys/vm/drop_caches ; sync
+....
+. Salvare il file.
+. Assicurarsi che il permesso di esecuzione sul file sia:
++
+ chmod 777 ./createfiles.sh
+. Eseguire lo script:
++
+ ./createfiles.sh
++
+nella cartella corrente verranno creati 1000 file.
+
+. Riattivare il data collector
++
+Se il data collector è stato disattivato al punto 1, modificare il data collector, inserire la password corretta e salvare. Assicurarsi che il data collector sia nuovamente in esecuzione.
+
+. Se il raccoglitore è stato messo in pausa prima di procedere come indicato di seguito, assicurarsi di selezionare link:task_add_collector_svm.html#play-pause-data-collector["riprendere il raccoglitore"].
+

@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: task_view_configured_data_collectors.html 
+keywords: acquisition, AU, data collector, collector, bulk edit, postpone polling, resume polling 
+summary: Un riepilogo. 
+---
+= Gestione dei data collettori configurati
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La pagina Data Collector installati fornisce l'accesso ai data collector configurati per Data Infrastructure Insights. È possibile utilizzare questa pagina per modificare i data collettori esistenti.
+
+.Fasi
+. Nel menu Data Infrastructure Insights (informazioni sull'infrastruttura dati), fare clic su *Observability (osservabilità) > Collector* (collezionisti)
++
+Viene visualizzata la schermata Available Data Collector (raccolta dati disponibili).
+
+. Fare clic su *Installed Data Collector* (raccolta dati installati)
++
+Viene visualizzato un elenco di tutti i Data Collector installati. L'elenco fornisce il nome del collector, lo stato, l'indirizzo IP a cui il collector accede e l'ultima volta che i dati sono stati acquisiti da un dispositivo. Le azioni che è possibile eseguire in questa schermata includono:
+
++
+** Polling del controllo
+** Modificare le credenziali del data collector
+** Clonare i data collettori
+
+
+
+
+
+
+== Controllo del polling di Data Collector
+
+Dopo aver apportato una modifica a un data collector, potrebbe essere necessario eseguire immediatamente il polling per verificare le modifiche oppure posticipare la raccolta di dati su un data collector per uno, tre o cinque giorni mentre si lavora su un problema.
+
+.Fasi
+. Nel menu Data Infrastructure Insights (informazioni sull'infrastruttura dati), fare clic su *Observability (osservabilità) > Collector* (collezionisti)
+. Fare clic su *Installed Data Collector* (raccolta dati installati)
+. Selezionare la casella di controllo a sinistra del Data Collector che si desidera modificare
+. Fare clic su *azioni in blocco* e selezionare l'azione di polling che si desidera eseguire.
++
+Le azioni bulk possono essere eseguite simultaneamente su più Data Collector. Selezionare i data collettori e scegliere l'azione da eseguire dal menu *azione in blocco*.
+
+
+
+
+
+== Modifica delle informazioni di data collector
+
+È possibile modificare le informazioni di configurazione del data collector esistente.
+
+.Per modificare un singolo data collector:
+. Nel menu Data Infrastructure Insights, fare clic su *Observability > Collectors* (osservabilità > Collector*) per aprire l'elenco dei Data Collector installati.
+. Nel menu delle opzioni a destra del data collector che si desidera modificare, fare clic su *Edit* (Modifica).
++
+Viene visualizzata la finestra di dialogo Edit Collector (Modifica modulo di raccolta).
+
+. Inserire le modifiche e fare clic su *Test Configuration* (verifica configurazione) per verificare la nuova configurazione oppure fare clic su *Save* (Salva) per salvare la configurazione.
+
+
+È inoltre possibile modificare più data raccoglitori:
+
+. Selezionare la casella di controllo a sinistra di ciascun data collector che si desidera modificare.
+. Fare clic sul pulsante *azioni in blocco* e scegliere *Modifica* per aprire la finestra di dialogo Modifica raccolta dati.
+. Modificare i campi come indicato sopra.
++
+
+NOTE: I data raccoglitori selezionati devono essere dello stesso fornitore e modello e risiedere nella stessa unità di acquisizione.
+
++
+Quando si modificano più data collector, il campo Data Collector Name (Nome Data Collector) mostra "Mixed" (misto) e non può essere modificato. Altri campi, come nome utente e password, mostrano "Mixed" e possono essere modificati. I campi che condividono lo stesso valore tra i data collettori selezionati mostrano i valori correnti e possono essere modificati.
+
++
+Quando si modificano più data colleziones, il pulsante *Test Configuration* non è disponibile.
+
+
+
+
+
+== Cloning data raccoglitori
+
+Utilizzando la funzione di clonazione, è possibile aggiungere rapidamente un'origine dati con le stesse credenziali e attributi di un'altra origine dati. La clonazione consente di configurare facilmente più istanze dello stesso tipo di dispositivo.
+
+.Fasi
+. Nel menu Data Infrastructure Insights (informazioni sull'infrastruttura dati), fare clic su *Observability (osservabilità) > Collector* (collezionisti).
+. Fare clic su *Installed Data Collector* (raccolta dati installati).
+. Fare clic sulla casella di controllo a sinistra del data collector che si desidera copiare.
+. Nel menu delle opzioni a destra del data collector selezionato, fare clic su *Clone*.
++
+Viene visualizzata la finestra di dialogo Clone Data Collector.
+
+. Inserire nuove informazioni nei campi obbligatori.
+. Fare clic su *Save* (Salva).
+
+
+.Al termine
+L'operazione di clonazione copia tutti gli altri attributi e impostazioni per creare il nuovo data collector.
+
+
+
+== Esecuzione di azioni in blocco sui data collettori
+
+È possibile modificare contemporaneamente alcune informazioni per più data collezions. Questa funzione consente di avviare un polling, posticipare il polling e riprendere il polling su più data raccoglitori. Inoltre, è possibile eliminare più data raccoglitori.
+
+.Fasi
+. Nel menu Data Infrastructure Insights (informazioni sull'infrastruttura dati), fare clic su *Observability (osservabilità) > Collector* (collezionisti)
+. Fare clic su *Installed Data Collector* (raccolta dati installati)
+. Fare clic sulla casella di controllo a sinistra dei raccoglitori di dati che si desidera modificare.
+. Nel menu delle opzioni a destra, fare clic sull'opzione che si desidera eseguire.
+
+
+.Al termine
+L'operazione selezionata viene eseguita sui data colleziones. Quando si sceglie di eliminare i data colleziones, viene visualizzata una finestra di dialogo che richiede di conformare l'azione.

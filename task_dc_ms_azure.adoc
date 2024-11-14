@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ms_azure.html 
+keywords: data collector, azure, 
+summary: Configurazione di Azure Compute Data Collector. 
+---
+= Configurazione di Azure Compute Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza il tool di raccolta dei dati di calcolo di Azure per acquisire i dati di inventario e sulle performance dalle istanze di calcolo di Azure.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessarie le seguenti informazioni.
+
+* Requisito porta: 443 HTTPS
+* URI di reindirizzamento Azure OAuth 2.0 (login.microsoftonline.com)
+* IP REST di Azure Management (management.azure.com)
+* IP di Azure Resource Manager (management.core.windows.net)
+* Azure Service Principal Application (Client) ID (ruolo di lettore richiesto)
+* Chiave di autenticazione principale del servizio Azure (password utente)
+* Devi configurare un account Azure per il rilevamento Data Infrastructure Insights.
++
+Una volta configurato correttamente l'account e registrata l'applicazione in Azure, si disporranno delle credenziali necessarie per rilevare l'istanza di Azure con Data Infrastructure Insights. Il seguente collegamento descrive come configurare l'account per il rilevamento. https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal[]
+
+
+
+
+
+== Configurazione
+
+Inserire i dati nei campi di raccolta dati in base alla tabella riportata di seguito:
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Azure Service Principal Application (Client) ID (ruolo di lettore richiesto) | ID di accesso ad Azure. Richiede l'accesso al ruolo Reader. 
+
+
+| ID tenant Azure | ID tenant Microsoft 
+
+
+| Chiave di autenticazione principale del servizio Azure | Chiave di autenticazione per l'accesso 
+
+
+| Ho capito che Microsoft mi ha dato la bolletta per le richieste API | Controlla questa sezione per verificare che Microsoft ti presenti la fattura per le richieste API effettuate tramite il polling Insight. 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Il valore predefinito è 60 
+
+
+| Scegliere "Escludi" o "Includi" per applicare il filtro delle macchine virtuali in base ai tag | Specificare se includere o escludere le macchine virtuali in base ai tag durante la raccolta dei dati. Se si seleziona ‘Includi’, il campo Tag Key non può essere vuoto. 
+
+
+| Tag Key e valori su cui filtrare le macchine virtuali | Fare clic su *+ Filter Tag* (Tag filtro) per scegliere quali macchine virtuali (e dischi associati) includere/escludere filtrando le chiavi e i valori corrispondenti alle chiavi e ai valori dei tag sulla macchina virtuale. Tag Key è obbligatorio, Tag Value è facoltativo. Quando il valore Tag è vuoto, la VM viene filtrata finché corrisponde alla chiave Tag. 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

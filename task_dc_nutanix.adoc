@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_nutanix.html 
+keywords: data collector, Nutanix, NX Series 
+summary: Configurazione del data collector Nutanix. 
+---
+= Data collector Nutanix NX
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza il data collector di Nutanix per rilevare i dati di inventario e relativi alle performance dei sistemi storage Nutanix NX.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector di Nutanix. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Contenitore Nutanix | Volume interno 
+
+
+| Contenitore Nutanix | Condivisione file 
+
+
+| Condivisione NFS | Condividere 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* L'indirizzo IP dei servizi dati esterni per il cluster
+* Nome utente e password di sola lettura, a meno che non siano in uso gruppi_volumi, nel qual caso sono richiesti nome utente e password amministratore
+* Requisito della porta: HTTPS 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP esterno PRISM | L'indirizzo IP dei servizi dati esterni per il cluster 
+
+
+| Nome utente | Nome utente per l'account Admin 
+
+
+| Password | Password per l'account Admin 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta TCP | Porta TCP utilizzata per la connessione all'array Nutanix. Il valore predefinito è 9440. 
+
+
+| Intervallo di polling dell'inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

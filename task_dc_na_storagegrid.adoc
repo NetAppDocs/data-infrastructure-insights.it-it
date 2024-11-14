@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_storagegrid.html 
+summary: Configurare NetApp StorageGRID data collector 
+keywords: data collector, queries, create, storagegrid 
+---
+= Data collector NetApp StorageGRID
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector NetApp StorageGRID supporta la raccolta di inventario e performance dalle configurazioni StorageGRID.
+
+
+NOTE: Il StorageGRID viene misurato a un tasso diverso da TB raw a unità gestite. Ogni 40 TB di capacità StorageGRID non formattata viene caricata come 1 link:concept_subscribing_to_cloud_insights.html#pricing["Unità gestita (MU)"].
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal NetApp StorageGRID Collector. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| StorageGRID | Storage 
+
+
+| Nodo | Nodo 
+
+
+| Tenant | Pool di storage 
+
+
+| Bucket | Volume interno 
+|===
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per la configurazione di questa origine dati:
+
+* Indirizzo IP host StorageGRID
+* Nome utente e password per un utente a cui sono stati assegnati i ruoli di Metric Query e accesso tenant
+* Porta 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP host StorageGRID | Gestione Indirizzo IP virtuale dell'appliance StorageGRID 
+
+
+| Nome utente | Nome utilizzato per accedere all'appliance StorageGRID 
+
+
+| Password | Password utilizzata per accedere all'appliance StorageGRID 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Il valore predefinito è 60 minuti 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 900 secondi 
+|===
+
+
+== Single Sign-on (SSO)
+
+Le link:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"]versioni del firmware hanno versioni API corrispondenti; le versioni 3,0 API e più recenti supportano l'accesso SSO (Single Sign-on).
+
+|===
+
+
+| Versione del firmware | Versione di API | Supporto SSO (Single Sign-on) 
+
+
+| 11,1 | 2 | No 
+
+
+| 11,2 | 3,0 | Sì 
+
+
+| 11,5 | 3,3 | Sì 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

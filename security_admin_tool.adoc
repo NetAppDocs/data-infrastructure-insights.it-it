@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: security_admin_tool.html 
+summary: 'Data Infrastructure Insights segue le Best practice per la sicurezza durante l"intero ciclo di vita del rilascio.' 
+keywords: security, risk, protection 
+---
+= Strumento securityadmin
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights include funzionalità di sicurezza che consentono al tuo ambiente di operare con una maggiore sicurezza. Le funzionalità includono miglioramenti alla crittografia, all'hashing delle password e alla possibilità di modificare le password utente interne, nonché coppie di chiavi che crittografano e decrittare le password.
+
+Per proteggere i dati sensibili, NetApp consiglia di modificare le chiavi predefinite e la password utente _Acquisition_ dopo un'installazione o un aggiornamento.
+
+Le password crittografate delle origini dati sono memorizzate in Data Infrastructure Insights, che utilizza una chiave pubblica per crittografare le password quando un utente le inserisce in una pagina di configurazione di raccolta dati. Data Infrastructure Insights non dispone delle chiavi private necessarie per decrittografare le password di raccolta dati; solo le unità di acquisizione (AUS) dispongono della chiave privata di raccolta dati necessaria per decrittografare le password di raccolta dati.
+
+
+
+== Considerazioni sull'aggiornamento e l'installazione
+
+Se il sistema Insight contiene configurazioni di sicurezza non predefinite (ad esempio, password ridigettate), è necessario eseguire il backup delle configurazioni di sicurezza. L'installazione di un nuovo software o, in alcuni casi, l'aggiornamento del software ripristina la configurazione di sicurezza predefinita del sistema. Quando il sistema torna alla configurazione predefinita, è necessario ripristinare la configurazione non predefinita per il corretto funzionamento del sistema.
+
+
+
+== Gestione della sicurezza sull'unità di acquisizione
+
+Lo strumento securityadmin consente di gestire le opzioni di sicurezza per Data Infrastructure Insights, viene eseguito sul sistema dell'unità di acquisizione. La gestione della sicurezza include la gestione di chiavi e password, il salvataggio e il ripristino delle configurazioni di sicurezza create o il ripristino delle impostazioni predefinite delle configurazioni.
+
+
+
+== Prima di iniziare
+
+* Per installare il software dell'unità di acquisizione (che include lo strumento securityadmin), è necessario disporre dei privilegi di amministratore sul sistema AU.
+* Se in seguito si dispone di utenti non amministratori che dovranno accedere allo strumento securityadmin, questi devono essere aggiunti al gruppo _cisys_. Il gruppo _cisys_ viene creato durante l'installazione dell'AU.
+
+
+Dopo l'installazione di AU, lo strumento securityadmin si trova nel sistema dell'unità di acquisizione in una delle seguenti posizioni:
+
+....
+Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat
+Linux - /bin/oci-securityadmin.sh
+....
+
+
+== Utilizzando lo strumento securityadmin
+
+Avviare lo strumento securityadmin in modalità interattiva (-i).
+
+
+NOTE: Si consiglia di utilizzare lo strumento securityadmin in modalità interattiva, per evitare di trasmettere segreti sulla riga di comando, che possono essere acquisiti nei registri.
+
+Vengono visualizzate le seguenti opzioni:
+
+image:SecurityAdminMenuChoices.png["Opzioni per securityadmin Tool (Linux)"]
+
+. *Backup*
++
+Crea un file zip di backup del vault contenente tutte le password e le chiavi e colloca il file in una posizione specificata dall'utente o nelle seguenti posizioni predefinite:
+
++
+....
+Windows - C:\Program Files\SANscreen\backup\vault
+Linux - /var/log/netapp/oci/backup/vault
+....
++
+Si consiglia di mantenere al sicuro i backup del vault, poiché includono informazioni riservate.
+
+. *Ripristina*
++
+Ripristina il backup zip del vault creato. Una volta ripristinato, tutte le password e le chiavi vengono ripristinate ai valori esistenti al momento della creazione del backup.
+
++
+Il ripristino può essere utilizzato per sincronizzare password e chiavi su più server, ad esempio utilizzando i seguenti passaggi: 1) modificare le chiavi di crittografia sull'AU. 2) creare un backup del vault. 3) ripristinare il backup del vault in ciascuna delle aus.
+
+. *Registra / Aggiorna script di recupero chiave esterna*
++
+Utilizzare uno script esterno per registrare o modificare le chiavi di crittografia AU utilizzate per crittografare o decrittare le password del dispositivo.
+
++
+Quando si modificano le chiavi di crittografia, è necessario eseguire il backup della nuova configurazione di protezione in modo da poterla ripristinare dopo un aggiornamento o un'installazione.
+
++
+Nota questa opzione è disponibile solo su Linux.
+
++
+Quando si utilizza il proprio script di recupero delle chiavi con lo strumento securityadmin, tenere presente quanto segue:
+
++
+** L'algoritmo attualmente supportato è RSA con un minimo di 2048 bit.
+** Lo script deve restituire le chiavi private e pubbliche in testo normale. Lo script non deve restituire chiavi private e pubbliche crittografate.
+** Lo script deve restituire contenuti codificati raw (solo formato PEM).
+** Lo script esterno deve disporre delle autorizzazioni _execute_.
+
+
+. *Ruota chiavi di crittografia*
++
+Ruotare le chiavi di crittografia (Annulla la registrazione delle chiavi correnti e registra le nuove chiavi). Per utilizzare una chiave di un sistema di gestione delle chiavi esterno, è necessario specificare l'id della chiave pubblica e l'ID della chiave privata.
+
+
+
+. *Ripristina chiavi predefinite*
++
+Ripristina la password utente di acquisizione e le chiavi di crittografia dell'utente di acquisizione sui valori predefiniti. I valori predefiniti sono quelli forniti durante l'installazione.
+
+. *Modifica password Truststore*
++
+Modificare la password del truststore.
+
+. *Modifica password keystore*
++
+Modificare la password del keystore.
+
+. *Encrypt Collector Password*
++
+Crittografare la password del data collector.
+
+. *Esci*
++
+Uscire dallo strumento securityadmin.
+
+
+
+Scegliere l'opzione che si desidera configurare e seguire le istruzioni.
+
+
+
+== Specificare un utente per eseguire lo strumento
+
+Se ci si trova in un ambiente controllato e consapevole della sicurezza, è possibile che non si disponga del gruppo _cisys_, ma che si desideri comunque che utenti specifici eseguano lo strumento securityadmin.
+
+Per ottenere questo risultato, installare manualmente il software AU e specificare l'utente/gruppo a cui si desidera accedere.
+
+* Utilizzando l'API, scaricare il programma di installazione ci nel sistema AU e decomprimerlo.
++
+** È necessario un token di autorizzazione una tantum. Consultare la documentazione API Swagger (_Admin > API Access_ e selezionare il link _API Documentation_) e individuare la sezione _GET /au/oneTimeToken_ API.
+** Una volta ottenuto il token, utilizzare l'API _GET /au/installers/{platform}/{version}_ per scaricare il file di installazione. È necessario fornire la versione della piattaforma (Linux o Windows) e dell'installatore.
+
+
+* Copiare il file di installazione scaricato nel sistema AU e decomprimerlo.
+* Accedere alla cartella contenente i file ed eseguire il programma di installazione come root, specificando l'utente e il gruppo:
++
+ ./cloudinsights-install.sh <User> <Group>
+
+
+Se l'utente e/o il gruppo specificati non esistono, verranno creati. L'utente avrà accesso allo strumento securityadmin.
+
+
+
+== Aggiornamento o rimozione del proxy
+
+Lo strumento securityadmin può essere utilizzato per impostare o rimuovere le informazioni proxy per l'unità di acquisizione eseguendo lo strumento con il parametro _-pr_:
+
+[listing]
+----
+[root@ci-eng-linau bin]# ./securityadmin -pr
+usage: securityadmin -pr -ap <arg> | -h | -rp | -upr <arg>
+
+The purpose of this tool is to enable reconfiguration of security aspects
+of the Acquisition Unit such as encryption keys, and proxy configuration,
+etc. For more information about this tool, please check the Data Infrastructure Insights
+Documentation.
+
+-ap,--add-proxy <arg>       add a proxy server.  Arguments: ip=ip
+                             port=port user=user password=password
+                             domain=domain
+                             (Note: Always use double quote(") or single
+                             quote(') around user and password to escape
+                             any special characters, e.g., <, >, ~, `, ^,
+                             !
+                             For example: user="test" password="t'!<@1"
+                             Note: domain is required if the proxy auth
+                             scheme is NTLM.)
+-h,--help
+-rp,--remove-proxy          remove proxy server
+-upr,--update-proxy <arg>   update a proxy.  Arguments: ip=ip port=port
+                             user=user password=password domain=domain
+                             (Note: Always use double quote(") or single
+                             quote(') around user and password to escape
+                             any special characters, e.g., <, >, ~, `, ^,
+                             !
+                             For example: user="test" password="t'!<@1"
+                             Note: domain is required if the proxy auth
+                             scheme is NTLM.)
+----
+Ad esempio, per rimuovere il proxy, eseguire il seguente comando:
+
+ [root@ci-eng-linau bin]# ./securityadmin -pr -rp
+Dopo aver eseguito il comando, riavviare l'unità di acquisizione.
+
+Per aggiornare un proxy, il comando è
+
+ ./securityadmin -pr -upr <arg>
+
+
+== Recupero della chiave esterna
+
+Se si fornisce uno script di shell UNIX, può essere eseguito dall'unità di acquisizione per recuperare la *chiave privata* e la *chiave pubblica* dal sistema di gestione delle chiavi.
+
+Per recuperare la chiave, Data Infrastructure Insights eseguirà lo script, passando due parametri: _Key id_ e _key type_. _Key id_ può essere utilizzato per identificare la chiave nel sistema di gestione delle chiavi. _Key type_ è "public" o "private". Quando il tipo di chiave è "public", lo script deve restituire la chiave pubblica. Quando il tipo di chiave è "privata", la chiave privata deve essere restituita.
+
+Per inviare nuovamente il tasto all'unità di acquisizione, lo script deve stampare il tasto sull'output standard. Lo script deve stampare _solo_ la chiave per l'output standard; nessun altro testo deve essere stampato su output standard. Una volta che la chiave richiesta viene stampata nell'output standard, lo script deve uscire con un codice di uscita di 0; qualsiasi altro codice di ritorno viene considerato un errore.
+
+Lo script deve essere registrato con l'unità di acquisizione utilizzando lo strumento securityadmin, che eseguirà lo script insieme all'unità di acquisizione. Lo script deve avere l'autorizzazione _Read_ e _execute_ per l'utente root e "cisys". Se lo script della shell viene modificato dopo la registrazione, lo script della shell modificato deve essere nuovamente registrato con l'unità di acquisizione.
+
+|===
+
+
+| parametro di input: id chiave | Identificatore chiave utilizzato per identificare la chiave nel sistema di gestione delle chiavi del cliente. 
+
+
+| parametro di immissione: tipo di chiave | pubblico o privato. 
+
+
+| uscita | La chiave richiesta deve essere stampata sull'output standard. La chiave RSA a 2048 bit è attualmente supportata. Le chiavi devono essere codificate e stampate nel seguente formato - formato chiave privata - PEM, DER-encoded PKCS8 PrivateKeyInfo RFC 5958 formato chiave pubblica - PEM, DER-encoded X,509 SubjectPublicKeyInfo RFC 5280 
+
+
+| codice di uscita | Codice di uscita zero per successo. Tutti gli altri valori di uscita sono considerati falliti. 
+
+
+| autorizzazioni script | Lo script deve disporre dell'autorizzazione di lettura ed esecuzione per l'utente root e "cisys". 
+
+
+| registri | Vengono registrate le esecuzioni degli script. I log si trovano in - /var/log/NetApp/cloudinsigives/securityadmin/securityadmin.log /var/log/NetApp/cloudinsigies/acq/acq.log 
+|===
+
+
+== Crittografia di una password per l'utilizzo in API
+
+L'opzione 8 consente di crittografare una password, che è quindi possibile passare a un agente di raccolta dati tramite API.
+
+Avviare lo strumento securityadmin in modalità interattiva e selezionare l'opzione 8: _Encrypt Password_.
+
+ securityadmin.sh -i
+Viene richiesto di immettere la password che si desidera crittografare. I caratteri digitati non vengono visualizzati sullo schermo. Inserire nuovamente la password quando richiesto.
+
+In alternativa, se si utilizza il comando in uno script, sulla riga di comando utilizzare _securityadmin.sh_ con il parametro "-enc", passando la password non crittografata:
+
+ securityadmin -enc mypassword
+image:SecurityAdmin_Encrypt_Key_API_CLI_Example.png["Esempio CLI"]
+
+La password crittografata viene visualizzata sullo schermo. Copiare l'intera stringa, inclusi i simboli iniziali o finali.
+
+image:SecurityAdmin_Encrypt_Key_1.png["Password di crittografia in modalità interattiva, larghezza=640"]
+
+Per inviare la password crittografata a un data collector, è possibile utilizzare l'API di raccolta dati. Lo swagger per questa API si trova in *Admin > API Access* e fare clic sul collegamento "API Documentation". Selezionare il tipo di API "raccolta dati". Sotto l'intestazione _data_collection.data_collector_, scegliere l'API _/collector/datasources_ POST per questo esempio.
+
+image:SecurityAdmin_Encrypt_Key_Swagger_API.png["API per la raccolta dati"]
+
+Se si imposta l'opzione _preEncrypted_ su _True_, qualsiasi password passata attraverso il comando API verrà considerata come *già crittografata*; l'API non crittograferà nuovamente le password. Quando si crea l'API, è sufficiente incollare la password precedentemente crittografata nella posizione appropriata.
+
+image:SecurityAdmin_Encrypt_Key_API_Example.png["Esempio API, width=600"]

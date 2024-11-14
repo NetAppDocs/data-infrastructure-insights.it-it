@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hds_hcp.html 
+keywords: data collector, Hitachi HDS, HCP 
+summary: Configurazione di HDS data collector. 
+---
+= Data collector Hitachi HCP
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Questo data collector supporta Hitachi Content Platform (HCP) utilizzando l'API di gestione HCP.
+
+
+NOTE: Hitachi Content Platform viene misurata a un tasso diverso da TB raw a unità gestite. Ogni 40 TB di capacità HCP non formattata viene caricata come 1 link:concept_subscribing_to_cloud_insights.html#pricing["Unità gestita (MU)"].
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector Hitachi HCP. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Cluster HCP | Storage 
+
+
+| Tenant | Pool di storage 
+
+
+|  | Namespace 
+
+
+| Volume interno | Nodo 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti di inventario
+
+Per raccogliere i dati di inventario, è necessario disporre di quanto segue:
+
+* Indirizzo IP del server HCP
+* Nome utente e password di sola lettura per il software HCP e privilegi peer
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Host HCP | Indirizzo IP o nome di dominio completo dell'host HCP 
+
+
+| Porta HCP | Il valore predefinito è 9090 
+
+
+| ID utente HCP | Nome utente dell'host HCP. 
+
+
+| Password HCP | Password utilizzata per l'host HCP. 
+
+
+| Tipo di autenticazione HCP | Scegliere HCP_LOCAL o ACTIVE_DIRECTORY 
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 60. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 900. 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

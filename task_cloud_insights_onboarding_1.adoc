@@ -1,0 +1,89 @@
+---
+sidebar: sidebar 
+permalink: task_cloud_insights_onboarding_1.html 
+summary: Iscrizione a Data Infrastructure Insights e creazione del tuo ambiente. 
+keywords: onboarding, new user 
+---
+= Insight dell'infrastruttura dati
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Prima di iniziare a lavorare con Data Infrastructure Insights, è necessario registrarsi sul portale *NetApp BlueXP *. Se disponi già di un accesso a NetApp BlueXP , puoi avviare una prova gratuita di Data Infrastructure Insights con alcuni rapidi passaggi.
+
+
+toc::[]
+
+
+== Creazione dell'account NetApp BlueXP
+
+Per iniziare a utilizzare i servizi cloud di NetApp, visitare il sito Web link:https://cloud.netapp.com["*NetApp BlueXP*"^] e fare clic su *inizia*.
+
+* Se non hai ancora effettuato la registrazione, seleziona *Registrati*
+* Immettere un indirizzo e-mail aziendale valido e scegliere una password.
+* Immettere il nome della società e il nome completo.
+* Accettare i termini e le condizioni e selezionare *continua*.
+* BlueXP ti guiderà nella guida introduttiva.
+
+
+
+
+=== Cosa succede se dispongo già di un accesso a NetApp BlueXP?
+
+Una volta ottenuto un account NetApp BlueXP , è sufficiente scegliere *Accedi* sulla link:https://cloud.netapp.com["*NetApp BlueXP*"^]pagina del portale.
+
+Inserire l'indirizzo e-mail e la password. Verrà visualizzata la pagina delle offerte cloud di NetApp.
+
+Seleziona Data Infrastructure Insights.
+
+image:BlueXP_CloudInsights.png["Prova gratuita di Data Infrastructure Insights su BlueXP"]
+
+
+
+== Avviare la prova gratuita di Data Infrastructure Insights
+
+Se questa è la prima volta che accedi a Data Infrastructure Insights, sotto Data Infrastructure Insights fare clic su *Avvia prova gratuita*. Data Infrastructure Insights ti guiderà nella creazione dell'ambiente della tua azienda, inclusa la selezione della regione in cui si desidera che il tuo ambiente risieda.
+
+image:trial_region_selector.png["Selezione dell'area in cui ospitare l'ambiente Data Infrastructure Insights"]
+
+Una volta completata la creazione del tuo ambiente, puoi utilizzare le tue credenziali BlueXP  per accedere e iniziare la prova gratuita di 30 giorni di Data Infrastructure Insights. Durante questa versione di prova, è possibile esplorare le funzioni offerte da Data Infrastructure Insights.
+
+Durante la prova gratuita, puoi link:concept_subscribing_to_cloud_insights.html["avvia l'abbonamento"] accedere a Data Infrastructure Insights in qualsiasi momento. Una volta effettuato l'abbonamento, puoi utilizzare le funzionalità di Data Infrastructure Insights in base all'abbonamento corrente.
+
+
+
+== Accedi e vai
+
+Una volta creato l'ambiente, è possibile accedere in qualsiasi momento al portale NetApp BlueXP  e fare clic su *Vai a informazioni sull'infrastruttura dati*. Verrai indirizzato direttamente al tuo ambiente Data Infrastructure Insights.
+
+È inoltre possibile aprire un browser direttamente all'URL dell'ambiente Data Infrastructure Insights, ad esempio:
+
+ \https://<environment-prefix>.c01.cloudinsights.netapp.com/
+L'URL verrà inoltre incluso nell'e-mail di invito di ciascun utente per un accesso semplice e per la creazione di segnalibri. Se l'utente non ha già effettuato l'accesso a BlueXP, verrà richiesto di effettuare l'accesso.
+
+
+NOTE: I nuovi utenti devono comunque registrarsi per l'accesso a BlueXP prima che possano accedere all'URL del loro ambiente.
+
+La prima volta che si accede a un nuovo ambiente, viene fornita una guida all'impostazione di fino a link:task_getting_started_with_cloud_insights.html["*iniziare a raccogliere i dati*"].
+
+
+
+== Disconnessione
+
+Per disconnettersi da Data Infrastructure Insights, fare clic sul proprio *Nome utente* e selezionare *Disconnetti*. Verrai riportato alla schermata di accesso di BlueXP.
+
+
+NOTE: La disconnessione da Data Infrastructure Insights ti disconnette da BlueXP . Inoltre, verrai disconnesso dagli altri servizi cloud di NetApp che utilizzano l'accesso BlueXP.
+
+
+
+=== Timeout di inattività
+
+Per impostazione predefinita, BlueXP effettua il log out di un utente in assenza di attività per sei ore (360 minuti). Indipendentemente dall'attività, gli utenti verranno disconnessi dopo sette giorni.

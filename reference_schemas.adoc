@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: reference_schemas.html 
+summary: Diagrammi e tabelle dello schema di Data Warehouse da utilizzare con Reporting 
+keywords: dwh, data warehouse, schema, reporting 
+---
+= Schemi di approfondimento dell'infrastruttura dati per la creazione di report
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le tabelle e i diagrammi dello schema sono forniti qui come riferimento per Data Infrastructure Insights Reporting.
+
+link:https://docs.netapp.com/us-en/cloudinsights/ci_reporting_database_schema.pdf["*Tabelle dello schema*"] In formato .PDF. Fare clic sul collegamento per aprire o fare clic con il pulsante destro del mouse e scegliere _Save As..._ per scaricare.
+
+link:reporting_schema_diagrams.html["*Diagrammi dello schema*"]
+
+
+NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].

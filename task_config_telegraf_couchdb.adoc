@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_couchdb.html 
+keywords: telegraf, installation, install, couchdb 
+summary: Configurazione del data collector di CouchDB 
+---
+= Data Collector di CouchDB
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da CouchDB.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere CouchDB.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:CouchDBDCConfigLinux.png["Configurazione di CouchDB"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili nella link:http://docs.couchdb.org/en/stable/["Documentazione di CouchDB"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Database dei CouchDB | Server namespace | Nome nodo IP nodo | Authentication cache Hits Authentication cache Miss Database Reads Database Scritture Database Open Open OS Files Max Request Time min Request Time httpd Request Methods Copy httpd Request Methods Delete httpd Request Methods Get httpd Request Methods Head httpd Request Methods Put Status Codes 200 Status Codes 201 codici di stato 202 codici di stato 301 codici di stato 304 codici di stato 400 codici di stato 401 codici di stato 403 codici di stato 404 codici di stato 405 codici di stato 409 codici di stato 412 codici di stato 500 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

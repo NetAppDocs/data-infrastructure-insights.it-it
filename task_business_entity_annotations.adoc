@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: task_business_entity_annotations.html 
+keywords: annotations, business entity 
+summary: Le annotazioni delle entità aziendali possono essere utilizzate per il monitoraggio e il reporting delle risorse nella gerarchia aziendale 
+---
+= Annotazioni entità di business
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Creare e gestire le entità di business per il proprio ambiente aziendale utilizzando il tipo di annotazione *entità di business*.
+
+
+
+== Creazione di un'entità aziendale
+
+Per creare un'entità aziendale, procedere come segue:
+
+. Fare clic su *Manage > Annotations* (Gestisci > Annotazioni) e fare clic sul collegamento _Business Entity_ (entità aziendale).
++
+Viene visualizzato l'elenco delle entità aziendali attualmente definite.
+
+. Fare clic su *+ entità aziendale*.
+. Immettere i valori per i campi *tenant*, *Line of Business*, *Business Unit* e *Project*.
++
+Puoi lasciare vuoto qualsiasi campo se non si applica alla tua entità aziendale.
+
+. Se in precedenza è stato immesso un valore per un campo, è possibile selezionare tale valore dall'elenco a discesa. Non è necessario digitarlo di nuovo.
+
+
+
+NOTE: I valori selezionati devono comporre un'entità aziendale totale univoca. Ad esempio, se si dispone già di un'entità commerciale con i valori _A / B / C / D_ in tale ordine, non è possibile creare un'altra entità commerciale con tali valori in tale ordine. Tuttavia, è possibile creare un'entità aziendale con tali valori in un ordine diverso.
+
+
+
+== Applicazione di un'entità aziendale a un oggetto
+
+Il modo più semplice per applicare un'entità aziendale a uno o più oggetti consiste nell'eseguire una query.
+
+. Fare clic su *Query > +Nuova query* e selezionare il tipo di oggetto desiderato. È possibile applicare filtri per restringere ulteriormente i risultati.
+. Fare clic sulla casella di controllo per selezionare gli oggetti per i quali si desidera applicare l'entità aziendale.
+. Fare clic su *azioni in blocco* e selezionare *Aggiungi annotazione*.
+. Scegliere l'annotazione _entità aziendale_ e selezionare il valore dell'entità aziendale desiderato dall'elenco.
+. Fare clic su *Save* (Salva) per applicare l'entità aziendale agli oggetti.
+
+
+Puoi anche applicare un'entità aziendale a un singolo oggetto navigando nella landing page delle risorse dell'oggetto e facendo clic su *+Annotation) nella sezione User Data (dati utente).
+
+È inoltre possibile configurare un link:task_create_annotation_rules.html["Regola di annotazione"] per applicare le entità di business agli oggetti.
+
+
+NOTE: A un oggetto può essere associata una sola entità aziendale.
+
+
+
+== Rimozione di un'entità aziendale da un oggetto
+
+Per rimuovere un'entità aziendale da uno o più oggetti, eseguire una query e selezionare gli oggetti, fare clic su *azioni in blocco* e selezionare _Rimuovi annotazione_. Selezionare l'annotazione entità aziendale e fare clic su *Delete* (Elimina).

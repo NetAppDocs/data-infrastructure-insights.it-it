@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ms_hyperv.html 
+keywords: data collector, Microsoft, Hyper-V 
+summary: Configurazione di Microsoft Hyper-V Data Collector. 
+---
+= Data collector Microsoft Hyper-V.
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector Microsoft Hyper-V acquisisce i dati di inventario e performance dall'ambiente di elaborazione server virtualizzato. Questo data collector è in grado di rilevare un host Hyper-V standalone o un intero cluster, creando un collector per host o cluster standalone.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da Microsoft Hyper-V (WMI). Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco rigido virtuale | Disco virtuale 
+
+
+| Host | Host 
+
+
+| Macchina virtuale | Macchina virtuale 
+
+
+| Cluster Shared Volumes (CSV), Volume di partizione | Data Store 
+
+
+| Dispositivo SCSI Internet, LUN SCSI Multi Path | LUN 
+
+
+| Porta Fibre Channel | Porta 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessari i seguenti requisiti:
+
+* Hyper-V richiede l'apertura della porta 5985 per la raccolta dei dati e l'accesso/gestione remota.
+* Indirizzo IP o FQDN del cluster o dell'hypervisor standalone. L'utilizzo del nome host o dell'IP del cluster mobile è probabilmente l'approccio più affidabile rispetto al fatto di puntare il collector su un solo nodo specifico di un cluster.
+* Account utente di livello amministrativo che funziona su tutti gli hypervisor del cluster.
+* WinRM deve essere attivato e in ascolto su tutti gli hypervisor
+* Requisiti delle porte: Porta 135 via WMI e porte TCP dinamiche assegnate 1024-65535 per Windows 2003 e versioni precedenti e 49152-65535 per Windows 2008.
+* La risoluzione DNS deve avere successo, anche se il data collector è rivolto solo a un indirizzo IP
+* Ogni hypervisor Hyper-V deve avere "Resource Metering" attivato per ogni macchina virtuale, su ogni host. In questo modo, ogni hypervisor può disporre di una maggiore quantità di dati per Data Infrastructure Insights su ciascun guest. In caso contrario, vengono acquisite meno metriche di performance per ciascun ospite. Per ulteriori informazioni sulla misurazione delle risorse, consultare la documentazione Microsoft:
++
+link:https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831661(v=ws.11)["Panoramica sulla misurazione delle risorse Hyper-V."]
+
++
+link:https://docs.microsoft.com/en-us/powershell/module/hyper-v/enable-vmresourcemetering?view=win10-ps["Enable-VMResourceMetering"]
+
+
+
+
+NOTE: Il data collector Hyper-V richiede un'unità di acquisizione Windows.
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP del cluster o FQDN del cluster mobile | L'indirizzo IP o il nome di dominio completo per il cluster o un hypervisor standalone non in cluster 
+
+
+| Nome utente | Nome utente amministratore dell'hypervisor 
+
+
+| Password | Password per l'hypervisor 
+
+
+| Suffisso del dominio DNS | Il suffisso del nome host che si combina con il nome host semplice per eseguire il rendering dell'FQDN di un hypervisor 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | L'impostazione predefinita è 20 minuti. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

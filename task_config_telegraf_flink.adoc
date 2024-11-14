@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_flink.html 
+keywords: telegraf, installation, install, flink 
+summary: Configurazione del data collector Flink 
+---
+= Flink Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Flink.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Flink.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:FlinkDCConfigWindows.png["Configurazione Flink"]
+
+
+
+== Setup (Configurazione)
+
+Un'implementazione Flink completa comprende i seguenti componenti:
+
+JobManager: Il sistema primario Flink. Coordina una serie di TaskManager. In una configurazione ad alta disponibilità, il sistema avrà più di un JobManager. Taskmanager: Qui vengono eseguiti gli operatori Flink. Il plugin Flink si basa sul plugin di telegraf, Jolokia. Come requisito per la raccolta di informazioni da tutti i componenti Flink, JMX deve essere configurato ed esposto tramite Jolokia su tutti i componenti.
+
+
+
+=== Compatibilità
+
+La configurazione è stata sviluppata rispetto alla versione 1.7 di Flink.
+
+
+
+=== Configurazione
+
+
+
+==== Jolokia Agent Jar
+
+Per tutti i singoli componenti, è necessario scaricare una versione del file Jar dell'agente di Jlokia. La versione testata era link:https://jolokia.org/download.html["Agente di Jookia 1.6.0"].
+
+Le istruzioni riportate di seguito presuppongono che il file jar scaricato (jookia-jvm-1.6.0-Agent.jar) sia posizionato nella posizione '/opt/flink/lib/'.
+
+
+
+==== JobManager
+
+Per configurare JobManager in modo da esporre l'API di Jookia, è possibile impostare la seguente variabile di ambiente sui nodi e riavviare JobManager:
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+È possibile scegliere una porta diversa per Jlokia (8778). Se si dispone di un IP interno su cui bloccare Jolokia, è possibile sostituire il "catch all" 0.0.0.0 con il proprio IP. Si noti che questo IP deve essere accessibile dal plugin telegraf.
+
+
+
+==== Taskmanager
+
+Per configurare TaskManager in modo che esponga l'API di Jookia, è possibile impostare la seguente variabile di ambiente sui nodi e riavviare TaskManager:
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+È possibile scegliere una porta diversa per Jlokia (8778). Se si dispone di un IP interno su cui bloccare Jolokia, è possibile sostituire il "catch all" 0.0.0.0 con il proprio IP. Si noti che questo IP deve essere accessibile dal plugin telegraf.
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Task Manager Flink | Server dello spazio dei nomi del cluster | Nome nodo Task Manager ID nodo IP | Rete disponibile segmenti di memoria rete totale segmenti di memoria Garbage Collection PS MarkSweep Count Garbage Collection PS MarkSweep Time Garbage Collection PS Scavenge Count Garbage Collection PS Scavenge Time Heap Memory memoria allocata memoria heap Init memoria heap Max memoria utilizzata Conteggio thread Demon Conteggio thread massimo Conteggio thread Conteggio thread Conteggio thread Conteggio thread Conteggio thread Totale iniziato 
+
+
+| Flink Job (collega lavoro) | ID lavoro del server dello spazio dei nomi del cluster | Nome nodo Nome processo IP nodo ultimo punto di controllo percorso esterno tempo di riavvio | Downtime riavvio completo ultimo allineamento checkpoint buffer durata ultimo checkpoint dimensione checkpoint numero di checkpoint completati numero di checkpoint non riusciti numero di checkpoint in corso numero di checkpoint in corso tempo di attività 
+
+
+| Flink Job Manager | Server dello spazio dei nomi del cluster | Nome nodo IP nodo | Garbage Collection PS MarkSweep Count Garbage Collection PS MarkSweep Time Garbage Collection PS Scavenge Count Garbage Collection PS Scavenge Time Heap Memory memoria memoria heap impegnata memoria heap Init memoria heap massima memoria heap utilizzata numero di gestori di attività registrati numero di processi in esecuzione slot di attività disponibili numero totale di thread Demon thread Count Numero massimo di thread Conteggio totale dei thread iniziato 
+
+
+| Attività Flink | ID attività ID lavoro spazio dei nomi cluster | Server Node Name Job Name Sub Task Index Task ID tentativo attività numero tentativo attività Nome attività ID Task Manager ID nodo IP Current Input Watermark | Buffer in buffer di utilizzo del pool in buffer di lunghezza della coda buffer di utilizzo del pool out buffer di lunghezza della coda buffer di numero in buffer di numero locale in buffer di numero locale al secondo buffer di numero locale al secondo buffer di numero remoto in buffer di numero remoto al secondo buffer di numero in remoto per Numero di seconda velocità buffer di numero in uscita buffer di numero in uscita al secondo numero di numero di velocità buffer in uscita al secondo numero di velocità byte in numero locale byte in numero di secondo numero di velocità byte in numero remoto byte in numero di secondo numero di numero di byte in remoto Numero di tasso al secondo byte in uscita numero byte in uscita al secondo numero di byte in uscita al secondo numero di tasso Record in numero record in per secondo numero di conteggio Record in per secondo numero di tasso Record in uscita numero record in uscita al secondo numero di conteggio Record in uscita al secondo tasso 
+
+
+| Operatore attività Flink | Namespace del cluster ID del job ID dell'operatore ID del task | Server Nome nodo Nome lavoro Nome operatore attività secondaria Indice attività ID tentativo attività numero tentativo attività Nome attività ID gestore attività IP nodo | Input corrente filigrana Output corrente numero filigrana Record in numero Record in per secondo numero numero Record in per secondo numero tasso Record out numero Records out per secondo numero numero Records out per secondo numero Rate out per secondo numero Records ultimi Records abbandonati partizioni assegnate byte consumati Rate Commit latenza Avg Commit latenza Max commit Rate commits Failed Commits successed Connection Close Rate Connection Count Connection Creation Rate Conteggio Fetch Latency Avg Fetch Latency Max Fetch Rate Fetch Size Avg Fetch Size Max Fetch Throttle Time Avg Fetch Throttle Time Max Heartbeat Rate Incoming Byte Rate io Ratio Ratio Time Avg (ns) io Rapporto di attesa io tempo di attesa medio (ns) tasso di adesione tempo di adesione tempo medio ultimo battito cardiaco fa rete io tasso di uscita byte tasso record di tasso consumato record di tasso massimo di ritardo record per richiesta media velocità richiesta dimensione media richiesta dimensione massima risposta velocità di selezione velocità di sincronizzazione tempo di sincronizzazione tempo di risposta medio battito cardiaco Tempo max. Di Unione tempo max. Di sincronizzazione 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: concept_asset_alerts_section.html 
+summary: Panoramica della sezione relativa agli avvisi della pagina delle risorse in Data Infrastructure Insights. 
+keywords: asset, landing page, violations, Alerts, 
+---
+= Sezione Avvisi correlati alla pagina risorse
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+È possibile utilizzare la sezione Avvisi correlati di una pagina di risorse per visualizzare gli avvisi che si verificano nell'ambiente in uso a seguito di un monitor assegnato a una risorsa. I monitor generano avvisi in base alle condizioni impostate e consentono di identificare l'implicazione e analizzare l'impatto e la causa del problema in modo da consentire una correzione rapida ed efficace.
+
+Nell'esempio seguente viene illustrata una tipica sezione Avvisi correlati che viene visualizzata in una pagina di risorse:
+
+image:Alerts_on_Landing_Page.png["Tabella degli avvisi correlati"]
+
+La sezione Avvisi correlati consente di visualizzare e gestire gli avvisi che si verificano nella rete in seguito alle condizioni di monitoraggio assegnate a una risorsa.
+
+.Fasi
+* Individuare una pagina di risorse effettuando una delle seguenti operazioni:
++
+** Digitare il nome della risorsa nell'area di ricerca, quindi selezionarla dall'elenco.
+** In un widget dashboard, fare clic sul nome di una risorsa.
+** Eseguire una query per un set di risorse e selezionare on dall'elenco dei risultati.
+
+
+
+
+Viene visualizzata la pagina delle risorse. La sezione Related Alerts (Avvisi correlati) visualizza l'ora di attivazione dell'avviso, lo stato corrente dell'avviso e il monitor che lo ha attivato. È possibile fare clic sull'ID avviso per aprire la landing page dell'avviso per ulteriori indagini.

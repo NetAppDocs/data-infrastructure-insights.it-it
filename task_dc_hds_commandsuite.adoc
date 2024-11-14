@@ -1,0 +1,265 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hds_commandsuite.html 
+keywords: data collector, Hitachi Vantara Command Suite, Hitachi 
+summary: Configurazione di HDS Command Suite Device Manager Data Collector. 
+---
+= Data collector Hitachi Vantara Command Suite
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector Hitachi Vantara Command Suite supporta il server HiCommand Device Manager. Data Infrastructure Insights comunica con il server HiCommand Device Manager utilizzando l'API HiCommand standard.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector Hitachi Vantara Command Suite. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| PDEV | Disco 
+
+
+| Pool di giornale | Gruppo di dischi 
+
+
+| Array di storage | Storage 
+
+
+| Port Controller (Controller porta) | Nodo di storage 
+
+
+| Gruppo di array, HDS Pool | Pool di storage 
+
+
+| Unità logica, LDEV | Volume 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+=== Storage
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse di storage HDS. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Name (Nome) – deriva direttamente dall'attributo "name" di HDS HiCommand Device Manager tramite la chiamata API XML GetStorageArray
+* Modello - viene fornito direttamente dall'attributo "arrayType" di HDS HiCommand Device Manager tramite la chiamata API XML GetStorageArray
+* Vendor – HDS
+* Famiglia - proviene direttamente dall'attributo "arrayFamily" di HDS HiCommand Device Manager tramite la chiamata API XML GetStorageArray
+* IP - Indirizzo IP di gestione dell'array, non un elenco completo di tutti gli indirizzi IP dell'array
+* Capacità raw – un valore base2 che rappresenta la somma della capacità totale di tutti i dischi di questo sistema, indipendentemente dal ruolo del disco.
+
+
+
+
+=== Pool di storage
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse del pool di storage HDS. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Type (tipo): Il valore qui sarà uno dei seguenti:
++
+** RISERVATO - se questo pool è dedicato per scopi diversi dai volumi di dati, ad esempio, journaling, snapshot
+** Thin Provisioning - se si tratta di un pool HDP
+** RAID Group (Gruppo RAID): È probabile che non si vedano questi dati per alcuni motivi:
++
+Data Infrastructure Insights ha una posizione forte per evitare il doppio conteggio della capacità a tutti i costi. Su HDS, in genere è necessario creare gruppi RAID dai dischi, creare volumi di pool su tali gruppi RAID e costruire pool (spesso HDP, ma potrebbe essere uno scopo speciale) da tali volumi di pool. Se Data Infrastructure Insights riportasse sia i gruppi RAID sottostanti così come sono, sia i pool, la somma della loro capacità raw supererebbe di gran lunga la somma dei dischi.
+
++
+Al contrario, il raccoglitore dati HDS Command Suite di Data Infrastructure Insights riduce arbitrariamente le dimensioni dei gruppi RAID in base alla capacità dei volumi dei pool. Di conseguenza, Data Infrastructure Insights potrebbe non segnalare affatto il gruppo RAID. Inoltre, qualsiasi gruppo RAID risultante viene contrassegnato in modo che non sia visibile nella WebUI di Data Infrastructure Insights, ma fluisca nel Data Warehouse di Data Insights (DWH). Lo scopo di queste decisioni è quello di evitare il disordine dell'interfaccia utente per le cose che la maggior parte degli utenti non ha a cuore: Se l'array HDS dispone di gruppi RAID con 50 MB di spazio libero, probabilmente non sarà possibile utilizzare tale spazio libero per ottenere risultati significativi.
+
+
+
+* Nodo - N/D, in quanto i pool HDS non sono legati a uno specifico nodo
+* Ridondanza - il livello RAID del pool. Possibili valori multipli per un pool HDP composto da più tipi RAID
+* Capacity % - percentuale utilizzata dal pool per l'utilizzo dei dati, con il GB utilizzato e le dimensioni logiche totali del pool
+* Capacità con overcommit - un valore derivato che indica "la capacità logica di questo pool viene sovrascritta da questa percentuale in virtù della somma dei volumi logici che superano la capacità logica del pool di questa percentuale"
+* Snapshot: Mostra la capacità riservata all'utilizzo dello snapshot in questo pool
+
+
+
+
+=== Nodo di storage
+
+I seguenti termini si applicano agli oggetti o ai riferimenti che si possono trovare nelle landing page delle risorse dei nodi di storage HDS. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+* Name (Nome) – il nome del Front-End Director (FED) o dell'adattatore di canale sugli array monolitici o il nome del controller su un array modulare. Un determinato array HDS avrà 2 o più nodi di storage
+* Volumes (volumi) – la tabella Volume mostra qualsiasi volume mappato a qualsiasi porta di proprietà di questo nodo di storage
+
+
+
+
+== Requisiti di inventario
+
+Per raccogliere i dati di inventario, è necessario disporre di quanto segue:
+
+* Indirizzo IP del server HiCommand Device Manager
+* Nome utente e password di sola lettura per il software HiCommand Device Manager e privilegi peer
+* Requisiti delle porte: 2001 (http) o 2443 (https)
+* Accedere al software HiCommand Device Manager utilizzando il nome utente e la password
+* Verificare l'accesso a Gestione dispositivi HiCommand \http://<HiCommand_Device_Manager_IP>:2001/service/StorageManager
+
+
+
+
+== Requisiti relativi alle performance
+
+Per raccogliere i dati sulle performance, è necessario soddisfare i seguenti requisiti:
+
+* Prestazioni di HDS USP, USP V e VSP
++
+** Performance Monitor deve essere concesso in licenza.
+** Lo switch di monitoraggio deve essere attivato.
+** Lo strumento di esportazione (Export.exe) deve essere copiato nell'AU di Data Infrastructure Insights.
+** La versione dello strumento di esportazione deve corrispondere alla versione del microcodice dell'array di destinazione.
+
+
+* Performance AMS:
++
+** NetApp consiglia vivamente di creare un account di servizio dedicato sugli array AMS affinché Data Infrastructure Insights possa essere utilizzato per recuperare i dati sulle prestazioni. Storage Navigator consente a un account utente di accedere contemporaneamente all'array. Se Data Infrastructure Insights utilizza lo stesso account utente degli script di gestione o di HiCommand, Data Infrastructure Insights, gli script di gestione o HiCommand potrebbero non essere in grado di comunicare con l'array a causa del limite di accesso di un account utente simultaneo
+** Performance Monitor deve essere concesso in licenza.
+** L'utilità CLI di Storage Navigator Modular 2 (SNM2) deve essere installata sull'unità AU di Data Infrastructure Insights.
+
+
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Server HiCommand | Indirizzo IP o nome di dominio completo del server HiCommand Device Manager 
+
+
+| Nome utente | Nome utente del server HiCommand Device Manager. 
+
+
+| Password | Password utilizzata per il server HiCommand Device Manager. 
+
+
+| DISPOSITIVI: STORAGE VSP G1000 (R800), VSP (R700), HUS VM (HM700) E USP | Elenco dei dispositivi per storage VSP G1000 (R800), VSP (R700), HUS VM (HM700) e USP. Ogni storage richiede: * IP dell'array: Indirizzo IP dello storage * Nome utente: Nome utente dello storage * Password: Password dello storage * cartella contenente file JAR dell'utility di esportazione 
+
+
+| SNM2Devices - Storage WMS/SMS/AMS | Elenco dei dispositivi per gli storage WMS/SMS/AMS. Ogni storage richiede: * IP dell'array: Indirizzo IP dello storage * Storage Navigator CLI Path: SNM2 CLI path * account Authentication Valid: Select to Choose Valid account Authentication * User Name: User name for the storage * Password: Password for the storage 
+
+
+| Scegli Tuning Manager per le performance | Eseguire l'override di altre opzioni di performance 
+
+
+| Tuning Manager host | Indirizzo IP o nome di dominio completo del tuning manager 
+
+
+| Eseguire l'override della porta di Tuning Manager | Se vuoto, utilizzare la porta predefinita nel campo Choose Tuning Manager for Performance (scegliere Tuning Manager per le prestazioni), altrimenti inserire la porta da utilizzare 
+
+
+| Nome utente Tuning Manager | Nome utente di Tuning Manager 
+
+
+| Password Tuning Manager | Password per Tuning Manager 
+|===
+Nota: In HDS USP, USP V e VSP, qualsiasi disco può appartenere a più di un gruppo di array.
+
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+| Tipo di connessione | HTTPS o HTTP, visualizza anche la porta predefinita 
+
+
+| Porta del server HiCommand | Porta utilizzata per HiCommand Device Manager 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 40. 
+
+
+| Scegliere 'Escludi' o 'Includi' per specificare un elenco | Specificare se includere o escludere l'elenco di array riportato di seguito durante la raccolta dei dati. 
+
+
+| Filtra elenco dispositivi | Elenco separato da virgole dei numeri di serie delle periferiche da includere o escludere 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+
+
+| Timeout di esportazione in secondi | Timeout utility di esportazione. Il valore predefinito è 300. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore: L'utente non dispone di autorizzazioni sufficienti | Utilizzare un account utente diverso con più privilegi o aumentare il privilegio dell'account utente configurato nel data collector 
+
+
+| Errore: L'elenco di storage è vuoto. I dispositivi non sono configurati o l'utente non dispone di autorizzazioni sufficienti | * Utilizzare DeviceManager per verificare se i dispositivi sono configurati. * Utilizzare un account utente diverso con più privilegi o aumentare il privilegio dell'account utente 
+
+
+| Errore: L'array di storage HDS non è stato aggiornato per alcuni giorni | Esaminare il motivo per cui questo array non viene aggiornato in HDS HiCommand. 
+|===
+
+
+=== Performance
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore: * Errore durante l'esecuzione dell'utility di esportazione * errore durante l'esecuzione di un comando esterno | * Confermare che l'utilità di esportazione sia installata sull'unità di acquisizione di Data Infrastructure Insights * confermare che la posizione dell'utilità di esportazione sia corretta nella configurazione del data collector * confermare che l'IP dell'array USP/R600 sia corretto nella configurazione del data collector * confermare che il nome utente e la password siano corretti nella configurazione del data collector * confermare che la versione dell'utilità di esportazione è compatibile con la versione del micro-codice dell'array di archiviazione * dall'unità di acquisizione di Data Infrastructure Insights, aprire un file CMD - eseguire la seguente procedura di installazione del file runWin.bat configurato per effettuare la directory di archiviazione: Eseguire la seguente procedura di archiviazione 
+
+
+| Errore: Accesso allo strumento di esportazione non riuscito per l'IP di destinazione | * Confermare che nome utente/password sono corretti * creare un ID utente principalmente per questo data collector HDS * verificare che nessun altro data collector sia configurato per acquisire questo array 
+
+
+| Errore: Gli strumenti di esportazione hanno registrato "Impossibile ottenere l'intervallo di tempo per il monitoraggio". | * Verificare che il monitoraggio delle performance sia attivato sull'array. * Provare a richiamare gli strumenti di esportazione al di fuori di Data Infrastructure Insights per confermare che il problema non rientra in Data Infrastructure Insights. 
+
+
+| Errore: * Errore di configurazione: Storage Array non supportato da Export Utility * errore di configurazione: Storage Array non supportato da Storage Navigator Modular CLI | * Configurare solo gli array di storage supportati. * Utilizzare l'opzione "Filter Device List" (Filtra elenco dispositivi) per escludere gli array di storage non supportati. 
+
+
+| Errore: * Errore durante l'esecuzione del comando esterno * errore di configurazione: Storage Array non segnalato dall'inventario * errore di configurazione: La cartella di esportazione non contiene file jar | * Controllare la posizione dell'utility di esportazione. * Controllare se lo storage array in questione è configurato nel server HiCommand * impostare l'intervallo di polling delle prestazioni su più di 60 secondi. 
+
+
+| Errore: * Errore CLI di Storage Navigator * errore durante l'esecuzione del comando auPerform * errore durante l'esecuzione del comando esterno | * Verificare che Storage Navigator Modular CLI sia installato sull'unità di acquisizione di Data Infrastructure Insights * verificare che la posizione dell'interfaccia CLI modulare di Storage Navigator sia corretta nella configurazione del data collector * verificare che l'indirizzo IP dell'array WMS/SMS/SMS sia corretto nella configurazione del data collector * confermare che la versione dell'interfaccia CLI modulare di Storage Navigator è compatibile con la versione microcodice dell'array di storage configurata nel data collector * dall'unità di acquisizione di Data Infrastructure Insights, aprire un prompt di CMD ed eseguire il seguente comando "eseguire la directory auitref:" 
+
+
+| Errore: Errore di configurazione: Storage Array non segnalato dall'inventario | Controllare se lo Storage Array in questione è configurato nel server HiCommand 
+
+
+| Errore: * Nessun array registrato con la CLI modulare 2 di Storage Navigator * l'array non è registrato con la CLI modulare 2 di Storage Navigator * errore di configurazione: Storage Array non registrato con la CLI modulare di StorageNavigator | * Aprire il prompt dei comandi e cambiare la directory nel percorso configurato * eseguire il comando “set=STONAVM_HOME=.” * Eseguire il comando “auunitref” * confermare che l'output del comando contiene i dettagli dell'array con IP * se l'output non contiene i dettagli dell'array, registrare l'array con Storage Navigator CLI: - Aprire il prompt dei comandi e modificare la directory nel percorso configurato - eseguire il comando “set=STONAVM_HOME=.” - Eseguire il comando "auunitaddauto -ip <ip>". Sostituire <ip> con l'IP corretto. 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

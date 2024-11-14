@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: task_modify_delete_query.html 
+summary: Modifica o eliminazione di una query 
+keywords: query, queries, modify, edit, delete, remove 
+---
+= Modifica o eliminazione di una query
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+È possibile modificare i criteri associati a una query quando si desidera modificare i criteri di ricerca per le risorse che si stanno interrogando.
+
+
+
+== Modifica di una query
+
+.Fasi
+. Fare clic su *Esplora* e selezionare *tutte le query metriche*.
++
+Viene visualizzata la pagina Query.
+
+. Fare clic sul nome della query
+. Per aggiungere un criterio alla query, fare clic sull'icona colonne e selezionare una metrica o un attributo dall'elenco.
+
+
+Una volta apportate tutte le modifiche necessarie, effettuare una delle seguenti operazioni:
+
+* Fare clic sul pulsante *Save* (Salva) per salvare la query con il nome utilizzato inizialmente.
+* Fare clic sul menu a discesa accanto al pulsante *Save* (Salva) e selezionare *Save As* (Salva con nome) per salvare la query con un altro nome. Questa operazione non sovrascrive la query originale.
+* Fare clic sul menu a discesa accanto al pulsante *Save* (Salva) e selezionare *Rename* (Rinomina) per modificare il nome della query utilizzato inizialmente. Questa operazione sovrascrive la query originale.
+* Fare clic sul menu a discesa accanto al pulsante *Save* (Salva) e selezionare *Discard changes* (Annulla modifiche) per ripristinare le ultime modifiche salvate.
+
+
+
+
+== Eliminazione di una query
+
+Per eliminare una query, fare clic su *Query* e selezionare *Mostra tutte le query*, quindi eseguire una delle seguenti operazioni:
+
+. Fare clic sul menu a tre punti a destra della query e fare clic su *Delete* (Elimina).
+. Fare clic sul nome della query e selezionare *Delete* (Elimina) dal menu a discesa *Save* (Salva).
+

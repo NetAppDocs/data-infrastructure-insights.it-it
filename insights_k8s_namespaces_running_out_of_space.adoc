@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: insights_k8s_namespaces_running_out_of_space.html 
+keywords: insight, pv, persistent volume, backend 
+summary: Le informazioni possono aiutarti a prevedere quando gli spazi Kubernetes saranno probabilmente pieni. 
+---
+= Approfondimenti: Kubernetes Namespace che esauriscono lo spazio
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Esaurire lo spazio nel tuo ambiente non è mai una buona situazione. Data Infrastructure Insights ti aiuta a prevedere il tempo necessario prima che i volumi persistenti di Kubernetes si esauriscano.
+
+L'Insight _Kubernetes Namespace running of Space_ ti offre una vista dei carichi di lavoro degli spazi dei nomi Kubernetes che rischiano di esaurire lo spazio, con una stima del numero di giorni rimanenti prima che ogni volume persistente si esaurisca.
+
+Per visualizzare questa Insight, accedere a *Dashboard > Insights*.
+
+image:K8sRunningOutOfSpaceWorkloadList.png["Elenco dei carichi di lavoro negli spazi dei nomi K8s che rischiano di esaurire lo spazio"]
+
+Fare clic su un carico di lavoro per aprire una pagina dei dettagli per Insight. In questa pagina viene visualizzato un grafico che mostra le tendenze della capacità del carico di lavoro e una tabella che mostra quanto segue:
+
+* Nome del carico di lavoro
+* Volume persistente interessato
+* Tempo previsto per il pieno in giorni
+* Capacità del volume persistente
+* Risorse di storage back-end interessate, con capacità corrente utilizzata fuori dalla capacità totale. Facendo clic su questo collegamento viene visualizzata la landing page dettagliata del volume di back-end.
+
+
+image:K8sRunningOutOfSpaceWorkloadTable.png["Tabella dei carichi di lavoro che mostra i dettagli"]
+
+
+
+=== Cosa posso fare se lo spazio è esaurito?
+
+Nella pagina Insight, fare clic su *+Mostra consigli* per visualizzare le possibili soluzioni. L'opzione più semplice quando si esaurisce lo spazio è sempre quella di aggiungere maggiore capacità e Data Infrastructure Insights mostra la capacità ottimale da aggiungere per aumentare il time-to-full a una previsione di 60 giorni. Vengono inoltre mostrati altri consigli.
+
+image:K8sRunningOutOfSpaceRecommendations.png["Capacità da aggiungere per tornare a TTF di 60 giorni"]
+
+È anche possibile copiare un comodo link a questa Insight, per aggiungere ai preferiti la pagina o per condividerla facilmente con il tuo team.

@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: cs_intro.html 
+keywords: CloudSecure, Cloud Secure 
+summary: Panoramica 
+---
+= Informazioni su Storage workload Security
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights Storage workload Security (in precedenza Cloud Secure) aiuta a proteggere i dati con informazioni pratiche su minacce interne. Offre visibilità e controllo centralizzati di tutti gli accessi ai dati aziendali negli ambienti di cloud ibrido per garantire il rispetto degli obiettivi di sicurezza e conformità.
+
+
+NOTE: La sicurezza del carico di lavoro non è disponibile in Data Infrastructure Insights Federal Edition.
+
+
+
+== Visibilità
+
+Ottieni visibilità e controllo centralizzati dell'accesso degli utenti ai tuoi dati aziendali critici memorizzati on-premise o nel cloud.
+
+Sostituire strumenti e processi manuali che non forniscono una visibilità puntuale e precisa dell'accesso e del controllo dei dati. Workload Security funziona in modo esclusivo sia sul cloud che sui sistemi storage on-premise per fornire avvisi in tempo reale di comportamenti dannosi degli utenti.
+
+
+
+== Protezione
+
+Proteggi i dati dell'organizzazione da un utilizzo improprio da parte di utenti malintenzionati o compromessi attraverso l'apprendimento automatico avanzato e il rilevamento delle anomalie.
+
+Avvisa l'utente in caso di accesso anomalo ai dati attraverso l'apprendimento automatico avanzato e il rilevamento delle anomalie del comportamento dell'utente.
+
+
+
+== Conformità
+
+Garantire la conformità aziendale verificando l'accesso dei dati degli utenti ai dati aziendali critici memorizzati on-premise o nel cloud.

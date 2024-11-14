@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: nkmo_clusterrole_yaml.html 
+keywords: NKMO, yaml, 
+summary: Un file YAML di esempio per NKMO Clusterrole 
+---
+= Esempio di NKMO Clusterrole YAML
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:toclevels: 2
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il componente _kubectl_ di NetApp Kubernetes Monitoring Operator (NKMO) deve essere configurato con accesso ai seguenti oggetti kubernetes, almeno: Agenti, clusterrole, clusterrolebinding, customresourcedefinizioni, implementazioni, namespace, ruoli, associazioni di ruoli, segreti, serviceaccounts, e servizi. Di seguito è riportato un esempio di clusterrole con questi privilegi minimi.
+
+[listing]
+----
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: netapp-kubernetes-monitoring-operator-installer-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - services
+  - serviceaccounts
+  - secrets
+  - namespaces
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - rbac.authorization.k8s.io
+  resources:
+  - roles
+  - clusterroles
+  - rolebindings
+  - clusterrolebindings
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+  - escalate
+  - bind
+- apiGroups:
+  - apiextensions.k8s.io
+  resources:
+  - customresourcedefinitions
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+- apiGroups:
+  - monitoring.netapp.com
+  resources:
+  - agents
+  verbs:
+  - get
+  - list
+  - create
+  - patch
+  - update
+  - delete
+----

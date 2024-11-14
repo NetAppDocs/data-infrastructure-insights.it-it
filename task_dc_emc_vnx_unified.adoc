@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_vnx_unified.html 
+keywords: data collector, VNX, EMC, Dell 
+summary: Configurazione di VNX data collector. 
+---
+= Configurazione di Dell EMC VNX Unified Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Per la configurazione, il data collector Dell EMC VNX Unified (SSH) richiede l'indirizzo IP della stazione di controllo e un nome utente e una password di sola lettura.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco | Disco 
+
+
+| Disk Folder (cartella disco | Gruppo di dischi 
+
+
+| File system | Volume interno 
+
+
+| Storage | Storage 
+
+
+| Processore per lo storage | Nodo di storage 
+
+
+| Pool di storage, gruppo RAID | Pool di storage 
+
+
+| LUN | Volume 
+
+
+| Data Mover. (Mover dati | Controller 
+
+
+| File System montato su un data mover | Condivisione file 
+
+
+| Esportazioni CIFS e NFS | Condividere 
+
+
+| Volume del disco | LUN back-end 
+|===
+
+
+== Requisiti
+
+Per configurare il data collector VNX (SSH) sono necessari i seguenti elementi:
+
+* Indirizzo IP VNX e credenziali per la stazione di controllo Celerra.
+* Nome utente e password di sola lettura.
+* Il data collector è in grado di eseguire comandi navicli/NaviSecCLI sull'array di back-end utilizzando le testine NAS del sistema operativo DART
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP VNX | Indirizzo IP o nome di dominio completo della stazione di controllo VNX 
+
+
+| Nome utente | Nome utente della stazione di controllo VNX 
+
+
+| Password | Password per la stazione di controllo VNX 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 40 minuti. 
+
+
+| Performance poll Interval (sec). | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

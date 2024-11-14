@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_jvm.html 
+keywords: telegraf, installation, install, jvm 
+summary: Configurazione del data collector JVM 
+---
+= Data Collector JVM
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da JVM.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere JVM.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:JVMDCConfigLinux.png["Configurazione JVM"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili in link:https://docs.oracle.com/javase/specs/jvms/se12/html/index.html["Documentazione JVM"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| JVM | JVM spazio dei nomi | Architettura del sistema operativo Nome del sistema operativo versione Runtime specifica del runtime fornitore specifica del runtime versione tempo di attività Runtime Nome della macchina virtuale Runtime fornitore versione della macchina virtuale Nome del nodo IP | Classe caricata Classe totale caricata Classe scaricata memoria heap memoria impegnata heap Init memoria heap utilizzata memoria massima heap utilizzata memoria non heap memoria impegnata memoria non heap memoria init memoria non heap memoria massima non heap oggetti memoria utilizzati in attesa di finalizzazione OS processori disponibili OS memoria virtuale impegnata dimensione OS libero Memoria fisica dimensione OS spazio libero di swap dimensione OS massimo file descrittore Conteggio OS Open file Descriptors Conteggio OS processore CPU carico OS processore tempo SO sistema operativo carico sistema operativo carico sistema operativo medio totale memoria fisica dimensione OS spazio totale di swap dimensione thread Conteggio dei demon thread Conteggio dei picchi di thread Conteggio thread totale iniziato Conteggio Garbage Collector Copy Collection Conteggio Garbage Collector tempo di raccolta Garbage Collector Mark-sweep Collector Conteggio Garbage Collector tempo di raccolta Garbage Collector G1 tempo di raccolta Old Generation Garbage Collector G1 Conteggio raccolta Young Generation Garbage Collector G1 Tempo di raccolta di giovani generazioni Garbage Collector tempo di raccolta di Mark-sweep simultanei Garbage Collector tempo di raccolta di Garbage Collector tempo di raccolta di Garbage Collector tempo di raccolta di Garbage Collector Parallel Scavenge Mark-sweep Collection tempo di raccolta Garbage Collector Parallel Scavenge Collection Conteggio di raccolta di Garbage Collector Parallel Scavenge Tempo di raccolta 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

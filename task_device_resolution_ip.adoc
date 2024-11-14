@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: task_device_resolution_ip.html 
+keywords: Automatic, AR, AHR, Host, automatic device resolution, FC, Identify 
+summary:  
+---
+= Risoluzione del dispositivo IP
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La schermata IP Identify (identificazione IP) visualizza tutte le condivisioni iSCSI e CIFS o NFS identificate dalla risoluzione automatica del dispositivo o dalla risoluzione manuale del dispositivo. Vengono visualizzati anche i dispositivi non identificati. La schermata include l'indirizzo IP, il nome, lo stato, il nodo iSCSI e il nome di condivisione dei dispositivi. Viene visualizzata anche la percentuale di dispositivi identificati correttamente.
+
+image:Device_Resolution_IP.png["Risoluzione del dispositivo IP"]
+
+
+
+== Aggiunta manuale di dispositivi IP
+
+È possibile aggiungere manualmente un dispositivo IP a Data Infrastructure Insights utilizzando la funzione di aggiunta manuale disponibile nella schermata di identificazione IP.
+
+.Procedura
+. Accedere all'interfaccia utente Web di Data Infrastructure Insights.
+. Fare clic su *Gestisci > risoluzione del dispositivo*
+. Fare clic sulla scheda *IP Address Identify* (identificazione indirizzo IP).
+. Fare clic sul pulsante *Aggiungi*.
++
+Viene visualizzata la finestra di dialogo Add Device (Aggiungi dispositivo)
+
+. Immettere l'indirizzo, l'indirizzo IP e un nome di periferica univoco.
+
+
+.Risultato
+Il dispositivo inserito viene aggiunto all'elenco dei dispositivi nella scheda IP Address Identify (identificazione indirizzo IP).
+
+
+
+== Importazione dell'identificativo del dispositivo IP da un file .CSV
+
+È possibile importare manualmente gli identificatori dei dispositivi IP nella funzione risoluzione periferica utilizzando un elenco di identificatori dei dispositivi in un file .CSV.
+
+. Prima di iniziare
+
+
+È necessario disporre di un file .CSV formattato correttamente per importare gli identificatori dei dispositivi direttamente nella funzione risoluzione periferica. Il file .CSV per i dispositivi IP richiede le seguenti informazioni:
+
+|===
+
+
+| Indirizzo | IP | Nome 
+|===
+I campi dati devono essere racchiusi tra virgolette, come mostrato nell'esempio seguente.
+
+....
+"Address","IP","Name"
+"ADDRESS6447","IP6447","NAME-6447"
+"ADDRESS3211","IP3211","NAME-3211"
+"ADDRESS593","IP593","NAME-593"
+....
+
+NOTE: Come procedura consigliata, si consiglia di esportare prima le informazioni di identificazione dell'indirizzo IP in un file .CSV, apportare le modifiche desiderate in tale file, quindi importare nuovamente il file in IP Address Identify (identificazione indirizzo IP). In questo modo, le colonne previste sono presenti e nell'ordine corretto.
+
+
+
+== Esportazione dell'identificazione del dispositivo IP in un file .CSV
+
+È possibile esportare gli identificativi dei dispositivi IP esistenti in un file .CSV dalla funzione di risoluzione dei dispositivi Data Infrastructure Insights. È possibile esportare un'identificazione del dispositivo in modo da poterla modificare e quindi importarla nuovamente in Data Infrastructure Insights, dove viene utilizzata per identificare i dispositivi simili a quelli che corrispondono originariamente all'identificazione esportata.
+
+.A proposito di questa attività
+. Questo scenario può essere utilizzato quando le periferiche hanno attributi simili che possono essere facilmente modificati nel file .CSV e quindi reimportati nel sistema.
+
+Quando si esporta un identificativo del dispositivo IP in un file .CSV, il file contiene le seguenti informazioni nell'ordine indicato:
+
+|===
+
+
+| Indirizzo | IP | Nome 
+|===
+.Procedura
+. Accedere all'interfaccia utente Web di Data Infrastructure Insights.
+. Fare clic su *Gestisci > risoluzione periferica*
+. Selezionare la scheda *IP Address Identify* (identificazione indirizzo IP).
+. Selezionare il dispositivo IP o i dispositivi di cui si desidera esportare l'identificativo.
+. Fare clic sul pulsante *Esporta*image:ExportButton.png["Pulsante Export (Esporta)"].
++
+Selezionare se aprire il file .CSV o salvarlo.
+
+
+
+Contenuti correlati: link:task_device_resolution_fibre_channel.html["Risoluzione del dispositivo Fibre Channel"] link:task_device_resolution_rules.html["Creazione di regole di risoluzione dei dispositivi"] link:task_device_resolution_preferences.html["Impostazione delle preferenze di risoluzione del dispositivo"]

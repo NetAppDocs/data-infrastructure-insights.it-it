@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: concept_storage_virtualization.html 
+summary: Data Infrastructure Insights può fornire viste dello storage virtualizzato front-end e back-end. 
+keywords: storage, virtual, virtualized, virtualization, 
+---
+= Virtualizzazione dello storage
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights può differenziare tra uno storage array con storage locale o la virtualizzazione di altri storage array. In questo modo è possibile correlare i costi e distinguere le performance dal front-end fino al back-end dell'infrastruttura.
+
+
+
+=== Virtualizzazione in un widget tabella
+
+Uno dei modi più semplici per iniziare a esaminare la virtualizzazione dello storage consiste nella creazione di un widget della tabella della dashboard che mostri il tipo virtualizzato. Quando si crea la query per il widget, è sufficiente aggiungere "virtualizedType" al raggruppamento o al filtro.
+
+image:StorageVirtualization_TableWidgetSettings.png["Query di base per mostrare i virtualizzatiTypes dello storage"]
+
+Il widget della tabella risultante mostra gli storage _Standard_, _backend_ e _Virtual_ nel tuo ambiente.
+
+image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tabella che mostra i tipi virtualizzati"]
+
+
+
+=== Le landing page mostrano informazioni virtualizzate
+
+Su una landing page di storage, volume, volume interno o disco, è possibile visualizzare informazioni sulla virtualizzazione rilevanti. Ad esempio, osservando la pagina di destinazione dello storage riportata di seguito, è possibile vedere che si tratta di uno storage virtuale e quale sistema di storage back-end si applica. Tutte le tabelle pertinenti nelle landing page mostreranno anche le informazioni sulla virtualizzazione, se applicabili.
+
+image:StorageVirtualization_StorageSummary.png["Landing Page dello storage che mostra le informazioni sullo storage virtuale e supportato"]
+
+
+
+=== Landing page e dashboard esistenti
+
+Tenere presente che se nel proprio ambiente sono presenti landing page o dashboard personalizzati, per impostazione predefinita non verranno visualizzate automaticamente tutte le informazioni sulla virtualizzazione. Tuttavia, è possibile _ripristinare le impostazioni predefinite_ qualsiasi dashboard o landing page personalizzata (sarà necessario implementare nuovamente le personalizzazioni) oppure modificare i widget pertinenti per includere gli attributi o le metriche di virtualizzazione desiderati.
+
+L'opzione _Ripristina impostazioni predefinite_ è disponibile nell'angolo in alto a destra di una dashboard personalizzata o di una landing page.
+
+image:RevertToDefault.png["Ripristina il pulsante predefinito"]

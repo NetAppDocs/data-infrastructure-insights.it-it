@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task_troubleshooting_general_problems.html 
+summary: Suggerimenti generali per la risoluzione dei problemi di Data Infrastructure Insights. 
+keywords: troubleshooting, problems, browser, login, log in, accessing, access to, Trident, qtree, quota 
+---
+= Risoluzione dei problemi di informazioni generali sull'infrastruttura dati
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Qui troverai suggerimenti per la risoluzione dei problemi di Data Infrastructure Insights.
+
+Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Risoluzione dei problemi relativi all'unità di acquisizione Linux"] e link:task_troubleshooting_windows_acquisition_unit_problems.html["Risoluzione dei problemi relativi all'unità di acquisizione di Windows"].
+
+
+
+== Problemi di accesso
+
+|===
+| *Problema:* | *Provare questo:* 
+
+
+| Data Infrastructure Insights si disconnette automaticamente ogni 6 ore | Ciò è dovuto alla disattivazione dei cookie di terze parti del browser. Gli utenti possono configurare il browser in modo da abilitare tutti i cookie di 3rd parti o utilizzare un elenco di eccezioni più ristretto per abilitare solo quelli per Data Infrastructure Insights. Esempio: Aprire le impostazioni del browser selezionare l'opzione "Consenti tutti i cookie". *O* selezionare "Blocca cookie di terze parti" e aggiungere eccezioni per _[\*.]auth0.com_ e _[*.]NetApp.com_. Microsoft Edge presenta lo stesso formato per le eccezioni di Chrome. In Firefox, le eccezioni ai cookie sono designate semplicemente come _auth0.com_ e _netapp.com_. 
+
+
+| Possiedo un account BlueXP ma non riesco ad accedere ad BlueXP. | Aprire un ticket da https://mysupport.netapp.com/site/help[]. Seleziona la categoria "blueXP.netapp.com > problemi di account/login" o "bluexp.netapp.com > problemi di federazione". Questi sono specificamente per problemi o domande di BlueXP. Per tutti gli altri problemi di supporto tecnico di Data Infrastructure Insights, contattare link:concept_requesting_support.html["Supporto NetApp"]. 
+
+
+| Sono stato invitato a Data Infrastructure Insights ma viene visualizzato il messaggio "non autorizzato". | Verifica di aver effettuato l'iscrizione a un account BlueXP o che l'organizzazione utilizzi l'accesso SSO con BlueXP. Verificare che l'indirizzo e-mail del profilo BlueXP  corrisponda all'indirizzo e-mail indicato nell'e-mail di benvenuto di Data Infrastructure Insights. Se l'indirizzo e-mail non corrisponde, richiedere un nuovo invito con l'indirizzo e-mail corretto. 
+
+
+| Ho disconnesso da BlueXP  e mi sono disconnesso automaticamente da Data Infrastructure Insights. | Il Single Sign-on (SSO) nei servizi cloud di NetApp chiude tutte le sessioni di approfondimento sull'infrastruttura dati. Se si dispone dell'accesso a più account Data Infrastructure Insights, la disconnessione da uno qualsiasi interrompe tutte le sessioni attive. Effettua nuovamente l'accesso per accedere all'account. 
+
+
+| Sono stato disconnesso automaticamente dopo diversi giorni. | Gli account cloud NetApp richiedono la riautenticazione ogni pochi giorni (l'impostazione attuale di BlueXP è di 7 giorni). Effettua nuovamente l'accesso per accedere all'account. 
+
+
+| Viene visualizzato il messaggio di errore "non più autorizzato all'accesso". | Contattare l'amministratore dell'account per verificare l'accesso a Data Infrastructure Insights. Verificare che l'indirizzo e-mail del profilo BlueXP  corrisponda all'indirizzo e-mail indicato nell'e-mail di benvenuto di Data Infrastructure Insights 
+
+
+| Altri errori di accesso | Provare la modalità incognito in Chrome o cancellare la cronologia del browser, i cookie e la cache. Provare con un profilo del browser diverso (ad esempio Chrome - Aggiungi persona). 
+|===
+
+
+== Altri problemi
+
+|===
+
+
+| *Domanda:* | *Risposta:* 
+
+
+| Le mie quote rigide Qtree vengono visualizzate correttamente nelle query, ma le mie quote morbide vengono visualizzate come capacità totale del volume. È corretto? | Solo le quote rigide, impostate manualmente o tramite Trident, verranno visualizzate come quote impostate; se non vengono specificate quote rigide, la capacità Qtree sarà la capacità del volume interno. 
+
+
+| Ho impostato manualmente una quota soft e una hard nello stesso Qtree, ma la capacità totale indicata è la quota hard; è corretto? | Sì, se viene specificata una quota rigida, questa verrà visualizzata come capacità totale. 
+
+
+| Quando si inserisce un tempo di pianificazione del rapporto Cognos, a volte mi ritrovo con una "m" extra nel tempo di programmazione. Ad esempio, se si immette l'ora come "02:15 PM", è possibile aggiungere un carattere extra: "02:15 PMM" (o PMM). Quando clicco all'esterno, lo cambia in "2:15:00 AM". È possibile salvare il report, ma quando si riapre il report salvato, l'ora pianificata viene visualizzata come AM (ad esempio, mattina), indipendentemente dal fatto che sia stato inserito AM o PM nell'ora pianificata. | Immettere nuovamente l'ora di programmazione, facendo attenzione a non inserire i caratteri "AM" o "PM" completi; è sufficiente digitare "A" per "AM o "P" per "PM". Se non viene visualizzato il carattere extra, l'ora di programmazione verrà impostata correttamente. 
+|===
+
+
+== Risorse
+
+Ulteriori suggerimenti per la risoluzione dei problemi sono disponibili in link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["Knowledge base di NetApp"] (è necessario l'accesso al supporto).
+
+Per ulteriori informazioni di supporto, consulta la pagina Data Infrastructure Insightslink:concept_requesting_support.html["Supporto"].
+
+Se si dispone di un abbonamento Data Infrastructure Insights attivo, è possibile utilizzare le seguenti opzioni di supporto:
+
+link:https://www.netapp.com/us/contact-us/support.aspx["Telefono"] link:https://mysupport.netapp.com/site/cases/mine/create?serialNumber=95001014387268156333["Ticket di supporto"]
+
+Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/cloudinsights/concept_requesting_support.html["Documentazione di supporto di Data Infrastructure Insights"].

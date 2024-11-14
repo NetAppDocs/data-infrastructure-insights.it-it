@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ibm_ds.html 
+keywords: data collector, IBM DS6xxx, IBM DS6xxx, IBM, IBM DS 
+summary: Configurazione di System Storage DS8000 Series Data Collector. 
+---
+= IBM System Storage serie DS8000 Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector IBM DS (CLI) supporta l'acquisizione di dati relativi a inventario e performance per i dispositivi DS6xxx e DS8xxx.
+
+I dispositivi DS3xxx, DS4xxx e DS5xxx sono supportati da link:task_dc_na_eseries.html["Data collector NetApp e-Series"]. Fare riferimento alla matrice di supporto di Data Infrastructure Insights per i modelli e le versioni firmware supportati.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector IBM DS. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Modulo unità disco | Disco 
+
+
+| Immagine di storage | Storage 
+
+
+| Pool di estensione | Nodo di storage 
+
+
+| Volume a blocchi fisso | Volume 
+
+
+| Iniziatore FC host (mappato) | Maschera di volume 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collecor.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessari i seguenti elementi:
+
+* Indirizzo IP di ciascun array DS
+* Nome utente e password di sola lettura su ciascun array DS
+* Software di terze parti installato su Data Infrastructure Insights AU: IBM _dscli_
+* Convalida dell'accesso: Eseguire i comandi _dscli_ utilizzando il nome utente e la password
+* Requisiti delle porte: 80, 443 e 1750
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Storage DS | Indirizzo IP o nome di dominio completo del dispositivo DS 
+
+
+| Nome utente | Nome utente per la CLI DS 
+
+
+| Password | Password per la CLI DS 
+
+
+| percorso eseguibile _dscli_ | Percorso completo dell'eseguibile _dscli_ 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario (min). Il valore predefinito è 40. 
+
+
+| Nome visualizzato dello storage | Nome dello storage array IBM DS 
+
+
+| Inventario Escludi i dispositivi | Elenco separato da virgole dei numeri di serie dei dispositivi da escludere dalla raccolta dell'inventario 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300. 
+
+
+| Tipo di filtro delle prestazioni | Includi: Dati raccolti solo dai dispositivi presenti nell'elenco. Escludi: Non vengono raccolti dati da questi dispositivi 
+
+
+| Elenco dispositivi filtro prestazioni | Elenco separato da virgole degli ID dei dispositivi da includere o escludere dalla raccolta delle performance 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore contenente: CMUC00192E, CMUC00191E o CMUC00190E | * Verificare le credenziali e l'indirizzo IP immessi. * Provare a comunicare con l'array tramite la console di gestione Web \https://<ip>:8452/DS8000/Console. Sostituire <ip> con IP configurato per il data collector. 
+
+
+| Errore: * Impossibile eseguire il programma * errore durante l'esecuzione del comando | * Da Data Infrastructure Insights Acquisition Unit aprire un file CMD * Open CLI.CFG nella directory home/lib della CLI e controllare la proprietà JAVA_INSTALL, modificare il valore in modo che corrisponda all'ambiente in uso * visualizzare la versione java installata su questo computer, digitando: "java -version" * Ping l'indirizzo IP del dispositivo di archiviazione IBM specificato nel comando CLI emesso. * Se tutte le operazioni descritte in precedenza funzionavano correttamente, eseguire manualmente un comando CLI 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

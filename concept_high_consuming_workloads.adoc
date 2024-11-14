@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: concept_high_consuming_workloads.html 
+keywords: insight, greedy, degraded, bully, victim, impacted, impacting, impactful, impact, resources, consuming, workload 
+summary: 'Le informazioni ti offrono un"analisi dell"impatto delle risorse sulle altre risorse del tuo ambiente.' 
+---
+= Approfondimenti: Carichi di lavoro che consumano molto
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse nel tuo ambiente.
+
+
+
+=== Terminologia
+
+Quando si parla di impatto sul carico di lavoro o sulle risorse, sono utili le seguenti definizioni.
+
+Una risorsa *di impatto* o _avida_ è una risorsa che causa un impatto negativo su un'altra risorsa. Ad esempio, un volume con IOPS molto elevati può causare una maggiore latenza in altri volumi (ad esempio risorse _influenzate_ o _degradate_). Le risorse di impatto e interessate sono "peer" che utilizzano la stessa risorsa condivisa, ad esempio un pool di storage o un volume.
+
+Un *carico di lavoro ad alto consumo* è un carico di lavoro che attualmente viene identificato come un impatto sulle altre risorse nel pool di storage condiviso. Questi carichi di lavoro consentono IOPS più elevati, riducendo gli IOPS nei carichi di lavoro interessati. In Data Infrastructure Insights questi sono identificati come *carichi di lavoro impegnativi*.
+
+Un carico di lavoro * con impatto è un carico di lavoro influenzato da un carico di lavoro molto elevato nel pool di storage condiviso. Questi carichi di lavoro stanno sperimentando IOPS ridotti e/o latenza superiore, causati dai carichi di lavoro esigenti.
+
+*La saturazione delle risorse condivise* è il rapporto tra IOPS e _baseline_.
+
+*Baseline* è definito come il punto dati massimo riportato per ciascun carico di lavoro nell'ora immediatamente precedente la saturazione rilevata.
+
+Si verifica un *conflitto* quando gli IOPS influiscono su altre risorse o carichi di lavoro nel pool di storage condiviso.
+
+
+
+=== Carichi di lavoro che consumano molto
+
+Tutti i carichi di lavoro ad alto consumo rilevati da Data Infrastructure Insights sono mostrati in _Shared Resources in stress_ Insight. Accedere a *osservabilità > Approfondimenti sull'infrastruttura* per visualizzare questi approfondimenti.
+
+image:Impacts_Workloads_Menu.png["Risorse condivise"]
+
+Fare clic su un carico di lavoro per visualizzare la relativa pagina dei dettagli. Il grafico in alto mostra l'attività sulla risorsa condivisa (ad esempio, un pool di storage) in cui si verifica il conflitto.
+
+image:Insights_Shared_Resource_Contention_Chart.png["Grafico che mostra l'attività sulla risorsa condivisa"]
+
+Di seguito sono riportati due grafici che mostrano i carichi di lavoro esigenti e quelli che sono influenzati da quelli esigenti.
+
+image:Insights_Demanding_Workload_Chart.png["Grafico dei carichi di lavoro esigenti"] image:Insights_Impacted_Workload_Chart.png["Grafico dei carichi di lavoro interessati"]
+
+
+
+=== Cosa devo fare per risolvere la saturazione?
+
+È possibile adottare una serie di misure per ridurre o eliminare la possibilità di saturazione nell'ambiente. Ecco alcune cose che puoi provare.
+
+* Sposta i consumatori con IOPS elevati
++
+Sposta i carichi di lavoro "avidi" in pool di storage meno saturi. Si consiglia di valutare il Tier e la capacità di questi pool prima di spostare i carichi di lavoro, per evitare costi non necessari o ulteriori vincoli.
+
+* Implementare una policy di qualità del servizio (QoS)
++
+L'implementazione di una policy di QoS per ogni workload per garantire una quantità sufficiente di risorse disponibili riduce la saturazione dello storage Pool. Si tratta di una soluzione a lungo termine.
+
+* Aggiungere risorse aggiuntive
++
+Se la risorsa condivisa (ad esempio, lo Storage Pool) ha raggiunto il punto di saturazione IOPS, l'aggiunta di più dischi o più veloci al pool garantisce risorse disponibili sufficienti per ridurre la saturazione.
+
+

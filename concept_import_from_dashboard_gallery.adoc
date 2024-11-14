@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: concept_import_from_dashboard_gallery.html 
+summary: È possibile importare dashboard consigliate per rispondere alle domande di business Insight. 
+keywords: dashboard, gallery, import 
+---
+= Importazione dalla galleria Dashboard
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights fornisce una serie di dashboard consigliati per fornire informazioni aziendali sui dati. Ogni dashboard contiene widget progettati per rispondere a una particolare domanda o risolvere un particolare problema relativo ai dati attualmente raccolti nell'ambiente.
+
+Per importare una dashboard dalla galleria, procedere come segue:
+
+. Selezionare *Dashboard > Dashboard*
+. Fare clic su *+da Gallery*
++
+Viene visualizzato un elenco di *Dashboard raccomandati*. Ogni dashboard viene chiamata con una domanda specifica che la dashboard può aiutarti a risolvere. Sono disponibili dashboard per rispondere a domande relative a diversi tipi di oggetti, tra cui AWS, NetApp, Storage, VMware, e altri
+
+. Selezionare una o più dashboard dall'elenco e fare clic su *Aggiungi dashboard*. Queste dashboard vengono ora visualizzate nell'elenco della dashboard.
+
+
+Oltre ai dashboard consigliati, è anche possibile scegliere di importare *Dashboard aggiuntivi* che non sono rilevanti per i dati correnti. Ad esempio, se non si dispone di data raccoglitori di storage attualmente installati ma si prevede di configurarne alcuni in futuro, è comunque possibile scegliere di importare i dashboard relativi allo storage. Queste dashboard saranno disponibili per la visualizzazione ma potrebbero non mostrare alcun dato rilevante fino a quando non viene configurato almeno un data collector per lo storage.
+
+L'importazione dalla galleria del dashboard è disponibile per gli utenti con ruolo di amministratore o di proprietario dell'account.

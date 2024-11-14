@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: forensic_user_overview.html 
+keywords: Forensic, user, user, activity 
+summary: 'dettagli forensi per l"utente' 
+---
+= Panoramica dell'utente legale
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le informazioni per ciascun utente sono fornite nella Panoramica utente. Utilizzare queste viste per comprendere le caratteristiche dell'utente, le entità associate e le attività recenti.
+
+
+
+== Profilo utente
+
+Le informazioni del profilo utente includono le informazioni di contatto e la posizione dell'utente. Il profilo fornisce le seguenti informazioni:
+
+* Nome dell'utente
+* Indirizzo e-mail dell'utente
+* Manager dell'utente
+* Contatto telefonico per l'utente
+* Posizione dell'utente
+
+
+
+
+== Comportamento dell'utente
+
+Le informazioni sul comportamento dell'utente identificano le attività e le operazioni recenti eseguite dall'utente. Queste informazioni includono:
+
+* Attività recente
++
+** Ultima posizione di accesso
+** Grafico delle attività
+** Avvisi
+
+
+
+
+* Operazioni per gli ultimi sette giorni
++
+** Numero di operazioni
+
+
+
+
+
+
+== Intervallo di refresh
+
+L'elenco utenti viene aggiornato ogni 12 ore.
+
+
+
+== Policy di conservazione
+
+Se non viene aggiornato nuovamente, l'elenco utenti viene conservato per 13 mesi. Dopo 13 mesi, i dati verranno cancellati. Se l'ambiente workload Security viene cancellato, tutti i dati associati all'ambiente vengono cancellati.

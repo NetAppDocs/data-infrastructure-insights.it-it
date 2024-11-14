@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: concept_dashboards_overview.html 
+summary: Panoramica delle dashboard in Data Infrastructure Insights. 
+keywords: dashboard, widget, custom, view, data 
+---
+= Panoramica delle dashboard
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insights fornisce agli utenti la flessibilità necessaria per creare viste operative dei dati dell'infrastruttura, consentendo di creare dashboard personalizzate con una varietà di widget, ciascuno dei quali fornisce un'ampia flessibilità nella visualizzazione e nella creazione di grafici dei dati.
+
+
+IMPORTANT: Gli esempi in queste sezioni hanno solo scopo esplicativo e non coprono tutti gli scenari possibili. I concetti e le fasi qui descritti possono essere utilizzati per creare dashboard personalizzati per evidenziare i dati specifici per le esigenze specifiche.
+
+
+toc::[]
+
+
+== Creazione di una dashboard
+
+È possibile creare una nuova dashboard in due posizioni:
+
+* *Dashboard > [+Nuova dashboard]*
+* *Dashboard > Mostra tutti i dashboard >* fare clic sul pulsante *[+Dashboard]*
+
+
+
+
+== Comandi della dashboard
+
+La schermata Dashboard dispone di diversi comandi:
+
+* *Time selector*: Consente di visualizzare i dati della dashboard per un intervallo di tempo compreso tra gli ultimi 15 minuti e gli ultimi 30 giorni o un intervallo di tempo personalizzato fino a 31 giorni. È possibile scegliere di ignorare questo intervallo di tempo globale nei singoli widget.
+* Pulsante *Edit* (Modifica): Selezionando questa opzione si attiva la modalità Edit (Modifica), che consente di apportare modifiche alla dashboard. Per impostazione predefinita, vengono aperti nuovi dashboard in modalità di modifica.
+* Pulsante *Save* (Salva): Consente di salvare o eliminare la dashboard.
++
+È possibile rinominare la dashboard corrente digitando un nuovo nome prima di fare clic su *Salva*.
+
+
+
+* *Aggiungi widget*, che consente di aggiungere un numero qualsiasi di tabelle, grafici o altri widget alla dashboard.
++
+I widget possono essere ridimensionati e ricollocati in diverse posizioni all'interno della dashboard, per offrire la migliore visualizzazione dei dati in base alle esigenze attuali.
+
+
+
+
+
+== Tipi di widget
+
+È possibile scegliere tra i seguenti tipi di widget:
+
+* *Widget tabella*: Una tabella che visualizza i dati in base ai filtri e alle colonne scelti. I dati delle tabelle possono essere combinati in gruppi che possono essere compressi ed espansi.
++
+image:TableWidgetPerformanceData.png["Widget tabella"]
+
+* *Grafici di linee, spline, area, area sovrapposte*: Sono widget grafici di serie temporali su cui è possibile visualizzare le performance e altri dati nel tempo.
++
+image:Time-SeriesCharts.png["Area, area impilata, linea, grafici Spline"]
+
+* *Widget a valore singolo*: Widget che consente di visualizzare un singolo valore che può essere derivato direttamente da un contatore o calcolato utilizzando una query o un'espressione. È possibile definire le soglie di formattazione del colore per indicare se il valore rientra nell'intervallo previsto, di avviso o critico.
++
+image:Single-ValueWidgets.png["Widget a valore singolo con e senza formattazione"]
+
+* *Widget indicatore*: Visualizza i dati a valore singolo in un indicatore tradizionale (solido) o in un indicatore a punti, con colori basati su valori "attenzione" o "critici"link:concept_dashboard_features.html#formatting-gauge-widgets["personalizzare"].
++
+image:GaugeWidgets.png["Valore singolo con formattazione, indicatore tradizionale, indicatore elenco"]
+
+* *Barra, grafici a colonne*: Visualizza i valori N superiori o inferiori, ad esempio i primi 10 storage in base alla capacità o i 5 volumi inferiori in base agli IOPS.
++
+image:BarandColumnCharts.png["Grafici a barre e a colonne"]
+
+* *Box Plot Chart*: Un grafico del minimo, massimo, mediano e dell'intervallo tra il quartile inferiore e quello superiore dei dati in un singolo grafico.
++
+image:BoxPlot.png["Grafico a caselle"]
+
+* *Grafico di dispersione*: Traccia i dati correlati come punti, ad esempio IOPS e latenza. In questo esempio, è possibile individuare rapidamente le risorse con throughput elevato e IOPS ridotti.
++
+image:ScatterPlot.png["Grafico a dispersione"]
+
+* *Grafico a torta*: Un grafico a torta tradizionale per visualizzare i dati come parte del totale.
++
+image:PieChart.png["Grafico a torta"]
+
+* *Widget Nota*: Fino a 1000 caratteri di testo libero.
++
+image:NoteWidget.png["Nota Widget"]
+
+* *Alerts Table*: Visualizza fino agli ultimi 1,000 avvisi.
+
+
+Per spiegazioni più dettagliate su queste e altre funzioni del dashboard, link:concept_dashboard_features.html["fare clic qui"].
+
+
+
+== Impostazione di una dashboard come home page
+
+È possibile scegliere quale dashboard impostare come *home page* dell'ambiente utilizzando uno dei seguenti metodi:
+
+* Accedere a *Dashboard > Show All Dashboard* (Mostra tutti i dashboard) per visualizzare l'elenco dei dashboard nell'ambiente. Fare clic sul menu delle opzioni a destra della dashboard desiderata e selezionare *Imposta come home page*.
+* Fare clic su una dashboard dall'elenco per aprire la dashboard. Fare clic sul menu a discesa nell'angolo superiore e selezionare *Imposta come home page*.
+

@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: concept_asset_page_overview.html 
+summary: Le pagine delle risorse possono essere visualizzate per la maggior parte dei tipi di oggetti. 
+keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtual Machine, SVM, Volume, Internal volume, Host, Hypervisor, pool, Storage, Datastore, Application, node, Qtree, Disk, VMDK, Port, Switch, Fabric, refresh 
+---
+= Panoramica della pagina delle risorse
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le pagine delle risorse riepilogano lo stato corrente di una risorsa e contengono collegamenti a informazioni aggiuntive sulla risorsa e sulle risorse correlate.
+
+
+
+== Tipi di pagine di risorse
+
+Data Infrastructure Insights fornisce pagine dedicate alle seguenti risorse:
+
+* Macchina virtuale
+* SVM (Storage Virtual Machine)
+* Volume
+* Volume interno
+* Host (incluso hypervisor)
+* Pool di storage
+* Storage
+* Datastore
+* Applicazione
+* Nodo storage
+* Qtree
+* Disco
+* VMDK
+* Porta
+* Switch
+* Fabric
+
+
+
+
+== Modifica dell'intervallo di tempo dei dati visualizzati
+
+Per impostazione predefinita, una pagina delle risorse visualizza le ultime 24 ore di dati; tuttavia, è possibile modificare il segmento di dati visualizzato selezionando un altro intervallo di tempo fisso o un intervallo di tempo personalizzato per visualizzare un numero inferiore o superiore di dati.
+
+È possibile modificare l'intervallo temporale dei dati visualizzati utilizzando un'opzione che si trova in ogni pagina di risorsa, indipendentemente dal tipo di risorsa. Per modificare l'intervallo di tempo, fare clic sull'intervallo di tempo visualizzato nella barra superiore e scegliere uno dei seguenti segmenti di tempo:
+
+* Ultimi 15 minuti
+* Ultimi 30 minuti
+* Ultimi 60 minuti
+* Ultime 2 ore
+* Ultime 3 ore (impostazione predefinita)
+* Ultime 6 ore
+* Ultime 12 ore
+* Ultime 24 ore
+* Ultimi 2 giorni
+* Ultimi 3 giorni
+* Ultimi 7 giorni
+* Ultimi 30 giorni
+* Intervallo di tempo personalizzato
+
+
+L'intervallo di tempo personalizzato consente di selezionare fino a 31 giorni consecutivi. È inoltre possibile impostare l'ora di inizio e l'ora di fine del giorno per questo intervallo. L'ora di inizio predefinita è alle 12:00:11:59 del primo giorno selezionato e l'ora di fine predefinita è alle 16:00 dell'ultimo giorno selezionato. Fare clic su Apply (Applica) per applicare l'intervallo di tempo personalizzato alla pagina delle risorse.
+
+Le informazioni contenute in una sezione di riepilogo delle pagine di asset, nonché in qualsiasi tabella o widget personalizzati sulla pagina, vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. La frequenza di aggiornamento corrente viene visualizzata nell'angolo in alto a destra della sezione Riepilogo e in tutte le tabelle o i widget pertinenti della pagina.
+
+
+
+== Aggiungi widget personalizzati
+
+È possibile aggiungere widget personalizzati a qualsiasi pagina di risorse. I widget aggiunti verranno visualizzati nelle pagine delle risorse per tutti gli oggetti di quel tipo. Ad esempio, l'aggiunta di un widget personalizzato a una pagina di risorse di storage consente di visualizzare tale widget nelle pagine di risorse per tutte le risorse di storage.

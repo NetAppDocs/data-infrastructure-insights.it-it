@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: task_dc_fujitsu_eternus.html 
+keywords: data collector, Fujitsu, Eternus 
+summary: Configurazione di Fujitsu Eternus data collector. 
+---
+= Data collector Fujitsu Eternus
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector Fujitsu Eternus acquisisce i dati di inventario utilizzando l'accesso a livello di amministrazione al sistema storage.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dallo storage Fujitsu Eternus. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco | Disco 
+
+
+| Storage | Storage 
+
+
+| Thin Pool, Flexible Tier Pool, RAID Group | Pool di storage 
+
+
+| Volume standard, Snap Data Volume (SDV), Snap Data Pool Volume (SDPV), Thin Provisioning Volume (TPV), Flexible Tier Volume (FTV), Wide Striping Volume (WSV) | Volume 
+
+
+| Adattatore di canale | Controller 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare ogni caso per questo data collectior.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessari i seguenti requisiti:
+
+* Indirizzo IP dello storage Eternus, che non può essere delimitato da virgole
+* Nome utente e password a livello di amministrazione SSH
+* Porta 22
+* Assicurarsi che lo scorrimento della pagina sia disattivato (disattivazione di Clienv-show-more-scroll)
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP dello storage Eternus | Indirizzo IP dello storage Eternus 
+
+
+| Nome utente | Nome utente dello storage Eternus 
+
+
+| Password | Password per lo storage Eternus 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | L'impostazione predefinita è 20 minuti. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| "Errore durante il recupero dei dati" con i messaggi di errore "Error Finding prompt CLI" o "Error Finding prompt at the end of shell results" | Probabile causa: Lo scorrimento delle pagine del sistema di storage è attivato. Soluzione possibile: * Provare a disattivare lo scorrimento delle pagine eseguendo il seguente comando: Set clientv-show-more -scroll disable 
+
+
+| "Errore di connessione" con messaggi di errore "Impossibile creare un'istanza di connessione SSH allo storage" o "Impossibile creare un'istanza di connessione a VirtualCenter" | Cause probabili: * Credenziali errate. * Indirizzo IP errato. * Problema di rete. * Lo storage potrebbe essere inattivo o non rispondere. Possibili soluzioni: * Verificare le credenziali e l'indirizzo IP immessi. * Provare a comunicare con lo storage utilizzando il client SSH. 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

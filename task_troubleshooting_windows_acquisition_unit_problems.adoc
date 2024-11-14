@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: task_troubleshooting_windows_acquisition_unit_problems.html 
+summary: 'Suggerimenti per la risoluzione dei problemi relativi all"unità di acquisizione in Windows.' 
+keywords: AU, acquisition unit, trioubleshooting 
+---
+= Risoluzione dei problemi relativi all'unità di acquisizione su Windows
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Qui troverai suggerimenti per la risoluzione dei problemi relativi alle unità di acquisizione su un server Windows.
+
+|===
+
+
+| *Problema:* | *Provare questo:* 
+
+
+| Lo stato AU nella pagina *osservabilità > Collector* della scheda *unità di acquisizione* visualizza "certificato scaduto" o "certificato revocato" . | Fare clic sul menu a destra dell'AU e selezionare *Restore Connection* (Ripristina connessione). Seguire le istruzioni per ripristinare l'unità di acquisizione: 1. Arrestare il servizio dell'unità di acquisizione (AU). È possibile fare clic sul pulsante _Copy Stop Command_ per copiare rapidamente il comando negli Appunti, quindi incollare questo comando in un prompt dei comandi sul computer dell'unità di acquisizione. 2. Creare un file denominato "token" nella cartella _c:\programmi\Cloud Insights\unità di acquisizione\conf\_ dell'AU. 3. Fate clic sul pulsante _Copy Token_ e incollate questo token nel file creato. 4. Riavviare il servizio AU. Fare clic sul pulsante _Copy Restart Command_ e incollare il comando in un prompt dei comandi sull'AU. 
+
+
+| Requisiti del server non soddisfatti | Assicurarsi che il server dell'unità di acquisizione o la VM siano conformi link:concept_acquisition_unit_requirements.html["requisiti"] 
+
+
+| Requisiti di rete non soddisfatti | Assicurarsi che il server/VM dell'unità di acquisizione possa accedere all'ambiente di informazioni sull'infrastruttura dati (<environment-name>.C01.cloudinsights.NetApp.com) tramite connessione SSL sulla porta 443. Provare i seguenti comandi: _Ping <environment-name>.C01.cloudinsights.NetApp.com_ _traceroute <environment-name>.C01.cloudinsights.NetApp.com_ _curl \https://<environment-name>.C01.cloudinsights.NetApp.com_ _wget \https://<environment-name>.C01.cloudinsights.NetApp.com_ Nota: La porta 443 deve essere aperta "in uscita" dall'infrastruttura AU. 
+
+
+| Server proxy non configurato correttamente | Verificare le impostazioni del proxy e, se necessario, disinstallare/reinstallare il software dell'unità di acquisizione per immettere le impostazioni proxy corrette. 1. Provare a "arricciare". Fare riferimento alle informazioni/alla documentazione "man curl" relative ai proxy: --preproxy, --proxy-* (si tratta di un carattere jolly "*" perché curl supporta molte impostazioni proxy). 2. Prova "wget". Consultare la documentazione per le opzioni proxy. 
+
+
+| Installazione dell'unità di acquisizione non riuscita in Data Infrastructure Insights con errori di credenziali durante l'avvio del servizio di acquisizione (e visibile in acq.log). | Ciò può essere causato dall'inclusione di caratteri speciali nelle credenziali proxy. Disinstallare l'AU (_sudo cloudindsights-uninstall.sh_) e reinstallarlo senza utilizzare caratteri speciali. 
+
+
+| Problemi di autorizzazione | Assicurarsi di aver effettuato l'accesso come utente con autorizzazioni di amministratore 
+
+
+| Acquisizione non in esecuzione | Le informazioni sono disponibili nel file acq.log nella cartella _<install directory>/informazioni sul cloud/unità di acquisizione/log_. Riavviare l'acquisizione tramite i servizi Windows 
+
+
+| Problemi di raccolta dati | Inviare un report degli errori dalla landing page di Data Collector facendo clic sul pulsante "Send Error Report" (Invia report errori) 
+
+
+| Stato: Heartbeat non riuscito | L'unità di acquisizione (AU) invia un heartbeat a Data Infrastructure Insights ogni 60 secondi per rinnovare il proprio lease. Se la chiamata heartbeat non riesce a causa di un problema di rete o non risponde a Data Infrastructure Insights, il periodo di lease dell'AU non viene aggiornato. Quando il periodo di lease dell'AU scade, Data Infrastructure Insights mostra lo stato "Heartbeat Failed" (Heartbeat non riuscito). Procedura per la risoluzione dei problemi: * Controllare la connessione di rete tra il server dell'unità di acquisizione e CloudInsights. * Controllare se il servizio dell'unità di acquisizione è in esecuzione. Se il servizio non è in esecuzione, avviarlo. * Controllare il registro dell'unità di acquisizione (<Install dir>: File di programma/informazioni cloud/unità di acquisizione/log) per verificare se sono presenti errori. 
+
+
+| Viene visualizzato il messaggio "Heartbeat Error: (Errore heartbeat: Errore heartbeat | Questo errore può verificarsi se si verifica un'interruzione della rete che causa l'interruzione della comunicazione tra l'unità di acquisizione e l'ambiente Data Infrastructure Insights per più di un minuto. Verificare che la connessione tra AU e Data Infrastructure Insights sia stabile e attiva. 
+|===
+
+
+== Considerazioni su Proxy e Firewall
+
+Se l'organizzazione richiede l'utilizzo del proxy per l'accesso a Internet, potrebbe essere necessario comprendere il comportamento del proxy dell'organizzazione e cercare alcune eccezioni affinché Data Infrastructure Insights funzioni. Tenere presente quanto segue:
+
+* Innanzitutto, l'organizzazione blocca l'accesso per impostazione predefinita e consente solo l'accesso a siti/domini Web specifici per eccezione? In tal caso, sarà necessario aggiungere il seguente dominio all'elenco delle eccezioni:
++
+ *.cloudinsights.netapp.com
++
+L'unità di acquisizione di Data Infrastructure Insights, così come le interazioni in un browser Web con Data Infrastructure Insights, verranno indirizzate agli host con tale nome di dominio.
+
+* In secondo luogo, alcuni proxy tentano di eseguire l'ispezione TLS/SSL impersonando i siti Web Data Infrastructure Insights con certificati digitali non generati da NetApp. Il modello di sicurezza dell'unità di acquisizione di informazioni sull'infrastruttura dati è fondamentalmente incompatibile con queste tecnologie. È inoltre necessario disporre del nome di dominio di cui sopra, salvo questa funzionalità, affinché l'unità di acquisizione di Data Infrastructure Insights effettui correttamente l'accesso a Data Infrastructure Insights e faciliti il rilevamento dei dati.
+
+
+
+
+=== Visualizzazione degli endpoint proxy
+
+Per visualizzare gli endpoint proxy, fare clic sul collegamento *Proxy Settings* (Impostazioni proxy) quando si sceglie un data collector durante l'acquisizione oppure sul collegamento _Proxy Settings_ (Impostazioni proxy) nella pagina *Help > Support* (Guida > supporto). Viene visualizzata una tabella simile alla seguente. Se nel proprio ambiente si dispone di workload Security, in questo elenco vengono visualizzati anche gli URL degli endpoint configurati.
+
+image:ProxyEndpoints_NewTable.png["Tabella degli endpoint proxy"]
+
+
+
+== Risorse
+
+Ulteriori suggerimenti per la risoluzione dei problemi sono disponibili in link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights["Knowledge base di NetApp"] (è necessario l'accesso al supporto).
+
+Per ulteriori informazioni di supporto, consulta la pagina Data Infrastructure Insightslink:concept_requesting_support.html["Supporto"].

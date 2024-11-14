@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hds_nas.html 
+keywords: data collector, HDS HNAS, HDS NAS 
+summary: 'Configurazione di HDS NAS (HNAS) data collector.' 
+---
+= Configurazione del data collector Hitachi Vantara NAS
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Hitachi Vantara NAS data collector è un data collector per l'inventario e la configurazione che supporta il rilevamento di cluster NAS HDS. Data Infrastructure Insights supporta il rilevamento di condivisioni NFS e CIFS, file system (volumi interni) e span (pool di storage).
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector HNAS. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Tier | Gruppo di dischi 
+
+
+| Cluster | Storage 
+
+
+| Nodo | Nodo di storage 
+
+
+| Intervallo | Pool di storage 
+
+
+| Disco di sistema | LUN. Back-end 
+
+
+| File System | Volume interno 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* Indirizzo IP del dispositivo
+* Porta 22, protocollo SSH
+* Nome utente e password - livello di privilegio: Supervisore
+* Nota: Questo data collector è basato su SSH, quindi l'AU che lo ospita deve essere in grado di avviare sessioni SSH su TCP 22 sull'HNAS stesso o sull'unità di gestione dei sistemi (SMU) a cui è connesso il cluster.
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Host HNAS | Indirizzo IP o nome di dominio completo di HNAS Management host 
+
+
+| Nome utente | Nome utente per CLI HNAS 
+
+
+| Password | Password utilizzata per CLI HNAS 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 30 minuti. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| "Error connecting" (errore di connessione) con il messaggio di errore "Error setup shell channel:"or "Error opening shell channel" (errore durante la configurazione del canale della shell | Probabilmente causato da problemi di connettività di rete o SSH non configurato correttamente. Confermare la connessione con un client SSH alternativo 
+
+
+| "Timeout" o "errore durante il recupero dei dati" con il messaggio di errore "comando: XXX scaduto." | * Provare il comando con un client SSH alternativo * aumentare il timeout 
+
+
+| "Errore di connessione " o "credenziali di accesso non valide" con messaggi di errore "Impossibile comunicare con la periferica:" | * Controllare l'indirizzo IP * controllare nome utente e password * confermare la connessione con un client SSH alternativo 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

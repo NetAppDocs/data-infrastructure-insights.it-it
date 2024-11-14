@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_elasticsearch.html 
+keywords: telegraf, installation, install, ElasticSearch 
+summary: Configurazione del data collector Elasticsearch 
+---
+= Elasticsearch Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Elasticsearch.
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Elasticsearch.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:ElasticsearchDCConfigLinux.png["Configurazione di Elasticsearch"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili nella link:https://www.elastic.co/guide/index.html["Documentazione Elasticsearch"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: 
+
+
+| Cluster Elasticsearch | Cluster di namespace | Nodo IP Node Name Cluster Status (Nome nodo IP Stato cluster) 
+
+
+| Nodo Elasticsearch | Namespace Cluster ES Node ID ES Node IP ES Node | ID zona 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

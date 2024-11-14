@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: kubernetes_cluster_detail.html 
+keywords: kubernetes, pods, clusters, nodes. troubleshooting, planning 
+summary: La pagina dei dettagli di Kubernetes fornisce informazioni e dettagli utili per la risoluzione dei problemi e la pianificazione. 
+---
+= Pagina dei dettagli del cluster Kubernetes
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La pagina dei dettagli del cluster Kubernetes visualizza una panoramica dettagliata del cluster Kubernetes.
+
+image:Kubernetes_Detail_Page_new.png["Pagina dei dettagli del cluster"]
+
+
+
+== Namespace, Node e Pod Counts
+
+I conteggi nella parte superiore della pagina mostrano il numero totale di spazi dei nomi, nodi e pod nel cluster, nonché il numero di pop-of che sono attualmente in stato di avviso e in sospeso.
+
+
+
+== Risorse condivise e saturazione
+
+Nella parte superiore destra della pagina dei dettagli si trova la saturazione del cluster come percentuale corrente e un grafico che mostra la tendenza recente nel tempo. La saturazione del cluster è la più alta tra CPU, memoria o saturazione dello storage in ogni punto del tempo.
+
+Di seguito, la pagina mostra per impostazione predefinita l'utilizzo di *risorse condivise*, con schede per CPU, memoria e storage. Ogni scheda mostra la percentuale di saturazione e l'andamento nel tempo, con ulteriori dettagli sull'utilizzo. Per lo storage, il valore mostrato è maggiore tra il backend e la saturazione del file system, che vengono calcolati in modo indipendente.
+
+I dispositivi con il massimo utilizzo sono mostrati in una tabella nella parte inferiore. Fare clic su un collegamento qualsiasi per esplorare questi dispositivi.
+
+
+
+== Spazi dei nomi
+
+La scheda Namespaces visualizza un elenco di tutti gli spazi dei nomi nell'ambiente Kubernetes, mostrando l'utilizzo di CPU e memoria e il numero di carichi di lavoro in ogni spazio dei nomi. Fare clic sui link Name (Nome) per esplorare ciascun namespace.
+
+image:Kubernetes_Namespace_tab_new.png["Elenco degli spazi dei nomi correnti nell'ambiente K8s"]
+
+
+
+== Carichi di lavoro
+
+Allo stesso modo, la scheda workload visualizza un elenco dei carichi di lavoro in ogni namespace, mostrando nuovamente l'utilizzo di CPU e memoria. Facendo clic sullo spazio dei nomi, è possibile accedere a ciascuno di essi.
+
+image:Kubernetes_Workloads_tab_new.png["Elenco degli spazi dei nomi correnti nell'ambiente K8s"]
+
+
+
+== La "ruota" del cluster
+
+image:Kubernetes_Wheel_Section.png["Ruota del cluster"]
+
+La sezione "ruota" del cluster fornisce informazioni sullo stato dei nodi e dei pod, che è possibile analizzare per ulteriori informazioni. Se il cluster contiene più nodi di quelli visualizzabili in quest'area della pagina, sarà possibile ruotare la manopola utilizzando i pulsanti disponibili.
+
+I pod o i nodi di avviso vengono visualizzati in rosso. Le aree di "avvertenza" sono visualizzate in arancione. I pod non pianificati (ovvero non collegati) vengono visualizzati nell'angolo inferiore della "ruota" del cluster.
+
+Passando il mouse su un pod (cerchio) o su un nodo (barra) si estende la vista del nodo.
+
+image:Kubernetes_Node_Expand.png["Nodo espanso"]
+
+Facendo clic sul pod o sul nodo in tale vista, viene eseguito lo zoom avanti nella vista Expanded Node (nodo espanso).
+
+image:Kubernetes_Critical_Pod_Zoom.png["Vista dei nodi espansa"]
+
+Da qui, è possibile passare il mouse su un elemento per visualizzare i dettagli relativi a tale elemento. Ad esempio, passando il mouse sul pod critico in questo esempio vengono visualizzati i dettagli relativi a tale pod.
+
+image:Kubernetes_Pod_Red.png["Informazioni critiche sul pod"]
+
+È possibile visualizzare le informazioni relative a filesystem, memoria e CPU passando il mouse sugli elementi Node.
+
+image:Kubernetes_Capacity_Info.png["Capacità del nodo e allocazione"]
+
+
+
+== Una nota sugli indicatori
+
+Gli indicatori della memoria e della CPU mostrano tre colori, in quanto indicano _used_ in relazione alla _capacità allocabile_ e alla _capacità totale_.

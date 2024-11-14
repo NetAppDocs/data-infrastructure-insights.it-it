@@ -1,0 +1,175 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_isilon_rest.html 
+keywords: data collector, isilon, EMC, DELL, PowerScale 
+summary: Configurazione del data collector REST Dell EMC Isilon/PowerScale. 
+---
+= Dell EMC Isilon/PowerScale REST Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza Dell EMC Isilon / PowerScale REST Data Collector per acquisire dati di inventario e prestazioni dallo storage Dell EMC Isilon o PowerScale. Questo collector supporta gli array che eseguono OneFS 8.0.0+.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco | Disco 
+
+
+| Cluster | Storage 
+
+
+| Nodo | Nodo di storage 
+
+
+| File system OneFS | Volume interno 
+
+
+| File system OneFS | Pool di storage 
+
+
+| Qtree | Qtree 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessarie le seguenti informazioni:
+
+* Un account utente e una password. Non è necessario che questo account sia admin/root, ma È NECESSARIO concedere un numero considerevole di privilegi di sola lettura all'account di servizio (vedere la tabella riportata di seguito)
+* Indirizzo IP/Nome di dominio completo del cluster Dell EMC Isilon/PowerScale
+* Accesso HTTPS alla porta 8080
+* Cluster Isilon/PowerScale con OneFS 8.0.0 o superiore
+
+
+[cols="3*"]
+|===
+| Nome privilegio | Descrizione | r(lettura) o rw (lettura+scrittura) 
+
+
+| ISI_PRIV_LOGIN_PAPI | API della piattaforma | r 
+
+
+| ISI_PRIV_SYS_TIME | Ora | r 
+
+
+| ISI_PRIV_AUTH | Auth | r 
+
+
+| ISI_PRIV_ROLE | Privilegio | r 
+
+
+| ISI_PRIV_DEVICES | Dispositivi | r 
+
+
+| ISI_PRIV_EVENT | Evento | r 
+
+
+| ISI_PRIV_HDFS | HDFS | r 
+
+
+| ISI_PRIV_NDMP | NDMP | r 
+
+
+| ISI_PRIV_NETWORK | Rete | r 
+
+
+| ISI_PRIV_NFS | NFS | r 
+
+
+| ISI_PRIV_PAPI_CONFIG | Configurare l'API della piattaforma | r 
+
+
+| ISI_PRIV_QUOTA | Quota | r 
+
+
+| ISI_PRIV_SMARTPOOLS | SmartPools | r 
+
+
+| ISI_PRIV_SMB | PMI | r 
+
+
+| ISI_PRIV_STATISTICS | Statistiche | r 
+
+
+| ISI_PRIV_SWIFT | Rapido | r 
+
+
+| ISI_PRIV_JOB_ENGINE | Motore di lavoro | r 
+|===
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP Isilon | L'indirizzo IP o il nome di dominio completo dello storage Isilon 
+
+
+| Nome utente | Nome utente di Isilon 
+
+
+| Password | Password utilizzata per Isilon 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta HTTPS | Il valore predefinito è 8080. 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| "Credenziali di accesso non valide" con messaggi di errore "i comandi non abilitati per l'amministrazione basata sul ruolo richiedono l'accesso dell'utente root" | * Verificare che l'utente disponga delle autorizzazioni per eseguire i seguenti comandi sul dispositivo: > versione isi osrelease > stato isi -q > stato isi -n > dispositivi isi -d %s > licenza isi * verificare che le credenziali utilizzate nella procedura guidata corrispondano alle credenziali del dispositivo 
+
+
+| "Errore interno" con messaggi di errore "esecuzione del comando <Your command> non riuscita con permesso: <Your current permission>. Problema di autorizzazione per l'esecuzione del comando sudo" | Verificare che l'utente disponga delle autorizzazioni sudo per eseguire il seguente comando sul dispositivo 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

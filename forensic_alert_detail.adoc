@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: forensic_alert_detail.html 
+keywords: alert, Critical, Warning, Low, alert detail Synopsis, Time range, Start time, End time, user 
+summary: dettagli degli avvisi 
+---
+= Dettagli avviso
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Facendo clic sulla sinossi di un avviso, viene visualizzata la pagina contenente informazioni dettagliate per l'utente e l'avviso generato.
+
+
+
+== La pagina Dettagli avviso visualizza l'utente
+
+Alert Details (Dettagli avviso) fornisce informazioni relative all'avviso selezionato nella pagina Alerts (Avvisi).
+
+* La severità dell'avviso
+* L'utente che ha generato l'avviso e il tipo di avviso:
++
+** Accesso anomalo da parte dell'utente
+** Accesso anomalo per community
+** Accesso anomalo da parte dell'utente nella community
+** L'utente si è Unito a molte community
+
+
+* Data e ora in cui è stato rilevato l'avviso
+* L'azione intrapresa
++
+** Messo in quarantena
+** Altro
+** Altro
+
+
+* Lo stato dell'avviso
++
+** Novità
+** In corso
+** Respinto
+** Risolto
+
+
+* Modifica del tasso di attività dell'utente
++
+** Attività tipiche all'ora
+** Attività all'ora in cui è stato generato l'avviso.
+** Percentuale di variazione del tasso che ha causato l'avviso.
+
+
+* Un grafico che mostra il tasso di attività medio storico e il tasso di attività che ha generato l'avviso.
+
+
+
+
+=== Utente correlato
+
+* Nome utente e titolo
+* Reparto
+* E-mail con un link all'indirizzo e-mail
+* Manager
+* Telefono
+* Posizione
+
+
+
+
+=== Attività
+
+Mostra l'attività dell'utente per gli ultimi 7 giorni e l'ultima posizione da cui l'utente ha effettuato l'accesso.
+
+* Attività:
++
+** Leggi
+** Altro
+** Creare
+
+
+* Numero totale di avvisi negli ultimi sette giorni.
+* Numero totale di attività negli ultimi 7 giorni.
+
+
+Fare clic su *Visualizza dettaglio attività* per accedere al link:forensic_activity_history["Cronologia delle attività"] dell'utente in esame.

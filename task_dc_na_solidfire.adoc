@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: task_dc_na_solidfire.html 
+summary: Configurare NetApp SolidFire data collector 
+keywords: data collector, queries, create 
+---
+= Data collector per array all-flash NetApp SolidFire
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector per array all-flash NetApp SolidFire supporta la raccolta di inventario e performance da configurazioni SolidFire iSCSI e Fibre Channel.
+
+Il data collector SolidFire utilizza l'API REST di SolidFire. L'unità di acquisizione in cui risiede il data collector deve essere in grado di avviare connessioni HTTPS alla porta TCP 443 sull'indirizzo IP di gestione del cluster SolidFire. Il data collector necessita di credenziali in grado di eseguire query API REST sul cluster SolidFire.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati di NetApp SolidFire All-Flash Array. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco | Disco 
+
+
+| Cluster | Storage 
+
+
+| Nodo | Nodo di storage 
+
+
+| Volume | Volume 
+
+
+| Porta Fibre Channel | Porta 
+
+
+| Gruppo di accesso al volume, assegnazione LUN | Mappa del volume 
+
+
+| Sessione iSCSI | Maschera di volume 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per la configurazione di questo data collector:
+
+* Indirizzo IP virtuale di gestione
+* Nome utente e credenziali di sola lettura
+* Porta 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Management Virtual IP Address (MVIP) (Indirizzo IP virtuale di gestione) | Indirizzo IP virtuale di gestione del cluster SolidFire 
+
+
+| Nome utente | Nome utilizzato per accedere al cluster SolidFire 
+
+
+| Password | Password utilizzata per accedere al cluster SolidFire 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Tipo di connessione | Scegliere il tipo di connessione 
+
+
+| Porta di comunicazione | Porta utilizzata per le API NetApp 
+
+
+| Intervallo polling inventario (min) | Il valore predefinito è 20 minuti 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 secondi 
+|===
+
+
+== Risoluzione dei problemi
+
+Quando SolidFire segnala un errore, viene visualizzato in informazioni sull'infrastruttura dati come segue:
+
+_È stato ricevuto un messaggio di errore da un dispositivo SolidFire durante il tentativo di recuperare i dati. La chiamata era <method> (<parameterString>). Il messaggio di errore del dispositivo era (consultare il manuale del dispositivo): <message>_
+
+Dove:
+
+* <method> è un metodo HTTP, ad esempio GET o PUT.
+* <parameterString> è un elenco separato da virgole di parametri inclusi nella chiamata DI PAUSA.
+* Il <message> corrisponde a quello che il dispositivo ha restituito come messaggio di errore.
+
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

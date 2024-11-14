@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_dcos.html 
+keywords: telegraf, installation, install, dcos 
+summary: configurazione dcos 
+---
+= Data Collector DC/OS
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da DC/OS.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere *DC/OS*.
++
+Se non è stato configurato un agente per la raccolta, viene richiesto di link:task_config_telegraf_agent.html["installare un agente"]farlo nell'ambiente in uso.
+
++
+Se si dispone di un agente già configurato, selezionare il sistema operativo o la piattaforma appropriati e fare clic su *continua*.
+
+. Seguire le istruzioni nella schermata DC/OS Configuration (Configurazione DC/OS) per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+
+
+== Setup (Configurazione)
+
+Le informazioni di configurazione sono disponibili nella https://docs.mesosphere.com["Documentazione DC/OS"] .
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto | Identificatori | Attributi | Punti dati 
+
+
+| nodo_dcos | dcos_container dcos_app | percorso del nome host del cluster (solo campi del file system) interfaccia (solo campi di rete) nome_attività_id_container | system_in_uptime (float) cpu_core (float) cpu_user (float) cpu_system (float) cpu_idle (float) cpu_wait (float) load_1min (float) load_5min (float) load_byte_int_free_storage (int_byte_inode) (int_storage_byte_int_free) (int_storage_byte_inode) (int_storage_inode) byte_int_storage_int_storage_storage_byte_int_storage_storage_storage_byte_int_storage_storage_byte_int_storage_storage_inode) (int_byte_int_storage_storage_byte_storage_int_storage_inode) (int_inode) (int_byte_storage_int_storage_storage_byte_inode) (int_int_storage_storage_storage_byte_storage_inode) (int_byte_storage network_in_packets (float) network_out_packets (float) network_in_droped (float) network_out_droped (float) network_in_errors (float) network_out_errors (float) process_count (float) 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina .

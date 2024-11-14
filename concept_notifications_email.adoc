@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: concept_notifications_email.html 
+summary: Aggiunta di indirizzi e-mail per le notifiche. 
+keywords: email, notifications, signature, recipient, list, subscription 
+---
+= Configurazione delle notifiche e-mail
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+È possibile configurare un elenco e-mail per le notifiche relative all'abbonamento e un elenco e-mail globale di destinatari per la notifica delle violazioni delle soglie dei criteri di performance.
+
+Per configurare le impostazioni del destinatario della notifica via email, accedere alla pagina *Admin > Notifiche* e selezionare la scheda _Email_.
+
+[role="thumb"]
+image:Notifications_email_list.png["Notifiche e-mail"]
+
+
+
+== Destinatari della notifica di abbonamento
+
+Per configurare i destinatari delle notifiche degli eventi relative all'abbonamento, passare alla sezione "destinatari delle notifiche di abbonamento". È possibile scegliere di inviare notifiche via email per gli eventi relativi all'abbonamento a uno o a tutti i seguenti destinatari:
+
+* Tutti i proprietari di account
+* Tutti gli amministratori di _monitoraggio e ottimizzazione_
+* Indirizzi e-mail aggiuntivi specificati dall'utente
+
+
+Di seguito sono riportati alcuni esempi dei tipi di notifiche che è possibile inviare e delle azioni dell'utente che è possibile eseguire.
+
+|===
+
+
+| *Notifica:* | *Azione utente:* 
+
+
+| La versione di prova o l'abbonamento sono stati aggiornati | Controlla i dettagli dell'abbonamento nella link:concept_subscribing_to_cloud_insights.html["Iscrizione"] pagina 
+
+
+| L'abbonamento scadrà tra 90 giorni. L'abbonamento scadrà tra 30 giorni | Non è necessario eseguire alcuna azione se l'opzione "rinnovo automatico" è attivata, contattare link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Vendite NetApp"] per rinnovare l'abbonamento 
+
+
+| La prova termina in 2 giorni | Rinnova la prova dalla link:concept_subscribing_to_cloud_insights.html["Iscrizione"]pagina. Puoi rinnovare una prova una volta sola. Contattare link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Vendite NetApp"] per acquistare un abbonamento 
+
+
+| La prova o l'abbonamento sono scaduti. L'account interrompe la raccolta dei dati in 48 ore. L'account verrà cancellato dopo 48 ore | Contattare link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Vendite NetApp"] per acquistare un abbonamento 
+|===
+
+
+== Elenco globale destinatari per gli avvisi
+
+Le notifiche e-mail degli avvisi vengono inviate all'elenco dei destinatari degli avvisi per ogni azione dell'avviso. È possibile scegliere di inviare notifiche di avviso a un elenco globale di destinatari.
+
+Per configurare i destinatari degli avvisi globali, selezionare i destinatari desiderati nella sezione *destinatari delle notifiche globali di monitoraggio*.
+
+Durante la creazione o la modifica del monitor, è sempre possibile ignorare l'elenco globale dei destinatari di un singolo monitor.
+
+
+NOTE: Le notifiche del Data Collector di ONTAP hanno la precedenza su qualsiasi notifica specifica del Monitor rilevante per il cluster/data collector. L'elenco dei destinatari impostato per Data Collector riceverà gli avvisi di data collector. Se non sono presenti avvisi di data collector attivi, gli avvisi generati dal monitor verranno inviati a destinatari specifici del monitor.
+
+
+
+== Modifica delle notifiche per ONTAP
+
+Puoi modificare le notifiche per i cluster ONTAP selezionando _Modifica notifiche_ dall'elenco a discesa in alto a destra in una landing page dello storage.
+
+image:EditONTAPNotifications.png["Notifiche di modifica ONTAP"]
+
+Da qui è possibile impostare le notifiche per gli avvisi critici, di avviso, informativi e/o risolti. Ogni scenario può inviare una notifica all'elenco Global Recipient (destinatari globali) o ad altri destinatari scelti.
+
+image:EditONTAPNotifications_MultipleScenarios.png["Notifiche ONTAP per diversi scenari"]

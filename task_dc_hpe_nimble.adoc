@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hpe_nimble.html 
+keywords: data collector, HP Nimble, HP, HPE, Alletra 6000 
+summary: 'Configurazione del data collector HP Enterprise Alletra 6000 (in precedenza nimble).' 
+---
+= Data collector HPE Alletra 6000
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector HP Enterprise Alletra 6000 (precedentemente agile) supporta i dati di inventario e performance per gli array di storage Alletra 6000.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce da questo raccoglitore le seguenti informazioni di inventario. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Array | Storage 
+
+
+| Disco | Disco 
+
+
+| Volume | Volume 
+
+
+| Piscina | Pool di storage 
+
+
+| Iniziatore | Alias host storage 
+
+
+| Controller | Nodo di storage 
+
+
+| Interfaccia Fibre Channel | Controller 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Per raccogliere i dati di inventario e configurazione dall'array di storage, è necessario disporre di quanto segue:
+
+* L'array deve essere installato e configurato e raggiungibile dal client tramite il relativo FQDN (Fully Qualified Domain Name) o l'indirizzo IP di gestione dell'array.
+* L'array deve eseguire NimbleOS 2.3.x o versione successiva.
+* È necessario disporre di un nome utente e di una password validi per l'array con un ruolo di almeno livello "operatore". Il ruolo "Guest" non dispone di un accesso sufficiente per comprendere le configurazioni dell'iniziatore.
+* La porta 5392 deve essere aperta sull'array.
+
+
+Per raccogliere i dati sulle prestazioni dall'array di storage, è necessario disporre di quanto segue:
+
+* L'array deve eseguire NimbleOS 4.0.0 o versione successiva
+* L'array deve avere volumi configurati. L'unica API delle prestazioni di NimbleOS è per i volumi e qualsiasi report di Data Infrastructure Insights deriva dalle statistiche sui volumi
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Array Management IP Address (Indirizzo IP gestione array) | FQDN (Fully Qualified Domain Name) o indirizzo IP di gestione dell'array. 
+
+
+| Nome utente | Nome utente dell'array 
+
+
+| Password | Password per l'array 
+|===
+
+
+== Configurazione avanzata
+
+|===
+
+
+| Campo | Descrizione 
+
+
+| Porta | Porta utilizzata da nimble REST API. Il valore predefinito è 5392. 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+|===
+Nota: L'intervallo di polling delle prestazioni predefinito è di 300 secondi e non può essere modificato. Questo è l'unico intervallo supportato da HPE Alletra 6000.

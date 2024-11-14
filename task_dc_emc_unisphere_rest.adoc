@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_unisphere_rest.html 
+keywords: data collector, Unisphere, EMC 
+summary: Configurazione di Dell EMC Unisphere REST Data Collector. 
+---
+= Configurazione del data collector DELL EMC Unisphere REST
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Questo data collector acquisisce i dati di inventario e performance da Dell EMC Unisphere per i sistemi di gestione PowerMax/Vmax 3.
+
+Si noti che Dell/EMC non ha introdotto statistiche per volume fino a Unisphere 10.0 - questo data collector supporta 9.2.0+, ma non sarà in grado di raccogliere statistiche di volume in quanto non esistono.
+
+Un'istanza di Unisphere per Vmax/PowerMax potrebbe gestire uno o più array di storage Symmetrix Vmax 3 o superiore - questo collector tenterà per impostazione predefinita di rilevare tutti i file "locali" dell'istanza di Unisphere. Se un'istanza di Unisphere rileva gli array "remoti" (ovvero quelli connessi tramite replica SRDF), questi verranno ignorati e per rilevare quelli è necessario creare un ulteriore Unisphere Collector in Data Infrastructure Insights, indicato in qualsiasi istanza di Unisphere in quel sito li consideri locali.
+
+Per la configurazione, il data collector richiede un indirizzo IP/FQDN del server Unisphere, la connettività TCP alla porta 8443 e un nome utente e una password.
+
+
+
+== Requisiti
+
+* Un indirizzo IP/nome di dominio completo del server Unisphere
+* Nome utente e password
+* Porta 8443.
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP del server Unisphere | Indirizzo IP o nome di dominio completo del server Unisphere 
+
+
+| Porta Unisphere | Il valore predefinito è 8443 
+
+
+| Nome utente | Nome utente del server Unisphere 
+
+
+| Password | Password utilizzata per il server Unisphere 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | L'impostazione predefinita è 40 minuti. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. 
+
+
+| Scegliere 'Escludi' o 'Includi' per specificare un elenco | Specificare se includere o escludere macchine virtuali 
+
+
+| Elenco dispositivi filtro inventario | Elenco delle macchine virtuali da filtrare (separate da virgole o da punto e virgola se nel valore viene utilizzata una virgola) per il filtraggio 
+
+
+| Intervallo di polling delle prestazioni unisfero (sec) | L'impostazione predefinita è 300 secondi 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Errore: Autenticazione dell'utente non riuscita. | Assicurarsi che le credenziali per questa periferica siano corrette. 
+
+
+| Inventario stato recente: Dati non previsti recuperati - Array ha riportato 0 volume | In genere indica un problema di autorizzazione (non di autenticazione). Assicurarsi che le credenziali siano corrette e che il nome utente sia in grado di elencare tutti i volumi e visualizzarne gli attributi. 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

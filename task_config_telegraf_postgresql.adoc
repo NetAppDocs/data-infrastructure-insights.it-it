@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_postgresql.html 
+keywords: telegraf, installation, install, postgresql 
+summary: Configurazione del data collector PostgreSQL 
+---
+= PostgreSQL Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da PostgreSQL.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere PostgreSQL.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:PostgreSQLDCConfigLinux.png["Configurazione PostgreSQL"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili nella link:https://www.postgresql.org/docs/["Documentazione PostgreSQL"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Server PostgreSQL | Server database namespace | Nome nodo IP nodo | Buffer allocati buffer backend buffer di sincronizzazione file backend buffer di controllo buffer di controllo punti di controllo puliti punti di controllo di sincronizzazione tempo di scrittura punti di controllo Richieste punti di controllo Timed Max scritto pulito 
+
+
+| Database PostgreSQL | Server database namespace | Database OID Node Name Node IP | Blocchi di tempo di lettura blocchi di tempo di scrittura blocchi di accessi blocchi di lettura conflitti deadlock numero di client file di temperatura byte file di temperatura numero di righe cancellate righe recuperate righe inserite righe restituite transazioni aggiornate transazioni impegnate operazioni supportate dal rollback 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

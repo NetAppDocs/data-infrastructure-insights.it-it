@@ -1,0 +1,149 @@
+---
+sidebar: sidebar 
+permalink: task_dc_netapp_eseries_rest.html 
+keywords: data collector, ontap, clustered ontap, REST 
+summary: Configurazione di NetApp e-Series REST data Collector. 
+---
+= Raccolta di dati REST NetApp e-Series
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il servizio DI raccolta dei dati REST NetApp e-Series raccoglie dati di inventario e performance. Il collector supporta il firmware 7.x+ utilizzando le stesse configurazioni e riportando gli stessi dati. Il REST Collector monitora lo stato della crittografia dei pool di storage, nonché lo stato della crittografia dei relativi dischi e volumi e fornisce l'utilizzo della CPU del nodo storage come contatori delle performance - funzionalità non fornite nel Collector SANtricity e-Series legacy.
+
+
+
+== Terminologia
+
+Cloud Insight acquisisce le seguenti informazioni di inventario da NetApp e-Series, utilizzando la FUNZIONE REST. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco | Disco 
+
+
+| Gruppo di volumi | Gruppo di dischi 
+
+
+| Array di storage | Storage 
+
+
+| Controller | Nodo di storage 
+
+
+| Gruppo di volumi | Pool di storage 
+
+
+| Volume | Volume 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* L'indirizzo IP di ciascun controller dell'array
+* Questo raccoglitore supporta solo gli array di modelli e-Series con *funzionalità API REST native*. La organizzazione e-Series fornisce una distribuzione di API REST installabile off-array per gli array e-Series meno recenti: Questo tool di raccolta non supporta questo scenario. Gli utenti con array meno recenti devono continuare a utilizzare link:task_dc_na_eseries.html["API SANtricity e-Series"]il raccoglitore di Data Infrastructure Insights.
+* Il campo "e-Series Controller IP Addresses" (indirizzi IP controller e-Series) supporta una stringa delimitata da virgole di 2 IP/nomi host; il collettore proverà in modo intelligente il secondo IP/nome host se il primo non è accessibile.
+* Porta HTTPS: Il valore predefinito è 8443.
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzi IP dei controller e-Series | Indirizzi IP separati da virgola e/o nomi di dominio completi per i controller di array 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Il valore predefinito è 30 minuti 
+
+
+| Intervallo di polling delle performance fino a 3600 secondi | Il valore predefinito è 300 secondi 
+|===
+
+
+== Terminologia e-Series (pagina iniziale)
+
+I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse NetApp e-Series. Molti di questi termini si applicano anche ad altri data collezionisti.
+
+
+
+=== Storage
+
+* Modello – nome del modello del dispositivo.
+* Vendor (vendor): Stesso nome del vendor che si vedrebbe se si configurasse una nuova origine dati
+* Serial Number (numero di serie): Il numero di serie dell'array. Nei sistemi storage con architettura cluster come NetApp Clustered Data ONTAP, questo numero di serie potrebbe essere meno utile dei singoli numeri di serie dei "nodi di storage"
+* IP (IP): Generalmente corrisponde agli IP o ai nomi host configurati nell'origine dati
+* Versione del microcodice – firmware
+* Capacità raw – somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal ruolo
+* Latenza: Una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, Data Infrastructure Insights sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che lo offre, Data Infrastructure Insights sta generalmente eseguendo un calcolo ponderato in IOPS derivato dalle statistiche dei singoli volumi.
+* Throughput: Throughput totale dell'host dell'array. In teoria, se non è disponibile, Data Infrastructure Insights sta sommando il throughput dei volumi per ricavare questo valore
+* Gestione – può contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di programmazione dall'origine dati Data Infrastructure Insights come parte della creazione di rapporti di inventario  
+
+
+
+
+=== Pool di storage
+
+* Storage: Su quale array di storage vive questo pool. Obbligatorio
+* Type (tipo) – un valore descrittivo da un elenco di possibilità enumerate. La maggior parte dei casi sarà "Thin Provisioning" o "RAID Group"
+* Nodo – se l'architettura di questo array di storage è tale che i pool appartengano a un nodo di storage specifico, il suo nome verrà visualizzato qui come un collegamento ipertestuale alla propria landing page
+* Utilizza il valore di Flash Pool – Sì/No
+* Ridondanza: Livello RAID o schema di protezione. E-Series riporta "RAID 7" per i pool DDP
+* Capacity (capacità): I valori qui riportati sono la capacità logica utilizzata, la capacità utilizzabile e la capacità logica totale, nonché la percentuale utilizzata in tali valori. Entrambi questi valori includono la capacità di "conservazione" di e-Series, con il risultato che i numeri e la percentuale sono superiori a quanto potrebbe essere visualizzato dall'interfaccia utente di e-Series
+* Capacità con overcommit – se tramite tecnologie di efficienza è stata allocata una somma totale di capacità di volume o volume interno superiore alla capacità logica del pool di storage, il valore percentuale qui sarà maggiore dello 0%.
+* Snapshot: Capacità di snapshot utilizzate e totali, se l'architettura del pool di storage dedica parte della sua capacità a segmentare aree esclusivamente per le snapshot
+* Utilizzo - valore percentuale che indica la percentuale massima di occupato su disco di qualsiasi disco che contribuisce alla capacità di questo pool di storage. L'utilizzo dei dischi non ha necessariamente una forte correlazione con le performance degli array: L'utilizzo potrebbe essere elevato a causa di ricostruzioni dei dischi, attività di deduplica, ecc. in assenza di carichi di lavoro basati su host. Inoltre, le implementazioni di replica di molti array possono favorire l'utilizzo del disco senza essere visualizzate come workload di volume.
+* IOPS: La somma degli IOPS di tutti i dischi che contribuiscono alla capacità di questo pool di storage. Se gli IOPS dei dischi non sono disponibili su una determinata piattaforma, questo valore verrà generato dalla somma degli IOPS dei volumi per tutti i volumi presenti in questo pool di storage
+* Throughput (throughput): La somma del throughput di tutti i dischi che contribuiscono alla capacità di questo pool di storage. Se il throughput del disco non è disponibile su una determinata piattaforma, questo valore viene generato dalla somma del volume per tutti i volumi presenti in questo pool di storage
+
+
+
+
+=== Nodo di storage
+
+* Storage – a quale array di storage fa parte questo nodo. Obbligatorio
+* Partner HA: Nelle piattaforme in cui un nodo eseguirà il failover su un nodo e solo su un altro, questo verrà generalmente visualizzato qui
+* State (Stato): Integrità del nodo. Disponibile solo quando l'array è abbastanza integro da essere inventorato da un'origine dati
+* Modello – nome del modello del nodo
+* Version (versione) – nome della versione del dispositivo.
+* Serial number (numero di serie) – il numero di serie del nodo
+* Memory (memoria): Memoria base 2, se disponibile
+* Utilizzo: Generalmente un numero di utilizzo della CPU o, nel caso di NetApp ONTAP, un indice di stress del controller. L'utilizzo non è attualmente disponibile per NetApp e-Series
+* IOPS: Un numero che rappresenta gli IOPS basati su host su questo controller. Idealmente, originata direttamente dall'array, se non disponibile, verrà calcolata sommando tutti gli IOPS per i volumi che appartengono esclusivamente a questo nodo.
+* Latency (latenza): Un numero che rappresenta la latenza tipica dell'host o il tempo di risposta su questo controller. Idealmente originata direttamente dall'array, se non disponibile, verrà calcolata eseguendo un calcolo ponderato degli IOPS dai volumi che appartengono esclusivamente a questo nodo.
+* Throughput (throughput): Un numero che rappresenta il throughput basato su host su questo controller. Idealmente originata direttamente dall'array, se non disponibile, verrà calcolata sommando tutto il throughput per i volumi che appartengono esclusivamente a questo nodo.
+* Processori: Numero di CPU
+
+
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo data collector sono disponibili link:concept_requesting_support.html["Supporto"]nella pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

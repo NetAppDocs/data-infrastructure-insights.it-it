@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: task_dc_hp_3par.html 
+keywords: data collector, 3PAR, HP, HP 3PAR, HPE, 
+summary: 'Configurazione del data collector HP Enterprise Alletra 9000 / Primera (in precedenza 3PAR).' 
+---
+= Data collector per lo storage HP Enterprise Alletra 9000 / Primera
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza il data collector HP Enterprise Alletra 9000 / HP Enterprise Primera (precedentemente 3PAR) per rilevare l'inventario e le prestazioni.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Disco fisico | Disco 
+
+
+| Sistema storage | Storage 
+
+
+| Nodo controller | Nodo di storage 
+
+
+| Gruppo di provisioning comune | Pool di storage 
+
+
+| Volume virtuale | Volume 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessari i seguenti requisiti:
+
+* Indirizzo IP o FQDN del cluster InServ
+* Per l'inventario, nome utente e password di sola lettura per il server StoreServ
+* Per le performance, leggere e scrivere nome utente e password sul server StoreServ
+* Requisiti delle porte: 22 (inventario), 5988 o 5989 (performance collection) [Nota: Le performance sono supportate per StoreServ OS 3.x+]
+* Per la raccolta delle performance, verificare che SMI-S sia abilitato effettuando l'accesso all'array tramite SSH.
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP dello storage | Indirizzo IP dello storage o nome di dominio completo del cluster StoreServ 
+
+
+| Nome utente | Nome utente del server StoreServ 
+
+
+| Password | Password utilizzata per il server StoreServ 
+
+
+| Nome utente SMI-S. | Nome utente dell'host del provider SMI-S. 
+
+
+| Password SMI-S. | Password utilizzata per l'host del provider SMI-S. 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 40 minuti. 
+
+
+| Connettività SMI-S. | Protocollo utilizzato per connettersi al provider SMI-S. 
+
+
+| Eseguire l'override della porta predefinita SMI-S. | Se vuoto, utilizzare la porta predefinita di connettività SMI-S, altrimenti inserire la porta di connessione da utilizzare 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| il comando "showsys" non restituisce alcun risultato. | Eseguire "showsys" e "showversion -a" dalla riga di comando e verificare se la versione è supportata dall'array. 
+|===
+
+
+=== Performance
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Connessione o accesso non riusciti. Inizializzazione del provider non riuscita. | Un nome di array completamente numerico può causare problemi con il server SMI-S. Provare a modificare il nome dell'array. 
+
+
+| L'utente SMI-S configurato non dispone di alcun dominio | Assegnare i privilegi di dominio appropriati all'utente SMI-S configurato 
+
+
+| Data Infrastructure Insights afferma che non è possibile connettersi/accedere al servizio SMI-S. | Verificare che non vi sia alcun firewall tra l'AU ci e l'array che impedisce all'AU ci di effettuare connessioni TCP a 5988 o 5989. Una volta fatto questo, e se hai confermato che non c'è alcun firewall, dovresti eseguire l'SSH sull'array e utilizzare il comando "showcim" per confermare. Verificare che: * Il servizio sia abilitato * HTTPS sia abilitato * la porta HTTPS deve essere 5989. In tal caso, provare a "stopcim" e quindi a "startcim" per riavviare il CIM (ad esempio, il servizio SMI-S). 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

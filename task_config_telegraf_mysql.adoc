@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_mysql.html 
+keywords: telegraf, installation, install, mysql 
+summary: Configurazione del data collector MySQL 
+---
+= MySQL Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da MySQL.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegli MySQL.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:MySQLDCConfigWindows.png["Configurazione MySQL"]
+
+
+
+== Setup (Configurazione)
+
+Le informazioni sono disponibili nella link:https://dev.mysql.com/doc/["Documentazione MySQL"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| MySQL | Namespace server MySQL | Nome nodo IP | Client interrotti (per sec) connessioni interrotte (per sec) byte RX (per sec) byte TX (per sec) comandi Admin (per sec) Comandi Alter comandi evento Alter comandi funzione Alter comandi istanza Alter comandi procedura Alter comandi server comandi Alter comandi tabella Alter comandi tablespace Alter comandi utente Analyze comandi Assegna a Keycache comandi Begin comandi Binlog comandi procedura di chiamata comandi Cambia comandi DB Cambia comandi master Cambia comandi filtro Repl comandi di controllo Comandi checksum comandi commit Crea comandi DB Crea comandi evento Crea comandi funzione Crea comandi indice Crea comandi procedura Crea comandi server Crea comandi tabella Crea comandi trigger Crea comandi UDF Crea comandi utente Crea comandi Visualizza Dealloc SQL errori di connessione Accetta tabelle dischi tmp creati errori ritardati comandi Flush Handler Commit InnoDB buffer Pool byte Data Key Blocks Not Flushed Key Requests Key Write Key Write Max Execution Time Exceeded Max Connections Open Files Performance Schema Accounts Lost Prepared stmt Count Qcache Free Blocks Questions Select Full Join Select Full Range Join Select Range Check Selezionare Scan Table Locks immediate (blocco immediato tavolo di scansione) 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

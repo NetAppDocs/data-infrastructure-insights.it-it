@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_ibm_cleversafe.html 
+keywords: data collector, IBM Cleversafe 
+summary: Configurazione di IBM Cleversafe Data Collector. 
+---
+= Data collector IBM Cleversafe
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per rilevare i dati di inventario e delle prestazioni dei sistemi di storage IBM Cleversafe.
+
+
+NOTE: IBM Cleversafe viene misurato a un tasso diverso da TB raw a unità gestite. Ogni 40 TB di capacità IBM Cleversafe non formattata viene addebitato come 1 link:concept_subscribing_to_cloud_insights.html#pricing["Unità gestita (MU)"].
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector IBM Cleversafe. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Container | Volume interno 
+
+
+| Container | Condivisione file 
+
+
+| Condivisione NFS | Condividere 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* L'indirizzo IP dei servizi dati esterni per il cluster
+* Nome utente e password dell'amministratore
+* Porta 9440
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| IP del gestore o nome host | Indirizzo IP o nome host del nodo di gestione 
+
+
+| Nome utente | Nome utente dell'account utente con ruolo di super utente o amministratore di sistema 
+
+
+| Password | Password per l'account utente con ruolo di super utente o amministratore di sistema 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo di polling dell'inventario (min) | Intervallo tra i sondaggi di inventario. 
+
+
+| Timeout connessione HTTP (sec) | Timeout HTTP in secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

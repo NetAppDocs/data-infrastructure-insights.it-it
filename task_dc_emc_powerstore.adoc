@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_powerstore.html 
+keywords: data collector, PowerStore, EMC, DELL 
+summary: Configurazione di DELL EMC PowerStore Data Collector. 
+---
+= Data collector Dell EMC PowerStore
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector EMC PowerStore raccoglie le informazioni di inventario dallo storage EMC PowerStore. Per la configurazione, il data collector richiede l'indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.
+
+Il data collector EMC PowerStore raccoglie le relazioni di replica volume-volume che PowerStore coordina tra altri array di storage. Data Infrastructure Insights mostra uno storage array per ogni cluster PowerStore e raccoglie dati di inventario per i nodi e le porte storage in tale cluster. Non vengono raccolti dati di volumi o pool di storage.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| host | host 
+
+
+| host_volume_mapping | host_volume_mapping 
+
+
+| Hardware (contiene dischi sotto l'oggetto "extra_details"): Dischi | Disco 
+
+
+| Appliance | StoragePool 
+
+
+| Cluster | Array di storage 
+
+
+| Nodo | StorageNode 
+
+
+| porta_fc | Porta 
+
+
+| volume | Volume 
+
+
+| Volume interno | file_system 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessarie le seguenti informazioni:
+
+* Indirizzo IP o nome di dominio completo del processore di storage
+* Nome utente e password di sola lettura
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Gateway PowerStore | Indirizzi IP o nomi di dominio pienamente qualificati dello storage PowerStore 
+
+
+| Nome utente | Nome utente di PowerStore 
+
+
+| Password | Password utilizzata per PowerStore 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta HTTPS | Il valore predefinito è 443 
+
+
+| Intervallo polling inventario (minuti) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+|===
+La raccolta di performance PowerStore di Cloud Insight utilizza i dati di origine della granularità di 5 minuti di PowerStore. Pertanto, Data Infrastructure Insights esegue il polling dei dati ogni cinque minuti e non è configurabile.
+
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

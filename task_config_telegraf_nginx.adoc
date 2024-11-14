@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_nginx.html 
+keywords: telegraf, installation, install, nginx 
+summary: Configurazione del data collector nginx 
+---
+= Data Collector nginx
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Nginx.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Nginx.
++
+Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+
+. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
+. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+image:NginxDCConfigLinux-1.png["Configurazione di Linux Nginx"] image:NginxDCConfigLinux-2.png["Configurazione di Linux Nginx"]
+
+
+
+== Setup (Configurazione)
+
+L'insieme di metriche nginx richiede l'attivazione di Nginxlink:http://nginx.org/en/docs/http/ngx_http_stub_status_module.html["http_stub_status_module"].
+
+Ulteriori informazioni sono disponibili nella link:http://nginx.org/en/docs/["Documentazione nginx"].
+
+
+
+== Oggetti e contatori
+
+Vengono raccolti i seguenti oggetti e i relativi contatori:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| Nginx | Server namespace | Nodo IP Node Name Port (porta nome nodo IP) | Accetta richieste di lettura gestite attive in attesa di scrittura 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .

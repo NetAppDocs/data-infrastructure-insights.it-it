@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: concept_querying_assets.html 
+summary: Panoramica delle query 
+keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
+---
+= Risorse utilizzate nelle query
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Le query consentono di monitorare e risolvere i problemi della rete ricercando le risorse e le metriche dell'ambiente a un livello granulare in base a criteri selezionati dall'utente (ad esempio, annotazioni).
+
+Si noti che le regole di annotazione, che assegnano automaticamente le annotazioni alle risorse, _richiedono_ una query.
+
+È possibile eseguire query sulle risorse di inventario fisiche o virtuali (e sulle relative metriche) nel proprio ambiente o sulle metriche fornite con l'integrazione, ad esempio Kubernetes o dati avanzati di ONTAP.
+
+
+
+== Risorse di inventario
+
+I seguenti tipi di risorse possono essere utilizzati nelle query, nei widget della dashboard e nelle landing page personalizzate delle risorse. I campi e i contatori disponibili per i filtri, le espressioni e la visualizzazione variano in base al tipo di risorsa. Non tutte le risorse possono essere utilizzate in tutti i tipi di widget.
+
+* Applicazione
+* Datastore
+* Disco
+* Fabric
+* Dispositivo generico
+* Host
+* Volume interno
+* Sessione iSCSI
+* Portale di rete iSCSI
+* Percorso
+* Porta
+* Qtree
+* Quota
+* Condividere
+* Storage
+* Nodo di storage
+* Pool di storage
+* SVM (Storage Virtual Machine)
+* Switch
+* Nastro
+* VMDK
+* Macchina virtuale
+* Volume
+* Zona
+* Membro di zona
+
+
+
+
+== Metriche di integrazione
+
+Oltre a eseguire query per le risorse di inventario e le relative metriche di performance, è possibile eseguire query anche per le metriche *dati di integrazione*, come quelle generate da Kubernetes o Docker, o fornite con metriche avanzate di ONTAP.
+
+image:QueryPageFilter.png["Esempio di filtro query di integrazione"]

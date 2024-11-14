@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task_research_failed_collector.html 
+keywords: data collector, changes, failures 
+summary: Errori di data collector 
+---
+= Ricerca di un data collector guasto
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Se un data collector presenta un messaggio di errore e un impatto alto o medio, è necessario ricercare il problema utilizzando la pagina di riepilogo del data collector con le relative informazioni collegate.
+
+Attenersi alla seguente procedura per determinare la causa dei dati non riusciti. I messaggi di errore di Data Collector vengono visualizzati nel menu *Admin* e nella pagina *Installed Data Collector*.
+
+.Fasi
+. Fare clic su *Admin* > *Data Collector* > *Installed Data Collector*.
+. Fare clic sul Linked Name (Nome collegato) del data collector in errore per aprire la pagina Summary (Riepilogo).
+. Nella pagina Summary (Riepilogo), consultare l'area Comments (commenti) per leggere eventuali note lasciate da un altro tecnico che potrebbe anche esaminare questo guasto.
+. Annotare eventuali messaggi relativi alle prestazioni.
+. Spostare il puntatore del mouse sui segmenti del grafico della cronologia degli eventi per visualizzare ulteriori informazioni.
+. Selezionare un messaggio di errore per un dispositivo e visualizzato sotto la cronologia degli eventi, quindi fare clic sull'icona Dettagli errore visualizzata a destra del messaggio.
++
+I dettagli relativi all'errore includono il testo del messaggio di errore, le cause più probabili, le informazioni in uso e i suggerimenti su come risolvere il problema.
+
+. Nell'area dispositivi segnalati da questo Data Collector, è possibile filtrare l'elenco in modo da visualizzare solo i dispositivi di interesse ed è possibile fare clic sul collegamento *Nome* di un dispositivo per visualizzare la pagina delle risorse per tale dispositivo.
+. Quando si torna alla pagina di riepilogo del data collector, controllare l'area *Show Recent Changes* (Mostra modifiche recenti) nella parte inferiore della pagina per verificare se le modifiche recenti potrebbero aver causato il problema.
+

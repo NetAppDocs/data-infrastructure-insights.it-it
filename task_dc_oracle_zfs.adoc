@@ -1,0 +1,164 @@
+---
+sidebar: sidebar 
+permalink: task_dc_oracle_zfs.html 
+keywords: data collector, Oracle, ZFS, storage applicance 
+summary: Configurazione di Oracle ZFS data collector. 
+---
+= Data collector di Oracle ZFS Storage Appliance
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza il data collector di Oracle ZFS Storage Appliance per raccogliere dati di inventario e prestazioni.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le informazioni di inventario con Oracle ZFS Data Collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco (SSD) | Disco 
+
+
+| Cluster | Storage 
+
+
+| Controller | Nodo di storage 
+
+
+| LUN | Volume 
+
+
+| Mappa LUN | Mappa del volume 
+
+
+| Iniziatore, destinazione | Maschera di volume 
+
+
+| Condividere | Volume interno 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+
+
+== Requisiti
+
+* Nomi host per ZFS Controller-1 e ZFS Controller-2
+* Nome utente e password dell'amministratore
+* Requisito porta: 215 HTTP/HTTPS
+
+
+
+
+== Metriche di performance richieste
+
+Le appliance Oracle ZFS offrono agli amministratori dello storage una grande flessibilità per acquisire le statistiche delle performance. Data Infrastructure Insights prevede che _ciascun_ controller in una coppia ad alta disponibilità sia configurato per acquisire le seguenti metriche:
+
+* smb2.ops[condividere]
+* nfs3.ops[condividere]
+* nfs4.ops[condividere]
+* nfs4-1.ops[condividere]
+
+
+La mancata acquisizione del controller di tali elementi o di tutti questi elementi causa probabilmente la mancata disponibilità o il sottreporting di Data Infrastructure Insights del carico di lavoro sui "volumi interni".
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Nome host controller-1 ZFS | Nome host del controller di storage 1 
+
+
+| Nome host controller-2 ZFS | Nome host del controller di storage 2 
+
+
+| Nome utente | Nome utente dell'account utente amministratore del sistema di storage 
+
+
+| Password | Password per l'account utente amministratore 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Tipo di connessione | HTTPS o HTTP, visualizza anche la porta predefinita 
+
+
+| Sovrascrivere la porta di connessione | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+
+
+| Intervallo di polling dell'inventario | L'impostazione predefinita è 60 secondi 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2a, 2a"]
+|===
+| Problema: | Prova: 
+
+
+ a| 
+"Credenziali di accesso non valide"
+ a| 
+Convalidare l'account utente e la password ZFS
+
+
+
+ a| 
+"Errore di configurazione" con messaggio di errore "Servizio REST disattivato"
+ a| 
+Verificare che il servizio REST sia attivato su questo dispositivo.
+
+
+
+ a| 
+"Errore di configurazione " con messaggio di errore "utente non autorizzato per comando"
+ a| 
+Questo errore è probabilmente dovuto al fatto che alcuni ruoli (ad esempio, "Advanced_Analytics") non sono inclusi per l'utente configurato.
+
+L'applicazione dell'ambito Analytics per l'utente con ruolo di sola lettura può rimuovere l'errore. Attenersi alla seguente procedura:
+
+. Nel sistema ZFS, dalla schermata Configurazione -> utenti, spostare il mouse sul ruolo e fare doppio clic per consentire la modifica
+. Selezionare "Analytics" (analisi) dal menu a discesa Scope (ambito). Viene visualizzato un elenco delle proprietà possibili.
+. Fare clic sulla casella di controllo in alto per selezionare tutte e tre le proprietà.
+. Fare clic sul pulsante Aggiungi sul lato destro.
+. Fare clic sul pulsante Apply (Applica) nella parte superiore destra della finestra a comparsa. La finestra a comparsa si chiude.
+
+
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

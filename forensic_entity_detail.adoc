@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: forensic_entity_detail.html 
+keywords: Forensic, entity, entity overview, entity behavior, entities 
+summary: Pagina delle entità forensi 
+---
+= Pagina delle entità forensi
+:toc: macro
+:hardbreaks:
+:allow-uri-read: 
+:toc: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+La pagina delle entità Forensics fornisce informazioni dettagliate sull'attività delle entità nell'ambiente.
+
+
+
+== Esame delle informazioni sull'entità
+
+Fare clic su *Forensics > Activity Forensics* e fare clic sulla scheda _Entities_ per accedere alla pagina Entities.
+
+Questa pagina fornisce una panoramica dell'attività dell'entità nel proprio ambiente, evidenziando le seguenti informazioni: * Un grafico che mostra _entità univoche_ cui si accede al minuto * Un grafico di _tipi di entità a cui si accede_ * una suddivisione dei _percorsi comuni_ * Un elenco delle _prime 50 entità_ rispetto al numero totale di entità
+
+image:CS-Entities-Page.png["Pagina Entities"]
+
+Facendo clic su un'entità nell'elenco, viene visualizzata una pagina panoramica dell'entità, che mostra un profilo dell'entità con dettagli come nome, tipo, nome del dispositivo, indirizzo IP e percorso più utilizzati, oltre al comportamento dell'entità come l'utente, l'IP, e ora dell'ultimo accesso all'entità.
+
+image:CS-entity-detail-page.png["Pagina Entity Overview"]

@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task_dc_rubrik_cdm.html 
+keywords: data collector, Rubrik, 
+summary: Configurazione di Rubrik CDM data collector. 
+---
+= Rubrik CDM Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza il data Collector di Rubrik per acquisire i dati di inventario e relativi alle performance dalle appliance di storage Rubrik.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data Collector di Rubrik. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Cluster | Storage, pool di storage 
+
+
+| Nodo | Nodo di storage 
+
+
+| Disco | Disco 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessari i seguenti requisiti:
+
+* L'unità di acquisizione di Data Infrastructure Insights avvierà le connessioni alla porta TCP 443 al cluster Rubrik. Un collector per cluster.
+* Indirizzo IP del cluster Rubrik.
+* Nome utente e password del cluster.
+* Indirizzo IP o nome host del cluster Rubrik.
+* Per l'autenticazione di base, un nome utente e una password per il cluster. Se si preferisce utilizzare l'autenticazione basata sull'account del servizio, è necessario disporre di un account del servizio, di un segreto e di un ID organizzazione
+* Requisito della porta: HTTPS 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| IP | Indirizzo IP del cluster Rubrik 
+
+
+| Nome utente | Nome utente del cluster 
+
+
+| Password | Password per il cluster 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Intervallo di polling dell'inventario (min) | Il valore predefinito è 60 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| Ho ricevuto un messaggio che indica la creazione di più storage. | Verificare che il cluster sia configurato correttamente e che il raccoglitore faccia riferimento a un singolo cluster. 
+
+
+| Ho ricevuto un avviso che indica che l'API del disco ha restituito più dati | Rivolgersi al supporto per ottenere ulteriori dati. 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

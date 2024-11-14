@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: concept_searching_assets.html 
+summary: Ricerca avanzata techniquest può aiutarti a individuare le risorse che stai cercando. 
+keywords: asset page, objects, search, advanced, alerts 
+---
+= Suggerimenti e suggerimenti per la ricerca di risorse e avvisi
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+È possibile utilizzare più tecniche di ricerca per cercare dati o oggetti nell'ambiente monitorato.
+
+* *Ricerca con caratteri jolly*
++
+È possibile eseguire la ricerca di più caratteri jolly utilizzando il carattere *. Ad esempio, _appic*n_ restituisce _application_.
+
+* *Frasi utilizzate nella ricerca*
++
+Una frase è un gruppo di parole racchiuse tra virgolette doppie, ad esempio "VNX LUN 5". Puoi utilizzare le virgolette doppie per cercare documenti che contengono spazi nei loro nomi o attributi.
+
+* *Operatori booleani*
++
+Utilizzando gli operatori booleani O, E e NON, è possibile combinare più termini per formare una query più complessa.
+
++
+OPPURE
+
++
+L'operatore OR è l'operatore di congiunzione predefinito.
+
++
+Se non esiste un operatore booleano tra due termini, viene utilizzato L'operatore OR.
+
++
+L'operatore OR collega due termini e trova un documento corrispondente se uno dei termini esiste in un documento.
+
++
+Ad esempio, _storage O netapp_ ricerca i documenti che contengono _storage_ o _netapp_.
+
++
+I punteggi più alti vengono assegnati ai documenti che corrispondono alla maggior parte dei termini.
+
++
+E.
+
++
+È possibile utilizzare L'operatore AND per trovare i documenti in cui entrambi i termini di ricerca esistono in un singolo documento. Ad esempio, _storage E netapp_ ricerca i documenti che contengono sia _storage_ che _netapp_.
+
++
+È possibile utilizzare il simbolo *&&* invece della parola E.
+
++
+NO
+
++
+Quando si utilizza L'operatore NOT, tutti i documenti che contengono il termine After NOT vengono esclusi dai risultati della ricerca. Ad esempio, _storage NON netapp_ ricerca documenti che contengono solo _storage_ e non _netapp_.
+
++
+È possibile utilizzare il simbolo *!* invece della parola NO.
+
+
+
+La ricerca non fa distinzione tra maiuscole e minuscole.
+
+
+
+== Ricerca con termini indicizzati
+
+Le ricerche che corrispondono a un maggior numero di termini indicizzati determinano punteggi più elevati.
+
+La stringa di ricerca viene divisa in termini di ricerca separati per spazio. Ad esempio, la stringa di ricerca "storage aurora netapp" è divisa in tre parole chiave: "Storage", "aurora" e "netapp". La ricerca viene eseguita utilizzando tutti e tre i termini. I documenti che corrispondono alla maggior parte di questi termini avranno il punteggio più alto. Maggiori sono le informazioni fornite, migliori sono i risultati della ricerca. Ad esempio, è possibile cercare uno storage in base al nome e al modello.
+
+L'interfaccia utente visualizza i risultati della ricerca in diverse categorie, con i tre risultati principali per categoria. Se non è stato trovato un oggetto previsto, è possibile includere più termini nella stringa di ricerca per migliorare i risultati della ricerca.
+
+La tabella seguente fornisce un elenco di termini indicizzati che è possibile aggiungere alla stringa di ricerca.
+
+|===
+| Categoria | Termini indicizzati 
+
+
+| Storage | modello di vendor del nome "storage" 
+
+
+| StoragePool | Nome "storagepool" degli indirizzi IP dello storage del numero di serie dello storage dei nomi dei modelli di storage del vendor dello storage per tutti i nomi dei volumi interni associati a tutti i dischi associati 
+
+
+| Volume interno | Nome "internalvolume" degli indirizzi IP dello storage del numero di serie dello storage del fornitore dello storage nome del modello dello storage dei nomi dei pool di storage di tutti i nomi delle condivisioni associati di tutte le applicazioni associate 
+
+
+| Volume | Nome "volume" nomi etichetta di tutti i volumi interni nome del pool di storage nome degli indirizzi IP dello storage del numero di serie dello storage del modello di storage del vendor 
+
+
+| Nodo di storage | Nome "storagenode" degli indirizzi IP dello storage del numero di serie dello storage del modello di storage del vendor 
+
+
+| Host | Nome "host" indirizzi IP nomi di tutte le applicazioni associate 
+
+
+| Datastore | Nome "datastore" Virtual Center nomi IP di tutti i volumi nomi di tutti i volumi interni 
+
+
+| Macchine virtuali | Nome "virtualmachine" Nome DNS indirizzi IP nome dell'host indirizzi IP dei nomi host di tutti i nomi degli archivi dati di tutte le applicazioni associate 
+
+
+| Switch (Regular e NPV) | "Switch" Indirizzo IP Nome wwn numero di serie modello nome di dominio del fabric wwn del fabric 
+
+
+| Applicazione | nome "applicazione" linea tenant del progetto di business unit 
+
+
+| Nastro | Indirizzo IP "nastro" nome numero di serie fornitore 
+
+
+| Porta | nome wwn "porta" 
+
+
+| Fabric | nome wwn "fabric" 
+
+
+| SVM (Storage Virtual Machine) | UUID nome "storagevirtualmachine" 
+|===

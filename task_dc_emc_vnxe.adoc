@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_vnxe.html 
+keywords: data collector, VNXe, EMC 
+summary: Configurazione del data collector VNXe. 
+---
+= Configurazione del data collector EMC VNXe
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+IL data collector Dell EMC VNXe fornisce il supporto dell'inventario per gli array di storage unificati VNXe. Data Infrastructure Insights supporta attualmente i protocolli iSCSI e NAS.
+
+
+
+== Requisiti
+
+* Il data collector VNXe è basato su CLI; è necessario installare Unisphere per VNXe CLI (uemcli.exe) sull'unità di acquisizione in cui risiede il data collector VNXe.
+* uemcli.exe utilizza HTTPS come protocollo di trasporto, quindi l'unità di acquisizione deve essere in grado di avviare connessioni HTTPS a VNXe.
+* Indirizzo IP o nome di dominio completo del dispositivo VNXe
+* È necessario disporre di almeno un utente di sola lettura per l'utilizzo da parte del data collector.
+* Indirizzo IP del server di abilitazione delle soluzioni di gestione.
+* HTTPS sulla porta 443 è obbligatorio
+* Il data collector EMC VNXe fornisce supporto NAS e iSCSI per l'inventario; verranno rilevati volumi fibre channel, ma Data Infrastructure Insights non segnala la mappatura, il masking o le porte storage FC.
+
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector VNXe. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco | Disco 
+
+
+| Array di storage | Storage 
+
+
+| Del processore | Nodo di storage 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Informazioni generali blocco iSCSI, VMware VMFS | Condividere 
+
+
+| Sistema remoto di replica | Sincronizzazione 
+
+
+| Nodo iSCSI | Nodo di destinazione iSCSI 
+
+
+| ISCSI Initiator | ISCSI Target Initiator 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Storage VNXe | Indirizzo IP o nome di dominio completo del dispositivo VNXe 
+
+
+| Nome utente | Nome utente del dispositivo VNXe 
+
+
+| Password | Password per il dispositivo VNXe 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 40 minuti 
+
+
+| Porta CLI | Porta utilizzata per la CLI VNXe 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| "Impossibile eseguire l'utility esterna" con il messaggio di errore "Impossibile trovare l'eseguibile Unisphere uemcli" | * Verificare l'indirizzo IP, il nome utente e la password corretti * confermare che Unisphere CLI sia installato sull'unità di acquisizione di Data Infrastructure Insights * verificare che la directory di installazione di Unisphere CLI sia corretta nella configurazione dell'origine dati * verificare che l'IP di VNXe sia corretto nella configurazione dell'origine dati. Dall'unità di acquisizione di Data Infrastructure Insights, aprire un CMD e passare alla directory di installazione configurata: ${INSTALLDIR. Provare a stabilire una connessione con il dispositivo VNXe digitando: Uemcli -d <Your IP> -u <Your ID> /sys/General show 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

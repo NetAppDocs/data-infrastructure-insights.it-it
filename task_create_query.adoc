@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: task_create_query.html 
+summary: Le query ti consentono di identificare in modo rapido e semplice le risorse e le metriche di interesse. 
+keywords: query, queries 
+---
+= Creazione di query
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Le query consentono di cercare le risorse nell'ambiente a un livello granulare, consentendo di filtrare i dati desiderati e di ordinare i risultati in base alle proprie esigenze.
+
+Ad esempio, è possibile creare una query per _volumi_, aggiungere un filtro per trovare _storage_ specifici associati ai volumi selezionati, aggiungere un altro filtro per trovare una particolare _annotazione_, ad esempio "Tier 1" sugli storage selezionati, Infine, Aggiungi un altro filtro per trovare tutti gli storage con _IOPS - Read (io/s)_ superiore a 25. Una volta visualizzati i risultati, è possibile ordinare le colonne delle informazioni associate alla query in ordine crescente o decrescente.
+
+Nota: Quando viene aggiunto un nuovo data collector che acquisisce le risorse o vengono effettuate annotazioni o assegnazioni di applicazioni, è possibile eseguire query per le nuove risorse, annotazioni o applicazioni solo dopo che le query sono state indicizzate. L'indicizzazione viene eseguita a intervalli regolari pianificati o durante determinati eventi, ad esempio l'esecuzione di regole di annotazione.
+
+.Creare una query è molto semplice:
+. Selezionare *Query > *+Nuova query*.
+. Dalla schermata "Select..." (Seleziona) selezionare il tipo di oggetto per il quale si desidera eseguire la query. È possibile scorrere l'elenco o iniziare a digitare per trovare più rapidamente ciò che si sta cercando.
+
+
+.Elenco a scorrimento:
+image:QueryDrop-DownList.png["Elenco a discesa Query (interrogazione)"]
+
+.Tipo di ricerca:
+image:QueryPageFilter.png["Digitare per trovare"]
+
+È possibile aggiungere filtri per restringere ulteriormente la query facendo clic sul pulsante *+* nel campo *Filtra per*. Raggruppare le righe per oggetto o attributo. Quando si lavora con i dati di integrazione (Kubernetes, metriche avanzate di ONTAP, ecc.), è possibile raggruppare in base a più attributi, se necessario.
+
+image:QueryFilterExample.png["Filtraggio e raggruppamento delle query"]
+
+L'elenco dei risultati della query mostra una serie di colonne predefinite, a seconda del tipo di oggetto ricercato. Per aggiungere, rimuovere o modificare le colonne, fare clic sull'icona a forma di ingranaggio a destra della tabella. Le colonne disponibili sono diverse in base al tipo di risorsa/metrica.
+
+image:QuerySelectColumns.png["Selezionare colonne"]
+
+
+
+== Scegliere aggregazione, unità, Formattazione condizionale
+
+
+
+=== Aggregazione e unità
+
+Per le colonne "valore", è possibile perfezionare ulteriormente i risultati della query scegliendo la modalità di aggregazione dei valori visualizzati e selezionando le unità in cui tali valori vengono visualizzati. Queste opzioni si trovano selezionando il menu "tre punti" nell'angolo superiore di una colonna.
+
+image:Query_Page_Aggregation_etc.png["Risultati della pagina di query che mostrano aggregazione, formattazione condizionale, visualizzazione unità e ridenominazione colonna"]
+
+
+
+==== Unità
+
+È possibile selezionare le unità in cui visualizzare i valori. Ad esempio, se la colonna selezionata mostra la capacità grezza e i valori sono mostrati in GiB, ma si preferisce visualizzarli come TIB, selezionare semplicemente TIB dall'elenco a discesa visualizzazione unità.
+
+
+
+==== Aggregazione
+
+Con lo stesso token, se i valori mostrati sono aggregati dai dati sottostanti come "medi", Tuttavia, si preferisce visualizzare la somma di tutti i valori, selezionare "somma" dal menu a discesa _Raggruppa per_ (se si desidera che i valori raggruppati mostrino le somme) o dal menu a discesa _aggregato di tempo per_ (se si desidera che i valori delle righe mostrino le somme dei dati sottostanti).
+
+Puoi scegliere di aggregare i punti dati raggruppati per _Avg, Max, min o Sum_.
+
+È possibile aggregare i dati delle singole righe in base a _Average, Last data point Acquired, Maximum, Minimum o Sum_.
+
+
+
+==== Formattazione condizionale
+
+La formattazione condizionale consente di evidenziare le soglie a livello di avviso e critico nell'elenco dei risultati della query, offrendo visibilità istantanea agli outlier e ai punti dati eccezionali.
+
+image:Query_Page_Conditional_Formatting.png["Formattazione condizionale nella pagina di query"]
+
+La formattazione condizionale viene impostata separatamente per ciascuna colonna. Ad esempio, è possibile scegliere un set di soglie per una colonna di capacità e un altro set per una colonna di throughput.
+
+
+
+==== Rinominare la colonna
+
+La ridenominazione di una colonna modifica il nome visualizzato nell'elenco risultati query. Il nome della nuova colonna viene visualizzato anche nel file risultante se si esporta l'elenco di query in formato .CSV.
+
+
+
+=== Salva
+
+Dopo aver configurato la query per visualizzare i risultati desiderati, fare clic sul pulsante *Save* (Salva) per salvare la query per un utilizzo futuro. Assegna un nome significativo e unico.
+
+
+
+== Ulteriori informazioni sul filtraggio
+
+
+
+=== Caratteri jolly ed espressioni
+
+Quando si filtrano valori di testo o di elenco nelle query o nei widget della dashboard, quando si inizia a digitare viene visualizzata l'opzione per creare un filtro * con caratteri jolly* in base al testo corrente. Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione con caratteri jolly. È inoltre possibile creare *espressioni* utilizzando NOR o OPPURE, oppure selezionare l'opzione "None" (Nessuno) per filtrare i valori nulli nel campo.
+
+image:Type-Ahead-Example-ingest.png["Filtro con caratteri jolly"]
+
+I filtri basati su caratteri jolly o espressioni (ad esempio, NO, O "None", ecc.) vengono visualizzati in blu scuro nel campo del filtro. Gli elementi selezionati direttamente dall'elenco vengono visualizzati in blu chiaro.
+
+image:Type-Ahead-Example-Wildcard-DirectSelect.png["Risultati del filtro con caratteri jolly"]
+
+Si noti che i caratteri jolly e il filtraggio delle espressioni funzionano con testo o elenchi, ma non con valori numerici, date o booleani.
+
+
+
+=== Raffinazione dei filtri
+
+Per perfezionare il filtro, utilizzare quanto segue:
+
+|===
+
+
+| Filtro | Che cosa fa | Esempio | Risultato 
+
+
+| * (Asterisco) | consente di cercare tutto | vol*rhel | restituisce tutte le risorse che iniziano con "vol" e terminano con "rhel" 
+
+
+| ? (punto interrogativo) | consente di cercare un numero specifico di caratteri | BOS-PRD??-S12 | Restituisce BOS-PRD**__12__**-S12, BOS-PRD**__23__**-S12 e così via 
+
+
+| OPPURE | consente di specificare più entità | FAS2240, CX600 O FAS3270 | Restituisce FAS2440, CX600 o FAS3270 
+
+
+| NO | consente di escludere il testo dai risultati della ricerca | NON EMC* | Restituisce tutto ciò che non inizia con "EMC" 
+
+
+| _Nessuno_ | Ricerca i valori NULL in tutti i campi | _Nessuno_ | restituisce risultati in cui il campo di destinazione è vuoto 
+
+
+| Non * | Cerca i valori NULL nei campi _text-only_ | Non * | restituisce risultati in cui il campo di destinazione è vuoto 
+|===
+Se racchiudi una stringa di filtro tra virgolette doppie, Insight tratta tutto ciò che va dalla prima all'ultima quotazione come una corrispondenza esatta. Tutti i caratteri speciali o gli operatori all'interno delle virgolette saranno trattati come valori letterali. Ad esempio, il filtraggio per "*" restituirà risultati che sono un asterisco letterale; in questo caso, l'asterisco non verrà trattato come carattere jolly. Gli operatori O e NON verranno trattati come stringhe letterali se racchiusi tra virgolette doppie.
+
+
+
+== Cosa fare ora che si ottengono i risultati delle query?
+
+La funzione di query consente di aggiungere annotazioni o assegnare applicazioni alle risorse in modo semplice. Nota: È possibile assegnare solo applicazioni o annotazioni alle risorse di inventario (disco, storage, ecc.). Le metriche di integrazione non possono assumere le assegnazioni di annotazioni o applicazioni.
+
+Per assegnare un'annotazione o un'applicazione alle risorse risultanti dalla query, selezionare le risorse utilizzando la colonna della casella di controllo a sinistra della tabella dei risultati, quindi fare clic sul pulsante *azioni in blocco* a destra. Scegliere l'azione desiderata da applicare alle risorse selezionate.
+
+image:QueryVolumeBulkActions.png["Esempio di query su azioni in blocco"]
+
+
+
+== Le regole di annotazione richiedono una query
+
+Se si sta configurando link:task_create_annotation_rules.html["Regole di annotazione"], ciascuna regola deve disporre di una query sottostante con cui lavorare. Tuttavia, come hai visto in precedenza, le query possono essere estese o ristrette in base alle tue esigenze.

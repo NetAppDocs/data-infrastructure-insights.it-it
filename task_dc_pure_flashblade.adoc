@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task_dc_pure_flashblade.html 
+keywords: data collector, Pure Storage, pure, FlashBlade 
+summary: Configurazione di pure Storage Data Collector. 
+---
+= Pure Storage FlashBlade Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza il data collector di pure Storage FlashBlade per raccogliere dati di inventario e relativi alle performance dai cluster FlashBlade che espongono la versione 2 delle proprie API REST
+
+
+
+== Terminologia
+
+Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco (SSD) | Disco 
+
+
+| Array | Storage 
+
+
+| Lama | Nodo di storage 
+
+
+| File System | Volume interno 
+
+
+| Bucket dello storage a oggetti | Qtree 
+
+
+| Iniziatore, destinazione | Maschera di volume 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* Indirizzo IP del sistema di archiviazione o nome di dominio completo
+* Token API, idealmente con una durata infinita. Un utente di livello di sola lettura dovrebbe essere sufficiente.
+* Requisito della porta: HTTPS 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP host FlashBlade | Indirizzo IP del sistema di storage 
+
+
+| Nome utente | Nome utente per aiutare gli amministratori di Data Infrastructure Insights a ricordare a quale utente appartiene il token API 
+
+
+| Token API | Token API 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Tipo di connessione | Scegliere HTTP o HTTPS. Visualizza anche la porta predefinita. 
+
+
+| Eseguire l'override della porta TCP | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+
+
+| Intervallo di polling dell'inventario (min) | L'impostazione predefinita è 60 minuti 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| "Credenziali di accesso non valide" con messaggi di errore "la policy non consente" o "non sei autorizzato" | Convalidare l'account utente e la password pure tramite l'interfaccia pure http 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

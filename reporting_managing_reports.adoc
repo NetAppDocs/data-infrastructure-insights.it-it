@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: reporting_managing_reports.html 
+summary: 'Personalizzazione dell"output e della consegna dei report, copia dei report negli Appunti, apertura dei report (XML).' 
+keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying 
+---
+= Gestione dei report
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+È possibile personalizzare il formato di output e la consegna di un report, impostare le proprietà o le pianificazioni del report e inviare i report via email.
+
+
+NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+
+
+IMPORTANT: Prima di apportare modifiche alle autorizzazioni o alla sicurezza dei report, è necessario copiare i report "contenuto personale" nella cartella "contenuto team" per assicurarsi che i report vengano salvati.
+
+
+
+== Personalizzazione del formato di output e della consegna di un report
+
+È possibile personalizzare il formato e il metodo di consegna dei report.
+
+. Nel Data Infrastructure Insights Reporting Portal, andare a *Menu > Content > My Content/Team Content*. Passare il mouse sul report che si desidera personalizzare e aprire il menu "tre punti".
+
+
+image:Reporting_Output_and_Delivery.png["Output e consegna dei report"]
+
+. Fare clic su *Proprietà > Pianificazione*
+
+
+. È possibile impostare le seguenti opzioni:
++
+** *Pianificazione* per l'esecuzione dei report.
+** Scegliere *Opzioni* per il formato e l'invio del report (Salva, Stampa, e-mail) e le lingue per il report.
+
+
+. Fare clic su *Save* (Salva) per produrre il report utilizzando le selezioni effettuate.
+
+
+
+
+== Copia di un report negli Appunti
+
+Questa procedura consente di copiare un report negli Appunti.
+
+. Selezionare un report da cui copiare (*Menu > contenuto > contenuto personale o contenuto del team*)
+. Scegliere _Modifica report_ dal menu a discesa del report
++
+image:Reporting_Edit_Report.png["Modifica di un report"]
+
+. Nella parte superiore destra dello schermo, aprire il menu "tre punti" accanto a "Proprietà".
+. Selezionare *Copia report negli Appunti*.
++
+image:Reporting_Copy_To_Clipboard.png["Copia di un report negli Appunti"]
+
+
+
+
+
+== Apertura di report dagli Appunti
+
+È possibile aprire una specifica del report precedentemente copiata negli Appunti.
+
+A proposito di questa attività iniziare creando un nuovo report o aprendo un report esistente che si desidera sostituire con il report copiato. La procedura riportata di seguito riguarda un nuovo report.
+
+. Selezionare *Menu > +New > Report* e creare un report vuoto.
+. Nella parte superiore destra dello schermo, aprire il menu "tre punti" accanto a "Proprietà".
+. Selezionare *Apri report dagli Appunti*.
+
+
+image:Reporting_Open_From_Clipboard.png["Apertura di un report dagli Appunti"]
+
+. Incollare il codice copiato nella finestra e selezionare *OK*.
+. Selezionare l'icona del disco floppy per salvare il report.
+. Scegliere dove salvare il report (_My Content_, _Team Content_ o creare una nuova cartella).
+. Assegnare un nome significativo al nuovo report e selezionare *Salva*.
+
+
+
+
+== Modifica di un report esistente
+
+Tenere presente che la modifica dei file nella posizione predefinita comporta il rischio di sovrascrittura dei report al successivo aggiornamento del catalogo dei report. Si consiglia di salvare il report modificato con un nuovo nome o di memorizzarlo in una posizione non predefinita.
+
+
+
+== Risoluzione dei problemi
+
+Qui troverai suggerimenti per la risoluzione dei problemi con Reporting.
+
+|===
+
+
+| *Problema:* | *Provare questo:* 
+
+
+| Quando si pianifica l'invio di un report via email, il nome dell'utente che ha effettuato l'accesso viene precompilato nel campo "a" dell'email. Tuttavia, il nome è sotto forma di "firstname lastname" (nome, spazio, cognome). Poiché non si tratta di un indirizzo e-mail valido, l'e-mail non viene inviata quando viene eseguito il report pianificato. | Quando si pianifica l'invio del report via e-mail, cancellare il nome precompilato e inserire un indirizzo e-mail valido e correttamente formattato nel campo "a". 
+|===

@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: task_cs_user_management.html 
+keywords: Workload Security, User, Login, account, cloud secure 
+summary: Sicurezza del carico di lavoro gli account utente vengono gestiti tramite Data Infrastructure Insights User Management 
+---
+= Gestione utenti
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gli account utente di sicurezza del carico di lavoro vengono gestiti tramite Data Infrastructure Insights.
+
+Data Infrastructure Insights fornisce quattro livelli di account utente: Proprietario dell'account, amministratore, utente e ospite. A ciascun account vengono assegnati livelli di autorizzazione specifici. Un account utente con privilegi di amministratore può creare o modificare gli utenti e assegnare a ciascun utente uno dei seguenti ruoli di workload Security:
+
+|===
+
+
+| Ruolo | Accesso alla sicurezza del carico di lavoro 
+
+
+| Amministratore | È in grado di eseguire tutte le funzioni di workload Security, incluse quelle per Avvisi, analisi, raccolta dati, policy di risposta automatizzate e API per workload Security. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di sicurezza del carico di lavoro. 
+
+
+| Utente | Consente di visualizzare e gestire gli avvisi e visualizzare le analisi. Il ruolo dell'utente può modificare lo stato degli avvisi, aggiungere una nota, creare snapshot manualmente e limitare l'accesso dell'utente. 
+
+
+| Ospite | Consente di visualizzare avvisi e analisi. Il ruolo ospite non può modificare lo stato degli avvisi, aggiungere una nota, creare snapshot manualmente o limitare l'accesso dell'utente. 
+|===
+.Fasi
+. Accedere a workload Security
+. Nel menu, fare clic su *Admin > User Management*
++
+Verrai inoltrato alla pagina Gestione utenti di Data Infrastructure Insights.
+
+. Selezionare il ruolo desiderato per ciascun utente.
+
+
+Durante l'aggiunta di un nuovo utente, è sufficiente selezionare il ruolo desiderato (di solito utente o ospite).
+
+Ulteriori informazioni sugli account utente e sui ruoli sono disponibili nella documentazione di Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["Ruolo dell'utente"].

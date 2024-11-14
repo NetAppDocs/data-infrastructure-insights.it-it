@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+summary: Benvenuto nel portale della documentazione di Data Infrastructure Insights. 
+keywords:  
+---
+= Documentazione Data Infrastructure Insights
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Infrastructure Insights (in precedenza Cloud Insights) è un tool di monitoraggio dell'infrastruttura cloud che ti offre visibilità sull'intera infrastruttura. Con Data Infrastructure Insights puoi monitorare, risolvere i problemi e ottimizzare tutte le risorse, inclusi cloud pubblici e data center privati.
+
+
+
+== Cosa può fare per me Data Infrastructure Insights?
+
+Data Infrastructure Insights offre il monitoring del multicloud ibrido, offrendo un'osservabilità full-stack di infrastruttura e carichi di lavoro.
+
+* Raccolta di dati per infrastrutture e carichi di lavoro eterogenei, tra cui Kubernetes
+* Aprire Telegraf Collector e aprire le API per una facile integrazione
+* Avvisi e notifiche completi
+* Apprendimento automatico per informazioni intelligenti
+* Ottimizzare l'utilizzo delle risorse
+* Dashboard integrate o personalizzabili con filtri avanzati per ridurre al minimo il rumore dello schermo per rispondere alle domande
+* Scopri lo stato delle tue operazioni di storage ONTAP 
+* Proteggi la tua risorsa di business più preziosa, i dati, dagli attacchi ransomware o di distruzione dei dati
+
+
+'''
+
+
+== Per iniziare
+
+* Come è possibile link:task_cloud_insights_onboarding_1.html["*per iniziare*"] utilizzare Data Infrastructure Insights?
+* Mi sono iscritto. Ora che cosa devo fare? link:task_getting_started_with_cloud_insights.html["Acquisizione dei dati"] link:concept_user_roles.html["Configurazione degli utenti"]
+* Fantastico! Fasi successive link:task_defining_annotations.html["Preparazione delle risorse: Annotazione"] link:concept_querying_assets.html["Trovare le risorse desiderate: Eseguire query"] link:concept_dashboards_overview.html["Visualizzazione dei dati desiderati: Dashboard"] link:task_create_monitor.html["Monitoraggio e avvisi"] link:task_cs_getting_started.html["Protezione dei dati"]
+* È un'ottima cosa! Sono pronto per link:concept_subscribing_to_cloud_insights.html["*iscriviti*"].
+

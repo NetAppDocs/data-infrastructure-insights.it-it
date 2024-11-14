@@ -1,0 +1,95 @@
+---
+sidebar: sidebar 
+permalink: task_dc_infinidat_infinibox.html 
+keywords: data collector, infinidat, InfiniBox 
+summary: Configurazione del data collector Infinidat InfiniBox. 
+---
+= Data collector Infinidat InfiniBox
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector Infinidat InfiniBox (HTTP) viene utilizzato per raccogliere le informazioni di inventario dal sistema storage Infinidat InfiniBox.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector Infinidat InfiniBox. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Nodo | Controller 
+
+
+| Filesystem | Volume interno 
+
+
+| Filesystem | Condivisione file 
+
+
+| Esportazioni di file system | Condividere 
+|===
+
+
+== Requisiti
+
+Di seguito sono riportati i requisiti per la configurazione di questo data collector.
+
+* Indirizzo IP o FQDN del nodo di gestione InfiniBox
+* Admin userid e password
+* Porta 443 tramite API REST
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Host InfiniBox | Indirizzo IP o nome di dominio completo di InfiniBox Management Node 
+
+
+| Nome utente | Nome utente di InfiniBox Management Node 
+
+
+| Password | Password per InfiniBox Management Node 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta TCP | Porta TCP utilizzata per la connessione a InfiniBox Server. Il valore predefinito è 443. 
+
+
+| Intervallo polling inventario | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: task_dc_brocade_rest.html 
+keywords: data collector, Brocade, FC switch, FOS, Rest 
+summary: Configurazione di Brocade FOS REST Data Collector. 
+---
+= Brocade FOS REST Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza il REST Collector Brocade FOS per rilevare l'inventario e le performance dei dispositivi switch Brocade che eseguono il firmware FabricOS (FOS) 8,2 e versioni successive.
+
+Nota: Il livello "utente" predefinito di FOS non è sufficientemente potente perché Data Infrastructure Insights possa visualizzare tutti gli aspetti logici di un dispositivo. È necessario disporre di un account utente con il "ruolo chassis" abilitato, nonché di autorizzazioni su tutti i fabric virtuali configurati su uno switch.
+
+Di seguito è riportato un esempio di come creare un account utente con privilegi minimi per l'utilizzo di Data Infrastructure Insights in una sessione SSH su un dispositivo FOS:
+
+UserConfig --add NetAppCIUser -r utente -l 1-128 -c utente -p Qwerty!
+
+Verrà creato un utente "NetAppCIUser" con una password di "Qwerty!". Questo utente ha il ruolo “utente” (-r) in tutti e 128 i possibili fabric virtuali ( -l ). Questo utente dispone inoltre del ruolo "chassis" richiesto ( -c) con accesso a livello utente assegnato.
+
+Per impostazione predefinita, questo raccoglitore tenterà di scoprire tutti i dispositivi FOS che fanno parte di tutti i tessuti di cui fa parte lo switch.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati REST Brocade FOS. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Switch | Switch 
+
+
+| Porta | Porta 
+
+
+| Fabric virtuale, fabric fisico | Fabric 
+
+
+| Zona | Zona 
+
+
+| Switch logico | Switch logico 
+
+
+| Zona LSAN | Zona IVR 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* Deve essere presente una connettività TCP a tutti gli switch del fabric. Questo tipo di raccolta dati proverà senza problemi sia HTTP che HTTPS per ogni dispositivo nel fabric. Se si seleziona la casella di controllo _rileva tutti gli switch nel fabric_, Data Infrastructure Insights identifica tutti gli switch nel fabric; tuttavia, per scoprirli è necessaria la connettività TCP a tali switch aggiuntivi.
+* Lo stesso account è necessario a livello globale per tutti gli switch del fabric. È possibile utilizzare l'interfaccia Web della periferica per confermare l'accesso.
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| IP dello switch | Indirizzo IP o nome di dominio completo dello switch FOS 
+
+
+| Nome utente | Nome utente dello switch 
+
+
+| Password | Password per lo switch 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Dispositivi esclusi | Elenco separato da virgole degli indirizzi del dispositivo IPv4 da escludere dal polling. 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 60. 
+
+
+| Scopri tutti gli switch del fabric | Selezionare per rilevare tutti gli switch nel fabric. 
+
+
+| Scegliere tra HBA e alias zona | Scegliere se privilegiare gli alias HBA o zone. 
+
+
+| Tipo di connessione | HTTP o HTTPS. 
+
+
+| Tenere presente che questa impostazione modifica solo il ci del protocollo che tenta di utilizzare per primo per dispositivo; se l'impostazione predefinita non riesce, il ci tenta automaticamente il protocollo opposto | Sovrascrivere la porta TCP 
+
+
+| Specificare una porta se non si utilizza l'impostazione predefinita. | Intervallo di polling delle performance (sec) 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| La funzione Test indica che un protocollo non è accessibile | Un determinato dispositivo Brocade FOS 8,2+ desidera parlare solo su HTTP o HTTPS. Se uno switch dispone di un certificato digitale installato, lo switch genera errori HTTP se si tenta di comunicare con HTTP non crittografato rispetto a HTTPS. La funzione di test tenta di comunicare sia con HTTP che con HTTPS. Se il test indica che un protocollo viene superato, è possibile salvare il collettore senza preoccuparsi che l'altro protocollo non sia riuscito. Il collettore tenta entrambi i protocolli durante la raccolta e non riesce solo se nessuno dei due funziona. 
+
+
+| Errore: "Il Data Infrastructure Insights ha ricevuto un ruolo di telaio non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
+
+
+| Errore: "Indirizzo IP chassis non corrispondente" | Modificare la configurazione dell'origine dati per utilizzare l'indirizzo IP dello chassis. 
+
+
+| L'inventario non riesce con un 403 vietato | Questo può essere semplicemente un cattivo credenziali, o può essere indicativo che si sta tentando di utilizzare un ruolo non sufficientemente potente - ricordare che gli utenti di livello "utente" NON hanno il diritto "ruolo chassis" richiesto, o visualizzare l'accesso a fabric virtuali non predefiniti. 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: infrastructure_change_analytics.html 
+keywords: changes, management, analysis, infra, infrastructure 
+summary: 'Cloud Insights tiene traccia delle modifiche nell"infrastruttura per semplificare analisi e troubleshooting.' 
+---
+= Analisi delle modifiche all'infrastruttura
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'analisi delle modifiche all'infrastruttura fornisce una panoramica completa delle recenti modifiche apportate all'infrastruttura (storage, switch e così via) nell'ambiente in uso. Con l'analisi delle modifiche, è possibile tenere traccia delle modifiche di configurazione e analizzare i problemi attesi e imprevisti.
+
+
+
+== In che modo l'analisi delle modifiche all'infrastruttura può essere utile?
+
+In qualsiasi ambiente, le modifiche alle risorse possono verificarsi a causa di modifiche non configurate correttamente, perdita di potenza e così via. L'analisi delle modifiche consente di visualizzare e correlare lo stato delle risorse con interruzioni o modifiche pianificate. Le modifiche vengono calcolate con ogni sondaggio di inventario (dopo il primo sondaggio su un nuovo raccoglitore).
+
+Per analizzare le modifiche all'infrastruttura, accedere a *osservabilità > Modifica analisi*. Vengono elencate le notifiche e le modifiche di configurazione per l'intervallo di tempo corrente. Le righe di avviso mostrano lo stato corrente dell'avviso (attivo o risolto).
+
+È inoltre possibile accedere a una pagina iniziale per una risorsa. Se sono state apportate modifiche a tale risorsa o alle risorse correlate, queste verranno visualizzate nella sezione Vista esperti della pagina. Ingrandire per esaminare le singole modifiche o lasciare ampia la visualizzazione per vedere tutte le modifiche nell'intervallo di tempo selezionato. Passando con il mouse sopra una modifica, viene fornito un riepilogo della modifica. Facendo clic su tale modifica, la visualizzazione esperto verrà focalizzata sull'ora in cui è stata apportata la modifica.
+
+image:change_analysis_on_a_landing_page.png["Analisi delle modifiche in una landing page"]
+
+Selezionando un elemento nell'elenco si apre un riquadro a scorrimento che fornisce ulteriori dettagli sull'avviso o sulla modifica.
+
+
+
+== Filtraggio
+
+Come per tutte le funzionalità di Cloud Insights, il filtraggio dell'elenco delle modifiche è intuitivo: Nella parte superiore della pagina, è possibile filtrare per tipi di asset specifici (_triggered on:type_) e/o filtrare solo per asset con nomi specifici se lo si desidera (_triggered on:name_), oppure aggiungere filtri personalizzati selezionando il pulsante {+].
+
+image:infraChange_filter_dropdown.png["A discesa Infrastructure Change Filtering (filtraggio modifiche infrastruttura)"]
+
+È inoltre possibile accedere direttamente a Avvisi chiave o modifiche dalla sezione di stato sotto le impostazioni del filtro, incluse le tre risorse principali correnti con il maggior numero di avvisi.
+
+image:Change_Analysis_filters_and_status.png["stato e collegamenti rapidi agli avvisi e alle modifiche"]
+
+
+
+== Quali oggetti vengono analizzati per rilevare eventuali modifiche?
+
+Nella tabella seguente sono elencati gli oggetti e gli attributi inclusi nell'analisi delle modifiche dell'infrastruttura.
+
+|===
+
+
+| Tipo di oggetto | Attributi 
+
+
+| Disco | Disksize.total istipo di velocità del diskgroup virtuale posizione serialeNumero ruolo stato modello fornitore storage.name storagePools.name nome isEncrypted 
+
+
+| Storage | Family ip isActive microcodeVersion nome modello protocolli serialNumber fornitore 
+
+
+| StorageNode | Name storage.name nodeVersion model serialNumber numberOfProcessor state partner.name cache memory managementIpAddresses parentSerialNumber sitename 
+
+
+| StoragePool | Tipo di nome isAutoTiering isridondanza virtuale vendorTier usesFlashPools storage.vendor storage.ip storage.model storage.family storage.name storageNodes.name Capacity.total (attributo dinamico) isCompactionSavingsEnabled isEncrypted objectStoreName objectStoreProviderType objectStoreSizeLimit objectStoreTieringFullnessThreshold objectStoreS3Name objectStoreServer 
+
+
+| Qtree | Digitare securityStyle isOplocksEnabled shares.name storage.name internalVolume.name storageVirtualMachine.name SimpleName statusNome testo 
+
+
+| StorageVirtualMachine | Nome storage.name tipo di stato protocolli IPSpace internalVolumeLimit 
+
+
+| Volume | Nome sempliceName label tipo storage.name storage.vendor storage.ip storage.model storage.family isAutoTiering isThinProvisioned diskgroup isMainframe isMeta isReplicaSource isReplicaTarget isSnapshot isVirtual internalVolume.name internalVolume.VirtualStorage storageNodes.name storageNodes.partner.name storagePools.name storageVirtualMachine.name storageGroups isCritted isCompressionEnabled qosBurstIOPS qosLimitqIOPS Raw 
+
+
+| Volume interno | FlashPoolEligibility name sempliceName spaceGuarantee status type virtualisStorage replicaSources.name storageNodes.name storageNodes.partner.name storage.name storage.vendor storage.ip storage.model storage.family storageVirtualMachine.name storagePool.name Capacity.isThinProvisioned qosPolicy qosLimitRaw qosLimitIOPS qosLimitMBPS isEncrypted adaptiveQosPolicy junctionPath objectStoreTieringPolicy tieringMinimumCoolingDays 
+
+
+| VirtualMachine | Nome dnsName processori di memoria del sistema operativo ip guestState powerState host.name host.clusterName host.ip host.os dataStore.name instanceType publicIps securityGroups virtualCenterIp 
+
+
+| Datastore | Nome virtualCenterIp tipo 
+
+
+| Host | Nome modello ip isProduttore Active os cpuCount memoria ishypervisor HyperclusterName virtualizenterIp 
+
+
+| vmdk (VirtualMachineDisk) | Tipo di nome dataStore.name isRdm virtualMachine.host.name virtualMachine.name isSnapshot 
+
+
+| Porta | Nome isActive wwn type portIndex blade speed gbicType connectedPorts.device.name connectedPorts.device.type connectedPorts.name connectedPorts.nodeWwn connectedPorts.wwn controller device.name device.type fabrics.name fabrics.vsanId nodeWwn description 
+|===
+"Change Analysis" tiene traccia degli avvisi relativi ai seguenti casi:
+
+* Avvisi provenienti dai monitor di registro sui tipi di registro _logs.vmware.events_ e _logs.NetApp.ems_.
+* Avvisi provenienti dai monitor metrici sui tipi di oggetto sopra indicati; questi devono essere selezionati nel campo _Group by_ per consentire a Change Analysis di rintracciarli.
+

@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: kubernetes_landing_page.html 
+keywords: telegraf, installation, install, kubernetes, pods, clusters, filters, filtering, k8s 
+summary: Spiegazione della landing page di Kubernetes 
+---
+= Panoramica del cluster Kubernetes
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights Kubernetes Explorer è un potente tool per visualizzare la salute e l'utilizzo generali dei cluster Kubernetes e ti consente di analizzare facilmente le aree di indagine.
+
+Facendo clic su *Dashboards > Kubernetes Explorer* si apre la pagina Kubernetes Cluster. Questa pagina di panoramica contiene la tabella dei cluster Kubernetes nel tuo ambiente.
+
+image:Kubernetes_List_Page_new.png["Pagina elenco Kubernetes"]
+
+
+
+=== Elenco dei cluster
+
+L'elenco dei cluster visualizza le seguenti informazioni per ciascun cluster dell'ambiente:
+
+* Cluster *Nome*. Facendo clic sul nome di un cluster si apre il link:kubernetes_cluster_detail.html["*pagina dei dettagli*"] relativo.
+* Percentuali di *saturazione*. La saturazione complessiva è la più alta tra CPU, memoria o saturazione dello storage.
+* Numero di *nodi* nel cluster. Facendo clic su questo numero si apre la pagina Node list (elenco nodi).
+* Numero di *pod* nel cluster. Facendo clic su questo numero si apre la pagina dell'elenco dei pod.
+* Numero di *namespace* nel cluster. Facendo clic su questo numero si apre la pagina dell'elenco dei namespace.
+* Numero di *carichi di lavoro* nel cluster. Facendo clic su questo numero si apre la pagina elenco workload.
+
+
+
+
+== Rifinitura del filtro
+
+Quando si esegue il filtraggio, quando si inizia a digitare viene visualizzata l'opzione per creare un *filtro con caratteri jolly* in base al testo corrente. Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione con caratteri jolly. È inoltre possibile creare *espressioni* utilizzando NOR o E, oppure selezionare l'opzione "None" (Nessuno) per filtrare i valori nulli nel campo.
+
+image:Filter_Kubernetes_Explorer.png["Filtraggio con caratteri jolly in K8S Explorer"]
+
+I filtri basati su caratteri jolly o espressioni (ad esempio, NOD, AND, "None", ecc.) vengono visualizzati in blu scuro nel campo del filtro. Gli elementi selezionati direttamente dall'elenco vengono visualizzati in blu chiaro.
+
+image:Filter_Kubernetes_Explorer_2.png["Filtro che mostra caratteri jolly e elementi selezionati"]
+
+I filtri Kubernetes sono contestuali, il che significa ad esempio che se ci si trova in una pagina di nodo specifica, il filtro pod_name elenca solo i pod correlati a quel nodo. Inoltre, se si applica un filtro per uno spazio dei nomi specifico, il filtro pod_name elencherà solo i pod su quel nodo _e_ in tale spazio dei nomi.
+
+Si noti che i caratteri jolly e il filtraggio delle espressioni funzionano con testo o elenchi, ma non con valori numerici, date o booleani.

@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: task_dc_google_cloud.html 
+summary: Configurare Google Compute Data Collector 
+keywords: data collector, queries, create 
+---
+= NetApp Google Compute Data Collector
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Questo data collector supporta l'inventario e la raccolta delle performance dalle configurazioni della piattaforma cloud di Google Compute. Questo collector cercherà di scoprire tutte le risorse di calcolo all'interno di tutti i progetti all'interno di un'organizzazione Google. Se hai più organizzazioni Google che desideri scoprire con Data Infrastructure Insights, dovrai implementare un unico Data Infrastructure Insights Collector per organizzazione.
+
+
+
+== Requisiti degli account di servizio
+
+* È necessario creare un account di servizio seguendo le istruzioni riportate in link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Creazione/gestione degli account di servizio"]. Tale account di servizio è identificato da un ID univoco, noto come _clientId_, che verrà utilizzato come nome utente.
+* Inoltre, creare un codice account di servizio seguendo le istruzioni riportate in link:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Creazione/gestione dei codici account del servizio"]. Questa chiave può essere scaricata come file json, il cui contenuto verrà utilizzato come password.
+* L'account del servizio deve essere definito come riferimento per _compute.readonly_, _monitoring.Read_ e _cloud-platform_.
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| ID organizzazione | L'ID dell'organizzazione che si desidera scoprire con questo collector. Questo campo è obbligatorio se l'account di servizio è in grado di visualizzare più organizzazioni 
+
+
+| Scegliere 'Escludi' o 'Includi' per filtrare i progetti GCP in base agli ID | Se si desidera limitare le risorse dei progetti inserite in Data Infrastructure Insights. 
+
+
+| ID progetto | L'elenco degli ID progetto che si desidera filtrare in entrata o in uscita dal rilevamento, a seconda del valore di "Choose 'Exclude"...." valore. L'elenco predefinito è vuoto 
+
+
+| ID client | ID client per la configurazione di Google Cloud Platform 
+
+
+| Copia e incolla il contenuto del tuo Google Credential file qui | Copia le tue credenziali Google per l'account Cloud Platform in questo campo 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Il valore predefinito è 60 minuti 
+
+
+| Scegliere "Escludi" o "Includi" per applicare il filtro delle macchine virtuali in base alle etichette | Consente di specificare se includere o escludere le macchine virtuali in base alle etichette durante la raccolta dei dati. Se si seleziona ‘Includi’, il campo Label Key non può essere vuoto. 
+
+
+| Label Key e valori su cui filtrare le macchine virtuali | Fare clic su *+ Filter Label* (etichetta filtro) per scegliere quali macchine virtuali (e dischi associati) includere/escludere filtrando le chiavi e i valori corrispondenti alle chiavi e ai valori delle etichette sulla macchina virtuale. Label Key (chiave etichetta) è obbligatorio, Label Value (valore etichetta) è facoltativo. Quando il valore Label è vuoto, la VM viene filtrata fino a quando corrisponde alla chiave Label. 
+
+
+| Intervallo di polling delle performance (sec) | Il valore predefinito è 1800 secondi 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

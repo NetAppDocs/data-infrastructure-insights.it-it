@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_scaleio.html 
+keywords: data collector, scaleIO, PowerFlex EMC, DELL 
+summary: Configurazione di DELL EMC ScaleIO/PowerFlex Data Collector. 
+---
+= Raccolta dati DELL EMC ScaleIO / PowerFlex
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Il data collector ScaleIO/PowerFlex raccoglie le informazioni di inventario dallo storage ScaleIO e PowerFlex. Per la configurazione, questo data collector richiede l'indirizzo del gateway ScaleIO/PowerFlex e un nome utente e una password amministratore.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO/PowerFlex. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Cluster MDM (Meta Data Manager) | Storage 
+
+
+| SDS (server dati ScaleIO/PowerFlex) | Nodo di storage 
+
+
+| Pool di storage | Pool di storage 
+
+
+| Volume | Volume 
+
+
+| Dispositivo | Disco 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+* Accesso in sola lettura all'account utente Admin
+* Requisito della porta: Porta HTTPS 443
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Gateway ScaleIO/PowerFlex | Indirizzi IP o FQDN dei gateway ScaleIO/PowerFlex, separati da virgola (,) o punto e virgola (;) 
+
+
+| Nome utente | Nome utente amministratore utilizzato per accedere al dispositivo ScaleIO/PowerFlex 
+
+
+| Password | Password utilizzata per accedere al dispositivo ScaleIO/PowerFlex 
+|===
+
+
+== Configurazione avanzata
+
+Fare clic sulla casella di controllo Inventory (inventario) per attivare la raccolta dell'inventario.
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta HTTPS | 443 
+
+
+| Intervallo di polling dell'inventario (min) | Il valore predefinito è 60. 
+
+
+| Timeout connessione (sec) | Il valore predefinito è 60. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

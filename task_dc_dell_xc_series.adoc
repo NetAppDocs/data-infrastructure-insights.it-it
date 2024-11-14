@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task_dc_dell_xc_series.html 
+keywords: data collector, Dell, EMC, xc 
+summary: Configurazione di Dell EMC XC Series Data Collector. 
+---
+= Data collector Dell EMC serie XC
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo data collector per rilevare le informazioni di inventario e sulle prestazioni degli array di storage Dell EMC serie XC.
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP esterno PRISM | Indirizzo IP del server XC 
+
+
+| Nome utente | Nome utente del server XC 
+
+
+| Password | Password utilizzata per il server XC 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta TCP | Porta utilizzata per la comunicazione TCP con il server XC 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+
+
+| Intervallo di polling delle performance (min) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

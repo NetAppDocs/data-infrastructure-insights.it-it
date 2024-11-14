@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_node.html 
+keywords: telegraf, installation, install, node, host 
+summary: Configurazione del data collector Flink 
+---
+= Raccolta dati nodo
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights raccoglie le metriche dal nodo in cui si installa un agente.
+
+
+
+== Installazione
+
+. Da *osservabilità > Collector*, scegliere un sistema operativo/piattaforma. Si noti che l'installazione di qualsiasi data collector di integrazione (Kubernetes, Docker, Apache, ecc.) configurerà anche la raccolta di dati dei nodi.
+. Seguire le istruzioni per configurare l'agente. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+
+
+
+
+== Oggetti e contatori
+
+I seguenti oggetti e i relativi contatori vengono raccolti come metriche del nodo:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Oggetto: | Identificatori: | Attributi: | Punti dati: 
+
+
+| File system del nodo | Nodo UUID Device Path Type (tipo percorso dispositivo UUID nodo) | Nodo IP Node Name Node OS Mode | Nodi liberi nodi liberi nodi totali utilizzati totale utilizzato totale utilizzato 
+
+
+| Disco del nodo | Disco UUID nodo | Nodo IP Node Name Node OS | Tempo di io totale IOPS in corso byte di lettura (per sec) tempo di lettura totale letture (per sec) tempo di io ponderato totale byte di scrittura (per sec) tempo di scrittura totale scritture (per sec) lunghezza corrente della coda del disco tempo di scrittura tempo di lettura tempo di io 
+
+
+| CPU nodo | CPU UUID nodo | Nodo IP Node Name Node OS | Utilizzo della CPU utilizzo della CPU utente utilizzo della CPU inattivo utilizzo della CPU utilizzo della CPU interruzione utilizzo della CPU utilizzo della CPU DPC utilizzo della CPU 
+
+
+| Nodo | UUID nodo | Nodo IP Node Name Node OS | Tempo di avvio del kernel kernel Opzioni di contesto del kernel (per sec) intropia del kernel disponibile interrupt del kernel (per sec) processi del kernel forcati (per sec) Memoria attiva memoria disponibile memoria totale disponibile memoria con buffer memoria cache limite di impegno memoria allocata come memoria memoria sporca memoria libera memoria libera elevata memoria totale elevata memoria enorme dimensione pagina memoria pagine enormi memoria libera pagine enormi memoria totale bassa memoria libera memoria totale bassa memoria mappata memoria tabelle pagine Memoria Shared Memory Slab Memory Swap cache Memory Swap Free Memory Swap Total Memory memoria totale utilizzata memoria totale utilizzata memoria utilizzata memoria Vmalloc Chunk Memory Vmalloc Total Memory Vmalloc Used Memory Wired Memory Writeback Total Memory Writeback TMP Memory cache FLAUTS Memory Demand Zero FLAUTS Memory Page FLAUTS Memory Memory Memory Memory Memoria NONPAGED memoria paging cache Core memoria Standby cache memoria normale Standby cache riserva memoria errori di transizione processi bloccati processi inattivi processi inattivi processi di paging processi in esecuzione processi in sospensione processi interrotti totale processi thread processi processi sconosciuti Zombie processore coda lunghezza Swap Free Swap totale Swap utilizzato totale Swap Used Swap in Swap out System Uptime System Num CPU System Num Users System Calls 
+
+
+| Rete di nodi | UUID nodo interfaccia di rete | Nome nodo nodo nodo IP nodo SO | Byte ricevuti byte inviati pacchetti Outboud scartati pacchetti Outboud errori pacchetti ricevuti pacchetti scartati ricevuti errori ricevuti pacchetti ricevuti pacchetti inviati 
+|===
+
+
+== Setup (Configurazione)
+
+Le informazioni relative all'installazione e alla risoluzione di problemi si trovano in link:task_config_telegraf_agent.html["Configurazione di un agente"]questa pagina.

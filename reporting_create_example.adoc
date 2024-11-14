@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: reporting_create_example.html 
+summary: Utilizzare questa procedura per creare un report utilizzando i report predefiniti di Data Infrastructure Insights. 
+keywords: reporting, cognos, data warehouse, dwh, create, report 
+---
+= Creazione di un report (esempio)
+:toc: macro
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:toc: 
+:toclevels: 2
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Utilizzare i passaggi descritti in questo esempio per generare un semplice report sulla capacità fisica dei pool di storage e storage in diversi data center.
+
+.Fasi
+. Accedere a *Menu > contenuto > contenuto del team > Report*
+. Nella parte superiore destra dello schermo, selezionare *[nuovo +]*
+. Selezionare *Report*
++
+image:Reporting_New_Report.png["Creazione di un nuovo report"]
+
+. Nella scheda *Templates*, selezionare _blank_
++
+Vengono visualizzate le schede origine e dati
+
+. Aprire *selezionare un'origine +*
+. In *contenuto del team*, aprire *pacchetti*
++
+Viene visualizzato un elenco dei pacchetti disponibili.
+
+. Scegliere *capacità di archiviazione e pool di archiviazione* image:Reporting_Select_Source_For_Report.png["Selezione di un'origine per il report"]
+. Selezionare *Apri*
++
+Vengono visualizzati gli stili disponibili per il report.
+
+. Selezionare *elenco*
++
+Aggiungere i nomi appropriati per elenco e query
+
+. Selezionare *OK*
+. Espandere _capacità fisica_
+. Espandere al livello più basso di _Data Center_
+. Trascinare _Data Center_ sul tavolozza dei report.
+. Espandere _capacità (MB)_
+. Trascinare _Capacity (MB)_ sul tavolozza dei report.
+. Trascinare _capacità utilizzata (MB)_ sul tavolozza dei report.
+. Eseguire il report selezionando un tipo di output dal menu *Esegui*.
++
+image:Reporting_Running_A_Report.png["Selezione dell'output di un report"]
+
+
+
+.Risultato
+Viene creato un report simile al seguente:
+
+image:Reporting-Example1.png["Esempio di report"]

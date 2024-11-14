@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: task_cs_delete_agent.html 
+keywords: agent, Workload Security, delete agent, Cloud Secure 
+summary: Eliminazione degli agenti workload Security 
+---
+= Eliminazione di un agente di sicurezza del carico di lavoro
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Quando si elimina un agente di sicurezza del carico di lavoro, è necessario eliminare prima tutti i dati di raccolta associati all'agente.
+
+
+
+== Eliminazione di un agente
+
+
+IMPORTANT: L'eliminazione di un agente comporta l'eliminazione di tutti i Data Collector associati all'agente. Se si prevede di configurare i data collector con un agente diverso, è necessario creare un backup delle configurazioni di Data Collector prima di eliminare l'agente.
+
+.Prima di iniziare
+. Assicurarsi che tutti i data raccoglitori associati all'agente siano eliminati dal portale workload Security.
++
+Nota: Ignorare questo passaggio se tutti i collettori associati sono in stato DI ARRESTO.
+
+
+
+.Procedura per l'eliminazione di un agente:
+. SSH nella macchina virtuale dell'agente ed eseguire il seguente comando. Quando richiesto, immettere "y" per continuare.
++
+....
+sudo /opt/netapp/cloudsecure/agent/install/cloudsecure-agent-uninstall.sh
+Uninstall CloudSecure Agent? [y|N]:
+....
+. Fare clic su *sicurezza del carico di lavoro > Collector > Agenti*
++
+Viene visualizzato l'elenco degli agenti configurati.
+
+. Fare clic sul menu delle opzioni dell'agente che si desidera eliminare.
+. Fare clic su *Delete* (Elimina).
++
+Viene visualizzata la pagina *Delete Agent* (Elimina agente).
+
+. Fare clic su *Delete* (Elimina) per confermare l'eliminazione.
+

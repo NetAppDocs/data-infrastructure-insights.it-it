@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: task_dc_emc_isilon.html 
+keywords: data collector, isilon, EMC, DELL, PowerScale 
+summary: 'Configurazione del data collector Dell EMC PowerScale (in precedenza Isilon).' 
+---
+= Data collector Dell EMC PowerScale
+:toc: macro
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toc: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:toc-position: content
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza il data collector SSH Dell EMC PowerScale (precedentemente Isilon) per acquisire dati di inventario e prestazioni dallo storage NAS scale-out PowerScale.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+
+
+| Disco | Disco 
+
+
+| Cluster | Storage 
+
+
+| Nodo | Nodo di storage 
+
+
+| File System | Volume interno 
+|===
+Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+
+
+
+== Requisiti
+
+Per configurare questo data collector sono necessarie le seguenti informazioni:
+
+* Autorizzazioni di amministratore per lo storage PowerScale
+* Indirizzo IP del cluster PowerScale
+* Accesso SSH alla porta 22
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP | L'indirizzo IP o il nome di dominio completo del cluster PowerScale 
+
+
+| Nome utente | Nome utente del cluster PowerScale 
+
+
+| Password | Password utilizzata per il cluster PowerScale 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20. 
+
+
+| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+
+
+| Porta SSH | Porta di servizio SSH. Il valore predefinito è 22. 
+|===
+
+
+== Risoluzione dei problemi
+
+Alcune operazioni da eseguire in caso di problemi con questo data collector:
+
+
+
+=== Inventario
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
+| "Credenziali di accesso non valide" con messaggi di errore "i comandi non abilitati per l'amministrazione basata sul ruolo richiedono l'accesso dell'utente root" | * Verificare che l'utente disponga delle autorizzazioni per eseguire i seguenti comandi sul dispositivo: > versione isi osrelease > stato isi -q > stato isi -n > dispositivi isi -d %s > licenza isi * verificare che le credenziali utilizzate nella procedura guidata corrispondano alle credenziali del dispositivo 
+
+
+| "Errore interno" con messaggi di errore "esecuzione del comando <Your command> non riuscita con permesso: <Your current permission>. Problema di autorizzazione per l'esecuzione del comando sudo" | Verificare che l'utente disponga delle autorizzazioni sudo per eseguire il seguente comando sul dispositivo 
+|===
+Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
