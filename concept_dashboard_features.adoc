@@ -639,9 +639,6 @@ Facendo clic sul collegamento in un widget a valore singolo o in un widget indic
 
 Come per i widget a valore singolo e per gli indicatori, è possibile impostare la formattazione condizionale nei widget delle tabelle, consentendo di evidenziare i dati con colori e/o icone speciali.
 
-
-NOTE: La formattazione condizionale non è attualmente disponibile in Data Infrastructure Insights Federal Edition.
-
 La formattazione condizionale consente di impostare ed evidenziare le soglie di livello di avviso e critico nei widget delle tabelle, offrendo visibilità istantanea agli outlier e ai punti dati eccezionali.
 
 image:ConditionalFormattingExample.png["Esempio di formattazione condizionale"]
