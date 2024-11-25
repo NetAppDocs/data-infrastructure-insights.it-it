@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_create_application.html 
-summary: 'È possibile definire le applicazioni da applicare agli asset nell"ambiente in base alle esigenze.' 
+summary: Puoi definire le applicazioni che poi applichi alle risorse sul tenant in base alle esigenze. 
 keywords: application, create application, 
 ---
 = Creazione di applicazioni
@@ -16,7 +16,7 @@ keywords: application, create application,
 
 
 [role="lead"]
-Per tenere traccia dei dati associati ad applicazioni specifiche in esecuzione nell'ambiente, è possibile definire le applicazioni in Data Infrastructure Insights.
+Per tenere traccia dei dati associati ad applicazioni specifiche in esecuzione sul tenant, è possibile definire le applicazioni in Data Infrastructure Insights.
 
 .Prima di iniziare
 Se si desidera associare l'applicazione a un'entità aziendale, è necessario creare l'entità aziendale prima di definire l'applicazione.

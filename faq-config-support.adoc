@@ -64,7 +64,7 @@ Esistono diversi livelli di standardizzazione, compatibilità e nomenclatura per
 
 == Data Infrastructure Insights supporta gli switch Fibre Channel?
 
-Sì, oltre alla raccolta dei dati dalle risorse di storage, Data Infrastructure Insights acquisisce anche i dati di inventario e delle prestazioni dagli switch Cisco, Brocade e QLogic dell'ambiente in uso.
+Sì, oltre alla raccolta dei dati dalle risorse storage, Data Infrastructure Insights acquisisce anche i dati di inventario e delle performance dagli switch Cisco, Brocade e QLogic sul tenant.
 
 
 

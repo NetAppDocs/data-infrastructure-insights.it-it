@@ -31,7 +31,7 @@ Sono disponibili numerose informazioni. Accedere a *Dashboard > Insights* per av
 
 === Risorse condivise sotto stress
 
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse nel tuo ambiente. link:insights_shared_resources_under_stress.html["Scopri di più"]
+I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse sul tenant. link:insights_shared_resources_under_stress.html["Scopri di più"]
 
 
 

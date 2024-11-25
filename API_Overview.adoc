@@ -39,7 +39,7 @@ Le informazioni API più recenti si trovano accedendo a Data Infrastructure Insi
 
 image:API_Swagger_Types.png["Tipi di API"]
 
-La documentazione API è basata su Swagger, che fornisce una breve descrizione e informazioni sull'utilizzo dell'API e consente di provarla nel proprio ambiente. A seconda del ruolo utente e/o dell'edizione Data Infrastructure Insights, i tipi di API disponibili possono variare.
+La documentazione API è basata su Swagger, che fornisce una breve descrizione e informazioni sull'utilizzo dell'API e consente di provarla nel tenant. A seconda del ruolo utente e/o dell'edizione Data Infrastructure Insights, i tipi di API disponibili possono variare.
 
 image:API_Swagger_Example.png["Esempio di API Swagger"]
 
@@ -195,11 +195,9 @@ Sono disponibili riepiloghi delle performance per i seguenti tipi di contatori:
 
 == Metriche delle performance degli oggetti
 
-L'API può restituire metriche dettagliate per gli oggetti nel tuo ambiente, ad esempio:
+L'API può restituire metriche dettagliate per gli oggetti sul tenant, ad esempio:
 
 * Metriche delle performance dello storage come IOPS (numero di richieste di input/output al secondo), latenza o throughput.
-
-
 * Metriche delle prestazioni dello switch, ad esempio utilizzo del traffico, dati BB Credit Zero o errori delle porte.
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_high_consuming_workloads.html 
 keywords: insight, greedy, degraded, bully, victim, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Le informazioni ti offrono un"analisi dell"impatto delle risorse sulle altre risorse del tuo ambiente.' 
+summary: 'Le informazioni ti danno uno sguardo all"impatto delle risorse su altre risorse sul tenant.' 
 ---
 = Approfondimenti: Carichi di lavoro che consumano molto
 :toc: macro
@@ -19,7 +19,7 @@ summary: 'Le informazioni ti offrono un"analisi dell"impatto delle risorse sulle
 
 
 [role="lead"]
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse nel tuo ambiente.
+I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse sul tenant.
 
 
 
@@ -59,7 +59,7 @@ image:Insights_Demanding_Workload_Chart.png["Grafico dei carichi di lavoro esige
 
 === Cosa devo fare per risolvere la saturazione?
 
-È possibile adottare una serie di misure per ridurre o eliminare la possibilità di saturazione nell'ambiente. Ecco alcune cose che puoi provare.
+È possibile eseguire una serie di operazioni per ridurre o eliminare la possibilità di saturazione sul tenant. Ecco alcune cose che puoi provare.
 
 * Sposta i consumatori con IOPS elevati
 +

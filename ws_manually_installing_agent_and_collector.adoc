@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: ws_manually_installing_agent_and_collector.html 
 keywords: install, configure, agent, collector, workload, security, cloud secure 
-summary: Workload Security Agent può essere installato o aggiornato manualmente, fornendo un maggiore controllo sul software installato nel proprio ambiente. 
+summary: Workload Security Agent può essere installato o aggiornato manualmente, fornendo un maggiore controllo sul software installato sul tenant. 
 ---
 = Installazione manuale di workload Security Agent e Collector
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: Workload Security Agent può essere installato o aggiornato manualmente
 
 
 [role="lead"]
-Per impostazione predefinita, quando è disponibile una nuova versione di un agente di protezione del carico di lavoro o di un agente di raccolta, viene inviata una notifica di pre-aggiornamento e gli agenti e gli agenti di raccolta vengono aggiornati automaticamente nell'ambiente. Tuttavia, in un ambiente controllato protetto, gli aggiornamenti automatici potrebbero non essere desiderati. In questi casi, è possibile configurare la protezione del carico di lavoro per l'installazione/aggiornamento manuale di agenti e collettori, fornendo un maggiore controllo sul software installato nei sistemi.
+Per impostazione predefinita, quando è disponibile una nuova versione di un agente di protezione del carico di lavoro o di un agente di raccolta, viene inviata una notifica di pre-aggiornamento e gli agenti e gli agenti di raccolta vengono aggiornati automaticamente sul tenant. Tuttavia, in un ambiente controllato protetto, gli aggiornamenti automatici potrebbero non essere desiderati. In questi casi, è possibile configurare la protezione del carico di lavoro per l'installazione/aggiornamento manuale di agenti e collettori, fornendo un maggiore controllo sul software installato nei sistemi.
 
 
 

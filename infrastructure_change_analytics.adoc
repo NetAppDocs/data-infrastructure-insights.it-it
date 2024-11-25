@@ -16,7 +16,7 @@ summary: 'Cloud Insights tiene traccia delle modifiche nell"infrastruttura per s
 
 
 [role="lead"]
-L'analisi delle modifiche all'infrastruttura fornisce una panoramica completa delle recenti modifiche apportate all'infrastruttura (storage, switch e così via) nell'ambiente in uso. Con l'analisi delle modifiche, è possibile tenere traccia delle modifiche di configurazione e analizzare i problemi attesi e imprevisti.
+L'analisi delle modifiche all'infrastruttura offre una panoramica completa delle recenti modifiche all'infrastruttura (storage, switch e così via) del tenant. Con l'analisi delle modifiche, è possibile tenere traccia delle modifiche di configurazione e analizzare i problemi attesi e imprevisti.
 
 
 

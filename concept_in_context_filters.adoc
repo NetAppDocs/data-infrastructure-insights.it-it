@@ -19,11 +19,11 @@ keywords: Assets, landing page, filtering, context, related
 
 
 [role="lead"]
-Durante la configurazione di un widget nella landing page di una risorsa, è possibile impostare i filtri _in-context_ in modo da visualizzare solo gli oggetti direttamente correlati alla risorsa corrente. Per impostazione predefinita, quando si aggiunge un widget, vengono visualizzati _tutti_ oggetti del tipo selezionato nell'ambiente. I filtri contestuali consentono di visualizzare solo i dati relativi alla risorsa corrente.
+Durante la configurazione di un widget nella landing page di una risorsa, è possibile impostare i filtri _in-context_ in modo da visualizzare solo gli oggetti direttamente correlati alla risorsa corrente. Per impostazione predefinita, quando si aggiunge un widget, vengono visualizzati _tutti_ oggetti del tipo selezionato sul tenant. I filtri contestuali consentono di visualizzare solo i dati relativi alla risorsa corrente.
 
 Nella maggior parte delle pagine di destinazione delle risorse, i widget consentono di filtrare gli oggetti correlati alla risorsa corrente. Nei menu a discesa dei filtri, i tipi di oggetti che visualizzano un'icona di collegamento possono essere filtrati contestualmente alla risorsa corrente.
 
-Ad esempio, in una pagina di risorse di storage, è possibile aggiungere un widget di grafico a barre per visualizzare i principali IOPS sui volumi interni solo su tale storage. Per impostazione predefinita, quando si aggiunge un widget, vengono visualizzati _tutti_ i volumi interni nell'ambiente.
+Ad esempio, in una pagina di risorse di storage, è possibile aggiungere un widget di grafico a barre per visualizzare i principali IOPS sui volumi interni solo su tale storage. Per impostazione predefinita, quando Aggiungi un widget, vengono visualizzati _tutti_ volumi interni del tenant.
 
 Per visualizzare solo i volumi interni sulla risorsa di storage corrente, procedere come segue:
 
@@ -46,6 +46,6 @@ Il grafico a barre mostra solo i volumi interni che risiedono nella risorsa di s
 
 Il widget viene visualizzato nelle pagine delle risorse per tutti gli oggetti di storage. Quando il collegamento in-context è attivato nel widget, il grafico a barre mostra i dati dei volumi interni relativi solo alla risorsa di storage attualmente visualizzata.
 
-Per scollegare i dati dell'oggetto, modificare il widget e fare clic sull'icona del collegamento accanto al tipo di oggetto. Il collegamento viene disattivato e il grafico visualizza i dati per _tutti_ oggetti nel proprio ambiente.
+Per scollegare i dati dell'oggetto, modificare il widget e fare clic sull'icona del collegamento accanto al tipo di oggetto. Il collegamento viene disattivato e il grafico visualizza i dati per gli oggetti _all_ sul tenant.
 
 È inoltre possibile utilizzare link:concept_dashboard_features.html#variables["*variabili speciali nei widget*"] per visualizzare informazioni relative alle risorse nelle landing page.

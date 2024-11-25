@@ -113,7 +113,7 @@ Oltre alle opzioni di supporto autonomo descritte in precedenza, se disponi di u
 
 NOTE: È necessario registrarsi per ottenere i <<activating-support-entitlement,attivare il supporto>>prodotti cloud NetApp. Per effettuare la registrazione, accedere a NetApp's link:https://register.netapp.com["Registrazione del supporto Cloud Data Services"].
 
-Si consiglia vivamente di selezionare la casella per consentire a un tecnico del supporto NetApp di accedere al proprio ambiente di informazioni sull'infrastruttura dati durante la sessione di assistenza. In questo modo, il tecnico potrà risolvere il problema e risolverlo rapidamente. Una volta risolto il problema o terminata la sessione di supporto, è possibile deselezionare la casella.
+Si consiglia vivamente di selezionare la casella per consentire a un tecnico del supporto NetApp di accedere al tenant di informazioni sull'infrastruttura dati durante la sessione di supporto. In questo modo, il tecnico potrà risolvere il problema e risolverlo rapidamente. Una volta risolto il problema o terminata la sessione di supporto, è possibile deselezionare la casella.
 
 È possibile richiedere il supporto utilizzando uno dei seguenti metodi. Per utilizzare queste opzioni di supporto, è necessario disporre di un abbonamento attivo a Data Infrastructure Insights:
 

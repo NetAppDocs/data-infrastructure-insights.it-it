@@ -407,7 +407,7 @@ image::SecondaryAxisExplained.png[Esempio di asse secondario]
 
 == Espressioni nei widget
 
-In un dashboard, qualsiasi widget di serie temporali (linea, spline, area, area impilata), grafico a barre, grafico a colonne, grafico a torta o widget di tabella consente di creare espressioni dalle metriche scelte e di visualizzare il risultato di tali espressioni in un singolo grafico (o colonna nel caso di <<expressions-in-a-table-widget,widget di tabella>>). Gli esempi seguenti utilizzano espressioni per risolvere problemi specifici. Nel primo esempio, vogliamo mostrare gli IOPS in lettura come percentuale degli IOPS totali per tutte le risorse di storage nel nostro ambiente. Il secondo esempio fornisce visibilità sugli IOPS "di sistema" o "overhead" che si verificano nel tuo ambiente, ovvero gli IOPS che non sono direttamente derivanti dalla lettura o dalla scrittura dei dati.
+In un dashboard, qualsiasi widget di serie temporali (linea, spline, area, area impilata), grafico a barre, grafico a colonne, grafico a torta o widget di tabella consente di creare espressioni dalle metriche scelte e di visualizzare il risultato di tali espressioni in un singolo grafico (o colonna nel caso di <<expressions-in-a-table-widget,widget di tabella>>). Gli esempi seguenti utilizzano espressioni per risolvere problemi specifici. Nel primo esempio, mostreremo gli IOPS in lettura come percentuale degli IOPS totali per tutte le risorse storage del tenant. Il secondo esempio offre visibilità sugli IOPS di "sistema" o di "overhead" presenti sul tenant, ovvero quegli IOPS non direttamente derivanti dalla lettura o dalla scrittura dei dati.
 
 È possibile utilizzare le variabili nelle espressioni (ad esempio, _€var1 * 100_)
 
@@ -537,7 +537,7 @@ La selezione di una variabile di tipo di attributo consente di filtrare i dati w
 
 image:Variables_Node_Example_Before_Variable_Applied.png["Nodi dell'agente prima del filtro variabile"]
 
-Tuttavia, se si desidera visualizzare temporaneamente solo i nodi nelle singole subnet dell'ambiente, è possibile impostare o modificare la variabile in un IP o IP del nodo agente specifico. Qui vengono visualizzati solo i nodi sulla subnet "123":
+Tuttavia, se si desidera visualizzare temporaneamente solo i nodi su singole sottoreti sul tenant, è possibile impostare o modificare la variabile in IP o IP nodo agente specifici. Qui vengono visualizzati solo i nodi sulla subnet "123":
 
 image:Variables_Node_Example_After_Variable_Applied.png["Nodi agente dopo filtro variabile"]
 
@@ -808,7 +808,7 @@ image:AutoRefreshPaused.png["Aggiornamento automatico in pausa"]
 
 == Gruppi di dashboard
 
-Il raggruppamento consente di visualizzare e gestire dashboard correlati. Ad esempio, è possibile disporre di un gruppo di dashboard dedicato allo storage nel proprio ambiente. I gruppi di dashboard sono gestiti nella pagina *Dashboard > Mostra tutti i dashboard*.
+Il raggruppamento consente di visualizzare e gestire dashboard correlati. Ad esempio, puoi avere un gruppo di dashboard dedicato allo storage del tenant. I gruppi di dashboard sono gestiti nella pagina *Dashboard > Mostra tutti i dashboard*.
 
 image:DashboardGroupNoPin.png["Raggruppamento dashboard"]
 
@@ -822,7 +822,7 @@ Il numero di dashboard contenuti in ciascun gruppo viene visualizzato accanto al
 
 Per creare un nuovo gruppo, fare clic sul pulsante *"+" Create New Dashboard Group* (Crea nuovo gruppo dashboard). Immettere un nome per il gruppo e fare clic su *Create Group* (Crea gruppo). Viene creato un gruppo vuoto con tale nome.
 
-Per aggiungere dashboard al gruppo, fare clic sul gruppo _All Dashboards_ per visualizzare tutti i dashboard dell'ambiente, quindi fare clic su _My Dashboards_ se si desidera visualizzare solo i dashboard in uso ed eseguire una delle seguenti operazioni:
+Per aggiungere dashboard al gruppo, fare clic sul gruppo _All Dashboards_ per visualizzare tutti i dashboard sul tenant, fare clic su _My Dashboards_ se si desidera solo visualizzare i dashboard di proprietà dell'utente ed eseguire una delle seguenti operazioni:
 
 * Per aggiungere una singola dashboard, fare clic sul menu a destra della dashboard e selezionare _Aggiungi al gruppo_.
 * Per aggiungere più dashboard a un gruppo, selezionarle facendo clic sulla casella di controllo accanto a ciascuna dashboard, quindi fare clic sul pulsante *azioni in blocco* e selezionare _Aggiungi al gruppo_.

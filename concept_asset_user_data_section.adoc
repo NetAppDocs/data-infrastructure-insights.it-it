@@ -25,7 +25,7 @@ Viene visualizzata la sezione User Data (dati utente) di una pagina di risorse c
 
 == Utilizzo della sezione User Data (dati utente) per assegnare o modificare le applicazioni
 
-È possibile assegnare le applicazioni in esecuzione nel proprio ambiente a determinate risorse (host, macchine virtuali, volumi, volumi interni, qtree, e hypervisor). La sezione User Data (dati utente) consente di aggiungere, modificare o rimuovere le applicazioni assegnate a una risorsa. Per tutti questi tipi di risorse, ad eccezione dei volumi, è possibile assegnare più di un'applicazione.
+Puoi assegnare le applicazioni in esecuzione sul tenant a determinati asset (host, macchine virtuali, volumi, volumi interni, qtree e hypervisor). La sezione User Data (dati utente) consente di aggiungere, modificare o rimuovere le applicazioni assegnate a una risorsa. Per tutti questi tipi di risorse, ad eccezione dei volumi, è possibile assegnare più di un'applicazione.
 
 .Fasi
 . Individuare una pagina di risorse effettuando una delle seguenti operazioni:

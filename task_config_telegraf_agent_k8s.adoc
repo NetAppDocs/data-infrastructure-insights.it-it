@@ -182,7 +182,7 @@ Se viene visualizzato il messaggio "Error from server (notfound)" (errore dal se
 
 === Configurazione del supporto proxy
 
-Esistono due posizioni in cui è possibile utilizzare un proxy nell'ambiente per installare l'operatore di monitoraggio Kubernetes. Questi possono essere sistemi proxy identici o separati:
+Esistono due posizioni in cui è possibile utilizzare un proxy sul tenant per installare l'operatore di monitoraggio Kubernetes. Questi possono essere sistemi proxy identici o separati:
 
 * Proxy necessario durante l'esecuzione del frammento di codice di installazione (utilizzando "curl") per connettere il sistema in cui il frammento viene eseguito all'ambiente Data Infrastructure Insights
 * Proxy necessario dal cluster Kubernetes di destinazione per comunicare con l'ambiente Data Infrastructure Insights

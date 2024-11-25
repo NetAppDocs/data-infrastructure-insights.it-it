@@ -19,7 +19,7 @@ keywords: query, queries
 
 
 [role="lead"]
-Le query consentono di cercare le risorse nell'ambiente a un livello granulare, consentendo di filtrare i dati desiderati e di ordinare i risultati in base alle proprie esigenze.
+Le query consentono di cercare le risorse del tenant a un livello granulare, consentendo di filtrare i dati desiderati e di ordinare i risultati a proprio piacimento.
 
 Ad esempio, è possibile creare una query per _volumi_, aggiungere un filtro per trovare _storage_ specifici associati ai volumi selezionati, aggiungere un altro filtro per trovare una particolare _annotazione_, ad esempio "Tier 1" sugli storage selezionati, Infine, Aggiungi un altro filtro per trovare tutti gli storage con _IOPS - Read (io/s)_ superiore a 25. Una volta visualizzati i risultati, è possibile ordinare le colonne delle informazioni associate alla query in ordine crescente o decrescente.
 

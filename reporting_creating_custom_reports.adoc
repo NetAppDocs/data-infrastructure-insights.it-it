@@ -38,7 +38,7 @@ Ad esempio, se non si completa il processo di identificazione del dispositivo, i
 Prima di progettare i report, completare le seguenti attività:
 
 * Configurare tutti link:task_configure_data_collectors.html["raccolta di dati"] correttamente.
-* Inserire annotazioni (ad esempio Tier, data center e business unit) sui dispositivi e sulle risorse del proprio ambiente. È utile che le annotazioni siano stabili prima di generare i report, perché Data Infrastructure Insights Reporting raccoglie informazioni cronologiche.
+* Inserisci annotazioni (come Tier, data center e business unit) su dispositivi e risorse sul tuo tenant. È utile che le annotazioni siano stabili prima di generare i report, perché Data Infrastructure Insights Reporting raccoglie informazioni cronologiche.
 
 
 
@@ -194,7 +194,7 @@ Le capacità del modello di dati della capacità della macchina virtuale sono pr
 
 ==== Modello di dati Volume Capacity
 
-Consente di analizzare tutti gli aspetti dei volumi nel proprio ambiente e di organizzare i dati in base a vendor, modello, Tier, livello di servizio e data center.
+Permette di analizzare tutti gli aspetti dei volumi sul tenant e di organizzare i dati per vendor, modello, Tier, livello di servizio e data center.
 
 È possibile visualizzare la capacità relativa ai volumi orfani, ai volumi inutilizzati e ai volumi di protezione (utilizzati per la replica). È inoltre possibile visualizzare diverse tecnologie di volume (iSCSI o FC) e confrontare volumi virtuali con volumi non virtuali per problemi di virtualizzazione degli array.
 

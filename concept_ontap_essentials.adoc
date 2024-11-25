@@ -38,7 +38,7 @@ Per iniziare l'esplorazione, selezionare *ONTAP Essentials* dal menu principale 
 
 image:OE_Overview.png["Dashboard di panoramica per ONTAP Essentials"]
 
-La dashboard *Overview* visualizza informazioni utili come il numero di cluster nell'ambiente con le relative percentuali di capacità e performance complessive. Verranno inoltre visualizzati dati predittivi relativi al numero di giorni previsti fino a quando la capacità dello storage o la capacità delle performance non esauriscono lo spazio. Inoltre, se alcuni controller dell'infrastruttura sono in esecuzione con la CPU a oltre il 65% - potenzialmente mettendo il cluster a rischio in caso di failover - ONTAP Essentials li mostra come controller "hot".
+La dashboard *Panoramica* visualizza informazioni utili, come il numero di cluster del tenant con la capacità complessiva e le percentuali di prestazioni. Verranno inoltre visualizzati dati predittivi relativi al numero di giorni previsti fino a quando la capacità dello storage o la capacità delle performance non esauriscono lo spazio. Inoltre, se alcuni controller dell'infrastruttura sono in esecuzione con la CPU a oltre il 65% - potenzialmente mettendo il cluster a rischio in caso di failover - ONTAP Essentials li mostra come controller "hot".
 
 I grafici informativi consentono di analizzare le performance nel tempo e i guasti dell'utilizzo della capacità. Ciascuno di questi grafici o punti dati può essere utilizzato come punto di partenza per l'esplorazione o l'analisi.
 
@@ -158,7 +158,7 @@ I dettagli anti-ransomware mostrano se una VM di storage è protetta dalla prote
 
 == Avvisi
 
-Qui è possibile visualizzare gli avvisi attivi nel proprio ambiente e analizzare rapidamente i potenziali problemi. Selezionare la scheda _Resolved_ per visualizzare gli avvisi risolti.
+Qui è possibile visualizzare gli avvisi attivi sul tenant e analizzare rapidamente i potenziali problemi. Selezionare la scheda _Resolved_ per visualizzare gli avvisi risolti.
 
 image:OE_Alerts.png["Elenco degli avvisi di base di ONTAP"]
 
@@ -184,7 +184,7 @@ image:ONTAP_Essentials_Alerts_Menu.png["Menu di rete di base di ONTAP"] image:ON
 
 == Carichi di lavoro
 
-Visualizza ed esplora i carichi di lavoro su LUN/volumi, condivisioni NFS o SMB o Qtree nel tuo ambiente.
+Visualizza ed esplora i carichi di lavoro su LUN/volumi, condivisioni NFS o SMB o Qtree sul tenant.
 
 image:ONTAP_Essentials_Workloads_Menu.png["Menu workload"]
 

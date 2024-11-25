@@ -105,7 +105,7 @@ Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApp
 
 image:ProxyEndpoints_NewTable.png["Tabella degli endpoint proxy"]
 
-Se nel proprio ambiente si dispone di workload Security, in questo elenco vengono visualizzati anche gli URL degli endpoint configurati.
+Se il tenant dispone di sicurezza del carico di lavoro, anche gli URL degli endpoint configurati verranno visualizzati in questo elenco.
 
 
 
@@ -161,7 +161,7 @@ Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApp
 
 image:ProxyEndpoints_NewTable.png["Tabella degli endpoint proxy"]
 
-Se nel proprio ambiente si dispone di workload Security, in questo elenco vengono visualizzati anche gli URL degli endpoint configurati.
+Se il tenant dispone di sicurezza del carico di lavoro, anche gli URL degli endpoint configurati verranno visualizzati in questo elenco.
 
 
 

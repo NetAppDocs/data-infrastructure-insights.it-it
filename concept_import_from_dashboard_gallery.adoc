@@ -19,7 +19,7 @@ keywords: dashboard, gallery, import
 
 
 [role="lead"]
-Data Infrastructure Insights fornisce una serie di dashboard consigliati per fornire informazioni aziendali sui dati. Ogni dashboard contiene widget progettati per rispondere a una particolare domanda o risolvere un particolare problema relativo ai dati attualmente raccolti nell'ambiente.
+Data Infrastructure Insights fornisce una serie di dashboard consigliati per fornire informazioni aziendali sui dati. Ogni dashboard contiene widget progettati per aiutare a rispondere a una particolare domanda o a risolvere un particolare problema relativo ai dati attualmente raccolti sul tenant.
 
 Per importare una dashboard dalla galleria, procedere come segue:
 

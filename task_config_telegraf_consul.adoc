@@ -27,7 +27,7 @@ Data Infrastructure Insights utilizza questo data collector per raccogliere le m
 
 . Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Console.
 +
-Se non è stato configurato un agente per la raccolta, viene richiesto di link:task_config_telegraf_agent.html["installare un agente"]farlo nell'ambiente in uso.
+Se non è stato configurato un agente per il ritiro, viene richiesto di selezionare link:task_config_telegraf_agent.html["installare un agente"] il locatario.
 
 +
 Se si dispone di un agente già configurato, selezionare il sistema operativo o la piattaforma appropriati e fare clic su *continua*.

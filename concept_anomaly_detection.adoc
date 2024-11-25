@@ -19,7 +19,7 @@ summary: 'Monitorare le metriche per verificare l"eventuale presenza di anomalie
 
 
 [role="lead"]
-Il rilevamento delle anomalie fornisce informazioni utili sui cambiamenti imprevisti nei modelli di dati nel tuo ambiente. Un'anomalia si verifica quando il modello del comportamento di un oggetto cambia nel tuo ambiente, ad esempio, se un oggetto sperimenta un certo livello di latenza a una determinata ora il mercoledì, ma la latenza sale al di sopra di quel livello a quell'ora il mercoledì successivo, quel picco sarebbe considerato un'anomalia. Data Infrastructure Insights consente la creazione di monitor per avvisare in caso di anomalie in tal senso.
+Rilevamento delle anomalie fornisce informazioni utili sui cambiamenti imprevisti nei modelli di dati sul tenant. Un'anomalia si verifica quando il modello del comportamento di un oggetto cambia, per esempio, se un oggetto sperimenta un certo livello di latenza ad un certo tempo il mercoledì, ma picchi di latenza sopra quel livello a quell'ora il mercoledì successivo, quel picco sarebbe considerato un'anomalia. Data Infrastructure Insights consente la creazione di monitor per avvisare in caso di anomalie in tal senso.
 
 Il rilevamento delle anomalie è adatto per le metriche degli oggetti che mostrano un modello ricorrente e prevedibile. Quando queste metriche dell'oggetto superano o scendono al di sotto dei livelli previsti, Data Infrastructure Insights può generare un avviso per un'analisi tempestiva.
 
@@ -53,7 +53,7 @@ Il monitoraggio del rilevamento delle anomalie può fornire avvisi utili per mol
 
 * Quando la definizione di _normale_ non è chiara. Ad esempio, è possibile che le percentuali di errore SAN siano diverse in base alla porta. La segnalazione di un errore è rumorosa e non necessaria, ma un aumento improvviso o significativo potrebbe indicare un problema diffuso.
 * Dove ci sono cambiamenti nel tempo. Carichi di lavoro caratterizzati da stagionalità (ovvero, sono occupati o silenziosi in determinati momenti). Ciò potrebbe includere periodi di inattività imprevisti che potrebbero indicare un blocco del batch.
-* Lavorare con grandi quantità di dati quando la definizione e la regolazione manuale delle soglie non sono pratiche. Ad esempio, un ambiente con un elevato numero di host e/o volumi con workload variabili. Ciascuno di essi può disporre di SLA diversi, pertanto è importante comprendere quelli che superano la norma.
+* Lavorare con grandi quantità di dati quando la definizione e la regolazione manuale delle soglie non sono pratiche. Ad esempio, un tenant con un elevato numero di host e/o volumi con carichi di lavoro variabili. Ciascuno di essi può disporre di SLA diversi, pertanto è importante comprendere quelli che superano la norma.
 
 
 

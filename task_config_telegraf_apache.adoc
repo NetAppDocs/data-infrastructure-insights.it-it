@@ -19,7 +19,7 @@ summary: Configurazione del data collector Apache
 
 
 [role="lead"]
-Questo data collector consente la raccolta di dati dai server Apache nel tuo ambiente.
+Questo data collector consente la raccolta di dati dai server Apache sul tenant.
 
 .Prerequisiti
 * Il server HTTP Apache deve essere configurato e correttamente in esecuzione

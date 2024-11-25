@@ -104,8 +104,8 @@ Per spiegazioni più dettagliate su queste e altre funzioni del dashboard, link:
 
 == Impostazione di una dashboard come home page
 
-È possibile scegliere quale dashboard impostare come *home page* dell'ambiente utilizzando uno dei seguenti metodi:
+È possibile scegliere quale dashboard impostare come home page * del tenant utilizzando uno dei seguenti metodi:
 
-* Accedere a *Dashboard > Show All Dashboard* (Mostra tutti i dashboard) per visualizzare l'elenco dei dashboard nell'ambiente. Fare clic sul menu delle opzioni a destra della dashboard desiderata e selezionare *Imposta come home page*.
+* Andare a *Dashboard > Mostra tutti i dashboard* per visualizzare l'elenco dei dashboard sul tenant. Fare clic sul menu delle opzioni a destra della dashboard desiderata e selezionare *Imposta come home page*.
 * Fare clic su una dashboard dall'elenco per aprire la dashboard. Fare clic sul menu a discesa nell'angolo superiore e selezionare *Imposta come home page*.
 

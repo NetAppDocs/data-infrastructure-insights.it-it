@@ -23,7 +23,7 @@ La pagina All Activity (tutte le attività) consente di comprendere le azioni es
 
 == Esame di tutti i dati delle attività
 
-Fare clic su *Forensics > Activity Forensics* (analisi > analisi delle attività) e fare clic sulla scheda *All Activity* (tutte le attività) per accedere alla pagina All Activity (tutte le attività). Questa pagina fornisce una panoramica delle attività nel proprio ambiente, evidenziando le seguenti informazioni:
+Fare clic su *Forensics > Activity Forensics* (analisi > analisi delle attività) e fare clic sulla scheda *All Activity* (tutte le attività) per accedere alla pagina All Activity (tutte le attività). In questa pagina viene fornita una panoramica delle attività sul tenant, evidenziando le seguenti informazioni:
 
 * Un grafico che mostra _Cronologia attività_ (accessibile al minuto/ogni 5 minuti/ogni 10 minuti in base all'intervallo di tempo globale selezionato)
 +

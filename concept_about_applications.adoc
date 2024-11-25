@@ -13,11 +13,11 @@ summary: 'La comprensione delle applicazioni utilizzate nell"ambiente aziendale 
 :revdate: Understanding the applications used in your company's environment helps you to keep track of asset usage and cost.
 
 
-Prima di tenere traccia dei dati associati alle applicazioni in esecuzione nel proprio ambiente, è necessario definire tali applicazioni e associarle alle risorse appropriate. È possibile associare le applicazioni alle seguenti risorse: Host, macchine virtuali, volumi, volumi interni, qtree, condivisioni e hypervisor.
+Prima di poter tenere traccia dei dati associati alle applicazioni in esecuzione sul tenant, è necessario innanzitutto definire tali applicazioni e associarle alle risorse appropriate. È possibile associare le applicazioni alle seguenti risorse: Host, macchine virtuali, volumi, volumi interni, qtree, condivisioni e hypervisor.
 
 In questo argomento viene fornito un esempio di monitoraggio dell'utilizzo delle macchine virtuali che il team di marketing utilizza per la posta elettronica Exchange.
 
-È possibile creare una tabella simile a quella riportata di seguito per identificare le applicazioni utilizzate nel proprio ambiente e prendere nota del gruppo o della business unit che utilizza ciascuna applicazione.
+È possibile creare una tabella simile a quella riportata di seguito per identificare le applicazioni utilizzate nel tenant e prendere nota del gruppo o della business unit utilizzando ciascuna applicazione.
 
 [cols="5*"]
 |===

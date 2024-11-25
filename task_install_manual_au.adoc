@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_install_manual_au.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving, manual, AU, Patch 
-summary: Data Infrastructure Insights può essere configurato in modo che il software AU venga aggiornato manualmente, fornendo un maggiore controllo sul software installato nel proprio ambiente. 
+summary: Data Infrastructure Insights può essere configurato in modo che il software AU venga aggiornato manualmente, fornendo un maggiore controllo sul software installato sul tenant. 
 ---
 = Installazione manuale del software dell'unità di acquisizione
 :hardbreaks:
@@ -16,7 +16,7 @@ summary: Data Infrastructure Insights può essere configurato in modo che il sof
 
 
 [role="lead"]
-Per impostazione predefinita, Data Infrastructure Insights aggiorna automaticamente il software dell'unità di acquisizione (AU) non appena vengono distribuiti gli aggiornamenti. Tuttavia, in ambienti controllati sicuri, l'aggiornamento automatico potrebbe non essere possibile o desiderato. In questi casi, Data Infrastructure Insights può essere configurato in modo che il software AU venga aggiornato manualmente, fornendo un maggiore controllo sul software installato nel proprio ambiente.
+Per impostazione predefinita, Data Infrastructure Insights aggiorna automaticamente il software dell'unità di acquisizione (AU) non appena vengono distribuiti gli aggiornamenti. Tuttavia, in ambienti controllati sicuri, l'aggiornamento automatico potrebbe non essere possibile o desiderato. In questi casi, Data Infrastructure Insights può essere configurato in modo che il software AU venga aggiornato manualmente, fornendo un maggiore controllo sul software installato sul tenant.
 
 Per scaricare e installare manualmente il software AU, procedere come segue. Data Infrastructure Insights fornisce un'utile pagina di documentazione di Swagger che è possibile utilizzare per molte di queste istruzioni o per utilizzare i propri script/comandi API. Accedere a Admin > API Access (Amministrazione > accesso API) e fare clic sul collegamento "API Documentation" (documentazione API).
 

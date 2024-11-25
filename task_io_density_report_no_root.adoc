@@ -34,12 +34,12 @@ I passaggi descritti in questa guida possono essere applicati anche ai sistemi s
 
 
 
-== Creazione di una query per identificare gli aggregati root di NetApp nel tuo ambiente
+== Creazione di una query per identificare gli aggregati root NetApp
 
-Le query forniscono ricerche a un livello granulare, in base ai criteri selezionati dall'utente. L'utilizzo di una query consente di cercare volumi interni nell'ambiente che contengono l'aggregato root NetApp.
+Le query forniscono ricerche a un livello granulare, in base ai criteri selezionati dall'utente. L'utilizzo di una query consente di cercare i volumi interni sul tenant che contengono l'aggregato root NetApp.
 
 .Fasi
-. Creare una query per identificare gli aggregati root NetApp nel proprio ambiente: Fare clic su *Query > Nuova query > Seleziona tipo di risorsa* (?)
+. Creare una query per identificare gli aggregati root NetApp sul tenant: Fare clic su *Query > Nuova query > Seleziona tipo di risorsa* (?)
 . Fare clic su *pool di storage*
 . Immettere il nome dell'aggregato root
 +
@@ -48,7 +48,7 @@ In questo esempio viene utilizzato "aggr0" come nome. Quando si crea un aggregat
 +
 .. Deve iniziare con una lettera o un carattere di sottolineatura (_).
 .. Può contenere solo lettere, cifre e caratteri di sottolineatura.
-.. Può contenere fino a 250 caratteri. Nella maggior parte dei casi, l'aggregato è il nome aggr0, aggr_0 o qualcosa di simile. Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati root NetApp nel tuo ambiente.
+.. Può contenere fino a 250 caratteri. Nella maggior parte dei casi, l'aggregato è il nome aggr0, aggr_0 o qualcosa di simile. Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati root NetApp sul tenant.
 
 
 . Fare clic su *Save* (Salva) e immettere un nome per la nuova query.
@@ -61,7 +61,7 @@ Come accennato in precedenza, questo potrebbe essere un processo iterativo e ric
 
 == Creare un'annotazione per i volumi root restituiti dalle query
 
-Le annotazioni sono note specializzate assegnate alle risorse, che consentono di filtrare le risorse in base alle annotazioni. L'annotazione creata verrà utilizzata per identificare gli aggregati root di NetApp nel tuo ambiente e garantire che non siano inclusi in un report specifico.
+Le annotazioni sono note specializzate assegnate alle risorse, che consentono di filtrare le risorse in base alle annotazioni. L'annotazione creata verrà utilizzata per identificare gli aggregati root NetApp sul tenant e verificare che non siano inclusi in un report specifico.
 
 .Prima di iniziare
 È necessario aver identificato tutti gli aggregati root che si desidera escludere dal report "High i/o Density" (densità i/o elevata).
@@ -85,7 +85,7 @@ Le annotazioni sono note specializzate assegnate alle risorse, che consentono di
 In alternativa all'applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le regole di annotazione si basano sulle query create e, quando vengono eseguite sul sistema, aggiungono nuove risorse a set di risorse esistenti. Quando questi set di asset sono esclusi da un report, anche i nuovi asset vengono automaticamente esclusi.
 
 .Prima di iniziare
-È necessario aver creato e salvato una query che identifichi gli aggregati root NetApp identificati nel proprio ambiente.
+È necessario aver creato e salvato una query che identifichi gli aggregati root NetApp identificati nel tenant.
 
 .Fasi
 . Nella barra degli strumenti di Data Infrastructure Insights, fare clic su *Manage > Annotation rules* (Gestisci > regole annotazione*).

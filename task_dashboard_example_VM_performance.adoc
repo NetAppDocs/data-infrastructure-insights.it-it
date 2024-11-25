@@ -19,7 +19,7 @@ keywords: dashboard, widget, custom, example, virtual machine, vm, performance
 
 
 [role="lead"]
-Le operazioni IT devono affrontare molte sfide. Agli amministratori viene chiesto di fare di più con meno risorse e avere una visibilità completa nei data center dinamici è un must. In questo esempio, ti mostreremo come creare una dashboard con widget che ti forniranno informazioni operative sulle performance delle macchine virtuali nel tuo ambiente. Seguendo questo esempio e creando widget per soddisfare le tue esigenze specifiche, puoi fare cose come la visualizzazione delle performance dello storage back-end rispetto alle performance delle macchine virtuali front-end o la visualizzazione della latenza delle macchine virtuali rispetto alla domanda di i/O.
+Le operazioni IT devono affrontare molte sfide. Agli amministratori viene chiesto di fare di più con meno risorse e avere una visibilità completa nei data center dinamici è un must. In questo esempio ti mostreremo come creare una dashboard con widget che ti forniranno informazioni operative sulle performance della macchina virtuale (VM) sul tenant. Seguendo questo esempio e creando widget per soddisfare le tue esigenze specifiche, puoi fare cose come la visualizzazione delle performance dello storage back-end rispetto alle performance delle macchine virtuali front-end o la visualizzazione della latenza delle macchine virtuali rispetto alla domanda di i/O.
 
 .A proposito di questa attività
 In questa sezione verrà creata una dashboard per le performance delle macchine virtuali contenente quanto segue:
@@ -43,7 +43,7 @@ Viene visualizzata la pagina *nuovo dashboard*.
 . Iniziamo ad aggiungere i nostri widget. Se necessario, fare clic sull'icona *Edit* (Modifica) per attivare la modalità Edit (Modifica).
 . Fare clic sull'icona *Aggiungi widget* e selezionare *Tabella* per aggiungere un nuovo widget tabella alla dashboard.
 +
-Viene visualizzata la finestra di dialogo Edit Widget (Modifica widget). I dati predefiniti visualizzati sono relativi a tutti gli storage dell'ambiente in uso.
+Viene visualizzata la finestra di dialogo Edit Widget (Modifica widget). I dati predefiniti visualizzati si riferiscono a tutte le memorie del tenant.
 
 
 
@@ -52,7 +52,7 @@ image:VMDashboard-TableWidget1.png["Finestra di dialogo Modifica widget tavola"]
 . Possiamo personalizzare questo widget. Nel campo Name (Nome) in alto, eliminare "Widget 1" e immettere "Virtual Machine Performance table" (Tabella delle prestazioni della macchina virtuale).
 . Fare clic sull'elenco a discesa tipo di risorsa e modificare _Storage_ in _Virtual Machine_.
 +
-I dati della tabella vengono modificati per mostrare tutte le macchine virtuali nell'ambiente.
+I dati della tabella vengono modificati per mostrare tutte le macchine virtuali sul tenant.
 
 . Aggiungiamo alcune colonne alla tabella. Fare clic sull'icona ingranaggio a destra e selezionare _Hypervisor name_, _IOPS - Total_ e _Latency - Total_. Puoi anche provare a digitare il nome nella ricerca per visualizzare rapidamente il campo desiderato.
 +

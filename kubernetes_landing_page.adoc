@@ -21,7 +21,7 @@ summary: Spiegazione della landing page di Kubernetes
 [role="lead"]
 Data Infrastructure Insights Kubernetes Explorer è un potente tool per visualizzare la salute e l'utilizzo generali dei cluster Kubernetes e ti consente di analizzare facilmente le aree di indagine.
 
-Facendo clic su *Dashboards > Kubernetes Explorer* si apre la pagina Kubernetes Cluster. Questa pagina di panoramica contiene la tabella dei cluster Kubernetes nel tuo ambiente.
+Facendo clic su *Dashboards > Kubernetes Explorer* si apre la pagina Kubernetes Cluster. Questa pagina di panoramica contiene una tabella dei cluster Kubernetes sul tenant.
 
 image:Kubernetes_List_Page_new.png["Pagina elenco Kubernetes"]
 
@@ -29,7 +29,7 @@ image:Kubernetes_List_Page_new.png["Pagina elenco Kubernetes"]
 
 === Elenco dei cluster
 
-L'elenco dei cluster visualizza le seguenti informazioni per ciascun cluster dell'ambiente:
+L'elenco dei cluster visualizza le seguenti informazioni per ciascun cluster sul tenant:
 
 * Cluster *Nome*. Facendo clic sul nome di un cluster si apre il link:kubernetes_cluster_detail.html["*pagina dei dettagli*"] relativo.
 * Percentuali di *saturazione*. La saturazione complessiva è la più alta tra CPU, memoria o saturazione dello storage.

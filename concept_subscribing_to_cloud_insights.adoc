@@ -135,7 +135,7 @@ Il tuo abbonamento verrà misurato in base a uno di questi metodi, a seconda che
 
 ==== Misurazione della capacità
 
-L'osservabilità di Data Infrastructure Insights misura l'utilizzo in base al Tier di storage del tuo ambiente. È possibile che vi siano depositi che rientrano in una o più di queste categorie:
+L'osservabilità di Data Infrastructure Insights misura l'utilizzo in base al Tier di storage del tenant. È possibile che vi siano depositi che rientrano in una o più di queste categorie:
 
 * Dati grezzi primari
 * Oggetto non elaborato

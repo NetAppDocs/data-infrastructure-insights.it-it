@@ -36,7 +36,7 @@ Data Infrastructure Insights mette a disposizione anche una serie dilink:task_sy
 
 == Best practice per la sicurezza
 
-Gli alert di Data Infrastructure Insights sono ideati per evidenziare data point e trend nel tuo ambiente, mentre Data Infrastructure Insights ti consente di inserire qualsiasi indirizzo e-mail valido come destinatario dell'avviso. Se si lavora in un ambiente sicuro, prestare particolare attenzione a chi riceve la notifica o a chi ha accesso all'avviso.
+Gli avvisi di Data Infrastructure Insights sono progettati per evidenziare data point e trend sul tenant, mentre Data Infrastructure Insights ti consente di inserire qualsiasi indirizzo e-mail valido come destinatario della notifica. Se si lavora in un ambiente sicuro, prestare particolare attenzione a chi riceve la notifica o a chi ha accesso all'avviso.
 
 
 
@@ -232,7 +232,7 @@ Se un monitor non è più necessario, è possibile eliminarlo selezionando *Dele
 
 == Gruppi di monitor
 
-Il raggruppamento consente di visualizzare e gestire i monitor correlati. Ad esempio, è possibile disporre di un gruppo di monitor dedicato allo storage nell'ambiente o di monitoraggi relativi a un determinato elenco di destinatari.
+Il raggruppamento consente di visualizzare e gestire i monitor correlati. Ad esempio, è possibile disporre di un gruppo di monitor dedicato allo storage del tenant o di monitor relativi a un determinato elenco di destinatari.
 
 image:Monitors_GroupList.png["Raggruppamento dei monitor"]
 
@@ -297,7 +297,7 @@ image:Monitors_PauseGroup.png["Mettere in pausa un gruppo"]
 
 == Monitor definiti dal sistema
 
-Data Infrastructure Insights include un certo numero di monitor definiti dal sistema sia per metriche che per i registri. I monitor di sistema disponibili dipendono dai data collezions presenti nell'ambiente. Per questo motivo, i monitor disponibili in Data Infrastructure Insights possono cambiare in base all'aggiunta di raccolte dati o alla modifica delle relative configurazioni.
+Data Infrastructure Insights include un certo numero di monitor definiti dal sistema sia per metriche che per i registri. I monitor di sistema disponibili dipendono dai data collector presenti sul tenant. Per questo motivo, i monitor disponibili in Data Infrastructure Insights possono cambiare in base all'aggiunta di raccolte dati o alla modifica delle relative configurazioni.
 
 Visualizza la link:task_system_monitors.html["Monitor definiti dal sistema"] pagina per le descrizioni dei monitor inclusi in Data Infrastructure Insights.
 

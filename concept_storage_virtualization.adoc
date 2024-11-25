@@ -29,7 +29,7 @@ Uno dei modi più semplici per iniziare a esaminare la virtualizzazione dello st
 
 image:StorageVirtualization_TableWidgetSettings.png["Query di base per mostrare i virtualizzatiTypes dello storage"]
 
-Il widget della tabella risultante mostra gli storage _Standard_, _backend_ e _Virtual_ nel tuo ambiente.
+Il widget della tabella risultante mostra le memorie _Standard_, _backend_ e _Virtual_ sul tenant.
 
 image:StorageVirtualization_TableWidgetShowingVirtualizedTypes.png["Tabella che mostra i tipi virtualizzati"]
 
@@ -45,7 +45,7 @@ image:StorageVirtualization_StorageSummary.png["Landing Page dello storage che m
 
 === Landing page e dashboard esistenti
 
-Tenere presente che se nel proprio ambiente sono presenti landing page o dashboard personalizzati, per impostazione predefinita non verranno visualizzate automaticamente tutte le informazioni sulla virtualizzazione. Tuttavia, è possibile _ripristinare le impostazioni predefinite_ qualsiasi dashboard o landing page personalizzata (sarà necessario implementare nuovamente le personalizzazioni) oppure modificare i widget pertinenti per includere gli attributi o le metriche di virtualizzazione desiderati.
+Tenere presente che, se al momento si dispone di landing page o dashboard personalizzate sul tenant, queste non mostreranno automaticamente tutte le informazioni sulla virtualizzazione per impostazione predefinita. Tuttavia, è possibile _ripristinare le impostazioni predefinite_ qualsiasi dashboard o landing page personalizzata (sarà necessario implementare nuovamente le personalizzazioni) oppure modificare i widget pertinenti per includere gli attributi o le metriche di virtualizzazione desiderati.
 
 L'opzione _Ripristina impostazioni predefinite_ è disponibile nell'angolo in alto a destra di una dashboard personalizzata o di una landing page.
 

@@ -19,11 +19,11 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-Le query consentono di monitorare e risolvere i problemi della rete ricercando le risorse e le metriche dell'ambiente a un livello granulare in base a criteri selezionati dall'utente (ad esempio, annotazioni).
+Le query consentono di monitorare e risolvere i problemi della rete ricercando le risorse e le metriche del tenant a livello granulare sulla base di criteri selezionati dall'utente (ad esempio, le annotazioni).
 
 Si noti che le regole di annotazione, che assegnano automaticamente le annotazioni alle risorse, _richiedono_ una query.
 
-È possibile eseguire query sulle risorse di inventario fisiche o virtuali (e sulle relative metriche) nel proprio ambiente o sulle metriche fornite con l'integrazione, ad esempio Kubernetes o dati avanzati di ONTAP.
+Puoi eseguire query sulle risorse dell'inventario fisico o virtuale (e sulle metriche associate) sul tenant o sulle metriche fornite con integrazione come Kubernetes o dati avanzati di ONTAP.
 
 
 

@@ -17,7 +17,7 @@ summary: Pagina delle entità forensi
 
 
 [role="lead"]
-La pagina delle entità Forensics fornisce informazioni dettagliate sull'attività delle entità nell'ambiente.
+La pagina entità di analisi fornisce informazioni dettagliate sull'attività dell'entità sul tenant.
 
 
 
@@ -25,7 +25,7 @@ La pagina delle entità Forensics fornisce informazioni dettagliate sull'attivit
 
 Fare clic su *Forensics > Activity Forensics* e fare clic sulla scheda _Entities_ per accedere alla pagina Entities.
 
-Questa pagina fornisce una panoramica dell'attività dell'entità nel proprio ambiente, evidenziando le seguenti informazioni: * Un grafico che mostra _entità univoche_ cui si accede al minuto * Un grafico di _tipi di entità a cui si accede_ * una suddivisione dei _percorsi comuni_ * Un elenco delle _prime 50 entità_ rispetto al numero totale di entità
+Questa pagina fornisce una panoramica dell'attività dell'entità sul locatario, evidenziando le seguenti informazioni: * Un grafico che mostra _entità univoche_ accessibili al minuto * Un grafico di _tipi di entità accessibili_ * Una suddivisione dei _percorsi comuni_ * Un elenco delle _prime 50 entità_ rispetto al numero totale di entità
 
 image:CS-Entities-Page.png["Pagina Entities"]
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_device_resolution_overview.html 
 keywords: Automatic, AR, AHR, Host, automatic device resolution 
-summary: 'La risoluzione automatica dei dispositivi ti aiuta a tenere traccia con precisione delle performance e dell"inventario nel tuo ambiente.' 
+summary: 'La risoluzione automatica dei dispositivi consente di monitorare con precisione le prestazioni e l"inventario del tenant.' 
 ---
 = Panoramica automatica della risoluzione dei dispositivi
 :hardbreaks:
@@ -16,11 +16,11 @@ summary: 'La risoluzione automatica dei dispositivi ti aiuta a tenere traccia co
 
 
 [role="lead"]
-È necessario identificare tutti i dispositivi che si desidera monitorare con Data Infrastructure Insights. L'identificazione è necessaria per tenere traccia con precisione delle performance e dell'inventario nel tuo ambiente. In genere, la maggior parte dei dispositivi rilevati nell'ambiente viene identificata tramite _Automatic Device Resolution_.
+È necessario identificare tutti i dispositivi che si desidera monitorare con Data Infrastructure Insights. L'identificazione è necessaria per tenere traccia con precisione delle prestazioni e dell'inventario del vostro locatario. In genere, la maggior parte dei dispositivi rilevati sul tenant viene identificata tramite _risoluzione automatica del dispositivo_.
 
-Dopo aver configurato i data raccoglitori, vengono identificati i dispositivi nell'ambiente, inclusi switch, storage array e l'infrastruttura virtuale di hypervisor e macchine virtuali. Tuttavia, questo non identifica normalmente il 100% dei dispositivi nell'ambiente in uso.
+Dopo aver configurato i data collector, vengono identificati i dispositivi sul tenant tra cui switch, storage array e l'infrastruttura virtuale di hypervisor e macchine virtuali. Tuttavia, questo non identifica normalmente il 100% dei dispositivi sul tenant.
 
-Dopo aver configurato i dispositivi di tipo data collector, la procedura consigliata consiste nell'utilizzare le regole di risoluzione dei dispositivi per identificare i dispositivi sconosciuti rimanenti nell'ambiente. La risoluzione dei dispositivi può aiutare a risolvere i dispositivi sconosciuti come i seguenti tipi di dispositivi:
+Dopo aver configurato i dispositivi di tipo raccolta dati, la procedura migliore consiste nell'utilizzare le regole di risoluzione dei dispositivi per identificare i dispositivi ancora sconosciuti sul tenant. La risoluzione dei dispositivi può aiutare a risolvere i dispositivi sconosciuti come i seguenti tipi di dispositivi:
 
 * Host fisici
 * Storage array
@@ -60,7 +60,7 @@ Devi rispondere a domande simili a quelle riportate di seguito per aiutarti a cr
 * L'ambiente utilizza un alias dello switch o uno storage e corrispondono al nome host?
 
 
-* Con quale frequenza cambiano gli schemi di denominazione nel tuo ambiente?
+* Con quale frequenza cambiano gli schemi di denominazione del tenant?
 * Ci sono state acquisizioni o fusioni che hanno introdotto diversi schemi di denominazione?
 
 
@@ -74,7 +74,7 @@ In questo esempio, il maggior numero di dispositivi è rappresentato in modo aff
 
 == Procedura per l'identificazione dei dispositivi
 
-In genere, per identificare i dispositivi nell'ambiente in uso, si utilizza un workflow simile a quello riportato di seguito. L'identificazione è un processo iterativo e potrebbe richiedere più fasi di pianificazione e definizione delle regole.
+In genere, per identificare i dispositivi sul tenant viene utilizzato un flusso di lavoro simile al seguente. L'identificazione è un processo iterativo e potrebbe richiedere più fasi di pianificazione e definizione delle regole.
 
 * Ambiente di ricerca
 * Regole del piano
@@ -85,6 +85,6 @@ In genere, per identificare i dispositivi nell'ambiente in uso, si utilizza un w
 
 
 
-NOTE: Se nell'ambiente sono presenti dispositivi non identificati (noti anche come dispositivi sconosciuti o generici) e successivamente si configura un'origine dati che li identifichi al momento del polling, questi non verranno più visualizzati o conteggiati come dispositivi generici.
+NOTE: Se sul tenant sono presenti dispositivi non identificati (altrimenti noti come dispositivi sconosciuti o generici) e successivamente si configura un'origine dati che identifica tali dispositivi al polling, questi non verranno più visualizzati o conteggiati come dispositivi generici.
 
 Contenuti correlati: link:task_device_resolution_rules.html["Creazione di regole di risoluzione dei dispositivi"] link:task_device_resolution_fibre_channel.html["Risoluzione del dispositivo Fibre Channel"] link:task_device_resolution_ip.html["Risoluzione del dispositivo IP"] link:task_device_resolution_preferences.html["Impostazione delle preferenze di risoluzione del dispositivo"]

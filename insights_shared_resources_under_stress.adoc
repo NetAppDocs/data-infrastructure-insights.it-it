@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: insights_shared_resources_under_stress.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Le informazioni ti offrono un"analisi dell"impatto delle risorse sulle altre risorse del tuo ambiente.' 
+summary: 'Le informazioni ti danno uno sguardo all"impatto delle risorse su altre risorse sul tenant.' 
 ---
 = Approfondimenti: Risorse condivise sotto stress
 :toc: macro
@@ -19,7 +19,7 @@ summary: 'Le informazioni ti offrono un"analisi dell"impatto delle risorse sulle
 
 
 [role="lead"]
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse nel tuo ambiente.
+I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse sul tenant.
 
 
 
@@ -63,7 +63,7 @@ Sotto ogni tabella è riportato un elenco dei carichi di lavoro e/o delle risors
 
 == Cosa devo fare per risolvere la saturazione?
 
-È possibile adottare una serie di misure per ridurre o eliminare la possibilità di saturazione nell'ambiente. Per visualizzare tali suggerimenti, espandere il link *+Mostra consigli* nella pagina. Ecco alcune cose che puoi provare.
+È possibile eseguire una serie di operazioni per ridurre o eliminare la possibilità di saturazione sul tenant. Per visualizzare tali suggerimenti, espandere il link *+Mostra consigli* nella pagina. Ecco alcune cose che puoi provare.
 
 * Sposta i consumatori con IOPS elevati
 +

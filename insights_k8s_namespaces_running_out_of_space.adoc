@@ -19,7 +19,7 @@ summary: Le informazioni possono aiutarti a prevedere quando gli spazi Kubernete
 
 
 [role="lead"]
-Esaurire lo spazio nel tuo ambiente non è mai una buona situazione. Data Infrastructure Insights ti aiuta a prevedere il tempo necessario prima che i volumi persistenti di Kubernetes si esauriscano.
+Esaurire lo spazio del tenant non è mai una buona situazione. Data Infrastructure Insights ti aiuta a prevedere il tempo necessario prima che i volumi persistenti di Kubernetes si esauriscano.
 
 L'Insight _Kubernetes Namespace running of Space_ ti offre una vista dei carichi di lavoro degli spazi dei nomi Kubernetes che rischiano di esaurire lo spazio, con una stima del numero di giorni rimanenti prima che ogni volume persistente si esaurisca.
 
