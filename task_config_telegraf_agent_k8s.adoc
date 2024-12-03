@@ -19,8 +19,6 @@ summary: 'L"operatore di monitoring Kubernetes raccoglie i dati Kubernetes per l
 Data Infrastructure Insights offre la raccolta *Kubernetes Monitoring Operator* for Kubernetes. Navigare a *Kubernetes > Collector > +Kubernetes Collector* per implementare un nuovo operatore.
 
 
-toc::[]
-
 
 == Prima di installare l'operatore di monitoraggio Kubernetes
 
@@ -65,15 +63,11 @@ image:KubernetesModifyDeploymentMenu.png["Modificare il menu di distribuzione ne
 
 La schermata mostra lo stato corrente di ciascun componente e consente di disattivare o attivare i componenti per tale collettore, se necessario.
 
-image:KubernetesModifyDeploymentScreen.png["Opzioni di distribuzione di Mody, 700"]
+image:KubernetesModifyDeploymentScreen.png["Modificare le opzioni di distribuzione, width=700"]
 
 
 
-== Aggiornamento in corso
-
-
-
-=== Aggiornamento alla versione più recente di Kubernetes Monitoring Operator
+== Aggiornamento alla versione più recente di Kubernetes Monitoring Operator
 
 Determinare se esiste una configurazione Agentcon l'operatore esistente (se lo spazio dei nomi non è il _monitoraggio netapp_ predefinito, sostituire lo spazio dei nomi appropriato):
 
