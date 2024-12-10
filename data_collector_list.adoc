@@ -250,6 +250,9 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_na_ontap_rest.html["Collettore REST NetApp ONTAP"] | Infrastruttura 
 
 
+| link:task_dc_na_ontap_all_san_array.html["Raccoglitore array All-SAN (ASA) NetApp ONTAP"] | Infrastruttura 
+
+
 | link:task_dc_na_cdot.html["NetApp ONTAP Select"] | Infrastruttura 
 
 
@@ -305,6 +308,9 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 
 
 | link:task_config_telegraf_agent.html#ubuntu-and-debian["Ubuntu  Debian"] | Servizio 
+
+
+| link:task_dc_vast_datastore.html["AMPIO datastore"] | Infrastruttura 
 
 
 | link:task_dc_vmware.html["VMware vSphere"] | Infrastruttura 
