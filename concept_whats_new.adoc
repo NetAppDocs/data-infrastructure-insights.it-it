@@ -20,7 +20,43 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Ecco alcu
 
 
 
+== Dicembre 2024
+
+
+
+=== Presentazione di SAN Analyzer: Visibilità migliorata per i workload in blocco
+
+LA SAN gioca un ruolo cruciale nella gestione di carichi di lavoro fondamentali, ma la sua complessità può causare disservizi e interruzioni significative per i clienti. Con *SAN Analyzer* di DII, la gestione DELLE SAN diventa più semplice ed efficiente. Questo potente tool offre visibilità end-to-end, mappando le dipendenze da VM/host alla rete, al LUN e allo storage. Grazie a una mappa interattiva della topologia, SAN Analyzer consente di individuare i problemi, comprendere le modifiche e migliorare la comprensione del flusso di dati. Ottimizza la gestione DELLE SAN negli ambienti IT complessi con SAN Analyzer e aumenta la visibilità dei carichi di lavoro dei blocchi.
+
+image:san_analyzer_example_with_panel.png["Mappa della topologia di un sistema storage mediante SAN Analyzer"]
+
+
+
+=== Ottimizza i costi delle VM con Intelligent host Decommissioning e VM Reclamation
+
+Data Infrastructure Insights ti aiuta a gestire i costi di infrastruttura e licenze analizzando il comportamento storico dell'ambiente e stabilendo previsioni a breve e lungo termine, generando raccomandazioni dettagliate per il decommissionamento dell'host e il recupero delle macchine virtuali spente e inattive. Questi suggerimenti aiutano a garantire la stabilità delle prestazioni, liberare capacità inutilizzata e ridurre l'allocazione di memoria e CPU.
+
+image:vm_optimization_summary.png["Schermata Riepilogo ottimizzazione VM"]
+
+
+
+=== Scoprite le informazioni sui log con i grafici temporali e il supporto per i widget delle tabelle
+
+Ora è possibile utilizzare i diagrammi temporali (bar, linea, area) per identificare le tendenze e i modelli nei dati di log, come errori ricorrenti o picchi di attività, fornendo informazioni preziose sul comportamento del sistema nel tempo. Inoltre, con le tabelle è ora possibile includere i messaggi di registro direttamente nella dashboard, consentendo una visualizzazione più completa dei dettagli del registro.
+
+image:log_insights_dashboard_example.png["registra informazioni su una dashboard"]
+
+
+
 == Novembre 2024
+
+
+
+=== Nuova API degli avvisi di sicurezza del workload
+
+Recupera i dettagli degli avvisi di analisi con il nuovo workload Security link:concept_cs_api.html["API *cloudsecure_forensics.alerts*"].
+
+image:ws_forensics_alerts_api.png["API degli avvisi di analisi della sicurezza del carico di lavoro"]
 
 
 
