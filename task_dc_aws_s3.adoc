@@ -119,12 +119,6 @@ Si noti che AWS rileva la distinzione tra maiuscole e minuscole e che Data Infra
 
 
 
-== Includi aree geografiche aggiuntive
-
-Nella sezione AWS Data Collector *Advanced Configuration*, è possibile impostare il campo *include extra regions* in modo da includere regioni aggiuntive, separate da virgola o punto e virgola. Per impostazione predefinita, questo campo è impostato su *_us-.*_*, che raccoglie su tutte le regioni US AWS. Per eseguire la raccolta su _tutte_ regioni, impostare questo campo su *_.*_*. Se il campo *include extra regions* è vuoto, il data collector raccoglierà le risorse specificate nel campo *AWS Region* come specificato nella sezione *Configuration*.
-
-
-
 == Raccolta da account secondari AWS
 
 Data Infrastructure Insights supporta la raccolta degli account child per AWS all'interno di un singolo data collector AWS. La configurazione per questa raccolta viene eseguita nell'ambiente AWS:

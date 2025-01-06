@@ -48,6 +48,15 @@ image:log_insights_dashboard_example.png["registra informazioni su una dashboard
 
 
 
+=== Gestisci in modo proattivo i rischi con il raggruppamento di analisi
+
+Ecco la nostra ultima funzionalità progettata per migliorare la sicurezza e le funzionalità di gestione delle risorse. Grazie alle funzionalità avanzate di analisi forensi per gruppo e al supporto gerarchico multiplo per gruppo, ora è possibile identificare facilmente gli utenti a cui si accede a cartelle specifiche, determinare gli utenti e le condivisioni più attive e gestire in modo proattivo il rischio tenendo traccia degli indirizzi IP dei client attivi. Ottimizza l'utilizzo di storage e larghezza di banda identificando i file e le cartelle con accessi più frequenti e ottieni un maggiore controllo sull'accesso al sistema identificando utenti reali.
+
+image:forensics-group-by-example-screen.png["schermata di esempio forensics che mostra group-by"]
+
+'''
+
+
 == Novembre 2024
 
 
