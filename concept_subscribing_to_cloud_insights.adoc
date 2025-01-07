@@ -25,7 +25,7 @@ Per iniziare, Data Infrastructure Insights è semplice come tre semplici passagg
 
 Durante il processo di registrazione, è possibile scegliere l'area globale in cui ospitare l'ambiente Data Infrastructure Insights. Per ulteriori informazioni, consultare informazioni su Data Infrastructure Insights link:security_information_and_region.html["Informazioni e Regione"].
 
-Per un confronto completo delle funzioni disponibili in Data Infrastructure Insights Basic e Premium Edition, vedere la link:https://www.netapp.com/cloud-services/cloud-insights/editions-pricing["Prezzi delle informazioni sull'infrastruttura dati"] pagina.
+Per un confronto completo delle funzioni disponibili in Data Infrastructure Insights Basic e Premium Edition, vedere la link:https://www.netapp.com/cloud-services/cloud-insights/editions-pricing["Edizioni di Data Infrastructure Insights"] pagina.
 
 
 WARNING: Gli ambienti Inactive Data Infrastructure Insights Basic Edition vengono eliminati e le loro risorse vengono recuperate. Un ambiente viene considerato inattivo se non vi sono attività dell'utente per 30 giorni consecutivi, o se non vi sono dati acquisiti per 7 giorni consecutivi. Data Infrastructure Insights invierà una notifica e fornirà un Grace period di quattro giorni prima che un ambiente venga eliminato.
