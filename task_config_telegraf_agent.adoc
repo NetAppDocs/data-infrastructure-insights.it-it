@@ -29,7 +29,7 @@ Per informazioni sull'installazione su Kubernetes, consulta la link:task_config_
 NOTE: Per un audit e un reporting dei dati accurati, si consiglia di sincronizzare l'ora sul computer dell'agente utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
 
 
-NOTE: Se si desidera verificare i file di installazione prima di installare Agent, vedere la sezione riportata di seguito a <<Verifica dei checksum>>.
+NOTE: Se si desidera verificare i file di installazione prima di installare Agent, vedere la sezione riportata di seguito a <<Verifying Checksums>>.
 
 
 
@@ -364,15 +364,15 @@ systemctl stop telegraf (If your operating system is using systemd)
 
 
 
-== Verifica dei checksum
+== Verifica dei checksum del pacchetto Telegraf
 
-Il programma di installazione dell'agente Data Infrastructure Insights esegue controlli di integrità, ma alcuni utenti potrebbero voler eseguire le proprie verifiche prima di installare o applicare gli artefatti scaricati. Questo può essere fatto scaricando il programma di installazione e generando un checksum per il pacchetto scaricato, quindi confrontando il checksum con il valore mostrato nelle istruzioni di installazione.
+Il programma di installazione dell'agente Data Infrastructure Insights esegue controlli di integrità, ma alcuni utenti potrebbero voler eseguire le proprie verifiche prima di installare il binario Telegraf scaricato. Questo può essere fatto scaricando il programma di installazione e generando un checksum per il pacchetto scaricato, quindi confrontando il checksum con il valore mostrato nelle istruzioni di installazione.
 
 
 
 === Scaricare il pacchetto di installazione senza eseguire l'installazione
 
-Per eseguire un'operazione di solo download (invece del download e dell'installazione predefiniti), gli utenti possono modificare il comando di installazione dell'agente ottenuto dall'interfaccia utente e rimuovere l'opzione finale di "installazione".
+Per eseguire un'operazione di solo download (rispetto a quella di download e installazione predefinita), gli utenti possono modificare il comando di installazione dell'agente ottenuto dall'interfaccia utente e rimuovere l'opzione "install" (installa).
 
 Attenersi alla seguente procedura:
 
@@ -387,35 +387,36 @@ Non Windows (questi esempi sono per Kubernetes; i nomi degli script effettivi po
 
 * Download e installazione (impostazione predefinita):
 +
- installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download –-install
+ installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify && sudo -E -H ./$installerName --install
 * Solo download:
 +
- installerName=cloudinsights-kubernetes.sh … && sudo -E -H ./$installerName --download
+ installerName=cloudinsights-ubuntu_debian.sh … && ./$installerName --download --verify
 
 
 Finestre:
 
 * Download e installazione (impostazione predefinita):
 +
- !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download -install)
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify -install } else { Write-Host "Install script checksum does not match"})"
 * Solo download:
 +
- !$($installerName=".\cloudinsights-windows.ps1") … -and $(&$installerName -download)
+ !$($installerName=".\cloudinsights-windows.ps1") … -and $(if(((Get-FileHash $installerName).Hash).ToLower() -eq "INSTALLER_CHECKSUM ") { &$installerName -download -verify } else { Write-Host "Install script checksum does not match"})"
 
 
 Il comando solo download scaricherà tutti gli artefatti richiesti da Data Infrastructure Insights nella directory di lavoro. Gli artefatti includono, ma non possono essere limitati a:
 
 * uno script di installazione
 * un file di ambiente
-* File YAML
-* un file checksum (che termina con sha256.signed o sha256.ps1)
+* Un binario Telegraf
+* Una firma per il binario Telegraf
+* un certificato pubblico per verificare la firma binaria
 
 
-Lo script di installazione, il file di ambiente e i file YAML possono essere verificati utilizzando l'ispezione visiva.
+Il frammento di installazione scaricato e copiato da DII controlla automaticamente lo script di installazione e la firma del binario di telegraf viene verificata dallo script di installazione.
 
 
 
-=== Generare un valore di checksum
+=== Verificare il valore del checksum
 
 Per generare il valore del checksum, eseguire il seguente comando per la piattaforma appropriata:
 
@@ -425,20 +426,6 @@ Per generare il valore del checksum, eseguire il seguente comando per la piattaf
 * Finestre:
 +
  Get-FileHash telegraf.zip -Algorithm SHA256 | Format-List
-
-
-
-
-=== Verificare il checksum
-
-Estrarre il checksum previsto dal file checksum
-
-* Non Windows:
-+
- openssl smime -verify -in telegraf*.sha256.signed -CAfile netapp_cert.pem -purpose any -nosigs -noverify
-* Finestre:
-+
- (Get-Content telegraf.zip.sha256.ps1 -First 1).toUpper()
 
 
 
