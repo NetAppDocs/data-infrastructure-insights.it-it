@@ -87,6 +87,8 @@ sidebar:
         url: "/task_query_copy_table_values.html"
       - title: Query dei registri
         url: "/concept_log_explorer.html"
+      - title: Identificazione dei dispositivi inattivi
+        url: "/task_identify_inactive_devices.html"
     - title: Approfondimenti
       entries:
       - title: Panoramica

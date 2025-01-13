@@ -1,21 +1,18 @@
 ---
 sidebar: sidebar 
 permalink: task_identify_inactive_devices.html 
-keywords: inactive, device, 
+keywords: inactive, device, remove, removing, identify, identifying 
 summary: 'L"identificazione dei dispositivi inattivi consente di scegliere se eliminarli o assegnarli a un ruolo attivo.' 
 ---
 = Identificazione dei dispositivi inattivi
-:toc: macro
 :hardbreaks:
 :toclevels: 1
 :allow-uri-read: 
-:toc: 
 :toclevels: 1
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -24,10 +21,12 @@ Identificare le risorse di cui disponi e chi le utilizza è fondamentale per il 
 Per identificare le risorse inattive, procedere come segue.
 
 .Fasi
-* Navigare a *Esplora -> +Nuova query metrica*.
+* Selezionare *osservabilità > Esplora -> +Nuova query metrica*.
 * Selezionate _Storage_ dal menu a discesa.
 * Fate clic sull'ingranaggio e aggiungete _isActive_ come colonna.
 +
 Le righe con un segno di spunta sono attive. "X" indica dispositivi inattivi.
 
 
+
+Per rimuovere i dispositivi inattivi, seleziona i dispositivi da rimuovere e nel menu a discesa *azioni in blocco* seleziona _Elimina dispositivi inattivi_.

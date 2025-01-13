@@ -10128,11 +10128,9 @@
   <block id="14af2cecff51d4bd977845145cc871e8" category="list-text">*Deleted*: Un data collector rimosso e non più disponibile.</block>
   <block id="b92e6e167ffd0f1968a046d49559d1cd" category="list-text">Unità di acquisizione: Un computer dedicato all'hosting dei data collezioner, in genere una macchina virtuale. Questo computer si trova generalmente nello stesso data center/VPC degli elementi monitorati.</block>
   <block id="c5b4625b23c5673b268b9b686102faa0" category="list-text">Origine dati: Modulo per la comunicazione con uno stack hardware o software. È costituito da una configurazione e da un codice che vengono eseguiti sul computer AU per comunicare con il dispositivo.</block>
-  <block id="14f8a78e828f1a5ed0a16f4eb166171e" category="summary">L'identificazione dei dispositivi inattivi consente di scegliere se eliminarli o assegnarli a un ruolo attivo.</block>
   <block id="ee5c6c936b3e5e6b3191a941d5161f88" category="doc">Identificazione dei dispositivi inattivi</block>
   <block id="dedb4128ca8f8589aeee2da1198fdc45" category="paragraph">Identificare le risorse di cui disponi e chi le utilizza è fondamentale per il "dimensionamento corretto" e liberare l'infrastruttura inutilizzata. Puoi riallocare o decommissionare facilmente le risorse sottoutilizzate ed evitare acquisti non necessari.</block>
   <block id="89335488274d94cea3defd958dbbabbe" category="paragraph">Per identificare le risorse inattive, procedere come segue.</block>
-  <block id="62a2ac40719f6cb31d5e1ad43d9d8a19" category="list-text">Navigare a *Esplora -&gt; +Nuova query metrica*.</block>
   <block id="9ec73c52f582999e7cc8d920ca844c81" category="list-text">Selezionate _Storage_ dal menu a discesa.</block>
   <block id="4c6af067d4990a4c05731f55b8095467" category="list-text">Fate clic sull'ingranaggio e aggiungete _isActive_ come colonna.</block>
   <block id="49eec5d17a233960170b22a7e35d15a7" category="paragraph">Le righe con un segno di spunta sono attive. "X" indica dispositivi inattivi.</block>
@@ -11891,4 +11889,26 @@
   <block id="39dfb1596c6a6cd5efc77677cffa9f47" category="cell">Corrispondenza esatta dove il valore del percorso corrisponde a /home/userX/nested1/test</block>
   <block id="67796eee76b434ba7f714f24fce77a4c" category="cell">La ricerca esatta sarà più lenta rispetto alle ricerche nella directory.</block>
   <block id="ee884ab6f8aeb5114dc04fcb169533de" category="section-title">Ricerca percorso</block>
+  <block id="2cc37e7dae91aa6d162030f273b8b089" category="section-title">Creazione e utilizzo dei token di accesso API</block>
+  <block id="f7e5cf33ae8a7c09bd73c6eb95b3e017" category="paragraph">Per creare un token di accesso API per l'acquisizione dei dati Telegraf, eseguire una delle seguenti operazioni:</block>
+  <block id="8ddcacd36bfaa54f9de9d8d1c6d98ca9" category="section-title">Creare tramite la pagina di installazione di Data Collector</block>
+  <block id="394d78dd95d6065caac482adbe22a898" category="list-text">Accedere alla pagina di installazione di Data Collector per la piattaforma che si desidera utilizzare (Windows, Linux).</block>
+  <block id="7db0aa7259305c6d7d0e72d5ca0ebe3e" category="list-text">Creare un token con il pulsante + token di accesso API.</block>
+  <block id="eaaf6f42e491bead6370a5960ab7260c" category="list-text">Inserire un nome e fare clic su SAVE (Salva).</block>
+  <block id="0972f446b6a6a91283e10881d0cd5cf0" category="list-text">Il nome del token dovrebbe essere selezionato nel menu a discesa e verrà utilizzato durante l'installazione del raccoglitore.</block>
+  <block id="4cb3c725652f3200a0496010ad323294" category="section-title">Creare manualmente un token di accesso API</block>
+  <block id="cc7ffe0790f9f9e2c594de1ca95da934" category="list-text">Accedere a Admin&gt;accesso API.</block>
+  <block id="f567a7e9fa5b6ea07dfbcb1f10ba898f" category="list-text">Fare clic su + token di accesso API.</block>
+  <block id="da2b1a111c6e52a8a048f3f7d02e27f5" category="list-text">Immettere un nome e, facoltativamente, una descrizione.</block>
+  <block id="2a5f374bd17838390e94539cf1c9edc6" category="list-text">In "che tipo di API verrà utilizzato questo token per chiamare?" selezionare solo "inserimento dati" e quindi deselezionare "unità di acquisizione".</block>
+  <block id="bde31c4af787b8aa67aa8f46d9927e06" category="list-text">In "Permissions" (autorizzazioni) selezionare Read/Write (lettura/scrittura).</block>
+  <block id="47513702e119e549693050eff5813577" category="list-text">Deselezionare "ruota automaticamente i token per Kubernetes".</block>
+  <block id="e1fda48afafafca9c77b96f3325e10f1" category="paragraph">Per utilizzare il token di accesso API appena creato, selezionarlo dal menu a discesa "Select existing API Access Token or create a new one" (Seleziona token di accesso API esistente o creane uno nuovo) nella pagina del programma di installazione. Si noti che è possibile utilizzare solo token con le seguenti proprietà:</block>
+  <block id="9533e239d3608e18a0887fa1e16eeb68" category="list-text">Tipo di API: Solo "inserimento dei dati"</block>
+  <block id="80ca9e629a03eaeba4e8aee7e74f24d0" category="list-text">Autorizzazioni: Lettura/scrittura</block>
+  <block id="4b6539abc7c077e53508d1262f8b50a0" category="list-text">Rotazione automatica di Kubernetes: OFF</block>
+  <block id="dc404ee30c75f557f651d109560394f2" category="summary">L'identificazione dei dispositivi inattivi consente di scegliere se eliminarli o assegnarli a un ruolo attivo.</block>
+  <block id="ca351e1a429ee72dbdb2061c22743ef6" category="list-text">Selezionare *osservabilità &gt; Esplora -&gt; +Nuova query metrica*.</block>
+  <block id="5e7f24385025eba3461014d3d964455b" category="paragraph">Per rimuovere i dispositivi inattivi, seleziona i dispositivi da rimuovere e nel menu a discesa *azioni in blocco* seleziona _Elimina dispositivi inattivi_.</block>
+  <block id="72a442c57900f55848aa4acb856a507d" category="sidebar">Identificazione dei dispositivi inattivi</block>
 </blocks>
