@@ -20,6 +20,27 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Ecco alcu
 
 
 
+== Gennaio 2025
+
+
+
+=== Gestione proattiva dei rischi con il raggruppamento Forensics
+
+Ecco la nostra ultima funzionalità progettata per migliorare la sicurezza e le funzionalità di gestione delle risorse. Grazie alle funzionalità avanzate di gruppo per gruppo e al supporto gerarchico di più gruppi per gruppo, ora è possibile identificare facilmente gli utenti che hanno effettuato l'accesso a cartelle specifiche, determinare gli utenti e le condivisioni più attivi e gestire in modo proattivo i rischi tenendo traccia degli indirizzi IP dei client attivi. Ottimizza l'utilizzo di storage e larghezza di banda individuando i file e le cartelle con accessi più frequenti e ottenendo un maggiore controllo sull'accesso al sistema identificando gli utenti.
+
+image:forensics_activity_example.png["schermata di esempio di monitoraggio delle attività forensics"]
+
+
+
+=== Controllo accessi dashboard
+
+Data Infrastructure Insights ti offre ora un maggiore controllo sull'accesso alle dashboard create. È possibile scegliere chi può modificare i grafici. L'utente controlla l'esposizione a informazioni potenzialmente riservate. State ancora lavorando su una dashboard che non è pronta per la visibilità generale? Puoi tenerlo privato fino a quando non sei pronto a condividerlo.
+
+image:Dashboard_Sharing_Options.png["opzioni di condivisione dashboard"]
+
+'''
+
+
 == Dicembre 2024
 
 
@@ -45,14 +66,6 @@ image:vm_optimization_summary.png["Schermata Riepilogo ottimizzazione VM"]
 Ora è possibile utilizzare i diagrammi temporali (bar, linea, area) per identificare le tendenze e i modelli nei dati di log, come errori ricorrenti o picchi di attività, fornendo informazioni preziose sul comportamento del sistema nel tempo. Inoltre, con le tabelle è ora possibile includere i messaggi di registro direttamente nella dashboard, consentendo una visualizzazione più completa dei dettagli del registro.
 
 image:log_insights_dashboard_example.png["registra informazioni su una dashboard"]
-
-
-
-=== Gestisci in modo proattivo i rischi con il raggruppamento di analisi
-
-Ecco la nostra ultima funzionalità progettata per migliorare la sicurezza e le funzionalità di gestione delle risorse. Grazie alle funzionalità avanzate di analisi forensi per gruppo e al supporto gerarchico multiplo per gruppo, ora è possibile identificare facilmente gli utenti a cui si accede a cartelle specifiche, determinare gli utenti e le condivisioni più attive e gestire in modo proattivo il rischio tenendo traccia degli indirizzi IP dei client attivi. Ottimizza l'utilizzo di storage e larghezza di banda identificando i file e le cartelle con accessi più frequenti e ottieni un maggiore controllo sull'accesso al sistema identificando utenti reali.
-
-image:forensics-group-by-example-screen.png["schermata di esempio forensics che mostra group-by"]
 
 '''
 

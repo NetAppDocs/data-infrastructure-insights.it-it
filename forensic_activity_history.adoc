@@ -55,7 +55,7 @@ La tabella _*tutte le attività*_ mostra le seguenti informazioni. Nota: Non tut
 ** *Altra modifica* - qualsiasi altro evento non descritto in precedenza. Tutti gli eventi non mappati vengono mappati al tipo di attività "Altro cambiamento". Applicabile a file e cartelle.
 
 
-* Il percorso *Path* è il percorso _entity_.
+* Il percorso *Path* è il percorso _entity_. Questo deve essere il percorso esatto dell'entità (ad esempio, "_/home/userX/nested1/nested2/abc.txt_") O la parte di directory del percorso per la ricerca ricorsiva (ad esempio, "_/home/userX/nested1/nested2/_"). NOTA: I modelli di percorso regex (ad esempio _userX_) NON sono consentiti qui. In alternativa, è possibile specificare filtri a livello di cartella di percorso singoli, come indicato di seguito, per il filtraggio dei percorsi.
 * La cartella *1st Level (Root)* è la directory principale del percorso dell'entità in minuscolo.
 * La cartella *2nd Level* è la directory di secondo livello del percorso dell'entità in minuscolo.
 * La cartella *3rd Level* è la directory di terzo livello del percorso dell'entità in minuscolo.
@@ -112,7 +112,7 @@ Premere Invio o fare clic all'esterno della casella del filtro per applicare il 
 I seguenti campi sono soggetti a speciali regole di filtraggio:
 
 * *Tipo di entità*, utilizzando l'estensione dell'entità (file) - è preferibile specificare il tipo di entità esatto all'interno delle virgolette. Ad esempio _"txt"_.
-* *Percorso* dell'entità - filtri percorso directory (stringa di percorso che termina con /) fino a 4 directory profonde sono consigliate per risultati più veloci. Ad esempio, _"/home/userX/nested1/nested2/"_. Fare riferimento alla tabella riportata di seguito per ulteriori dettagli.
+* *Percorso* dell'entità - questo deve essere il percorso esatto dell'entità (ad esempio, "_/home/userX/nested1/nested2/abc.txt_") O la porzione di directory del percorso per la ricerca ricorsiva (ad esempio, "_/home/userX/nested1/nested2/_"). NOTA: I modelli di percorso regex (ad esempio, *userX*) NON sono consentiti qui. Filtri percorso directory (stringa di percorso che termina con /) per risultati più rapidi si consiglia di utilizzare fino a 4 directory di profondità. Ad esempio, "_/home/userX/nested1/nested2/_". Fare riferimento alla tabella riportata di seguito per ulteriori dettagli.
 * Cartella livello 1st (radice) - directory principale di percorso entità come filtri. Ad esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, allora è possibile usare home O "home".
 * Cartella a 2nd livelli - directory a 2nd livelli di filtri percorso entità. Per esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, allora userX O "userX" possono essere usati.
 * Cartella a 3rd livelli: Directory a 3rd livelli di filtri percorso entità.
@@ -145,7 +145,7 @@ I campi precedenti sono soggetti a quanto segue durante il filtraggio:
 | Percorso = "/home/userX/nested1/" | Ricerca ricorsiva di tutti i file e le cartelle in una determinata directory | Veloce | Le ricerche nelle directory sono rapide fino a 4 directory. 
 
 
-| Percorso = "/home/userX/nested1/test" | Ricerca ricorsiva di tutti i file e le cartelle in un determinato percorso regex(test* potrebbe significare file O directory O entrambi) | Più lento | La ricerca regex di directory+file sarà più lenta rispetto alle ricerche di directory. 
+| Percorso = "/home/userX/nested1/test" | Corrispondenza esatta dove il valore del percorso corrisponde a /home/userX/nested1/test | Più lento | La ricerca esatta sarà più lenta rispetto alle ricerche nella directory. 
 
 
 | Percorso = "/home/userX/nested1/nested2/nested3/" | Ricerca ricorsiva di tutti i file e le cartelle in una determinata directory | Più lento | Più di 4 ricerche di directory sono più lente da ricercare. 
@@ -230,7 +230,7 @@ La cronologia delle attività viene mantenuta per 13 mesi per gli ambienti di si
 |===
 
 
-== Ricerca percorso / percorso originale
+== Ricerca percorso
 
 I risultati della ricerca con e senza / saranno diversi
 

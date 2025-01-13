@@ -245,8 +245,6 @@ sidebar:
       entries:
       - title: Analisi delle attività - tutte le attività
         url: "/forensic_activity_history.html"
-      - title: Analisi delle attività - entità
-        url: "/forensic_entity_detail.html"
       - title: Utenti
         url: "/forensic_user_overview.html"
     - title: Policy di risposta automatizzate
