@@ -484,5 +484,8 @@ Nota: Per rendere queste impostazioni persistenti durante i riavvii dei nodi, è
  fs.inotify.max_user_instances=<something larger than current setting>
  fs.inotify.max_user_watches=<something larger than current setting>
 ----
+
+
+| I pod DS di telegraf riportano errori relativi al mancato invio di richieste HTTP da parte del plugin di input kuPdi a causa dell'impossibilità di convalidare il certificato TLS. Ad esempio: E! [Inputs.kuPQ] errore nel plugin: Errore durante la richiesta HTTP di "https://<kubelet_IP>:10250/stats/summary":[]ottenere "https://<kubelet_IP>:10250/stats/summary":[] tls: Impossibile verificare il certificato: X509: Impossibile convalidare il certificato per <kubelet_IP> perché non contiene alcuna SAN IP | Questo si verifica se il kubelet utilizza certificati autofirmati e/o il certificato specificato non include il <kubelet_IP> nell'elenco dei certificati _Subject alternative Name_. Per risolvere questo problema, l'utente può modificare il link:telegraf_agent_k8s_config_options.html["configurazione dell'agente"]e impostare _telegraf:insecureK8sSkipVerify_ su _true_. Questo configurerà il plugin di input telegraf per saltare la verifica. In alternativa, l'utente può configurare il kubelet per link:https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/["ServerTLSBootstrap"], che attiverà una richiesta di certificato dall'API 'certificates.k8s.io'. 
 |===
 Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
