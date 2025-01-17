@@ -4435,9 +4435,7 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
   <block id="c7f50a9f133f1f71a9f91fe12f7c7f7e" category="inline-link-macro">Avviso per approfondimenti sull'infrastruttura dati (in precedenza Cloud Insights)</block>
-  <block id="552bbf7b91025a7ce4d57570549e5d96" category="paragraph"><block ref="552bbf7b91025a7ce4d57570549e5d96" category="inline-link-macro-rx"></block></block>
   <block id="4d8cd5134c1193f4d301c7e6bcaa38a7" category="inline-link-macro">Avviso per la sicurezza del carico di lavoro (in precedenza Cloud Secure)</block>
-  <block id="536041084bffaf10e48c1cc03ccee7a2" category="paragraph"><block ref="536041084bffaf10e48c1cc03ccee7a2" category="inline-link-macro-rx"></block></block>
   <block id="af943d1d81f743ab6e7c9bcbe3a8c6e9" category="summary">Un file YAML di esempio per NKMO Clusterrole</block>
   <block id="94e0aa0f534273005cdbd647f8f4eab8" category="doc">Esempio di NKMO Clusterrole YAML</block>
   <block id="38836a8a56831bc3569901f9b16d3eaf" category="paragraph">Il componente _kubectl_ di NetApp Kubernetes Monitoring Operator (NKMO) deve essere configurato con accesso ai seguenti oggetti kubernetes, almeno: Agenti, clusterrole, clusterrolebinding, customresourcedefinizioni, implementazioni, namespace, ruoli, associazioni di ruoli, segreti, serviceaccounts, e servizi. Di seguito è riportato un esempio di clusterrole con questi privilegi minimi.</block>
@@ -11917,4 +11915,6 @@
   <block id="2f461803a8b3a27284482a32459a1078" category="cell">ee questo <block ref="0dcd3ea27696029fecb8ccd7e247f633" category="inline-link-macro-rx"></block>. L'impostazione _non protetta_ indicherà all'operatore di monitoraggio Kubernetes di eseguire Telegraf con il<block ref="3a41393afb053a415e6dc30cf704d899" prefix=" " category="inline-code"></block> flag.</block>
   <block id="0860569a69c3584507ee09f4be585418" category="cell">insecureK8sSkipVerify</block>
   <block id="3008cd3125cccc003fa13335717e556e" category="cell">Se telegraf non è in grado di verificare il certificato a causa della mancanza di SAN IP, provare ad attivare il salto di verifica</block>
+  <block id="3a6957a9f0cd14c98be3bfcbf85db668" category="paragraph"><block ref="3a6957a9f0cd14c98be3bfcbf85db668" category="inline-link-macro-rx"></block></block>
+  <block id="9e43104f0687bd3a308759c5411641d7" category="paragraph"><block ref="9e43104f0687bd3a308759c5411641d7" category="inline-link-macro-rx"></block></block>
 </blocks>

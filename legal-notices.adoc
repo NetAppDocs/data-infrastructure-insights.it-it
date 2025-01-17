@@ -47,6 +47,6 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.
 
-link:media/Notice_Cloud_Insights-2023-04.pdf["Avviso per approfondimenti sull'infrastruttura dati (in precedenza Cloud Insights)"]
+link:media/Data_Infrastructure_InsightsOn-prem_ComponentsNOTICE-1.pdf["Avviso per approfondimenti sull'infrastruttura dati (in precedenza Cloud Insights)"]
 
-link:media/Notice_Cloud_Secure-2022-12-14.pdf["Avviso per la sicurezza del carico di lavoro (in precedenza Cloud Secure)"]
+link:media/Data_Infrastructure_Insights_Workload_SecurityOn-prem_ComponentsNOTICE-1.pdf["Avviso per la sicurezza del carico di lavoro (in precedenza Cloud Secure)"]
