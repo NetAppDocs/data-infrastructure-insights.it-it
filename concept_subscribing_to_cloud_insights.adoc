@@ -19,7 +19,14 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 Per iniziare, Data Infrastructure Insights è semplice come tre semplici passaggi:
 
 * Registrati per ottenere un account su link:https://bluexp.netapp.com//["*NetApp BlueXP*"] per accedere a tutte le offerte Cloud di NetApp.
-* Registrati a link:https://cloud.netapp.com/cloud-insights["*prova gratuita*"]Data Infrastructure Insights per scoprire le funzionalità disponibili.
+* Registrati per una prova gratuita di Data Infrastructure Insights per scoprire le funzionalità disponibili. Per registrarti per una prova gratuita:
++
+** Consultare https://netapp.com[]
+** Seleziona *come acquistare* nella parte superiore della pagina.
+** Selezionare *Richiedi prova*. Se non sei ancora registrato con BlueXP , inserisci i tuoi dati e registrati. Altrimenti, accedi.
+** Pianifica un incontro o attendi che un rappresentante ti contatti per informazioni sul periodo di prova.
+
+
 * *Iscriviti* a Data Infrastructure Insights per un accesso continuo e ininterrotto ai tuoi dati tramite link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Vendite NetApp"]o link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Mercato AWS"].
 
 

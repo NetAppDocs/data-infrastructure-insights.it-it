@@ -278,11 +278,12 @@ Nelle versioni di ONTAP precedenti alla 9.9 non è necessario impostare _data-fp
 
 == Riproduci-Pausa Data Collector
 
-2 nuove operazioni sono ora visualizzate sul menu kebab del raccoglitore (PAUSA e RIPRESA).
-
 Se Data Collector è in stato _running_, è possibile sospendere la raccolta. Aprire il menu "tre punti" per il raccoglitore e selezionare PAUSA. Mentre il raccoglitore è in pausa, non vengono raccolti dati da ONTAP e non vengono inviati dati dal raccoglitore a ONTAP. Ciò significa che non verranno trasmessi eventi Fpolicy da ONTAP al data collector e da lì a Data Infrastructure Insights.
 
 Tenere presente che se in ONTAP vengono creati nuovi volumi e così via mentre il collector è in pausa, workload Security non raccoglierà i dati e quei volumi, ecc. non verranno riflessi in dashboard o tabelle.
+
+
+NOTE: Un raccoglitore non può essere messo in pausa se ha utenti con restrizioni. Ripristinare l'accesso utente prima di mettere in pausa il raccoglitore.
 
 Tenere presente quanto segue:
 
