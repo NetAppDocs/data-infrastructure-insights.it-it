@@ -25,3 +25,11 @@ image:san_analyzer_example_with_panel.png["Mappa della topologia di un sistema s
 
 
 == Esplora le connessioni tra le tue risorse
+
+Selezionare *osservabilità > analizza > analizzatore SAN* per visualizzare l'analizzatore SAN. Impostare un filtro per applicazione, host, fabric e/o Storage. Viene visualizzata la mappa degli oggetti, che mostra gli oggetti collegati. Passare il mouse su un oggetto per visualizzare le metriche di traffico per tali connessioni.
+
+image:san_analyzer_traffic_metrics.png[""]
+
+Facendo clic su un oggetto o un gruppo si apre un pannello a scorrimento che fornisce ulteriori dettagli sull'oggetto e le relative connessioni. La presentazione include schede che mostrano un riepilogo, i dettagli della porta e le informazioni sulla zona, se disponibili.
+
+image:san_analyzer_slideout_example.png[""]
