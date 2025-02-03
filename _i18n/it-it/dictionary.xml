@@ -11927,4 +11927,16 @@
   <block id="fde6f74861c217b576ec5d769f2467c3" category="paragraph"><block ref="fde6f74861c217b576ec5d769f2467c3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3cfbb427bd17b95ae08e5597561217ef" category="paragraph">Facendo clic su un oggetto o un gruppo si apre un pannello a scorrimento che fornisce ulteriori dettagli sull'oggetto e le relative connessioni. La presentazione include schede che mostrano un riepilogo, i dettagli della porta e le informazioni sulla zona, se disponibili.</block>
   <block id="7512260392fef04bf211fab22007addd" category="paragraph"><block ref="7512260392fef04bf211fab22007addd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18082cdb9388e2686e081dd6012e47b8" category="summary">Si determina se un dashboard creato è pubblico o privato.</block>
+  <block id="cc5c681651d638257ae03658c963c7c6" category="doc">Gestione degli accessi tramite dashboard</block>
+  <block id="571ad98bb1054a211a5d3fa3a3240265" category="paragraph">Data Infrastructure Insights ti offre ora un maggiore controllo sull'accesso alle dashboard create. È possibile scegliere chi può modificare i grafici. L'utente controlla l'esposizione a informazioni potenzialmente riservate. Mantenere un dashboard privato consente di finalizzare le visualizzazioni fino a quando non sono pronte ad essere consumate da altri all'interno dell'organizzazione.</block>
+  <block id="505e6238dfdc62d1b4bbdf930fa887b8" category="inline-image-macro">opzioni di condivisione dashboard, larghezza=300</block>
+  <block id="43b5d7a5affce9056fb3d7ec4b82fe17" category="paragraph"><block ref="43b5d7a5affce9056fb3d7ec4b82fe17" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="547a803d844f9925f62c57d49f10caf6" category="paragraph">Per impostazione predefinita, quando si crea una nuova dashboard, tale dashboard è visibile solo all'utente, il creatore. Nessun altro utente può visualizzare o modificare il dashboard.</block>
+  <block id="78d12ef818f574226b0780765511e2d5" category="paragraph">Una volta completata la finalizzazione del dashboard, è possibile scegliere di consentire ad altri utenti dell'organizzazione di visualizzarlo. Per condividere un dashboard, nell'elenco del dashboard, seleziona _Share_ dal menu di destra.</block>
+  <block id="8e561a2090f27ed80a24e59dff11dcce" category="inline-image-macro">accesso alla condivisione del dashboard dal menu</block>
+  <block id="5fc6afe4cfc7bc7e58ad6e7119812663" category="paragraph"><block ref="5fc6afe4cfc7bc7e58ad6e7119812663" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">È possibile scegliere di condividere il dashboard a tutti o di selezionare gli utenti, con autorizzazioni Modifica o sola lettura.</block>
+  <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">Menu a discesa per condividere un dashboard con autorizzazione Modifica o lettura</block>
+  <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
