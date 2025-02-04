@@ -11939,4 +11939,15 @@
   <block id="16442b20a2319083af65dedb2d7e942e" category="paragraph">È possibile scegliere di condividere il dashboard a tutti o di selezionare gli utenti, con autorizzazioni Modifica o sola lettura.</block>
   <block id="1dcba5cd7d6049883623c0653a2031f6" category="inline-image-macro">Menu a discesa per condividere un dashboard con autorizzazione Modifica o lettura</block>
   <block id="ac0466f21ebde71eed9f3673b4c7da1b" category="paragraph"><block ref="ac0466f21ebde71eed9f3673b4c7da1b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="98465e4573c2849304e85edaeef13370" category="summary">Ottimizzazione VM</block>
+  <block id="761ab7bf046ac25fda0da8f1af542322" category="paragraph">Per iniziare, accedere a osservabilità &gt; analisi &gt; ottimizzazione VM. Comparirà un riepilogo dei potenziali risparmi suddivisi per numero di core e risparmi sullo storage. È possibile impostare i filtri in base al data center, all'IP del Virtual Center o al cluster oppure impostare filtri personalizzati per restringere ulteriormente la messa a fuoco.</block>
+  <block id="045386d087f10e1f0ae1e3bf75624afe" category="inline-image-macro">panoramica dell'ottimizzazione delle vm</block>
+  <block id="7110454d98ba958eec64260bbc5dec80" category="paragraph"><block ref="7110454d98ba958eec64260bbc5dec80" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="03f6f40a2cf552119978ffce0238086f" category="paragraph">La scheda Hypervisor Decommissioning mostra i potenziali risparmi sui costi in base alla strategia di ottimizzazione selezionata. Ogni strategia utilizza soglie diverse per determinare i potenziali risparmi.</block>
+  <block id="6e3975fe060cfaed5d52ef53dce4935b" category="paragraph">Selezionare un cluster nell'elenco per aprire un pannello a scorrimento con i dettagli sull'utilizzo della CPU e della memoria per il cluster.</block>
+  <block id="f76142da98b557ade1c2d52abf0a207b" category="inline-image-macro">scheda ottimizzazione hypervisor</block>
+  <block id="bfea8ae8feffd62a3b499ac0dc5015ac" category="paragraph"><block ref="bfea8ae8feffd62a3b499ac0dc5015ac" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0dc236d363c2d7f668f1ee1391ffab69" category="paragraph">La scheda recupero VM fornisce dettagli sulle VM che sono inattive o spente per più di 30, 60 o 90 giorni, insieme ai potenziali risparmi di capacità, memoria e vCPU. Selezionando una VM dall'elenco si apre la pagina dei dettagli per tale VM.</block>
+  <block id="5edbd52aee44c2dfb6c01abc4128600a" category="inline-image-macro">scheda recupero vm</block>
+  <block id="e2e66b001cd3f2f1481c4b23049ca899" category="paragraph"><block ref="e2e66b001cd3f2f1481c4b23049ca899" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
