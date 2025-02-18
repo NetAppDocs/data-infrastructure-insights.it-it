@@ -34,6 +34,11 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo data c
 
 
 
+NOTE: ASA R2 indica i modelli di ultima generazione della piattaforma di storage ONTAP ASA. Sono inclusi i modelli di array ASA A1K, A90, A70, A50, A30 e A20.
+
+Per tutti i sistemi ASA di generazione precedente, utilizzare il link:task_dc_na_ontap_rest.html["ONTAP REST"] raccoglitore.
+
+
 
 == Nota sulle autorizzazioni
 
