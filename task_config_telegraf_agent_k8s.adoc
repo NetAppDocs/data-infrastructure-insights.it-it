@@ -69,6 +69,34 @@ image:KubernetesModifyDeploymentScreen.png["Modificare le opzioni di distribuzio
 
 == Aggiornamento alla versione più recente di Kubernetes Monitoring Operator
 
+
+
+=== Aggiornamenti a pulsante DII
+
+Puoi aggiornare Kubernetes Monitoring Operator attraverso la pagina DII Kubernetes Collectors. Fai clic sul menu accanto al cluster che desideri aggiornare e seleziona _Upgrade_. L'operatore verificherà le firme delle immagini, eseguirà un'istantanea dell'installazione corrente ed eseguirà l'aggiornamento. Entro pochi minuti dovrebbe essere visualizzato l'avanzamento dello stato dell'operatore attraverso l'aggiornamento in corso al più recente. Se si verifica un errore, è possibile selezionare lo stato Error (errore) per ulteriori dettagli e fare riferimento alla tabella di risoluzione dei problemi degli aggiornamenti a pulsante riportata di seguito.
+
+
+
+==== Aggiornamenti a pulsante con repository privati
+
+Se l'operatore è configurato per utilizzare un archivio privato, assicurarsi che tutte le immagini richieste per l'esecuzione dell'operatore e le relative firme siano disponibili nel repository. Se si verifica un errore durante il processo di aggiornamento per le immagini mancanti, è sufficiente aggiungerle al repository e riprovare l'aggiornamento. Per caricare le firme delle immagini nel vostro repository, usate lo strumento di cogenerazione come segue, assicurandovi di caricare le firme per tutte le immagini specificate in 3 opzionale: Caricate le immagini dell'operatore nel vostro repository privato > immagine pull Snippet
+
+[listing]
+----
+cosign copy example.com/src:v1 example.com/dest:v1
+#Example
+cosign copy <DII container registry>/netapp-monitoring:<image version> <private repository>/netapp-monitoring:<image version>
+----
+
+
+==== Ripristino di una versione precedente
+
+Se l'aggiornamento è stato eseguito utilizzando la funzione di aggiornamento tramite pulsante e si verificano problemi con la versione corrente dell'operatore entro sette giorni dall'aggiornamento, è possibile eseguire il downgrade alla versione precedente utilizzando lo snapshot creato durante il processo di aggiornamento. Fai clic sul menu accanto al cluster che desideri ripristinare e seleziona _Roll back_.
+
+
+
+=== Aggiornamenti manuali
+
 Determinare se esiste una configurazione Agentcon l'operatore esistente (se lo spazio dei nomi non è il _monitoraggio netapp_ predefinito, sostituire lo spazio dei nomi appropriato):
 
  kubectl -n netapp-monitoring get agentconfiguration netapp-monitoring-configuration
