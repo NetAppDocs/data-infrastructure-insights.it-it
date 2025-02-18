@@ -70,17 +70,6 @@ Se la versione di prova gratuita è scaduta e non si è ancora abbonati a Data I
 
 
 
-== Cosa succede se il mio abbonamento è scaduto?
-
-Se si dispone di un abbonamento a Data Infrastructure Insights, ma tale abbonamento è scaduto, si avrà un periodo di tolleranza di cinque giorni per rinnovare l'abbonamento. Tutte le funzionalità di Data Infrastructure Insights rimarranno attive durante questo periodo di valutazione.
-
-Trascorso questo periodo, la funzionalità Data Infrastructure Insights viene sospesa fino al rinnovo. Per rinnovare, vedere la pagina *Amministratore > abbonamento* o contattare il reparto vendite NetApp.
-
-
-NOTE: I dati Data Infrastructure Insights raccolti fino alla fine del Grace period rimangono intatti per 30 giorni dopo il Grace period. Se rinnovi l'abbonamento entro questo intervallo di tempo, tutti i dati fino al termine del periodo di prova saranno disponibili.
-
-
-
 == Cosa succede se il mio *abbonamento* è scaduto?
 
 Se si dispone di un abbonamento a Data Infrastructure Insights, ma tale abbonamento è scaduto, si avrà un periodo di tolleranza di cinque giorni per rinnovare l'abbonamento. Tutte le funzionalità di Data Infrastructure Insights rimarranno attive durante questo periodo di valutazione.

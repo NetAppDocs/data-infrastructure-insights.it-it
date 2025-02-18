@@ -40,7 +40,7 @@ Quando si apre il portale di reporting, la cartella _Team Content_ è il punto d
 . Selezionare *Report* per accedere ai report predefiniti.
 
 
-image:Reporting_Menu.png["Menu Reporting"] image:Reporting_Team_Content.png["Contenuto del team che mostra i report evidenziati"]
+image:Reporting_Menu.png["Menu Reporting"] image:Reporting_Team_Content.png["Contenuto del team che mostra i report evidenziati, larghezza=800"]
 
 
 
