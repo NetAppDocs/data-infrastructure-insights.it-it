@@ -36,7 +36,7 @@ image:ontap_essentials_asa_views.png["Menu a discesa ONTAP Essentials: ASA disti
 
 Rafforza il tuo livello di sicurezza e ottimizza la gestione delle risorse con il monitoraggio avanzato dell'utilizzo delle API REST, disponibile per gli utenti amministrativi. Con il monitoraggio dell'utilizzo delle API è possibile vedere quali token API vengono utilizzati, da quali indirizzi IP e dal volume di traffico generato. Collegando i token a specifici indirizzi IP e livelli di utilizzo, è possibile ottenere informazioni approfondite sull'accesso al sistema e sulle tendenze di utilizzo, fornendo il controllo necessario per mantenere un ambiente sicuro ed efficiente e garantire un funzionamento regolare delle operazioni.
 
-Per visualizzare l'utilizzo delle API, accedere a *osservabilità > Ammin. > accesso API* e selezionare _Visualizza utilizzo API_. Si noti che questa API è disponibile solo per le API di osservazione DII; non si applica alle API di reporting o di protezione del carico di lavoro.
+Per visualizzare l'utilizzo delle API, accedere a *osservabilità > Ammin. > accesso API* e selezionare _Visualizza utilizzo API_. Si noti che questa API è disponibile solo per le API di osservazione DII; non si applica alla protezione del carico di lavoro.
 
 image:api_usage_analytics_screenshot.png["Esempio di analisi dell'utilizzo delle API"]
 
