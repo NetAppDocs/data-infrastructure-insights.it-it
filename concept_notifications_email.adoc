@@ -56,6 +56,15 @@ Di seguito sono riportati alcuni esempi dei tipi di notifiche che è possibile i
 
 | La prova o l'abbonamento sono scaduti. L'account interrompe la raccolta dei dati in 48 ore. L'account verrà cancellato dopo 48 ore | Contattare link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Vendite NetApp"] per acquistare un abbonamento 
 |===
+[NOTE]
+====
+Per garantire che i destinatari ricevano notifiche da Data Infrastructure Insights, aggiungere i seguenti indirizzi e-mail a qualsiasi elenco "Consenti":
+
+* \accounts@service.cloudinsights.netapp.com
+* \DoNotReply@cloudinsights.netapp.com
+
+
+====
 
 
 == Elenco globale destinatari per gli avvisi
