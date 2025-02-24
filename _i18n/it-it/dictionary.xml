@@ -11627,7 +11627,6 @@
   <block id="a5692a71664d8513828d30dad7c829ca" category="list-text">Con quale frequenza cambiano gli schemi di denominazione del tenant?</block>
   <block id="71ff3a9d48edc0f7244689324f167d1b" category="paragraph">In genere, per identificare i dispositivi sul tenant viene utilizzato un flusso di lavoro simile al seguente. L'identificazione è un processo iterativo e potrebbe richiedere più fasi di pianificazione e definizione delle regole.</block>
   <block id="6923128dfebc9b724f26745512b0b891" category="admonition">Se sul tenant sono presenti dispositivi non identificati (altrimenti noti come dispositivi sconosciuti o generici) e successivamente si configura un'origine dati che identifica tali dispositivi al polling, questi non verranno più visualizzati o conteggiati come dispositivi generici.</block>
-  <block id="3283326b105a290a6a4699e952c4bb7a" category="paragraph">Data Infrastructure Insights include una serie di tutorial video che ti aiuteranno a comprendere queste funzionalità e a implementare al meglio le tue strategie di business Insight. Tutti gli utenti che hanno accesso al tenant Data Infrastructure Insights possono usufruire di questi tutorial.</block>
   <block id="555fd4883eff42c3c7a47a8af5c0d4c2" category="summary">Le informazioni ti danno uno sguardo all'impatto delle risorse su altre risorse sul tenant.</block>
   <block id="e59c6b6bc918194e22abd3fa59a5ca7d" category="paragraph">I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse sul tenant.</block>
   <block id="509083e073a2e0f15ee1570b73d69d00" category="paragraph">È possibile eseguire una serie di operazioni per ridurre o eliminare la possibilità di saturazione sul tenant. Ecco alcune cose che puoi provare.</block>
@@ -12014,4 +12013,5 @@
   <block id="bcaea0fa3a691efcd767e69c0bf6c611" category="paragraph">Per garantire che i destinatari ricevano notifiche da Data Infrastructure Insights, aggiungere i seguenti indirizzi e-mail a qualsiasi elenco "Consenti":</block>
   <block id="920ab4b11a04d50637a16a5c9699b3ba" category="list-text">\accounts@service.cloudinsights.netapp.com</block>
   <block id="b68146f7d3be586c34e5b6d021541f50" category="list-text">\DoNotReply@cloudinsights.netapp.com</block>
+  <block id="b496ede8f397a48079afe818e67e759f" category="paragraph">Data Infrastructure Insights include una serie di tutorial video che ti aiuteranno a comprendere queste funzionalità e a implementare al meglio le tue strategie di business Insight.</block>
 </blocks>

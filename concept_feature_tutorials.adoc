@@ -21,7 +21,7 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 [role="lead"]
 Data Infrastructure Insights è dotato di utili funzionalità che consentono di trovare i dati in modo rapido e semplice, risolvere i problemi e fornire informazioni dettagliate sull'ambiente aziendale. Trova facilmente i dati con potenti query, visualizza i dati in dashboard e invia avvisi e-mail per le soglie dei dati impostate.
 
-Data Infrastructure Insights include una serie di tutorial video che ti aiuteranno a comprendere queste funzionalità e a implementare al meglio le tue strategie di business Insight. Tutti gli utenti che hanno accesso al tenant Data Infrastructure Insights possono usufruire di questi tutorial.
+Data Infrastructure Insights include una serie di tutorial video che ti aiuteranno a comprendere queste funzionalità e a implementare al meglio le tue strategie di business Insight.
 
 
 
