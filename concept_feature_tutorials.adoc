@@ -19,22 +19,13 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Data Infrastructure Insights è dotato di utili funzionalità che consentono di trovare i dati in modo rapido e semplice, risolvere i problemi e fornire informazioni dettagliate sull'ambiente aziendale. Trova facilmente i dati con potenti query, visualizza i dati in dashboard e invia avvisi e-mail per le soglie dei dati impostate.
+Data Infrastructure Insights è dotato di utili funzionalità che consentono di risolvere i problemi in modo rapido e semplice e di fornire informazioni dettagliate sull'ambiente aziendale. Trova facilmente i dati con potenti query, visualizza i dati in dashboard e invia avvisi e-mail per le soglie dei dati impostate.
 
-Data Infrastructure Insights include una serie di tutorial video che ti aiuteranno a comprendere queste funzionalità e a implementare al meglio le tue strategie di business Insight.
-
-
-
-== Introduzione
-
-Guarda un breve tutorial che spiega come funziona Data Infrastructure Insights.
-
-video::howTo.mp4[]
 
 
 == Checklist e video tutorial
 
-La *Startup Checklist* visualizzata sul sito Data Infrastructure Insights contiene un elenco di diverse attività e concetti utili. Selezionando un elemento nella lista di controllo si accede alla pagina Data Infrastructure Insights (informazioni sull'infrastruttura dati) appropriata per tale concetto. Ad esempio, facendo clic sull'elemento _Create a Dashboard_ si apre la pagina Data Infrastructure Insights *Dashboard*.
+La *Startup Checklist* visualizzata sul tenant Data Infrastructure Insights contiene un elenco di diverse attività e concetti utili. Selezionando un elemento nella lista di controllo si accede alla pagina Data Infrastructure Insights (informazioni sull'infrastruttura dati) appropriata per tale concetto. Ad esempio, facendo clic sull'elemento _Create a Dashboard_ si apre la pagina Data Infrastructure Insights *Dashboard*.
 
 image:OnboardingChecklist.png["Avanzamento dell'elenco di controllo del tutorial"]
 
@@ -51,29 +42,4 @@ NOTE: È possibile visualizzare i tutorial in qualsiasi ordine, tutte le volte c
 
 === Disperdere l'elenco di controllo
 
-L'elenco di controllo per l'avvio viene visualizzato sul sito fino a quando non si fa clic sul collegamento _Do't Show Again_ (non mostrare più questo) nella parte inferiore dell'elenco di controllo. Anche dopo aver eliminato l'elenco di controllo, i tutorial sono ancora disponibili in ciascuna pagina di approfondimento dell'infrastruttura dati appropriata fino a quando non si ignora ciascuno di essi dalla barra dell'intestazione del messaggio.
-
-
-
-== Visualizzare i tutorial
-
-
-
-=== Esecuzione di query sui dati
-
-video::Queries.mp4[]
-
-
-=== Creazione di una dashboard
-
-video::Dashboards.mp4[]
-
-
-=== Risoluzione dei problemi
-
-video::Troubleshooting.mp4[]
-
-
-=== Risolvere i dispositivi
-
-video::AHR_small.mp4[]
+L'elenco di controllo di avvio viene visualizzato finché non si fa clic sul collegamento _non mostrare più_ in fondo all'elenco di controllo. Anche dopo aver eliminato l'elenco di controllo, i tutorial sono ancora disponibili in ciascuna pagina di approfondimento dell'infrastruttura dati appropriata fino a quando non si ignora ciascuno di essi dalla barra dell'intestazione del messaggio.
