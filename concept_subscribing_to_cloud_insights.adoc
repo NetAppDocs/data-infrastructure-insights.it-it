@@ -27,7 +27,7 @@ Per iniziare, Data Infrastructure Insights è semplice come tre semplici passagg
 ** Pianifica un incontro o attendi che un rappresentante ti contatti per informazioni sul periodo di prova.
 
 
-* *Iscriviti* a Data Infrastructure Insights per un accesso continuo e ininterrotto ai tuoi dati tramite link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["Vendite NetApp"]o link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Mercato AWS"].
+* *Iscriviti* a Data Infrastructure Insights per un accesso continuo e ininterrotto ai tuoi dati tramite link:https://bluexp.netapp.com/contact-cds["Vendite NetApp"]o link:https://aws.amazon.com/marketplace/pp/prodview-pbc3h2mkgaqxe["Mercato AWS"].
 
 
 Durante il processo di registrazione, è possibile scegliere l'area globale in cui ospitare l'ambiente Data Infrastructure Insights. Per ulteriori informazioni, consultare informazioni su Data Infrastructure Insights link:security_information_and_region.html["Informazioni e Regione"].
@@ -185,7 +185,7 @@ Se il numero di unità gestite è inferiore a 1.000 TB, puoi iscriverti tramite 
 
 === Iscriviti tramite NetApp Sales Direct
 
-Se il numero previsto di unità gestite è pari o superiore a 1.000, fare clic sul link:https://www.netapp.com/us/forms/sales-inquiry/cloud-insights-sales-inquiries.aspx["*Contattare il reparto vendite*"] pulsante per abbonarsi al team vendite NetApp.
+Se il numero previsto di unità gestite è pari o superiore a 1.000, fare clic sul link:https://bluexp.netapp.com/contact-cds["*Contattare il reparto vendite*"] pulsante per abbonarsi al team vendite NetApp.
 
 È necessario fornire le informazioni sull'infrastruttura dati *numero di serie* al rappresentante di vendita NetApp in modo che l'abbonamento a pagamento possa essere applicato all'ambiente Data Infrastructure Insights. Il numero di serie identifica in modo univoco l'ambiente di prova di Data Infrastructure Insights ed è disponibile nella pagina *Admin > Subscription*.
 

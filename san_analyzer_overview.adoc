@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: san_anayzer_overview.html 
+permalink: san_analyzer_overview.html 
 summary: SAN Analyzer fornisce la topologia per le risorse sul tenant 
 keywords: topology, analyze, analysis, map 
 ---
@@ -28,16 +28,16 @@ image:san_analyzer_example_with_panel.png["Mappa della topologia di un sistema s
 
 Selezionare *osservabilità > analizza > analizzatore SAN* per visualizzare l'analizzatore SAN. Impostare un filtro per applicazione, host, fabric e/o Storage. Viene visualizzata la mappa degli oggetti, che mostra gli oggetti collegati. Passare il mouse su un oggetto per visualizzare le metriche di traffico per tali connessioni.
 
+image:san_analyzer_traffic_metrics.png["Esempio di metriche del traffico di SAN Analyzer"]
+
 
 NOTE: La maggior parte dei filtri di SAN Analyzer (compresi quelli che è possibile aggiungere) sono contestuali; quando si seleziona un oggetto in uno di questi filtri, le scelte presentate negli altri menu a discesa dei filtri vengono aggiornate nel contesto con l'oggetto o gli oggetti selezionati. Le uniche eccezioni sono applicazione, porta e Switch; questi filtri non sono contestuali.
-
-image:san_analyzer_traffic_metrics.png[""]
 
 Facendo clic su un oggetto o un gruppo si apre un pannello a scorrimento che fornisce ulteriori dettagli sull'oggetto e le relative connessioni. Il pannello a scorrimento visualizza un riepilogo che fornisce dettagli sull'oggetto selezionato (ad esempio IP, Hypervisor, Fabric connessi, ecc., a seconda del tipo di oggetto) e grafici che mostrano le metriche per l'oggetto come latenza o IOPS, e modifiche e avvisi, se pertinenti. È possibile scegliere di visualizzare le metriche anche per gli oggetti correlati principali nei grafici, se lo si desidera.
 
 Oltre alla scheda Summary (Riepilogo), il pannello Sliddeout (estrazione) visualizza le schede relative a elementi quali i dettagli della porta o le informazioni sulla zona, in base all'oggetto selezionato.
 
-image:san_analyzer_slideout_example.png[""]
+image:san_analyzer_slideout_example.png["Pannello scorrevole dell'analizzatore SAN"]
 
 Se l'ambiente include dispositivi iSCSI, passando con il mouse sull'oggetto _iSCSI_ vengono evidenziate le connessioni relative a tali dispositivi iSCSI.
 

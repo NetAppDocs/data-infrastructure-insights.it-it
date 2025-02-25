@@ -10,7 +10,7 @@ summary: 'Con workload Security, puoi limitare l"accesso degli utenti in caso di
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'È possibile impostare policy di risposta automatiche per potenziali a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

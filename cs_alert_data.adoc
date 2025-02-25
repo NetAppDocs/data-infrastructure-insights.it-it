@@ -10,7 +10,7 @@ summary: 'Workload Security crea avvisi in caso di attività utente anomale o po
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./media
+:imagesdir: ./media/
 
 
 [role="lead"]

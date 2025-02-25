@@ -5,13 +5,16 @@ keywords: applications, asset, cost
 summary: 'La comprensione delle applicazioni utilizzate nell"ambiente aziendale consente di tenere traccia dell"utilizzo e dei costi delle risorse.' 
 ---
 = Monitoraggio dell'utilizzo delle risorse per applicazione
+:hardbreaks:
 :allow-uri-read: 
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
-:revdate: Understanding the applications used in your company's environment helps you to keep track of asset usage and cost.
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
+
+[role="lead"]
+La comprensione delle applicazioni utilizzate nell'ambiente aziendale consente di tenere traccia dell'utilizzo e dei costi delle risorse.
 
 Prima di poter tenere traccia dei dati associati alle applicazioni in esecuzione sul tenant, è necessario innanzitutto definire tali applicazioni e associarle alle risorse appropriate. È possibile associare le applicazioni alle seguenti risorse: Host, macchine virtuali, volumi, volumi interni, qtree, condivisioni e hypervisor.
 
