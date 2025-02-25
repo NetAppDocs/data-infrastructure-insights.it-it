@@ -26,7 +26,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 | Componente | Requisiti Linux 
 
 
-| Sistema operativo | Un computer che esegue una versione con licenza di una delle seguenti versioni: * CentOS 8 11 9,4 Stream (64 64 bit), CentOS 9 9,3 Stream, SELinux * openSUSE Leap da 64 a 64 (64 bit) * Oracle Linux da 64 a 20,04, 15 SP5 a 64 (15 SP3 bit) * Red Hat Enterprise Linux da 9,4 a 8,8, da 9,2 a 9,4 (9,4 bit), SELinux * 9,1-8,6 bit e Linux * 9,1-8,6 bit (Linux) * 64-8,8-22,04-15,3-15,5-64-10-24,04 e Linux. Si consiglia di utilizzare un server dedicato. 
+| Sistema operativo | Un computer che esegue una versione con licenza di una delle seguenti: * CentOS 9 64 64 Stream (64 10 9,4 bit) * openSUSE Leap da 15,3 11 9,5 a 20,04 (64 bit) * Oracle Linux 8,10 (15 SP4 bit), da 9,5 a 64 (9,4 bit), SELinux * Red Hat Enterprise Linux 9,5 (64 bit), da 9,1 a 8,10 (64 bit), SETS * 64-bit Linux * 9,4-9,1-64 e Linux * SETS 64-15 SP6-bit (Linux), Linux 24,04-15,5-22,04-64). Si consiglia di utilizzare un server dedicato. 
 
 
 | Comandi | per l'installazione è necessario decomprimere. Inoltre, il comando 'sudo su –' è necessario per l'installazione, l'esecuzione di script e la disinstallazione. 
