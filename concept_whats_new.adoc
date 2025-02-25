@@ -1037,7 +1037,7 @@ API Metering è stato spostato dalla pagina Subscription (abbonamento) alla pagi
 
 La connessione cloud per il data collector ONTAP 9.9+ è obsoleta. A partire dal 4 aprile 2023, i data collutori di Cloud Connection nel tuo ambiente non raccoglieranno più dati e presenteranno invece un errore durante il polling. Il data collector connessione cloud verrà rimosso completamente da Cloud Insights in un aggiornamento successivo.
 
-Prima del 4 aprile 2023, è obbligatorio configurare un nuovo data collector per il software di gestione dei dati NetApp ONTAP per tutti i sistemi ONTAP attualmente raccolti da Cloud Connection. link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/How_to_transition_from_NetApp_Cloud_Connection_to_AU_based_data_collector["Scopri di più"].
+Prima del 4 aprile 2023, è obbligatorio configurare un nuovo data collector per il software di gestione dei dati NetApp ONTAP per tutti i sistemi ONTAP attualmente raccolti da Cloud Connection.
 
 '''
 

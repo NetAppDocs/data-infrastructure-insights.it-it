@@ -95,7 +95,7 @@ Il modo più semplice per farlo è specificare la configurazione con caratteri j
 
 NOTE: L'uso di un asterisco (*) per i caratteri jolly è comune, ma la configurazione del proxy/firewall potrebbe utilizzare un formato diverso. Consultare la documentazione del proxy per verificare la correttezza delle specifiche dei caratteri jolly nell'ambiente in uso.
 
-Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApp link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Knowledge base"].
+Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApp link:https://kb.netapp.com/Cloud/BlueXP/DII/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Knowledge base"].
 
 
 
@@ -151,7 +151,7 @@ Il modo più semplice per farlo è specificare la configurazione con caratteri j
 
 NOTE: L'uso di un asterisco (*) per i caratteri jolly è comune, ma la configurazione del proxy/firewall potrebbe utilizzare un formato diverso. Consultare la documentazione del proxy per verificare la correttezza delle specifiche dei caratteri jolly nell'ambiente in uso.
 
-Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApp link:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Insights/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Knowledge base"].
+Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApp link:https://kb.netapp.com/Cloud/BlueXP/DII/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Knowledge base"].
 
 
 

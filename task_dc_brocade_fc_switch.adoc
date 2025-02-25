@@ -168,6 +168,6 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Viene visualizzato un messaggio che indica che più di un nodo è connesso alla porta Access Gateway | Verificare che il dispositivo NPV funzioni correttamente e che siano presenti tutti i WWN collegati. Non acquisire direttamente il dispositivo NPV. Invece, l'acquisizione dello switch fabric core raccoglierà i dati del dispositivo NPV. 
 
 
-| La raccolta delle prestazioni non riesce e viene visualizzato il messaggio "Timed out during sending SNMP request". | A seconda delle variabili di query e della configurazione dello switch, alcune query potrebbero superare il timeout predefinito. link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Insights/Cloud_Insight_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Scopri di più"]. 
+| La raccolta delle prestazioni non riesce e viene visualizzato il messaggio "Timed out during sending SNMP request". | A seconda delle variabili di query e della configurazione dello switch, alcune query potrebbero superare il timeout predefinito. link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Scopri di più"]. 
 |===
 Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
