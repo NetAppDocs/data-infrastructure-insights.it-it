@@ -58,8 +58,6 @@ NOTE: Se hai bisogno di altro tempo per valutare Data Infrastructure Insights e 
 
 Puoi anche iscriverti per una prova gratuita tramite AWS Marketplace. La versione di prova gratuita di AWS Marketplace offre l'accesso a Data Infrastructure Insights per un periodo di prova di 33 giorni e consente fino a 499 <<observability-metering,Unità gestite>>MU.
 
-Nota: Se si configurano più di 499 MU, si entra nello stato "violato". Mentre la versione di prova è in stato di violazione, l'utente perde l'accesso ad alcune funzionalità di Data Infrastructure Insights fino a quando la violazione non viene risolta, riducendo il numero di MU configurate o sottoscrivendo Data Infrastructure Insights.
-
 La versione di prova gratuita di AWS Marketplace non può essere estesa. In qualsiasi momento durante il periodo di prova, è possibile eseguire il downgrade a un abbonamento Data Infrastructure Insights Basic Edition o passare a un abbonamento a pagamento Data Infrastructure Insights visitando la pagina *Admin -> Subscription*.
 
 
@@ -142,7 +140,7 @@ Ogni livello viene misurato a un tasso diverso, con l'intero calcolato insieme p
 
  Effective usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
 
-NOTE: La somma delle unità gestite potrebbe differire leggermente dal conteggio dei Data Collector nella sezione di riepilogo. Questo perché i conteggi delle unità gestite vengono arrotondati all'unità gestita più vicina. La somma di questi numeri nell'elenco Data Collector (raccolta dati) potrebbe essere leggermente superiore a quella delle unità gestite totali nella sezione Status (Stato). La sezione riepilogativa indica il numero effettivo di unità gestite per l'abbonamento. Per facilitare questa operazione, DII calcola un singolo numero *effettivo* in base alle quantità _sottoscritte_; calcola quindi lo stesso numero in base all'archiviazione _scoperta_ e dichiara la violazione solo se la capacità effettiva scoperta è superiore al diritto effettivo. Ciò ti offre la flessibilità di monitorare le quantità che variano dagli importi sottoscritti per ogni livello, che DII consente finché lo storage totale rilevato rientra nell'autorizzazione effettiva sottoscritta.
+NOTE: La somma delle unità gestite potrebbe differire leggermente dal conteggio dei Data Collector nella sezione di riepilogo. Questo perché i conteggi delle unità gestite vengono arrotondati all'unità gestita più vicina. La somma di questi numeri nell'elenco Data Collector (raccolta dati) potrebbe essere leggermente superiore a quella delle unità gestite totali nella sezione Status (Stato). La sezione riepilogativa indica il numero effettivo di unità gestite per l'abbonamento. Per facilitare questa operazione, DII calcola un singolo numero *effettivo* in base alle quantità _sottoscritte_, quindi calcola lo stesso numero in base all'archiviazione _scoperta_. Ciò ti offre la flessibilità di monitorare le quantità che variano dagli importi sottoscritti per ogni livello, che DII consente finché lo storage totale rilevato rientra nell'autorizzazione effettiva sottoscritta.
 
 
 
