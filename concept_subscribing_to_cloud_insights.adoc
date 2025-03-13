@@ -158,8 +158,6 @@ Data Infrastructure Insights Infrastructure Observability e Kubernetes Observabi
 
 
 
-Se il tuo ambiente include o prevede di includere 1,000 o più unità gestite, sei idoneo per *Volume Pricing* e ti verrà richiesto di contattare NetApp Sales per iscriverti. Per ulteriori informazioni, vedere<<how-do-i-subscribe,di seguito>>.
-
 
 
 === Misurazione della sicurezza del carico di lavoro
@@ -183,7 +181,7 @@ Se il numero di unità gestite è inferiore a 1.000 TB, puoi iscriverti tramite 
 
 === Iscriviti tramite NetApp Sales Direct
 
-Se il numero previsto di unità gestite è pari o superiore a 1.000, fare clic sul link:https://bluexp.netapp.com/contact-cds["*Contattare il reparto vendite*"] pulsante per abbonarsi al team vendite NetApp.
+Se il numero previsto di unità gestite è pari o superiore a 1.000, fare clic sul link:https://www.netapp.com/forms/cloud-insights-contact-us["*Contattare il reparto vendite*"] pulsante per abbonarsi al team vendite NetApp.
 
 È necessario fornire le informazioni sull'infrastruttura dati *numero di serie* al rappresentante di vendita NetApp in modo che l'abbonamento a pagamento possa essere applicato all'ambiente Data Infrastructure Insights. Il numero di serie identifica in modo univoco l'ambiente di prova di Data Infrastructure Insights ed è disponibile nella pagina *Admin > Subscription*.
 
