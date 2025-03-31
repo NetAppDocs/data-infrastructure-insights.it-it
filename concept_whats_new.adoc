@@ -20,6 +20,67 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Ecco alcu
 
 
 
+== Marzo 2025
+
+
+
+=== Navigazione contestuale avanzata per una gestione efficiente dell'infrastruttura
+
+Risparmia tempo sfruttando Data Infrastructure Insights per l'eccellenza operativa. Ora stiamo aggiungendo collegamenti ai menu contestuali che consentono di passare direttamente da qualsiasi oggetto alla landing page delle risorse per ottenere informazioni dettagliate sulle prestazioni dei dispositivi, SAN Analyzer per la visualizzazione della topologia di rete, log per la consapevolezza operativa o Change Analyzer per la gestione della configurazione.
+
+Con l'accesso istantaneo ai dati chiave da più viste, si ottiene una comprensione più chiara delle relazioni degli oggetti più rapidamente. Questo flusso di lavoro semplificato accelera il processo decisionale e la risoluzione dei problemi, consentendo di risparmiare tempo e migliorando le funzionalità di analisi complessive.
+
+image:contextual_menu_example.png["Esempio di menu contestuale, larghezza=500"]
+
+
+
+=== Conservare la cronologia delle risorse rimosse
+
+La funzionalità avanzata di Infra Change preserva la cronologia delle risorse rimosse, come qtree e volumi che sono stati spostati e non sono più disponibili.
+
+Hai perso qualcosa nel tuo puzzle per la risoluzione dei problemi? Non più! Potrai vedere tutto, inclusi gli oggetti eliminati contrassegnati con un colpo di scena, per creare un contesto completo anche dopo la rimozione delle risorse, in modo da non perdere mai gli elementi critici derivanti da precedenti modifiche o avvisi lungo il percorso end-to-end.
+
+Il risultato? Tempi di risoluzione più rapidi e decisioni infrastrutturali più sicure, anche quando le risorse in questione non esistono più.
+
+image:infra_change_removed_assets.png["le risorse rimosse nell'infrastruttura cambiano mostrando con un barrato, width=300"]
+
+
+
+=== Aggiornamento tramite pulsante dell'operatore Kubernetes
+
+Vuoi essere sicuro di disporre dell'ultimo operatore Kubernetes? Aggiornare l'operatore on-demand dal menu del cluster DII Kubernetes Collectors. È sufficiente selezionare Aggiorna dal menu e l'operatore verificherà le firme delle immagini, acquisirà un'istantanea dell'installazione corrente ed eseguirà l'aggiornamento.
+
+L'aggiornamento a pulsante è una funzione opzionale e la sua attivazione può essere gestita in base al cluster.
+
+image:dii_push_button_upgrade.png["aggiornamento operatore a pulsante dal menu del quadro strumenti, larghezza=600"]
+
+
+
+=== Test connettività per Storage workload Security Data Collector
+
+La funzionalità di connettività di test consente agli utenti finali di identificare le cause specifiche degli errori durante l'impostazione dei collettori di dati in Data Infrastructure Insights (DII) workload Security. Ciò consente agli utenti di correggere autonomamente i problemi relativi alla comunicazione di rete o ai ruoli mancanti.
+
+image:ws_test_connection_button.png["workload security test connection button"] image:ws_test_connection_success_example.png["Workload Security 'Test Connection' success message"]
+
+
+
+=== Supporto del sistema operativo
+
+I seguenti sistemi operativi sono ora supportati con le unità di acquisizione di Data Infrastructure Insights, oltre a quelli link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["già supportato"]:
+
+* AlmaLinux 9,5
+* Debian (64 bit) 11
+* OpenSUSE Leap 15,6
+* Oracle Enterprise Linux (64 bit) 8,9, 8,10, 9,5
+* Red Hat (64 bit) 8,9, 8,10, 9,5
+* Rocky 9,5
+* SUSE Linux Enterprise Server 15 SP6
+* Ubuntu Server 24.04 LTS
+
+
+'''
+
+
 == Febbraio 2025
 
 
@@ -34,15 +95,11 @@ image:ontap_essentials_asa_views.png["Menu a discesa ONTAP Essentials: ASA disti
 
 === Monitoraggio dell'utilizzo delle API DII: Migliora la sicurezza e l'efficienza
 
-Rafforza il tuo livello di sicurezza e ottimizza la gestione delle risorse con il monitoraggio avanzato dell'utilizzo delle API REST, disponibile per gli utenti amministrativi. Con il monitoraggio dell'utilizzo delle API è possibile vedere quali token API vengono utilizzati, da quali indirizzi IP e dal volume di traffico generato. Collegando i token a specifici indirizzi IP e livelli di utilizzo, è possibile ottenere informazioni approfondite sull'accesso al sistema e sulle tendenze di utilizzo, fornendo il controllo necessario per mantenere un ambiente sicuro ed efficiente e garantire un funzionamento regolare delle operazioni. Rafforza il tuo livello di sicurezza e ottimizza la gestione delle risorse con il monitoraggio avanzato dell'utilizzo delle API REST, disponibile per gli utenti amministrativi. Con il monitoraggio dell'utilizzo delle API è possibile vedere quali token API vengono utilizzati, da quali indirizzi IP e dal volume di traffico generato. Collegando i token a specifici indirizzi IP e livelli di utilizzo, è possibile ottenere informazioni approfondite sull'accesso al sistema e sulle tendenze di utilizzo, fornendo il controllo necessario per mantenere un ambiente sicuro ed efficiente e garantire un funzionamento regolare delle operazioni.
+Rafforza il tuo livello di sicurezza e ottimizza la gestione delle risorse con il monitoraggio avanzato dell'utilizzo delle API REST, disponibile per gli utenti amministrativi. Con il monitoraggio dell'utilizzo delle API è possibile vedere quali token API vengono utilizzati, da quali indirizzi IP e dal volume di traffico generato. Collegando i token a specifici indirizzi IP e livelli di utilizzo, è possibile ottenere informazioni approfondite sull'accesso al sistema e sulle tendenze di utilizzo, fornendo il controllo necessario per mantenere un ambiente sicuro ed efficiente e garantire un funzionamento regolare delle operazioni.
 
-Per visualizzare l'utilizzo delle API, accedere a *osservabilità > Ammin. > accesso API* e selezionare _Visualizza utilizzo API_. Si noti che questa API è disponibile solo per le API di osservazione DII; non si applica alla protezione del carico di lavoro. Per visualizzare l'utilizzo delle API, accedere a *osservabilità > Ammin. > accesso API* e selezionare _Visualizza utilizzo API_. Si noti che questa API è disponibile solo per le API di osservazione DII; non si applica alla protezione del carico di lavoro.
+Per visualizzare l'utilizzo delle API, accedere a *osservabilità > Ammin. > accesso API* e selezionare _Visualizza utilizzo API_. Si noti che questa API è disponibile solo per le API di osservazione DII; non si applica alla protezione del carico di lavoro.
 
 image:api_usage_analytics_screenshot.png["Esempio di analisi dell'utilizzo delle API"]
-
-
-
-=== Workload Security API per limitare gli utenti
 
 
 

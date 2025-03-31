@@ -19,7 +19,7 @@ keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying
 
 
 [role="lead"]
-È possibile personalizzare il formato di output e la consegna di un report, impostare le proprietà o le pianificazioni del report e inviare i report via email.
+È possibile personalizzare il formato di output e la consegna di un report, impostare le proprietà o le pianificazioni del report e inviare i report tramite e-mail.
 
 
 NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
@@ -39,8 +39,6 @@ IMPORTANT: Prima di apportare modifiche alle autorizzazioni o alla sicurezza dei
 image:Reporting_Output_and_Delivery.png["Output e consegna dei report"]
 
 . Fare clic su *Proprietà > Pianificazione*
-
-
 . È possibile impostare le seguenti opzioni:
 +
 ** *Pianificazione* per l'esecuzione dei report.
