@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference_data_collector_support_matrix.html 
 summary: La matrice di supporto per Data Collector contiene informazioni dettagliate sui data collector supportati. 
-keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei, OpenStack 
+keywords: support matrix, vendor, NetApp, IBM, EMC, Dell, HP, Hitachi, VMware, Huawei 
 ---
 = Data Infrastructure Insights Data Collector Support Matrix
 :hardbreaks:
@@ -26,7 +26,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| HPE ALLETRA 9080 3PAR 8440 T400 V800 HPE_3PAR 20450 F200 T800 HPE_3PAR 20800 V400 HPE_3PAR 7400 HPE_3PAR 7400C HPE_3PAR 8400 HPE_3PAR 20800 HPE_3PAR 7200 HPE_3PAR 7440C HPE_3PAR A630 HPE_3PAR A650 HPE_3PAR 7200C HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR A670 HPE_3PAR 9450 HPE_3PAR 7450C HPE_3PAR 8200 HPE_3PAR 8400 HP_3PAR 7400 HP_3PAR 7400C HP_3PAR 7440C HP_3PAR 20850 HPE_3PAR 7200 HP_3PAR 7200C INSERV 3PAR 7450C INSERV 3PAR 8200 INSERV F400 INSERV | 4.5.18 4.5.7 9.5.8 (4.5.21 4.6.1) 4.5.24 9.5.15 (MU1) 4.3.1 4.3.3 4.4.1 (4.5.15) 3.3.1 (MU2) 3.3.2 (MU2) 3.3.1 (MU3) 3.3.1 3.3.1 (MU1) 3.3.1 (MU4) 3.2.2 (MU6) 3.2.1 (MU5) 3.2.2 (MU2) 3.2.1 (MU3) 3.1.3 (MU5) 3.2.1 (MU3) 3.1.3 tipo di rilascio: Supporto standard versione MU1 tipo di rilascio: Supporto esteso versione 3.1.1 tipo di rilascio: Supporto esteso versione MU1 tipo di rilascio: Supporto esteso versione 3.1.2 
+| HPE ALLETRA 9080 3PAR 8440 T400 V800 HPE_3PAR 20450 F200 T800 HPE_3PAR 20800 V400 HPE_3PAR 7400 HPE_3PAR 7400C HPE_3PAR 8400 HPE_3PAR 20800 HPE_3PAR 7200 HPE_3PAR 7440C HPE_3PAR A630 HPE_3PAR A650 HPE_3PAR 7200C HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR A670 HPE_3PAR 9450 HPE_3PAR 7450C HPE_3PAR 8200 HPE_3PAR 8400 HP_3PAR 7400 HP_3PAR 7400C HP_3PAR 7440C HP_3PAR 20850 HPE_3PAR 7200 HP_3PAR 7200C INSERV 3PAR 7450C INSERV 3PAR 8200 INSERV F400 INSERV | 4.5.7 9.5.8 (4.6.1 9.6.1) 4.5.15 4.5.24 9.5.15 (4.5.18) 4.5.21 (3.3.2) MU1 (4.3.1 4.3.3 4.4.1) MU3 (3.3.1) MU5 (3.3.1) MU2 (3.3.1) 3.2.2 (MU4) 3.2.2 (MU6) 3.3.1 3.3.1 (MU1) MU3 (3.2.1) MU5 (3.2.1) MU2 (3.2.1) MU1 (3.1.3) MU2 tipo di rilascio: Supporto standard versione 3.1.2 tipo di rilascio: Supporto esteso versione MU3 tipo di rilascio: Supporto esteso versione 3.1.3 tipo di rilascio: Supporto esteso versione 3.1.1 tipo di rilascio MU1 
 |===
 Prodotti supportati da questo data collector:
 
@@ -34,7 +34,7 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.118+| base .3+| Unità periferiche | Nome | Implementato | SSH |  
+.119+| base .3+| Unità periferiche | Nome | Implementato | SSH |  
 
 
 | ID gestione storage | Implementato | SSH |  
@@ -154,7 +154,7 @@ Prodotti supportati da questo data collector:
 | ID mittente | Implementato | SSH |  
 
 
-.12+| Storage | Visualizza IP | Implementato | SSH |  
+.13+| Storage | Visualizza IP | Implementato | SSH |  
 
 
 | Capacità raw non riuscita | Implementato | SSH | Capacità raw dei dischi guasti (somma di tutti i dischi che sono guasti) 
@@ -164,6 +164,9 @@ Prodotti supportati da questo data collector:
 
 
 | IP | Implementato | SSH |  
+
+
+| Manage URL (Gestisci SNMP) | Implementato | SSH |  
 
 
 | Produttore | Implementato | SSH |  
@@ -388,7 +391,7 @@ Prodotti supportati da questo data collector:
 | WWN | Implementato | SSH |  
 
 
-.118+| performance .6+| Disco | IOPS Read (lettura IOPS) | Implementato | SMI-S. | Numero di IOPS in lettura sul disco 
+.120+| performance .6+| Disco | IOPS Read (lettura IOPS) | Implementato | SMI-S. | Numero di IOPS in lettura sul disco 
 
 
 | Totale IOPS | Implementato | SMI-S. |  
@@ -520,7 +523,7 @@ Prodotti supportati da questo data collector:
 | Totale utilizzo | Implementato | SMI-S. |  
 
 
-.13+| Pool di storage | Provisioning della capacità | Implementato | SMI-S. |  
+.15+| Pool di storage | Provisioning della capacità | Implementato | SMI-S. |  
 
 
 | Capacità raw | Implementato | SMI-S. |  
@@ -538,6 +541,9 @@ Prodotti supportati da questo data collector:
 | Rapporto capacità utilizzata | Implementato | SMI-S. |  
 
 
+| Capacità totale dei dati | Implementato | SMI-S. |  
+
+
 | Data used Capacity (capacità utilizzata dati) | Implementato | SMI-S. |  
 
 
@@ -551,6 +557,9 @@ Prodotti supportati da questo data collector:
 
 
 | ID server | Implementato | SMI-S. |  
+
+
+| Capacità riservata di Snapshot | Implementato | SMI-S. |  
 
 
 | Capacità utilizzata di Snapshot | Implementato | SMI-S. |  
@@ -756,9 +765,7 @@ API di gestione utilizzate da questo data collector:
 
 == Amazon AWS EC2
 
-Modelli e versioni supportati da questo data collector:
-
-Versioni API:
+Modelli e versioni supportati da questo data collector: Versioni API:
 
 * 1 ottobre 2014
 
@@ -1209,7 +1216,7 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.72+| base .5+| Condivisione file | È InternalVolume | Implementato | HTTPS | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
+.76+| base .5+| Condivisione file | È InternalVolume | Implementato | HTTPS | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
 
 
 | È condiviso | Implementato | HTTPS | Se a questo FileShare sono associate condivisioni 
@@ -1236,7 +1243,7 @@ Prodotti supportati da questo data collector:
 | ID mittente | Implementato | HTTPS |  
 
 
-.18+| Volume interno | Capacità allocata dei dati | Distanza | HTTPS | capacità allocata per i dati 
+.21+| Volume interno | Capacità allocata dei dati | Distanza | HTTPS | capacità allocata per i dati 
 
 
 | Data used Capacity (capacità utilizzata dati) | Implementato | HTTPS |  
@@ -1288,6 +1295,15 @@ Prodotti supportati da questo data collector:
 
 
 | UUID | Implementato | HTTPS |  
+
+
+| Commento | Distanza | HTTPS | stato: commento di testo libero che descrive la svm 
+
+
+|  | Implementato | HTTPS |  
+
+
+| QoS - policy | Implementato | HTTPS |  
 
 
 .3+| Sincronizzazione dello storage | Volume interno di origine | Implementato | HTTPS |  
@@ -1383,7 +1399,7 @@ Prodotti supportati da questo data collector:
 | Virtuale | Implementato | HTTPS | Si tratta di un dispositivo per la virtualizzazione dello storage? 
 
 
-.14+| Pool di storage | Capacità allocata dei dati | Distanza | HTTPS | capacità allocata per i dati 
+.15+| Pool di storage | Capacità allocata dei dati | Distanza | HTTPS | capacità allocata per i dati 
 
 
 | Data used Capacity (capacità utilizzata dati) | Implementato | HTTPS |  
@@ -1423,6 +1439,9 @@ Prodotti supportati da questo data collector:
 
 
 | Virtuale | Implementato | HTTPS | Si tratta di un dispositivo per la virtualizzazione dello storage? 
+
+
+| Commento | Distanza | HTTPS | stato: commento di testo libero che descrive la svm 
 
 
 .23+| performance .17+| Volume interno | Capacità totale | Implementato |  |  
@@ -1511,7 +1530,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| 175,53 176,51 183,0 Brocade 200E Brocade 4 Brocade 8 Embedded Brocade X7 Brocade X6 Brocade X6 Brocade 4 Embedded Brocade 40FC Brocade G730 Brocade M5424 Brocade G720 Brocade G620 Embedded Brocade G630 Brocade G610 Brocade DCX8510 Brocade 8 Extension Switch Brocade 7840 Brocade DCX Brocade DCX-4S Backbone Brocade DCX8510-4 Brocade 7800-7810 Brocade 6558 Brocade 6547 Brocade 6548 Brocade 6546 Brocade 6510 Brocade 6520 Embedded Brocade VA-6505 Brocade 5300-5480 Brocade 5100-4024 Brocade 5000-300E Brocade X7-8 | v6,2 0d v7,2 v7,2 0c v7,3 1d v7,3 1 v7,4 2 v7,4 2c v7,4 2f v7,4 2g 2h v7,4 2d v8,0 1a v8,1 2f v8,1 2j v8,1 0 v8,2 0b v8,2 1c v8,2 2b v8,2 3 v8,2 3a 3b v8,2 3d v8,2 v9,0 1b v9,0 1d v9,0 0b v9,1 1b v9,1.2e v7,0 0b v7,2 1 v7,2 1d v7,3 1 v7,3 2a v7,4 1d v7,4 2a v7,4 2d v7,4 2g v7,4 824494 v8,0 v8,1 2a v8,1 2g v8,1 2k v8,1 0a v8,2 1 v8,2 1d v8,2 2c v8,2 3a v8,2 855776 3c v8,2 3e v8,2 0a v9,0 v9,0 1e v9,0 1 v9,1.v7,1 0a v7,2 1c v7,2 0a v7,3 1c v7,3 0a v7,4 1e v7,4 v7,4 2e v7,4 v7,4 01 v7,4 2c v8,0 0b v8,1 2d v8,1 2h v8,1 v8,2 v8,2 1a v8,2 2a v8,2 2d v8,2 v8,2 01 v8,2 v8,2 v8,2 1a v9,0 1c v9,0 v9,1 1a v9,1.2f9 2c v7,0.2 v7,0.v7,0.1b v7,0.2a v6,4.3 v6,4.3d v6,4.3f3 v7,0.1 v7,0.1b v6,4.2g v6,4.2b1 1a v6,4.v6,2.0a v7,1.2b v6,2.2f v6,2 1b v9,1 1c v9,1 1d v9,1 v9,1 v9,1 v9,1 861742 01 v9,1 v9,2 0a v9,2 0b v9,2 v9,2 0b 857687 01 v9,2 0c v9,2 1a v9,2 
+| 176,51 183,0 Brocade 200E Brocade 4 Brocade 8 Embedded Brocade X7 Brocade X6 Brocade X6 Brocade 4 Embedded Brocade 40FC Brocade G730 Brocade M5424 Brocade G720 Brocade G620 Embedded Brocade G630 Brocade G610 Brocade DCX8510 Brocade 8 Extension Switch Brocade 7840 Brocade DCX Brocade DCX-4S Backbone Brocade DCX8510-4 Brocade 7800-7810 Brocade 6558 Brocade 6547 Brocade 6548 Brocade 6546 Brocade 6510 Brocade 6520 Embedded Brocade VA-6505 Brocade 5300-5480 Brocade 5100-4024 Brocade 5000-300E Brocade X7-8 | v7,1 0a v7,2 1c v7,2 0a v7,3 1c v7,3 0a v7,4 1e v7,4 v7,4 2e v7,4 2g 2h v7,4 2d v8,0 1a v8,1 2f v8,1 2j v8,1 0a v8,2 1 v8,2 1d v8,2 2c v8,2 3 v8,2 3a 3b v8,2 3d v8,2 v9,0 1b v9,0 1d v9,0 0b v9,1 1b v9,1 1c v9,1.2c v7,0 0a v7,1 0d v7,2 v7,2 0c v7,3 1d v7,3 1 v7,4 2 v7,4 2c v7,4 2f v7,4 824494 v8,0 2f v8,1 2a v8,1 2g v8,1 2k v8,2 v8,2 1a v8,2 2a v8,2 2d v8,2 3a v8,2 855776 3c v8,2 3e v8,2 0a v9,0 v9,0 1e v9,0 1 v9,1 1b 1d v9,1.2e v7,0 0b v7,2 1 v7,2 1d v7,3 1 v7,3 2a v7,4 1d v7,4 2a v7,4 2d v7,4 2g v7,4 01 v7,4 2c v8,0 0b v8,1 2d v8,1 2h v8,1 0 v8,2 0b v8,2 1c v8,2 2b v8,2 v8,2 v8,2 01 v8,2 v8,2 v8,2 1a v9,0 1c v9,0 v9,1 1a v9,1 v9,1 v9,1.v7,0.1b v6,4.2a v6,4.3 v6,4.3d v6,4.3f3 v7,0.1 v7,0.1b v7,0.2 v7,0.2b1 2g v6,4.2b v6,2.2f v6,2.v6,2 v9,1 v9,1 v9,2 0a v9,2 0b v9,2 v9,2 0c v9,2 v9,2 1a v9,2 v9,2 2 
 |===
 Prodotti supportati da questo data collector:
 
@@ -2197,7 +2216,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| X7 Brocade 6505 Brocade 6510 Brocade 6520 Brocade X7 Extension Switch Brocade 7840 Brocade X6-4 Brocade G730-8 Brocade G720 Brocade G620 Brocade G630 Brocade G610 Brocade DCX8510 Brocade DCX8510-4 Brocade X6-8 Brocade 7810-4 Brocade 183,0 184,0 190,0 191,0-8 | v8,2 v9,2 01 v9,2 1a v9,2.v9,1 0a v9,2 0b 0c v9,2 2.2d v8,2 0b v9,2 857687 1 v9,2.2d4 v9,1.1d v9,1.v9,1.v9,1.3c v8,2.3c1 1c v9,1.1a v9,1.v9,1.3e1 0b v9,1.1e v9,0.1c v9,0.1d v9,0.1b4 v9,0.1a v9,0.1b v9,0.0b v9,0.1e1 3e v8,2.v9,0.3d v8,2.1b v9,1.v8,2.1c3 3b v8,2.3 v8,2.1d1 3a v8,2.1d1_lw v8,2.1d2 2a v8,2.1d3_861742.01 v9,2 
+| X7 Brocade 6505 Brocade 6510 Brocade 6520 Brocade X7 Extension Switch Brocade 7840 Brocade X6-4 Brocade G730-8 Brocade G720 Brocade G620 Brocade G630 Brocade G610 Brocade DCX8510 Brocade DCX8510-4 Brocade X6-8 Brocade 7810-4 Brocade 183,0 184,0 190,0-8 | v8,2 01 v9,2 v9,2 01 v9,2 1 v9,2 2.2a v8,2 v9,1 0a v9,2 0b 0c v9,2 1a v9,2.v9,1 861742 0b v9,2 857687 v9,2 1b v9,2.2d4 v9,1.1b v9,1.3a v8,2.1a v9,1.v9,1.3c1 0b v9,1.1e v9,0.1c v9,0.3e1 1d v9,0.v9,0.1a v9,0.1b v9,0.1b4 0b v9,0.3e v8,2.v9,0.3d v8,2.1e1 3c v8,2.v8,2.3b v8,2.3 v8,2.1c v9,1.1c3 v8,2.1d v9,1.2d v8,2.v9,1 
 |===
 Prodotti supportati da questo data collector:
 
@@ -2615,7 +2634,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| DS-C5548UP N5K C7710 6332 64108-6248UP 6332 6454-K9 6296UP 16UP DS-8GFC-K9 DS-K9 N5K-C9706 DS-K9-C9718-C9506 DS-C9710-C9513-K9 DS-C9509-K9-K9 DS-C9396T-C9396S DS-K9-K9 DS-C9148T DS-K9-C9222I DS-C9220I-C9250I DS-FI-K9 DS-K9-FI-48P-K9-C9148S-32P-C9148-16P-K9-C9148-C9132T-K9-C9148-C9124-C5596UP N5K-C5696Q N77-C9124-2 | 3 5,0 4,21j N2 3 5,0 4,23f N2 3 5,0 2D 5,2 8b 5,2 8f 5,2 8i 6,2 11c 6,2 15 6,2 21 6,2 27 6,2 33 6,2 9 6,2 3 7,0 4,13b N2 0 7,3(N2 3 5,0 4,21k N2 3 5,0 4,23g N2 8 5,2 8a 5,2 8d 5,2 8h 6,2 11b 6,2 13a 6,2 19 6,2 25 6,2 31 6,2 7 6,2 9b N2 3 7,0 4,13g D1) 4,21e N2 3 5,0 4,22c N2 3 5,0 4,34a 5,2 8 5,2 8c 5,2 8g 5,2 11 6,2 13 6,2 17 6,2 23 6,2 29 6,2 5a 6,2 9a 7,0 4,04e N2 3 7,3 1(N2) 4,13i(5,0) 4,01d(5,0) 3(3)N2(3,11e) 5,0(3)N2(5,0) 1a(5,0)3a(4,2) 1a(3,3)1c(4,1 13 N1 1 7,3 8 N1 1 8,1 1 8,1 1a 8,2 1 8,2 2 8,3 1 8,3 2 8,4 1 8,4 1a 8,4 2 8,4 2a 8,4 2b 8,4 2c 8,4 2D 8,4 2e 8,4 2f 8,4 5 8,5 1 9,2 1a 9,2 2 9,3 1 9,3 2 9,3 2a 9,3 5 I42 1b 9,3 5 I42 1g 9,3 5 I42 1j 9,3 5 I42 1k 9,3 5 I42 3f 9,3 5 I43 4a 9,4 1 9,4 1a 9,4 2 9,4 2a 
+| DS-C5696Q 6332 64108-6248UP 6332 6454-K9 6296UP 16UP DS-K9 N5K-K9 DS-K9-C9718 DS-8GFC-C9710-K9 DS-C9706-C9509-K9 DS-C9506-C9396V-C9396T DS-K9-K9 DS-K9 DS-C9222I DS-C9396S DS-C9250I DS-FI-K9 DS-K9 DS-K9 DS-FI-C9148V-C9220I-K9-C9148T-K9-C9148S-48P-K9-C9148-32P-K9-C9148-C9513-C9148-16P-K9-C5548UP N5K-C9124-C9132T-C9124-2-C5596UP N5K-UCS-FI | 3 5,0 4,21j N2 3 5,0 4,23f N2 3 5,0 2D 5,2 8b 5,2 8f 5,2 8i 6,2 11c 6,2 15 6,2 21 6,2 27 6,2 33 6,2 9 6,2 3 7,0 4,13b N2 0 7,3(N2 3 5,0 4,21k N2 3 5,0 4,23g N2 8 5,2 8a 5,2 8d 5,2 8h 6,2 11b 6,2 13a 6,2 19 6,2 25 6,2 31 6,2 7 6,2 9b N2 3 7,0 4,13g D1) 4,21e N2 3 5,0 4,22c N2 3 5,0 4,34a 5,2 8 5,2 8c 5,2 8g 5,2 11 6,2 13 6,2 17 6,2 23 6,2 29 6,2 5a 6,2 9a 7,0 4,04e N2 3 7,3 1(N2) 4,13i(5,0) 4,01d(5,0) 3(3)N2(3,11e) 5,0(3)N2(5,0) 1a(5,0)3a(4,2) 1a(3,3)1c(4,1 1 1 7,3 13 N1 1 7,3 8 N1 1 8,1 1 8,1 1a 8,2 1 8,2 2 8,3 1 8,3 2 8,4 1 8,4 1a 8,4 2 8,4 2a 8,4 2b 8,4 2c 8,4 2D 8,4 2e 8,4 2f 8,5 1 9,2 1a 9,2 2 9,3 1 9,3 2 9,3 2a 9,3 5 I42 1b 9,3 5 I42 1g 9,3 5 I42 1j 9,3 5 I42 1k 9,3 5 I42 3f 9,3 5 I43 4b 9,4 1 9,4 1a 9,4 2 9,4 2a 9,4 3 
 |===
 Prodotti supportati da questo data collector:
 
@@ -3009,7 +3028,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| C4000 NODO DI CALCOLO C4600 C5036 C5066 C6025 C6035 C6055 PXG1 UCS-C240M5H10 VIRTUAL ROBO | 6,8.1_u1_release-20240925_6f58ed2a 6,8.u2_u7_release-2_41094bba 6,8.2_release-u1_97f56d9a 6,8.2_20240317_release-20240509_a5da4644 7,1.20231213_1_release-20221022_66722648 7,1.2_u3_release-20241231_bb47fe77 
+| C4000 NODO DI CALCOLO C4600 C5036 C5066 C6025 C6035 C6055 CX8405 PXG1 UCS-C240M5H10 VIRTUAL ROBO | 6,8.1_u1_release-20221022_6f58ed2a 6,8.1_20241231_release-2_a5da4644 7,1.66722648 7,1_u2_release-20240925_2.20240509_u3_release-u1_bb47fe77 7,2.2_release-20241114_794ea46 7,2.2_release-20250228_63e93ccf 
 |===
 Prodotti supportati da questo data collector:
 
@@ -3288,7 +3307,7 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.84+| base .6+| Condivisione file | È InternalVolume | Implementato | SSH | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
+.85+| base .6+| Condivisione file | È InternalVolume | Implementato | SSH | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
 
 
 | È condiviso | Implementato | SSH | Se a questo FileShare sono associate condivisioni 
@@ -3495,7 +3514,7 @@ Prodotti supportati da questo data collector:
 | Virtuale | Implementato | SSH | Si tratta di un dispositivo per la virtualizzazione dello storage? 
 
 
-.15+| Pool di storage | Capacità allocata dei dati | Distanza | SSH | capacità allocata per i dati 
+.16+| Pool di storage | Capacità allocata dei dati | Distanza | SSH | capacità allocata per i dati 
 
 
 | Data used Capacity (capacità utilizzata dati) | Implementato | SSH |  
@@ -3508,6 +3527,9 @@ Prodotti supportati da questo data collector:
 
 
 | Nome | Implementato | SSH |  
+
+
+| Capacità disco fisico (MB) | Implementato | SSH | utilizzato come capacità raw per il pool di storage 
 
 
 | Gruppo RAID | Implementato | SSH | Indica se questo storagePool è un gruppo raid 
@@ -3557,7 +3579,7 @@ Modelli e versioni supportati da questo data collector:
 | Versioni di API | Modelli | Versioni del firmware 
 
 
-| 6,26 6,28 7,32 7,33 | CX3-40F CX4-480 VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 | 04.28.000.5.710 05.32.000.5.206 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.000.5.074 05.33.008.5.119 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.021.5.256 05.33.021.5.266 05.33.021.5.322 3.26.40.5.029 
+| 6,26 6,28 7,32 7,33 | CX3-40F CX4-480 VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 | 04.28.000.5.710 05.32.000.5.206 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.000.5.074 05.33.008.5.119 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.009.5.238 05.33.021.5.256 05.33.021.5.266 05.33.021.5.322 3.26.40.5.029 
 |===
 Prodotti supportati da questo data collector:
 
@@ -4131,7 +4153,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| DD VE DD2500 DD3300 DD4200 DD6300 DD6400 DD6800 DD6900 DD7200 DD9300 DD9400 DD9500 DD9800 DD9900 DD9910 | ...1.30-663869 6,2.1.40-671977 6,2.1.60-686365 7.10.0.20-1023227 7.10.1.5.1-1040473 7,7.1-1049892 7.10.1.4.0-1017976 7,7.15-1078832 7.10.1.0.90-692270 7,7.0.60-682124 7,2.20-1082704 7,2.0.20-658029 7,2.0-1035502 7.13.0.40-1126469 7.10.1.50-1146826 7.11.0.30-1105324 7.10.1.0.70-686759 7,2.20-1090468 7.10.1.10-1068159 7.10.1.0-1042928 7.10.1.5.11-1046187 7,7.5.25-1078970 7,7.5.30-1091295 8,0.0.10-1097914 8,1.0.10-1127744.2.051-633576 6,1.2.20-606786 6,2.6,1 
+| DD VE DD2500 DD3300 DD4200 DD6300 DD6400 DD6800 DD6900 DD7200 DD9300 DD9400 DD9410 DD9500 DD9800 DD990 DD9900 DD9910 | ...2.20-606786 6,2.1.30-663869 6,2.1.40-671977 6,2.1.60-686365 7.10.0.2.30-606339 6,1.0-1042928 7.10.1.0.90-692270 7,7.4.0-1017976 7,7.0.70-686759 7,2.0.20-658029 7,2.0.60-682124 7,2.20-1082704 7,2.50-1146826 7.11.0.0-1035502 7.13.0.40-1126469 7.10.1.20-1090468 7.10.1.30-1105324 7.10.1.15-1078832 7.10.1.1-1049892 7.10.1.10-1068159 7.10.1.5.1-1040473 7,7.5.11-1046187 7,7.20-1023227 7.10.1.5.30-1091295 8,0.0.10-1097914 8,1.0.10-1127744.2.051-633576 6,1.6,0.5.25-1078970 7,7 
 |===
 Prodotti supportati da questo data collector:
 
@@ -4139,7 +4161,7 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.92+| base .14+| Disco | Capacità (GB) | Implementato | SSH | Capacità utilizzata 
+.93+| base .14+| Disco | Capacità (GB) | Implementato | SSH | Capacità utilizzata 
 
 
 | ID disco | Implementato | SSH | Identifica in modo univoco questo disco nell'array 
@@ -4304,7 +4326,7 @@ Prodotti supportati da questo data collector:
 | Permesso | Implementato | SSH | Permessi per questa particolare condivisione 
 
 
-.13+| Storage | Numero di CPU | Implementato | SSH | Numero di CPU dello storage 
+.14+| Storage | Numero di CPU | Implementato | SSH | Numero di CPU dello storage 
 
 
 | Visualizza IP | Implementato | SSH |  
@@ -4317,6 +4339,9 @@ Prodotti supportati da questo data collector:
 
 
 | IP | Implementato | SSH |  
+
+
+| Manage URL (Gestisci SNMP) | Implementato | SSH |  
 
 
 | Produttore | Implementato | SSH |  
@@ -4432,7 +4457,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| ECS | 3.6.1.3 3.6.2.1 3.7.0.0 3.7.0.3 3.7.0.4 3.7.0.6 3.8.0.1 3.8.0.2 3.8.0.3 3.8.0.4 3.8.0.5 3.8.0.6 3.8.1.1 3.8.1.3 
+| ECS | 3.6.1.3 3.6.2.1 3.7.0.0 3.7.0.3 3.7.0.4 3.7.0.6 3.8.0.1 3.8.0.2 3.8.0.3 3.8.0.4 3.8.0.5 3.8.0.6 3.8.1.1 3.8.1.2 3.8.1.3 
 |===
 Prodotti supportati da questo data collector:
 
@@ -4626,7 +4651,7 @@ Prodotti supportati da questo data collector:
 | Virtuale | Implementato | HTTPS | Si tratta di un dispositivo per la virtualizzazione dello storage? 
 
 
-.46+| performance .4+| Volume interno | Capacità totale | Implementato | HTTPS |  
+.40+| performance .4+| Volume interno | Capacità totale | Implementato | HTTPS |  
 
 
 | Capacità utilizzata | Implementato | HTTPS |  
@@ -4656,31 +4681,7 @@ Prodotti supportati da questo data collector:
 | ID server | Implementato | HTTPS |  
 
 
-| Qtree.8+ | Storage | Capacità raw non riuscita | Implementato | HTTPS 
-
-
-|  | Capacità raw | Implementato | HTTPS |  
-
-
-| Capacità raw di riserva | Implementato | HTTPS | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) | Capacità di StoragePools 
-
-
-| Implementato | HTTPS |  | Totale IOPS | Implementato 
-
-
-| HTTPS |  | Throughput Read (lettura throughput) | Implementato | HTTPS 
-
-
-|  | Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
-
-
-| Scrittura throughput | Implementato | HTTPS |  .6+| Storage 
-
-
-| Chiave | Implementato | HTTPS |  
-
-
-| ID server | Implementato | HTTPS |  
+.8+| Storage | Capacità raw non riuscita | Implementato | HTTPS |  
 
 
 | Capacità raw | Implementato | HTTPS |  
@@ -4689,13 +4690,22 @@ Prodotti supportati da questo data collector:
 | Capacità raw di riserva | Implementato | HTTPS | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) 
 
 
-| Capacità raw non riuscita | Implementato | HTTPS |  
-
-
-| Capacità di StoragePools | Implementato | HTTPS |  .7+| Nodo di storage 
+| Capacità di StoragePools | Implementato | HTTPS |  
 
 
 | Totale IOPS | Implementato | HTTPS |  
+
+
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
+
+
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
+
+
+| Scrittura throughput | Implementato | HTTPS |  
+
+
+.7+| Nodo di storage | Totale IOPS | Implementato | HTTPS |  
 
 
 | Utilizzo capacità nodo totale | Implementato | HTTPS |  
@@ -4713,10 +4723,10 @@ Prodotti supportati da questo data collector:
 | Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| Scrittura throughput | Implementato | HTTPS |  .9+| Dati del nodo di storage 
+| Scrittura throughput | Implementato | HTTPS |  
 
 
-| Totale IOPS | Implementato | HTTPS |  
+.9+| Dati del nodo di storage | Totale IOPS | Implementato | HTTPS |  
 
 
 | Chiave | Implementato | HTTPS |  
@@ -4740,10 +4750,10 @@ Prodotti supportati da questo data collector:
 | Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| Scrittura throughput | Implementato | HTTPS |  .6+| Disco StoragePool 
+| Scrittura throughput | Implementato | HTTPS |  
 
 
-| Provisioning della capacità | Implementato | HTTPS |  
+.6+| Disco StoragePool | Provisioning della capacità | Implementato | HTTPS |  
 
 
 | Capacità raw | Implementato | HTTPS |  
@@ -4756,6 +4766,9 @@ Prodotti supportati da questo data collector:
 
 
 | Rapporto di capacità di overcommit | Implementato | HTTPS | Riportato come serie temporale 
+
+
+| Rapporto capacità utilizzata | Implementato | HTTPS |  
 |===
 API di gestione utilizzate da questo data collector:
 
@@ -4775,7 +4788,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| A100 A200 A2000 A300 A3000 F200 F600 F800 F900 H400 H500 H5600 H600 H700 NL410 S210 X210 X410 | 9.1.0.10 9.1.0.6 9.1.0.9 9.2.1.10 9.2.1.11 9.2.1.12 9.2.1.13 9.2.1.19 9.2.1.4 9.2.1.6 9.2.1.9 9.4.0.11 9.4.0.13 9.4.0.14 9.4.0.15 9.4.0.16 9.4.0.17 9.4.0.18 9.5.0.3 9.5.0.6 9.5.0.7 9.5.0.8 9.5.1.0 9.5.1.1 9.5.1.2 9.7.1.0 9.7.1.2 9.7.1.3 9.7.1.4 v8,0.0,4 v8,0.0,6 v8,0.0,7 v8,1.0,4 v8,1.2,0 v9,0.0,0 
+| A100 A200 A2000 A300 A3000 F200 F600 F800 F900 H400 H500 H5600 H600 H700 NL410 S210 X210 X410 | 9.1.0.10 9.1.0.6 9.1.0.9 9.2.1.10 9.2.1.11 9.2.1.12 9.2.1.13 9.2.1.19 9.2.1.4 9.2.1.9 9.4.0.11 9.4.0.13 9.4.0.14 9.4.0.15 9.4.0.16 9.4.0.17 9.4.0.18 9.5.0.3 9.5.0.5 9.5.0.6 9.5.0.7 9.5.0.8 9.5.1.0 9.5.1.1 9.5.1.2 9.7.1.0 9.7.1.2 9.7.1.3 9.7.1.4 9.7.1.5 v8,0.0,4 v8,0.0,6 v8,0.0,7 v8,1.0,4 v8,1.2,0 v9,0.0,0 
 |===
 Prodotti supportati da questo data collector:
 
@@ -5239,10 +5252,7 @@ Prodotti supportati da questo data collector:
 | Scrittura throughput | Implementato | HTTPS |  
 
 
-.14+| Storage | Chiave | Implementato | HTTPS |  
-
-
-| ID server | Implementato | HTTPS |  
+.14+| Storage | Capacità raw non riuscita | Implementato | HTTPS |  
 
 
 | Capacità raw | Implementato | HTTPS |  
@@ -5251,34 +5261,37 @@ Prodotti supportati da questo data collector:
 | Capacità raw di riserva | Implementato | HTTPS | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) 
 
 
-| Capacità raw non riuscita | Implementato | HTTPS |  
-
-
 | Capacità di StoragePools | Implementato | HTTPS |  
 
 
-| Latenza totale | Implementato | HTTPS |  
-
-
-| Throughput Read (lettura throughput) | Implementato | HTTPS |  
-
-
-| Scrittura throughput | Implementato | HTTPS |  
-
-
-| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
+| Dischi guasti | Implementato | HTTPS |  
 
 
 | IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
-| Scrittura IOPS | Implementato | HTTPS |  
-
-
 | Totale IOPS | Implementato | HTTPS |  
 
 
-| Dischi guasti | Implementato | HTTPS |  
+| Scrittura IOPS | Implementato | HTTPS |  
+
+
+| Chiave | Implementato | HTTPS |  
+
+
+| Latenza totale | Implementato | HTTPS |  
+
+
+| ID server | Implementato | HTTPS |  
+
+
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
+
+
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
+
+
+| Scrittura throughput | Implementato | HTTPS |  
 
 
 .13+| Nodo di storage | Dischi guasti | Implementato | HTTPS |  
@@ -5439,7 +5452,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| A100 A200 H400 H500 NL400 NL410 S210 traceback (ultima chiamata): X200 X400 X410 sudo python | 9.1.0.18 9.1.0.19 9.2.1.12 9.2.1.13 9.2.1.15 9.4.0.17 9.5.0.3 9.5.0.6 9.5.0.8 9.7.1.2 9.8.0.2 v7,2.0,5 v7,2.1,3 v7,2.1,6 v8,0.0,4 v8,0.0,6 v8,0.0,7 v8,0.1,1 v8,1.2,0 
+| A200 H400 H500 NL400 NL410 S210 traceback (ultima chiamata): X200 X400 X410 | 9.1.0.18 9.1.0.19 9.2.1.12 9.2.1.13 9.2.1.15 9.4.0.17 9.5.0.3 9.5.0.6 9.5.0.8 9.7.1.2 9.8.0.2 v7,2.0,5 v7,2.1,3 v7,2.1,6 v8,0.0,4 v8,0.0,6 v8,0.0,7 v8,0.1,1 v8,1.2,0 
 |===
 Prodotti supportati da questo data collector:
 
@@ -5974,7 +5987,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 5200T PowerStore 9000T PowerStore 9200T | 2.1.0.1 2.1.1.0 3.2.0.1 3.2.1.0 3.2.1.1 3.5.0.1 3.5.0.2 3.6.0.0 3.6.1.0 3.6.1.1 3.6.1.2 3.6.1.3 3.6.1.4 4.0.0.1 4.0.0.2 
+| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 5200T PowerStore 9000T PowerStore 9200T | 2.1.0.1 2.1.1.0 3.2.0.1 3.2.1.0 3.2.1.1 3.5.0.1 3.5.0.2 3.6.0.0 3.6.1.0 3.6.1.1 3.6.1.2 3.6.1.3 3.6.1.4 4.0.0.1 4.0.0.2 4.0.1.0 
 |===
 Prodotti supportati da questo data collector:
 
@@ -6315,7 +6328,7 @@ Prodotti supportati da questo data collector:
 | WWN | Implementato |  |  
 
 
-.66+| performance .14+| Storage | Capacità raw non riuscita | Implementato |  |  
+.83+| performance .14+| Storage | Capacità raw non riuscita | Implementato |  |  
 
 
 | Capacità raw | Implementato |  |  
@@ -6435,6 +6448,12 @@ Prodotti supportati da questo data collector:
 | Totale utilizzo | Implementato |  |  
 
 
+.2+| Pool di storage | Chiave | Implementato |  |  
+
+
+| ID server | Implementato |  |  
+
+
 .13+| Disco StoragePool | Provisioning della capacità | Implementato |  |  
 
 
@@ -6511,6 +6530,51 @@ Prodotti supportati da questo data collector:
 
 
 | Scrittura throughput | Implementato |  |  
+
+
+.15+| Volume | Capacità raw | Implementato |  |  
+
+
+| Capacità totale | Implementato |  |  
+
+
+| Capacità utilizzata | Implementato |  |  
+
+
+| Rapporto capacità utilizzata | Implementato |  |  
+
+
+| IOPS Read (lettura IOPS) | Implementato |  | Numero di IOPS in lettura sul disco 
+
+
+| Totale IOPS | Implementato |  |  
+
+
+| Scrittura IOPS | Implementato |  |  
+
+
+| Chiave | Implementato |  |  
+
+
+| Latenza di lettura | Implementato |  |  
+
+
+| Latenza totale | Implementato |  |  
+
+
+| Scrittura latenza | Implementato |  |  
+
+
+| ID server | Implementato |  |  
+
+
+| Throughput Read (lettura throughput) | Implementato |  |  
+
+
+| Throughput totale | Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
+
+
+| Scrittura throughput | Implementato |  |  
 |===
 API di gestione utilizzate da questo data collector:
 
@@ -6530,7 +6594,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| RecoverPoint | 5,1.SP4.P1(h.89) 5,1.SP4.P2(h.101) 5,1.SP4.P3(h.109) 5,1.SP4.P4(h.97) 
+| RecoverPoint | 5,1.SP4.P1(h.89) 5,1.SP4.P2(h.101) 5,1.SP4.P3(h.109) 5,1.SP4.P4(h.97) 5,1.SP4.P5(h.138) 
 |===
 Prodotti supportati da questo data collector:
 
@@ -6657,7 +6721,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| ScaleIO | R3_5.1201.101 R3_6.1000.134 R3_6.400.107 
+| ScaleIO | R3_5.1201.101 R3_6.1000.134 
 |===
 Prodotti supportati da questo data collector:
 
@@ -6871,7 +6935,7 @@ Modelli e versioni supportati da questo data collector:
 | Versioni di API | Modelli | Versioni del firmware 
 
 
-| V10.0.0.0 V10.0.1.1 V10.1.0.0 V10.1.0.1 V10.1.0.3 V10.1.0.5 V10.2.0.0 V8.3.0.6 V8.4.0.7 V8.4.0.9 V9.1.0.5 V9.1.0.6 V9.2.1.0 V9.2.2.0 V9.2.3.0 V9.2.3.1 V9.2.3.4 V9.2.3.6 V9.2.4.1 V9.2.4.2 V9.2.4.3 V9.2.4.6 V9.2.4.7 | PMAX8000 POWERMAX_2000 POWERMAX_8000 VMAX-1 VMAX100K VMAX10K VMAX200K VMAX250F VMAX400K VMAX40K VMAX450F VMAX850F VMAX950F | 5876.286.194 335 5978.711.711 436 5978.711.711 484 5978.711.711 1 5978.714.714 117 5978.714.714 34 5978.714.714 79 (16F40000) Build 115 5876.309.196 365 5978.711.711 438 5978.711.711 542 5978.711.711 101 5978.714.714 137 5978.714.714 49 5978.714.714 (16F40000) Build 153 5876.309.196 416 5978.711.711 448 5978.711.711 581 5978.714.714 108 5978.714.714 145 5978.714.714 53 5978.714.714 (16F40000) Build 45 5977.1151.1151 (16F40000) Build 94 5977.1151.1151 (17590000) Build 162 5876.309.196 (17590000) Build 60 5977.1151.1151(17590000) Build 9 5978.711.711 (175000000) Build 320 5978.711.711 (175000000 A50000 Build 
+| ...0,0 V10,1.0,1 V10,1.0,3 V10,1.V10,0.0,0 V8,3.0,6 V8,4.3,6 V9,2.3,1 V9,2.3,4 V9,2.3,0 V9,2.1,0 V9,2.2,0 V9,2.0,6 V9,2.0,9 V9,1.0,5 V9,1.0,7 V8,4.4,1 V9,2.4,2 V9,2.0,5 V10,2.4,6 V9,2.4,7 V9,2.4,8.0,0 V10,0.1,1 V10,1.4,3 V9,2 | PMAX8000 POWERMAX_2000 POWERMAX_8000 VMAX-1 VMAX100K VMAX10K VMAX200K VMAX250F VMAX400K VMAX40K VMAX450F VMAX850F VMAX950F | 5876.286.194 335 5978.711.711 436 5978.711.711 484 5978.711.711 1 5978.714.714 117 5978.714.714 34 5978.714.714 79 (16F40000) Build 115 5876.309.196 365 5978.711.711 438 5978.711.711 542 5978.711.711 101 5978.714.714 137 5978.714.714 49 5978.714.714 (16F40000) Build 153 5876.309.196 416 5978.711.711 448 5978.711.711 581 5978.714.714 108 5978.714.714 145 5978.714.714 53 5978.714.714 (16F40000) Build 45 5977.1151.1151 (16F40000) Build 94 5977.1151.1151 (17590000) Build 162 5876.309.196 (17590000) Build 60 5977.1151.1151(17590000) Build 9 5978.711.711 (175000000) Build 320 5978.711.711 (175000000 A50000 Build 
 |===
 Prodotti supportati da questo data collector:
 
@@ -7332,7 +7396,7 @@ Prodotti supportati da questo data collector:
 | WWN | Implementato |  |  
 
 
-.105+| performance .6+| Disco | IOPS Read (lettura IOPS) | Implementato |  | Numero di IOPS in lettura sul disco 
+.104+| performance .6+| Disco | IOPS Read (lettura IOPS) | Implementato |  | Numero di IOPS in lettura sul disco 
 
 
 | Totale IOPS | Implementato |  |  
@@ -7398,7 +7462,7 @@ Prodotti supportati da questo data collector:
 | Scrittura in sospeso | Implementato |  | totale scrittura in sospeso 
 
 
-.18+| Storage | Cache hit ratio Read (rapporto di successo cache | Implementato |  |  
+.17+| Storage | Cache hit ratio Read (rapporto di successo cache | Implementato |  |  
 
 
 | Totale rapporto di hit della cache | Implementato |  |  
@@ -7420,9 +7484,6 @@ Prodotti supportati da questo data collector:
 
 
 | Capacità di StoragePools | Implementato |  |  
-
-
-| IOPS Altro | Implementato |  |  
 
 
 | IOPS Read (lettura IOPS) | Implementato |  | Numero di IOPS in lettura sul disco 
@@ -7667,7 +7728,7 @@ Modelli e versioni supportati da questo data collector:
 | Versioni di API | Modelli | Versioni del firmware 
 
 
-| V10,0.0,5 V10,0.1,5 V10,1.0,1 V10,1.0,5 V10,1.0,6 V10,1.4,1 V9,2.4,10 V9,2.3,4 V9,2.3,15 V9,2.3,22 V9,2.0,2 V9,2.0,8 V10,2.0,1 V10,2.4,11 V9,2.4,12 V9,2.4,3 V9,2.4,6 V9,2.4,7 V9,2.4,9 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX200K VMAX250F VMAX400K VMAX450F VMAX950F | 5977.1131.1131 131 5978.714.714 137 5978.714.714 149 5978.714.714 49 79 161 6079.175.0 127 146 6079.225.0 218 291 6079.225.0 build 615 5977.1151.1151 108 5978.714.714 117 5978.714.714 137 5978.714.714 145 5978.714.714 34 5978.714.714 49 5978.714.714 79 6079.175.0 259 127 6079.225.0 216 218 6079.225.0 86 build 60 131 137 149 49 5978.714.714 79 5978.714.714 161 259 6079.225.0 146 216 6079.225.0 291 86 build 101 5978.714.714 build 8 5978.714.711 build 101 build 1 build 581 5978.711.711 build 49 5978.714.714 build 8 build 542 5978.711.711 build 75 5978.711.711 build 542 5978.711.711 build 484 5978.711.711 build 542 build 484 5978.711.711 build 484 build 471 5978.711.711 build 438 5978.711.711 build 448 5978.711.711 build 436 5978.711.711 build 365 5978.711.711 build 436 build 335 5978.711.711 build 205 5978.711.711 build 335 build 60 5978.711.711 build 1 5978.714.714 build 117 5978.714.714 build 117 build 
+| V10,0.0,5 V10,0.1,5 V10,1.0,1 V10,1.0,5 V10,1.0,6 V10,1.3,4 V9,2.4,1 V9,2.4,10 V9,2.3,15 V9,2.3,20 V9,2.3,22 V9,2.0,8 V10,2.0,1 V10,2.0,2 V9,2.4,11 V9,2.4,12 V9,2.4,3 V9,2.4,6 V9,2.4,7 V9,2.4,9 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX200K VMAX250F VMAX400K VMAX450F VMAX950F | 5977.1131.1131 137 149 49 5978.714.714 79 5978.714.714 161 259 6079.225.0 216 218 6079.225.0 331 86 6079.275.0 build 615 5977.1151.1151 117 131 5978.714.714 137 5978.714.714 149 5978.714.714 49 79 161 6079.175.0 127 216 6079.225.0 291 331 6079.225.0 221 build 60 137 5978.714.714 145 5978.714.714 34 5978.714.714 49 5978.714.714 79 6079.175.0 259 127 6079.225.0 218 291 6079.225.0 86 221 build 117 5978.714.714 build 1 build 108 5978.714.714 build 101 build 8 build 1 5978.714.714 build 49 5978.714.714 build 542 5978.711.711 build 8 5978.714.711 build 75 5978.711.711 build 484 5978.711.711 build 581 5978.711.711 build 542 build 542 5978.711.711 build 484 build 471 5978.711.711 build 484 5978.711.711 build 448 5978.711.711 build 436 5978.711.711 build 438 5978.711.711 build 436 build 365 5978.711.711 build 416 5978.711.711 build 335 5978.711.711 build 205 5978.711.711 build 335 build 60 5978.711.711 build 101 5978.714.714 build 117 5978.714.714 build 131 build 
 |===
 Prodotti supportati da questo data collector:
 
@@ -7675,7 +7736,7 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.84+| base .9+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
+.86+| base .9+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
 
 
 | ID disco | Implementato | HTTPS | Identifica in modo univoco questo disco nell'array 
@@ -7732,7 +7793,7 @@ Prodotti supportati da questo data collector:
 | Chiave di origine | Implementato | HTTPS |  
 
 
-.12+| Storage | Visualizza IP | Implementato | HTTPS |  
+.13+| Storage | Visualizza IP | Implementato | HTTPS |  
 
 
 | Capacità raw non riuscita | Implementato | HTTPS | Capacità raw dei dischi guasti (somma di tutti i dischi che sono guasti) 
@@ -7742,6 +7803,9 @@ Prodotti supportati da questo data collector:
 
 
 | IP | Implementato | HTTPS |  
+
+
+| Manage URL (Gestisci SNMP) | Implementato | HTTPS |  
 
 
 | Produttore | Implementato | HTTPS |  
@@ -7840,7 +7904,7 @@ Prodotti supportati da questo data collector:
 | Tecnologia | Implementato | HTTPS | la tecnologia che causa l'efficienza dello storage è cambiata 
 
 
-.17+| Volume | Identificatore policy autTier | Implementato | HTTPS | Identificatore della policy di Tier dinamica 
+.18+| Volume | Identificatore policy autTier | Implementato | HTTPS | Identificatore della policy di Tier dinamica 
 
 
 | Tiering automatico | Implementato | HTTPS | indica se questo storagepool sta partecipando al tiering automatico con altri pool 
@@ -7850,6 +7914,9 @@ Prodotti supportati da questo data collector:
 
 
 | Tipo di disco | Non disponibile | HTTPS |  
+
+
+| Percorso di giunzione | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
@@ -8080,10 +8147,10 @@ Prodotti supportati da questo data collector:
 | Totale utilizzo | Implementato | HTTPS |  
 
 
-.21+| Pool di storage | Chiave | Implementato | HTTPS |  
+.21+| Pool di storage | Provisioning della capacità | Implementato | HTTPS |  
 
 
-| ID server | Implementato | HTTPS |  
+| Capacità raw | Implementato | HTTPS |  
 
 
 | Capacità totale | Implementato | HTTPS |  
@@ -8092,55 +8159,55 @@ Prodotti supportati da questo data collector:
 | Capacità utilizzata | Implementato | HTTPS |  
 
 
-| Capacità raw | Implementato | HTTPS |  
+| Rapporto di capacità di overcommit | Implementato | HTTPS | Riportato come serie temporale 
 
 
 | Rapporto capacità utilizzata | Implementato | HTTPS |  
 
 
-| Provisioning della capacità | Implementato | HTTPS |  
-
-
-| Rapporto di capacità di overcommit | Implementato | HTTPS | Riportato come serie temporale 
-
-
-| Totale utilizzo | Implementato | HTTPS |  
-
-
-| Throughput Read (lettura throughput) | Implementato | HTTPS |  
-
-
-| Scrittura throughput | Implementato | HTTPS |  
-
-
-| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
-
-
-| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
-
-
-| Scrittura IOPS | Implementato | HTTPS |  
-
-
-| Totale IOPS | Implementato | HTTPS |  
+| Risparmi totali di compressione | Implementato | HTTPS |  
 
 
 | Spazio per il risparmio di compressione | Implementato | HTTPS |  
 
 
-| Risparmi totali di compressione | Implementato | HTTPS |  
+| Capacità totale dei dati | Implementato | HTTPS |  
 
 
 | Data used Capacity (capacità utilizzata dati) | Implementato | HTTPS |  
 
 
-| Capacità totale dei dati | Implementato | HTTPS |  
+| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
+
+
+| Totale IOPS | Implementato | HTTPS |  
+
+
+| Scrittura IOPS | Implementato | HTTPS |  
+
+
+| Chiave | Implementato | HTTPS |  
+
+
+| ID server | Implementato | HTTPS |  
 
 
 | Capacità riservata di Snapshot | Implementato | HTTPS |  
 
 
 | Rapporto capacità utilizzata Snapshot | Implementato | HTTPS | Riportato come serie temporale 
+
+
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
+
+
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
+
+
+| Scrittura throughput | Implementato | HTTPS |  
+
+
+| Totale utilizzo | Implementato | HTTPS |  
 
 
 .19+| Disco StoragePool | Provisioning della capacità | Implementato | HTTPS |  
@@ -9438,97 +9505,100 @@ Prodotti supportati da questo data collector:
 | Scrittura throughput | Implementato | HTTPS |  
 
 
-| Qtree.4+ | Storage | Capacità raw non riuscita | Implementato | HTTPS 
+.4+| Storage | Capacità raw non riuscita | Implementato | HTTPS |  
 
 
-|  | Capacità raw | Implementato | HTTPS |  
+| Capacità raw | Implementato | HTTPS |  
 
 
-| Capacità raw di riserva | Implementato | HTTPS | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) | Capacità di StoragePools 
+| Capacità raw di riserva | Implementato | HTTPS | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) 
 
 
-| Implementato | HTTPS |  .4+| Nodo di storage | IOPS Read (lettura IOPS) 
+| Capacità di StoragePools | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS | Numero di IOPS in lettura sul disco | Totale IOPS 
+.4+| Nodo di storage | IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
-| Implementato | HTTPS |  | Scrittura IOPS 
+| Totale IOPS | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Totale utilizzo 
+| Scrittura IOPS | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  .13+| Disco StoragePool | Provisioning della capacità 
+| Totale utilizzo | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Capacità raw 
+.13+| Disco StoragePool | Provisioning della capacità | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Limite di tolleranza della capacità 
+| Capacità raw | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Capacità totale 
+| Limite di tolleranza della capacità | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Capacità utilizzata 
+| Capacità totale | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Rapporto di capacità di overcommit 
+| Capacità utilizzata | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS | Riportato come serie temporale | Rapporto capacità utilizzata 
+| Rapporto di capacità di overcommit | Implementato | HTTPS | Riportato come serie temporale 
 
 
-| Implementato | HTTPS |  | IOPS Read (lettura IOPS) 
+| Rapporto capacità utilizzata | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS | Numero di IOPS in lettura sul disco | Totale IOPS 
+| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
-| Implementato | HTTPS |  | Scrittura IOPS 
+| Totale IOPS | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Throughput Read (lettura throughput) 
+| Scrittura IOPS | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Throughput totale 
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Scrittura throughput 
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| Implementato | HTTPS |  .11+| Volume | Capacità raw 
+| Scrittura throughput | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Capacità totale 
+.11+| Volume | Capacità raw | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Capacità utilizzata 
+| Capacità totale | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Rapporto capacità utilizzata 
+| Capacità utilizzata | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | IOPS Read (lettura IOPS) 
+| Rapporto capacità utilizzata | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS | Numero di IOPS in lettura sul disco | Totale IOPS 
+| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
-| Implementato | HTTPS |  | Scrittura IOPS 
+| Totale IOPS | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Latenza totale 
+| Scrittura IOPS | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Throughput Read (lettura throughput) 
+| Latenza totale | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Throughput totale 
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Scrittura throughput 
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
+
+
+| Scrittura throughput | Implementato | HTTPS |  
 |===
 API di gestione utilizzate da questo data collector:
 
@@ -9906,7 +9976,7 @@ Modelli e versioni supportati da questo data collector:
 | Versioni di API | Modelli | Versioni del firmware 
 
 
-| 6.2.1 6.3.2 6.3.3 6.4.0 6.4.1 6.4.2 | 1 mattoni e 125TB 1 mattoni e 24TB 1 mattoni e 31TB 1 mattoni e 8TB 1X10TB 1X20TB 1X40TB 2 mattoni e 188TB 2 mattoni e 83TB 3 mattoni e 146TB 3 mattoni e 251TB 4 mattoni e 628TB 4 mattoni e 754TB 4X20TB 6X40TB | 4,0.27-1 4,0.31-11 6,3.3-8_X2 6,4.0-36_hotfix_2_X2 
+| 6.2.1 6.3.2 6.3.3 6.4.0 6.4.1 6.4.2 | 1 mattoni e 125TB 1 mattoni e 24TB 1 mattoni e 31TB 1 mattoni e 8TB 1X10TB 1X20TB 1X40TB 2 mattoni e 83TB 3 mattoni e 146TB 3 mattoni e 251TB 3 mattoni e 283TB 4 mattoni e 628TB 4 mattoni e 754TB 4X20TB 6X40TB | 4,0.27-1 4,0.31-11 6,3.3-8_X2 6,4.0-36_hotfix_2_X2 
 |===
 Prodotti supportati da questo data collector:
 
@@ -10432,7 +10502,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| 2660 2680 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5504 5564 5600 5700 5700B 6000 | 08.40.60.01 08.80.00.00 8.20.16.0 8.20.27.0 8.20.30.0 8.20.8.0 8.25.14.0 8.25.6.0 8.30.20.0 8.40.0.1 8.40.10.1 8.40.20.0 8.40.30.3 8.40.30.4 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.40.60.3 8.42.30.5 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.1 8.53.0.4 8.62.0.0 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.73.0.0 8.74.0.0 8.74.1.0 8.74.2.0 8.74.3.0 8.75.0.0 8.75.0.1 8.75.1.0 8.80.0.0 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.90.0.0 
+| 2660 2680 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5504 5564 5600 5700 5700B 6000 7999 | 08.40.60.01 08.80.00.00 7.84.46.0 8.20.16.0 8.20.27.0 8.20.30.0 8.20.8.0 8.25.14.0 8.25.6.0 8.40.0.1 8.40.20.0 8.40.30.4 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.40.60.3 8.42.30.5 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.1 8.53.0.4 8.62.0.0 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.73.0.0 8.74.0.0 8.74.1.0 8.74.2.0 8.74.3.0 8.75.0.0 8.75.0.1 8.75.1.0 8.80.0.0 8.80.1.0 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.90.0.0 
 |===
 Prodotti supportati da questo data collector:
 
@@ -11009,7 +11079,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| FlashBlade//S200 | Purezza//purezza FB 4.1.5//purezza FB 4.3.0//purezza FB 4.3.6//FB 4.4.3 
+| FlashBlade//S200 | Purezza//purezza FB 4.1.5//purezza FB 4.3.0//purezza FB 4.3.11//purezza FB 4.3.6//FB 4.4.3 
 |===
 Prodotti supportati da questo data collector:
 
@@ -11376,9 +11446,7 @@ API di gestione utilizzate da questo data collector:
 
 == Calcolo cloud Google
 
-Modelli e versioni supportati da questo data collector:
-
-Versioni API:
+Modelli e versioni supportati da questo data collector: Versioni API:
 
 * v1
 
@@ -11533,7 +11601,7 @@ Prodotti supportati da questo data collector:
 | Chiave di origine | Implementato | HTTPS |  
 
 
-.21+| performance .18+| macchina virtuale | Capacità totale | Implementato | HTTPS |  
+.22+| performance .18+| macchina virtuale | Capacità totale | Implementato | HTTPS |  
 
 
 | Rapporto capacità utilizzata | Implementato | HTTPS |  
@@ -11587,7 +11655,10 @@ Prodotti supportati da questo data collector:
 | Tempo di attesa pianificato | Implementato | HTTPS | Tempo di attesa pianificato in percentuale 
 
 
-.3+| MACCHINA VIRTUALE | Capacità totale | Implementato | HTTPS |  
+.4+| MACCHINA VIRTUALE | Capacità totale | Implementato | HTTPS |  
+
+
+| Rapporto capacità utilizzata | Implementato | HTTPS |  
 
 
 | Chiave | Implementato | HTTPS |  
@@ -11613,7 +11684,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| Hitachi Content Platform | 9.6.2.37 9.6.3.33 9.7.2.27 
+| Hitachi Content Platform | 9.6.2.37 9.6.3.33 9.7.2.27 9.7.3.14 
 |===
 Prodotti supportati da questo data collector:
 
@@ -11744,7 +11815,25 @@ Prodotti supportati da questo data collector:
 | Virtuale | Implementato | HTTPS | Si tratta di un dispositivo per la virtualizzazione dello storage? 
 
 
-.6+| performance .6+| Dati del nodo di storage | Chiave | Implementato |  |  
+.12+| performance .6+| Storage | Capacità raw non riuscita | Implementato |  |  
+
+
+| Capacità raw | Implementato |  |  
+
+
+| Capacità raw di riserva | Implementato |  | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) 
+
+
+| Capacità di StoragePools | Implementato |  |  
+
+
+| Chiave | Implementato |  |  
+
+
+| ID server | Implementato |  |  
+
+
+.6+| Dati del nodo di storage | Chiave | Implementato |  |  
 
 
 | ID server | Implementato |  |  
@@ -11779,7 +11868,7 @@ Modelli e versioni supportati da questo data collector:
 | Versioni di API | Modelli | Versioni del firmware 
 
 
-| 7.6.1 8,0 8.7.1 8.7.3 8.7.6 8.8.3 | DF850MH DF850S HM800 HM850 P9500 RAID800 VSP5000 XP24000 XP8 | 70 06 80 00/00 96 05 83 60/00 08 08 88 60/00 13 08 90 00/00 21 09 90 00/00 24 09-25 21/00 54/00 30/00 76/02/A-H 06-43 80 06 80 00/00 46 05 88 60/00 10 08 88 60/00 13 08 90 00/00 23 09 90 00/01 60 60 70 80 80/B-H 80 00/02 91 06 83 60/00 50 08 88 60/00 12 08 88 60/01 81 09 90 00/00 24 09 90 08 08 06 06/B-S 0986/A-H 0988/H-S DKC:60-08-22 DKC:60-08-65 DKC:0983-0984 DKC:0985 06 86/00 80 06 91/00 83 05 50 60/00 83 05 54 60/00 88 08 10 60/00 88 08 12 60/00 88 08 14 60/00 88 08 15 60/00 90 08 81/00 90 09 21/00 90 09 23/00 90 09 24/00 90 09 25/00 
+| 7.6.1 8,0 8.7.1 8.7.3 8.7.6 8.8.3 | DF850MH DF850S HM800 HM850 P9500 RAID800 VSP5000 XP24000 XP8 | 70 06 80 00/00 96 05 83 60/00 53 08 88 60/00 12 08 88 60/01 81 09 90 00/00 24 09 90 08 08 06/A-H 06-43 80 06 80 00/00 46 05 83 60/00 08 08 88 60/00 13 08 90 00/00 21 09 90 00/00 24 09-25 21/00 54/00 30/00/B-H 80 00/02 91 06 83 60/00 50 05 88 60/00 10 08 88 60/00 13 08 90 00/00 23 09 90 00/01 60 60 70/B-S 0986/A-H 0988/H-S DKC:60-08-22 DKC:60-08-65 DKC:0983-0984 DKC:0985 80 06 76/02 80 06 86/00 80 06 91/00 83 05 50 60/00 83 05 54 60/00 83 05 57 60/00 88 08 10 60/00 88 08 12 60/00 88 08 14 60/00 88 08 15 60/00 90 08 81/00 90 09 21/00 90 09 23/00 90 09 24/00 90 09 25/00 
 |===
 Prodotti supportati da questo data collector:
 
@@ -12389,7 +12478,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| VSP 5100 VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E590 VSP F400 VSP E790H VSP F1500 VSP E790 VSP F900 VSP G1000 VSP G1500 VSP G600 VSP G800 VSP G900 XP8 | 80 00 70 96 01 06 00 03/03 83 40 69 49 01 05 01 03/02 83 40 70 51 01 05 00 03/03 88 60 65 08 01 08 00 03/05 88 60 70 13 01 08 01 03/05 88-06 00 03/04 80 00 71 96 01 05 01 03/02 83 60 65 49 01 05 00 03/04 83 40 71 51 01 08 00 03/05 88 60 70 11 01 08 00 03/04 88 60 65 13 01-91 96 01 06 00 03/02 80 00 76 49 01 05 01 03/05 83 60 69 51 01 05 00 03/02 83 40 76 08 01 08 00 03/04 88 60 65 11 01 08 00 03/05 88 60 65-00/00:00-06-95-03/04 80-01-70/00:94-00-06-71-03/02 80-01/00:01-65-03/05 80-06 08 13 60 01 01 70 03/04 88 08 13 60 01 01 76 03/03 90 08 82 00 00 01 65 03/05 90 08 82 01.72.00 90 09 01 00 01 01 65 03/05 90 09 22 00 00 01 65 03/05 90 09 22 00 00 01 70 03/04 90 09 22 00 00 01 71 03/02 90 09 23 00 00 01 65 03/05 90 09 24 00 01 01 65 03/05 90 09 24 00 01 01 71 03/02 90 09 24 00 01 01 76 03/03 90 09 25 00 00 01 70 03/04 90 09 25 00 00 01 76 03/03 90 09 25 01.72.00 90 09 26 00 00 01 65 03/05 90 09 26 00 00 01 71 03/02 93 07 01 80 00 01 70 03/04 93 07 22 40 00 01 65 03/05 93 07 22 40 00 01 69 03/02 93 07 22 80 00 01 70 03/04 93 07 22 80 00 01 71 03/02 93 07 23 80 01 01 71 03/02 93 07 24 40 00 01 76 03/03 93 07 24 80 00 01 70 03/04 
+| VSP 5100 VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E590 VSP F400 VSP E790H VSP F1500 VSP E790 VSP F900 VSP G1000 VSP G1500 VSP G600 VSP G800 VSP G900 XP8 | 80 00 76 49 01 05 01 03/05 83 60 69 51 01 05 00 03/02 83 40 76 08 01 08 00 03/04 88 60 65 11 01 08 00 03/05 88 60 65 13 01 08 01 03/02 88-06 00 03/03 83 40 69 49 01 05 01 03/02 83 40 70 51 01 05 00 03/03 88 60 65 08 01 08 00 03/05 88 60 70 13 01 08 01 03/05 88 60 70 13 01-91 96 01 05 01 03/02 83 60 65 49 01 05 00 03/04 83 40 71 51 01 08 00 03/05 88 60 70 11 01 08 00 03/04 88 60 65 13 01 08 01 03/04 88 60 71-00/00:00-06-96-03/04 80-01-70/00:94-00-06-71-03/02 80-01/00:01-71-03/02 80-06 08 13 60 01 01 76 03/03 90 08 82 00 00 01 65 03/05 90 08 82 01.70.04 90 09 01 00 01 01 65 03/05 90 09 22 00 00 01 65 03/05 90 09 22 00 00 01 70 03/04 90 09 22 00 00 01 71 03/02 90 09 24 00 01 01 65 03/05 90 09 24 00 01 01 71 03/02 90 09 24 00 01 01 76 03/03 90 09 24 01.65.05 90 09 25 00 00 01 76 03/03 90 09 25 01.70.04 90 09 26 00 00 01 65 03/05 90 09 26 00 00 01 71 03/02 90 09 26 00 00 01 76 03/03 93 07 01 80 00 01 70 03/04 93 07 22 40 00 01 65 03/05 93 07 22 40 00 01 69 03/02 93 07 22 80 00 01 70 03/04 93 07 22 80 00 01 71 03/02 93 07 23 80 00 01 71 03/02 93 07 23 80 01 01 71 03/02 93 07 24 40 00 01 76 03/03 93 07 24 80 00 01 70 03/04 
 |===
 Prodotti supportati da questo data collector:
 
@@ -13297,7 +13386,7 @@ Modelli e versioni supportati da questo data collector:
 | Versioni di API | Modelli | Versioni del firmware 
 
 
-| v1 | 5050 AF1000 AF20Q AF40 AF60 AF80 CS1000 CS300 CS3000 CS500 HF20 HF20C HF20H HF40 HF40C HF60 | 5,0.8,0-677726-opt 6,1.2,502-1057650-opt 6,1.2,500-1053701-opt 6,1.2,400-1048557-opt 6,1.2,300-1042680-opt 6,1.1,300-1028597-opt 6,1.1,200-1020304-opt 6,1.1,100-1013503-opt 6,0.0,500-1005932-opt 6,0.0,400-991061-opt 5,2.1,800-930936-opt 5,2.1,1100-1027043-opt 6,1.2,600-1064273-opt 
+| v1 | 5050 6070 AF1000 AF20Q AF40 AF60 AF80 CS1000 CS300 CS3000 CS500 HF20 HF20C HF20H HF40 HF60 | .--opt 5,2.1,1100-1027043-opt 6,1.2,502-1057650-opt 6,1.2,500-1053701-opt 6,1.2,400-1048557-opt 6,1.2,300-1042680-opt 6,1.1,300-1028597-opt 6,1.1,200-1020304-opt 6,0.0,500-1005932-opt 6,0.0,400-991061-opt 5,2.1,800-930936-opt 5,2.1,700-882343-opt 5,2.1,400-796142-opt 2,600-1064273-opt 6,1.8,0-677726-opt 5,0 
 |===
 Prodotti supportati da questo data collector:
 
@@ -14573,9 +14662,6 @@ Prodotti supportati da questo data collector:
 | Deduplica attivata | Implementato | HTTPS | La deduplica è abilitata nel pool di storage 
 
 
-| Stato | Implementato | HTTPS |  
-
-
 | Tipo di protezione | Implementato | HTTPS |  
 
 
@@ -14592,6 +14678,9 @@ Prodotti supportati da questo data collector:
 
 
 | Commento | Distanza | HTTPS | stato: commento di testo libero che descrive la svm 
+
+
+| Stato | Implementato | HTTPS |  
 
 
 .3+| Qtree | ID qtree | Implementato | HTTPS | id univoco del qtree 
@@ -14701,7 +14790,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.95 7.9.40.251 7.9.41.65 
+| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.132 7.9.33.95 7.9.40.251 7.9.41.65 
 |===
 Prodotti supportati da questo data collector:
 
@@ -15381,7 +15470,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| 2072 4680 AE2 9843 AF7 9848 UG8-92H 4983 AE3 9846 AF8 9848-12G 2072-224 2072 AH8 9843 AG8 9848 AG8 9848-12G 4662-24E 2072-4666-92G 2078-2N4 24G 4662-3H4 24G 4657-924 4662-3N2 24F 2078-3N4 AF3 4657-2078-12F 2078-24G 2078-324 2078-424 2078-24C 2078-24F 2077-12G 2078-224 2078-AFF 2078-24G 2076-524 2076-624 2076-724 2076-824 2076-24G 2077-424 2077-4H4 2077-92G 2076-124 2076-AF6 2076-24F 2076-2072-12F 2076-224 2076-2072-92F 2072-24G 2072-2072-324 2072-2072-24C 2072-UH8 4680-24F 2072-AH8 4666-12F 2072-24H 4680 | 1.5.2.7 1.6.1.2 1.6.1.4 1.6.1.5 7.7.1.8 7.8.1.11 7.8.1.12 7.8.1.13 7.8.1.14 7.8.1.16 7.8.1.5 7.8.1.6 7.8.1.7 7.8.1.8 8.2.1.10 8.2.1.11 8.2.1.8 8.2.1.9 8.3.1.10 8.3.1.2 8.3.1.5 8.3.1.6 8.3.1.7 8.3.1.8 8.3.1.9 8.4.0.10 8.4.0.11 8.4.0.13 8.4.0.15 8.4.0.3 8.4.0.5 8.4.0.6 8.4.0.9 8.4.2.0 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.0 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.7.0.0 8.7.0.1 8.7.0.2 8.7.2.1 
+| 2072 AH8 9843 AG8 9848 AG8 9848-AE2 9843 AF7 9848 UG8-92H 4983 AE3 9846 AF8 9848-AH8 4666-24E 2072-24F 2072-12G 4662-2N4 UH8 4680-3H4 4666-3N2 92G 2078-3N4 24G 4662-24G 4657-924 4662-24F 2078-AF3 4657-2078-12F 2078-24G 2078-324 2078-424 2078-AFF 24C 2078-24F 2077-12G 2078-224 2078-4H4 2078-24G 2076-524 2076-624 2076-724 2076-824 2076-24G 2077-424 2077-2077-92G 2076-124 2076-AF6 2076-12F 2076-224 2076-24F 2076-2072-2072-92F 2072-24G 2072-2072-324 2072-2072-24C 2072-4680-24H 4680-12F 2072-12G 2072-224 2072-4680 | 1.5.2.7 1.6.1.2 1.6.1.4 1.6.1.5 7.7.1.8 7.8.1.11 7.8.1.12 7.8.1.13 7.8.1.14 7.8.1.16 7.8.1.5 7.8.1.6 7.8.1.7 7.8.1.8 8.2.1.10 8.2.1.8 8.2.1.9 8.3.1.10 8.3.1.2 8.3.1.5 8.3.1.6 8.3.1.7 8.3.1.8 8.3.1.9 8.4.0.10 8.4.0.11 8.4.0.13 8.4.0.15 8.4.0.2 8.4.0.5 8.4.0.6 8.4.0.9 8.4.2.0 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.14 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.0 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.7.0.0 8.7.0.1 8.7.0.2 8.7.0.3 
 |===
 Prodotti supportati da questo data collector:
 
@@ -16244,7 +16333,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| F4303 F6240 | 6.0.20.40 6.0.31.0 7.1.14.0 7.3.20.90 
+| F4303 F6230 F6240 | 6.0.20.40 6.0.31.0 7.1.14.0 7.1.15.0 7.3.20.90 8.1.0.280 
 |===
 Prodotti supportati da questo data collector:
 
@@ -16285,19 +16374,19 @@ Prodotti supportati da questo data collector:
 | Vendor | Implementato | HTTPS |  
 
 
-.5+| Condivisione file | Nome | Implementato | HTTPS |  
+.5+| Condivisione file | È InternalVolume | Implementato | HTTPS | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
+
+
+| È condiviso | Implementato | HTTPS | Se a questo FileShare sono associate condivisioni 
+
+
+| Nome | Implementato | HTTPS |  
 
 
 | Percorso | Implementato | HTTPS | Percorso di FileShare 
 
 
 | ID qtree | Implementato | HTTPS | id univoco del qtree 
-
-
-| È InternalVolume | Implementato | HTTPS | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
-
-
-| È condiviso | Implementato | HTTPS | Se a questo FileShare sono associate condivisioni 
 
 
 .4+| Info | Nome origine dati | Implementato | HTTPS | Info 
@@ -16312,31 +16401,13 @@ Prodotti supportati da questo data collector:
 | Chiave di origine | Implementato | HTTPS |  
 
 
-.11+| Volume interno | ID volume interno | Implementato | HTTPS |  
+.11+| Volume interno | Deduplica attivata | Implementato | HTTPS | La deduplica è abilitata nel pool di storage 
+
+
+| ID volume interno | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
-
-
-| ID pool di storage | Implementato | HTTPS |  
-
-
-| Tipo | Distanza | HTTPS |  
-
-
-| Con thin provisioning | Implementato | HTTPS |  
-
-
-| Thin provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il thin provisioning per il layer di volume sopra di esso 
-
-
-| Deduplica attivata | Implementato | HTTPS | La deduplica è abilitata nel pool di storage 
-
-
-| Capacità totale utilizzata | Implementato | HTTPS | Capacità totale in MB 
-
-
-| Capacità allocata totale | Implementato | HTTPS |  
 
 
 | Altra capacità allocata | Distanza | HTTPS | Capacità allocata per altri (non dati e non snapshot) 
@@ -16345,22 +16416,40 @@ Prodotti supportati da questo data collector:
 | Rapporto raw/usable | Implementato | HTTPS | rapporto per la conversione dalla capacità utilizzabile alla capacità raw 
 
 
-.3+| Qtree | ID qtree | Implementato | HTTPS | id univoco del qtree 
+| ID pool di storage | Implementato | HTTPS |  
 
 
-| Nome | Implementato | HTTPS |  
+| Con thin provisioning | Implementato | HTTPS |  
+
+
+| Thin provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il thin provisioning per il layer di volume sopra di esso 
+
+
+| Capacità allocata totale | Implementato | HTTPS |  
+
+
+| Capacità totale utilizzata | Implementato | HTTPS | Capacità totale in MB 
 
 
 | Tipo | Distanza | HTTPS |  
 
 
-.3+| Condividere | Nome | Implementato | HTTPS |  
+.3+| Qtree | Nome | Implementato | HTTPS |  
+
+
+| ID qtree | Implementato | HTTPS | id univoco del qtree 
+
+
+| Tipo | Distanza | HTTPS |  
+
+
+.3+| Condividere | Interfacce IP | Implementato | HTTPS | Elenco separato da virgole degli indirizzi IP sui quali è esposta questa condivisione 
+
+
+| Nome | Implementato | HTTPS |  
 
 
 | Protocollo | Implementato | HTTPS | enum per protocollo di condivisione 
-
-
-| Interfacce IP | Implementato | HTTPS | Elenco separato da virgole degli indirizzi IP sui quali è esposta questa condivisione 
 
 
 .2+| Iniziatore della condivisione | Iniziatore | Implementato | HTTPS |  
@@ -16474,16 +16563,16 @@ Prodotti supportati da questo data collector:
 | Virtuale | Implementato | HTTPS | Si tratta di un dispositivo per la virtualizzazione dello storage? 
 
 
-.9+| Sincronizzazione dello storage | Volume di origine | Implementato | HTTPS |  
-
-
-| Volume di destinazione | Implementato | HTTPS |  
-
-
-| Modalità | Implementato | HTTPS |  
+.9+| Sincronizzazione dello storage | Modalità | Implementato | HTTPS |  
 
 
 | Mode Enum | Implementato | HTTPS |  
+
+
+| Storage di origine | Implementato | HTTPS |  
+
+
+| Volume di origine | Implementato | HTTPS |  
 
 
 | Stato | Implementato | HTTPS | testo libero che descrive lo stato del dispositivo 
@@ -16492,10 +16581,10 @@ Prodotti supportati da questo data collector:
 | Num. Stato | Implementato | HTTPS |  
 
 
-| Storage di origine | Implementato | HTTPS |  
-
-
 | Storage di destinazione | Implementato | HTTPS |  
+
+
+| Volume di destinazione | Implementato | HTTPS |  
 
 
 | Tecnologia | Implementato | HTTPS | la tecnologia che causa l'efficienza dello storage è cambiata 
@@ -16587,9 +16676,7 @@ API di gestione utilizzate da questo data collector:
 
 == Calcolo Microsoft Azure
 
-Modelli e versioni supportati da questo data collector:
-
-Versioni API:
+Modelli e versioni supportati da questo data collector: Versioni API:
 
 * 1 giugno 2018
 
@@ -17332,7 +17419,7 @@ Modelli e versioni supportati da questo data collector:
 | Versioni di API | Modelli | Versioni del firmware 
 
 
-| 1,12 1,17 1,19 1,20 1,21 | FAS2040 FAS2220 FAS2240-4 FAS2520 FAS2554 FAS3140 FAS3160 FAS3250 FAS3270 FAS6240 FAS6250 FAS8020 FAS8040 FAS8060 N6070 N6240 N6270 | -Mode.4P9D18-Mode-Mode-Mode.3P2 7-Mode.3P3 7-Mode 8.2.2 7-Mode.4P4 8,2-Mode 8,2 Data ONTAP.4P5-Mode 7.4P6 7-Mode 7-Mode 8,2.5P3 7-Mode 7.3.3-Mode 7.5P4 Release 8,2-Mode 8,2.5P3 8,2-Mode 7-Mode 8.2.4 7-Mode 8.2.5 7.5P4 7-Mode 8.2.5 7-Mode 8,2-Mode 8,2-Mode 7 Data ONTAP 8,2.5P4-Mode 7-Mode 7-Mode 8.2.3 7-Mode 8,1-Mode Data ONTAP 8.1.1 7-Mode 8.5P3 
+| 1,12 1,17 1,19 1,20 1,21 | FAS2040 FAS2220 FAS2240-4 FAS2520 FAS2552 FAS2554 FAS3140 FAS3160 FAS3250 FAS3270 FAS6240 FAS6250 FAS8020 FAS8040 FAS8060 N6070 N6240 N6270 | -Mode.4P9D18-Mode-Mode-Mode.3P2 7-Mode.3P3 7-Mode 8.2.2 7-Mode.4P4 8,2-Mode 8,2 Data ONTAP.4P5-Mode 7.4P6 7-Mode 7-Mode 8,2.5P3 7-Mode 7.3.3-Mode 7.5P4 Release 8,2-Mode 8,2.5P3 8,2-Mode 7-Mode 8.2.4 7-Mode 8.2.5 7.5P4 7-Mode 8.2.5 7-Mode 8,2-Mode 8,2-Mode 7 Data ONTAP 8,2.5P4-Mode 7-Mode 7-Mode 8.2.3 7-Mode 8,1-Mode Data ONTAP 8.1.1 7-Mode 8.5P3 
 |===
 Prodotti supportati da questo data collector:
 
@@ -17877,7 +17964,7 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza |  |  
 
 
-.129+| performance .9+| Disco | IOPS Read (lettura IOPS) | Implementato |  | Numero di IOPS in lettura sul disco 
+.140+| performance .9+| Disco | IOPS Read (lettura IOPS) | Implementato |  | Numero di IOPS in lettura sul disco 
 
 
 | Totale IOPS | Implementato |  |  
@@ -17902,6 +17989,39 @@ Prodotti supportati da questo data collector:
 
 
 | Scrittura utilizzo | Implementato |  |  
+
+
+.11+| Disco | Chiave | Implementato |  |  
+
+
+| ID server | Implementato |  |  
+
+
+| Throughput Read (lettura throughput) | Implementato |  |  
+
+
+| Scrittura throughput | Implementato |  |  
+
+
+| Throughput totale | Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
+
+
+| IOPS Read (lettura IOPS) | Implementato |  | Numero di IOPS in lettura sul disco 
+
+
+| Scrittura IOPS | Implementato |  |  
+
+
+| Totale IOPS | Implementato |  |  
+
+
+| Utilizzo in lettura | Implementato |  |  
+
+
+| Scrittura utilizzo | Implementato |  |  
+
+
+| Totale utilizzo | Implementato |  |  
 
 
 .21+| Volume interno | Capacità totale | Implementato |  |  
@@ -18281,7 +18401,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| 2800B 2806 5700 6000 | 08.62.00.02 08.71.03.00 08.73.00.00 08.74.01.00 08.74.02.00 08.75.00.00 08.75.00.01 08.80.00.00 08.81.00.03 08.81.02.00 08.81.03.00 08.90.00.00 68.80.49.74 
+| 2800B 2806 5700 | 08.71.03.00 08.73.00.00 08.74.02.00 08.75.00.00 08.75.00.01 08.80.00.00 08.81.00.03 08.81.02.00 08.81.03.00 08.90.00.00 
 |===
 Prodotti supportati da questo data collector:
 
@@ -18659,7 +18779,7 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.221+| base .4+| Funzionalità | Attivo | Implementato | HTTPS |  
+.220+| base .4+| Funzionalità | Attivo | Implementato | HTTPS |  
 
 
 | Concesso in licenza | Implementato | HTTPS |  
@@ -19121,7 +19241,7 @@ Prodotti supportati da questo data collector:
 | Managementindirizzi IP | Implementato | HTTPS |  
 
 
-.30+| Pool di storage | Compressione attivata | Implementato | HTTPS | La compressione è attivata nel pool di storage 
+.29+| Pool di storage | Compressione attivata | Implementato | HTTPS | La compressione è attivata nel pool di storage 
 
 
 | Risparmi di compressione | Implementato | HTTPS | rapporto dei risparmi di compressione in percentuale 
@@ -19188,9 +19308,6 @@ Prodotti supportati da questo data collector:
 
 
 | Virtuale | Implementato | HTTPS | Si tratta di un dispositivo per la virtualizzazione dello storage? 
-
-
-|  | Implementato | HTTPS |  
 
 
 |  | Implementato | HTTPS |  
@@ -19322,7 +19439,7 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza | HTTPS |  
 
 
-.100+| performance .33+| Volume interno | Capacità totale | Implementato | HTTPS |  
+.80+| performance .33+| Volume interno | Capacità totale | Implementato | HTTPS |  
 
 
 | Capacità utilizzata | Implementato | HTTPS |  
@@ -19442,9 +19559,6 @@ Prodotti supportati da questo data collector:
 | ID server | Implementato | HTTPS |  
 
 
-| Dischi guasti | Implementato | HTTPS |  
-
-
 | Capacità raw | Implementato | HTTPS |  
 
 
@@ -19455,6 +19569,9 @@ Prodotti supportati da questo data collector:
 
 
 | Capacità di StoragePools | Implementato | HTTPS |  
+
+
+| Dischi guasti | Implementato | HTTPS |  
 
 
 .13+| Nodo di storage | Totale rapporto di hit della cache | Implementato | HTTPS |  
@@ -19494,66 +19611,6 @@ Prodotti supportati da questo data collector:
 
 
 | Totale utilizzo | Implementato | HTTPS |  
-
-
-.20+| Pool di storage | Chiave | Implementato | HTTPS |  
-
-
-| ID server | Implementato | HTTPS |  
-
-
-| Throughput Read (lettura throughput) | Implementato | HTTPS |  
-
-
-| Scrittura throughput | Implementato | HTTPS |  
-
-
-| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
-
-
-| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
-
-
-| Scrittura IOPS | Implementato | HTTPS |  
-
-
-| Totale IOPS | Implementato | HTTPS |  
-
-
-| Capacità riservata | Implementato | HTTPS | Riservato frazionario (incluso nella capacità allocata dei dati) 
-
-
-| Capacità totale | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-| Data used Capacity (capacità utilizzata dati) | Implementato | HTTPS |  
-
-
-| Capacità totale dei dati | Implementato | HTTPS |  
-
-
-| Capacità raw | Implementato | HTTPS |  
-
-
-| Rapporto capacità utilizzata | Implementato | HTTPS |  
-
-
-| Capacità utilizzata di Snapshot | Implementato | HTTPS |  
-
-
-| Capacità riservata di Snapshot | Implementato | HTTPS |  
-
-
-| Rapporto capacità utilizzata Snapshot | Implementato | HTTPS | Riportato come serie temporale 
-
-
-| Provisioning della capacità | Implementato | HTTPS |  
-
-
-| Rapporto di capacità di overcommit | Implementato | HTTPS | Riportato come serie temporale 
 
 
 .18+| Disco StoragePool | Capacità totale | Implementato | HTTPS |  
@@ -19639,7 +19696,243 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| AFF---AFF-A220-A250 AFF-FAS90 ASA-FAS3220 FAS3250 FAS3270-C800 CDvM100 CDvM200 DM5000H DM7100F FAS2240 FAS2620 FAS2650 FAS2720 FAS2750 FAS2820-A70 AFF-C400 AFF-A700s AFF-A800 AFF-A800 AFF-A250 ASA-A400 AFF-C800 AFF8020 AFF8040 AFF8060 AFF8080 ASA-C400 AFF-C60 AFF-C250 ASA-A900 AFF-C190 AFF-A90 AFF-A900 ASA-C250 AFF-A700 ASA A400 FAS8200 FAS8300 FAS8700 A320 FAS500f FAS6210 FAS8020 FAS8040 FAS8060 FAS8080 ASA 2 FAS2520 FAS2552 FAS2554 AFF A1K AFF A300 FAS9000 FAS9500 A200 AFF FASDvM300 AFF A150 SIMBOX | 8,2 9,1 9,1 9,1 9.11.1.3P4 8,2 9,1 9,1 9,1 9,1.3P5 8,3 9,1 9,1 9.10.0 9.10.1.1P2 8.3.2 8,3.2P12 8,3.2P5 9.0.0 9.1.0 9,1.0P1 9,1.0P11.0P15 9,1 9.12.1 9.13.0 9.13.1 9.14.0 9.14.1 9.15.1 9.16.1 9.17.1 9.18.0 9,2 9,2 9,3 9,3 9,3 9,3 9,3 9,3 9,3 9,3 9.4.0 9,4 9,4 9.5.0 9,5 9,5 9,5 9,5 9,5 9,5 9,5 9,5 9,5 9,5 9,5 9,5 9.6.0 9,6 9,6 9,6 9,6 9,6 9.7.0 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9,7 9.8.0 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9,8 9.9.0 9.9.1 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 9,9 
+| AFF FAS8200 FAS8300 FAS8700-C800 CDvM100 CDvM200 DM5000H DM7100F FAS2240 FAS6210 FAS8020 FAS8040 FAS8060 FAS8080-A1K FAS90 AFF FAS500f-FAS3220 FAS3250 FAS3270 FASDvM300 ASA-A200 AFF-C250 AFF-C400 ASA-A250 FAS2620 FAS2650 FAS2720 FAS2750 FAS2820-A400 AFF-A400 AFF-C60 ASA-C80 AFF-C800 AFF8020 AFF8040 AFF8060 AFF8080 AFF-C190 ASA-C250 AFF-C400 AFF-A800 AFF-A90 AFF-A900 AFF-A70 AFF-A700 AFF-A700s AFF-A300 AFF-A320 AFF-A800 AFF-A900 ASA-A220 AFF-A250 ASA ASA-2 FAS2520 FAS2552 FAS2554 FAS9000 FAS9500 AFF-A150 SIMBOX A20  a| 
+* 8.2.3P4
+* 8.2.3P5
+* 8.3.1P2
+* 8.3.2
+* 8.3.2P12
+* 8.3.2P5
+* 9.0.0
+* 9.1.0
+* 9.1.0P1
+* 9.1.0P11
+* 9.1.0P15
+* 9.1.0P17
+* 9.1.0P19
+* 9.1.0P2
+* 9.1.0P20
+* 9.1.0P3
+* 9.1.0P6
+* 9.1.0P7
+* 9.1.0P8
+* 9.1.0P9
+* 9.10.0
+* 9.10.1
+* 9.10.1P1
+* 9.10.1P10
+* 9.10.1P11
+* 9.10.1P12
+* 9.10.1P13
+* 9.10.1P14
+* 9.10.1P15
+* 9.10.1P16
+* 9.10.1P17
+* 9.10.1P18
+* 9.10.1P19
+* 9.10.1P2
+* 9.10.1P20
+* 9.10.1P3
+* 9.10.1P4
+* 9.10.1P5
+* 9.10.1P6
+* 9.10.1P7
+* 9.10.1P8
+* 9.10.1P9
+* 9.11.0P1
+* 9.11.1
+* 9.11.1P1
+* 9.11.1P10
+* 9.11.1P11
+* 9.11.1P12
+* 9.11.1P13
+* 9.11.1P14
+* 9.11.1P15
+* 9.11.1P16
+* 9.11.1P17
+* 9.11.1P18
+* 9.11.1P2
+* 9.11.1P3
+* 9.11.1P4
+* 9.11.1P5
+* 9.11.1P6
+* 9.11.1P7
+* 9.11.1P8
+* 9.11.1P9
+* 9.11.1X12
+* 9.12.1
+* 9.12.1P1
+* 9.12.1P10
+* 9.12.1P11
+* 9.12.1P12
+* 9.12.1P13
+* 9.12.1P14
+* 9.12.1P15
+* 9.12.1P16
+* 9.12.1P17
+* 9.12.1P2
+* 9.12.1P3
+* 9.12.1P4
+* 9.12.1P5
+* 9.12.1P6
+* 9.12.1P7
+* 9.12.1P8
+* 9.12.1P9
+* 9.13.0
+* 9.13.0P1
+* 9.13.0P3
+* 9.13.1
+* 9.13.1D1
+* 9.13.1P1
+* 9.13.1P10
+* 9.13.1P11
+* 9.13.1P12
+* 9.13.1P13
+* 9.13.1P14
+* 9.13.1P2
+* 9.13.1P3
+* 9.13.1P4
+* 9.13.1P5
+* 9.13.1P6
+* 9.13.1P7
+* 9.13.1P8
+* 9.13.1P9
+* 9.14.0
+* 9.14.0P1
+* 9.14.0P2
+* 9.14.1
+* 9.14.1P1
+* 9.14.1P10
+* 9.14.1P11
+* 9.14.1P2
+* 9.14.1P4
+* 9.14.1P5
+* 9.14.1P6
+* 9.14.1P7
+* 9.14.1P8
+* 9.14.1P8D5
+* 9.14.1P9
+* 9.14.1X14
+* 9.14.1X20
+* 9.14.1X24
+* 9.15.0P1
+* 9.15.0P2
+* 9.15.1
+* 9.15.1P1
+* 9.15.1P2
+* 9.15.1P2D2
+* 9.15.1P3
+* 9.15.1P4
+* 9.15.1P5
+* 9.15.1P6
+* 9.15.1P7
+* 9.15.1P7D4
+* 9.15.1P8
+* 9.15.1X19
+* 9.15.1X27
+* 9.16.1
+* 9.16.1P1
+* 9.16.1X16
+* 9.16.1X26
+* 9.16.1X29
+* 9.17.1
+* 9.17.1X7
+* 9.2.0P3
+* 9.2.0P4
+* 9.3.0P15
+* 9.3.0P18
+* 9.3.0P20
+* 9.3.0P21
+* 9.3.0P6
+* 9.3.0P7
+* 9.3.0P8
+* 9.4.0
+* 9.4.0P2
+* 9.4.0P5
+* 9.5.0
+* 9.5.0P1
+* 9.5.0P10
+* 9.5.0P14
+* 9.5.0P16
+* 9.5.0P17
+* 9.5.0P18
+* 9.5.0P19
+* 9.5.0P2
+* 9.5.0P3
+* 9.5.0P6
+* 9.5.0P7
+* 9.5.0P9
+* 9.6.0
+* 9.6.0P11
+* 9.6.0P18
+* 9.6.0P2
+* 9.6.0P3
+* 9.6.0P5
+* 9.7.0
+* 9.7.0P10
+* 9.7.0P11
+* 9.7.0P12
+* 9.7.0P13
+* 9.7.0P14
+* 9.7.0P15
+* 9.7.0P16
+* 9.7.0P17
+* 9.7.0P18
+* 9.7.0P19
+* 9.7.0P20
+* 9.7.0P21
+* 9.7.0P22
+* 9.7.0P23
+* 9.7.0P4
+* 9.7.0P5
+* 9.7.0P6
+* 9.7.0P7
+* 9.7.0P8
+* 9.7.0P9
+* 9.7.0X17
+* 9.8.0
+* 9.8.0P1
+* 9.8.0P10
+* 9.8.0P11
+* 9.8.0P12
+* 9.8.0P13
+* 9.8.0P14
+* 9.8.0P14X5
+* 9.8.0P15
+* 9.8.0P16
+* 9.8.0P17
+* 9.8.0P18
+* 9.8.0P19
+* 9.8.0P2
+* 9.8.0P20
+* 9.8.0P21
+* 9.8.0P3
+* 9.8.0P4
+* 9.8.0P6
+* 9.8.0P7
+* 9.8.0P8
+* 9.8.0P9
+* 9.9.0
+* 9.9.1
+* 9.9.1P10
+* 9.9.1P11
+* 9.9.1P12
+* 9.9.1P13
+* 9.9.1P14
+* 9.9.1P15
+* 9.9.1P16
+* 9.9.1P17
+* 9.9.1P18
+* 9.9.1P19
+* 9.9.1P2
+* 9.9.1P20
+* 9.9.1P3
+* 9.9.1P5X2
+* 9.9.1P6
+* 9.9.1P7
+* 9.9.1P9
+
+
 |===
 Prodotti supportati da questo data collector:
 
@@ -20424,7 +20717,7 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza | HTTPS |  
 
 
-.234+| performance .9+| Disco | IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
+.222+| performance .9+| Disco | IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
 | Totale IOPS | Implementato | HTTPS |  
@@ -21027,52 +21320,16 @@ Prodotti supportati da questo data collector:
 | Scrittura throughput | Implementato | HTTPS |  
 
 
-.16+| VirtualMachine | Capacità totale | Implementato | HTTPS |  
+.4+| VirtualMachine | Capacità totale | Implementato | HTTPS |  
 
 
 | Capacità utilizzata | Implementato | HTTPS |  
 
 
-| Lettura densità io | Implementato | HTTPS |  
-
-
-| Densità io totale | Implementato | HTTPS |  
-
-
-| Densità io di scrittura | Implementato | HTTPS |  
-
-
-| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
-
-
-| Totale IOPS | Implementato | HTTPS |  
-
-
-| Scrittura IOPS | Implementato | HTTPS |  
-
-
 | Chiave | Implementato | HTTPS |  
 
 
-| Latenza di lettura | Implementato | HTTPS |  
-
-
-| Latenza totale | Implementato | HTTPS |  
-
-
-| Scrittura latenza | Implementato | HTTPS |  
-
-
 | ID server | Implementato | HTTPS |  
-
-
-| Throughput Read (lettura throughput) | Implementato | HTTPS |  
-
-
-| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
-
-
-| Scrittura throughput | Implementato | HTTPS |  
 
 
 .17+| Volume | Capacità raw | Implementato | HTTPS |  
@@ -21143,7 +21400,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| ASA-A1K | NetApp Release 9.16.1: Sat Jan 18 19:31:15:2025 UTC NetApp Release 9.16.1RC1: Mon Nov 04 10:39:46:00 UTC 2024 
+| ASA-A1K ASA-A20 ASA-A90 | NetApp Release 9.16.1: Sat Jan 18 19:31:15:2025 UTC NetApp Release 9.16.1RC1: Mon Nov 04 10:39:46:00 UTC 2024 
 |===
 Prodotti supportati da questo data collector:
 
@@ -21151,7 +21408,7 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.131+| base .4+| Funzionalità | Attivo | Implementato | HTTPS |  
+.190+| base .4+| Funzionalità | Attivo | Implementato | HTTPS |  
 
 
 | Concesso in licenza | Implementato | HTTPS |  
@@ -21208,16 +21465,40 @@ Prodotti supportati da questo data collector:
 | Vendor | Implementato | HTTPS |  
 
 
-.4+| Portale DI rete ISCSI | OID | Implementato | HTTPS |  
+.8+| Condivisione file | Nome | Implementato | HTTPS |  
 
 
-| IP | Implementato | HTTPS |  
+| Percorso | Implementato | HTTPS | Percorso di FileShare 
+
+
+| ID qtree | Implementato | HTTPS | id univoco del qtree 
+
+
+| È InternalVolume | Implementato | HTTPS | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
+
+
+| È condiviso | Implementato | HTTPS | Se a questo FileShare sono associate condivisioni 
+
+
+| Stato | Implementato | HTTPS |  
+
+
+| Tipo di sicurezza | Implementato | HTTPS |  
+
+
+| È abilitato per gli oplock | Implementato | HTTPS | Se i blocchi opportunistici sono attivati su FileShare 
+
+
+.4+| Portale DI rete ISCSI | IP | Implementato | HTTPS |  
+
+
+| Porta di ascolto | Implementato | HTTPS |  
 
 
 | NIC | Implementato | HTTPS |  
 
 
-| Porta di ascolto | Implementato | HTTPS |  
+| OID | Implementato | HTTPS |  
 
 
 .3+| Gruppo DI portali di rete ISCSI | OID | Implementato | HTTPS |  
@@ -21265,31 +21546,31 @@ Prodotti supportati da questo data collector:
 | Nome nodo di destinazione | Implementato | HTTPS |  
 
 
-.9+| Sessione ISCSI | OID | Implementato | HTTPS |  
+.9+| Sessione ISCSI | IPS iniziatore | Implementato | HTTPS |  
 
 
 | OID iniziatore | Implementato | HTTPS |  
 
 
-| OID del gruppo di portali | Implementato | HTTPS |  
-
-
-| ID sessione di destinazione | Implementato | HTTPS |  
-
-
 | ID sessione iniziatore | Implementato | HTTPS |  
-
-
-| Numero di connessioni | Implementato | HTTPS |  
 
 
 | Numero massimo di connessioni | Implementato | HTTPS |  
 
 
-| IPS iniziatore | Implementato | HTTPS |  
+| Numero di connessioni | Implementato | HTTPS |  
+
+
+| OID | Implementato | HTTPS |  
+
+
+| OID del gruppo di portali | Implementato | HTTPS |  
 
 
 | Sicurezza | Implementato | HTTPS |  
+
+
+| ID sessione di destinazione | Implementato | HTTPS |  
 
 
 .6+| Info | Nome API | Implementato | HTTPS |  
@@ -21310,6 +21591,90 @@ Prodotti supportati da questo data collector:
 | Chiave di origine | Implementato | HTTPS |  
 
 
+.28+| Volume interno | ID volume interno | Implementato | HTTPS |  
+
+
+| Nome | Implementato | HTTPS |  
+
+
+| ID pool di storage | Implementato | HTTPS |  
+
+
+| Tipo | Distanza | HTTPS |  
+
+
+| Garanzia di spazio | Implementato | HTTPS | Policy di Space Guatantee (file, volume o nessuno) 
+
+
+| Con thin provisioning | Implementato | HTTPS |  
+
+
+| Thin provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il thin provisioning per il layer di volume sopra di esso 
+
+
+| Deduplica attivata | Implementato | HTTPS | La deduplica è abilitata nel pool di storage 
+
+
+| Compressione attivata | Implementato | HTTPS | La compressione è attivata nel pool di storage 
+
+
+| Risparmi sulla deduplica | Implementato | HTTPS | rapporto dei risparmi di deduplica in percentuale 
+
+
+| Risparmi di compressione | Implementato | HTTPS | rapporto dei risparmi di compressione in percentuale 
+
+
+| Numero di snapshot | Implementato | HTTPS | Numero di snapshot sui volumi interni 
+
+
+| Stato | Implementato | HTTPS |  
+
+
+| Storage virtuale | Implementato | HTTPS | Possedere lo storage virtuale (vfiler) 
+
+
+| Tipo di protezione | Implementato | HTTPS |  
+
+
+| UUID | Implementato | HTTPS |  
+
+
+| Capacità utilizzata di Snapshot | Implementato | HTTPS |  
+
+
+| Capacità allocata di Snapshot | Distanza | HTTPS | Capacità allocata di snapshot in MB 
+
+
+| Data used Capacity (capacità utilizzata dati) | Implementato | HTTPS |  
+
+
+| Capacità allocata dei dati | Distanza | HTTPS | capacità allocata per i dati 
+
+
+| Capacità totale utilizzata | Implementato | HTTPS | Capacità totale in MB 
+
+
+| Capacità totale utilizzata (MB) | Implementato | HTTPS | posizionare il supporto per la capacità utilizzata come letta dal dispositivo 
+
+
+| Capacità allocata totale | Implementato | HTTPS |  
+
+
+| Altra capacità allocata | Distanza | HTTPS | Capacità allocata per altri (non dati e non snapshot) 
+
+
+| Rapporto raw/usable | Implementato | HTTPS | rapporto per la conversione dalla capacità utilizzabile alla capacità raw 
+
+
+|  | Implementato | HTTPS |  
+
+
+|  | Implementato | HTTPS |  
+
+
+| Crittografato | Implementato | HTTPS |  
+
+
 .3+| Sincronizzazione dello storage | Volume interno di origine | Implementato | HTTPS |  
 
 
@@ -21317,6 +21682,24 @@ Prodotti supportati da questo data collector:
 
 
 | Tecnologia | Implementato | HTTPS | la tecnologia che causa l'efficienza dello storage è cambiata 
+
+
+.6+| Qtree | ID qtree | Implementato | HTTPS | id univoco del qtree 
+
+
+| Nome | Implementato | HTTPS |  
+
+
+| Stile di sicurezza | Implementato | HTTPS | Stile di sicurezza della directory: unix, ntfs o misto 
+
+
+| Tipo | Distanza | HTTPS |  
+
+
+| Stato | Implementato | HTTPS |  
+
+
+| Oplock | Implementato | HTTPS | Indica se i blocchi opportunistici sono attivati sul Qtree 
 
 
 .18+| Storage | Cluster | Non disponibile | HTTPS | Se lo storage è un cluster 
@@ -21409,7 +21792,25 @@ Prodotti supportati da questo data collector:
 | Managementindirizzi IP | Implementato | HTTPS |  
 
 
-.13+| Pool di storage | Includere nella capacità DWH | Implementato | HTTPS | Un modo che parte da ACQ per controllare quali pool di storage sono interessanti in DWH Capacity 
+.25+| Pool di storage | Compressione attivata | Implementato | HTTPS | La compressione è attivata nel pool di storage 
+
+
+| Risparmi di compressione | Implementato | HTTPS | rapporto dei risparmi di compressione in percentuale 
+
+
+| Capacità allocata dei dati | Distanza | HTTPS | capacità allocata per i dati 
+
+
+| Data used Capacity (capacità utilizzata dati) | Implementato | HTTPS |  
+
+
+| Deduplica attivata | Implementato | HTTPS | La deduplica è abilitata nel pool di storage 
+
+
+| Risparmi sulla deduplica | Implementato | HTTPS | rapporto dei risparmi di deduplica in percentuale 
+
+
+| Includere nella capacità DWH | Implementato | HTTPS | Un modo che parte da ACQ per controllare quali pool di storage sono interessanti in DWH Capacity 
 
 
 | Nome | Implementato | HTTPS |  
@@ -21422,6 +21823,15 @@ Prodotti supportati da questo data collector:
 
 
 | Rapporto raw/usable | Implementato | HTTPS | rapporto per la conversione dalla capacità utilizzabile alla capacità raw 
+
+
+| Ridondanza | Implementato | HTTPS | Livello di ridondanza 
+
+
+| Capacità allocata di Snapshot | Distanza | HTTPS | Capacità allocata di snapshot in MB 
+
+
+| Capacità utilizzata di Snapshot | Implementato | HTTPS |  
 
 
 | Stato | Implementato | HTTPS |  
@@ -21442,13 +21852,28 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza | HTTPS |  
 
 
+| Utilizza FlashPools | Implementato | HTTPS | Indica se questo storagepool utilizza Flash Pools (specifico di NetApp) 
+
+
 | Virtuale | Implementato | HTTPS | Si tratta di un dispositivo per la virtualizzazione dello storage? 
+
+
+| CompactionSavings abilitato | Implementato | HTTPS |  
+
+
+| Crittografato | Implementato | HTTPS |  
 
 
 | UUID | Implementato | HTTPS |  
 
 
-.9+| Storage VirtualMachine | Capacità allocata (MB) | Implementato | HTTPS | Capacità allocata degli snapshot 
+.11+| Storage VirtualMachine | Capacità allocata (MB) | Implementato | HTTPS | Capacità allocata degli snapshot 
+
+
+| Risparmi di compressione | Implementato | HTTPS | rapporto dei risparmi di compressione in percentuale 
+
+
+| Risparmi sulla deduplica | Implementato | HTTPS | rapporto dei risparmi di deduplica in percentuale 
 
 
 | Chiave GUID | Implementato | HTTPS | Chiave univoca globale della macchina virtuale per lo storage 
@@ -21475,46 +21900,55 @@ Prodotti supportati da questo data collector:
 | Capacità utilizzata | Implementato | HTTPS |  
 
 
+| Rif. Volume interno VirtualMachine | ID volume interno | Implementato | HTTPS |  
+
+
+| VirtualMachine StoragePool lRef | ID pool di storage | Implementato | HTTPS |  
+
+
 | Rif. Volume VirtualMachine | Volume Name (Nome volume) | Implementato | HTTPS |  
 
 
-.14+| Volume | Nome | Implementato | HTTPS |  
-
-
-| Percorso di giunzione | Implementato | HTTPS |  
-
-
-| ID pool di storage | Implementato | HTTPS |  
-
-
-| UUID | Implementato | HTTPS |  
-
-
-| Tipo | Distanza | HTTPS |  
-
-
-| Con thin provisioning | Implementato | HTTPS |  
-
-
-| Capacità | Implementato | HTTPS | Snapshot ha utilizzato la capacità in MB 
-
-
-| Capacità raw totale | Implementato | HTTPS | Capacità raw totale (somma di tutti i dischi dell'array) 
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-| Tipo di disco | Non disponibile | HTTPS |  
+.15+| Volume | Capacità | Implementato | HTTPS | Snapshot ha utilizzato la capacità in MB 
 
 
 | Gruppo di dischi | Implementato | HTTPS | Tipo di gruppo di dischi 
 
 
+| Dimensione disco | Implementato | HTTPS | Elenco separato da virgole delle dimensioni dei dischi (GB) 
+
+
 | Velocità del disco | Implementato | HTTPS | elenco separato da virgole delle velocità dei dischi (rpm) 
 
 
-| Dimensione disco | Implementato | HTTPS | Elenco separato da virgole delle dimensioni dei dischi (GB) 
+| Tipo di disco | Non disponibile | HTTPS |  
+
+
+| Percorso di giunzione | Implementato | HTTPS |  
+
+
+| Nome | Implementato | HTTPS |  
+
+
+| ID qtree | Implementato | HTTPS | id univoco del qtree 
+
+
+| Capacità raw totale | Implementato | HTTPS | Capacità raw totale (somma di tutti i dischi dell'array) 
+
+
+| ID pool di storage | Implementato | HTTPS |  
+
+
+| Con thin provisioning | Implementato | HTTPS |  
+
+
+| Tipo | Distanza | HTTPS |  
+
+
+| UUID | Implementato | HTTPS |  
+
+
+| Capacità utilizzata | Implementato | HTTPS |  
 
 
 | Crittografato | Implementato | HTTPS |  
@@ -21523,28 +21957,28 @@ Prodotti supportati da questo data collector:
 .4+| Mappa del volume | LUN | Implementato | HTTPS | Nome del lun back-end 
 
 
+| Protocol Controller (Controller protocollo) | Implementato | HTTPS |  
+
+
 | Porta storage | Implementato | HTTPS |  
 
 
-| Protocol Controller (Controller protocollo) | Implementato | HTTPS |  
-
-
 | Tipo | Distanza | HTTPS |  
 
 
-.4+| Maschera di volume | Porta storage | Implementato | HTTPS |  
-
-
-| Iniziatore | Implementato | HTTPS |  
+.4+| Maschera di volume | Iniziatore | Implementato | HTTPS |  
 
 
 | Protocol Controller (Controller protocollo) | Implementato | HTTPS |  
 
 
+| Porta storage | Implementato | HTTPS |  
+
+
 | Tipo | Distanza | HTTPS |  
 
 
-.47+| performance .11+| Disco | IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
+.11+| performance .11+| Disco | IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
 | Totale IOPS | Implementato | HTTPS |  
@@ -21575,114 +22009,6 @@ Prodotti supportati da questo data collector:
 
 
 | Scrittura utilizzo | Implementato | HTTPS |  
-
-
-.20+| Storage | Capacità raw non riuscita | Implementato | HTTPS |  
-
-
-| Capacità raw | Implementato | HTTPS |  
-
-
-| Capacità raw di riserva | Implementato | HTTPS | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) 
-
-
-| Capacità di StoragePools | Implementato | HTTPS |  
-
-
-| Dischi guasti | Implementato | HTTPS |  
-
-
-| Lettura densità io | Implementato | HTTPS |  
-
-
-| Densità io totale | Implementato | HTTPS |  
-
-
-| Densità io di scrittura | Implementato | HTTPS |  
-
-
-| IOPS Altro | Implementato | HTTPS |  
-
-
-| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
-
-
-| Totale IOPS | Implementato | HTTPS |  
-
-
-| Scrittura IOPS | Implementato | HTTPS |  
-
-
-| Chiave | Implementato | HTTPS |  
-
-
-| Latenza di lettura | Implementato | HTTPS |  
-
-
-| Latenza totale | Implementato | HTTPS |  
-
-
-| Scrittura latenza | Implementato | HTTPS |  
-
-
-| ID server | Implementato | HTTPS |  
-
-
-| Throughput Read (lettura throughput) | Implementato | HTTPS |  
-
-
-| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
-
-
-| Scrittura throughput | Implementato | HTTPS |  
-
-
-.9+| Pool di storage | Capacità totale | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-| Rapporto capacità utilizzata | Implementato | HTTPS |  
-
-
-| CompactionSavingsPercent.total | Implementato | HTTPS |  
-
-
-| Risparmi totali di compressione | Implementato | HTTPS |  
-
-
-| DeduplicationSavingsPercent.total | Implementato | HTTPS |  
-
-
-| Dischi guasti | Implementato | HTTPS |  
-
-
-| Chiave | Implementato | HTTPS |  
-
-
-| ID server | Implementato | HTTPS |  
-
-
-.7+| VirtualMachine | Chiave | Implementato | HTTPS |  
-
-
-| ID server | Implementato | HTTPS |  
-
-
-| Latenza di lettura | Implementato | HTTPS |  
-
-
-| Scrittura latenza | Implementato | HTTPS |  
-
-
-| Latenza totale | Implementato | HTTPS |  
-
-
-| Capacità totale | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
 |===
 API di gestione utilizzate da questo data collector:
 
@@ -21702,7 +22028,51 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| AFF-A150 AFF-A220 AFF-A250 AFF-A300 AFF-A400 AFF-A250 AFF-A90 AFF-A900 AFF-A800 AFF-A700 AFF-A700s AFF-C250 AFF-C400 AFF-C800 ASA-A70 ASA-A400 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX | NetApp NetApp NetApp NetApp NetApp Release 9.14.1 35:16 33:44 15:53 31:37 42:39 34:02: Mon Jan 23 21 2024 2024 2024 2024 2024 2025:48:01 30 05 27 16 25 22 27 20 24 16 04 01 18 21:21:07 UTC Release 9.14.1P10: Thu Nov 2024:04:05:2024 UTC NetApp NetApp NetApp NetApp NetApp Release 9.14.1P1: Thu Feb 9.15.1:12:27:2024 UTC NetApp 2024:21 18 UTC 2024:13 07 UTC 2024:01 03 UTC 2024:18 16 UTC NetApp 07:44:11:44 UTC: 15.0P6 UTC NetApp: 2024:18 19 UTC NetApp 42:16 UTC: 15.0P6 UTC rilascio 15.0P12:59:10 UTC NetApp 18 15 UTC: 45:21 UTC: 2024:15 00 UTC NetApp 2024 UTC: 15.0P12:28 12 UTC NetApp 15:49 UTC: 32:16 UTC NetApp 2024 UTC: 04 12 UTC 24 04 49:55 2024 NetApp 9.16.1 18 19 31:15 2025 NetApp 04 10 39:46 2024 NetApp 09 10 27:42 2024 NetApp 12 11 18:25 2025 NetApp 9.15.1 24 05 03:10 2024 NetApp 9.15.1 18 11 39:42 2025 NetApp 9.15.1 14 04 56:38 2024 
+| AFF-A150 AFF-A220 AFF-A250 AFF-A300 AFF-A400 AFF-A70 AFF-C250 AFF-C400 AFF-C800 AFF-A90 AFF-A900 AFF-C190 AFF-A700 AFF-A700s AFF-A800 ASA-A250 ASA-A400 ASA-A800 ASA-C250 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
+* NetappRelease 9.14.1P10: Thu Nov 28 12:32:16:2024 UTC
+* NetappRelease 9.14.1P11: Mon Jan 22 11:55:28:2025 UTC
+* NetappRelease 9.14.1P1: Thu Feb 15 00:45:21:2024 UTC
+* NetappRelease 9.14.1P4: Thu Apr 18 15:59:10:2024 UTC
+* NetappRelease 9.14.1P5: Sat May 18 19:42:16:2024 UTC
+* NetappRelease 9.14.1P6: Fri Jun 18 16:11:44:2024 UTC
+* NetappRelease 9.14.1P7: Thu Aug 01 03:07:44:2024 UTC
+* NetappRelease 9.14.1P8: Fri Sep 13 07:12:27:2024 UTC
+* NetappRelease 9.14.1P9: Mon Oct 21 18:04:05:2024 UTC
+* NetappRelease 9.15.1: Thu Jul 04 12:21:07:2024 UTC
+* NetappRelease 9.15.1P1: Mon Jul 30 05:15:49:2024 UTC
+* NetappRelease 9.15.1P2: Mon Aug 27 16:35:16:2024 UTC
+* NetappRelease 9.15.1P3: Fri Sep 25 22:33:44:2024 UTC
+* NetappRelease 9.15.1P4: Sun Oct 27 20:15:53:2024 UTC
+* NetappRelease 9.15.1P5: Sun Nov 24 16:31:37:2024 UTC
+* NetappRelease 9.15.1P6: Fri Dec 04 01:42:39:2024 UTC
+* NetappRelease 9.15.1P7: Sat Jan 18 21:34:02:2025 UTC
+* NetappRelease 9.15.1RC2: Mon Jun 24 04:49:55:2024 UTC
+* NetappRelease 9.16.1: Sat Jan 18 19:31:15:2025 UTC
+* NetappRelease 9.16.1P1: Fri Feb 14 03:53:50:2025 UTC
+* NetappRelease 9.16.1RC1: Mon Nov 04 10:39:46:2024 UTC
+* NetappRelease 9.16.1X26: Mon Dec 09 10:27:42:2024 UTC
+* NetappRelease 9.16.1X29: Sun Jan 12 11:18:25:2025 UTC
+* NetappRelease 9.17.1X7: Fri Feb 14 11:21:52:2025 UTC
+* NetappRelease Clawhammer__9.14.1: Sat May 18 09:23:49:2024 UTC
+* NetappRelease Cloudstream__9.16.1: Mon Nov 04 05:51:46:2024 UTC
+* NetappRelease Cloudstream__9.16.1: Thu Mar 13 20:55:54:00 UTC 2025
+* NetappRelease Electricjellyfish__9.17.1: Mon Mar 03 05:57:49:2025 UTC
+* NetappRelease Electricjellyfish__9.17.1: Sun Mar 09 05:56:14:2025 UTC
+* NetappRelease Electricjellyfish__9.17.1: Sun Mar 16 04:54:53:2025 UTC
+* NetappRelease Electricjellyfish__9.17.1: Fri Jan 28 11:48:14:2025 UTC
+* NetappRelease Electricjellyfish__9.17.1: Mon Mar 18 04:59:54:2025 UTC
+* NetappRelease Electricjellyfish__9.17.1: Mon Mar 12 04:42:03:2025 UTC
+* NetappRelease Mightysquirrel__9.15.1: Fri May 24 05:03:10:2024 UTC
+* NetappRelease Mightysquirrel__9.15.1: Sat Jan 18 11:39:42:46 UTC 2025
+* NetappRelease Tropicallightning__9.18.0: Fri Feb 21 14:02:58:2025 UTC
+* NetappRelease Tropicallightning__9.18.0: Mon Feb 17 08:18:14:2025 UTC
+* NetappRelease Tropicallightning__9.18.0: Thu Feb 20 08:11:55:2025 UTC
+* NetappRelease Tropicallightning__9.18.0: Thu Feb 27 04:15:40:2025 UTC
+* NetappRelease Tropicallightning__9.18.0: Tue Feb 18 14:00:54:2025 UTC
+* NetappRelease Tropicallightning__9.18.0: Fri Feb 26 08:19:21:2025 UTC
+* NetappRelease Tropicallightning__9.18.0: Fri Jan 29 08:34:06:2025 UTC
+
+
 |===
 Prodotti supportati da questo data collector:
 
@@ -22486,7 +22856,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF4805 SF9605 SF9608 H300S H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9605 SF9608 | 11.1.0.72 11.7.0.76 11.8.0.23 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380 
+| H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF4805 SF9605 SF9608 H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9605 SF9608 | 11.1.0.72 11.7.0.76 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380 
 |===
 Prodotti supportati da questo data collector:
 
@@ -23204,7 +23574,7 @@ Modelli e versioni supportati da questo data collector:
 | Versioni di API | Modelli | Versioni del firmware 
 
 
-| 3,2 3,3 3,4 3,5 4,0 4,1 | Webscale | 11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.9.0 11.9.0.1 11.9.0.2 
+| 3,2 3,3 3,4 3,5 4,0 4,1 | Webscale | 11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.8.0.9 11.9.0 11.9.0.1 11.9.0.2 11.9.0.3 11.9.0.4 
 |===
 Prodotti supportati da questo data collector:
 
@@ -23413,103 +23783,106 @@ Prodotti supportati da questo data collector:
 | Oggetti totali | Implementato |  |  
 
 
-| Qtree.4+ | Storage | Capacità raw non riuscita | Implementato |  
+.4+| Storage | Capacità raw non riuscita | Implementato |  |  
 
 
-|  | Capacità raw | Implementato |  |  
+| Capacità raw | Implementato |  |  
 
 
-| Capacità raw di riserva | Implementato |  | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) | Capacità di StoragePools 
+| Capacità raw di riserva | Implementato |  | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) 
 
 
-| Implementato |  |  .6+| Storage | Capacità raw non riuscita 
+| Capacità di StoragePools | Implementato |  |  
 
 
-| Implementato |  |  | Capacità raw 
+.6+| Storage | Capacità raw non riuscita | Implementato |  |  
 
 
-| Implementato |  |  | Capacità raw di riserva 
+| Capacità raw | Implementato |  |  
 
 
-| Implementato |  | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) | Capacità di StoragePools 
+| Capacità raw di riserva | Implementato |  | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) 
 
 
-| Implementato |  |  | Chiave 
+| Capacità di StoragePools | Implementato |  |  
 
 
-| Implementato |  |  | ID server 
+| Chiave | Implementato |  |  
 
 
-| Implementato |  |  .8+| Nodo di storage | Metadati consentiti per l'utilizzo della capacità del nodo 
+| ID server | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo capacità nodo totale 
+.8+| Nodo di storage | Metadati consentiti per l'utilizzo della capacità del nodo | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo utilizzabile 
+| Utilizzo capacità nodo totale | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo utilizzato 
+| Utilizzo della capacità del nodo utilizzabile | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo dati Meta utilizzati 
+| Utilizzo della capacità del nodo utilizzato | Implementato |  |  
 
 
-| Implementato |  |  | Throughput Read (lettura throughput) 
+| Utilizzo della capacità del nodo dati Meta utilizzati | Implementato |  |  
 
 
-| Implementato |  |  | Throughput totale 
+| Throughput Read (lettura throughput) | Implementato |  |  
 
 
-| Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Scrittura throughput 
+| Throughput totale | Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| Implementato |  |  .10+| Dati del nodo di storage | Chiave 
+| Scrittura throughput | Implementato |  |  
 
 
-| Implementato |  |  | Metadati consentiti per l'utilizzo della capacità del nodo 
+.10+| Dati del nodo di storage | Chiave | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo capacità nodo totale 
+| Metadati consentiti per l'utilizzo della capacità del nodo | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo utilizzabile 
+| Utilizzo capacità nodo totale | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo utilizzato 
+| Utilizzo della capacità del nodo utilizzabile | Implementato |  |  
 
 
-| Implementato |  |  | Utilizzo della capacità del nodo dati Meta utilizzati 
+| Utilizzo della capacità del nodo utilizzato | Implementato |  |  
 
 
-| Implementato |  |  | ID server 
+| Utilizzo della capacità del nodo dati Meta utilizzati | Implementato |  |  
 
 
-| Implementato |  |  | Throughput Read (lettura throughput) 
+| ID server | Implementato |  |  
 
 
-| Implementato |  |  | Throughput totale 
+| Throughput Read (lettura throughput) | Implementato |  |  
 
 
-| Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Scrittura throughput 
+| Throughput totale | Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| Implementato |  |  .6+| Disco StoragePool | Provisioning della capacità 
+| Scrittura throughput | Implementato |  |  
 
 
-| Implementato |  |  | Capacità raw 
+.6+| Disco StoragePool | Provisioning della capacità | Implementato |  |  
 
 
-| Implementato |  |  | Capacità totale 
+| Capacità raw | Implementato |  |  
 
 
-| Implementato |  |  | Capacità utilizzata 
+| Capacità totale | Implementato |  |  
 
 
-| Implementato |  |  | Rapporto di capacità di overcommit 
+| Capacità utilizzata | Implementato |  |  
 
 
-| Implementato |  | Riportato come serie temporale | Rapporto capacità utilizzata 
+| Rapporto di capacità di overcommit | Implementato |  | Riportato come serie temporale 
+
+
+| Rapporto capacità utilizzata | Implementato |  |  
 |===
 API di gestione utilizzate da questo data collector:
 
@@ -23529,7 +23902,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| NX-G8-8170 NX-8155 G8 XF3070 XF8050-G7 HPE DX360-10 G10 HPE G8 HPE 8150-8035 PLUS NX-8035-G7 NX-G6-G8 NX-3170-3155G NX-3155G-G7 NX-G8-G7 NX-3060-3060 NX-3060-G6 NX-12 GEN10 NX-DX380 12LFF G11 NX-DX385-G7 NX-8150 NX-G8 NX-8155-3170 NX-G7 | 5.20.1.1 6,10 6.5.3.7 6.5.4 6.5.5.1 6.5.5.7 6.5.6 6.5.6.5 6.5.6.6 6.7.1.6 6.8.1.5 7,0 
+| NX-8155-G7 NX-8155-G7 HPE 8150 HPE 8150-24 G10 HPE G8-12 GEN10 PLUS NX-G8-G6 NX-3155G-3155G NX-G7-G8 NX-G7-3060 NX-3060 NX-3060 NX-3170-G6 NX-8035-DX385 NX-DX380 NX-G7 NX-DX380 12LFF G11-G8 NX-3170-G8 XF3070 XF8050-CORE | 5.20.1.1 6,10 6.10.1 6.5.3.7 6.5.4 6.5.5.1 6.5.5.7 6.5.6 6.5.6.5 6.5.6.6 6.5.6.7 6.7.1.6 7,0 
 |===
 Prodotti supportati da questo data collector:
 
@@ -23900,121 +24273,127 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza | HTTPS |  
 
 
-.41+| performance | Qtree.10+ | Storage | Latenza totale | Implementato | HTTPS 
+.41+| performance .10+| Storage | Latenza totale | Implementato | HTTPS |  
 
 
-|  | IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
+| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
-| Latenza di lettura | Implementato | HTTPS |  | IOPS Altro 
+| Latenza di lettura | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Scrittura IOPS | Implementato 
+| IOPS Altro | Implementato | HTTPS |  
 
 
-| HTTPS |  | Throughput Read (lettura throughput) | Implementato | HTTPS 
+| Scrittura IOPS | Implementato | HTTPS |  
 
 
-|  | Scrittura throughput | Implementato | HTTPS |  
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
 
 
-| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Totale IOPS 
+| Scrittura throughput | Implementato | HTTPS |  
 
 
-| Implementato | HTTPS |  | Scrittura latenza | Implementato 
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| HTTPS |  .16+| Storage | Capacità raw non riuscita | Implementato 
+| Totale IOPS | Implementato | HTTPS |  
 
 
-| HTTPS |  | Capacità raw | Implementato 
+| Scrittura latenza | Implementato | HTTPS |  
 
 
-| HTTPS |  | Capacità raw di riserva | Implementato 
+.16+| Storage | Capacità raw non riuscita | Implementato | HTTPS |  
 
 
-| HTTPS | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) | Capacità di StoragePools | Implementato 
+| Capacità raw | Implementato | HTTPS |  
 
 
-| HTTPS |  | IOPS Altro | Implementato 
+| Capacità raw di riserva | Implementato | HTTPS | Capacità raw dei dischi di riserva (somma di tutti i dischi che sono spare) 
 
 
-| HTTPS |  | IOPS Read (lettura IOPS) | Implementato 
+| Capacità di StoragePools | Implementato | HTTPS |  
 
 
-| HTTPS | Numero di IOPS in lettura sul disco | Totale IOPS | Implementato 
+| IOPS Altro | Implementato | HTTPS |  
 
 
-| HTTPS |  | Scrittura IOPS | Implementato 
+| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
-| HTTPS |  | Chiave | Implementato 
+| Totale IOPS | Implementato | HTTPS |  
 
 
-| HTTPS |  | Latenza di lettura | Implementato 
+| Scrittura IOPS | Implementato | HTTPS |  
 
 
-| HTTPS |  | Latenza totale | Implementato 
+| Chiave | Implementato | HTTPS |  
 
 
-| HTTPS |  | Scrittura latenza | Implementato 
+| Latenza di lettura | Implementato | HTTPS |  
 
 
-| HTTPS |  | ID server | Implementato 
+| Latenza totale | Implementato | HTTPS |  
 
 
-| HTTPS |  | Throughput Read (lettura throughput) | Implementato 
+| Scrittura latenza | Implementato | HTTPS |  
 
 
-| HTTPS |  | Throughput totale | Implementato 
+| ID server | Implementato | HTTPS |  
 
 
-| HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Scrittura throughput | Implementato 
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
 
 
-| HTTPS |  .6+| Disco StoragePool | IOPS Read (lettura IOPS) | Implementato 
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| HTTPS | Numero di IOPS in lettura sul disco | Totale IOPS | Implementato 
+| Scrittura throughput | Implementato | HTTPS |  
 
 
-| HTTPS |  | Scrittura IOPS | Implementato 
+.6+| Disco StoragePool | IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
-| HTTPS |  | Throughput Read (lettura throughput) | Implementato 
+| Totale IOPS | Implementato | HTTPS |  
 
 
-| HTTPS |  | Throughput totale | Implementato 
+| Scrittura IOPS | Implementato | HTTPS |  
 
 
-| HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Scrittura throughput | Implementato 
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
 
 
-| HTTPS |  .9+| Volume | Latenza totale | Implementato 
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
 
 
-| HTTPS |  | IOPS Read (lettura IOPS) | Implementato 
+| Scrittura throughput | Implementato | HTTPS |  
 
 
-| HTTPS | Numero di IOPS in lettura sul disco | Latenza di lettura | Implementato 
+.9+| Volume | Latenza totale | Implementato | HTTPS |  
 
 
-| HTTPS |  | Scrittura IOPS | Implementato 
+| IOPS Read (lettura IOPS) | Implementato | HTTPS | Numero di IOPS in lettura sul disco 
 
 
-| HTTPS |  | Throughput Read (lettura throughput) | Implementato 
+| Latenza di lettura | Implementato | HTTPS |  
 
 
-| HTTPS |  | Scrittura throughput | Implementato 
+| Scrittura IOPS | Implementato | HTTPS |  
 
 
-| HTTPS |  | Throughput totale | Implementato 
+| Throughput Read (lettura throughput) | Implementato | HTTPS |  
 
 
-| HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. | Totale IOPS | Implementato 
+| Scrittura throughput | Implementato | HTTPS |  
 
 
-| HTTPS |  | Scrittura latenza | Implementato 
+| Throughput totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s. 
+
+
+| Totale IOPS | Implementato | HTTPS |  
+
+
+| Scrittura latenza | Implementato | HTTPS |  
 |===
 API di gestione utilizzate da questo data collector:
 
@@ -24026,268 +24405,6 @@ API di gestione utilizzate da questo data collector:
 |===
 
 
-== OPENSTACK (API REST/SSH)
-
-|===
-|===
-Prodotti supportati da questo data collector:
-
-|===
-| Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
-
-
-.76+| base .7+| Data Store | Capacità | Implementato | HTTPS | Snapshot ha utilizzato la capacità in MB 
-
-
-| MOID | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Capacità fornita | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-| IP del Virtual Center | Implementato | HTTPS |  
-
-
-.3+| Datastore NasShare | OID del datastore | Implementato | HTTPS |  
-
-
-| OID condivisione NAS | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-.4+| Host NasShare | OID condivisione NAS | Implementato | HTTPS |  
-
-
-| OID host | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Di sola lettura | Implementato | HTTPS |  
-
-
-.6+| LUN | OID | Implementato | HTTPS |  
-
-
-| Numero | Implementato | HTTPS |  
-
-
-| OID del datastore | Implementato | HTTPS |  
-
-
-| OID host | Implementato | HTTPS |  
-
-
-| Disk Name (Nome disco) | Implementato | HTTPS |  
-
-
-| TID | Implementato | HTTPS |  
-
-
-.6+| Condivisione NAS | Capacità | Implementato | HTTPS | Capacità allocata in MB 
-
-
-| IP filer | Implementato | HTTPS |  
-
-
-| Nome filer | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Percorso di condivisione | Implementato | HTTPS | Per associare un HvNasShare a una condivisione 
-
-
-| Tipo | Distanza | HTTPS |  
-
-
-.6+| Percorso | OID | Implementato | HTTPS |  
-
-
-| LUN OID | Implementato | HTTPS |  
-
-
-| Porta host WWPN | Implementato | HTTPS |  
-
-
-| WWPN della porta di storage | Implementato | HTTPS |  
-
-
-| Attivo | Implementato | HTTPS |  
-
-
-| Tipo | Distanza | HTTPS |  
-
-
-.6+| Server | Cluster | Implementato | HTTPS | Nome del cluster 
-
-
-| Nome del data center | Implementato | HTTPS |  
-
-
-| OID host | Implementato | HTTPS |  
-
-
-| MOID | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| IP del Virtual Center | Implementato | HTTPS |  
-
-
-.7+| Disco virtuale | Capacità | Implementato | HTTPS | Snapshot ha utilizzato la capacità in MB 
-
-
-| OID del datastore | Implementato | HTTPS |  
-
-
-| LUN OID | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Tipo | Distanza | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-.13+| VirtualMachine | Stato ospite | Implementato | HTTPS |  
-
-
-| OID del datastore | Implementato | HTTPS |  
-
-
-| OID host | Implementato | HTTPS |  
-
-
-| IPS | Implementato | HTTPS |  
-
-
-| MOID | Implementato | HTTPS |  
-
-
-| Memoria | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Power state (Stato alimentazione) | Implementato | HTTPS |  
-
-
-| Tempo di modifica dello stato | Implementato | HTTPS |  
-
-
-| Processori | Implementato | HTTPS |  
-
-
-| Capacità fornita | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-.3+| Disco VirtualMachine | OID | Implementato | HTTPS |  
-
-
-| OID VirtualDisk | Implementato | HTTPS |  
-
-
-| OID VirtualMachine | Implementato | HTTPS |  
-
-
-.7+| Host | Numero di CPU host | Implementato | HTTPS |  
-
-
-| Dominio host | Implementato | HTTPS |  
-
-
-| Memoria installata sull'host | Implementato | HTTPS |  
-
-
-| Sistema operativo host | Implementato | HTTPS |  
-
-
-| IPS | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-.4+| Nodo ISCSI | Alias host | Implementato | HTTPS |  
-
-
-| Nome del nodo | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Tipo | Distanza | HTTPS |  
-
-
-.4+| Info | Nome origine dati | Implementato | HTTPS | Info 
-
-
-| Data | Implementato | HTTPS |  
-
-
-| ID mittente | Implementato | HTTPS |  
-
-
-| Chiave di origine | Implementato | HTTPS |  
-
-
-.4+| performance .4+| Host | Utilizzo totale della CPU | Implementato |  |  
-
-
-| Chiave | Implementato |  |  
-
-
-| Utilizzo totale della memoria | Implementato |  |  
-
-
-| ID server | Implementato |  |  
-|===
-API di gestione utilizzate da questo data collector:
-
-|===
-| API | Protocollo utilizzato | Protocollo Transport Layer utilizzato | Porte in entrata utilizzate | Porte in uscita utilizzate | Supporta l'autenticazione | Richiede solo credenziali di sola lettura | Supporta la crittografia | Compatibile con firewall (porte statiche) 
-
-
-| API REST di OpenStack | HTTPS | HTTPS | 443 |  | vero | falso | vero | vero 
-
-
-| SSH OpenStack | SSH | SSH | 22 |  | vero | falso | vero | vero 
-|===
-
-
 == Oracle ZFS (HTTPS)
 
 Modelli e versioni supportati da questo data collector:
@@ -24296,7 +24413,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| Sun ZFS Storage 7120 Sun ZFS Storage 7330 Sun ZFS Storage 7335 Sun ZFS Storage 7350 Sun ZFS Storage 7370 Sun ZFS Storage 7390 Sun ZFS Storage 7420 | 1-1,1 1-1,2 1-1,3 1-1,34 1-1,4 2013.06.05.6.12 2013.06.05.6.15 2013.06.05.7.21 2013.06.05.7.24 2013.06.05.7.25 2013.06.05.7.26 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.26 2013.06.05.8.29 2013.06.05.8.37 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.53 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.61 2013.06.05.8.65 2013.06.05.8.7 2013.06.05.8.72 2013.06.05.8.76 
+| Sun ZFS Storage 7120 Sun ZFS Storage 7320 Sun ZFS Storage 7330 Sun ZFS Storage 7335 Sun ZFS Storage 7350 Sun ZFS Storage 7370 Sun ZFS Storage 7390 Sun ZFS Storage 7420 | 1-1,1 1-1,2 1-1,3 1-1,34 1-1,4 2013.06.05.6.12 2013.06.05.6.15 2013.06.05.7.21 2013.06.05.7.24 2013.06.05.7.25 2013.06.05.7.26 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.26 2013.06.05.8.29 2013.06.05.8.37 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.53 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.61 2013.06.05.8.65 2013.06.05.8.7 2013.06.05.8.72 2013.06.05.8.74 2013.06.05.8.76 
 |===
 Prodotti supportati da questo data collector:
 
@@ -24574,55 +24691,52 @@ Prodotti supportati da questo data collector:
 | Virtuale | Implementato | HTTP/S | Si tratta di un dispositivo per la virtualizzazione dello storage? 
 
 
-.15+| Volume | Nome | Implementato | HTTP/S |  
-
-
-| Percorso di giunzione | Implementato | HTTP/S |  
-
-
-| ID pool di storage | Implementato | HTTP/S |  
-
-
-| Tiering automatico | Implementato | HTTP/S | indica se questo storagepool sta partecipando al tiering automatico con altri pool 
-
-
-| UUID | Implementato | HTTP/S |  
-
-
-| Tipo | Distanza | HTTP/S |  
-
-
-| Tipo di disco | Non disponibile | HTTP/S |  
-
-
-| Virtuale | Implementato | HTTP/S | Si tratta di un dispositivo per la virtualizzazione dello storage? 
-
-
-| Con thin provisioning | Implementato | HTTP/S |  
-
-
-| Velocità del disco | Implementato | HTTP/S | elenco separato da virgole delle velocità dei dischi (rpm) 
-
-
-| Dimensione disco | Implementato | HTTP/S | Elenco separato da virgole delle dimensioni dei dischi (GB) 
+.15+| Volume | Tiering automatico | Implementato | HTTP/S | indica se questo storagepool sta partecipando al tiering automatico con altri pool 
 
 
 | Capacità | Implementato | HTTP/S | Snapshot ha utilizzato la capacità in MB 
 
 
+| Dimensione disco | Implementato | HTTP/S | Elenco separato da virgole delle dimensioni dei dischi (GB) 
+
+
+| Velocità del disco | Implementato | HTTP/S | elenco separato da virgole delle velocità dei dischi (rpm) 
+
+
+| Tipo di disco | Non disponibile | HTTP/S |  
+
+
+| Percorso di giunzione | Implementato | HTTP/S |  
+
+
+| Nome | Implementato | HTTP/S |  
+
+
 | Capacità raw totale | Implementato | HTTP/S | Capacità raw totale (somma di tutti i dischi dell'array) 
-
-
-| Capacità utilizzata | Implementato | HTTP/S |  
 
 
 | Ridondanza | Implementato | HTTP/S | Livello di ridondanza 
 
 
+| ID pool di storage | Implementato | HTTP/S |  
+
+
+| Con thin provisioning | Implementato | HTTP/S |  
+
+
+| Tipo | Distanza | HTTP/S |  
+
+
+| UUID | Implementato | HTTP/S |  
+
+
+| Capacità utilizzata | Implementato | HTTP/S |  
+
+
+| Virtuale | Implementato | HTTP/S | Si tratta di un dispositivo per la virtualizzazione dello storage? 
+
+
 .5+| Mappa del volume | LUN | Implementato | HTTP/S | Nome del lun back-end 
-
-
-| Porta storage | Implementato | HTTP/S |  
 
 
 | Mascheratura necessaria | Implementato | HTTP/S |  
@@ -24631,16 +24745,19 @@ Prodotti supportati da questo data collector:
 | Protocol Controller (Controller protocollo) | Implementato | HTTP/S |  
 
 
+| Porta storage | Implementato | HTTP/S |  
+
+
 | Tipo | Distanza | HTTP/S |  
 
 
-.4+| Maschera di volume | Porta storage | Implementato | HTTP/S |  
-
-
-| Iniziatore | Implementato | HTTP/S |  
+.4+| Maschera di volume | Iniziatore | Implementato | HTTP/S |  
 
 
 | Protocol Controller (Controller protocollo) | Implementato | HTTP/S |  
+
+
+| Porta storage | Implementato | HTTP/S |  
 
 
 | Tipo | Distanza | HTTP/S |  
@@ -24807,7 +24924,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| DFSC1 FA-450 FA-C40R3 FA-C50R4 FA-C60 FA-C60R3 FA-C70R4 FA-C90R4 FA-X10R2 FA-X10R3 FA-X20R2 FA-X70FA-M70 FA-X70R2 M50 FA-X70FA-XL170 M20 RFA-X70R2 XL130 | 5.3.14 5.3.20 6.1.10 6.1.14 6.1.18 6.1.19 6.1.21 6.1.22 6.1.23 6.2.10 6.3.10 6.3.11 6.3.12 6.3.13 6.3.14 6.3.15 6.3.16 6.3.17 6.3.18 6.3.3 6.3.6 6.3.7 6.3.9 6.4.10 6.4.2 6.4.3 6.4.7 6.4.9 6.5.0 6.5.1 6.5.2 6.5.3 6.5.4 6.5.5 6.5.6 6.5.7 6.5.8 6.5.9 6.6.10 6.6.11 6.6.5 6.6.6 6.6.7 6.7.0 6.7.1 6.8.2 6.8.3 
+| DFSC1 FA-450 FA-C40R3 FA-C50R4 FA-C60 FA-C60R3 FA-C70R4 FA-C90R4 FA-X10R2 FA-X10R3 FA-X20R2 FA-X70FA-M70 FA-X70R2 M50 FA-X70FA-XL170 M20 RFA-X70R2 XL130 | 5.3.14 5.3.20 6.1.10 6.1.14 6.1.18 6.1.19 6.1.21 6.1.22 6.1.23 6.2.10 6.3.10 6.3.11 6.3.12 6.3.13 6.3.14 6.3.15 6.3.16 6.3.17 6.3.18 6.3.3 6.3.6 6.3.7 6.3.9 6.4.10 6.4.2 6.4.3 6.4.7 6.4.8 6.4.9 6.5.0 6.5.1 6.5.2 6.5.3 6.5.4 6.5.5 6.5.6 6.5.7 6.5.8 6.5.9 6.6.10 6.6.11 6.6.5 6.6.6 6.6.7 6.7.0 6.7.1 6.8.1 6.8.2 6.8.3 
 |===
 Prodotti supportati da questo data collector:
 
@@ -25335,25 +25452,25 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.73+| base .7+| Data Store | OID | Implementato | HTTP/S |  
+.75+| base .7+| Data Store | Capacità | Implementato | HTTP/S | Snapshot ha utilizzato la capacità in MB 
+
+
+| MOID | Implementato | HTTP/S |  
 
 
 | Nome | Implementato | HTTP/S |  
 
 
-| Capacità | Implementato | HTTP/S | Snapshot ha utilizzato la capacità in MB 
-
-
-| Capacità utilizzata | Implementato | HTTP/S |  
+| OID | Implementato | HTTP/S |  
 
 
 | Capacità fornita | Implementato | HTTP/S |  
 
 
+| Capacità utilizzata | Implementato | HTTP/S |  
+
+
 | IP del Virtual Center | Implementato | HTTP/S |  
-
-
-| MOID | Implementato | HTTP/S |  
 
 
 .3+| Datastore NasShare | OID del datastore | Implementato | HTTP/S |  
@@ -25377,16 +25494,16 @@ Prodotti supportati da questo data collector:
 | OID | Implementato | HTTP/S |  
 
 
-.4+| LUN | OID | Implementato | HTTP/S |  
+.4+| LUN | OID del datastore | Implementato | HTTP/S |  
+
+
+| OID host | Implementato | HTTP/S |  
 
 
 | Numero | Implementato | HTTP/S |  
 
 
-| OID del datastore | Implementato | HTTP/S |  
-
-
-| OID host | Implementato | HTTP/S |  
+| OID | Implementato | HTTP/S |  
 
 
 .6+| Condivisione NAS | Nome filer | Implementato | HTTP/S |  
@@ -25407,25 +25524,25 @@ Prodotti supportati da questo data collector:
 | OID | Implementato | HTTP/S |  
 
 
-.4+| Percorso | OID | Implementato | HTTP/S |  
+.6+| Percorso | Attivo | Implementato | HTTP/S |  
 
 
 | LUN OID | Implementato | HTTP/S |  
 
 
-| Attivo | Implementato | HTTP/S |  
+| Porta host WWPN | Implementato | HTTP/S |  
+
+
+| OID | Implementato | HTTP/S |  
+
+
+| WWPN della porta di storage | Implementato | HTTP/S |  
 
 
 | Tipo | Distanza | HTTP/S |  
 
 
-.6+| Server | OID | Implementato | HTTP/S |  
-
-
-| IP del Virtual Center | Implementato | HTTP/S |  
-
-
-| Cluster | Implementato | HTTP/S | Nome del cluster 
+.6+| Server | Cluster | Implementato | HTTP/S | Nome del cluster 
 
 
 | Nome del data center | Implementato | HTTP/S |  
@@ -25437,7 +25554,13 @@ Prodotti supportati da questo data collector:
 | MOID | Implementato | HTTP/S |  
 
 
-.6+| Disco virtuale | OID | Implementato | HTTP/S |  
+| OID | Implementato | HTTP/S |  
+
+
+| IP del Virtual Center | Implementato | HTTP/S |  
+
+
+.6+| Disco virtuale | Capacità | Implementato | HTTP/S | Snapshot ha utilizzato la capacità in MB 
 
 
 | OID del datastore | Implementato | HTTP/S |  
@@ -25446,31 +25569,37 @@ Prodotti supportati da questo data collector:
 | Nome | Implementato | HTTP/S |  
 
 
-| Capacità | Implementato | HTTP/S | Snapshot ha utilizzato la capacità in MB 
-
-
-| Capacità utilizzata | Implementato | HTTP/S |  
+| OID | Implementato | HTTP/S |  
 
 
 | Tipo | Distanza | HTTP/S |  
 
 
-.13+| VirtualMachine | OID | Implementato | HTTP/S |  
+| Capacità utilizzata | Implementato | HTTP/S |  
 
 
-| Nome | Implementato | HTTP/S |  
+.13+| VirtualMachine | Stato ospite | Implementato | HTTP/S |  
 
 
-| SISTEMA OPERATIVO | Implementato | HTTP/S |  
+| OID del datastore | Implementato | HTTP/S |  
 
 
-| Processori | Implementato | HTTP/S |  
+| OID host | Implementato | HTTP/S |  
+
+
+| MOID | Implementato | HTTP/S |  
 
 
 | Memoria | Implementato | HTTP/S |  
 
 
-| OID del datastore | Implementato | HTTP/S |  
+| Nome | Implementato | HTTP/S |  
+
+
+| OID | Implementato | HTTP/S |  
+
+
+| SISTEMA OPERATIVO | Implementato | HTTP/S |  
 
 
 | Power state (Stato alimentazione) | Implementato | HTTP/S |  
@@ -25479,55 +25608,34 @@ Prodotti supportati da questo data collector:
 | Tempo di modifica dello stato | Implementato | HTTP/S |  
 
 
-| OID host | Implementato | HTTP/S |  
-
-
-| Stato ospite | Implementato | HTTP/S |  
-
-
-| Capacità utilizzata | Implementato | HTTP/S |  
+| Processori | Implementato | HTTP/S |  
 
 
 | Capacità fornita | Implementato | HTTP/S |  
 
 
-| MOID | Implementato | HTTP/S |  
+| Capacità utilizzata | Implementato | HTTP/S |  
 
 
 .3+| Disco VirtualMachine | OID | Implementato | HTTP/S |  
 
 
-| OID VirtualMachine | Implementato | HTTP/S |  
-
-
 | OID VirtualDisk | Implementato | HTTP/S |  
 
 
-.11+| Host | OID | Implementato | HTTP/S |  
+| OID VirtualMachine | Implementato | HTTP/S |  
 
 
-| Nome | Implementato | HTTP/S |  
+.11+| Host | Numero di CPU host | Implementato | HTTP/S |  
 
 
-| IPS | Implementato | HTTP/S |  
-
-
-| Tipo di piattaforma | Implementato | HTTP/S |  
+| Velocità CPU host | Implementato | HTTP/S |  
 
 
 | Memoria installata sull'host | Implementato | HTTP/S |  
 
 
-| Produttore | Implementato | HTTP/S |  
-
-
 | Modello host | Implementato | HTTP/S |  
-
-
-| Numero di CPU host | Implementato | HTTP/S |  
-
-
-| Velocità CPU host | Implementato | HTTP/S |  
 
 
 | Numero di NIC | Implementato | HTTP/S |  
@@ -25536,10 +25644,25 @@ Prodotti supportati da questo data collector:
 | Velocità NIC | Implementato | HTTP/S |  
 
 
-.3+| Nodo ISCSI | OID | Implementato | HTTP/S |  
+| IPS | Implementato | HTTP/S |  
 
 
-| Nome del nodo | Implementato | HTTP/S |  
+| Produttore | Implementato | HTTP/S |  
+
+
+| Nome | Implementato | HTTP/S |  
+
+
+| OID | Implementato | HTTP/S |  
+
+
+| Tipo di piattaforma | Implementato | HTTP/S |  
+
+
+.3+| Nodo ISCSI | Nome del nodo | Implementato | HTTP/S |  
+
+
+| OID | Implementato | HTTP/S |  
 
 
 | Tipo | Distanza | HTTP/S |  
@@ -25548,10 +25671,10 @@ Prodotti supportati da questo data collector:
 .3+| Info | Nome origine dati | Implementato | HTTP/S | Info 
 
 
-| ID mittente | Implementato | HTTP/S |  
-
-
 | Data | Implementato | HTTP/S |  
+
+
+| ID mittente | Implementato | HTTP/S |  
 |===
 API di gestione utilizzate da questo data collector:
 
@@ -25565,9 +25688,7 @@ API di gestione utilizzate da questo data collector:
 
 == Storage Rubrik
 
-Modelli e versioni supportati da questo data collector:
-
-Versioni firmware:
+Modelli e versioni supportati da questo data collector: Versioni firmware:
 
 * 8,1.3-p12-25506
 * 8,1.3-p13-25544
@@ -25580,8 +25701,10 @@ Versioni firmware:
 * 9,1.2-p1-27870
 * 9,1.2-P1-27870_HP1473894
 * 9,1.3-p1-28075
+* 9,1.3-p8-28434
 * 9,2.2-p1-29213
 * 9.2.3-29313
+* 9,2.3-p1-29368
 
 
 Prodotti supportati da questo data collector:
@@ -25913,7 +26036,7 @@ Modelli e versioni supportati da questo data collector:
 | Modelli | Versioni del firmware 
 
 
-| VA2437096 VAST Data | Versione build :release-5,0.0-SP24-1389206 versione build: Release-5,0.0-5,1-0 versione build: Release-1532643.0-SP70-5,0 versione build: Release-SP24.1389206-SP50-1578267 versione di sistema :5.0.0.94 versione di sistema: 5.0.0.133 versione di sistema: 5.0.0.94 versione di sistema: 5.1.0.210 
+| VA2437096 VAST Data | Versione build :release-.0--1389206 versione build: Release-1700467.-5.0.0.133-0 versione build: Release-5.1.0.210.hf14-HF10-1532643 versione build: Release-5,1.5,1-sp56-sp56 versione build: Release-0.1682647-1630237-hf3-0 versione build: Release-5,1.5,1 versione build: Release-sp56-sp51 versione del sistema: Release 1643358-0 versione del sistema: Versione 1578267-0-5,1. Versione build: Versione del sistema SP50-SP70: Versione del sistema 5.0.0.94-5,0-0-1389206: Versione del sistema 0-SP24-5.1.0.231-5,0. Versione del sistema: Versione del sistema SP24-5,0-5.0.0.94 
 |===
 Prodotti supportati da questo data collector:
 
@@ -25921,7 +26044,7 @@ Prodotti supportati da questo data collector:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Ulteriori informazioni 
 
 
-.108+| base .14+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
+.110+| base .14+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
 
 
 | ID disco | Implementato | HTTPS | Identifica in modo univoco questo disco nell'array 
@@ -26053,7 +26176,7 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza | HTTPS |  
 
 
-.7+| Quota | Limite di capacità hard (MB) | Implementato | HTTPS | Quantità massima di spazio su disco consentita per la destinazione della quota (limite massimo) 
+.9+| Quota | Limite di capacità hard (MB) | Implementato | HTTPS | Quantità massima di spazio su disco consentita per la destinazione della quota (limite massimo) 
 
 
 | ID volume interno | Implementato | HTTPS |  
@@ -26065,6 +26188,9 @@ Prodotti supportati da questo data collector:
 | Limite di capacità soft (MB) | Implementato | HTTPS | Quantità massima di spazio su disco consentita per la destinazione della quota 
 
 
+| Limite di file soft | Implementato | HTTPS | Numero massimo di file consentiti per la destinazione della quota 
+
+
 | Tipo | Distanza | HTTPS |  
 
 
@@ -26072,6 +26198,9 @@ Prodotti supportati da questo data collector:
 
 
 | File utilizzati | Implementato | HTTPS | Numero di file attualmente utilizzati 
+
+
+| Destinazione utente/gruppo | Implementato | HTTPS | destinazione utente/gruppo a cui si riferisce questa quota 
 
 
 .3+| Condividere | Interfacce IP | Implementato | HTTPS | Elenco separato da virgole degli indirizzi IP sui quali è esposta questa condivisione 
@@ -26221,10 +26350,13 @@ Prodotti supportati da questo data collector:
 | Crittografato | Implementato | HTTPS |  
 
 
-.7+| Storage VirtualMachine | Chiave GUID | Implementato | HTTPS | Chiave univoca globale della macchina virtuale per lo storage 
+.7+| Storage VirtualMachine | Capacità allocata (MB) | Implementato | HTTPS | Capacità allocata degli snapshot 
 
 
-| UUID | Implementato | HTTPS |  
+| Commento | Implementato | HTTPS |  
+
+
+| Chiave GUID | Implementato | HTTPS | Chiave univoca globale della macchina virtuale per lo storage 
 
 
 | Nome | Implementato | HTTPS |  
@@ -26233,10 +26365,7 @@ Prodotti supportati da questo data collector:
 | Tipo | Distanza | HTTPS |  
 
 
-| Commento | Implementato | HTTPS |  
-
-
-| Capacità allocata (MB) | Implementato | HTTPS | Capacità allocata degli snapshot 
+| UUID | Implementato | HTTPS |  
 
 
 | Capacità utilizzata | Implementato | HTTPS |  
@@ -26313,9 +26442,7 @@ API di gestione utilizzate da questo data collector:
 
 == Centro virtuale NetApp HCI
 
-Modelli e versioni supportati da questo data collector:
-
-Versioni API:
+Modelli e versioni supportati da questo data collector: Versioni API:
 
 * VMware vCenter Server 6.7.0 Build-10244857
 * VMware vCenter Server 7.0.3 Build-20395099
@@ -26863,15 +26990,14 @@ API di gestione utilizzate da questo data collector:
 
 == VMware Cloud su AWS
 
-Modelli e versioni supportati da questo data collector:
-
-Versioni API:
+Modelli e versioni supportati da questo data collector: Versioni API:
 
 * VMware vCenter Server 7.0.3 Build-21477706
 * VMware vCenter Server 7.0.3 Build-24322018
 * VMware vCenter Server 8.0.0 Build-22877852
 * VMware vCenter Server 8.0.1 Build-22161730
 * VMware vCenter Server 8.0.1 Build-23525738
+* VMware vCenter Server 8.0.3 Build-24322831
 
 
 Prodotti supportati da questo data collector:
@@ -27206,15 +27332,21 @@ API di gestione utilizzate da questo data collector:
 
 == VMware vSphere (servizi Web)
 
-Modelli e versioni supportati da questo data collector:
+Modelli e versioni supportati da questo data collector: Versioni API:
 
-Versioni API:
-
+* VMware ESXi 6.0.0 build-10474991
+* VMware ESXi 6.0.0 build-10719132
+* VMware ESXi 6.0.0 build-13635687
 * VMware ESXi 6.0.0 build-2494585
-* VMware ESXi 6.7.0 build-20497097
+* VMware ESXi 6.0.0 build-3620759
+* VMware ESXi 6.0.0 build-5050593
+* VMware ESXi 6.0.0 build-5224934
+* VMware ESXi 6.0.0 build-9239799
+* VMware ESXi 6.5.0 build-5310538
 * VMware ESXi 7.0.3 build-20036589
 * VMware ESXi 7.0.3 build-20328353
 * VMware ESXi 8.0.0 build-21203435
+* VMware ESXi 8.0.1 build-21495797
 * VMware vCenter Server 5.0.0 Build-623373
 * VMware vCenter Server 5.5.0 Build-1750787
 * VMware vCenter Server 5.5.0 Build-2442329
@@ -27280,6 +27412,7 @@ Versioni API:
 * VMware vCenter Server 8.0.0 Build-20519528
 * VMware vCenter Server 8.0.0 Build-20920323
 * VMware vCenter Server 8.0.0 Build-21216066
+* VMware vCenter Server 8.0.0 Build-21457384
 * VMware vCenter Server 8.0.1 Build-21560480
 * VMware vCenter Server 8.0.1 Build-21815093
 * VMware vCenter Server 8.0.1 Build-21860503

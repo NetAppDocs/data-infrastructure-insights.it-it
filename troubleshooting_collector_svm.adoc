@@ -78,5 +78,8 @@ image:CS_Data_Collector_Error.png["Collegamento Dettagli di errore del servizio 
 
 
 | Il Data Collector genera un errore quando viene selezionata la modalità SVM. | Durante la connessione in modalità SVM, se per la connessione si utilizza l'IP di gestione del cluster invece dell'IP di gestione della SVM, la connessione genererà un errore. Verificare di utilizzare l'IP SVM corretto. 
+
+
+| Data Collector visualizza un messaggio di errore quando la funzione accesso negato è attivata: "Il connettore è in stato di errore. Nome del servizio: Audit. Motivo dell'errore: Configurazione di fpolicy su SVM test_svm non riuscita. Motivo: L'utente non è autorizzato." | L'utente potrebbe non disporre delle autorizzazioni REST necessarie per la funzione accesso negato. Seguire le istruzioni a link:concept_ws_integration_with_ontap_access_denied.html["questa pagina"] per impostare le autorizzazioni. Riavviare il raccoglitore una volta impostate le autorizzazioni. 
 |===
 Se i problemi persistono, accedere ai collegamenti di supporto indicati nella pagina *Guida > supporto*.
