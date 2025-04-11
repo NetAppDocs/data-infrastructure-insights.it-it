@@ -6,13 +6,7 @@ keywords: subscribe, trial, subscription, contract, raw capacity, region, data r
 ---
 = Iscrizione a Data Infrastructure Insights
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
@@ -136,11 +130,10 @@ L'osservabilità di Data Infrastructure Insights misura l'utilizzo in base al Ti
 * Cloud consumato
 
 
-Ogni livello viene misurato a un tasso diverso, con l'intero calcolato insieme per darvi un _diritto effettivo_. La formula per il calcolo dell'uso effettivo è la seguente:
+Ogni livello è misurato a un tasso diverso, con l'intero calcolato insieme per darvi un diritto ponderato. La formula per il calcolo dell'utilizzo ponderato è la seguente:
 
- Effective usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
-
-NOTE: La somma delle unità gestite potrebbe differire leggermente dal conteggio dei Data Collector nella sezione di riepilogo. Questo perché i conteggi delle unità gestite vengono arrotondati all'unità gestita più vicina. La somma di questi numeri nell'elenco Data Collector (raccolta dati) potrebbe essere leggermente superiore a quella delle unità gestite totali nella sezione Status (Stato). La sezione riepilogativa indica il numero effettivo di unità gestite per l'abbonamento. Per facilitare questa operazione, DII calcola un singolo numero *effettivo* in base alle quantità _sottoscritte_, quindi calcola lo stesso numero in base all'archiviazione _scoperta_. Ciò ti offre la flessibilità di monitorare le quantità che variano dagli importi sottoscritti per ogni livello, che DII consente finché lo storage totale rilevato rientra nell'autorizzazione effettiva sottoscritta.
+ Weighted usage = Raw TiB + (0.1 x Object Tier Raw TiB) + (0.25 x Cloud Tier Provisioning TiB)
+Per facilitare questa operazione, DII calcola un singolo numero *ponderato* in base alle quantità _sottoscritte_; calcola quindi lo stesso numero in base all'archiviazione _scoperta_ e dichiara la violazione solo se la capacità rilevata è superiore al diritto ponderato. Ciò ti offre la flessibilità di monitorare le quantità che variano dagli importi sottoscritti per ogni livello, che DII consente finché lo storage totale rilevato rientra nel diritto ponderato sottoscritto.
 
 
 
