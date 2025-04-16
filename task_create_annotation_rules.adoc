@@ -5,17 +5,8 @@ summary: È possibile creare regole di annotazione per applicare automaticamente
 keywords: annotate, annotation, rules 
 ---
 = Creazione di regole di annotazione
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

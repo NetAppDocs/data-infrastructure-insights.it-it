@@ -5,17 +5,8 @@ keywords: data collector, Pure Storage, pure
 summary: Configurazione di pure Storage Data Collector. 
 ---
 = Pure Storage FlashArray data collector
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

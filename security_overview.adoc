@@ -5,17 +5,8 @@ summary: 'Data Infrastructure Insights segue le Best practice per la sicurezza d
 keywords: security, risk, protection 
 ---
 = Sicurezza degli approfondimenti sull'infrastruttura dati
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

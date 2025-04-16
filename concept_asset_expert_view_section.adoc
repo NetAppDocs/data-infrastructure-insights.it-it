@@ -5,17 +5,8 @@ summary: La sezione Expert View di una pagina di risorse è un potente strumento
 keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, refresh 
 ---
 = Vista degli esperti
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

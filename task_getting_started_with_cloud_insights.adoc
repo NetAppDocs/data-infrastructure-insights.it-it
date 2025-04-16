@@ -5,17 +5,8 @@ summary: Guida introduttiva di Data Infrastructure Insights.
 keywords: invite, roles, data collector, acquisition unit, AU 
 ---
 = Per iniziare a raccogliere i dati
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

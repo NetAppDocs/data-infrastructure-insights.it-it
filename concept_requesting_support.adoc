@@ -6,17 +6,12 @@ keywords: support, knowledgebase, documentation, community, chat, videos, help, 
 ---
 = Richiesta di supporto
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
+[role="lead"]
+sommario:[]
 
-toc::[]
 È possibile accedere alle opzioni di supporto in Data Infrastructure Insights facendo clic su *Help > Support* (Guida > supporto*). Le opzioni di supporto disponibili dipendono dalla Data Infrastructure Insights Edition.
 
 image:SupportPageWithLearningCenter.png["Pagina di supporto"]

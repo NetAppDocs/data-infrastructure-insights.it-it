@@ -5,17 +5,9 @@ keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, ek
 summary: Data Infrastructure Insights supporta Telegraf come proprio agente per la raccolta di dati di integrazione su Kubernetes. 
 ---
 = Prima di installare o aggiornare l'operatore di monitoraggio NetApp Kubernetes
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 2
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

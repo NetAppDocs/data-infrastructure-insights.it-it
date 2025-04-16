@@ -5,17 +5,8 @@ keywords: data collector, VPLEX, EMC
 summary: Configurazione di VPLEX data collector. 
 ---
 = Configurazione del data collector EMC VPLEX
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: Spiegazione dei tempi di conservazione dei dati e del downsampling
 keywords: time-to-live, TTL, downsampling, downsample, retention 
 ---
 = Conservazione dei dati e dati sottocampionati
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

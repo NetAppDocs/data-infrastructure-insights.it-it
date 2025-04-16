@@ -107,7 +107,7 @@ Attenersi alla seguente procedura per ripristinare manualmente gli IP da ONTAP s
 . Elencare tutti i criteri di esportazione su una SVM.
 +
 ....
-contrail-qa-fas8020::> export-policy rule show -vserver <svm name>
+contrail-qa-fas8020:> export-policy rule show -vserver <svm name>
              Policy          Rule    Access   Client                RO
 Vserver      Name            Index   Protocol Match                 Rule
 ------------ --------------- ------  -------- --------------------- ---------
@@ -126,11 +126,11 @@ svm3        test            3       cifs,    0.0.0.0/0             any
 ....
 . Eliminare le regole di tutti i criteri sulla SVM che hanno "cloudSecure_rule" come corrispondenza client specificando il rispettivo RuleIndex. La regola di sicurezza del carico di lavoro è solitamente 1.
 +
- contrail-qa-fas8020::*> export-policy rule delete -vserver <svm name> -policyname * -ruleindex 1
+ contrail-qa-fas8020:*> export-policy rule delete -vserver <svm name> -policyname * -ruleindex 1
 . Assicurarsi che la regola di sicurezza del carico di lavoro sia eliminata (passaggio facoltativo per confermare).
 +
 ....
-contrail-qa-fas8020::*> export-policy rule show -vserver <svm name>
+contrail-qa-fas8020:*> export-policy rule show -vserver <svm name>
              Policy          Rule    Access   Client                RO
 Vserver      Name            Index   Protocol Match                 Rule
 ------------ --------------- ------  -------- --------------------- ---------

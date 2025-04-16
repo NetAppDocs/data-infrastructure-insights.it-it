@@ -5,17 +5,8 @@ summary: 'La sezione User Data (dati utente) di una pagina di risorse consente d
 keywords: asset page, user data, applications, annotations 
 ---
 = Sezione dati utente
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

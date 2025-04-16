@@ -5,17 +5,8 @@ keywords: Cloud, Storage, AWS, Cloud Volumes, Cloud ONTAP, firewall, VPC, Subnet
 summary: Workload Security utilizza i data colleator per raccogliere i dati di accesso ai file e agli utenti dai dispositivi. 
 ---
 = Configurazione di Cloud Volumes ONTAP e Amazon FSX per NetApp ONTAP Collector
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

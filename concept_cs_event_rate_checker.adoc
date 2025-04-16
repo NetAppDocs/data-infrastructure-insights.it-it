@@ -5,17 +5,8 @@ summary: Questo script può essere eseguito per controllare la frequenza degli e
 keywords: event, checker, rate, sizing, cloud secure 
 ---
 = SVM Event Rate Checker (Guida al dimensionamento dell'agente)
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

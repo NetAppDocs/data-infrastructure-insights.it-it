@@ -5,17 +5,8 @@ keywords: collectors, data collectors, configure, introduction, browsers , Cloud
 summary: In pochi semplici passaggi, è possibile iniziare a utilizzare la sicurezza del carico di lavoro 
 ---
 = Introduzione alla sicurezza del carico di lavoro
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

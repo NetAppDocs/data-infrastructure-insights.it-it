@@ -5,17 +5,8 @@ summary: È possibile copiare i valori da una tabella agli Appunti per utilizzar
 keywords: query, queries, copy, values, clipboard 
 ---
 = Copia dei valori della tabella
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

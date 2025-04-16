@@ -6,13 +6,7 @@ summary: 'L"identificazione dei dispositivi inattivi consente di scegliere se el
 ---
 = Identificazione dei dispositivi inattivi
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ summary: Come esportare i risultati di una query in un file .csv
 keywords: query, queries, export, csv 
 ---
 = Esportazione dei risultati della query in un file .CSV
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

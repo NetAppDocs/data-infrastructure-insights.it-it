@@ -5,17 +5,8 @@ keywords: insight, pv, persistent volume, backend
 summary: Le informazioni possono aiutarti a prevedere quando gli spazi Kubernetes saranno probabilmente pieni. 
 ---
 = Approfondimenti: Kubernetes Namespace che esauriscono lo spazio
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

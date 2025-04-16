@@ -5,17 +5,8 @@ summary: È possibile importare dashboard consigliate per rispondere alle domand
 keywords: dashboard, gallery, import 
 ---
 = Importazione dalla galleria Dashboard
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

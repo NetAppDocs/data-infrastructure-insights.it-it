@@ -5,17 +5,8 @@ summary: Le funzionalità di anteprima sono disponibili in capacità limitata e 
 keywords: coming soon, preview, 
 ---
 = Funzionalità e funzionalità di anteprima
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

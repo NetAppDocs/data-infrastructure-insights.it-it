@@ -6,13 +6,7 @@ summary: Collettore del programma di risoluzione host DB generico
 ---
 = Resolver host DB generico NetApp
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

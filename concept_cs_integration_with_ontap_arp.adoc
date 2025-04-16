@@ -5,17 +5,8 @@ summary: La sicurezza del carico di lavoro si integra con la protezione ransomwa
 keywords: ransomware, ARP, Protection, Security 
 ---
 = Integrazione con la protezione ransomware autonoma di ONTAP
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

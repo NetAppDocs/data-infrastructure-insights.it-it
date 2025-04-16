@@ -6,13 +6,7 @@ summary: La pagina dei dettagli del nodo Kubernetes fornisce informazioni dettag
 ---
 = Pagina dei dettagli del nodo Kubernetes
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

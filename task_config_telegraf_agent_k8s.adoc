@@ -6,13 +6,8 @@ summary: 'L"operatore di monitoring Kubernetes raccoglie i dati Kubernetes per l
 ---
 = Installazione e configurazione dell'operatore di monitoraggio Kubernetes
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
 :nofooter: 
-:toclevels: 2
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

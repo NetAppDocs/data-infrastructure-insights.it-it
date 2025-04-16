@@ -5,17 +5,8 @@ summary: Aggiunta di indirizzi e-mail per le notifiche degli avvisi di sicurezza
 keywords: email, notifications, alerts, warnings, attacks 
 ---
 = Configurazione delle notifiche e-mail per gli avvisi, gli avvisi e lo stato del servizio di raccolta origine dati/agente
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

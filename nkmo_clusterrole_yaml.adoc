@@ -5,17 +5,9 @@ keywords: NKMO, yaml,
 summary: Un file YAML di esempio per NKMO Clusterrole 
 ---
 = Esempio di NKMO Clusterrole YAML
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 2
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: annotations, business entity
 summary: Le annotazioni delle entità aziendali possono essere utilizzate per il monitoraggio e il reporting delle risorse nella gerarchia aziendale 
 ---
 = Annotazioni entità di business
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

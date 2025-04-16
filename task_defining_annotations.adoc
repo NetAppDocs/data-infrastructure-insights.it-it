@@ -5,17 +5,8 @@ keywords: annotations, monitor, notes, tags
 summary: Tenere traccia dei dati utilizzando le annotazioni. 
 ---
 = Definizione delle annotazioni
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -109,25 +100,15 @@ La pagina Annotazioni visualizza l'elenco delle annotazioni.
 
 
 .Tipi di annotazione
-Booleano:: Crea un elenco a discesa con le opzioni Sì e No. Ad esempio, l'annotazione "diretto collegato" è booleana.
-Data:: In questo modo viene creato un campo che contiene una data. Ad esempio, se l'annotazione sarà una data, selezionare questa opzione.
-Elenco:: Crea una delle seguenti opzioni:
-+
---
-* Un elenco a discesa fisso
-+
-Quando altri utenti assegnano questo tipo di annotazione su un dispositivo, non possono aggiungere altri valori all'elenco.
+Boolean: Crea un elenco a discesa con le opzioni yes e no. Ad esempio, l'annotazione "Direct Attached" è Boolean. Data: Consente di creare un campo che contiene una data. Ad esempio, se l'annotazione sarà una data, selezionare questa opzione. List (elenco): Crea una delle seguenti opzioni: * Un elenco a discesa fisso
 
-* Un elenco a discesa flessibile
-+
-Se si seleziona l'opzione Add new values on the fly (Aggiungi nuovi valori al volo) quando si crea questo elenco, altri utenti assegnano questo tipo di annotazione su un dispositivo possono aggiungere altri valori all'elenco.
++ quando altri assegnano questo tipo di annotazione su un dispositivo, non possono aggiungere altri valori all'elenco. * Un elenco a discesa flessibile
 
++ se si seleziona l'opzione Aggiungi nuovi valori al volo quando si crea questo elenco, quando altri assegnano questo tipo di annotazione su un dispositivo, possono aggiungere altri valori all'elenco.
 
+Numero: Consente di creare un campo in cui l'utente che assegna l'annotazione può immettere un numero. Ad esempio, se il tipo di annotazione è "Floor" (piano), l'utente può selezionare il tipo di valore "Number" (numero) e inserire il numero di piano.
 
---
-Numero:: Crea un campo in cui l'utente che assegna l'annotazione può inserire un numero. Ad esempio, se il tipo di annotazione è "Floor" (piano), l'utente può selezionare il tipo di valore "Number" (numero) e inserire il numero di piano.
-Testo:: Crea un campo che consente il testo in formato libero. Ad esempio, è possibile inserire "Lingua" come tipo di annotazione, selezionare "testo" come tipo di valore e immettere una lingua come valore.
-
+Testo: Consente di creare un campo che consenta il testo in formato libero. Ad esempio, è possibile inserire "Lingua" come tipo di annotazione, selezionare "testo" come tipo di valore e immettere una lingua come valore.
 
 
 NOTE: Dopo aver impostato il tipo e salvato le modifiche, non è possibile modificare il tipo di annotazione. Se è necessario modificare il tipo, eliminare l'annotazione e crearne una nuova.

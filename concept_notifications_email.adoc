@@ -5,17 +5,8 @@ summary: Aggiunta di indirizzi e-mail per le notifiche.
 keywords: email, notifications, signature, recipient, list, subscription 
 ---
 = Configurazione delle notifiche e-mail
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

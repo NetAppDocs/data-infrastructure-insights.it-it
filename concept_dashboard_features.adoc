@@ -5,24 +5,16 @@ summary: Caratteristiche e concetti della dashboard.
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = Caratteristiche della dashboard
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
 Dashboard e widget consentono una grande flessibilità nella visualizzazione dei dati. Ecco alcuni concetti che ti aiuteranno a ottenere il massimo dalle dashboard personalizzate.
 
+sommario:[]
 
-toc::[]
 
 
 == Nome widget
@@ -66,13 +58,17 @@ Quando vengono visualizzate le legende, se è possibile accedere alla pagina di 
 
 Data Infrastructure Insights fornisce diverse opzioni *Transform* per determinate metriche nei widget (in particolare, quelle metriche chiamate "personalizzate" o metriche di integrazione, come da Kubernetes, dati avanzati di ONTAP, plug-in Telegraf, ecc.), consentendo di visualizzare i dati in diversi modi. Quando si aggiungono metriche trasformabili a un widget, viene visualizzato un menu a discesa che offre le seguenti scelte di trasformazione:
 
-Nessuno:: I dati vengono visualizzati così come sono, senza alcuna manipolazione.
-Tasso:: Valore corrente diviso per l'intervallo di tempo dall'osservazione precedente.
-Cumulativo:: L'accumulo della somma dei valori precedenti e del valore corrente.
-Delta:: La differenza tra il valore di osservazione precedente e il valore corrente.
-Delta rate (tasso delta):: Valore delta diviso per l'intervallo di tempo dall'osservazione precedente.
-Tasso cumulativo:: Valore cumulativo diviso per l'intervallo di tempo dall'osservazione precedente.
+Nessuno: I dati vengono visualizzati così come sono, senza alcuna manipolazione.
 
+Rate (velocità): Valore corrente diviso per l'intervallo di tempo dall'osservazione precedente.
+
+Cumulative (cumulativo): L'accumulo della somma dei valori precedenti e del valore corrente.
+
+Delta: Differenza tra il valore di osservazione precedente e il valore corrente.
+
+Delta rate: Valore delta diviso per l'intervallo temporale dall'osservazione precedente.
+
+Tasso cumulativo: Valore cumulativo diviso per l'intervallo di tempo dall'osservazione precedente.
 
 Si noti che la trasformazione delle metriche non modifica i dati sottostanti, ma solo il modo in cui vengono visualizzati.
 
@@ -401,7 +397,7 @@ La linea di latenza viene ora tracciata in base alla propria scala, che viene vi
 
 
 
-image::SecondaryAxisExplained.png[Esempio di asse secondario]
+image:SecondaryAxisExplained.png["Esempio di asse secondario"]
 
 
 

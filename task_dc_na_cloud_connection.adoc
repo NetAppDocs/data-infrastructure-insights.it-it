@@ -5,17 +5,8 @@ summary: Configurare la connessione cloud NetApp per il data collector ONTAP 9.9
 keywords: data collector, NetApp, Cloud agent, ONTAP 
 ---
 = Connessione cloud NetApp per data collector ONTAP 9.9+
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

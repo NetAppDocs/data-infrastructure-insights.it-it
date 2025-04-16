@@ -5,17 +5,8 @@ keywords: data collector, EMC, clariion, VNX block
 summary: 'Configurazione DELLO storage a blocchi DELL EMC VNX (in precedenza CLARiiON).' 
 ---
 = Data collector Dell EMC VNX Block Storage (navicli)
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

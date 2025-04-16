@@ -5,17 +5,8 @@ keywords: ransomware, simulation, simulator, restrict, attack
 summary: Utilizzando uno script, è possibile simulare un attacco ransomware per testare o dimostrare la sicurezza del carico di lavoro 
 ---
 = Sicurezza del carico di lavoro: Simulazione di un attacco
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

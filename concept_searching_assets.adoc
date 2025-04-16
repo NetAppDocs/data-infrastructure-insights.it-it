@@ -5,17 +5,8 @@ summary: Ricerca avanzata techniquest può aiutarti a individuare le risorse che
 keywords: asset page, objects, search, advanced, alerts 
 ---
 = Suggerimenti e suggerimenti per la ricerca di risorse e avvisi
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

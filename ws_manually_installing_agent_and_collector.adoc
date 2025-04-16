@@ -6,13 +6,7 @@ summary: Workload Security Agent può essere installato o aggiornato manualmente
 ---
 = Installazione manuale di workload Security Agent e Collector
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

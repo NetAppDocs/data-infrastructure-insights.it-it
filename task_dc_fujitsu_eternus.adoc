@@ -5,17 +5,8 @@ keywords: data collector, Fujitsu, Eternus
 summary: Configurazione di Fujitsu Eternus data collector. 
 ---
 = Data collector Fujitsu Eternus
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

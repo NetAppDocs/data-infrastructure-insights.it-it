@@ -5,17 +5,8 @@ summary: È possibile filtrare gli oggetti correlati direttamente alla risorsa c
 keywords: Assets, landing page, filtering, context, related 
 ---
 = Filtraggio degli oggetti nel contesto
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: data collector, ONTAP, NetApp, SVM, cloud ontap, firewall
 summary: Aggiunta dei data collettori di workload Security 
 ---
 = Configurazione del Data Collector SVM di ONTAP
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
@@ -57,7 +48,7 @@ Workload Security utilizza i data colleator per raccogliere i dati di accesso ai
 
 * Assicurarsi che siano impostate le applicazioni corrette per SVM eseguendo il seguente comando:
 +
- clustershell::> security login show -vserver <vservername> -user-or-group-name <username>
+ clustershell:> security login show -vserver <vservername> -user-or-group-name <username>
 
 
 Output di esempio: image:cs_svm_sample_output.png["Esempio di output del comando SVM"]
@@ -301,7 +292,7 @@ Se si utilizza la politica di servizio con ONTAP *versione 9.9.1 o successiva*, 
 Esempio:
 
 ....
-Testcluster-1::*> net int service-policy create -policy only_data_fpolicy -allowed-addresses 0.0.0.0/0 -vserver aniket_svm
+Testcluster-1:*> net int service-policy create -policy only_data_fpolicy -allowed-addresses 0.0.0.0/0 -vserver aniket_svm
 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
 (network interface service-policy create)
 ....

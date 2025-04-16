@@ -6,13 +6,7 @@ keywords: troubleshooting, problems, browser, login, log in, accessing, access t
 ---
 = Risoluzione dei problemi di informazioni generali sull'infrastruttura dati
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

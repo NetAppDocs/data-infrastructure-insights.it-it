@@ -5,17 +5,8 @@ keywords: webhook, notification, PagerDuty, integration
 summary: 'Crea un webhook per avvisare sulle soglie delle performance o dell"inventario per PagerDuty' 
 ---
 = Esempio di Webhook per PagerDuty
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

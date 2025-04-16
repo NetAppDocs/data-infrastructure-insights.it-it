@@ -6,13 +6,7 @@ summary: Creare monitor per avvisare sulle soglie di performance o inventario
 ---
 = Notifica tramite webhook
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

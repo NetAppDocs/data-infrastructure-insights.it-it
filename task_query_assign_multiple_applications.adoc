@@ -5,17 +5,8 @@ summary: Utilizzare una query per assegnare più applicazioni o annotazioni agli
 keywords: query, queries, application, annotation, multiple 
 ---
 = Assegnazione di più applicazioni o rimozione di più applicazioni dalle risorse
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

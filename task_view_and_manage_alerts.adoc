@@ -5,17 +5,8 @@ summary: Visualizzazione degli avvisi attivati dai monitor
 keywords: monitor, alert, viewing 
 ---
 = Visualizzazione e gestione degli avvisi dai monitor
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

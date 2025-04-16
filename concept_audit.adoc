@@ -5,17 +5,8 @@ keywords: audit, users, activities
 summary: 'L"audit fornisce una vista delle attività del sistema e degli utenti nel sistema Data Infrastructure Insights.' 
 ---
 = Controllo
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

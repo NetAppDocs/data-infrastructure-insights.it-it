@@ -6,13 +6,7 @@ summary: Servizio di raccolta dati per array All-SAN ONTAP
 ---
 = Raccolta dati array All-SAN (ASA) NetApp ONTAP
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

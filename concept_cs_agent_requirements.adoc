@@ -5,17 +5,8 @@ summary: Il server o la macchina virtuale utilizzata come agente deve soddisfare
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = Requisiti dell'agente per la sicurezza del carico di lavoro
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

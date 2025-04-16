@@ -6,20 +6,14 @@ keywords: onboarding, new user
 ---
 = Insight dell'infrastruttura dati
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]
 Prima di iniziare a lavorare con Data Infrastructure Insights, è necessario registrarsi sul portale *NetApp BlueXP *. Se disponi già di un accesso a NetApp BlueXP , puoi avviare una prova gratuita di Data Infrastructure Insights con alcuni rapidi passaggi.
 
+sommario:[]
 
-toc::[]
 
 
 == Creazione dell'account NetApp BlueXP

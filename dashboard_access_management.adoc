@@ -5,17 +5,9 @@ summary: Si determina se un dashboard creato è pubblico o privato.
 keywords: dashboard, public, shared, private 
 ---
 = Gestione degli accessi tramite dashboard
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
 :nofooter: 
-:toclevels: 1
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: data collector, VMware, hci
 summary: Configurazione del data collector del server di gestione NetApp HCI. 
 ---
 = Configurazione del data collector del server di gestione NetApp HCI
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

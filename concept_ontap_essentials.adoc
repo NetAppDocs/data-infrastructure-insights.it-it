@@ -5,17 +5,8 @@ summary: 'Gli elementi di base di ONTAP sono una serie di dashboard e flussi di 
 keywords: dashboard, widget, ontap, overview, insight 
 ---
 = Elementi di base di ONTAP
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

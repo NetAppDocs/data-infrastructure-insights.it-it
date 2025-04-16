@@ -6,13 +6,7 @@ summary: Data Infrastructure Insights può essere configurato in modo che il sof
 ---
 = Installazione manuale del software dell'unità di acquisizione
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
 
 
 [role="lead"]

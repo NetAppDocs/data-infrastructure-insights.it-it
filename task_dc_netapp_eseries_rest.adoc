@@ -5,17 +5,8 @@ keywords: data collector, ontap, clustered ontap, REST
 summary: Configurazione di NetApp e-Series REST data Collector. 
 ---
 = Raccolta di dati REST NetApp e-Series
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,17 +5,8 @@ keywords: logs, monitors, alerts, EMS,
 summary: 'Log Explorer è un potente strumento per l"analisi dei problemi attraverso diversi log di sistema.' 
 ---
 = Esplora log
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

@@ -5,7 +5,12 @@ summary: Riferimento icona oggetto Data Infrastructure Insights.
 keywords: icons, assets, objects, reference, map 
 ---
 = Riferimento icona oggetto
+:hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

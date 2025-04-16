@@ -5,17 +5,8 @@ keywords: telegraf, installation, install, kafka
 summary: Configurazione del data collector Kafka 
 ---
 = Data Collector Kafka
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

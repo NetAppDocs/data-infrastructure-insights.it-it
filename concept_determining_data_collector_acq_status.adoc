@@ -5,17 +5,8 @@ summary: Stato di acquisizione di Data Collector
 keywords: collector, acquisition, status 
 ---
 = Determinazione dello stato di acquisizione del data collector
-:toc: macro
 :hardbreaks:
-:toclevels: 2
 :allow-uri-read: 
-:toc: 
-:toclevels: 2
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]

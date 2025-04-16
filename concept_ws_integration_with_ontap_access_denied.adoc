@@ -5,17 +5,8 @@ summary: Workload Security si integra con ONTAP per ricevere gli eventi di acces
 keywords: ransomware, ARP, Protection, Security, access 
 ---
 = Integrazione con accesso ONTAP negato
-:toc: macro
 :hardbreaks:
-:toclevels: 1
 :allow-uri-read: 
-:toc: 
-:toclevels: 1
-:nofooter: 
-:icons: font
-:linkattrs: 
-:imagesdir: ./media/
-:toc-position: content
 
 
 [role="lead"]
