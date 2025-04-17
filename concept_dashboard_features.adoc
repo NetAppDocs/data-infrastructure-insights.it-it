@@ -8,6 +8,9 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -359,6 +362,12 @@ L'intervallo di tempo personalizzato consente di selezionare fino a 31 giorni co
 
 
 
+=== Ingrandimento a un intervallo di tempo
+
+Mentre si visualizza un widget per serie temporali (linea, Spline, Area, Stacked Area)--o un grafico su una pagina di destinazione--è possibile trascinare il mouse sul grafico per ingrandire. In alto a destra dello schermo è possibile bloccare tale intervallo temporale in modo che i grafici su altre pagine riflettano i dati per quell'intervallo di tempo bloccato. Per sbloccare, selezionare un intervallo di tempo diverso dall'elenco.
+
+
+
 == Ignorare l'ora del dashboard nei singoli widget
 
 È possibile ignorare l'impostazione dell'intervallo di tempo della dashboard principale nei singoli widget. Questi widget visualizzano i dati in base al periodo di tempo impostato, non al periodo di tempo della dashboard.
@@ -506,8 +515,6 @@ image:ExpressionExample.png["Espressione in un widget della tavola"]
 == Variabili
 
 Le variabili consentono di modificare i dati visualizzati in alcuni o tutti i widget di una dashboard contemporaneamente. Impostando uno o più widget per l'utilizzo di una variabile comune, le modifiche apportate in un unico punto causano l'aggiornamento automatico dei dati visualizzati in ciascun widget.
-
-Le variabili della dashboard sono disponibili in diversi tipi, possono essere utilizzate in diversi campi e devono seguire le regole per la denominazione. Questi concetti sono spiegati qui.
 
 
 
@@ -886,3 +893,25 @@ image:Interpolation_Stair.png["Semplice linea retta che mostra l'interpolazione 
 
 
 image:Interpolation_Linear.png["Semplice linea retta che mostra l'interpolazione lineare con ulteriori punti dati tra ciascun punto originale"]
+
+
+
+=== Limiti di anomalia nei widget linea
+
+Quando si include un widget grafico linea o Spline in un dashboard o in una pagina di destinazione, è possibile scegliere di visualizzare il grafico nel contesto dei *limiti previsti* per i dati. Si può pensare a questo come alla ricerca di anomalie negli schemi dei dati.
+
+DII utilizza i dati stagionali (ogni ora o ogni giorno) per impostare limiti superiori e inferiori rispetto al punto in cui _si aspetta_ che i dati cadano in un determinato momento. Se i dati superano o scendono al di sotto dei limiti previsti, il grafico lo evidenzierà come un'anomalia.
+
+image:expected_bounds_example_showing_spike.png["esempio di limiti di anomalia - che mostra un picco in cui i dati effettivi superano il limite previsto, larghezza=600"]
+
+Per visualizzare i limiti delle anomalie, modificate il widget e scegliete _Mostra limiti delle anomalie_. È possibile scegliere tra due algoritmi di rilevamento:
+
+* *Il rilevatore adattivo* si adatta rapidamente alle modifiche, rendendolo utile per indagini dettagliate.
+* *Smooth Detector* riduce al minimo il rumore e i falsi positivi, filtrando le fluttuazioni a breve termine pur rilevando cambiamenti significativi.
+
+
+Inoltre, è possibile scegliere di mostrare la stagionalità _oraria_ o _giornaliera_, nonché impostare la sensibilità del rilevamento. La sensibilità _alta_ rileva un maggiore attraversamento del confine, la sensibilità _bassa_ rileva meno.
+
+image:expected_bounds_settings.png["Impostazioni per i limiti delle anomalie, inclusi l'algoritmo di rilevamento, la stagionalità e la sensibilità"]
+
+Tenere presente che è possibile visualizzare i limiti previsti solo quando il grafico è impostato per visualizzare una singola riga. Se le impostazioni o i filtri del gruppo per mostrano più righe o se sono state impostate più query per il widget, l'opzione di visualizzazione dei limiti previsti verrà disattivata.

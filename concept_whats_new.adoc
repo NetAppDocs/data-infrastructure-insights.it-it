@@ -24,6 +24,49 @@ Per risolvere i problemi di prestazioni con i widget grafico linea o spline, è 
 
 L'apprendimento automatico DII con l'analisi stagionale dei dati stabilisce soglie intelligenti basate su modelli storici. Quando le metriche si discostano dagli intervalli previsti, il sistema le evidenzia come anomalie, consentendo una rapida identificazione dei problemi, riducendo il tempo medio di risoluzione e risolvendo i problemi prima che abbiano un impatto sulle operazioni.
 
+image:expected_bounds_example_showing_spike.png["limiti previsti con picco sopra, larghezza=300"]
+
+
+
+=== Ottimizzazione dei costi di VMware con il supporto per lo storage VSAN
+
+La funzionalità di ottimizzazione delle VM ora include il supporto per ambienti VMware con storage VSAN. Oltre all'utilizzo di CPU e memoria, l'analisi prende in considerazione lo storage VSAN locale per ottenere consigli sulla bonifica, contribuendo a ridurre ulteriormente i costi di licenza.
+
+image:vm_optimization_with_vsan.png["Esempio di ottimizzazione VM con VSAN"]
+
+
+
+=== Avvisa i dettagli a portata di mano
+
+L'analisi degli avvisi è più semplice che mai con il nuovo pannello scorrevole. Selezionare un avviso per visualizzare i dettagli dell'avviso e passare facilmente da un avviso all'altro senza perdere la posizione durante l'analisi dei problemi.
+
+image:alert_slideout_example.png["Scorrimento degli avvisi per una navigazione più semplice"]
+
+
+
+=== Esportazione asincrona delle analisi forensi di workload Security
+
+L'esportazione dei dati forensi può richiedere da pochi secondi a un certo numero di ore, a seconda della quantità di dati da esportare. Workload Security esporta i dati in modo asincrono, in modo da poter continuare a lavorare durante la compilazione del file .CSV.
+
+
+
+=== Notifiche Data Collector raggruppate in regole
+
+Se sono state configurate notifiche sui data collector, a partire da aprile 15 tali notifiche verranno gestite in regole di notifica, con un'unica regola per i raccoglitori che hanno destinatari identici. I collettori con destinatari diversi avranno regole separate. Le notifiche di Collector esistenti vengono migrate alle regole di notifica.
+
+'''
+
+
+== Aprile 2025
+
+
+
+=== Limiti di anomalia basati su ML nei widget di linea per la risoluzione proattiva dei problemi
+
+Per risolvere i problemi di prestazioni con i widget grafico linea o spline, è ora possibile visualizzare i limiti di comportamento previsti insieme alle metriche effettive, consentendo di distinguere tra i trend metrici normali e anomali.
+
+L'apprendimento automatico DII con l'analisi stagionale dei dati stabilisce soglie intelligenti basate su modelli storici. Quando le metriche si discostano dagli intervalli previsti, il sistema le evidenzia come anomalie, consentendo una rapida identificazione dei problemi, riducendo il tempo medio di risoluzione e risolvendo i problemi prima che abbiano un impatto sulle operazioni.
+
 image:expected_bounds_example_showing_spike.png["limiti previsti con picco sopra, larghezza=400"]
 
 
