@@ -131,6 +131,13 @@ Convalidare l'account utente e la password ZFS
 
 
  a| 
+"Richiesta non riuscita con stato 404 \https://.....:215/api/access/v1"
+ a| 
+L'array ZFS potrebbe essere troppo vecchio per avere il supporto dell'API REST. AK 2013.1.3.0 è stata la prima release del sistema operativo ZFS compatibile con le API REST e non tutti gli appliance ZFS possono essere aggiornati.
+
+
+
+ a| 
 "Errore di configurazione" con messaggio di errore "Servizio REST disattivato"
  a| 
 Verificare che il servizio REST sia attivato su questo dispositivo.

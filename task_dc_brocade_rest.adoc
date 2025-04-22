@@ -22,6 +22,8 @@ Verrà creato un utente "NetAppCIUser" con una password di "Qwerty!". Questo ute
 
 Per impostazione predefinita, questo raccoglitore tenterà di scoprire tutti i dispositivi FOS che fanno parte di tutti i tessuti di cui fa parte lo switch.
 
+Nota: L'utente di sola lettura predefinito di FOS "utente" NON dispone delle autorizzazioni di visualizzazione su tutti i fabric virtuali, né delle autorizzazioni "ruolo telaio". Ciò significa che l'utilizzo di Data Infrastructure Insights da parte dell'utente avrà scarse probabilità di successo, che deve comprendere sia la configurazione fisica che logica del dispositivo FOS.
+
 
 
 == Terminologia
