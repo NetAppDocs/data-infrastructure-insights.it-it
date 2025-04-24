@@ -7,6 +7,10 @@ keywords: dashboard, widget, custom, view, data
 = Panoramica delle dashboard
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -14,8 +18,6 @@ Data Infrastructure Insights fornisce agli utenti la flessibilità necessaria pe
 
 
 IMPORTANT: Gli esempi in queste sezioni hanno solo scopo esplicativo e non coprono tutti gli scenari possibili. I concetti e le fasi qui descritti possono essere utilizzati per creare dashboard personalizzati per evidenziare i dati specifici per le esigenze specifiche.
-
-sommario:[]
 
 
 
@@ -34,17 +36,15 @@ sommario:[]
 La schermata Dashboard dispone di diversi comandi:
 
 * *Time selector*: Consente di visualizzare i dati della dashboard per un intervallo di tempo compreso tra gli ultimi 15 minuti e gli ultimi 30 giorni o un intervallo di tempo personalizzato fino a 31 giorni. È possibile scegliere di ignorare questo intervallo di tempo globale nei singoli widget.
-* Pulsante *Edit* (Modifica): Selezionando questa opzione si attiva la modalità Edit (Modifica), che consente di apportare modifiche alla dashboard. Per impostazione predefinita, vengono aperti nuovi dashboard in modalità di modifica.
 * Pulsante *Save* (Salva): Consente di salvare o eliminare la dashboard.
 +
-È possibile rinominare la dashboard corrente digitando un nuovo nome prima di fare clic su *Salva*.
+È possibile rinominare il dashboard corrente facendo clic su *Rinomina* dal menu Salva.
 
-
-
-* *Aggiungi widget*, che consente di aggiungere un numero qualsiasi di tabelle, grafici o altri widget alla dashboard.
+* Pulsante *+ Aggiungi widget*, che consente di aggiungere un numero qualsiasi di tabelle, grafici o altri widget al dashboard.
 +
 I widget possono essere ridimensionati e ricollocati in diverse posizioni all'interno della dashboard, per offrire la migliore visualizzazione dei dati in base alle esigenze attuali.
 
+* Pulsante *+ Aggiungi variabile*, che consente di utilizzare le variabili per filtrare attivamente i dati del dashboard.
 
 
 
@@ -88,6 +88,11 @@ image:PieChart.png["Grafico a torta"]
 * *Widget Nota*: Fino a 1000 caratteri di testo libero.
 +
 image:NoteWidget.png["Nota Widget"]
+
+* *Grafico a barre del tempo*: Visualizza i dati log o metrici nel tempo.
+
+
+image:time_bar_chart.png["esempio di grafico a barre del tempo che mostra i dati del registro, larghezza=200"]
 
 * *Alerts Table*: Visualizza fino agli ultimi 1,000 avvisi.
 

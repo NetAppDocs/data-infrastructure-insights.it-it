@@ -348,6 +348,43 @@ security login rest-role create -role csrestrole -api /api/cluster/jobs/ -access
 ....
 
 
+== Migrazione di Collector
+
+È possibile eseguire facilmente la migrazione di un agente di raccolta della protezione del carico di lavoro da un agente all'altro, consentendo un efficiente bilanciamento del carico dei collettori tra gli agenti.
+
+
+
+=== Prerequisiti
+
+* L'agente di origine deve essere in stato _connesso_.
+* Lo stato di Collector da migrare deve essere _in esecuzione_.
+
+
+Nota:
+
+* La migrazione è supportata sia per i collettori di dati che per quelli di directory utente.
+* La migrazione di un collettore non è supportata per i tenant gestiti manualmente.
+
+
+
+
+=== Migrazione di Collector
+
+Per migrare un raccoglitore, attenersi alla seguente procedura:
+
+. Vai alla pagina "Modifica Collector".
+. Selezionare un agente di destinazione dall'elenco a discesa.
+. Fare clic sul pulsante "Salva Collector".
+
+
+Workload Security elaborerà la richiesta. Una volta eseguita la migrazione, l'utente verrà reindirizzato alla pagina dell'elenco dei collettori. In caso di errore, nella pagina di modifica verrà visualizzato un messaggio appropriato.
+
+Nota: Tutte le modifiche apportate in precedenza alla configurazione nella pagina "Edit Collector" (Modifica Collector) rimarranno applicate quando il Collector viene migrato correttamente nell'agente di destinazione.
+
+image:ws_migrate_collector_to_another_agent.png["migrare un agente di raccolta scegliendo un altro agente"]
+
+
+
 == Risoluzione dei problemi
 
 Vedere la link:troubleshooting_collector_svm.html["Risoluzione dei problemi di SVM Collector"] pagina per suggerimenti sulla risoluzione dei problemi.
