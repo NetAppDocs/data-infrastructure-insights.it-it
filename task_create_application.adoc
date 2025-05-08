@@ -12,9 +12,6 @@ keywords: application, create application,
 [role="lead"]
 Per tenere traccia dei dati associati ad applicazioni specifiche in esecuzione sul tenant, è possibile definire le applicazioni in Data Infrastructure Insights.
 
-.Prima di iniziare
-Se si desidera associare l'applicazione a un'entità aziendale, è necessario creare l'entità aziendale prima di definire l'applicazione.
-
 .A proposito di questa attività
 Data Infrastructure Insights ti consente di tenere traccia dei dati dagli asset associati alle applicazioni per elementi come l'utilizzo o il reporting dei costi.
 

@@ -6361,7 +6361,6 @@
   <block id="12deeaac5f633c54b730f8c247dbf7e0" category="paragraph">Le versioni più recenti dell'operatore di monitoraggio possono essere disinstallate con i seguenti comandi:</block>
   <block id="aee5f180cc531b30ec6cf8dcf509d9b8" category="paragraph">Se l'operatore di monitoraggio è stato distribuito nel proprio spazio dei nomi dedicato, eliminare lo spazio dei nomi:</block>
   <block id="97e76f0c81cc1c26b3d8ffe0d972c5af" category="paragraph">Se il primo comando restituisce "Nessuna risorsa trovata", attenersi alle istruzioni riportate di seguito per disinstallare le versioni precedenti dell'operatore di monitoraggio.</block>
-  <block id="0b14d0fbc4256c7ec7c3bb39b2c28854" category="paragraph">Eseguire ciascuno dei seguenti comandi nell'ordine indicato. A seconda dell'installazione corrente, alcuni di questi comandi potrebbero restituire i messaggi ‘oggetto non trovato’. Questi messaggi possono essere ignorati in modo sicuro.</block>
   <block id="82a8cca794947463478c2f08445a8ff4" category="paragraph">Se in precedenza è stato creato un vincolo del contesto di protezione:</block>
   <block id="a945216a5c61e628c867b8948c797454" category="section-title">A proposito di Kube-state-metrics</block>
   <block id="951a50d1b55837ddb5ff4cb5af4ebc8a" category="paragraph">NetApp Kubernetes Monitoring Operator installa le proprie metriche di stato kube per evitare conflitti con altre istanze.</block>
@@ -7238,7 +7237,6 @@
   <block id="9931bdf1120e743a2d938e061f7df898" category="paragraph">Viene visualizzato un messaggio di conferma che richiede se si desidera eliminare la regola.</block>
   <block id="b101d3b5c8c4309f4cffa3adfd387b6b" category="list-text">Fare clic su *OK*</block>
   <block id="e42dae64f8e80d611352315992a2460d" category="doc">Creazione di applicazioni</block>
-  <block id="598c4639acaf0f3c5a419f9cf865ef56" category="paragraph">Se si desidera associare l'applicazione a un'entità aziendale, è necessario creare l'entità aziendale prima di definire l'applicazione.</block>
   <block id="ba52eab802a385ced7d6e9782614bf0b" category="paragraph">Data Infrastructure Insights ti consente di tenere traccia dei dati dagli asset associati alle applicazioni per elementi come l'utilizzo o il reporting dei costi.</block>
   <block id="91ee28fc3faa982ecdc71598fe7ce8b9" category="list-text">Nel menu Data Infrastructure Insights (informazioni sull'infrastruttura dati), fare clic su *Observability &gt; Enrich &gt; Applications* (osservabilità &gt; arricchimento &gt; applicazioni). Selezionare</block>
   <block id="8358341ae527ee11b5b1dc8e8f22edea" category="paragraph">Viene visualizzata la finestra di dialogo Add Application (Aggiungi applicazione).</block>
@@ -12379,4 +12377,5 @@
   <block id="839fd302fc2dc5dee66803e94e9f95dc" category="paragraph">Assicurarsi che non vi siano errori correlati a fpolicy.</block>
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*Problema:* il data collector passa allo stato di errore e poi passa allo stato di FUNZIONAMENTO dopo qualche tempo, quindi torna a errore. Questo ciclo si ripete. *Prova questo:* questo accade in genere nel seguente scenario:</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*Problema:* Data Collector visualizza il messaggio di errore: “Errore: Impossibile determinare lo stato di salute del raccoglitore entro 2 tentativi, provare a riavviare il raccoglitore di nuovo (Codice errore: AGENT008)”. *Provare questo:*</block>
+  <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">Eseguire ciascuno dei seguenti comandi nell'ordine indicato. A seconda dell'installazione corrente, alcuni di questi comandi potrebbero restituire messaggi "Object Not Found" (oggetto non trovato). Questi messaggi possono essere ignorati in modo sicuro.</block>
 </blocks>
