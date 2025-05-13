@@ -1962,8 +1962,6 @@
   <block id="f057d707b9d5c17f0fad56f8204f6bff" category="section-title">Misurazione della sicurezza del carico di lavoro</block>
   <block id="c3ef097c271469a3ca9718d35396087c" category="paragraph">La sicurezza del carico di lavoro viene misurata dal cluster utilizzando lo stesso approccio della misurazione dell'osservabilità.</block>
   <block id="3943920606f23b23925f15408e26cae2" category="paragraph">È possibile visualizzare l'utilizzo della protezione del carico di lavoro nella pagina *Admin &gt; Subscription* della scheda *sicurezza del carico di lavoro*.</block>
-  <block id="36e75837cd661882faf4ce93d35cafea" category="inline-image-macro">"Admin &amp;gt; Subscription &amp;gt; scheda sicurezza workload che mostra conteggi nodi di fascia alta, media e entry-level"</block>
-  <block id="78770d4128ce656a56bd8e8ecd580a0e" category="paragraph"><block ref="9d3e296bb7e7c4cf7ec09d1ec6e96740" category="inline-image-macro-rx" type="image"></block></block>
   <block id="daba1c6ff8590913bcb10d43d3bfcf13" category="admonition">Gli abbonamenti a sicurezza del carico di lavoro esistenti hanno l'utilizzo delle UM modificato in modo che l'utilizzo del nodo non utilizzi le unità gestite. Data Infrastructure Insights misura l'utilizzo per garantire la conformità con l'utilizzo concesso in licenza.</block>
   <block id="c015ba02347af3d8c00ede570637622a" category="section-title">Come posso iscrivermi?</block>
   <block id="99d34ca2583ae7363bd4e07f9b2d98cc" category="inline-xref">iscriviti in autonomia</block>
@@ -12378,4 +12376,6 @@
   <block id="6e393b37e77fb2093e24fb776c6faf55" category="paragraph">*Problema:* il data collector passa allo stato di errore e poi passa allo stato di FUNZIONAMENTO dopo qualche tempo, quindi torna a errore. Questo ciclo si ripete. *Prova questo:* questo accade in genere nel seguente scenario:</block>
   <block id="8202c6a36256606217ad100be587d707" category="paragraph">*Problema:* Data Collector visualizza il messaggio di errore: “Errore: Impossibile determinare lo stato di salute del raccoglitore entro 2 tentativi, provare a riavviare il raccoglitore di nuovo (Codice errore: AGENT008)”. *Provare questo:*</block>
   <block id="c073fe7a74166cd5d73ec57ce2d1f76e" category="paragraph">Eseguire ciascuno dei seguenti comandi nell'ordine indicato. A seconda dell'installazione corrente, alcuni di questi comandi potrebbero restituire messaggi "Object Not Found" (oggetto non trovato). Questi messaggi possono essere ignorati in modo sicuro.</block>
+  <block id="d873c97dd6dca1c7bd30ed50b82bee0f" category="inline-image-macro">Admin &amp;gt; Subscription &amp;gt; scheda workload Security che mostra i conteggi dei nodi high-end, mid-range e entry-level</block>
+  <block id="a2efde4371837d491f7f2d093cb687a2" category="paragraph"><block ref="6239b49ee0db956af965dd1ce0c92bfa" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

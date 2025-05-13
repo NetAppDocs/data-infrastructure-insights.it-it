@@ -159,7 +159,7 @@ La sicurezza del carico di lavoro viene misurata dal cluster utilizzando lo stes
 
 È possibile visualizzare l'utilizzo della protezione del carico di lavoro nella pagina *Admin > Subscription* della scheda *sicurezza del carico di lavoro*.
 
-image:ws_metering_example_page.png["Admin > Subscription > scheda sicurezza workload che mostra conteggi nodi di fascia alta, media e entry-level"]
+image:ws_metering_example_page.png["Admin > Subscription > scheda workload Security che mostra i conteggi dei nodi high-end, mid-range e entry-level"]
 
 
 NOTE: Gli abbonamenti a sicurezza del carico di lavoro esistenti hanno l'utilizzo delle UM modificato in modo che l'utilizzo del nodo non utilizzi le unità gestite. Data Infrastructure Insights misura l'utilizzo per garantire la conformità con l'utilizzo concesso in licenza.
