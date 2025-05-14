@@ -1,50 +1,50 @@
 ---
 sidebar: sidebar 
 permalink: concept_activeiq.html 
-keywords: Active IQ, risks, svm, AIQ, risk 
-summary: Data Infrastructure Insights raccoglie i dati sui rischi da NetApp Active IQ 
+keywords: Active IQ, risks, svm, AIQ, risk, ADigital Advisor 
+summary: 'Informazioni sull"infrastruttura dati raccoglie i dati di rischio dal consulente digitale NetApp Active IQ (noto anche come consulente digitale)' 
 ---
-= Active IQ
+= Consulente digitale Active IQ
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-NetApp link:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Active IQ"]fornisce ai clienti NetApp una serie di visualizzazioni, analisi e altri servizi di supporto per i loro sistemi hardware/software. I dati riportati da Active IQ possono migliorare la risoluzione dei problemi di sistema e fornire informazioni sull'ottimizzazione e sull'analisi predittiva dei dispositivi.
+NetApp link:https://www.netapp.com/us/products/data-infrastructure-management/active-iq.aspx["Consulente digitale Active IQ"](nota anche come consulente digitale) fornisce ai clienti NetApp una serie di visualizzazioni, analisi e altri servizi di supporto per i loro sistemi hardware/software. I dati riportati da Digital Advisor possono migliorare la risoluzione dei problemi del sistema e fornire informazioni dettagliate sull'ottimizzazione e l'analisi predittiva relativa ai dispositivi.
 
-Informazioni sull'infrastruttura dati raccoglie i *rischi* per qualsiasi sistema storage Data ONTAP in cluster NetApp monitorato e segnalato da Active IQ. I rischi segnalati per i sistemi storage vengono raccolti automaticamente da Data Infrastructure Insights come parte della raccolta di dati da tali dispositivi. È necessario aggiungere il data collector appropriato a Data Infrastructure Insights per raccogliere le informazioni sui rischi Active IQ.
+Le informazioni sull'infrastruttura dati raccolgono *rischi* per qualsiasi sistema storage Data ONTAP in cluster NetApp monitorato e segnalato dal consulente digitale. I rischi segnalati per i sistemi storage vengono raccolti automaticamente da Data Infrastructure Insights come parte della raccolta di dati da tali dispositivi. È necessario aggiungere il data collector appropriato a Data Infrastructure Insights per raccogliere le informazioni sui rischi di Digital Advisor.
 
-Data Infrastructure Insights non mostrerà i dati di rischio per i sistemi ONTAP che non sono monitorati e segnalati da Active IQ.
+Informazioni sull'infrastruttura dati non mostrano i dati di rischio per i sistemi ONTAP che non sono monitorati e segnalati dal consulente digitale.
 
-I rischi riportati sono mostrati in Data Infrastructure Insights, nelle landing page delle risorse _storage_ e _nodo storage_, nella tabella "rischi". La tabella mostra i dettagli del rischio, la categoria di rischio e il potenziale impatto del rischio e fornisce anche un link alla pagina Active IQ che riepiloga tutti i rischi per il nodo di storage (è richiesto l'accesso all'account di supporto NetApp).
+I rischi riportati sono mostrati in Data Infrastructure Insights, nelle landing page delle risorse _storage_ e _nodo storage_, nella tabella "rischi". La tabella mostra i dettagli del rischio, la categoria di rischio e l'impatto potenziale del rischio e fornisce inoltre un collegamento alla pagina di consulente digitale che riepiloga tutti i rischi per il nodo storage (è necessario l'accesso all'account di supporto NetApp).
 
-image:AIQ_Risks_Table_Example.png["Tabella dei rischi di Active IQ"]
+image:AIQ_Risks_Table_Example.png["Tabella dei rischi di Digital Advisor"]
 
-Il numero di rischi segnalati viene visualizzato anche nel widget Riepilogo della landing page, con un link alla pagina Active IQ appropriata. In una landing page di _storage_, il conteggio è una somma dei rischi di tutti i nodi di storage sottostanti.
+Nel widget Riepilogo della landing page è indicato anche un numero di rischi segnalati con un link alla pagina di Digital Advisor appropriata. In una landing page di _storage_, il conteggio è una somma dei rischi di tutti i nodi di storage sottostanti.
 
 image:AIQ_Summary_Example.png["Riepilogo della pagina di storage"]
 
 
 
-== Apertura della pagina Active IQ
+== Apertura della pagina Digital Advisor
 
-Quando si fa clic sul collegamento a una pagina Active IQ, se non si è ancora effettuato l'accesso all'account Active IQ, attenersi alla seguente procedura per visualizzare la pagina Active IQ relativa al nodo di storage.
+Se si fa clic sul collegamento a una pagina di Digital Advisor, se al momento non si è effettuato l'accesso all'account di Digital Advisor, è necessario effettuare le seguenti operazioni per visualizzare la pagina di Digital Advisor relativa al nodo di archiviazione.
 
-. Nella tabella rischi o widget Riepilogo approfondimenti sull'infrastruttura dati, fare clic sul collegamento "Active IQ".
-. Accedi al tuo account NetApp Support. Viene visualizzata direttamente la pagina del nodo di storage in Active IQ.
+. Nella tabella rischi o widget di riepilogo approfondimenti sull'infrastruttura dati, fare clic sul collegamento "Consulente digitale".
+. Accedi al tuo account NetApp Support. Verrai indirizzato direttamente alla pagina del nodo storage in Digital Advisor.
 
 
 
 
 == Query per i rischi
 
-In Data Infrastructure Insights, è possibile aggiungere la colonna *monitoring.count* a una query del nodo di archiviazione o di archiviazione. Se il risultato restituito include sistemi storage monitorati con Active IQ, la colonna monitoring.count visualizza il numero di rischi per il sistema o il nodo storage.
+In Data Infrastructure Insights, è possibile aggiungere la colonna *monitoring.count* a una query del nodo di archiviazione o di archiviazione. Se il risultato restituito include i sistemi di storage monitorati con Digital Advisor, la colonna monitoring.count visualizza il numero di rischi per il sistema storage o il nodo.
 
 
 
 == Dashboard
 
-È possibile creare widget (ad esempio grafico a torta, widget tabella, barra, colonna, grafico a dispersione, E single value widgets) per visualizzare i rischi di oggetti per i nodi storage e storage per i sistemi NetApp Clustered Data ONTAP monitorati da Active IQ. È possibile selezionare "rischi oggetto" come colonna o metrica in questi widget, dove Storage o Storage Node sono l'oggetto di interesse.
+È possibile creare widget (ad es. Grafico a torta, widget per tabella, barra, colonna, grafico a dispersione e widget a valore singolo) per visualizzare i rischi degli oggetti per i nodi di storage e di storage per i sistemi NetApp Clustered Data ONTAP monitorati da Digital Advisor. È possibile selezionare "rischi oggetto" come colonna o metrica in questi widget, dove Storage o Storage Node sono l'oggetto di interesse.
 
 image:ObjectRiskWidgets.png["Rischi per gli oggetti nei widget"]

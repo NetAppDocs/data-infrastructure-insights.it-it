@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: ws_webhook_example_pagerduty.html 
+keywords: webhook, notification, PagerDuty, integration 
+summary: Creare un webhook per la sicurezza dei workload per PagerDuty per avvisare sulla sicurezza 
+---
+= Esempio di Webhook sulla sicurezza del carico di lavoro per PagerDuty
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I webhook consentono agli utenti di inviare notifiche di avviso a varie applicazioni utilizzando un canale webhook personalizzato. In questa pagina viene fornito un esempio di configurazione di webhook per PagerDuty.
+
+
+NOTE: Questa pagina fa riferimento alle istruzioni di terze parti, che sono soggette a modifiche. Per le informazioni più aggiornate, fare riferimento alla link:https://support.pagerduty.com/docs/services-and-integrations["Documentazione PagerDuty"].
+
+
+
+== Setup PagerDuty:
+
+. In PagerDuty, accedere a *servizi > Directory servizi* e fare clic sul pulsante *+nuovo servizio*.
+. Inserisci un _Nome_ e seleziona _utilizza direttamente la nostra API_. Selezionare _Aggiungi servizio_.
++
+image:Webhooks_PagerDutyScreen1.png["Schermata Pagerduty"]
+
+. Selezionare la scheda _integrazioni_ per visualizzare la *chiave di integrazione*. Questa chiave è necessaria quando si crea il webhook informazioni sull'infrastruttura dati riportato di seguito.
+
+
+. Accedere a *incidenti* o *servizi* per visualizzare gli avvisi.
++
+image:ws_pagerduty_incidents_list.png["esempio di elenco incidenti pagerduty, width=700"]
+
+
+
+
+
+== Creare il Webhook PagerDuty per la sicurezza del workload:
+
+* Accedere a Admin > Notifiche e selezionare la scheda _workload Security webhook_. Selezionare "+ Webhook" per creare un nuovo webhook.
+* Dare al webhook un nome significativo.
+* Nel menu a discesa _tipo di modello_, selezionate _PagerDuty Trigger_.
+* Creare un segreto di parametro personalizzato denominato _routingKey_ e impostare il valore sulla chiave di integrazione di PagerDuty creata in precedenza.
+
+
+image:Webhooks_Custom_Secret_Routing_Key.png["Impostazione della chiave di routing, width=300"]
+
+image:ws_webhook_pagerduty_example.png["esempio di webhook di sicurezza del carico di lavoro pagerduty, larghezza=400"]
+
+
+
+== Notifiche tramite Webhook
+
+* Per notificare gli eventi tramite webhook, accedere a _sicurezza del carico di lavoro > Criteri_. Selezionare _+Attack Policy_ o _+Warning Policy_.
+* Immettere un nome di policy significativo.
+* Selezionare i tipi di attacco richiesti, i dispositivi a cui il criterio deve essere collegato e le azioni richieste.
+* Nel menu a discesa _Webhook Notifications_, seleziona i webhook PagerDuty richiesti. Salvare il criterio.
+
+
+Nota: I webhook possono anche essere allegati alle policy esistenti modificandole.
+
+image:ws_add_attack_policy.png["finestra di dialogo aggiungi criteri di attacco che mostra webhook, width=400"]
