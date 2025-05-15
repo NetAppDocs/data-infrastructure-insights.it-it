@@ -18,7 +18,7 @@ Le policy di risposta attivano azioni come l'esecuzione di uno snapshot o la lim
 
 È possibile impostare criteri su dispositivi specifici o su tutti i dispositivi. Per impostare un criterio di risposta, selezionare *Admin > Automated Response Policies* (Amministrazione > Criteri di risposta automatici) e fare clic sul pulsante *+Policy* appropriato. È possibile creare policy per gli attacchi o per gli avvisi.
 
-image:Automated_Response_Screenshot.png["Creare una policy di attacco"]
+image:ws_add_attack_policy.png["Aggiungi una finestra di dialogo Criteri di attacco che mostra il menu a discesa webhook"]
 
 È necessario salvare il criterio con un nome univoco.
 
@@ -27,6 +27,8 @@ Per disattivare un'azione di risposta automatica (ad esempio, Take Snapshot), è
 Quando viene attivato un avviso relativo ai dispositivi specificati (o a tutti i dispositivi, se selezionati), la policy di risposta automatica esegue un'istantanea dei dati. È possibile visualizzare lo stato dell'istantanea sul link:cs_alert_data.html#the-alert-details-page["Pagina dei dettagli degli avvisi"].
 
 Vedere la link:cs_restrict_user_access.html["Limitare l'accesso dell'utente"] pagina per ulteriori dettagli su come limitare l'accesso degli utenti tramite IP.
+
+È possibile allegare uno o più webhook a un criterio per ricevere una notifica quando viene creato un avviso e viene intrapresa un'azione. Si consiglia di aggiungere non più di 10 webhook a un criterio.tenere presente che se un criterio viene messo in pausa, le notifiche webhook non verranno attivate.
 
 È possibile modificare o sospendere una policy di risposta automatica scegliendo l'opzione nel menu a discesa della policy.
 

@@ -105,12 +105,22 @@ sidebar:
         url: "/task_create_monitor.html"
       - title: Visualizzazione e gestione degli avvisi
         url: "/task_view_and_manage_alerts.html"
-      - title: Configurazione dei destinatari delle notifiche
-        url: "/concept_notifications_email.html"
       - title: Monitor definiti dal sistema
         url: "/task_system_monitors.html"
-      - title: Notifica Webhook
-        url: "/task_create_webhook.html"
+      - title: Configurazione dei destinatari delle notifiche
+        url: "/concept_notifications_email.html"
+      - title: Notifiche Webhook
+        entries:
+        - title: Configurazione dei webhook
+          url: "/task_create_webhook.html"
+        - title: Esempio di Webhook - discordanza
+          url: "/task_webhook_example_discord.html"
+        - title: Esempio di Webhook - PagerDuty
+          url: "/task_webhook_example_pagerduty.html"
+        - title: Esempio di Webhook - Slack
+          url: "/task_webhook_example_slack.html"
+        - title: Esempio di Webhook - squadre
+          url: "/task_webhook_example_teams.html"
     - title: Utilizzo delle annotazioni
       entries:
       - title: Definizione delle annotazioni
@@ -263,8 +273,20 @@ sidebar:
       url: "/cs_restrict_user_access.html"
     - title: Simulazione di un attacco ransomware
       url: "/concept_cs_attack_simulator.html"
-    - title: Notifiche
+    - title: Notifiche e-mail
       url: "/cs_notifications_email.html"
+    - title: Notifiche Webhook
+      entries:
+      - title: Creazione di webhook
+        url: "/ws_notifications_using_webhooks.html"
+      - title: Esempio di discordino
+        url: "/ws_webhook_example_discord.html"
+      - title: Esempio di Webhook PagerDuty
+        url: "/ws_webhook_example_pagerduty.html"
+      - title: Esempio di slack Webhook
+        url: "/ws_webhook_example_slack.html"
+      - title: Esempio di Team Webhook
+        url: "/ws_webhook_example_teams.html"
     - title: API per la sicurezza del carico di lavoro
       url: "/concept_cs_api.html"
     - title: Risoluzione dei problemi di SVM Collector

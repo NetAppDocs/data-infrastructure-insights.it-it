@@ -28,7 +28,7 @@ NOTE: Questa pagina fa riferimento alle istruzioni di terze parti, che sono sogg
 +
 image:Webhooks_PagerDutyScreen1.png["Schermata Pagerduty"]
 
-. Selezionare la scheda _integrazioni_ per visualizzare la *chiave di integrazione*. Questa chiave è necessaria quando si crea il webhook informazioni sull'infrastruttura dati riportato di seguito.
+. Selezionare la scheda _integrazioni_ per visualizzare la *chiave di integrazione*. Questa chiave è necessaria quando si crea il webhook sulla sicurezza del carico di lavoro riportato di seguito.
 
 
 . Accedere a *incidenti* o *servizi* per visualizzare gli avvisi.

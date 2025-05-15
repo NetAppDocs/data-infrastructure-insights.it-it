@@ -97,4 +97,10 @@ Qui troverai suggerimenti per la risoluzione dei problemi con Reporting.
 
 
 | Quando si pianifica l'invio di un report via email, il nome dell'utente che ha effettuato l'accesso viene precompilato nel campo "a" dell'email. Tuttavia, il nome è sotto forma di "firstname lastname" (nome, spazio, cognome). Poiché non si tratta di un indirizzo e-mail valido, l'e-mail non viene inviata quando viene eseguito il report pianificato. | Quando si pianifica l'invio del report via e-mail, cancellare il nome precompilato e inserire un indirizzo e-mail valido e correttamente formattato nel campo "a". 
+
+
+| Il report pianificato viene inviato tramite e-mail, ma non è possibile accedervi se l'origine è dalla cartella "i miei contenuti". | Per evitare questo problema, il report o la visualizzazione del report devono essere salvati nella cartella "Team Content > Custom Reports - xxxxxx" e nella pianificazione creata da quella versione salvata. La cartella "Report personalizzati - xxxxxx" è visibile a tutti gli utenti del tenant. 
+
+
+| Quando si salva un processo, la cartella potrebbe mostrare "contenuto del team" con l'elenco dei contenuti da "Report personalizzati - xxxxxx", tuttavia non è possibile salvare il processo in questa posizione perché Cognos ritiene che questa sia la cartella "contenuti del team" in cui non si dispone dell'accesso per la scrittura. | La soluzione consiste nel creare una nuova cartella con un nome univoco (ad esempio "NewFolder") e salvarla, oppure salvare in "My Content" (contenuto personale) e quindi copiare/spostare in "Custom Reports - xxxxxx" (rapporti personalizzati - xxxxxx). 
 |===
