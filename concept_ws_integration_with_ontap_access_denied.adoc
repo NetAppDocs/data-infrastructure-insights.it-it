@@ -7,6 +7,10 @@ keywords: ransomware, ARP, Protection, Security, access
 = Integrazione con accesso ONTAP negato
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -14,7 +18,9 @@ La funzionalità accesso negato di ONTAP utilizza l'analisi dei carichi di lavor
 
 Data Infrastructure Insights workload Security si integra con ONTAP per ricevere eventi di accesso negato e fornire un livello di risposta automatico e analitico aggiuntivo.
 
-Prerequisiti
+
+
+== Prerequisiti
 
 * Versione ONTAP minima: 9.13.0.
 * Un amministratore della protezione del carico di lavoro deve attivare la funzione accesso negato durante l'aggiunta di un nuovo agente di raccolta o la modifica di un agente di raccolta esistente, selezionando la casella di controllo _Monitor Access Denied Events_ in Configurazione avanzata.
@@ -30,20 +36,12 @@ Se Data Collector viene aggiunto utilizzando le credenziali di amministrazione d
 
 Se il servizio di raccolta viene aggiunto utilizzando un utente personalizzato (ad esempio, _csuser_) con autorizzazioni assegnate all'utente, attenersi alla procedura riportata di seguito per assegnare a sicurezza del carico di lavoro l'autorizzazione necessaria per registrare gli eventi di accesso negato con ONTAP.
 
-Per csuser con credenziali _cluster_, eseguire i seguenti comandi dalla riga di comando di ONTAP. Si noti che _csrestrole_ è un ruolo personalizzato e _csuser_ è un utente personalizzato di ONTAP.
+Per csuser con credenziali _cluster_, eseguire i seguenti comandi dalla riga di comando di ONTAP. Tenere presente che questa autorizzazione potrebbe già esistere.
 
-[listing]
-----
- security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <cluster_name>
- security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole
-----
-Per csuser con credenziali _SVM_, eseguire i seguenti comandi dalla riga di comando di ONTAP:
+ security login role create -role csrole -cmddirname "vserver fpolicy" -access all
+Per csuser con credenziali _SVM_, eseguire i seguenti comandi dalla riga di comando di ONTAP. Tenere presente che questa autorizzazione potrebbe già esistere.
 
-[listing]
-----
- security login rest-role create -role csrestrole -api /api/protocols/fpolicy -access all -vserver <svm_name>
- security login create -user-or-group-name csuser -application http -authmethod password -role csrestrole -vserver <svm_name>
-----
+ security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
 Ulteriori informazioni sulla configurazione di Altro link:task_add_collector_svm.html["Permessi ONTAP"].
 
 

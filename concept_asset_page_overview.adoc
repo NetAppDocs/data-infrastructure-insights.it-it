@@ -7,10 +7,72 @@ keywords: asset page, objects, landing page, Virtual machine, VM, Storage Virtua
 = Panoramica della pagina delle risorse
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Le pagine delle risorse riepilogano lo stato corrente di una risorsa e contengono collegamenti a informazioni aggiuntive sulla risorsa e sulle risorse correlate.
+Le landing page delle risorse riassumono lo stato corrente di una risorsa e contengono collegamenti a informazioni aggiuntive sulla risorsa e sulle relative risorse.
+
+Le landing page offrono una visualizzazione dell'oggetto in una singola pagina con informazioni in riepilogo, sulle performance e sulle risorse correlate.
+
+image:lp_new_design.png["Nuovo design LP"]
+
+
+
+== Sezione Riepilogo
+
+Nella parte superiore di una landing page si trova la sezione Expandable Summary (Riepilogo espansibile), che include diversi grafici a righe sparkline che visualizzano le tendenze dei dati recenti per elementi come la velocità di trasmissione o la latenza, nonché informazioni e attributi degli oggetti e qualsiasi monitor che potrebbe segnalare l'oggetto.
+
+Viene inoltre visualizzata la sezione Riepilogo che consente di modificare le annotazioni assegnate alla risorsa.
+
+
+
+== Sezione prestazioni
+
+La sezione Performance (prestazioni) visualizza i dati relativi alle prestazioni dell'oggetto. Selezionare _Impostazioni_ per aggiungere ulteriori grafici al display, come throughput o capacità, oppure selezionare risorse correlate o contributive per inserire i dati accanto all'oggetto. Anche i dispositivi che potrebbero causare conflitti verranno elencati nella sezione prestazioni. I dati nei grafici si aggiornano automaticamente quando i data collector effettuano il polling e vengono acquisiti i dati aggiornati.
+
+È possibile selezionare la <<performance-metric-definitions,metriche>> che si desidera visualizzare nel grafico delle prestazioni per il periodo di tempo selezionato. Fate clic sul menu a discesa _Impostazioni_ e scegliete una delle metriche elencate.
+
+Oltre ai dati sulle prestazioni, vengono visualizzati anche gli avvisi attivi nell'intervallo di tempo della pagina selezionato.
+
+image:lp_alert_example.png["esempio di avviso su una pagina di destinazione"]
+
+È possibile selezionare uno dei seguenti dispositivi elencati nella sezione Performance (prestazioni):
+
+* Correlato in alto
++
+Mostra le risorse con un'elevata correlazione (percentuale) con una o più metriche delle performance rispetto alla risorsa di base.
+
+* Principali collaboratori
++
+Mostra le risorse che contribuiscono (percentuale) alla risorsa di base.
+
+* Modifiche principali
++
+Asset correlati a modifiche recenti.
+
+* Carichi di lavoro contenuti
++
+Mostra le risorse che influiscono o sono influenzate da altre risorse condivise, come host, reti e storage. Queste risorse sono talvolta denominate risorse _greedy_ e _degradate_.
+
+
+
+
+
+== Sezione risorse aggiuntive
+
+La sezione risorse aggiuntive visualizza tabelle di dati per le risorse correlate al tipo di oggetto corrente. È possibile espandere e comprimere queste tabelle per concentrarsi su risorse specifiche. Selezionare l'icona dell'ingranaggio per visualizzare temporaneamente metriche o attributi aggiuntivi in una tabella.
+
+
+
+== Aggiungi widget personalizzati
+
+È possibile aggiungere widget personalizzati a qualsiasi pagina di risorse. I widget aggiunti verranno visualizzati nelle pagine delle risorse per tutti gli oggetti di quel tipo. Ad esempio, l'aggiunta di un widget personalizzato a una pagina di risorse di storage consente di visualizzare tale widget nelle pagine di risorse per tutte le risorse di storage.
+
+I widget personalizzati si trovano nella parte inferiore della pagina iniziale, sotto le sezioni prestazioni e risorse.
 
 
 
@@ -34,15 +96,15 @@ Data Infrastructure Insights fornisce pagine dedicate alle seguenti risorse:
 * Porta
 * Switch
 * Fabric
+* Host
+* Zona
 
 
 
 
 == Modifica dell'intervallo di tempo dei dati visualizzati
 
-Per impostazione predefinita, una pagina delle risorse visualizza le ultime 24 ore di dati; tuttavia, è possibile modificare il segmento di dati visualizzato selezionando un altro intervallo di tempo fisso o un intervallo di tempo personalizzato per visualizzare un numero inferiore o superiore di dati.
-
-È possibile modificare l'intervallo temporale dei dati visualizzati utilizzando un'opzione che si trova in ogni pagina di risorsa, indipendentemente dal tipo di risorsa. Per modificare l'intervallo di tempo, fare clic sull'intervallo di tempo visualizzato nella barra superiore e scegliere uno dei seguenti segmenti di tempo:
+Per impostazione predefinita, una pagina asset visualizza le ultime 3 ore di dati; tuttavia, è possibile modificare il segmento temporale dei dati visualizzati utilizzando un'opzione che si trova in ogni pagina asset, indipendentemente dal tipo di asset. Per modificare l'intervallo di tempo, fare clic sull'intervallo di tempo visualizzato nella barra superiore e scegliere uno dei seguenti segmenti di tempo:
 
 * Ultimi 15 minuti
 * Ultimi 30 minuti
@@ -55,16 +117,122 @@ Per impostazione predefinita, una pagina delle risorse visualizza le ultime 24 o
 * Ultimi 2 giorni
 * Ultimi 3 giorni
 * Ultimi 7 giorni
+* Ultimi 14 giorni
 * Ultimi 30 giorni
 * Intervallo di tempo personalizzato
 
 
 L'intervallo di tempo personalizzato consente di selezionare fino a 31 giorni consecutivi. È inoltre possibile impostare l'ora di inizio e l'ora di fine del giorno per questo intervallo. L'ora di inizio predefinita è alle 12:00:11:59 del primo giorno selezionato e l'ora di fine predefinita è alle 16:00 dell'ultimo giorno selezionato. Fare clic su Apply (Applica) per applicare l'intervallo di tempo personalizzato alla pagina delle risorse.
 
-Le informazioni contenute in una sezione di riepilogo delle pagine di asset, nonché in qualsiasi tabella o widget personalizzati sulla pagina, vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. La frequenza di aggiornamento corrente viene visualizzata nell'angolo in alto a destra della sezione Riepilogo e in tutte le tabelle o i widget pertinenti della pagina.
+Le informazioni sulla pagina vengono aggiornate automaticamente in base all'intervallo di tempo selezionato. La frequenza di aggiornamento corrente viene visualizzata nell'angolo in alto a destra della sezione Riepilogo e in tutte le tabelle o i widget pertinenti della pagina.
 
 
 
-== Aggiungi widget personalizzati
+== Definizioni delle metriche di prestazione
 
-È possibile aggiungere widget personalizzati a qualsiasi pagina di risorse. I widget aggiunti verranno visualizzati nelle pagine delle risorse per tutti gli oggetti di quel tipo. Ad esempio, l'aggiunta di un widget personalizzato a una pagina di risorse di storage consente di visualizzare tale widget nelle pagine di risorse per tutte le risorse di storage.
+La sezione prestazioni può visualizzare diverse metriche in base al periodo di tempo selezionato per la risorsa. Ogni metrica viene visualizzata nel proprio grafico delle performance. È possibile aggiungere o rimuovere metriche e risorse correlate dai grafici in base ai dati da visualizzare; le metriche disponibili variano in base al tipo di risorsa.
+
+|===
+
+
+| *Metrico* | *Descrizione* 
+
+
+| BB Credit zero Rx, Tx | Numero di volte in cui il conteggio del credito buffer-to-buffer di ricezione/trasmissione è passato a zero durante il periodo di campionamento. Questa metrica rappresenta il numero di volte in cui la porta collegata ha dovuto interrompere la trasmissione perché questa porta non era in credito da fornire. 
+
+
+| Durata zero credito BB Tx | Tempo in millisecondi durante il quale il credito BB trasmesso era pari a zero durante l'intervallo di campionamento. 
+
+
+| Percentuale di hit della cache (totale, lettura, scrittura) % | Percentuale di richieste che generano riscontri nella cache. Maggiore è il numero di accessi rispetto agli accessi al volume, migliori sono le performance. Questa colonna è vuota per gli array di storage che non raccolgono le informazioni di accesso alla cache. 
+
+
+| Utilizzo della cache (totale) % | Percentuale totale di richieste di cache che determinano accessi alla cache 
+
+
+| Scartati di classe 3 | Numero di scarti di trasporto dati Fibre Channel di classe 3. 
+
+
+| Utilizzo della CPU (totale) % | Quantità di risorse CPU utilizzate attivamente, come percentuale del totale disponibile (su tutte le CPU virtuali). 
+
+
+| Errore CRC | Numero di frame con CRC (Cyclic Redundancy Check) non validi rilevati dalla porta durante il periodo di campionamento 
+
+
+| Frame rate | Frame rate di trasmissione in frame al secondo (FPS) 
+
+
+| Dimensione media frame (Rx, Tx) | Rapporto tra traffico e dimensione del frame. Questa metrica consente di identificare la presenza di frame overhead nel fabric. 
+
+
+| Dimensione frame troppo lunga | Numero di frame di trasmissione dati Fibre Channel troppo lunghi. 
+
+
+| Dimensione del frame troppo breve | Numero di frame di trasmissione dati Fibre Channel troppo brevi. 
+
+
+| Densità i/o (totale, lettura, scrittura) | Numero di IOPS diviso per la capacità utilizzata (acquisita dall'ultimo sondaggio di inventario dell'origine dati) per il volume, il volume interno o l'elemento di storage. Misurato in numero di operazioni di i/o al secondo per TB. 
+
+
+| IOPS (totale, lettura, scrittura) | Numero di richieste di servizio i/o in lettura/scrittura che passano attraverso il canale i/o o una parte di tale canale per unità di tempo (misurato in i/o al secondo) 
+
+
+| Throughput IP (totale, lettura, scrittura) | Total (totale): Tasso aggregato alla quale i dati IP sono stati trasmessi e ricevuti in megabyte al secondo. 
+
+
+| Lettura: Throughput IP (ricezione): | Tasso medio di ricezione dei dati IP in megabyte al secondo. 
+
+
+| Scrittura: Throughput IP (trasmissione): | Tasso medio di trasmissione dei dati IP in megabyte al secondo. 
+
+
+| Latenza (totale, lettura, scrittura) | Latenza (R&W): Velocità con cui i dati vengono letti o scritti sulle macchine virtuali in un periodo di tempo fisso. Il valore viene misurato in megabyte al secondo. 
+
+
+| Latenza: | Tempo medio di risposta delle macchine virtuali in un archivio dati. 
+
+
+| Latenza massima: | Il tempo di risposta più elevato dalle macchine virtuali in un archivio dati. 
+
+
+| Errore di collegamento | Numero di errori di collegamento rilevati dalla porta durante il periodo di campionamento. 
+
+
+| Link RESET Rx, Tx | Numero di ripristini del collegamento di ricezione o trasmissione durante il periodo di campionamento. Questa metrica rappresenta il numero di ripristini del collegamento emessi dalla porta collegata a questa porta. 
+
+
+| Utilizzo della memoria (totale) % | Soglia per la memoria utilizzata dall'host. 
+
+
+| % Parziale R/W (totale) | Numero totale di volte in cui un'operazione di lettura/scrittura attraversa un limite di stripe su qualsiasi modulo di disco in un LUN RAID 5, RAID 1/0 o RAID 0 generalmente, gli attraversamenti di stripe non sono vantaggiosi, perché ciascuno richiede un i/O. aggiuntivo Una percentuale bassa indica una dimensione efficiente degli elementi di stripe e indica un allineamento non corretto di un volume (o di un LUN NetApp). Per CLARiiON, questo valore è il numero di passaggi di stripe diviso per il numero totale di IOPS. 
+
+
+| Errori di porta | Report degli errori di porta nel periodo di campionamento/intervallo di tempo specificato. 
+
+
+| Conteggio delle perdite di segnale | Numero di errori di perdita del segnale. Se si verifica un errore di perdita del segnale, non è presente alcun collegamento elettrico e si è verificato un problema fisico. 
+
+
+| Tasso di swap (tasso totale, tasso in entrata, tasso in uscita) | Velocità con cui la memoria viene scambiata in entrata, in uscita o entrambe le cose da disco a memoria attiva durante il periodo di campionamento. Questo contatore si applica alle macchine virtuali. 
+
+
+| Numero di perdite di sincronizzazione | Numero di errori di perdita della sincronizzazione. Se si verifica un errore di perdita della sincronizzazione, l'hardware non può rilevare il traffico o bloccarsi su di esso. Tutte le apparecchiature potrebbero non utilizzare la stessa velocità di trasmissione dati oppure le ottiche o le connessioni fisiche potrebbero essere di scarsa qualità. La porta deve risincronizzarsi dopo ogni errore, con un impatto sulle prestazioni del sistema. Misurato in KB/sec. 
+
+
+| Throughput (totale, lettura, scrittura) | Velocità con cui i dati vengono trasmessi, ricevuti o entrambi in un periodo di tempo fisso in risposta alle richieste di servizio i/o (misurata in MB al secondo). 
+
+
+| Timeout Discard frames - Tx | Numero di frame di trasmissione scartati a causa del timeout. 
+
+
+| Velocità di traffico (totale, lettura, scrittura) | Traffico trasmesso, ricevuto o entrambi ricevuti durante il periodo di campionamento, in megibyte al secondo. 
+
+
+| Utilizzo del traffico (totale, lettura, scrittura) | Rapporto tra traffico ricevuto/trasmesso/totale e capacità di ricezione/trasmissione/totale, durante il periodo di campionamento. 
+
+
+| Utilizzo (totale, lettura, scrittura) % | Percentuale della larghezza di banda disponibile utilizzata per la trasmissione (Tx) e la ricezione (Rx). 
+
+
+| Scrittura in sospeso (totale) | Numero di richieste di servizio i/o in scrittura in sospeso. 
+|===

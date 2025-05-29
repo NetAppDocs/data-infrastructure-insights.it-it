@@ -7,6 +7,10 @@ summary: Creare monitor per avvisare sulle soglie di performance o inventario
 = Notifica tramite webhook
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -64,6 +68,8 @@ image:Webhook_Default_Parameters.png["Parametri Webhook predefiniti di Data Infr
 === Parametri: Quali sono e come li utilizzo?
 
 I parametri di avviso sono valori dinamici popolati per avviso. Ad esempio, il parametro _%%TriggeredOn%%_ verrà sostituito con l'oggetto su cui è stato attivato l'avviso.
+
+È possibile aggiungere qualsiasi attributo di oggetto (ad esempio, nome di archiviazione) come parametro a un webhook. Ad esempio, è possibile impostare i parametri per il nome del volume e del nome di archiviazione in una descrizione del webhook come: "Latenza elevata per il volume: _%%relatedObject.volume.name%%_, Storage: _%%relatedObject.storage.name%%_".
 
 Si noti che in questa sezione, le sostituzioni vengono _non_ eseguite facendo clic sul pulsante "Test Webhook"; il pulsante invia un payload che mostra le sostituzioni _%_, ma non le sostituisce con i dati.
 

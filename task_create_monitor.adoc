@@ -7,6 +7,10 @@ summary: 'Creare monitor per avvisare sulle soglie delle performance o dell"inve
 = Avvisi con i monitor
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -14,8 +18,6 @@ summary: 'Creare monitor per avvisare sulle soglie delle performance o dell"inve
 
 
 TIP: Monitor e avvisi sono disponibili in tutte le edizioni di Data Infrastructure Insights, tuttavia, l'edizione Basic è soggetta a quanto segue: * È possibile che siano attivi solo cinque monitor personalizzati alla volta. Tutti i monitor oltre i cinque verranno creati o spostati nello stato _Paused_. * I monitor VMDK, Virtual Machine, host e datastore non sono supportati. Se sono stati creati dei monitor per queste metriche, questi verranno messi in pausa e non potranno essere ripristinati durante il downgrade a Basic Edition.
-
-sommario:[]
 
 I monitor consentono di impostare soglie sulle metriche generate da oggetti "infrastruttura" come storage, VM, EC2 e porte, nonché per i dati di "integrazione" come quelli raccolti per Kubernetes, metriche avanzate di ONTAP e plug-in Telegraf. Questi _metric_ monitors avvisano l'utente quando vengono superate le soglie del livello di avviso o critico.
 
@@ -187,6 +189,8 @@ NOTE: Le notifiche del Data Collector di ONTAP hanno la precedenza su qualsiasi 
 È possibile aggiungere una descrizione opzionale, informazioni aggiuntive e/o azioni correttive compilando la sezione *Aggiungi una descrizione dell'avviso*. La descrizione può contenere fino a 1024 caratteri e verrà inviata con l'avviso. Il campo Insight/azione correttiva può contenere fino a 67,000 caratteri e verrà visualizzato nella sezione riepilogativa della landing page degli avvisi.
 
 In questi campi è possibile fornire note, collegamenti o procedure per correggere o risolvere in altro modo l'avviso.
+
+È possibile aggiungere qualsiasi attributo di oggetto (ad esempio, il nome di archiviazione) come parametro alla descrizione di un avviso. Ad esempio, è possibile impostare i parametri per il nome del volume e del nome di archiviazione in una descrizione come: "Latenza elevata per il volume: _%%relatedObject.volume.name%%_, Storage: _%%relatedObject.storage.name%%_".
 
 image:Monitors_Alert_Description.png["Azioni correttive e descrizione degli avvisi"]
 

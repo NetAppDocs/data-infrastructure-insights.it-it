@@ -49,9 +49,8 @@ Se si utilizza un utente personalizzato (ad esempio, _csuser_) con autorizzazion
 Per _csuser_ con credenziali cluster, eseguire le seguenti operazioni dalla riga di comando ONTAP:
 
 ....
-security login rest-role create -role arwrole -api /api/storage/volumes -access readonly -vserver <cluster_name>
-security login rest-role create -api /api/security/anti-ransomware -access readonly  -role arwrole -vserver <cluster_name>
-security login create -user-or-group-name csuser -application http -authmethod password -role arwrole
+security login role create -role csrole -cmddirname "volume" -access readonly
+security login role create -role csrole -cmddirname "security anti-ransomware volume" -access readonly
 ....
 Ulteriori informazioni sulla configurazione di Altro link:task_add_collector_svm.html["Permessi ONTAP"].
 

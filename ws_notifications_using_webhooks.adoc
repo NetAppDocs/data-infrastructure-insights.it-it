@@ -133,4 +133,6 @@ Nota: Le notifiche e-mail sono indipendenti dai criteri e vengono attivate come 
 
 === Esempi di Webhook per la sicurezza del carico di lavoro
 
-Ganci a nastro per link:ws_webhook_example_slack.html["Lasco"] ganci a nastro link:ws_webhook_example_pagerduty.html["PagerDuty"]per ganci link:ws_webhook_example_teams.html["Team"]a nastro per link:ws_webhook_example_discord.html["Discordare"]
+Ganci per link:ws_webhook_example_slack.html["Lasco"]
+
+Ganci a nastro per link:ws_webhook_example_pagerduty.html["PagerDuty"] ganci a nastro link:ws_webhook_example_teams.html["Team"]per link:ws_webhook_example_discord.html["Discordare"]

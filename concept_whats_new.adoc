@@ -14,6 +14,47 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Ecco alcu
 
 
 
+== Maggio 2025
+
+
+
+=== Le nuove pagine di destinazione vi mantengono nel flusso
+
+Le pagine di destinazione riprogettate presentano tutto ciò di cui avete bisogno - dati di riepilogo, grafici delle prestazioni, correlazioni, avvisi e modifiche e risorse chiave - in un'unica vista.
+
+Ora è possibile risolvere i problemi più velocemente e mantenere il flusso, senza passare da una scheda all'altra o perdere il contesto.
+
+image:lp_new_design.png["nuovo design della landing page che mostra la posizione delle sezioni di riepilogo, delle prestazioni e delle risorse aggiuntive"]
+
+
+
+=== Miglioramenti alla sicurezza del carico di lavoro
+
+*I webhook sono ora disponibili per gli avvisi di sicurezza dei workload*
+
+Workload Security supporta ora notifiche webhook pronte all'uso per strumenti come Slack, PagerDuty, Teams e altri ancora. Inoltre, offriamo modelli personalizzabili che consentono di personalizzare il messaggio o di integrarlo con qualsiasi altra applicazione SIEM o di terze parti. Instrada gli avvisi critici direttamente nei flussi di lavoro di sicurezza esistenti, in modo che il tuo team possa indagare e rispondere più velocemente.
+
+image:ws_webhook_slack_example.png["Esempio di slack Webhook per la sicurezza del carico di lavoro, larghezza=400"]
+
+*Migra i collettori di sicurezza del carico di lavoro tra gli agenti*
+
+È possibile eseguire facilmente la migrazione di un agente di raccolta della protezione del carico di lavoro da un agente all'altro, consentendo un efficiente bilanciamento del carico dei collettori tra gli agenti. La migrazione è semplice quanto la modifica del raccoglitore e la selezione dell'agente di destinazione dall'elenco.
+
+image:ws_migrate_collector_to_another_agent.png["migrazione del raccoglitore, larghezza=500"]
+
+
+
+=== Esportazione asincrona .CSV
+
+L'esportazione dei dati in formato .CSV può richiedere da pochi secondi a un certo numero di ore, a seconda della quantità di dati da esportare. Data Infrastructure Insights esporta ora i dati in modo asincrono, in modo da poter continuare a lavorare durante la compilazione del file .CSV.
+
+Per visualizzare le esportazioni .CSV, selezionare l'icona "Bell" nella barra degli strumenti in alto a destra.
+
+image:csv_export_async.png["icona campana con elenco di esportazioni .csv pronte per il download, larghezza=400"]
+
+'''
+
+
 == Aprile 2025
 
 
