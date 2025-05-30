@@ -25,9 +25,27 @@ Viene visualizzata la pagina Query.
 
 NOTE: L'esportazione in .CSV è disponibile anche nel menu "Three dots" (tre punti) nei widget della tabella della dashboard e nella maggior parte delle tabelle delle landing page.
 
+
+
+== Esportazione asincrona
+
+L'esportazione dei dati in formato .CSV può richiedere da pochi secondi a un certo numero di ore, a seconda della quantità di dati da esportare. Data Infrastructure Insights esporta tali dati in modo asincrono, così puoi continuare a lavorare mentre il file .CSV viene compilato.
+
+Visualizza e scarica le tue esportazioni .CSV selezionando l'icona "Campana" nella barra degli strumenti in alto a destra.
+
+image:csv_export_async.png["icona a forma di campana con elenco di esportazioni .csv pronte per il download, larghezza=400"]
+
 I dati esportati rifletteranno il filtro corrente, le colonne e i nomi delle colonne visualizzati.
 
+
+
+== Virgole nei nomi delle risorse
+
 Nota: Quando viene visualizzata una virgola nel nome di una risorsa, l'esportazione racchiude il nome tra virgolette, conservando il nome della risorsa e il formato .csv appropriato.
+
+
+
+== Formato dell'ora o non formato dell'ora?
 
 Quando si apre un file .CSV esportato con Excel, se si dispone di un nome oggetto o di un altro campo nel formato NN:NN (due cifre seguite da due punti e altre due cifre), Excel a volte interpreta tale nome come formato orario, anziché come formato testo. Ciò può causare la visualizzazione di valori errati in tali colonne in Excel. Ad esempio, un oggetto denominato "81:45" viene visualizzato in Excel come "81:45:00".
 
