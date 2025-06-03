@@ -9338,8 +9338,6 @@
   <block id="e41f6efeb9a8c29ac8077a1348b68078" category="cell">Password per il cluster</block>
   <block id="444301801d58f01b1fb488fe224bb8c5" category="cell">Ho ricevuto un messaggio che indica la creazione di più storage.</block>
   <block id="7de7475f4bb973126434d7c3f9801f08" category="cell">Verificare che il cluster sia configurato correttamente e che il raccoglitore faccia riferimento a un singolo cluster.</block>
-  <block id="fc971fc699329bc531b4d65ff180a629" category="cell">Ho ricevuto un avviso che indica che l'API del disco ha restituito più dati</block>
-  <block id="3cd62817285774be5e17bfa3b11a6309" category="cell">Rivolgersi al supporto per ottenere ulteriori dati.</block>
   <block id="aa7bcff87c480aa90d0e5d1001e89590" category="summary">Configurazione di VMware Data Collector.</block>
   <block id="3642158841a114e36a8c869b919b1091" category="doc">Configurazione di VMware vSphere data collector</block>
   <block id="2c2ae7694a57522d5f3200005b67fffd" category="paragraph">Il raccoglitore dati per VMware vSphere raccoglie le informazioni sulla configurazione e sulle prestazioni del guest VM e dell'host ESXi e richiede Privileges di sola lettura su tutti gli oggetti di vSphere. Ad agosto 2024, vSphere Collector integra inoltre i messaggi di registro degli ambienti vSphere e alcune metriche specifiche di VMware. Tenere presente che Data Infrastructure Insights può recuperare solo le informazioni dei registri VMware da ambienti vSphere 8.0.1 o superiori. Analogamente, le metriche specifiche del fornitore sono supportate solo per gli ambienti vSphere 7+. Pertanto, è possibile disattivare la casella di controllo Log e/o Vendor Specific Metrics (metriche specifiche del fornitore) su un determinato raccoglitore, se puntata a un'istanza vSphere precedente.</block>
@@ -10535,9 +10533,6 @@
   <block id="29e29650476f773b7c44149e72a13e69" category="list-text">*Chiudi* per rimuovere l'avviso dall'elenco degli avvisi attivi.</block>
   <block id="e8638926499f5e7bec918a2f4d6dc36a" category="paragraph">È possibile gestire più avvisi selezionando la casella di controllo a sinistra di ciascun avviso e facendo clic su _Change Selected Alerts Status_.</block>
   <block id="70a18f3fbffa69fc35378e4b2e87f766" category="paragraph">Facendo clic su un ID avviso, viene visualizzata la pagina Dettagli avviso.</block>
-  <block id="f7e83685d25e3038170e83ca19c3cbf0" category="section-title">Pagina dei dettagli degli avvisi</block>
-  <block id="b254b175b71c2c7dca19ba0dcbc5da07" category="paragraph">La pagina dei dettagli degli avvisi fornisce ulteriori dettagli sull'avviso, tra cui un _Riepilogo_, una _visualizzazione avanzata_ che mostra i grafici relativi ai dati dell'oggetto, le _risorse correlate_ e i _commenti_ inseriti dagli investigatori degli avvisi.</block>
-  <block id="1b489429111564ed0ac0109b22575d28" category="paragraph"><block ref="1b489429111564ed0ac0109b22575d28" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0dc88092036f29d0c951123c9b9f932e" category="section-title">Avvisa quando mancano dati</block>
   <block id="ffbb059fbd1b72fd858ad1db288acd16" category="paragraph">In un sistema in tempo reale, ad esempio Data Infrastructure Insights, per attivare l'analisi di un monitor e decidere se generare un avviso, ci basiamo su una delle due cose seguenti:</block>
   <block id="9f76cab36d38af05dce74499497c7b3b" category="list-text">il prossimo datapoint per arrivare</block>
@@ -12579,4 +12574,17 @@
   <block id="25663750e3a92ca79621844d9a055d8a" category="paragraph"><block ref="25663750e3a92ca79621844d9a055d8a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="44c7c3a77a122ce29cb93ab53513f83f" category="section-title">Virgole nei nomi delle risorse</block>
   <block id="4d53c0239522855d4d60019758390f70" category="section-title">Formato dell'ora o non formato dell'ora?</block>
+  <block id="3756ac460c094adc890ad7f26460010b" category="cell">35000-55000</block>
+  <block id="0e948943e8277507eeeec08bbb91d3b4" category="cell">IP di gestione del cluster</block>
+  <block id="8ad596bfbf4c5161efe95c1bf071f052" category="cell">Comunicazione dall'IP di gestione del cluster ONTAP al Workload Security Agent per gli *eventi EMS*. Queste porte devono essere aperte verso il Workload Security Agent affinché ONTAP possa inviargli *eventi EMS*, incluso qualsiasi firewall sul Workload Security Agent stesso (se presente). SI NOTI che non è necessario riservare *tutte* di queste porte, ma le porte che si riservano per questo devono rientrare in questo intervallo. Si consiglia di iniziare riservando ~100 porte e aumentando, se necessario.</block>
+  <block id="ab1259588b3e1ad3b770e413f8408667" category="cell">Nome utente / Account di servizio</block>
+  <block id="2fde62a7ecea2efe8b301312f6a6b292" category="cell">Password / Segreto</block>
+  <block id="8ec2e527e4b860bd5119c6e2816e5f0e" category="cell">ID organizzazione per l'account di servizio</block>
+  <block id="30993e7595c12ab5f7aa162f78a59c3b" category="cell">Deve essere la stringa completa, ad esempio "Organization:::nnnnnn-nnnn....."</block>
+  <block id="2ce06c7c6b7a3d5ec1168fa41dc94826" category="cell">Il sondaggio fallisce con 400 [Richiesta non valida].... ManagedId non valido....</block>
+  <block id="59e8601d861464a8b5978359c99a89b2" category="cell">Hai popolato il campo ID organizzazione con un valore, ma il cluster Rubrik NON ritiene che si tratti di un ID organizzazione valido, nonostante il messaggio di errore di Rubrik lo chiami "ManagedId"</block>
+  <block id="a6d988d681ec5a2ac741001e80c67bbc" category="section-title">Pannello dettagli avviso</block>
+  <block id="bb9284d1e6e1080190597d2d9826cc87" category="paragraph">Seleziona una riga di avviso per aprire il pannello dei dettagli dell'avviso. Il pannello dei dettagli dell'avviso fornisce ulteriori dettagli sull'avviso, tra cui un _Riepilogo_, una _Vista Esperto_ che mostra grafici relativi ai dati dell'oggetto, eventuali _Risorse Correlate_ e _Commenti_ inseriti dagli investigatori dell'avviso.</block>
+  <block id="ce2f8058fa83417353b52945b6bfd42f" category="inline-image-macro">pannello dei dettagli degli avvisi metrici</block>
+  <block id="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="paragraph"><block ref="8f9a1f05fd3f7e730fd077aaaac2e6f0" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

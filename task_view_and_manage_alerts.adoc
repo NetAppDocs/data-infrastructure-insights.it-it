@@ -52,11 +52,11 @@ Facendo clic su un ID avviso, viene visualizzata la pagina Dettagli avviso.
 
 
 
-== Pagina dei dettagli degli avvisi
+== Pannello dettagli avviso
 
-La pagina dei dettagli degli avvisi fornisce ulteriori dettagli sull'avviso, tra cui un _Riepilogo_, una _visualizzazione avanzata_ che mostra i grafici relativi ai dati dell'oggetto, le _risorse correlate_ e i _commenti_ inseriti dagli investigatori degli avvisi.
+Seleziona una riga di avviso per aprire il pannello dei dettagli dell'avviso. Il pannello dei dettagli dell'avviso fornisce ulteriori dettagli sull'avviso, tra cui un _Riepilogo_, una _Vista Esperto_ che mostra grafici relativi ai dati dell'oggetto, eventuali _Risorse Correlate_ e _Commenti_ inseriti dagli investigatori dell'avviso.
 
-image:alert_detail_page.png["Pagina dei dettagli degli avvisi"]
+image:metric_alert_detail_pane.png["pannello dei dettagli degli avvisi metrici"]
 
 
 

@@ -59,10 +59,13 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 | IP | Indirizzo IP del cluster Rubrik 
 
 
-| Nome utente | Nome utente del cluster 
+| Nome utente / Account di servizio | Nome utente del cluster 
 
 
-| Password | Password per il cluster 
+| Password / Segreto | Password per il cluster 
+
+
+| ID organizzazione per l'account di servizio | Deve essere la stringa completa, ad esempio "Organization:::nnnnnn-nnnn....." 
 |===
 
 
@@ -93,6 +96,6 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Ho ricevuto un messaggio che indica la creazione di più storage. | Verificare che il cluster sia configurato correttamente e che il raccoglitore faccia riferimento a un singolo cluster. 
 
 
-| Ho ricevuto un avviso che indica che l'API del disco ha restituito più dati | Rivolgersi al supporto per ottenere ulteriori dati. 
+| Il sondaggio fallisce con 400 [Richiesta non valida].... ManagedId non valido.... | Hai popolato il campo ID organizzazione con un valore, ma il cluster Rubrik NON ritiene che si tratti di un ID organizzazione valido, nonostante il messaggio di errore di Rubrik lo chiami "ManagedId" 
 |===
 Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
