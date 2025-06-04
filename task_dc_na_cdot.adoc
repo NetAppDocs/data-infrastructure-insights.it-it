@@ -187,7 +187,10 @@ Data Infrastructure Insights consente di raccogliere i dati degli switch cluster
 
 == Metriche di potenza ONTAP
 
-Diversi modelli di ONTAP forniscono metriche di potenza per approfondimenti sull'infrastruttura dati che possono essere utilizzati per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.
+Diversi modelli di ONTAP forniscono metriche di potenza per approfondimenti sull'infrastruttura dati che possono essere utilizzati per il monitoraggio o gli avvisi.
+
+
+NOTE: Questi elenchi non sono esaustivi e sono soggetti a modifiche. In generale, se un modello appartiene alla stessa famiglia di un altro presente nell'elenco, il supporto dovrebbe essere lo stesso, ma non è garantito. In caso di dubbi sul supporto delle metriche di potenza da parte del modello, contattare l'assistenza ONTAP.
 
 Modelli supportati:
 

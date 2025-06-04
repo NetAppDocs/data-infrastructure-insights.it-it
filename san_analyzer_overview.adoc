@@ -4,9 +4,13 @@ permalink: san_analyzer_overview.html
 summary: SAN Analyzer fornisce la topologia per le risorse sul tenant 
 keywords: topology, analyze, analysis, map 
 ---
-= Panoramica di SAN Analyzer
+= Panoramica dell'analizzatore SAN
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -32,6 +36,10 @@ Facendo clic su un oggetto o un gruppo si apre un pannello a scorrimento che for
 Oltre alla scheda Summary (Riepilogo), il pannello Sliddeout (estrazione) visualizza le schede relative a elementi quali i dettagli della porta o le informazioni sulla zona, in base all'oggetto selezionato.
 
 image:san_analyzer_slideout_example.png["Pannello scorrevole dell'analizzatore SAN"]
+
+Se il tuo ambiente ha protocolli diversi, puoi filtrare per iSCSI o FC:
+
+image:san_analyzer_protocols.png["Protocolli dell'analizzatore SAN"]
 
 Se l'ambiente include dispositivi iSCSI, passando con il mouse sull'oggetto _iSCSI_ vengono evidenziate le connessioni relative a tali dispositivi iSCSI.
 
