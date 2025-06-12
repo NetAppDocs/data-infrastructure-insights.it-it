@@ -10,7 +10,7 @@ summary: Configurazione di Brocade FOS REST Data Collector.
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il REST Collector Brocade FOS per rilevare l'inventario e le performance dei dispositivi switch Brocade che eseguono il firmware FabricOS (FOS) 8,2 e versioni successive.
+Data Infrastructure Insights utilizza il REST Collector Brocade FOS per rilevare l'inventario e le performance dei dispositivi switch Brocade che eseguono il firmware FabricOS (FOS) 8,2 e versioni successive. Si prega di notare che le prime versioni 8.2 FOS potrebbero presentare bug nella REST API; si consiglia vivamente di eseguire l'ultima versione FOS disponibile supportata dalla piattaforma.
 
 Nota: Il livello "utente" predefinito di FOS non è sufficientemente potente perché Data Infrastructure Insights possa visualizzare tutti gli aspetti logici di un dispositivo. È necessario disporre di un account utente con il "ruolo chassis" abilitato, nonché di autorizzazioni su tutti i fabric virtuali configurati su uno switch.
 
@@ -124,6 +124,9 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 
 | La funzione Test indica che un protocollo non è accessibile | Un determinato dispositivo Brocade FOS 8,2+ desidera parlare solo su HTTP o HTTPS. Se uno switch dispone di un certificato digitale installato, lo switch genera errori HTTP se si tenta di comunicare con HTTP non crittografato rispetto a HTTPS. La funzione di test tenta di comunicare sia con HTTP che con HTTPS. Se il test indica che un protocollo viene superato, è possibile salvare il collettore senza preoccuparsi che l'altro protocollo non sia riuscito. Il collettore tenta entrambi i protocolli durante la raccolta e non riesce solo se nessuno dei due funziona. 
+
+
+| Errore: l'inventario fallisce con 401 Non autorizzato...Chiave di sessione non valida... | Questo è un bug specifico presente in alcune delle prime versioni di FOS 8.2, come la 8.2.1c, che NON supportano correttamente l'autenticazione di base HTTP. Aggiornare a una versione successiva, la 8.2 o la 9.*. 
 
 
 | Errore: "Il Data Infrastructure Insights ha ricevuto un ruolo di telaio non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
