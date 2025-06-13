@@ -87,7 +87,7 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 
 
-==== Inventario
+=== Inventario
 
 [cols="2*"]
 |===
@@ -98,14 +98,14 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 |===
 
 
-==== Performance
+=== Performance
 
 [cols="2*"]
 |===
 | Problema: | Prova: 
 
 
-| Errore: Dati non raccolti a sufficienza. | • Controllare la data e l'ora di raccolta nel file di log e modificare di conseguenza l'intervallo di polling • attendere più a lungo 
+| Errore: Dati non raccolti a sufficienza. | * Controllare il timestamp della raccolta nel file di registro e modificare di conseguenza l'intervallo di polling * Attendere un tempo più lungo 
 
 
 | Errore: L'intervallo di polling delle prestazioni è troppo grande. | Controllare la data e l'ora di raccolta nel file di registro{logfile} e modificare di conseguenza l'intervallo di polling 

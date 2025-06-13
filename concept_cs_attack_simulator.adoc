@@ -7,6 +7,10 @@ summary: Utilizzando uno script, è possibile simulare un attacco ransomware per
 = Sicurezza del carico di lavoro: Simulazione di un attacco
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -16,149 +20,196 @@ summary: Utilizzando uno script, è possibile simulare un attacco ransomware per
 
 == Cose da notare prima di iniziare
 
-* Lo script di simulazione ransomware funziona solo su Linux.
+* Lo script di simulazione ransomware funziona solo su Linux. Lo script di simulazione dovrebbe anche generare avvisi di elevata affidabilità nel caso in cui l'utente abbia integrato ONTAP ARP con Workload Security.
+* Workload Security rileverà gli eventi e gli avvisi generati con NFS 4.1 solo se la versione di ONTAP è 9.15 o successiva.
 * Lo script viene fornito con i file di installazione dell'agente workload Security. È disponibile su qualsiasi computer su cui è installato un agente workload Security.
 * È possibile eseguire lo script sul computer dell'agente workload Security; non è necessario preparare un'altra macchina Linux. Tuttavia, se si preferisce eseguire lo script su un altro sistema, è sufficiente copiare lo script ed eseguirlo.
+* Gli utenti possono optare per Python o per lo script shell in base alle proprie preferenze e ai requisiti di sistema.
+* Lo script Python richiede installazioni preliminari. Se non si desidera utilizzare Python, utilizzare lo script shell.
 
 
 
 
-== Avere almeno 1,000 file di esempio
+== Linee guida:
 
-Questo script deve essere eseguito su una SVM con una cartella contenente file da crittografare. Si consiglia di avere almeno 1,000 file all'interno di tale cartella e di qualsiasi sottocartella. I file non devono essere vuoti. Non creare i file e crittografarli utilizzando lo stesso utente. Workload Security considera questa attività a basso rischio e pertanto non genera un avviso (ad esempio, lo stesso utente modifica i file appena creati).
+Questo script dovrebbe essere eseguito su una SVM contenente una cartella con un numero considerevole di file da crittografare, idealmente 100 o più, inclusi i file nelle sottocartelle. Assicurarsi che i file non siano vuoti.
 
-Vedere di seguito le istruzioni per link:#create-files-programmatically["creare a livello di codice file non vuoti"].
-
-
-
-== Linee guida prima di eseguire il simulatore:
-
-. Assicurarsi che i file crittografati non siano vuoti.
-. Assicurarsi di crittografare > 50 file. Un numero limitato di file verrà ignorato.
-. Non eseguire più attacchi con lo stesso utente. Dopo alcune volte, workload Security apprenderà questo comportamento dell'utente e supporrà che si tratti del comportamento normale dell'utente.
-. Non crittografare i file creati dallo stesso utente. La modifica di un file appena creato da un utente non è considerata un'attività rischiosa. Utilizzare invece i file creati da un altro utente O attendere qualche ora tra la creazione e la crittografia dei file.
+Per generare l'avviso, sospendere temporaneamente il collector prima della creazione dei dati di test. Una volta generati i file di esempio, riavviare il collector e avviare il processo di crittografia.
 
 
 
+== Fasi:
 
-== Preparare il sistema
 
-Per prima cosa, montare il volume di destinazione sulla macchina. È possibile montare un montaggio NFS o un'esportazione CIFS.
 
-Per montare l'esportazione NFS in Linux:
+=== Preparare il sistema:
 
-....
+Per prima cosa, monta il volume di destinazione sulla macchina. Puoi montare un'esportazione NFS o CIFS.
+
+
+
+==== Per montare l'esportazione NFS in Linux:
+
+[listing]
+----
 mount -t nfs -o vers=4.0 10.193.177.158:/svmvol1 /mntpt
 mount -t nfs -o vers=4.0 Vserver data IP>:/nfsvol /destinationlinuxfolder
-....
+----
 Non montare NFS versione 4.1; non è supportato da Fpolicy.
 
-Per montare CIFS in Linux:
 
- mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o username=raisa
+
+==== Per montare CIFS in Linux:
+
+[listing]
+----
+mount -t cifs //10.193.77.91/sharedfolderincluster /root/destinationfolder/ -o username=raisa
+----
+
+
+==== Abilita la protezione ransomware autonoma ONTAP (facoltativo):
+
+Se la versione del cluster ONTAP è 9.11.1 o superiore, è possibile abilitare il servizio di protezione ransomware ONTAP eseguendo il seguente comando sulla console di comando ONTAP.
+
+ security anti-ransomware volume enable -volume [volume_name] -vserver [svm_name]
 Quindi, configurare un Data Collector:
 
 . Configurare l'agente workload Security, se non è già stato fatto.
-. Configurare il data collector SVM se non è già stato fatto.
+. Configurare un raccoglitore dati SVM se non è già stato fatto.
+. Assicurarsi che il protocollo di montaggio sia selezionato durante la configurazione del raccoglitore dati.
 
+
+
+
+== Generare i file di esempio a livello di programmazione:
+
+Prima di creare i file, è necessario prima arrestarsi o link:task_add_collector_svm.html#play-pause-data-collector["mettere in pausa il raccoglitore dati"] elaborazione.
+
+Prima di eseguire la simulazione, è necessario aggiungere i file da crittografare. È possibile copiare manualmente i file da crittografare nella cartella di destinazione oppure utilizzare uno degli script inclusi per crearli tramite codice. Qualunque sia il metodo utilizzato, assicurarsi che siano presenti almeno 100 file da crittografare.
+
+Se si sceglie di creare i file a livello di programmazione, è possibile utilizzare Shell o Python:
+
+
+
+=== Conchiglia:
+
+. Accedere alla casella Agente.
+. Montare una condivisione NFS o CIFS dall'SVM del filer alla macchina dell'agente. Su tale cartella.
+. Copiare lo script dalla directory di installazione dell'agente (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/create_dataset.sh) nella posizione di montaggio di destinazione.
+. Eseguire il seguente comando utilizzando gli script all'interno della directory montata (ad esempio /root/demo) per creare la cartella e i file del set di dati di prova:
++
+ './create_dataset.sh'
+. Verranno creati 100 file non vuoti con varie estensioni all'interno della cartella di montaggio, sotto una directory denominata "test_dataset".
+
+
+
+
+=== Pitone:
+
+
+
+==== Prerequisito per lo script Python:
+
+* Installa Python (se non è già installato).
++
+** Scarica Python 3.5.2 o versione successiva da  https://www.python.org/[] .
+** Per verificare l'installazione di Python, eseguire  `python --version` .
+** Lo script Python è stato testato a partire dalla versione 3.5.2.
+
+
+* Installa pip se non è già installato:
++
+** Scarica lo script get-pip.py da  https://bootstrap.pypa.io/[] .
+** Installa pip usando  `python get-pip.py` .
+** Verificare l'installazione del pip con  `pip --version` .
+
+
+* Libreria PyCryptodome:
++
+** Lo script utilizza la libreria PyCryptodome.
+** Installa PyCryptodome con  `pip install pycryptodome` .
+** Confermare l'installazione di PyCryptodome eseguendo  `pip show pycryptodome` .
+
+
+
+
+
+
+==== Script di creazione file Python:
+
+. Accedere alla casella Agente.
+. Montare una condivisione NFS o CIFS dall'SVM del filer alla macchina dell'agente. Su tale cartella.
+. Copiare lo script dalla directory di installazione dell'agente (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/create_dataset.py) nella posizione di montaggio di destinazione.
+. Eseguire il seguente comando utilizzando gli script all'interno della directory montata (ad esempio /root/demo) per creare la cartella e i file del set di dati di prova:
++
+ 'python create_dataset.py'
+. Ciò creerà 100 file non vuoti con varie estensioni all'interno della cartella di montaggio sotto una directory chiamata "test_dataset"
+
+
+
+
+== Riprendi il collezionista
+
+Se hai messo in pausa il raccoglitore prima di seguire questi passaggi, assicurati di riavviarlo una volta creati i file di esempio.
 
 
 
 == Eseguire lo script ransomware Simulator
 
-. Accedere (ssh) al computer dell'agente workload Security.
-. Accedere a: _/opt/netapp/cloudSecure/Agent/install_
-. Chiamare lo script del simulatore senza parametri per visualizzare l'utilizzo:
+Per generare un avviso ransomware, puoi eseguire lo script incluso che simulerà un avviso ransomware in Workload Security.
+
+
+
+=== Conchiglia:
+
+. Copiare lo script dalla directory di installazione dell'agente (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh) nella posizione di montaggio di destinazione.
+. Eseguire il seguente comando utilizzando gli script all'interno della directory montata (ad esempio /root/demo) per crittografare il set di dati di prova:
 +
-....
-# pwd
-/opt/netapp/cloudsecure/agent/install
-# ./ransomware_simulator.sh
-Error: Invalid directory  provided.
-Usage: ./ransomware_simulator.sh [-e] [-d] [-i <input_directory>]
-       -e to encrypt files (default)
-       -d to restore files
-       -i <input_directory> - Files under the directory to be encrypted
-....
+ './simulate_attack.sh'
+. In questo modo verranno crittografati i file di esempio creati nella directory "test_dataset".
+
+
+
+
+=== Pitone:
+
+. Copiare lo script dalla directory di installazione dell'agente (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/simulate_attack.py) nella posizione di montaggio di destinazione.
+. Si prega di notare che i prerequisiti Python sono installati come da sezione Prerequisiti dello script Python
+. Eseguire il seguente comando utilizzando gli script all'interno della directory montata (ad esempio /root/demo) per crittografare il set di dati di prova:
 +
-....
-Encrypt command example: ./ransomware_simulator.sh -e -i /mnt/audit/reports/
-Decrypt command example: ./ransomware_simulator.sh -d -i /mnt/audit/reports/
-....
+ 'python simulate_attack.py'
+. In questo modo verranno crittografati i file di esempio creati nella directory "test_dataset".
 
 
 
 
-== Crittografare i file di test
+== Genera un avviso in Workload Security
 
-Per crittografare i file, eseguire il seguente comando:
+Una volta terminata l'esecuzione dello script del simulatore, entro pochi minuti verrà visualizzato un avviso sull'interfaccia utente Web.
 
-....
-# ./ransomware_simulator.sh -e -i /root/for/
-Encryption key is saved in /opt/netapp/cloudsecure/cloudsecure-agent-1.251.0/install/encryption-key,
-which can be used for restoring the files.
-Encrypted /root/for/File000.txt
-Encrypted /root/for/File001.txt
-Encrypted /root/for/File002.txt
-...
-....
+Nota: nel caso in cui siano soddisfatte tutte le seguenti condizioni, verrà generato un avviso di elevata affidabilità.
+
+. Versione ONTAP SVM monitorata superiore a 9.11.1
+. Protezione autonoma dal ransomware ONTAP configurata
+. Il raccoglitore dati di sicurezza del carico di lavoro è stato aggiunto in modalità Cluster.
 
 
-== Ripristinare i file
+Workload Security rileva i modelli di ransomware in base al comportamento dell'utente, mentre ONTAP ARP rileva l'attività di ransomware in base alle attività di crittografia nei file.
 
-Per decrittare, eseguire il seguente comando:
+Se le condizioni sono soddisfatte, Workload Security contrassegna gli avvisi come avviso di elevata affidabilità.
 
-....
-[root@scspa2527575001 install]# ./ransomware_simulator.sh -d -i /root/for/
-File /root/for/File000.txt is restored.
-File /root/for/File001.txt is restored.
-File /root/for/File002.txt is restored.
-...
-....
+Esempio di avviso di elevata affidabilità nella pagina dell'elenco degli avvisi:
 
+image:ws_high_confidence_alert.png["Esempio di avviso di elevata confidenza, pagina elenco"]
 
-== Eseguire lo script più volte
+Esempio di dettaglio dell'avviso di elevata affidabilità:
 
-Dopo aver generato un attacco ransomware per un utente, passare a un altro utente per generare un attacco aggiuntivo. Workload Security apprende il comportamento dell'utente e non avvisa in caso di ripetuti attacchi ransomware entro un breve periodo di tempo per lo stesso utente.
+image:ws_high_confidence_alert_detail.png["Esempio di avviso di elevata confidenza, pagina dei dettagli"]
 
 
 
-== Creare file a livello di codice
+== Attivazione dell'avviso più volte
 
-Prima di creare i file, è necessario interrompere o sospendere l'elaborazione del Data Collector. Prima di aggiungere il data collector all'agente, attenersi alla procedura riportata di seguito. Se è già stato aggiunto il data collector, è sufficiente modificare il data collector, inserire una password non valida e salvarla. In questo modo, il data collector viene temporaneamente messo in stato di errore. NOTA: Annotare la password originale.
+Workload Security apprende il comportamento dell'utente e non genererà avvisi in caso di ripetuti attacchi ransomware per lo stesso utente entro 24 ore.
 
-
-NOTE: L'opzione consigliata è a link:task_add_collector_svm.html#play-pause-data-collector["mettere in pausa il raccoglitore"] prima di creare i file.]
-
-Prima di eseguire la simulazione, è necessario aggiungere i file da crittografare. È possibile copiare manualmente i file da crittografare nella cartella di destinazione oppure utilizzare uno script (vedere l'esempio seguente) per creare i file a livello di programmazione. Copiare almeno 1,000 file, indipendentemente dal metodo utilizzato.
-
-Se si sceglie di creare i file a livello di programmazione, attenersi alla seguente procedura:
-
-. Accedere alla casella Agente.
-. Montare un'esportazione NFS dalla SVM del filer alla macchina Agent. Su tale cartella.
-. In tale cartella creare un file denominato createfiles.sh
-. Copiare le seguenti righe nel file.
-+
-....
-for i in {000..1000}
-do
-   echo hello > "File${i}.txt"
-done
-echo 3 > /proc/sys/vm/drop_caches ; sync
-....
-. Salvare il file.
-. Assicurarsi che il permesso di esecuzione sul file sia:
-+
- chmod 777 ./createfiles.sh
-. Eseguire lo script:
-+
- ./createfiles.sh
-+
-nella cartella corrente verranno creati 1000 file.
-
-. Riattivare il data collector
-+
-Se il data collector è stato disattivato al punto 1, modificare il data collector, inserire la password corretta e salvare. Assicurarsi che il data collector sia nuovamente in esecuzione.
-
-. Se il raccoglitore è stato messo in pausa prima di procedere come indicato di seguito, assicurarsi di selezionare link:task_add_collector_svm.html#play-pause-data-collector["riprendere il raccoglitore"].
-
+Per generare un nuovo avviso con un utente diverso, ripetere gli stessi passaggi (creazione dei dati di prova e successiva crittografia dei dati di prova).

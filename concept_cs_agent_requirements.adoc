@@ -62,7 +62,7 @@ Per ambienti di workload Security * basati su * Stati Uniti:
 | TCP | 443 | Agente di sicurezza del carico di lavoro | <site_name>.cs01.cloudinsights.netapp.com <site_name>.c01.cloudinsights.netapp.com <site_name>.c02.cloudinsights.netapp.com | Accesso a Data Infrastructure Insights 
 
 
-| TCP | 443 | Agente di sicurezza del carico di lavoro | gateway.c01.cloudinsights.netapp.com agentlogin.cs01.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | agentlogin.cs01.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
 |===
 Per ambienti di sicurezza dei workload *basati sull'Europa*:
 
@@ -74,7 +74,7 @@ Per ambienti di sicurezza dei workload *basati sull'Europa*:
 | TCP | 443 | Agente di sicurezza del carico di lavoro | <site_name>.cs01-eu-1.cloudinsights.netapp.com <site_name>.c01-eu-1.cloudinsights.netapp.com <site_name>.c02-eu-1.cloudinsights.netapp.com | Accesso a Data Infrastructure Insights 
 
 
-| TCP | 443 | Agente di sicurezza del carico di lavoro | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-eu-1.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | agentlogin.cs01-eu-1.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
 |===
 Per ambienti di sicurezza dei workload * basati su APAC*:
 
@@ -86,7 +86,7 @@ Per ambienti di sicurezza dei workload * basati su APAC*:
 | TCP | 443 | Agente di sicurezza del carico di lavoro | <site_name>.cs01-ap-1.cloudinsights.netapp.com <site_name>.c01-ap-1.cloudinsights.netapp.com <site_name>.c02-ap-1.cloudinsights.netapp.com | Accesso a Data Infrastructure Insights 
 
 
-| TCP | 443 | Agente di sicurezza del carico di lavoro | gateway.c01.cloudinsights.netapp.com agentlogin.cs01-ap-1.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
+| TCP | 443 | Agente di sicurezza del carico di lavoro | agentlogin.cs01-ap-1.cloudinsights.netapp.com | Accesso ai servizi di autenticazione 
 |===
 
 
