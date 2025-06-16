@@ -13,7 +13,7 @@ keywords: reporting, cognos, data warehouse, dwh
 Il reporting di Data Infrastructure Insights è uno strumento di business intelligence che consente di visualizzare report predefiniti o di creare report personalizzati.
 
 
-NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"]. La disponibilità della funzionalità di reporting è soggetta a un requisito di ingombro minimo. link:https://www.netapp.com/forms/cloud-insights-contact-us/["Contatta il tuo rappresentante commerciale NetApp"] per maggiori informazioni.
 
 Il reporting Data Infrastructure Insights ti consente di eseguire le seguenti attività:
 
