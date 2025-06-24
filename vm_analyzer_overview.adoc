@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: vm_analyzer_overview.html 
+summary: VM Analyzer fornisce la topologia per le risorse virtuali sul tuo tenant 
+keywords: topology, analyze, analysis, map, virtual, vm, vmware 
+---
+= Panoramica dell'analizzatore VM
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Con *VM Analyzer* di DII, la gestione delle risorse virtuali diventa più semplice ed efficiente. Questo potente strumento offre visibilità end-to-end, mappando le dipendenze da VMDK/VM a host, datastore, volume interno/volume e storage.
+
+Grazie a una mappa interattiva della topologia, VM Analyzer consente di individuare i problemi, comprendere le modifiche e migliorare la comprensione del flusso di dati. Semplifica la gestione delle VM e aumenta la visibilità sui carichi di lavoro virtuali.
+
+image:vm_analyzer_example_with_panel_a.png["Mappa della topologia di un sistema storage mediante VM Analyzer"]
+
+
+
+== Esplora le connessioni tra le tue risorse
+
+Selezionare *osservabilità > analizza > analizzatore VM* per visualizzare l'analizzatore VM. Imposta un filtro per Applicazione, Macchina virtuale, Volume, Volume interno oppure aggiungi i tuoi filtri. Viene visualizzata la mappa degli oggetti, che mostra gli oggetti collegati. Passare il mouse su un oggetto per visualizzare le metriche di traffico per tali connessioni.
+
+image:vm_analyzer_performance_metrics.png["Esempio di metriche delle prestazioni di VM Analyzer"]
+
+
+NOTE: La maggior parte dei filtri di VM Analyzer (compresi quelli che è possibile aggiungere) sono contestuali; quando si seleziona un oggetto in uno di questi filtri, le scelte presentate negli altri menu a discesa dei filtri vengono aggiornate nel contesto con l'oggetto o gli oggetti selezionati.
+
+Facendo clic su un oggetto o un gruppo si apre un pannello a scorrimento che fornisce ulteriori dettagli sull'oggetto e le relative connessioni. Il pannello scorrevole mostra un riepilogo che fornisce dettagli sull'oggetto selezionato (ad esempio, throughput o utilizzo, a seconda del tipo di oggetto) e grafici che mostrano metriche per l'oggetto, come latenza o IOPS. Ulteriori schede consentono di esplorare risorse aggiuntive correlate o modifiche e avvisi. È possibile scegliere di visualizzare nei grafici anche le metriche per gli oggetti più correlati o in competizione.
+
+
+
+== Guardalo in azione
+
+link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["Risoluzione dei problemi semplificata con VM Analyzer (video)"]

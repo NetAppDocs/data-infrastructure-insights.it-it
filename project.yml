@@ -161,6 +161,12 @@ sidebar:
         url: "/concept_storage_virtualization.html"
       - title: Suggerimenti e suggerimenti per la ricerca delle risorse
         url: "/concept_searching_assets.html"
+    - title: Analisi dei dati
+      entries:
+      - title: Analizzatore SAN
+        url: "/san_analyzer_overview.html"
+      - title: Analizzatore VM
+        url: "/vm_analyzer_overview.html"
     - title: Creazione di report
       entries:
       - title: Panoramica sui report

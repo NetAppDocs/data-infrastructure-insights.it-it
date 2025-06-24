@@ -37,6 +37,12 @@ image:QuerySelectColumns.png["Selezionare colonne"]
 
 
 
+== Guardalo in azione
+
+link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Esplora e analizza con le query in Data Infrastructure Insights (video)"]
+
+
+
 == Scegliere aggregazione, unità, Formattazione condizionale
 
 
