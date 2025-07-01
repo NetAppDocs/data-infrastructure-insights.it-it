@@ -75,6 +75,9 @@ Salvate il monitor con un nome significativo e avete finito.
 Al momento della creazione, il monitor analizza i dati della settimana precedente per stabilire una linea di base iniziale. Il rilevamento delle anomalie diventa più accurato con il passare del tempo e con una maggiore cronologia.
 
 
+NOTE: Quando viene creato un monitor, DII esamina tutti i dati esistenti della settimana precedente per individuare picchi o cali significativi; questi sono considerati anomalie. Durante la prima settimana successiva alla creazione del monitor (la fase di "apprendimento"), è possibile che si verifichi un aumento del "rumore" negli avvisi. Per mitigare questo rumore, solo i picchi o i cali che durano più di 30 minuti sono considerati anomalie e generano avvisi. Nella settimana successiva, man mano che vengono analizzati più dati, il rumore solitamente si riduce e un picco o un calo significativo che duri un certo lasso di tempo verrà considerato un'anomalia.
+
+
 
 == Visualizzazione delle anomalie
 
