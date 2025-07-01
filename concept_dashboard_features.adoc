@@ -915,3 +915,6 @@ Inoltre, è possibile scegliere di mostrare la stagionalità _oraria_ o _giornal
 image:expected_bounds_settings.png["Impostazioni per i limiti delle anomalie, inclusi l'algoritmo di rilevamento, la stagionalità e la sensibilità"]
 
 Tenere presente che è possibile visualizzare i limiti previsti solo quando il grafico è impostato per visualizzare una singola riga. Se le impostazioni o i filtri del gruppo per mostrano più righe o se sono state impostate più query per il widget, l'opzione di visualizzazione dei limiti previsti verrà disattivata.
+
+
+NOTE: DII esamina tutti i dati esistenti per la settimana precedente la creazione del monitor e individua eventuali picchi o cali significativi di dati di durata superiore a 30 minuti: questi sono considerati anomalie. Durante la seconda settimana (fase di "apprendimento"), man mano che vengono raccolti e analizzati più punti dati, è possibile che si verifichi un aumento del "rumore" negli avvisi. Questo "rumore" in genere si riduce con l'aumentare dei dati analizzati nelle settimane successive.
