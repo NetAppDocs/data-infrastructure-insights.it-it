@@ -153,12 +153,38 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Errore: "Il Data Infrastructure Insights ha ricevuto un ruolo di telaio non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
 
 
-| Errore: "Indirizzo IP chassis non corrispondente" | Modificare la configurazione dell'origine dati per utilizzare l'indirizzo IP dello chassis. 
+| Errore: "Indirizzo IP chassis non corrispondente" | In generale, DII NON supporta la traduzione degli indirizzi di rete (NAT) o la traduzione degli indirizzi di porta (PAT) tra l'unità di acquisizione e i dispositivi. DII potrebbe rilevare che il nome host/indirizzo IP nella configurazione del collettore NON corrisponde a nessuno degli indirizzi che il dispositivo ritiene di avere. 
 
 
 | Viene visualizzato un messaggio che indica che più di un nodo è connesso alla porta Access Gateway | Verificare che il dispositivo NPV funzioni correttamente e che siano presenti tutti i WWN collegati. Non acquisire direttamente il dispositivo NPV. Invece, l'acquisizione dello switch fabric core raccoglierà i dati del dispositivo NPV. 
 
 
+| Errore: ....Numero massimo di sessioni remote per l'accesso... | FOS ha limiti diversi per il numero di sessioni SSH simultanee supportate per ruolo utente. La sessione SSH di DII verso questo dispositivo viene rifiutata all'accesso per violazione di tali limiti. Questo potrebbe indicare che collettori duplicati stanno scoprendo la stessa risorsa, il che dovrebbe essere evitato. 
+|===
+
+
+=== Performance
+
+[cols="2*"]
+|===
+| Problema: | Prova: 
+
+
 | La raccolta delle prestazioni non riesce e viene visualizzato il messaggio "Timed out during sending SNMP request". | A seconda delle variabili di query e della configurazione dello switch, alcune query potrebbero superare il timeout predefinito. link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Scopri di più"]. 
+
+
+| La raccolta delle prestazioni non riesce con ...Righe duplicate trovate nella tabella SNMP... | DII ha rilevato risposte SNMP errate. Probabilmente stai utilizzando FOS 8.2.3e. Aggiorna a 8.2.3e2 o versione successiva. 
+
+
+| La raccolta delle prestazioni fallisce con ...Nome utente sconosciuto... | Hai configurato il tuo raccoglitore DII con un valore "Nome utente SNMP" che non è presente in uno degli slot utente SNMPv3. La semplice creazione di un utente su Brocade FOS NON lo abilita necessariamente come utente SNMPv3: è necessario inserirlo in uno degli slot utente v3. 
+
+
+| La raccolta delle prestazioni fallisce con ...Livello di sicurezza non supportato... | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3, ma con impostazioni di crittografia (ovvero privacy) e/o di autorizzazione non abilitate sul dispositivo in questione. 
+
+
+| La raccolta delle prestazioni fallisce con ...La password di privacy vuota è consentita solo per il protocollo di privacy NESSUNO | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3, con un protocollo di crittografia noto anche come protocollo di privacy (AES, ecc.), ma hai un valore "SNMP Privacy Password" vuoto, quindi DII non può negoziare flussi di dati SNMPv3 crittografati con questo dispositivo 
+
+
+| La raccolta delle prestazioni fallisce con .....VF:nn, errore: nessun accesso... | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3 su un dispositivo con più Virtual Fabric abilitati, ma l'utente SNMPv3 NON dispone dei diritti per VF NN. DII non supporta il rilevamento parziale di una risorsa fisica: dovresti sempre concedere a DII l'accesso a tutti i 128 VF possibili in modo proattivo, poiché DII tenterà sempre di recuperare i dati sulle prestazioni per qualsiasi VF esistente su un dato dispositivo fisico. 
 |===
 Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
