@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_google_cloud_netapp_volumes.html 
-summary: Configurare il data collector dei volumi Google Cloud NetApp 
+summary: Configurare il raccoglitore dati Google Cloud NetApp Volumes . 
 keywords: data collector, queries, create, google, cloud, volumes, 
 ---
-= Raccolta di dati dei volumi Google Cloud NetApp di NetApp
+= Raccoglitore dati Google Cloud NetApp Volumes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ keywords: data collector, queries, create, google, cloud, volumes,
 
 
 [role="lead"]
-Questo data collector supporta la raccolta di inventario e performance dalle configurazioni della piattaforma cloud Google NetApp Volumes. Questo raccoglitore cercherà di scoprire tutte le risorse di calcolo all'interno di tutti i progetti all'interno di un'organizzazione Google. Se hai più organizzazioni Google che desideri scoprire con Data Infrastructure Insights, dovrai implementare un unico Data Infrastructure Insights Collector per organizzazione.
+Questo raccoglitore dati supporta la raccolta di dati di inventario e prestazioni dalle configurazioni Google Cloud NetApp Volumes . Il raccoglitore rileva i volumi NetApp e le risorse di storage in tutti i progetti all'interno di un'organizzazione Google. Se desideri monitorare più organizzazioni Google con Data Infrastructure Insights, distribuisci un raccoglitore per organizzazione.
 
 
 
 == Requisiti degli account di servizio
 
-* È necessario creare un account di servizio seguendo le istruzioni riportate in link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Creazione/gestione degli account di servizio"]. Tale account di servizio è identificato da un ID univoco, noto come _clientId_, che verrà utilizzato come nome utente.
+* È necessario creare un account di servizio seguendo le istruzioni riportate in link:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Creazione/gestione degli account di servizio"]. Questo account di servizio è identificato da un ID univoco, noto come _clientId_, che verrà utilizzato come nome utente.
 * Inoltre, creare un codice account di servizio seguendo le istruzioni riportate in link:https://cloud.google.com/iam/docs/creating-managing-service-account-keys["Creazione/gestione dei codici account del servizio"]. Questa chiave può essere scaricata come file json, il cui contenuto verrà utilizzato come password.
 * L'account del servizio deve essere definito come riferimento per _compute.readonly_, _monitoring.Read_ e _cloud-platform_.
 
@@ -29,7 +29,7 @@ Questo data collector supporta la raccolta di inventario e performance dalle con
 
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -40,7 +40,7 @@ Questo data collector supporta la raccolta di inventario e performance dalle con
 | Scegliere 'Escludi' o 'Includi' per filtrare le risorse GCNV in base alla posizione | L'impostazione predefinita è Escludi, poiché questo raccoglitore per impostazione predefinita intende rilevare tutti i volumi GCNV in tutto il mondo all'interno dell'organizzazione. 
 
 
-| GCNV Escludi/Includi posizioni | Questo valore predefinito è vuoto e viene utilizzato in combinazione con l'opzione "Scegli 'Escludi' o 'Includi'. Se si desidera solo scoprire le risorse all'interno di determinate regioni del mondo, queste 2 opzioni possono essere manipolate per limitare l'ambito di questo collezionista 
+| GCNV Escludi/Includi posizioni | Per impostazione predefinita, questo campo è vuoto e viene utilizzato insieme all'opzione "Scegli 'Escludi' o 'Includi'". Se si desidera rilevare risorse solo in determinate regioni, utilizzare queste due opzioni per limitare l'ambito di questo raccoglitore. 
 
 
 | ID progetto | L'elenco degli ID progetto che si desidera filtrare in entrata o in uscita dal rilevamento, a seconda del valore di "Choose 'Exclude"...." valore. L'elenco predefinito è vuoto 
@@ -55,7 +55,7 @@ Questo data collector supporta la raccolta di inventario e performance dalle con
 
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -63,7 +63,7 @@ Questo data collector supporta la raccolta di inventario e performance dalle con
 | Intervallo polling inventario (min) | Il valore predefinito è 60 minuti 
 
 
-| Utilizzare il proxy AU per le chiamate API REST | Questa casella di controllo farà in modo che il Collector utilizzi lo stesso proxy su cui risiede l'AU su cui risiede il Collector. Questa opzione non è attivata per impostazione predefinita. Ciò significa che il raccoglitore tenterà di inviare chiamate API HTTPS direttamente a Google. 
+| Utilizzare il proxy AU per le chiamate API REST | Seleziona questa opzione per far sì che il collector utilizzi lo stesso proxy dell'unità di acquisizione su cui risiede. Per impostazione predefinita, questa opzione è disabilitata, il che significa che il collector tenta di inviare chiamate API HTTPS direttamente a Google. 
 
 
 | Label Key e valori su cui filtrare le macchine virtuali | Fare clic su *+ Filter Label* (etichetta filtro) per scegliere quali macchine virtuali (e dischi associati) includere/escludere filtrando le chiavi e i valori corrispondenti alle chiavi e ai valori delle etichette sulla macchina virtuale. Label Key (chiave etichetta) è obbligatorio, Label Value (valore etichetta) è facoltativo. Quando il valore Label è vuoto, la VM viene filtrata fino a quando corrisponde alla chiave Label. 
