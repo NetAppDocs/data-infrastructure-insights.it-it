@@ -12667,4 +12667,6 @@
   <block id="c84711fe6ad5fa23070462b2086412e2" category="cell">un elenco di risorse separate da virgole per le quali kube-state-metrics dovrebbe acquisire le etichette +++ esempio: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*], persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*] +++</block>
   <block id="f7b8b6cbce2f95ef7109d41adce08b69" category="cell">Intervallo di dichiarazione di errore del carico di lavoro in secondi</block>
   <block id="02c3ccd1d51babc54da2759d79e61c5c" category="cell">Intervallo dopo il quale una distribuzione non riuscita di un carico di lavoro verrà contrassegnata come non riuscita, in secondi</block>
+  <block id="8edfed76354af11279c58c2d91948eda" category="cell">fluent-bit-containerLogPath</block>
+  <block id="3150c73f1d1522f3b831f0d591077194" category="cell">Per impostazione predefinita, Fluentbit DaemonSet monterà i percorsi host /var/log e /var/lib/docker/containers per accedere/leggere i log dei container Kubernetes. Se Kubernetes è stato configurato per posizionare i log dei container in una posizione diversa da quella predefinita, utilizzare questa opzione per modificare Fluentbit DaemonSet in modo che monti il percorso diverso da quello predefinito.</block>
 </blocks>
