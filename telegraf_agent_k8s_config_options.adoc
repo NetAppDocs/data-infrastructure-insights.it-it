@@ -14,7 +14,7 @@ summary: 'Configurare l"operatore di monitoraggio NetApp Kubernetes utilizzando 
 
 
 [role="lead"]
-IL link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Operatore di monitoring Kubernetes"] Offre ampie opzioni di personalizzazione tramite il file AgentConfiguration. Configura limiti di risorse, intervalli di raccolta, impostazioni proxy, tolleranze e impostazioni specifiche per ogni componente per Telegraf, Kube-State-Metrics, raccolta di log, mappatura dei carichi di lavoro, gestione delle modifiche e altro ancora per ottimizzare il monitoraggio del tuo ambiente Kubernetes.
+IL link:task_config_telegraf_agent_k8s.html#configuringcustomizing-the-operator["Operatore di monitoring Kubernetes"] Offre ampie opzioni di personalizzazione tramite il file AgentConfiguration. È possibile configurare limiti di risorse, intervalli di raccolta, impostazioni proxy, tolleranze e impostazioni specifiche per ogni componente per ottimizzare il monitoraggio del proprio ambiente Kubernetes. Utilizzare queste opzioni per personalizzare telegraf, kube-state-metrics, la raccolta dei log, la mappatura dei carichi di lavoro, la gestione delle modifiche e altri componenti di monitoraggio.
 
 La tabella seguente elenca le opzioni possibili per il file _AgentConfiguration_:
 
@@ -26,13 +26,13 @@ La tabella seguente elenca le opzioni possibili per il file _AgentConfiguration_
 | agente |  | Opzioni di configurazione comuni a tutti i componenti che l'operatore può installare. Queste opzioni possono essere considerate "globali". 
 
 
-|  | DockerRepo | Un dockerRepo override per estrarre le immagini dai repos privati dei docker dei clienti rispetto a Data Infrastructure Insights docker repo. Di default è incluso il repo del docker di Data Infrastructure Insights 
+|  | DockerRepo | Un override di dockerRepo per estrarre le immagini dai repository Docker privati del cliente anziché dal repository Docker Data Infrastructure Insights . L'impostazione predefinita è il repository Docker Data Infrastructure Insights . 
 
 
-|  | DockerImagePullSecret | Facoltativo: Un segreto per i clienti privati 
+|  | DockerImagePullSecret | Facoltativo: un segreto per il repository privato del cliente. 
 
 
-|  | Nome cluster | Campo di testo libero che identifica in modo univoco un cluster in tutti i cluster dei clienti. Questa impostazione deve essere univoca in un tenant Data Infrastructure Insights. Il valore predefinito è quello che il cliente inserisce nell'interfaccia utente per il campo "Cluster Name" (Nome cluster) 
+|  | Nome cluster | Campo di testo libero che identifica in modo univoco un cluster tra tutti i cluster dei clienti. Deve essere univoco per ogni tenant Data Infrastructure Insights . Il valore predefinito è quello inserito dal cliente nell'interfaccia utente per il campo "Nome cluster". 
 
 
 |  | Proxy Format: Proxy: Server: Porta: Nome utente: Password: NoProxy: IsTelegrafProxyEnabled: IsAuProxyEnabled: IsFluentbitProxyEnabled: IsCollectorProxyEnabled: | Opzionale per impostare proxy. Si tratta in genere del proxy aziendale del cliente. 
@@ -107,7 +107,7 @@ La tabella seguente elenca le opzioni possibili per il file _AgentConfiguration_
 |  | SkipProcessorsAfterAggregators | Vedere link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentazione sulla configurazione di Telegraf"] 
 
 
-|  | non protetto | ee questo link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["Problema noto di Telegraf"]. L'impostazione _non protetta_ indicherà all'operatore di monitoraggio Kubernetes di eseguire Telegraf con il `--unprotected` flag. 
+|  | non protetto | Vedi questo link:https://community.influxdata.com/t/updating-telegraf-to-version-1-29-5-crashes-kubernetes-pod/33376["Problema noto di Telegraf"] L' impostazione _non protetto_ indicherà all'operatore di monitoraggio di Kubernetes di eseguire Telegraf con  `--unprotected` bandiera. 
 
 
 |  | insecureK8sSkipVerify | Se telegraf non è in grado di verificare il certificato a causa della mancanza di SAN IP, provare ad attivare il salto di verifica 
@@ -209,10 +209,10 @@ La tabella seguente elenca le opzioni possibili per il file _AgentConfiguration_
 |  | Intervallo di dichiarazione di errore del carico di lavoro in secondi | Intervallo dopo il quale una distribuzione non riuscita di un carico di lavoro verrà contrassegnata come non riuscita, in secondi 
 
 
-|  | DeployAggrIntervalSeconds | Frequenza con cui vengono inviati gli eventi di distribuzione del carico di lavoro in corso 
+|  | carico di lavoroDistribuisciAggrIntervalSecondi | Frequenza con cui le distribuzioni dei carichi di lavoro vengono combinate e inviate, in secondi 
 
 
-|  | NonWorkloadAggrIntervalSeconds | Frequenza di combinazione e invio delle implementazioni non a carico di lavoro 
+|  | nonWorkloadDeployAggrIntervalSeconds | Frequenza con cui le distribuzioni non relative al carico di lavoro vengono combinate e inviate, in secondi 
 
 
 |  | TermsToRedact | Un insieme di espressioni regolari utilizzate nei nomi env e nelle mappe di dati il cui valore sarà redacted termini di esempio:"pwd", "password", "token", "apikey", "api-key", "jwt" 
@@ -468,11 +468,11 @@ spec:
     # # Interval after which a non-successful deployment of a workload will be marked as failed, in seconds
     # workloadFailureDeclarationIntervalSeconds: '30'
 
-    # # Frequency at which workload deployment in-progress events are sent
-    # deployAggrIntervalSeconds: '300'
+    # # Frequency at which workload deployments are combined and sent, in seconds
+    # workloadDeployAggrIntervalSeconds: '300'
 
-    # # Frequency at which non-workload deployments are combined and sent
-    # nonWorkloadAggrIntervalSeconds: '15'
+    # # Frequency at which non-workload deployments are combined and sent, in seconds
+    # nonWorkloadDeployAggrIntervalSeconds: '15'
 
     # # A set of regular expressions used in env names and data maps whose value will be redacted
     # termsToRedact: '"pwd", "password", "token", "apikey", "api-key", "api_key", "jwt", "accesskey", "access_key", "access-key", "ca-file", "key-file", "cert", "cafile", "keyfile", "tls", "crt", "salt", ".dockerconfigjson", "auth", "secret"'
