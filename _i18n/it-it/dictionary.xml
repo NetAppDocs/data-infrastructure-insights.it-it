@@ -1857,7 +1857,6 @@
   <block id="dcfc2d1a305cec73fa5f84fa3a0ed89c" category="paragraph">Data Infrastructure Insights visualizza un banner quando la prova gratuita si sta avvicinando al termine All'interno di questo banner è presente un link _View Subscription_, che apre la pagina *Admin -&gt; Subscription*. Gli utenti non amministratori vedranno il banner ma non potranno accedere alla pagina di abbonamento.</block>
   <block id="14e0941a34fd8121073e220481ffa66f" category="admonition">Se hai bisogno di altro tempo per valutare Data Infrastructure Insights e la tua prova scadrà tra 4 giorni o meno, puoi prolungare la tua prova per altri 30 giorni. Puoi estendere la prova una sola volta. Non è possibile prolungare la validità se la versione di prova è scaduta.</block>
   <block id="de41af8028b5287cc6d65bb0e73cae11" category="section-title">Prova con AWS Marketplace</block>
-  <block id="c66bd552dea63071ad19e124c869ab2e" category="paragraph">La versione di prova gratuita di AWS Marketplace non può essere estesa. In qualsiasi momento durante il periodo di prova, è possibile eseguire il downgrade a un abbonamento Data Infrastructure Insights Basic Edition o passare a un abbonamento a pagamento Data Infrastructure Insights visitando la pagina *Admin -&gt; Subscription*.</block>
   <block id="03742c91392961db83c5540550a3500a" category="section-title">Cosa fare se la versione di prova è scaduta?</block>
   <block id="55b44e6cb866667b35e33325e5f2b246" category="paragraph">Se la versione di prova gratuita è scaduta e non si è ancora abbonati a Data Infrastructure Insights, le funzionalità saranno limitate fino all'iscrizione. L'acquisizione dei dati potrebbe cessare e, dopo alcune settimane, i dati verranno eliminati in base alla nostra politica di conservazione dei dati.</block>
   <block id="35b65825e5ac5124cb47e8b94e7e203a" category="paragraph">Se si dispone di un abbonamento a Data Infrastructure Insights, ma tale abbonamento è scaduto, si avrà un periodo di tolleranza di cinque giorni per rinnovare l'abbonamento. Tutte le funzionalità di Data Infrastructure Insights rimarranno attive durante questo periodo di valutazione.</block>
@@ -12671,4 +12670,5 @@
   <block id="f5d43bfb3eaf806884e4936fc4453865" category="cell">Frequenza con cui le distribuzioni dei carichi di lavoro vengono combinate e inviate, in secondi</block>
   <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">Frequenza con cui le distribuzioni non relative al carico di lavoro vengono combinate e inviate, in secondi</block>
+  <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">La prova gratuita di AWS Marketplace non può essere estesa.</block>
 </blocks>

@@ -64,7 +64,7 @@ NOTE: Se hai bisogno di altro tempo per valutare Data Infrastructure Insights e 
 
 Puoi anche iscriverti per una prova gratuita tramite AWS Marketplace. La prova gratuita di AWS Marketplace ti dà accesso a Data Infrastructure Insights per un periodo di prova di 33 giorni.
 
-La versione di prova gratuita di AWS Marketplace non può essere estesa. In qualsiasi momento durante il periodo di prova, è possibile eseguire il downgrade a un abbonamento Data Infrastructure Insights Basic Edition o passare a un abbonamento a pagamento Data Infrastructure Insights visitando la pagina *Admin -> Subscription*.
+La prova gratuita di AWS Marketplace non può essere estesa.
 
 
 

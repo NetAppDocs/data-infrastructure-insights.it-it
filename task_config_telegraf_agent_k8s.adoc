@@ -8,6 +8,9 @@ summary: 'L"operatore di monitoring Kubernetes raccoglie i dati Kubernetes per l
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -92,7 +95,7 @@ Se l'aggiornamento è stato eseguito utilizzando la funzione di aggiornamento tr
 
 Determinare se esiste una configurazione Agentcon l'operatore esistente (se lo spazio dei nomi non è il _monitoraggio netapp_ predefinito, sostituire lo spazio dei nomi appropriato):
 
- kubectl -n netapp-monitoring get agentconfiguration netapp-monitoring-configuration
+ kubectl -n netapp-monitoring get agentconfiguration netapp-ci-monitoring-configuration
 Se esiste una configurazione AgentConfiguration:
 
 * <<installing-the-kubernetes-monitoring-operator,Installare>> L'operatore più recente rispetto all'operatore esistente.
@@ -325,8 +328,8 @@ Per rimuovere l'autorizzazione per l'operatore di monitoraggio Kubernetes a visu
 
 [listing]
 ----
- ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
- ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
+ ClusterRole/netapp-ci<namespace>-agent-secret
+ ClusterRoleBinding/netapp-ci<namespace>-agent-secret
 ----
 Se si tratta di un aggiornamento, eliminare anche le risorse dal cluster:
 
@@ -334,11 +337,12 @@ Se si tratta di un aggiornamento, eliminare anche le risorse dal cluster:
 ----
  kubectl delete ClusterRole/netapp-ci-<namespace>-agent-secret-clusterrole
  kubectl delete ClusterRoleBinding/netapp-ci-<namespace>-agent-secret-clusterrolebinding
+
 ----
 Se l'analisi delle modifiche è attivata, modificare _AgentConfiguration_ o _operator-config.yaml_ per annullare il commento alla sezione di gestione delle modifiche e includere _kindsToIgnoreFromWatch: '"secrets"'_ nella sezione di gestione delle modifiche. Notare la presenza e la posizione di virgolette singole e doppie in questa riga.
 
 ....
-# change-management:
+change-management:
   ...
   # # A comma separated list of kinds to ignore from watching from the default set of kinds watched by the collector
   # # Each kind will have to be prefixed by its apigroup
