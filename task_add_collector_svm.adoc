@@ -278,12 +278,12 @@ Per MetroCluster si consiglia quanto segue:
 
 . Collegare due data collettori, uno alla SVM di origine e l'altro alla SVM di destinazione.
 . I data collezioner devono essere collegati da _Cluster IP_.
-. In qualsiasi momento, un data collector dovrebbe essere in esecuzione, un altro potrebbe essere in errore.
+. In qualsiasi momento, se un raccoglitore di dati è in esecuzione, un altro verrà visualizzato come _Arrestato_.
 +
-Il data collector della SVM corrente 'in esecuzione' verrà visualizzato come _in esecuzione_. Il data collector della SVM 'sormontata' corrente verrà visualizzato come _Error_.
+Il raccoglitore dati dell'SVM attualmente in esecuzione verrà visualizzato come _In esecuzione_.  Il raccoglitore dati dell'SVM attualmente 'arrestato' verrà visualizzato come _Arrestato_.
 
-. Ogni volta che si verifica uno switchover, lo stato del data collector passa da 'in esecuzione' a 'errore' e viceversa.
-. Il data collector richiede fino a due minuti per passare dallo stato di errore allo stato di esecuzione.
+. Ogni volta che si verifica un passaggio, lo stato del raccoglitore dati cambierà da "in esecuzione" a "arrestato" e viceversa.
+. Ci vorranno fino a due minuti affinché il raccoglitore dati passi dallo stato _Arrestato_ allo stato _In esecuzione_.
 
 
 

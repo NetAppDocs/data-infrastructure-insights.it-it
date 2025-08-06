@@ -5930,8 +5930,6 @@
   <block id="eff16f7e2ed55dec2fc30b6481ebf593" category="paragraph">Per MetroCluster si consiglia quanto segue:</block>
   <block id="65b46bd8eed280f6feefa47f4a74d302" category="list-text">Collegare due data collettori, uno alla SVM di origine e l'altro alla SVM di destinazione.</block>
   <block id="d5d55b52a220ca4d14feac2aa8b83d23" category="list-text">I data collezioner devono essere collegati da _Cluster IP_.</block>
-  <block id="c2e2e688fedcc6b98883e05a15afc9b8" category="list-text">In qualsiasi momento, un data collector dovrebbe essere in esecuzione, un altro potrebbe essere in errore.</block>
-  <block id="34d88af94446d0d86575e402898fc1b0" category="list-text">Il data collector richiede fino a due minuti per passare dallo stato di errore allo stato di esecuzione.</block>
   <block id="f0240b95ecfe16d637a84130b5ed57d9" category="section-title">Policy di servizio</block>
   <block id="4cb8e0d8b1d299b402fd5ddce7d39cd5" category="paragraph">Se si utilizza la politica di servizio con ONTAP *versione 9.9.1 o successiva*, per connettersi al Data Source Collector, è necessario il servizio _data-fpolicy-client_ insieme al servizio dati _data-nfs_ e/o _data-cifs_.</block>
   <block id="ee22588534e4e3b699a85e968f56f4a7" category="paragraph">Nelle versioni di ONTAP precedenti alla 9.9 non è necessario impostare _data-fpolicy-client_.</block>
@@ -12344,8 +12342,6 @@
   <block id="1b0825e538a70e8323fac1cbfe230ee5" category="paragraph">Nota: È possibile creare un singolo ruolo da utilizzare per tutte le autorizzazioni di funzione per un utente personalizzato. Se esiste un utente esistente, eliminare prima l'utente e il ruolo esistenti utilizzando questi comandi:</block>
   <block id="91f83541442d1c49aaf40212bccffad1" category="paragraph">Nota: È possibile creare un singolo ruolo da utilizzare per tutte le autorizzazioni di funzione per un utente personalizzato. Se esiste un utente esistente, eliminare prima l'utente e il ruolo esistenti utilizzando questi comandi:</block>
   <block id="858faeb682f19ff16f83d24c86cb97f7" category="cell">Nome utente per accedere a SVM/Cluster quando si aggiunge tramite l'IP del cluster, le opzioni sono: 1. Cluster-admin 2. 'csuser' 3. AD-user che ha un ruolo simile a csuser. Quando si aggiunge tramite IP SVM, le opzioni sono: 4. Vsadmin 5. 'csuser' 6. NOME utente AD con ruolo simile a csuser.</block>
-  <block id="0851edbfbb1a0406acbc79df15296b3f" category="paragraph">Il data collector della SVM corrente 'in esecuzione' verrà visualizzato come _in esecuzione_. Il data collector della SVM 'sormontata' corrente verrà visualizzato come _Error_.</block>
-  <block id="046c8e391630ab49d75409e270a4f4b6" category="list-text">Ogni volta che si verifica uno switchover, lo stato del data collector passa da 'in esecuzione' a 'errore' e viceversa.</block>
   <block id="7a69a2fce9a9acb9c8a84936863c1330" category="paragraph">Si noti che se in ONTAP vengono creati nuovi volumi, ecc. mentre il collector è in pausa, workload Security non raccoglierà i dati e tali volumi, ecc. non saranno riflessi in dashboard o tabelle.</block>
   <block id="0d55775dbf06cf5596fe0f5c3363f19a" category="list-text">L'eliminazione delle istantanee non avviene in base alle impostazioni configurate su un raccoglitore in pausa.</block>
   <block id="f8b4c5607366d38cf806b0860c9cc5e4" category="list-text">Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un raccoglitore in pausa. Ciò significa che se ONTAP identifica un attacco ransomware, la sicurezza del workload di Data Infrastructure Insights non sarà in grado di acquisire quell'evento.</block>
@@ -12671,4 +12667,8 @@
   <block id="fb937d63289578595fb05fc626554661" category="cell">nonWorkloadDeployAggrIntervalSeconds</block>
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">Frequenza con cui le distribuzioni non relative al carico di lavoro vengono combinate e inviate, in secondi</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">La prova gratuita di AWS Marketplace non può essere estesa.</block>
+  <block id="f9140e559462604832a886e4eb558360" category="list-text">In qualsiasi momento, se un raccoglitore di dati è in esecuzione, un altro verrà visualizzato come _Arrestato_.</block>
+  <block id="a2c39bece4ce05e23c13d7dc078d390f" category="paragraph">Il raccoglitore dati dell'SVM attualmente in esecuzione verrà visualizzato come _In esecuzione_.  Il raccoglitore dati dell'SVM attualmente 'arrestato' verrà visualizzato come _Arrestato_.</block>
+  <block id="e02fc5a08fc17a2cc71f90cc044645af" category="list-text">Ogni volta che si verifica un passaggio, lo stato del raccoglitore dati cambierà da "in esecuzione" a "arrestato" e viceversa.</block>
+  <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">Ci vorranno fino a due minuti affinché il raccoglitore dati passi dallo stato _Arrestato_ allo stato _In esecuzione_.</block>
 </blocks>
