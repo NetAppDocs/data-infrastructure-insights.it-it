@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: monitor_infrastructure_health.html 
-keywords: health, infra, infrastructure, monitoring 
-summary: monitorare lo stato di salute delle infrastrutture 
+keywords: health, monitor, infrastructure 
+summary: 'Monitorare lo stato di salute dell"infrastruttura' 
 ---
-= Monitorare lo stato di salute delle infrastrutture
+= Monitorare lo stato di salute dell'infrastruttura
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,4 +14,4 @@ summary: monitorare lo stato di salute delle infrastrutture
 
 
 [role="lead"]
-Monitorare lo stato di salute delle infrastrutture
+Monitorare lo stato di salute dell'infrastruttura

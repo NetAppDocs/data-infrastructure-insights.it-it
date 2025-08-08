@@ -4,7 +4,6 @@ permalink: concept_feature_tutorials.html
 summary: Data Infrastructure Insights dispone di tutorial che illustrano come eseguire molte attività. 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
-
 = Tutorial sulle funzioni
 :hardbreaks:
 :allow-uri-read: 

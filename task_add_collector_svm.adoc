@@ -14,7 +14,7 @@ summary: Aggiunta dei data collettori di workload Security
 
 
 [role="lead"]
-Workload Security utilizza i data colleator per raccogliere i dati di accesso ai file e agli utenti dai dispositivi.
+ONTAP SVM Data Collector consente a Workload Security di monitorare le attività di accesso ai file e agli utenti sulle macchine virtuali di storage (SVM) NetApp ONTAP .  Questa guida illustra i prerequisiti, la configurazione e la gestione del raccoglitore dati SVM per fornire un monitoraggio completo della sicurezza del tuo ambiente ONTAP .
 
 
 
@@ -278,11 +278,8 @@ Per MetroCluster si consiglia quanto segue:
 
 . Collegare due data collettori, uno alla SVM di origine e l'altro alla SVM di destinazione.
 . I data collezioner devono essere collegati da _Cluster IP_.
-. In qualsiasi momento, se un raccoglitore di dati è in esecuzione, un altro verrà visualizzato come _Arrestato_.
-+
-Il raccoglitore dati dell'SVM attualmente in esecuzione verrà visualizzato come _In esecuzione_.  Il raccoglitore dati dell'SVM attualmente 'arrestato' verrà visualizzato come _Arrestato_.
-
-. Ogni volta che si verifica un passaggio, lo stato del raccoglitore dati cambierà da "in esecuzione" a "arrestato" e viceversa.
+. In qualsiasi momento, il raccoglitore dati dell'SVM attualmente in esecuzione verrà visualizzato come _In esecuzione_. Il raccoglitore dati dell'SVM attualmente 'arrestato' verrà visualizzato come _Arrestato_.
+. Ogni volta che si verifica un passaggio, lo stato del raccoglitore dati cambierà da _In esecuzione_ a _Arrestato_ e viceversa.
 . Ci vorranno fino a due minuti affinché il raccoglitore dati passi dallo stato _Arrestato_ allo stato _In esecuzione_.
 
 
