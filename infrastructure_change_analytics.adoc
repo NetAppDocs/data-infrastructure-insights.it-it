@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: infrastructure_change_analytics.html 
 keywords: changes, management, analysis, infra, infrastructure 
-summary: 'Cloud Insights tiene traccia delle modifiche nell"infrastruttura per semplificare analisi e troubleshooting.' 
+summary: 'Data Infrastructure Insights monitora i cambiamenti nell"infrastruttura per semplificare l"analisi e la risoluzione dei problemi.' 
 ---
 = Analisi delle modifiche all'infrastruttura
 :hardbreaks:

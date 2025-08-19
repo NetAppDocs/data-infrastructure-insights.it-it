@@ -13,12 +13,3 @@ keywords: coming soon, preview,
 Data Infrastructure Insights mette in evidenza nuove caratteristiche e funzionalità in modo _Preview_. Le funzionalità di anteprima sono disponibili in ambienti limitati o con capacità limitata.
 
 Se si desidera visualizzare in anteprima una o più funzioni, contattare il link:https://bluexp.netapp.com/contact-cds["Team di vendita NetApp"] per ulteriori informazioni.
-
-|===
-
-
-| *Funzione* | *Descrizione* 
-
-
-| Recuperare lo storage a freddo ONTAP | Fornisce visualizzazioni dei carichi di lavoro dei volumi ONTAP con capacità a freddo e altre metriche correlate. 
-|===
