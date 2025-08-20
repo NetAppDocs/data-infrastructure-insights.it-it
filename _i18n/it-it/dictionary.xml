@@ -11206,7 +11206,6 @@
   <block id="3208596ca58c1fef6b7222123babb2fc" category="paragraph"><block ref="3208596ca58c1fef6b7222123babb2fc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9c55b8bf6c1b8aab646e91366d10f4c2" category="list-text">Un grafico che mostra _Cronologia attività_ (in base all'intervallo temporale globale selezionato)</block>
   <block id="977eedf5743a236d4137f46ddfcd8dea" category="list-text">Un elenco dei dati _tutte le attività_.</block>
-  <block id="ce0a4ef9bdcf713141ba5af92b5449a2" category="list-text">Un elenco a discesa raggruppa per fornisce l'opzione di raggruppare l'attività per utenti, percorso, tipo di entità, ecc.</block>
   <block id="2f67a7ee2834facb4c2289f3f9f8a7b0" category="list-text">Un pulsante di percorso comune sarà disponibile sopra la tabella con un clic del quale è possibile estrarre il pannello con i dettagli del percorso dell'entità.</block>
   <block id="2b9b3cac1b8e073b6533f3389ac6ad5f" category="list-text">Il *utente* che ha effettuato l'accesso all'entità con un collegamento al <block ref="62cf04ad66abc0c5964885d5ae0624ca" category="inline-link-macro-rx"></block>come pannello scorrevole.</block>
   <block id="2c20ae8e4eac25c0be12e73a9aea15f8" category="list-text">La cartella *1st Level (Root)* è la directory principale del percorso dell'entità in minuscolo.</block>
@@ -12697,4 +12696,5 @@
   <block id="9a1645f81973ce35a5b8a3cb57dafb2e" category="paragraph">Una volta risolti gli avvisi, le riduzioni del punteggio di integrità diminuiscono gradualmente e il punteggio viene ripristinato completamente entro 2 ore.</block>
   <block id="3ad17df8e0c21cd3fba4fa89d748a88e" category="paragraph">Questo raccoglitore di dati acquisisce dati di inventario, registri EMS e dati sulle prestazioni dai sistemi di archiviazione che eseguono ONTAP 9.14.1 e versioni successive utilizzando chiamate API REST.  Per i sistemi ONTAP nelle versioni precedenti, utilizzare il tipo di collettore "NetApp ONTAP Data Management Software" basato su ZAPI.</block>
   <block id="93c13f56f33b4026f411d3de7b0577a5" category="paragraph">Se necessario, puoi verificare l'accesso spi:</block>
+  <block id="1895704ffbc6e56720172ab7d145f8ae" category="list-text">Un menu a discesa "Raggruppa per" fornirà l'opzione di raggruppare l'attività in base agli utenti, al tipo di entità, ecc.</block>
 </blocks>

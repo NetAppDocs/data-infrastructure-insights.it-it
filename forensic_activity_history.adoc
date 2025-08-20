@@ -27,7 +27,7 @@ Fare clic su *Forensics > Activity Forensics* (analisi > analisi delle attività
 È possibile ingrandire il grafico trascinando un rettangolo nel grafico. L'intera pagina viene caricata per visualizzare l'intervallo di tempo di zoom. Quando si esegue lo zoom avanti, viene visualizzato un pulsante che consente all'utente di eseguire lo zoom indietro.
 
 * Un elenco dei dati _tutte le attività_.
-* Un elenco a discesa raggruppa per fornisce l'opzione di raggruppare l'attività per utenti, percorso, tipo di entità, ecc.
+* Un menu a discesa "Raggruppa per" fornirà l'opzione di raggruppare l'attività in base agli utenti, al tipo di entità, ecc.
 * Un pulsante di percorso comune sarà disponibile sopra la tabella con un clic del quale è possibile estrarre il pannello con i dettagli del percorso dell'entità.
 
 
