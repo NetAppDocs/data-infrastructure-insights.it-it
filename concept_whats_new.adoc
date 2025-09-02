@@ -18,6 +18,49 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Ecco alcu
 
 
 
+== Agosto 2025
+
+
+
+=== Dati widget mirati a portata di mano
+
+La nuova funzionalità *Analizza* presente nella maggior parte dei widget consente di analizzare più da vicino i dati di un widget alla volta.  Basta fare clic sul pulsante "Analizza" su un widget per aprire una vista dettagliata, in cui è possibile esplorare in modo interattivo i dati sottostanti e ingrandire per ottenere informazioni più approfondite, senza uscire dal contesto della dashboard.
+
+image:widget_analyze_panel.png["Pannello di analisi per un widget di linea, larghezza=900"]
+
+
+
+=== Dashboard di esportazione e importazione
+
+Se gestisci più tenant e hai sviluppato una dashboard utile, puoi esportare la dashboard e importarla in un altro tenant.
+
+image:dashboard_import_from_file.png["immagine che mostra l'importazione"] image:dashboard_export_from_menu.png["immagine che mostra l'esportazione"]
+
+
+
+=== Integrazione cloud avanzata: supporto Google Cloud NetApp Volumes (GCNV)
+
+* Google Cloud NetApp Volumes* (GCNV) è ora pienamente supportato come raccoglitore di dati in DII, completando il nostro ecosistema per il monitoraggio del cloud ibrido.  Ottieni visibilità sugli oggetti di archiviazione critici come organizzazioni, pool e volumi nell'intera infrastruttura.  Ora puoi monitorare tutti i tuoi ambienti di archiviazione, in locale o nel cloud, da un'unica piattaforma.
+
+
+
+=== Monitoraggio StorageGRID migliorato
+
+La raccolta dei log StorageGRID è ora abilitata per impostazione predefinita, fornendo dati di monitoraggio degli eventi a DII; inoltre, abbiamo ampliato il monitoraggio di StorageGrid con oltre 50 avvisi predefiniti, monitoraggio degli eventi in tempo reale e nuove dashboard per semplificare le complesse operazioni di Storage Grid.  Rimani al passo con i problemi grazie a informazioni più approfondite sulle policy del traffico e sulle prestazioni dei bucket.
+
+
+
+=== Supporto del sistema operativo
+
+I seguenti sistemi operativi sono ora supportati con le unità di acquisizione di Data Infrastructure Insights, oltre a quelli link:concept_acquisition_unit_requirements.html["già supportato"]:
+
+* AlmaLinux (64 bit) 10
+* Red Hat (64 bit) 10
+* Rocky (64 bit) 9.6
+
+
+
+
 == Giugno 2025
 
 

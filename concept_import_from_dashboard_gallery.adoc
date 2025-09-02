@@ -1,27 +1,47 @@
 ---
 sidebar: sidebar 
 permalink: concept_import_from_dashboard_gallery.html 
-summary: È possibile importare dashboard consigliate per rispondere alle domande di business Insight. 
-keywords: dashboard, gallery, import 
+summary: È possibile importare dashboard consigliate per rispondere alle domande di approfondimento aziendale.  Puoi anche importare dashboard personalizzate che hai precedentemente esportato. 
+keywords: dashboard, gallery, import, export 
 ---
-= Importazione dalla galleria Dashboard
+= Importazione di dashboard
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights fornisce una serie di dashboard consigliati per fornire informazioni aziendali sui dati. Ogni dashboard contiene widget progettati per aiutare a rispondere a una particolare domanda o a risolvere un particolare problema relativo ai dati attualmente raccolti sul tenant.
+Data Infrastructure Insights fornisce una serie di dashboard consigliate per ottenere informazioni aziendali sui tuoi dati.  Ogni dashboard contiene widget progettati per aiutarti a rispondere a una domanda specifica o a risolvere un problema specifico rilevante per i dati attualmente raccolti sul tuo tenant.  DII consente inoltre di esportare una dashboard utile e di importarla in un altro tenant.
+
+
+
+== Importazione dalla galleria Dashboard
 
 Per importare una dashboard dalla galleria, procedere come segue:
 
-. Selezionare *Dashboard > Dashboard*
-. Fare clic su *+da Gallery*
+. Seleziona *Osservabilità > Esplora > Tutte le dashboard*
+. Fare clic su *+Importa dashboard* e scegliere _Importa dalla galleria_.
 +
-Viene visualizzato un elenco di *Dashboard raccomandati*. Ogni dashboard viene chiamata con una domanda specifica che la dashboard può aiutarti a risolvere. Sono disponibili dashboard per rispondere a domande relative a diversi tipi di oggetti, tra cui AWS, NetApp, Storage, VMware, e altri
+Viene visualizzato un elenco di *Dashboard consigliate*, in base ai raccoglitori di dati presenti nel tuo ambiente.  Sono disponibili dashboard per rispondere a domande su diversi tipi di oggetti, tra cui AWS, NetApp, Storage, VMware e altri.
 
-. Selezionare una o più dashboard dall'elenco e fare clic su *Aggiungi dashboard*. Queste dashboard vengono ora visualizzate nell'elenco della dashboard.
+. Seleziona una o più dashboard dall'elenco e fai clic su *Aggiungi dashboard*.  Queste dashboard verranno visualizzate nell'elenco delle dashboard.
 
 
 Oltre ai dashboard consigliati, è anche possibile scegliere di importare *Dashboard aggiuntivi* che non sono rilevanti per i dati correnti. Ad esempio, se non si dispone di data raccoglitori di storage attualmente installati ma si prevede di configurarne alcuni in futuro, è comunque possibile scegliere di importare i dashboard relativi allo storage. Queste dashboard saranno disponibili per la visualizzazione ma potrebbero non mostrare alcun dato rilevante fino a quando non viene configurato almeno un data collector per lo storage.
 
 L'importazione dalla galleria del dashboard è disponibile per gli utenti con ruolo di amministratore o di proprietario dell'account.
+
+
+
+== Importazione di una dashboard esportata
+
+Per *esportare* una dashboard, nella pagina *Osservabilità > Esplora > Tutte le dashboard*, fare clic sul menu a destra della dashboard e scegliere _Esporta_.  È anche possibile selezionare più dashboard e scegliere _Esporta_ dal menu a discesa _Azioni in blocco_.  I dashboard vengono salvati in un file .ZIP sul sistema locale.
+
+Per *importare* la dashboard, vai al tenant desiderato e procedi come segue:
+
+. Seleziona *Osservabilità > Esplora > Tutte le dashboard*
+. Fare clic su *+Importa dashboard* e scegliere _Importa da file_.  Seleziona il file .ZIP del file esportato in precedenza.  La/le dashboard verranno importate e verranno visualizzate nell'elenco delle dashboard.  Tieni presente che se stai importando una dashboard con lo stesso nome di una dashboard esistente, al nome della dashboard verrà aggiunto un "(2)".
+

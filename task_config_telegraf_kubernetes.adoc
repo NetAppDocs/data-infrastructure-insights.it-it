@@ -42,6 +42,10 @@ L'operatore di monitoraggio Kubernetes NetApp estrae i contatori delle metriche 
 . Metriche di richiesta di volume persistente
 . Metriche pod
 . Metriche ReplicaSet
-. Metriche del servizio
+. Metriche di servizio
 . Metriche StatefulSet
+. Metriche di Horizontal Pod AutoScaler
+. Metriche Cronjob
+. Metriche di lavoro
+. Metriche delle quote delle risorse
 
