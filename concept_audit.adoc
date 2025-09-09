@@ -7,6 +7,10 @@ summary: 'L"audit fornisce una vista delle attività del sistema e degli utenti 
 = Controllo
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -135,11 +139,13 @@ Gli eventi di audit visualizzati verranno esportati in un file .CSV, fino a un m
 
 == Conservazione dei dati di audit
 
-La quantità di tempo in cui Data Infrastructure Insights mantiene i dati di audit si basa sull'edizione:
+La quantità di tempo in cui Data Infrastructure Insights conserva i dati di audit dipende dall'abbonamento:
 
-* Basic Edition: I dati di audit vengono conservati per 30 giorni
-* Edizioni Standard e Premium: I dati di audit vengono conservati per 1 anno più 1 giorno
+* Ambienti di prova: i dati di audit vengono conservati per 30 giorni
+* Ambienti sottoscritti: i dati di audit vengono conservati per 1 anno più 1 giorno
 
+
+Le voci di audit precedenti al tempo di conservazione vengono eliminate automaticamente. Non è richiesta alcuna interazione da parte dell'utente.
 
 Le voci di audit precedenti al tempo di conservazione vengono eliminate automaticamente. Non è richiesta alcuna interazione da parte dell'utente.
 

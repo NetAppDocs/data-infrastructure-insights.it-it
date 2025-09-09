@@ -14,10 +14,7 @@ summary: 'Creare monitor per avvisare sulle soglie delle performance o dell"inve
 
 
 [role="lead"]
-È possibile creare monitor per impostare soglie che attivino avvisi per segnalare problemi relativi alle risorse della rete. Ad esempio, è possibile creare un monitor per avvisare della _latenza di scrittura del nodo_ per una moltitudine di protocolli.
-
-
-TIP: Monitor e avvisi sono disponibili in tutte le edizioni di Data Infrastructure Insights, tuttavia, l'edizione Basic è soggetta a quanto segue: * È possibile che siano attivi solo cinque monitor personalizzati alla volta. Tutti i monitor oltre i cinque verranno creati o spostati nello stato _Paused_. * I monitor VMDK, Virtual Machine, host e datastore non sono supportati. Se sono stati creati dei monitor per queste metriche, questi verranno messi in pausa e non potranno essere ripristinati durante il downgrade a Basic Edition.
+Configura i monitor per monitorare le soglie di prestazione, registrare eventi e anomalie nelle risorse della tua infrastruttura.  Crea avvisi personalizzati per parametri quali latenza di scrittura del nodo, capacità di archiviazione o prestazioni dell'applicazione e ricevi notifiche quando tali condizioni vengono soddisfatte.
 
 I monitor consentono di impostare soglie sulle metriche generate da oggetti "infrastruttura" come storage, VM, EC2 e porte, nonché per i dati di "integrazione" come quelli raccolti per Kubernetes, metriche avanzate di ONTAP e plug-in Telegraf. Questi _metric_ monitors avvisano l'utente quando vengono superate le soglie del livello di avviso o critico.
 

@@ -22,6 +22,9 @@ Workload Security (in precedenza Cloud Secure) raccoglie i dati delle attività 
 
 
 
+NOTE: I cambiamenti globali potrebbero avere un impatto potenziale sui sistemi ONTAP .  Si consiglia vivamente di apportare modifiche che interessano un gran numero di raccoglitori di dati durante le ore di minor traffico.
+
+
 
 == Procedura per l'installazione dell'agente
 

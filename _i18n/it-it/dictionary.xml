@@ -512,9 +512,6 @@
   <block id="81e9e10a5416438d2549dae075160792" category="list-text">Fare clic sul pulsante _Export_ <block ref="7d9204e8192ad34899f7f874d914194c" category="inline-image-macro-rx" type="image"></block>in alto a destra della tabella.</block>
   <block id="7201440e51225680b60dccf28366c73d" category="paragraph">Gli eventi di audit visualizzati verranno esportati in un file .CSV, fino a un massimo di 10,000 righe.</block>
   <block id="e229d51ca45046e23340982a0d911a30" category="section-title">Conservazione dei dati di audit</block>
-  <block id="f16df2bb3736cac60f6b4d0b1344f646" category="paragraph">La quantità di tempo in cui Data Infrastructure Insights mantiene i dati di audit si basa sull'edizione:</block>
-  <block id="6140d54709a2f0707aaa20367fd479a2" category="list-text">Basic Edition: I dati di audit vengono conservati per 30 giorni</block>
-  <block id="ef14a516a82a51d74eaeb8e2193667cb" category="list-text">Edizioni Standard e Premium: I dati di audit vengono conservati per 1 anno più 1 giorno</block>
   <block id="7ad87c3be379b9de0a9009199fb5401c" category="paragraph">Le voci di audit precedenti al tempo di conservazione vengono eliminate automaticamente. Non è richiesta alcuna interazione da parte dell'utente.</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="section-title">Risoluzione dei problemi</block>
   <block id="c0e7fce2cca0be472d3098957e2a4864" category="paragraph">Qui troverai suggerimenti per la risoluzione dei problemi con Audit.</block>
@@ -1709,7 +1706,6 @@
   <block id="4e4315d948ef3fd3aad9be88a442863d" category="paragraph"><block ref="4e4315d948ef3fd3aad9be88a442863d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="79bac41a8e857539d5a75dc7e93e17d8" category="summary">È possibile visualizzare articoli della Knowledge base, connettersi con la community NetApp, visualizzare video o aprire un ticket per richiedere supporto.</block>
   <block id="69ac5d78c7ecb4ab9a461a7400773ec3" category="doc">Richiesta di supporto</block>
-  <block id="fbecb4e743bc1aa59e79031c4717bf84" category="paragraph">È possibile accedere alle opzioni di supporto in Data Infrastructure Insights facendo clic su *Help &gt; Support* (Guida &gt; supporto*). Le opzioni di supporto disponibili dipendono dalla Data Infrastructure Insights Edition.</block>
   <block id="b9bfbe11ded79fa1b72b327d0497f9dd" category="inline-image-macro">Pagina di supporto</block>
   <block id="2a0a63dd16c8b87a179a933b2e9eb92e" category="paragraph"><block ref="2a0a63dd16c8b87a179a933b2e9eb92e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e9d356ec51ae4d84881e70ea3c98b6dc" category="section-title">Attivazione dei diritti di supporto</block>
@@ -1737,9 +1733,6 @@
   <block id="d41c7a89c53943f7c86e80fe6a27b4dc" category="list-text">In qualità di nuovo cliente NetApp, dovrai anche creare un account utente NetApp Support Site (NSS) per le registrazioni future e accedere al portale di supporto per chat di supporto tecnico e ticketing web. Questo collegamento si trova all'indirizzo<block ref="4b0df7f6652ef877e322a199d6b6edce" category="inline-link-rx"></block>. È possibile fornire il numero di serie di Data Infrastructure Insights appena registrato per accelerare il processo.</block>
   <block id="3757ee6dbdcabe2780104f98224939d5" category="list-text">Questa è una registrazione una tantum per il numero di serie del NetApp di approfondimento sull'infrastruttura dati.</block>
   <block id="bc4afdcc32d9a7d1bc03c2d8ad5b1828" category="section-title">Ottenere informazioni di supporto</block>
-  <block id="1f3c67de4e7c07c414ec4689b1724561" category="paragraph">NetApp offre supporto per le informazioni sull'infrastruttura dati in vari modi. Sono disponibili opzioni complete di supporto autonomo gratuito 24 ore su 24, 7 giorni su 7, come articoli della knowledge base (KB) o la community NetApp. Per gli utenti abbonati* a Data Infrastructure Insights, il supporto tecnico è disponibile tramite telefono o Web Ticket. Per il ticket Web e la gestione del caso è necessario un account SSO NetApp Support Site (NSS).</block>
-  <block id="54b9dfbc2f7a4721e38bff7e643a574c" category="paragraph">*Il supporto è disponibile con Basic Edition purché tutti i sistemi storage NetApp siano coperti almeno al livello Premium Support.</block>
-  <block id="3b2314bf0168715cc6642c0246916477" category="paragraph">Molte offerte NetApp includono Data Infrastructure Insights Basic Edition come parte del pacchetto. Se si desidera eseguire l'aggiornamento a Premium Edition, contattare il rappresentante di vendita.</block>
   <block id="0ead5de583924ac8d48848b85f68e778" category="section-title">Supporto self-service:</block>
   <block id="6c0afebc7e7822e3ca22734d7b5d42c0" category="paragraph">Queste opzioni di supporto sono disponibili in modalità di prova e sono disponibili gratuitamente 24 ore su 24, 7 giorni su 7:</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="inline-link-macro">Documentazione</block>
@@ -1840,7 +1833,6 @@
   <block id="6341e61d6dc641d29b3f2e7300137ea9" category="list-text">Registrati per ottenere un account su <block ref="e0b3e45a049f223d3b91d005d1e31db5" category="inline-link-macro-rx"></block> per accedere a tutte le offerte Cloud di NetApp.</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link-macro">Mercato AWS</block>
   <block id="7bc1d8b07dfc0e98950abc0c7f3979a5" category="inline-link-macro">Informazioni e Regione</block>
-  <block id="ef66b5abbe1e0b79e23deb05dd2d11a9" category="admonition">Gli ambienti Inactive Data Infrastructure Insights Basic Edition vengono eliminati e le loro risorse vengono recuperate. Un ambiente viene considerato inattivo se non vi sono attività dell'utente per 30 giorni consecutivi, o se non vi sono dati acquisiti per 7 giorni consecutivi. Data Infrastructure Insights invierà una notifica e fornirà un Grace period di quattro giorni prima che un ambiente venga eliminato.</block>
   <block id="d618d9be50e37adf260935938e49af96" category="inline-image-macro">Lucchetto</block>
   <block id="12ddfc86083937d7a126f2fd8615aa6b" category="inline-xref">Valutazione del modulo</block>
   <block id="9d7c20493442236d34ddee65579e8971" category="paragraph">Quando si utilizza Data Infrastructure Insights, se viene visualizzata un'icona a <block ref="3d68554889a6297f572b65a3534d0ef0" category="inline-image-macro-rx" type="image"></block>forma di lucchetto , significa che la funzione non è disponibile nell'abbonamento corrente o è disponibile in forma limitata. Abbonarsi a tale funzione per l'accesso completo. Alcune funzioni sono disponibili <block ref="7f89ca2c071a1700db286ba62f9d3c95" category="inline-xref-macro-rx"></block> prima dell'iscrizione.</block>
@@ -1947,16 +1939,11 @@
   <block id="aa7aad98c338c5186d969cd18fc94b86" category="paragraph">Ulteriori <block ref="f3a940944ed2b77ff0757ee9675312e7" category="inline-link-macro-rx"></block>informazioni sulla risoluzione dei problemi e altre  informazioni sono disponibili nella pagina di approfondimento sull'infrastruttura dati *Guida &gt; supporto*.</block>
   <block id="7f6383a46fdc2ac52c791c8ea4cf03b6" category="summary">Spiegazione dei tempi di conservazione dei dati e del downsampling</block>
   <block id="2acd8b96cc968efd569f0e0169390b9b" category="doc">Conservazione dei dati e dati sottocampionati</block>
-  <block id="51eee046c9fbdc20d91f82f659d9904f" category="paragraph">Poiché Data Infrastructure Insights mantiene i dati per un determinato periodo (per Edizione), vi è il potenziale per l'elaborazione di migliaia di punti dati. I dati possono quindi essere sottoposti a downsampling prima di essere visualizzati in grafici e tabelle.</block>
   <block id="fd8da5ef10133e4ba884d6f85e21c49d" category="section-title">Conservazione dei dati</block>
-  <block id="79f48f9e4032922de4c24d6a18806c0c" category="paragraph">Data Infrastructure Insights conserva i dati per un periodo di tempo determinato dall'edizione sottoscritta attiva.</block>
-  <block id="226c03c443192cffffa4a924b4ccffde" category="cell">Edizione</block>
   <block id="972e73b7a882d0802a4e3a16946a2f94" category="cell">Di base</block>
   <block id="374616a0b786e9bffadc7f28e68d6c59" category="cell">7 giorni</block>
   <block id="8d5e7e72f12067991186cdf3cb7d5d9d" category="cell">Premium</block>
   <block id="025025548582d3777fd0b072c16e2656" category="cell">13 mesi</block>
-  <block id="a4d110a0ddc628e94b4e9223300af49b" category="inline-link-macro">Edizioni e Prezzi</block>
-  <block id="cc0d9aba6833845d2acc4d718cf71f18" category="paragraph">Un elenco completo delle funzioni disponibili in ciascuna edizione è disponibile nella <block ref="9f9283f57379e70b90560c22a58eac88" category="inline-link-macro-rx"></block>pagina Data Infrastructure Insights (informazioni sull'infrastruttura dati).</block>
   <block id="876f04f443f4acb1176812eb95c5206c" category="section-title">Downsampling dei dati</block>
   <block id="832befb5fcd1bf513bc9413c7b9a2e13" category="paragraph">Il downsampling* fornisce un'approssimazione statistica dei dati nei grafici, offrendo una panoramica efficiente dei dati senza dover visualizzare ogni punto dati, mantenendo al contempo una visione accurata dei dati raccolti.</block>
   <block id="b75dadfce21049a86b69409a71f9d89d" category="section-title">Perché è necessario eseguire il downsampling?</block>
@@ -7049,8 +7036,6 @@
   <block id="46152eb4e0d7febe5ed5ec5aa51b068f" category="admonition">Per gli ambienti con grandi quantità di risorse correlate, l'ereditarietà delle assegnazioni delle applicazioni a tali risorse potrebbe richiedere diversi minuti. Attendere più tempo per l'ereditarietà se si dispone di molte risorse correlate.</block>
   <block id="f64880272c45a077dc9152ab7dd2f24a" category="paragraph">Dopo aver assegnato l'host all'applicazione, è possibile assegnare le risorse rimanenti all'applicazione. Per accedere alla landing page dell'applicazione, fare clic su *Manage &gt; Application* (Gestisci &gt; applicazione) e selezionare l'applicazione creata.</block>
   <block id="91771bf0d5be307a250d706e57df1eb1" category="summary">Creare monitor per avvisare sulle soglie delle performance o dell'inventario, nonché sulle condizioni metriche o di log.</block>
-  <block id="a0fb87896105c24e490432fa6ee285d3" category="paragraph">È possibile creare monitor per impostare soglie che attivino avvisi per segnalare problemi relativi alle risorse della rete. Ad esempio, è possibile creare un monitor per avvisare della _latenza di scrittura del nodo_ per una moltitudine di protocolli.</block>
-  <block id="bd49848e16630c106919628a09948a9c" category="admonition">Monitor e avvisi sono disponibili in tutte le edizioni di Data Infrastructure Insights, tuttavia, l'edizione Basic è soggetta a quanto segue: * È possibile che siano attivi solo cinque monitor personalizzati alla volta. Tutti i monitor oltre i cinque verranno creati o spostati nello stato _Paused_. * I monitor VMDK, Virtual Machine, host e datastore non sono supportati. Se sono stati creati dei monitor per queste metriche, questi verranno messi in pausa e non potranno essere ripristinati durante il downgrade a Basic Edition.</block>
   <block id="3f5fb2a45a144339f9591a104342f79b" category="paragraph">I monitor consentono di impostare soglie sulle metriche generate da oggetti "infrastruttura" come storage, VM, EC2 e porte, nonché per i dati di "integrazione" come quelli raccolti per Kubernetes, metriche avanzate di ONTAP e plug-in Telegraf. Questi _metric_ monitors avvisano l'utente quando vengono superate le soglie del livello di avviso o critico.</block>
   <block id="e730b9c349889018dc9deaccaa5a438b" category="paragraph">È inoltre possibile creare monitor per attivare avvisi a livello di avviso, critico o informativo quando vengono rilevati _eventi di log_ specificati.</block>
   <block id="b18c8095ec7b7cd0c63a4e28b715f6c1" category="inline-link-macro">Monitor definiti dal sistema</block>
@@ -11224,7 +11209,6 @@
   <block id="dac09bc6942369c2d0f8d36f26d2e201" category="cell">"/AutoDir1/AutoFile03242022/"</block>
   <block id="17411e5191f440928552bd359518e697" category="cell">Funziona; restituisce tutte le attività con directory a 1st livelli corrispondenti a directory a AutoDir1 e 2nd livelli corrispondenti a AutoFile03242022 (caso non sensibile)</block>
   <block id="ee0b2f1c8ad7945cf603e8d752a5e7b5" category="inline-link-macro">Edizioni di Data Infrastructure Insights</block>
-  <block id="bbf9080a1bf1fb2f62558ce683d64be0" category="paragraph">Per un confronto completo delle funzioni disponibili in Data Infrastructure Insights Basic e Premium Edition, vedere la <block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block> pagina.</block>
   <block id="3bbdd1e5a1fbf0d58680e594b8806722" category="section-title">Verifica dei checksum del pacchetto Telegraf</block>
   <block id="7ff5578ba477d9e2321cffdc188dd439" category="paragraph">Il programma di installazione dell'agente Data Infrastructure Insights esegue controlli di integrità, ma alcuni utenti potrebbero voler eseguire le proprie verifiche prima di installare il binario Telegraf scaricato. Questo può essere fatto scaricando il programma di installazione e generando un checksum per il pacchetto scaricato, quindi confrontando il checksum con il valore mostrato nelle istruzioni di installazione.</block>
   <block id="741ebc51b7127a27c632897c49b71ad3" category="paragraph">Per eseguire un'operazione di solo download (rispetto a quella di download e installazione predefinita), gli utenti possono modificare il comando di installazione dell'agente ottenuto dall'interfaccia utente e rimuovere l'opzione "install" (installa).</block>
@@ -12631,7 +12615,6 @@
   <block id="e4685d20c866cca50df5bea5e4230497" category="cell">Frequenza con cui le distribuzioni non relative al carico di lavoro vengono combinate e inviate, in secondi</block>
   <block id="1cd8d8ba87dcbd642231ac1e1fb52f76" category="paragraph">La prova gratuita di AWS Marketplace non può essere estesa.</block>
   <block id="f2d8284860e834b1803b72a789ffeb84" category="list-text">Ci vorranno fino a due minuti affinché il raccoglitore dati passi dallo stato _Arrestato_ allo stato _In esecuzione_.</block>
-  <block id="0513a990ff8b7eb9d4d9e530e812b450" category="paragraph">ONTAP SVM Data Collector consente a Workload Security di monitorare le attività di accesso ai file e agli utenti sulle macchine virtuali di storage (SVM) NetApp ONTAP .  Questa guida illustra i prerequisiti, la configurazione e la gestione del raccoglitore dati SVM per fornire un monitoraggio completo della sicurezza del tuo ambiente ONTAP .</block>
   <block id="57da797adb74a055edb3de9c7e734b65" category="list-text">In qualsiasi momento, il raccoglitore dati dell'SVM attualmente in esecuzione verrà visualizzato come _In esecuzione_. Il raccoglitore dati dell'SVM attualmente 'arrestato' verrà visualizzato come _Arrestato_.</block>
   <block id="61dcd000a72340c1c72d4c7a96c2ec90" category="list-text">Ogni volta che si verifica un passaggio, lo stato del raccoglitore dati cambierà da _In esecuzione_ a _Arrestato_ e viceversa.</block>
   <block id="342c42c2979927d6b0d68318cd6111a6" category="summary">Data Infrastructure Insights monitora i cambiamenti nell'infrastruttura per semplificare l'analisi e la risoluzione dei problemi.</block>
@@ -12750,4 +12733,20 @@
   <block id="8a971d74114c901e6e49ec38adf35b17" category="list-text">Metriche Cronjob</block>
   <block id="9184717578be39d9d8ce4dc4caf1561d" category="list-text">Metriche di lavoro</block>
   <block id="e68008fca3fcb96a93c82b9cf703aee3" category="list-text">Metriche delle quote delle risorse</block>
+  <block id="c9714a192e747c57a94bb2f6639adb5b" category="paragraph">La quantità di tempo in cui Data Infrastructure Insights conserva i dati di audit dipende dall'abbonamento:</block>
+  <block id="25ce197231569d5340a6575531a40987" category="list-text">Ambienti di prova: i dati di audit vengono conservati per 30 giorni</block>
+  <block id="99ec4b43a691fff456c908babbf2e4b6" category="list-text">Ambienti sottoscritti: i dati di audit vengono conservati per 1 anno più 1 giorno</block>
+  <block id="8305fef4b296f66634635a66ae1c297a" category="paragraph">È possibile accedere alle opzioni di supporto disponibili in Data Infrastructure Insights selezionando *Guida &gt; Supporto*.</block>
+  <block id="56f5911bfca7593d469553cb475e6033" category="paragraph">NetApp fornisce supporto per Data Infrastructure Insights in vari modi.  Sono disponibili ampie opzioni di auto-assistenza gratuite 24 ore su 24, 7 giorni su 7, come gli articoli della knowledge base (KB) o la community NetApp .  Per gli utenti abbonati a Data Infrastructure Insights, il supporto tecnico è disponibile tramite telefono o ticketing web.  Per i ticket Web e la gestione dei casi è necessario un account SSO NetApp Support Site (NSS).</block>
+  <block id="d9a8e11a5035deb3c16b4dd70ca066ca" category="paragraph">Per informazioni dettagliate sulle funzionalità e le opzioni di prezzo Data Infrastructure Insights , vedere<block ref="49bb501f6c401ae5b06c3dbe5fc987bd" category="inline-link-macro-rx"></block> pagina.</block>
+  <block id="bbfa6d956cfb6da0d57f5f523f9a05be" category="paragraph">Data Infrastructure Insights conserva i dati per periodi che vanno da 7 giorni a 13 mesi, a seconda dell'abbonamento.  Quando si visualizzano set di dati di grandi dimensioni, i dati possono essere sottoposti a sottocampionamento per garantire che i grafici e i diagrammi vengano caricati in modo efficiente, mantenendo al contempo l'accuratezza statistica.</block>
+  <block id="b3fd89fffb7a017d757c048752783ccd" category="paragraph">Data Infrastructure Insights conserva i dati per un periodo di tempo determinato dal tipo di abbonamento.</block>
+  <block id="4c52b16391c4a95b395f3762741ff88f" category="cell">Tipo di abbonamento</block>
+  <block id="1b52c526b858eb9dd2c66da1c0b8f44d" category="cell">Prova</block>
+  <block id="808c7457c768423c5651cbf676d9f6d7" category="cell">Iscritto</block>
+  <block id="b56a9b49aabd38d375de7e8e4f8b5622" category="inline-link-macro">Prezzi Data Infrastructure Insights</block>
+  <block id="fc3f2409a092c3652206602369d9f86a" category="paragraph">Per informazioni dettagliate sulle funzionalità e le opzioni di prezzo Data Infrastructure Insights , vedere<block ref="39a77f6e3fa694dcfc09652d16b8431a" category="inline-link-macro-rx"></block> pagina.</block>
+  <block id="babe60c38b9af7eae2a65400f72c52c7" category="paragraph">ONTAP SVM Data Collector consente a Workload Security di monitorare le attività di accesso ai file e agli utenti sulle macchine virtuali di storage (SVM) NetApp ONTAP . Questa guida illustra la configurazione e la gestione del raccoglitore dati SVM per garantire un monitoraggio completo della sicurezza del tuo ambiente ONTAP .</block>
+  <block id="097b5088c2a3d7584f939f2bcd00152f" category="admonition">I cambiamenti globali potrebbero avere un impatto potenziale sui sistemi ONTAP .  Si consiglia vivamente di apportare modifiche che interessano un gran numero di raccoglitori di dati durante le ore di minor traffico.</block>
+  <block id="3c86c080f12d925b5a5ec1ad14563f65" category="paragraph">Configura i monitor per monitorare le soglie di prestazione, registrare eventi e anomalie nelle risorse della tua infrastruttura.  Crea avvisi personalizzati per parametri quali latenza di scrittura del nodo, capacità di archiviazione o prestazioni dell'applicazione e ricevi notifiche quando tali condizioni vengono soddisfatte.</block>
 </blocks>
