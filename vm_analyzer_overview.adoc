@@ -37,4 +37,4 @@ Facendo clic su un oggetto o un gruppo si apre un pannello a scorrimento che for
 
 == Guardalo in azione
 
-link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["Risoluzione dei problemi semplificata con VM Analyzer (video)"]
+link:https://media.netapp.com/video-detail/0e62b784-8456-5ef7-8879-f0352135a0f1/simplified-troubleshooting-with-vm-analyzer["Risoluzione dei problemi semplificata con VM Analyzer (video),window=read-later"]

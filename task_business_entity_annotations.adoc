@@ -7,6 +7,10 @@ summary: Le annotazioni delle entità aziendali possono essere utilizzate per il
 = Annotazioni entità di business
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

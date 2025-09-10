@@ -7,6 +7,10 @@ summary: Tenere traccia dei dati utilizzando le annotazioni.
 = Definizione delle annotazioni
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -24,6 +28,12 @@ Ad esempio, se una risorsa viene affittata e il leasing scade entro due mesi, po
 * Creazione di regole per applicare automaticamente le annotazioni a più risorse dello stesso tipo.
 * Filtrare le risorse in base alle annotazioni.
 
+
+
+
+== Guardalo in azione
+
+link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da["Annotazioni e regole di annotazione (video),window=read-later"]
 
 
 

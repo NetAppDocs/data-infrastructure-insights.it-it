@@ -31,6 +31,12 @@ IMPORTANT: Gli esempi in queste sezioni hanno solo scopo esplicativo e non copro
 
 
 
+== Guardalo in azione
+
+link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8["Crea dashboard potenti con NetApp (video),window=read-later"]
+
+
+
 == Comandi della dashboard
 
 La schermata Dashboard dispone di diversi comandi:

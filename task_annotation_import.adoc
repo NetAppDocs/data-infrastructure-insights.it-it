@@ -7,6 +7,10 @@ summary: 'Puoi importare annotazioni e applicazioni utilizzando l"API Data Infra
 = Importazione delle annotazioni
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
