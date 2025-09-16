@@ -1,12 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_ontap_all_san_array.html 
-keywords: data collector, ontap, ontap, CDOT, REST, SAN, ASA 
-summary: Servizio di raccolta dati per array All-SAN ONTAP 
+keywords: data collector, ontap, ontap, CDOT, REST, SAN, ASA, r2 
+summary: 'Collettore di dati array ONTAP All-San (ASA r2)' 
 ---
-= Raccolta dati array All-SAN (ASA) NetApp ONTAP
+= Raccoglitore dati NetApp ONTAP ASA r2 (All-SAN Array)
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
