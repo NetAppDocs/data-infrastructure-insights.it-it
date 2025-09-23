@@ -41,7 +41,11 @@ link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://
 
 link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
 
-Includi:https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
+
+
+== Open source
+
+I file di avviso forniscono informazioni sui diritti d'autore e sulle licenze di terze parti utilizzati nel software NetApp .
 
 link:media/DII_Notice-Sept_2025.pdf["Avviso per approfondimenti sull'infrastruttura dati (in precedenza Cloud Insights)"]
 
