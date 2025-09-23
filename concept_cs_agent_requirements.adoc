@@ -7,17 +7,21 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 = Requisiti dell'agente per la sicurezza del carico di lavoro
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-È necessario link:task_cs_add_agent.html["Installare un Agent"]per acquisire informazioni dai propri data collector. Prima di installare l'Agent, assicurarsi che l'ambiente soddisfi i requisiti di sistema operativo, CPU, memoria e spazio su disco.
+Devilink:task_cs_add_agent.html["installare un agente di sicurezza del carico di lavoro"] per acquisire informazioni dai tuoi raccoglitori di dati.  Prima di installare l'agente, assicurati che l'ambiente soddisfi i requisiti relativi al sistema operativo, alla CPU, alla memoria e allo spazio su disco.
 
 [cols="36,60"]
 |===
 | Componente | Requisiti Linux 
 
 
-| Sistema operativo | Un computer che esegue una versione con licenza di uno dei seguenti: * AlmaLinux 9.4 e 9.5 (64 bit), incluso SELinux * CentOS 9 Stream (64 bit) * Debian 11 (64 bit) e 12 (64 bit), incluso SELinux * OpenSUSE Leap da 15.3 (64 bit) a 15.6 (64 bit) * Oracle Linux 8.10 (64 bit) e da 9.1 (64 bit) a 9.6 (64 bit), incluso SELinux * Red Hat Enterprise Linux 8.10 (64 bit) e da 9.1 (64 bit) a 9.6 (64 bit), incluso SELinux * Rocky 9.4 (64 bit) e 9.5 (64 bit), incluso SELinux * SUSE Linux Enterprise Server da 15 SP4 (64 bit) a 15 SP6 (64 bit), inclusi SELinux * Ubuntu 20.04 LTS (64 bit), 22.04 LTS (64 bit) e 24.04 LTS (64 bit) Su questo computer non deve essere in esecuzione nessun altro software a livello di applicazione. Si consiglia di utilizzare un server dedicato. 
+| Sistema operativo | Un computer che esegue una versione con licenza di uno dei seguenti: * AlmaLinux 9.4 (64 bit) fino a 9.5 (64 bit), 10 (64 bit), incluso SELinux * CentOS Stream 9 (64 bit) * Debian 11 (64 bit), 12 (64 bit), incluso SELinux * OpenSUSE Leap 15.3 (64 bit) fino a 15.6 (64 bit) * Oracle Linux 8.10 (64 bit), 9.1 (64 bit) fino a 9.6 (64 bit), incluso SELinux * Red Hat Enterprise Linux 8.10 (64 bit), 9.1 (64 bit) fino a 9.6 (64 bit), 10 (64 bit), incluso SELinux * Rocky 9.4 (64 bit) fino a 9.6 (64 bit), incluso SELinux * SUSE Linux Enterprise Server Da 15 SP4 (64 bit) a 15 SP6 (64 bit), incluso SELinux * Ubuntu 20.04 LTS (64 bit), 22.04 LTS (64 bit), 24.04 LTS (64 bit) Su questo computer non deve essere in esecuzione nessun altro software a livello di applicazione.  Si consiglia un server dedicato. 
 
 
 | Comandi | per l'installazione è necessario decomprimere. Inoltre, il comando 'sudo su –' è necessario per l'installazione, l'esecuzione di script e la disinstallazione. 
