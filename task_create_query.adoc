@@ -142,6 +142,18 @@ Se racchiudi una stringa di filtro tra virgolette doppie, Insight tratta tutto c
 
 
 
+=== Filtraggio per valori booleani
+
+Quando si filtra un valore booleano, potrebbero essere presentate le seguenti opzioni di filtraggio:
+
+* *Qualsiasi*: restituirà _tutti_ i risultati, compresi i risultati impostati su "Sì", "No" o non impostati affatto.
+* *Sì*: Restituisce solo risultati "Sì".  Si noti che DII mostra "Sì" come segno di spunta nella maggior parte delle tabelle.  I valori possono essere impostati su "True", "On", ecc.; DII li tratta tutti come "Sì".
+* *No*: restituisce solo risultati "No".  Si noti che DII mostra "No" come una "X" nella maggior parte delle tabelle.  I valori possono essere impostati su "Falso", "Off", ecc.; DII li tratta tutti come "No".
+* *Nessuno*: restituisce solo i risultati in cui il valore non è stato impostato.  Chiamati anche valori "Null".
+
+
+
+
 == Cosa fare ora che si ottengono i risultati delle query?
 
 La funzione di query consente di aggiungere annotazioni o assegnare applicazioni alle risorse in modo semplice. Nota: È possibile assegnare solo applicazioni o annotazioni alle risorse di inventario (disco, storage, ecc.). Le metriche di integrazione non possono assumere le assegnazioni di annotazioni o applicazioni.

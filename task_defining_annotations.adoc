@@ -31,12 +31,6 @@ Ad esempio, se una risorsa viene affittata e il leasing scade entro due mesi, po
 
 
 
-== Guardalo in azione
-
-link:https://media.netapp.com/video-detail/248621bd-6619-5dc8-9718-5d78d0fd21da["Annotazioni e regole di annotazione (video),window=read-later"]
-
-
-
 == Tipi di annotazione predefiniti
 
 Data Infrastructure Insights fornisce alcuni tipi di annotazioni predefinite. Queste annotazioni possono essere utilizzate per filtrare o raggruppare i dati.
@@ -88,7 +82,7 @@ La tabella seguente elenca i tipi di annotazioni forniti da Data Infrastructure 
 | Severità della violazione | Classificazione (ad esempio, maggiore) di una violazione (ad esempio, porte host mancanti o ridondanza mancante), in una gerarchia di importanza da massima a minima. | Elenco 
 |===
 
-NOTE: Alias, data center, hot, livello di servizio, Sunset, Switch Level (livello switch), Tier (livello) e Violation Severity (gravità violazione) sono annotazioni a livello di sistema che non è possibile eliminare o rinominare; è possibile modificare solo i valori assegnati.
+NOTE: Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Tier e Violation Severity sono annotazioni a livello di sistema che non è possibile eliminare o rinominare; è possibile modificare solo i valori assegnati.
 
 
 
@@ -110,15 +104,23 @@ La pagina Annotazioni visualizza l'elenco delle annotazioni.
 
 
 .Tipi di annotazione
-Boolean: Crea un elenco a discesa con le opzioni yes e no. Ad esempio, l'annotazione "Direct Attached" è Boolean. Data: Consente di creare un campo che contiene una data. Ad esempio, se l'annotazione sarà una data, selezionare questa opzione. List (elenco): Crea una delle seguenti opzioni: * Un elenco a discesa fisso
+* Booleano: crea un elenco a discesa con le opzioni Sì e No. Ad esempio, l'annotazione "Allegato diretto" è booleana.
+* Data: crea un campo che contiene una data.  Ad esempio, se l'annotazione sarà una data, selezionare questa opzione.
+* Elenco: crea uno dei seguenti:
++
+** Un elenco fisso a discesa
++
+Quando altri assegnano questo tipo di annotazione su un dispositivo, non possono aggiungere altri valori all'elenco.
 
-+ quando altri assegnano questo tipo di annotazione su un dispositivo, non possono aggiungere altri valori all'elenco. * Un elenco a discesa flessibile
+** Un elenco flessibile a discesa
++
+Se selezioni l'opzione Aggiungi nuovi valori al volo quando crei questo elenco, quando altri assegnano questo tipo di annotazione su un dispositivo, possono aggiungere altri valori all'elenco.
 
-+ se si seleziona l'opzione Aggiungi nuovi valori al volo quando si crea questo elenco, quando altri assegnano questo tipo di annotazione su un dispositivo, possono aggiungere altri valori all'elenco.
 
-Numero: Consente di creare un campo in cui l'utente che assegna l'annotazione può immettere un numero. Ad esempio, se il tipo di annotazione è "Floor" (piano), l'utente può selezionare il tipo di valore "Number" (numero) e inserire il numero di piano.
 
-Testo: Consente di creare un campo che consenta il testo in formato libero. Ad esempio, è possibile inserire "Lingua" come tipo di annotazione, selezionare "testo" come tipo di valore e immettere una lingua come valore.
+* Numero: Consente di creare un campo in cui l'utente che assegna l'annotazione può immettere un numero. Ad esempio, se il tipo di annotazione è "Floor" (piano), l'utente può selezionare il tipo di valore "Number" (numero) e inserire il numero di piano.
+* Testo: Consente di creare un campo che consenta il testo in formato libero. Ad esempio, è possibile inserire "Lingua" come tipo di annotazione, selezionare "testo" come tipo di valore e immettere una lingua come valore.
+
 
 
 NOTE: Dopo aver impostato il tipo e salvato le modifiche, non è possibile modificare il tipo di annotazione. Se è necessario modificare il tipo, eliminare l'annotazione e crearne una nuova.
@@ -138,6 +140,15 @@ Si supponga, ad esempio, di trovarsi in una pagina di risorse e di avere l'annot
 +
 Le annotazioni vengono visualizzate nell'elenco della pagina Annotazioni.
 
+
+
+.Una nota sulle annotazioni booleane
+Quando si filtra un'annotazione booleana, potrebbero essere presentati i seguenti valori su cui filtrare:
+
+* *Qualsiasi*: restituirà _tutti_ i risultati, compresi i risultati impostati su "Sì", "No" o non impostati affatto.
+* *Sì*: Restituisce solo risultati "Sì".  Si noti che DII mostra "Sì" come segno di spunta nella maggior parte delle tabelle.  I valori possono essere impostati su "True", "On", ecc.; DII li tratta tutti come "Sì".
+* *No*: restituisce solo risultati "No".  Si noti che DII mostra "No" come una "X" nella maggior parte delle tabelle.  I valori possono essere impostati su "Falso", "Off", ecc.; DII li tratta tutti come "No".
+* *Nessuno*: restituisce solo i risultati in cui l'annotazione non è stata impostata.  Chiamati anche valori "Null".
 
 
 .Al termine
