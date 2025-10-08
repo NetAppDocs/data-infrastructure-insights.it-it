@@ -74,6 +74,6 @@ image:ProxyEndpoints_NewTable.png["Tabella degli endpoint proxy"]
 
 == Risorse
 
-Ulteriori suggerimenti per la risoluzione dei problemi sono disponibili in link:https://kb.netapp.com/Cloud/BlueXP/DII["Knowledge base di NetApp"] (è necessario l'accesso al supporto).
+Ulteriori suggerimenti per la risoluzione dei problemi possono essere trovati nellink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["Knowledge base di NetApp"] (è richiesto l'accesso al supporto).
 
 Per ulteriori informazioni di supporto, consulta la pagina Data Infrastructure Insightslink:concept_requesting_support.html["Supporto"].

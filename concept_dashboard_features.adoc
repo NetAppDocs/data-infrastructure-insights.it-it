@@ -797,7 +797,7 @@ L'aggiornamento automatico non è disponibile per l'intervallo di tempo della da
 Se combinato con la modalità *TV*, l'aggiornamento automatico consente la visualizzazione quasi in tempo reale dei dati su una dashboard o una pagina di risorse. La modalità TV offre una visualizzazione semplice; il menu di navigazione è nascosto, offrendo una maggiore capacità di visualizzazione dei dati, così come il pulsante Edit. La modalità TV ignora i timeout tipici di Data Infrastructure Insights, lasciando il display attivo fino a quando non viene disconnesso manualmente o automaticamente dai protocolli di sicurezza di autorizzazione.
 
 
-NOTE: Poiché NetApp BlueXP  ha il proprio timeout di accesso utente di 7 giorni, Data Infrastructure Insights deve disconnettersi anche con quell'evento. Puoi semplicemente effettuare nuovamente l'accesso e la dashboard continuerà a essere visualizzata.
+NOTE: Poiché NetApp Console ha un timeout di accesso utente di 7 giorni, anche Data Infrastructure Insights deve disconnettersi in base a tale evento.  Puoi semplicemente effettuare nuovamente l'accesso e la tua dashboard continuerà a essere visualizzata.
 
 * Per attivare la modalità TV, fare clic sul pulsante modalità TV.
 * Per disattivare la modalità TV, fare clic sul pulsante *Exit* in alto a sinistra sullo schermo.

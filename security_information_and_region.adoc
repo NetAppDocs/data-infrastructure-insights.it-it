@@ -40,7 +40,7 @@ Si tratta di dati generati in seguito alla fornitura da parte di NetApp del Clou
 
 * Dati di accesso dell'utente
 +
-Informazioni sull'autenticazione e sull'accesso che consentono a NetApp BlueXP  di comunicare con i siti regionali di Data Infrastructure Insights, inclusi i dati relativi all'autorizzazione dell'utente.
+Informazioni di autenticazione e accesso che consentono a NetApp Console di comunicare con i siti Data Infrastructure Insights regionali, inclusi i dati relativi all'autorizzazione dell'utente.
 
 * Storage workload Security User Directory Data
 +
@@ -76,7 +76,7 @@ Nella regione host vengono memorizzate le seguenti informazioni:
 Le seguenti informazioni risiedono negli Stati Uniti, indipendentemente dalla regione in cui risiede l'ambiente Data Infrastructure Insights:
 
 * Informazioni sul sito dell'ambiente (talvolta chiamate "tenant"), come il proprietario del sito o dell'account.
-* Informazioni che consentono a NetApp BlueXP  di comunicare con i siti regionali di approfondimento sull'infrastruttura dati, incluso qualsiasi cosa fare con l'autorizzazione dell'utente.
+* Informazioni che consentono a NetApp Console di comunicare con i siti Data Infrastructure Insights regionali, incluso tutto ciò che riguarda l'autorizzazione dell'utente.
 * Informazioni relative alla relazione tra l'utente di Data Infrastructure Insights e il tenant.
 
 

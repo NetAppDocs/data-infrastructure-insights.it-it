@@ -7,6 +7,10 @@ summary: 'Le informazioni ti danno uno sguardo all"impatto delle risorse su altr
 = Approfondimenti: Recuperare lo storage a freddo ONTAP
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

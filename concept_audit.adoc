@@ -89,9 +89,6 @@ Se racchiudi una stringa di filtro tra virgolette doppie, Insight tratta tutto c
 Gli eventi e le azioni controllati da Data Infrastructure Insights possono essere classificati nelle seguenti aree:
 
 * *Account utente*: Accesso, disconnessione, modifica del ruolo, ecc.
-+
-Esempio: _Utente *Tony Lavoie* collegato da *10,1.120,15*, agente utente *Mozilla/5,0 (Windows NT 10,0; Win64; x64) AppleWebKit/537,36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537,36*, metodo(i) di login *BlueXP Portal Login_*
-
 * *Acquisition Unit* (unità di acquisizione): Creare, eliminare, ecc.
 +
 Esempio: _Unità di acquisizione *AU-Boston-1* rimossa_.

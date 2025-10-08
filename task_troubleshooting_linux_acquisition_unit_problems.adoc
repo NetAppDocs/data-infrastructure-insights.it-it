@@ -21,7 +21,7 @@ Qui troverai suggerimenti per la risoluzione dei problemi relativi alle unità d
 | Lo stato AU nella pagina *osservabilità > Collector* della scheda *unità di acquisizione* visualizza "certificato scaduto" o "certificato revocato" . | Fare clic sul menu a destra dell'AU e selezionare *Restore Connection* (Ripristina connessione). Seguire le istruzioni per ripristinare l'unità di acquisizione: 1. Arrestare il servizio dell'unità di acquisizione (AU). È possibile fare clic sul pulsante _Copy Stop Command_ per copiare rapidamente il comando negli Appunti, quindi incollare questo comando in un prompt dei comandi sul computer dell'unità di acquisizione. 2. Creare un file denominato "token" nella cartella _/var/lib/NetApp/cloudinsights/acq/conf_ dell'AU. 3. Fate clic sul pulsante _Copy Token_ e incollate questo token nel file creato. 4. Riavviare il servizio AU. Fare clic sul pulsante _Copy Restart Command_ e incollare il comando in un prompt dei comandi sull'AU. 
 
 
-| Autorizzazione negata all'avvio del servizio Acquisition Unit Server | Quando l'AU viene installato su SELINUX, se deve essere impostato su _permissive_ mode. La modalità _enforcing_ non è supportata. Dopo aver impostato SELINUX in modalità permissiva, riavviare il servizio AU. link:https://kb.netapp.com/Cloud/BlueXP/DII/Permission_denied_when_starting_the_Cloud_Insight_Acquisition_Unit_Server_Service["Scopri di più"]. 
+| Autorizzazione negata all'avvio del servizio Acquisition Unit Server | Quando l'AU è installato su SELINUX, SE deve essere impostato in modalità _permissiva_.  La modalità _Enforcing_ non è supportata.  Dopo aver impostato SELINUX in modalità permissiva, riavviare il servizio AU. 
 
 
 | Requisiti del server non soddisfatti | Assicurarsi che il server dell'unità di acquisizione o la VM siano conformi link:concept_acquisition_unit_requirements.html["requisiti"] 
@@ -90,6 +90,6 @@ image:ProxyEndpoints_NewTable.png["Tabella degli endpoint proxy"]
 
 == Risorse
 
-Ulteriori suggerimenti per la risoluzione dei problemi sono disponibili in link:https://kb.netapp.com/Cloud/BlueXP/DII["Knowledge base di NetApp"] (è necessario l'accesso al supporto).
+Ulteriori suggerimenti per la risoluzione dei problemi possono essere trovati nellink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["Knowledge base di NetApp"] (è richiesto l'accesso al supporto).
 
 Per ulteriori informazioni di supporto, consulta la pagina Data Infrastructure Insightslink:concept_requesting_support.html["Supporto"].

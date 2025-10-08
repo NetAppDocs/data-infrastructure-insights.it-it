@@ -25,19 +25,19 @@ Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Ris
 | Data Infrastructure Insights si disconnette automaticamente ogni 6 ore | Ciò è dovuto alla disattivazione dei cookie di terze parti del browser. Gli utenti possono configurare il browser in modo da abilitare tutti i cookie di 3rd parti o utilizzare un elenco di eccezioni più ristretto per abilitare solo quelli per Data Infrastructure Insights. Esempio: Aprire le impostazioni del browser selezionare l'opzione "Consenti tutti i cookie". *O* selezionare "Blocca cookie di terze parti" e aggiungere eccezioni per _[\*.]auth0.com_ e _[*.]NetApp.com_. Microsoft Edge presenta lo stesso formato per le eccezioni di Chrome. In Firefox, le eccezioni ai cookie sono designate semplicemente come _auth0.com_ e _netapp.com_. 
 
 
-| Possiedo un account BlueXP ma non riesco ad accedere ad BlueXP. | Aprire un ticket da https://mysupport.netapp.com/site/help[]. Seleziona la categoria "blueXP.netapp.com > problemi di account/login" o "bluexp.netapp.com > problemi di federazione". Questi sono specificamente per problemi o domande di BlueXP. Per tutti gli altri problemi di supporto tecnico di Data Infrastructure Insights, contattare link:concept_requesting_support.html["Supporto NetApp"]. 
+| Ho un account Console ma non riesco ad accedere. | Apri un ticket da https://mysupport.netapp.com/site/help[] .  Selezionare la categoria console.netapp.com > Problemi di account/accesso" o console.netapp.com > Problemi di federazione".  Sono specificamente per problemi o domande sulla Console.  Per tutti gli altri problemi di supporto tecnico Data Infrastructure Insights , contattarelink:concept_requesting_support.html["Supporto NetApp"] . 
 
 
-| Sono stato invitato a Data Infrastructure Insights ma viene visualizzato il messaggio "non autorizzato". | Verifica di aver effettuato l'iscrizione a un account BlueXP o che l'organizzazione utilizzi l'accesso SSO con BlueXP. Verificare che l'indirizzo e-mail del profilo BlueXP  corrisponda all'indirizzo e-mail indicato nell'e-mail di benvenuto di Data Infrastructure Insights. Se l'indirizzo e-mail non corrisponde, richiedere un nuovo invito con l'indirizzo e-mail corretto. 
+| Sono stato invitato a Data Infrastructure Insights ma viene visualizzato il messaggio "non autorizzato". | Verifica di aver creato un account Console o che la tua organizzazione utilizzi l'accesso SSO con Console.  Verifica che l'indirizzo email del tuo profilo Console corrisponda all'indirizzo email mostrato nell'email di benvenuto Data Infrastructure Insights .  Se l'indirizzo email non corrisponde, richiedi un nuovo invito con l'indirizzo email corretto. 
 
 
-| Ho disconnesso da BlueXP  e mi sono disconnesso automaticamente da Data Infrastructure Insights. | Il Single Sign-on (SSO) nei servizi cloud di NetApp chiude tutte le sessioni di approfondimento sull'infrastruttura dati. Se si dispone dell'accesso a più account Data Infrastructure Insights, la disconnessione da uno qualsiasi interrompe tutte le sessioni attive. Effettua nuovamente l'accesso per accedere all'account. 
+| Ho effettuato la disconnessione dalla Console e sono stato automaticamente disconnesso da Data Infrastructure Insights. | Il Single Sign-on (SSO) nei servizi cloud di NetApp chiude tutte le sessioni di approfondimento sull'infrastruttura dati. Se si dispone dell'accesso a più account Data Infrastructure Insights, la disconnessione da uno qualsiasi interrompe tutte le sessioni attive. Effettua nuovamente l'accesso per accedere all'account. 
 
 
-| Sono stato disconnesso automaticamente dopo diversi giorni. | Gli account cloud NetApp richiedono la riautenticazione ogni pochi giorni (l'impostazione attuale di BlueXP è di 7 giorni). Effettua nuovamente l'accesso per accedere all'account. 
+| Sono stato disconnesso automaticamente dopo diversi giorni. | Gli account NetApp Cloud richiedono una nuova autenticazione ogni pochi giorni (l'impostazione attuale della Console è 7 giorni).  Accedi nuovamente per accedere al tuo account. 
 
 
-| Viene visualizzato il messaggio di errore "non più autorizzato all'accesso". | Contattare l'amministratore dell'account per verificare l'accesso a Data Infrastructure Insights. Verificare che l'indirizzo e-mail del profilo BlueXP  corrisponda all'indirizzo e-mail indicato nell'e-mail di benvenuto di Data Infrastructure Insights 
+| Viene visualizzato il messaggio di errore "non più autorizzato all'accesso". | Contatta l'amministratore del tuo account per verificare l'accesso a Data Infrastructure Insights.  Verifica che l'indirizzo email del tuo profilo Console corrisponda all'indirizzo email mostrato nell'email di benvenuto Data Infrastructure Insights 
 
 
 | Altri errori di accesso | Provare la modalità incognito in Chrome o cancellare la cronologia del browser, i cookie e la cache. Provare con un profilo del browser diverso (ad esempio Chrome - Aggiungi persona). 
@@ -64,7 +64,7 @@ Vedere anche link:task_troubleshooting_linux_acquisition_unit_problems.html["Ris
 
 == Risorse
 
-Ulteriori suggerimenti per la risoluzione dei problemi sono disponibili in link:https://kb.netapp.com/Cloud/BlueXP/DII["Knowledge base di NetApp"] (è necessario l'accesso al supporto).
+Ulteriori suggerimenti per la risoluzione dei problemi possono essere trovati nellink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["Knowledge base di NetApp"] (è richiesto l'accesso al supporto).
 
 Per ulteriori informazioni di supporto, consulta la pagina Data Infrastructure Insightslink:concept_requesting_support.html["Supporto"].
 

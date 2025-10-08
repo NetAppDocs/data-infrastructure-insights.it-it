@@ -7,6 +7,10 @@ keywords: data collector, NetApp, Cloud, AWS
 = NetApp Cloud Volumes Services per data collector AWS
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -51,6 +55,6 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Problema: | Prova: 
 
 
-| Ho ricevuto un errore simile a questo: 'Impossibile eseguire la richiesta: Connessione a <endpoint regionale AWS>:8080 [<endpoint regionale AWS>/IP endpoint regione AWS>] non riuscita: Connessione scaduta: GET \https://<AWS Region Endpoint FQDN>:8080/v1/Storage/IPRanges HTTP/1,1' | L'link:task_configure_acquisition_unit.html#proxy-configuration-2["proxy"]elemento utilizzato da Data Infrastructure Insights per comunicare con l'unità di acquisizione non comunica tra Data Infrastructure Insights e Data Collector stesso. Di seguito sono riportate alcune operazioni da eseguire: Assicurarsi che l'unità di acquisizione sia in grado di risolvere l'fqdn e di raggiungere la porta richiesta. Verificare che non sia necessario un proxy per raggiungere l'endpoint specificato nel messaggio di errore. Il comando curl può essere utilizzato per verificare la comunicazione tra l'unità di acquisizione e l'endpoint. Assicurarsi di utilizzare *non* un proxy per questo test. Esempio: Root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: Application/json" -H chiave api:<chiave api utilizzata nelle credenziali di raccolta dati -H chiave segreta:<chiave segreta utilizzata nelle credenziali di raccolta dati> -X OTTIENI endpoint regionale \https://<AWS>:8080/v1/Storage/IPRanges vedere questo link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_fails_discovery_for_Cloud_Volumes_Service_for_AWS["Articolo della Knowledge base di NetApp"]. 
+| Ho ricevuto un errore simile a questo: 'Impossibile eseguire la richiesta: Connessione a <endpoint regionale AWS>:8080 [<endpoint regionale AWS>/IP endpoint regione AWS>] non riuscita: Connessione scaduta: GET \https://<AWS Region Endpoint FQDN>:8080/v1/Storage/IPRanges HTTP/1,1' | ILlink:task_configure_acquisition_unit.html#proxy-configuration-2["proxy"] utilizzato da Data Infrastructure Insights per comunicare con l'unità di acquisizione non comunica tra Data Infrastructure Insights e il Data Collector stesso.  Ecco alcune cose che puoi provare: assicurati che l'unità di acquisizione sia in grado di risolvere l'FQDN e di raggiungere la porta richiesta.  Verificare che non sia necessario un proxy per raggiungere l'endpoint specificato nel messaggio di errore.  Curl può essere utilizzato per testare la comunicazione tra l'unità di acquisizione e l'endpoint.  Assicurati di *non* utilizzare un proxy per questo test.  Esempio: root@acquisitionunit# curl -s -H accept:application/json -H "Content-type: application/json" -H api-key:<chiave API utilizzata nelle credenziali del raccoglitore dati -H secret-key:<chiave segreta utilizzata nelle credenziali del raccoglitore dati> -X GET \https://<endpoint regionale AWS>:8080/v1/Storage/IPRanges 
 |===
 Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].

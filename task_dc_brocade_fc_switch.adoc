@@ -170,7 +170,7 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 | Problema: | Prova: 
 
 
-| La raccolta delle prestazioni non riesce e viene visualizzato il messaggio "Timed out during sending SNMP request". | A seconda delle variabili di query e della configurazione dello switch, alcune query potrebbero superare il timeout predefinito. link:https://kb.netapp.com/Cloud/BlueXP/DII/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Scopri di più"]. 
+| La raccolta delle prestazioni non riesce e viene visualizzato il messaggio "Timed out during sending SNMP request". | A seconda delle variabili di query e della configurazione dello switch, alcune query potrebbero superare il timeout predefinito. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Scopri di più"] . 
 
 
 | La raccolta delle prestazioni non riesce con ...Righe duplicate trovate nella tabella SNMP... | DII ha rilevato risposte SNMP errate. Probabilmente stai utilizzando FOS 8.2.3e. Aggiorna a 8.2.3e2 o versione successiva. 
