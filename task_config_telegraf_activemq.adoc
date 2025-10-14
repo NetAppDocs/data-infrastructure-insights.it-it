@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_activemq.html 
 keywords: telegraf, installation, install, ActiveMQ 
-summary: Configurazione del data collector HTTP 
+summary: Configurazione del raccoglitore dati HTTP 
 ---
-= ActiveMQ Data Collector
+= Raccoglitore dati ActiveMQ
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere metriche da ActiveMQ.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da ActiveMQ.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere ActiveMQ.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli ActiveMQ.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
 image:ActiveMQDCConfigWindows.png["Configurazione ActiveMQ"]
 
 
 
-== Setup (Configurazione)
+== Impostare
 
-Le informazioni sono disponibili in http://activemq.apache.org/getting-started.html["Documentazione ActiveMQ"]
+Le informazioni possono essere trovate nel http://activemq.apache.org/getting-started.html["Documentazione ActiveMQ"]
 
 
 
@@ -44,16 +44,16 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Coda ActiveMQ | Namespace Queue Port Server | Node Name Node IP Node UID | Consumer Count Dequeue Count Enqueue Count dimensione coda 
+| Coda ActiveMQ | Server porta coda spazio dei nomi | Nome nodo IP nodo UUID nodo | Conteggio consumatori Conteggio de-accodamento Conteggio accodamento Dimensione coda 
 
 
-| Abbonato ActiveMQ | ID client ID Connection ID Port Server namespace | È attivo Node di destinazione Node Node IP Node UID Node OS Selector Subscription | Numero di dequeue numero di invii dimensione coda spedita Conteggio coda in attesa dimensione coda 
+| Abbonato ActiveMQ | ID client ID connessione Porta Spazio dei nomi del server | È attivo Nome nodo di destinazione IP nodo UUID nodo Selettore sistema operativo nodo Sottoscrizione | Conteggio dei dequeue Conteggio dei dispatched Dimensione coda inviata Conteggio dei enqueue Dimensione coda in sospeso 
 
 
-| Argomento ActiveMQ | Argomento namespace Port Server | Node Name Node IP Node UID Node OS | Dimensioni Conteggio incoditi Conteggio incoditi Conte clienti 
+| Argomento ActiveMQ | Spazio dei nomi del server della porta dell'argomento | Nome nodo IP nodo UUID nodo Sistema operativo nodo | Conteggio consumatori Conteggio de-accodamento Conteggio accodamento Dimensione 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

@@ -2,48 +2,48 @@
 sidebar: sidebar 
 permalink: task_dc_redhat_virtualization.html 
 keywords: data collector, Red Hat Virtualization 
-summary: Configurazione di Red Hat Virtualization Data Collector. 
+summary: Configurazione del raccoglitore dati di Red Hat Virtualization. 
 ---
-= Data collector Red Hat Virtualization
+= Raccoglitore dati di Red Hat Virtualization
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector di Red Hat Virtualization per raccogliere dati di inventario dai carichi di lavoro Linux e Microsoft Windows virtualizzati.
+Data Infrastructure Insights utilizza il raccoglitore dati Red Hat Virtualization per raccogliere dati di inventario dai carichi di lavoro virtualizzati Linux e Microsoft Windows.
 
 
 
 == Terminologia
 
-Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per la risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco | Disco virtuale 
 
 
-| Host | Host 
+| Ospite | Ospite 
 
 
 | Macchina virtuale | Macchina virtuale 
 
 
-| Dominio di storage | Data Store 
+| Dominio di archiviazione | Archivio dati 
 
 
 | Unità logica | LUN 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-* Indirizzo IP del server RHEV sulla porta 443 tramite API REST
+* Indirizzo IP del server RHEV sulla porta 443 tramite REST API
 * Nome utente e password di sola lettura
 * RHEV versione 3.0+
 
@@ -57,7 +57,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Indirizzo IP del server RHEV | Indirizzo IP del sistema di storage 
+| Indirizzo IP del server RHEV | Indirizzo IP del sistema di archiviazione 
 
 
 | Nome utente | Nome utente con privilegi di amministratore 
@@ -77,10 +77,10 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Porta di comunicazione HTTPS | Porta utilizzata per la comunicazione HTTPS con RHEV 
 
 
-| Intervallo di polling dell'inventario (min) | L'impostazione predefinita è 20 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 20 minuti. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

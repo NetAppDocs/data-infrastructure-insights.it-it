@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: san_analyzer_overview.html 
-summary: SAN Analyzer fornisce la topologia per le risorse sul tenant 
+summary: SAN Analyzer fornisce la topologia per le risorse sul tuo tenant 
 keywords: topology, analyze, analysis, map 
 ---
 = Panoramica dell'analizzatore SAN
@@ -16,22 +16,22 @@ keywords: topology, analyze, analysis, map
 [role="lead"]
 La SAN svolge un ruolo cruciale nella gestione di carichi di lavoro vitali, ma la sua complessità può causare interruzioni significative e disagi per i clienti.  Con *SAN Analyzer* di DII, la gestione della SAN diventa più semplice ed efficiente.  Questo potente strumento offre visibilità end-to-end, mappando le dipendenze da VM/host a rete, LUN e storage.  Grazie a una mappa topologica interattiva, SAN Analyzer consente di individuare i problemi, comprendere i cambiamenti e migliorare la comprensione del flusso di dati.  Semplifica la gestione SAN in ambienti IT complessi con SAN Analyzer e aumenta la visibilità sui carichi di lavoro a blocchi.
 
-image:san_analyzer_example_with_panel.png["Mappa della topologia di un sistema storage mediante SAN Analyzer"]
+image:san_analyzer_example_with_panel.png["Mappa topologica SAN Analyzer di un sistema di storage"]
 
 
 
 == Esplora le connessioni tra le tue risorse
 
-Selezionare *osservabilità > analizza > analizzatore SAN* per visualizzare l'analizzatore SAN. Impostare un filtro per applicazione, host, fabric e/o Storage. Viene visualizzata la mappa degli oggetti, che mostra gli oggetti collegati. Passare il mouse su un oggetto per visualizzare le metriche di traffico per tali connessioni.
+Selezionare *Osservabilità > Analizza > Analizzatore SAN* per visualizzare l'analizzatore SAN.  Imposta un filtro per Applicazione, Host, Fabric e/o Storage.  Viene visualizzata la mappa degli oggetti, che mostra gli oggetti collegati.  Passa il mouse su un oggetto per visualizzare le metriche del traffico per quelle connessioni.
 
 image:san_analyzer_traffic_metrics.png["Esempio di metriche del traffico di SAN Analyzer"]
 
 
-NOTE: La maggior parte dei filtri di SAN Analyzer (compresi quelli che è possibile aggiungere) sono contestuali; quando si seleziona un oggetto in uno di questi filtri, le scelte presentate negli altri menu a discesa dei filtri vengono aggiornate nel contesto con l'oggetto o gli oggetti selezionati. Le uniche eccezioni sono applicazione, porta e Switch; questi filtri non sono contestuali.
+NOTE: La maggior parte dei filtri di SAN Analyzer (inclusi quelli che puoi aggiungere) sono contestuali; quando selezioni un oggetto in uno di questi filtri, le scelte presentate negli altri menu a discesa dei filtri vengono aggiornate in base al contesto dell'oggetto o degli oggetti selezionati.  Le uniche eccezioni sono Applicazione, Porta e Switch; questi filtri non sono contestuali.
 
-Facendo clic su un oggetto o un gruppo si apre un pannello a scorrimento che fornisce ulteriori dettagli sull'oggetto e le relative connessioni. Il pannello a scorrimento visualizza un riepilogo che fornisce dettagli sull'oggetto selezionato (ad esempio IP, Hypervisor, Fabric connessi, ecc., a seconda del tipo di oggetto) e grafici che mostrano le metriche per l'oggetto come latenza o IOPS, e modifiche e avvisi, se pertinenti. È possibile scegliere di visualizzare le metriche anche per gli oggetti correlati principali nei grafici, se lo si desidera.
+Facendo clic su un oggetto o un gruppo si apre un pannello scorrevole che fornisce ulteriori dettagli sull'oggetto e sulle sue connessioni.  Il pannello scorrevole visualizza un riepilogo che fornisce dettagli sull'oggetto selezionato (ad esempio, IP, Hypervisor, Connected Fabric, ecc., a seconda del tipo di oggetto) e grafici che mostrano le metriche per l'oggetto, come latenza o IOPS, nonché modifiche e avvisi, se pertinenti.  Se lo desideri, puoi anche scegliere di visualizzare le metriche per gli oggetti più correlati nei grafici.
 
-Oltre alla scheda Summary (Riepilogo), il pannello Sliddeout (estrazione) visualizza le schede relative a elementi quali i dettagli della porta o le informazioni sulla zona, in base all'oggetto selezionato.
+Oltre alla scheda Riepilogo, il pannello scorrevole visualizza schede per informazioni quali i dettagli della porta o le informazioni sulla zona, a seconda dell'oggetto scelto.
 
 image:san_analyzer_slideout_example.png["Pannello scorrevole dell'analizzatore SAN"]
 
@@ -39,7 +39,7 @@ Se il tuo ambiente ha protocolli diversi, puoi filtrare per iSCSI o FC:
 
 image:san_analyzer_protocols.png["Protocolli dell'analizzatore SAN"]
 
-Se l'ambiente include dispositivi iSCSI, passando con il mouse sull'oggetto _iSCSI_ vengono evidenziate le connessioni relative a tali dispositivi iSCSI.
+Se l'ambiente include dispositivi iSCSI, passando il mouse sull'oggetto _iSCSI_ vengono evidenziate le connessioni relative a tali dispositivi iSCSI.
 
 image:san_analyzer_iscsi_traffic.png["Traffico iSCSI evidenziato"]
 
@@ -51,7 +51,7 @@ Ecco alcune cose da provare se riscontri problemi:
 
 [cols="2*"]
 |===
-| *Problema:* | *Provare questo:* 
+| *Problema:* | *Prova questo:* 
 
 
 | Vedo <0, =0 o >0 nella legenda per metriche come _trafficUtilization_ o _trafficRate_. | Ciò potrebbe verificarsi in casi molto rari in cui i valori metrici sono inferiori a due cifre decimali, ad esempio 0,000123.  Ampliare la finestra temporale potrebbe aiutare ad analizzare la metrica in modo più efficace. 

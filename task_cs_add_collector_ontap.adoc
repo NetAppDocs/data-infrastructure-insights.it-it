@@ -2,46 +2,46 @@
 sidebar: sidebar 
 permalink: task_cs_add_collector_ontap.html 
 keywords: data collector, ONTAP, SVM 
-summary: Aggiunta di data colleziones 
+summary: Aggiunta di collettori di dati 
 ---
-= Configurazione di NetApp ONTAP Data Collector
+= Configurazione del raccoglitore dati NetApp ONTAP
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Workload Security utilizza i data colleator per raccogliere i dati di accesso ai file e agli utenti dai dispositivi. I dati vengono forniti a workload Security per l'analisi.
+Workload Security utilizza i collettori di dati per raccogliere dati sui file e sugli accessi degli utenti dai dispositivi.  I dati vengono forniti a Workload Security per l'analisi.
 
 .Prima di iniziare
-Per configurare questo data collector sono necessarie le seguenti informazioni:
+Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
 
-* È necessario configurare un agente per la raccolta dei dati
+* Un agente deve essere configurato per raccogliere dati
 * L'indirizzo IP di gestione SVM
-* Un nome utente per accedere a SVM
-* La password per accedere a SVM
+* Un nome utente per accedere all'SVM
+* La password per accedere all'SVM
 
 
-.Procedura per la configurazione
-. Accedere come Amministratore o Proprietario dell'account all'ambiente workload Security.
-. Fare clic su *osservabilità > Collector > +Data Collector*
+.Passaggi per la configurazione
+. Accedi come amministratore o proprietario dell'account al tuo ambiente Workload Security.
+. Fare clic su *Osservabilità > Collettori > +Collettori dati*
 +
 Il sistema visualizza i Data Collector disponibili.
 
-. Fare clic su *+Monitor* nel riquadro NetApp ONTAP.
+. Fare clic su *+Monitoraggio* nel riquadro NetApp ONTAP .
 +
-Viene visualizzata la pagina di configurazione Aggiungi data collector: SVM ONTAP.
+Il sistema visualizza la pagina di configurazione Aggiungi Data Collector: Ontap SVM.
 
-. Immettere un nome univoco per il collector
-. Selezionare l'agente che raccoglierà i dati
-. Inserire l'indirizzo IP di gestione SVM
-. Immettere il nome utente per accedere a SVM
-. Inserire la password per accedere a SVM
-. Fare clic su *+Aggiungi modulo di raccolta*
+. Inserisci un nome univoco per il collezionista
+. Seleziona l'agente che raccoglierà i dati
+. Immettere l'indirizzo IP di gestione SVM
+. Inserisci il nome utente per accedere all'SVM
+. Inserisci la password per accedere all'SVM
+. Fai clic su *+Aggiungi collezionista*
 
 
-.Al termine
-* Fare clic su *sicurezza del carico di lavoro > Collector* per controllare lo stato del collettore configurato.
+.Dopo aver finito
+* Fare clic su *Sicurezza del carico di lavoro > Collettori* per verificare lo stato del collettore configurato.
 +
-Di norma si verifica un ritardo prima che venga visualizzato lo stato del raccoglitore.
+Solitamente c'è un ritardo prima che venga visualizzato lo stato del collettore.
 
 

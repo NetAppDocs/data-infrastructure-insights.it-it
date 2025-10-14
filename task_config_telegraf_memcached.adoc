@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_memcached.html 
 keywords: telegraf, installation, install, memcached 
-summary: Configurazione del data collector Memcached 
+summary: Configurazione del raccoglitore dati Memcached 
 ---
-= Data Collector Memcached
+= Memcached Data Collector
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere metriche da Memcached.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da Memcached.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Memcached.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Memcached.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
 image:MemcachedDCConfigWindows.png["Configurazione Memcached"]
 
 
 
-== Setup (Configurazione)
+== Impostare
 
-Le informazioni sono disponibili nella link:https://github.com/memcached/memcached/wiki["Wiki Memcached"].
+Le informazioni possono essere trovate nellink:https://github.com/memcached/memcached/wiki["Wiki di Memcached"] .
 
 
 
@@ -44,10 +44,10 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Memcached | Server namespace | Nome nodo IP | Accettazione delle connessioni richieste di autenticazione gestite autenticazioni non riuscite byte utilizzati byte lettura (per sec) byte scritti (per sec) CAS Badval CAS accessi CAS errori requisiti di flusso (per sec) ottenere requisiti (per sec) requisiti impostati (per sec) requisiti di tocco (per sec) rese di connessione (per sec) Strutture di connessione connessioni aperte elementi memorizzati correnti Richieste di decr riscontri (per sec) Richieste di decr perse (per sec) Richieste di eliminazione riscontri (per sec) Richieste di eliminazione mancati (per sec) elementi sfratti validi elementi scaduti riscontri (per sec) Hash byte utilizzati Hash sta espandendo Hash Power Level Incr Requests Hits (per sec) Incr Requests miss (per sec) Server Max byte Listen Disabled Num Reclaimed Worker Threads Conteggio totale connessioni aperte totale elementi memorizzati Touch Hits Touch manca il tempo di attività del server 
+| Memcached | Server dello spazio dei nomi | IP del nodo Nome del nodo | Accettazione di connessioni Gestite Richieste di autenticazione Autenticazioni non riuscite Byte utilizzati Byte letti (al sec) Byte scritti (al sec) CAS Badval CAS Hit CAS Misses Richieste di svuotamento (al sec) Richieste di ottenimento (al sec) Richieste di impostazione (al sec) Richieste di tocco (al sec) Rendimenti di connessione (al sec) Strutture di connessione Connessioni aperte Elementi archiviati correnti Richieste di decr Hit (al sec) Richieste di decr Misses (al sec) Richieste di eliminazione Hit (al sec) Richieste di eliminazione Misses (al sec) Elementi espulsi Espulsioni valide Elementi scaduti Hit di ottenimento (al sec) Misses di ottenimento (al sec) Byte hash utilizzati L'hash è in espansione Livello di potenza hash Richieste di incremento Hit (al sec) Richieste di incremento Misses (al sec) Byte massimi del server Ascolto disabilitato Numero thread worker recuperati Conteggio Totale connessioni aperte Totale elementi archiviati Hit di tocco Misses di tocco Tempo di attività del server 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

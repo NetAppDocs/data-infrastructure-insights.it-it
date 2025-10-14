@@ -2,26 +2,26 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_sphereon_intrepid.html 
 keywords: data collector, Brocade, Sphereon Intrepid, 
-summary: Configurazione del data collector Brocade Sphereon/Intrepid Switch 
+summary: Configurazione del raccoglitore dati Brocade Sphereon/Intrepid Switch 
 ---
-= Configurazione del data collector Brocade Sphereon/Intrepid Switch
+= Configurazione del raccoglitore dati Brocade Sphereon/Intrepid Switch
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector SNMP (Brocade Sphereon/Intrepid Switch) per rilevare l'inventario degli switch Brocade Sphereon o Intrepid.
+Data Infrastructure Insights utilizza il raccoglitore dati Brocade Sphereon/Intrepid Switch (SNMP) per scoprire l'inventario degli switch Brocade Sphereon o Intrepid.
 
 
 
 == Requisiti
 
-Per configurare questo data collector, è necessario soddisfare i seguenti requisiti:
+Per configurare questo raccoglitore dati è necessario soddisfare i seguenti requisiti:
 
-* Deve essere presente una connettività IP a tutti gli switch del fabric. Se si seleziona la casella di controllo rileva tutti gli switch nel fabric, Data Infrastructure Insights identifica tutti gli switch nel fabric; tuttavia, per rilevarli è necessaria la connettività IP a tali switch aggiuntivi.
+* Deve essere presente connettività IP per tutti gli switch nel fabric.  Se selezioni la casella di controllo Scopri tutti gli switch nel fabric, Data Infrastructure Insights identifica tutti gli switch nel fabric; tuttavia, necessita della connettività IP a questi switch aggiuntivi per rilevarli.
 * Stringa di comunità di sola lettura se si utilizza SNMP V1 o SNMP V2.
-* Accesso HTTP allo switch per ottenere informazioni sullo zoning.
-* Accedere alla convalida eseguendo l'utility snmpwalk sullo switch (vedere _<install_path>_).
+* Accesso HTTP allo switch per ottenere informazioni sulla zonizzazione.
+* Convalida dell'accesso eseguendo l'utilità snmpwalk sullo switch (vedere _<install_path>\bin\_).
 
 
 
@@ -33,13 +33,13 @@ Per configurare questo data collector, è necessario soddisfare i seguenti requi
 | Campo | Descrizione 
 
 
-| Switch Sphereon | Indirizzo IP o nome di dominio completo dello switch 
+| Interruttore Sphereon | Indirizzo IP o nome di dominio completo dello switch 
 
 
-| Versione SNMP | Versione di SNMP 
+| Versione SNMP | Versione SNMP 
 
 
-| Stringa di comunità SNMP | Stringa di comunità di sola lettura SNMP utilizzata per accedere allo switch 
+| Stringa della comunità SNMP | Stringa di comunità SNMP di sola lettura utilizzata per accedere allo switch 
 
 
 | Nome utente SNMP | Nome utente SMI-S per lo switch (solo SNMP v3) 
@@ -56,31 +56,31 @@ Per configurare questo data collector, è necessario soddisfare i seguenti requi
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 15 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 15 minuti. 
 
 
-| Protocollo SNMP Auth | Protocollo di autenticazione SNMP (solo SNMP v3) 
+| Protocollo di autenticazione SNMP | Protocollo di autenticazione SNMP (solo SNMP v3) 
 
 
-| Password per la privacy SNMP | Password per la privacy SNMP (solo SNMP v3) 
+| Password di privacy SNMP | Password di privacy SNMP (solo SNMP v3) 
 
 
-| Numero di tentativi SNMP | Numero di tentativi SNMP 
+| Numero di tentativi SNMP | Numero di tentativi di ripetizione SNMP 
 
 
-| Nome fabric | Nome del fabric che deve essere segnalato dal data collector. Lasciare vuoto per riportare il nome del fabric come WWN. 
+| Nome del tessuto | Nome del tessuto che deve essere segnalato dal raccoglitore dati.  Lasciare vuoto per segnalare il nome del tessuto come WWN. 
 
 
-| Attivare il trapping | Selezionare questa opzione per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo. Se si seleziona enable trapping (attiva trap), è necessario attivare anche SNMP. 
+| Abilita Trapping | Selezionare per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo.  Se si seleziona Abilita trapping, è necessario attivare anche SNMP. 
 
 
-| Tempo minimo tra trap (secondi) | Tempo minimo tra i tentativi di acquisizione attivati dalle trap. Il valore predefinito è 10 secondi. 
+| Tempo minimo tra le trappole (secondi) | Tempo minimo tra i tentativi di acquisizione attivati dalle trappole. Il valore predefinito è 10 secondi. 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

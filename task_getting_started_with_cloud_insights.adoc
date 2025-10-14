@@ -1,119 +1,119 @@
 ---
 sidebar: sidebar 
 permalink: task_getting_started_with_cloud_insights.html 
-summary: Guida introduttiva di Data Infrastructure Insights. 
+summary: Introduzione a Data Infrastructure Insights. 
 keywords: invite, roles, data collector, acquisition unit, AU 
 ---
-= Per iniziare a raccogliere i dati
+= Come iniziare a raccogliere dati
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Dopo aver effettuato la registrazione a Data Infrastructure Insights e aver effettuato l'accesso all'ambiente per la prima volta, verranno eseguite le procedure guidate per iniziare a raccogliere e gestire i dati.
+Dopo esserti registrato a Data Infrastructure Insights e aver effettuato l'accesso al tuo ambiente per la prima volta, verrai guidato attraverso i seguenti passaggi per iniziare a raccogliere e gestire i dati.
 
-I raccoglitori di dati rilevano le informazioni provenienti dalle origini dati, ad esempio dispositivi di storage, switch di rete e macchine virtuali. Le informazioni raccolte vengono utilizzate per l'analisi, la convalida, il monitoraggio e la risoluzione dei problemi.
+I raccoglitori di dati scoprono informazioni dalle tue fonti di dati, come dispositivi di archiviazione, switch di rete e macchine virtuali.  Le informazioni raccolte vengono utilizzate per l'analisi, la convalida, il monitoraggio e la risoluzione dei problemi.
 
-Data Infrastructure Insights mette a disposizione tre tipi di raccolta dati:
+Data Infrastructure Insights dispone di tre tipi di collettori di dati:
 
-* Infrastruttura (dispositivi storage, switch di rete, infrastruttura di calcolo)
-* Sistemi operativi (ad esempio VMware o Windows)
+* Infrastruttura (dispositivi di archiviazione, switch di rete, infrastruttura di elaborazione)
+* Sistemi operativi (come VMware o Windows)
 * Servizi (come Kafka)
 
 
-Seleziona il tuo primo data collector tra i vendor e i modelli supportati disponibili. È possibile aggiungere facilmente altri data collezioner in un secondo momento.
+Seleziona il tuo primo raccoglitore dati tra i fornitori supportati e i modelli disponibili.  In seguito sarà possibile aggiungere facilmente altri raccoglitori di dati.
 
 
 
 == Installare un'unità di acquisizione
 
-Se è stato selezionato un data collector _Infrastructure_, è necessaria un'unità di acquisizione per inserire i dati in Data Infrastructure Insights. È necessario scaricare e installare il software dell'unità di acquisizione su un server o una macchina virtuale nel data center da cui si desidera effettuare la raccolta. È possibile utilizzare una singola unità di acquisizione per più data colleziones.
+Se hai selezionato un raccoglitore di dati _Infrastruttura_, è necessaria un'unità di acquisizione per immettere i dati in Data Infrastructure Insights.  Sarà necessario scaricare e installare il software Acquisition Unit su un server o una macchina virtuale nel data center da cui si effettuerà la raccolta.  Una singola unità di acquisizione può essere utilizzata per più raccoglitori di dati.
 
-image:NewLinuxAUInstall.png["Istruzioni Linux AU"]
+image:NewLinuxAUInstall.png["Istruzioni per Linux AU"]
 
-* Seguire le link:task_configure_acquisition_unit.html["istruzioni"] indicazioni visualizzate per installare l'unità di acquisizione. Una volta installato il software dell'unità di acquisizione, viene visualizzato il pulsante continua ed è possibile passare alla fase successiva.
-
-
-image:NewAUDetected.png["Rilevato nuovo AU"]
-
-Se necessario, è possibile configurare ulteriori unità di acquisizione in un secondo momento. Ad esempio, potrebbero essere necessarie diverse unità di acquisizione che raccolgono informazioni dai data center di diverse regioni.
+* Segui illink:task_configure_acquisition_unit.html["istruzioni"] visualizzato per installare l'unità di acquisizione.  Una volta installato il software Acquisition Unit, viene visualizzato il pulsante Continua ed è possibile procedere al passaggio successivo.
 
 
+image:NewAUDetected.png["Nuova UA rilevata"]
 
-== Configurare l'infrastruttura Data Collector
+Se necessario, è possibile configurare ulteriori unità di acquisizione in un secondo momento.  Ad esempio, potresti volere che diverse unità di acquisizione raccolgano informazioni dai data center in regioni diverse.
 
-Per i data collector di _infrastruttura_, ti verrà richiesto di compilare i campi di data collector presentati:
 
-* Assegnare al data collector un nome univoco e significativo.
-* Immettere le credenziali (nome utente e password) per connettersi alla periferica, a seconda dei casi.
+
+== Configurare il Data Collector - Infrastruttura
+
+Per i raccoglitori di dati _Infrastruttura_, ti verrà chiesto di compilare i campi del raccoglitore di dati presentati:
+
+* Assegnare al raccoglitore dati un nome univoco e significativo.
+* Immettere le credenziali (nome utente e password) per connettersi al dispositivo, se necessario.
 * Compilare tutti gli altri campi obbligatori nelle sezioni _Configurazione_ e _Configurazione avanzata_.
-* Fare clic su *Add Collector* per salvare il data collector.
+* Fare clic su *Aggiungi raccoglitore* per salvare il raccoglitore dati.
 
 
-Sarà possibile configurare altri data collezioner in un secondo momento.
+Sarà possibile configurare ulteriori raccoglitori di dati in un secondo momento.
 
 
 
-== Configurare Data Collector - sistemi operativi e servizi
+== Configurare il Data Collector - Sistemi operativi e servizi
 
 
 
 === Sistema operativo:
 
-Per i raccoglitori di dati _sistema operativo_, scegliete una piattaforma (Linux, Windows) per installare un agente di Data Infrastructure Insights. Per raccogliere i dati dai servizi, è necessario disporre di almeno un agente. L'agente raccoglie inoltre i dati dall'host stesso, per utilizzarli in Data Infrastructure Insights. Questi dati sono classificati come dati "nodo" nei widget, ecc.
+Per i raccoglitori di dati del _Sistema operativo_, scegliere una piattaforma (Linux, Windows) su cui installare un agente Data Infrastructure Insights .  È necessario disporre di almeno un agente per raccogliere i dati dai Servizi.  L'agente raccoglie anche dati dall'host stesso, per utilizzarli in Data Infrastructure Insights.  Questi dati sono classificati come dati "Nodo" nei widget, ecc.
 
 * Aprire un terminale o una finestra di comando sull'host dell'agente o sulla macchina virtuale e incollare il comando visualizzato per installare l'agente.
-* Al termine dell'installazione, fare clic su *complete Setup* (completa installazione).
+* Al termine dell'installazione, fare clic su *Completa installazione*.
 
 
 
 
 === Servizi:
 
-Per i data raccoglitori _Service_, fare clic su un riquadro per aprire la pagina delle istruzioni per il servizio.
+Per i raccoglitori di dati _Servizio_, fare clic su un riquadro per aprire la pagina delle istruzioni per quel servizio.
 
-* Scegliere una piattaforma e un Agent Access Key.
-* Se non si dispone di un agente installato su tale piattaforma, seguire le istruzioni per installare l'agente.
-* Fare clic su *Continue* (continua) per aprire la pagina delle istruzioni di data collector.
-* Seguire le istruzioni per configurare il data collector.
-* Una volta completata la configurazione, fare clic su *complete Setup* (completa installazione).
-
-
+* Scegli una piattaforma e una chiave di accesso agente.
+* Se non hai un agente installato sulla piattaforma, segui le istruzioni per installarlo.
+* Fare clic su *Continua* per aprire la pagina delle istruzioni del raccoglitore dati.
+* Seguire le istruzioni per configurare il raccoglitore dati.
+* Una volta completata la configurazione, fare clic su *Completa installazione*.
 
 
-== Aggiungere dashboard
 
-A seconda del tipo di data collector iniziale selezionato per la configurazione (storage, switch, ecc.), verranno importati uno o più dashboard pertinenti. Ad esempio, se è stato configurato un agente di raccolta dati di storage, verrà importato un set di dashboard relativi allo storage, che verrà impostato come home page di Data Infrastructure Insights. È possibile modificare la home page dall'elenco *Dashboards > Show All Dashboards* (Dashboard > Mostra tutti i dashboard).
 
-È possibile importare dashboard aggiuntivi in un secondo momento, oppure link:concept_dashboards_overview.html["crea il tuo"].
+== Aggiungi dashboard
+
+A seconda del tipo di raccoglitore dati iniziale selezionato per la configurazione (archiviazione, switch, ecc.), verranno importate una o più dashboard pertinenti.  Ad esempio, se hai configurato un raccoglitore di dati di archiviazione, verrà importato un set di dashboard relative all'archiviazione e una verrà impostata come home page di Data Infrastructure Insights .  È possibile modificare la home page dall'elenco *Dashboard > Mostra tutte le dashboard*.
+
+È possibile importare dashboard aggiuntive in un secondo momento oppurelink:concept_dashboards_overview.html["crea il tuo"] .
 
 
 
 == Questo è tutto ciò che c'è da fare
 
-Una volta completato il processo di configurazione iniziale, l'ambiente inizierà a raccogliere i dati.
+Dopo aver completato il processo di configurazione iniziale, l'ambiente inizierà a raccogliere dati.
 
-Se il processo di configurazione iniziale viene interrotto (ad esempio, se si chiude la finestra del browser), seguire la procedura manualmente:
+Se il processo di configurazione iniziale viene interrotto (ad esempio, se si chiude la finestra del browser), sarà necessario seguire manualmente i passaggi:
 
-* Scegliere un Data Collector
-* Installare un agente o un'unità di acquisizione, se richiesto
-* Configurare Data Collector
+* Scegli un raccoglitore di dati
+* Installare un agente o un'unità di acquisizione se richiesto
+* Configurare il Data Collector
 
 
 
 
 == Definizioni utili
 
-Le seguenti definizioni possono essere utili quando si parla di raccolte dati o funzionalità di Data Infrastructure Insights:
+Le seguenti definizioni possono essere utili quando si parla di collettori di dati o funzionalità Data Infrastructure Insights :
 
-* Ciclo di vita del raccoglitore: Un raccoglitore appartiene a uno dei seguenti stati nel suo ciclo di vita:
+* Ciclo di vita del collezionista: un collezionista apparterrà a uno dei seguenti stati nel suo ciclo di vita:
 +
-** *Anteprima*: Disponibile con capacità limitata o per un pubblico limitato. link:concept_preview_features.html["Funzioni di anteprima"] E i data collector dovrebbero diventare GA dopo il periodo di anteprima. I periodi di anteprima variano in base al pubblico o alla funzionalità.
-** *GA*: Una funzionalità o un data collector generalmente disponibile per tutti i clienti, in base all'edizione o al set di funzionalità.
-** *Deprecated*: Si applica ai data collezions che non sono o sono previsti per diventare più sostenibili dal punto di vista funzionale. I data collezioner deprecati vengono spesso sostituiti con data collezioner più recenti e aggiornati dal punto di vista funzionale.
-** *Deleted*: Un data collector rimosso e non più disponibile.
+** *Anteprima*: Disponibile in quantità limitata o per un pubblico limitato. link:concept_preview_features.html["Funzionalità di anteprima"] e si prevede che i collettori di dati diventino GA dopo il periodo di anteprima.  I periodi di anteprima variano in base al pubblico o alla funzionalità.
+** *GA*: una funzionalità o un raccoglitore di dati generalmente disponibile per tutti i clienti, in base all'edizione o al set di funzionalità.
+** *Obsoleto*: si applica ai raccoglitori di dati che non sono più funzionalmente sostenibili o che si prevede che non lo saranno più.  I collettori di dati obsoleti vengono spesso sostituiti con collettori di dati più nuovi e funzionalmente aggiornati.
+** *Eliminato*: un raccoglitore di dati che è stato rimosso e non è più disponibile.
 
 
-* Unità di acquisizione: Un computer dedicato all'hosting dei data collezioner, in genere una macchina virtuale. Questo computer si trova generalmente nello stesso data center/VPC degli elementi monitorati.
-* Origine dati: Modulo per la comunicazione con uno stack hardware o software. È costituito da una configurazione e da un codice che vengono eseguiti sul computer AU per comunicare con il dispositivo.
+* Unità di acquisizione: un computer dedicato all'hosting di raccoglitori di dati, in genere una macchina virtuale.  In genere questo computer si trova nello stesso data center/VPC degli elementi monitorati.
+* Origine dati: un modulo per comunicare con uno stack hardware o software.  Consiste in una configurazione e in un codice che vengono eseguiti sul computer AU per comunicare con il dispositivo.
 

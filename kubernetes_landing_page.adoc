@@ -10,38 +10,38 @@ summary: Spiegazione della landing page di Kubernetes
 
 
 [role="lead"]
-Data Infrastructure Insights Kubernetes Explorer è un potente tool per visualizzare la salute e l'utilizzo generali dei cluster Kubernetes e ti consente di analizzare facilmente le aree di indagine.
+Data Infrastructure Insights Kubernetes Explorer è un potente strumento per visualizzare lo stato generale e l'utilizzo dei cluster Kubernetes e consente di analizzare in modo più approfondito le aree di indagine.
 
-Facendo clic su *Dashboards > Kubernetes Explorer* si apre la pagina Kubernetes Cluster. Questa pagina di panoramica contiene una tabella dei cluster Kubernetes sul tenant.
+Facendo clic su *Dashboard > Kubernetes Explorer* si apre la pagina con l'elenco dei cluster Kubernetes.  Questa pagina di panoramica contiene la tabella dei cluster Kubernetes presenti nel tuo tenant.
 
-image:Kubernetes_List_Page_new.png["Pagina elenco Kubernetes"]
+image:Kubernetes_List_Page_new.png["Pagina dell'elenco di Kubernetes"]
 
 
 
 === Elenco dei cluster
 
-L'elenco dei cluster visualizza le seguenti informazioni per ciascun cluster sul tenant:
+L'elenco dei cluster visualizza le seguenti informazioni per ciascun cluster nel tenant:
 
-* Cluster *Nome*. Facendo clic sul nome di un cluster si apre il link:kubernetes_cluster_detail.html["*pagina dei dettagli*"] relativo.
-* Percentuali di *saturazione*. La saturazione complessiva è la più alta tra CPU, memoria o saturazione dello storage.
-* Numero di *nodi* nel cluster. Facendo clic su questo numero si apre la pagina Node list (elenco nodi).
-* Numero di *pod* nel cluster. Facendo clic su questo numero si apre la pagina dell'elenco dei pod.
-* Numero di *namespace* nel cluster. Facendo clic su questo numero si apre la pagina dell'elenco dei namespace.
-* Numero di *carichi di lavoro* nel cluster. Facendo clic su questo numero si apre la pagina elenco workload.
-
-
+* Cluster *Nome*.  Facendo clic sul nome di un cluster si aprirà illink:kubernetes_cluster_detail.html["*pagina dei dettagli*"] per quel cluster.
+* Percentuali di *saturazione*.  La saturazione complessiva è la più alta tra la saturazione della CPU, della memoria o dello storage.
+* Numero di *Nodi* nel cluster.  Facendo clic su questo numero si aprirà la pagina dell'elenco dei nodi.
+* Numero di *Pod* nel cluster.  Facendo clic su questo numero si aprirà la pagina dell'elenco dei Pod.
+* Numero di *Namespace* nel cluster.  Facendo clic su questo numero si aprirà la pagina dell'elenco degli spazi dei nomi.
+* Numero di *carichi di lavoro* nel cluster.  Facendo clic su questo numero si aprirà la pagina dell'elenco dei carichi di lavoro.
 
 
-== Rifinitura del filtro
 
-Quando si esegue il filtraggio, quando si inizia a digitare viene visualizzata l'opzione per creare un *filtro con caratteri jolly* in base al testo corrente. Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione con caratteri jolly. È inoltre possibile creare *espressioni* utilizzando NOR o E, oppure selezionare l'opzione "None" (Nessuno) per filtrare i valori nulli nel campo.
+
+== Perfezionamento del filtro
+
+Quando si filtra, quando si inizia a digitare viene presentata l'opzione per creare un *filtro con caratteri jolly* in base al testo corrente.  Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione jolly.  È anche possibile creare *espressioni* utilizzando NOT o AND, oppure selezionare l'opzione "Nessuno" per filtrare i valori nulli nel campo.
 
 image:Filter_Kubernetes_Explorer.png["Filtraggio con caratteri jolly in K8S Explorer"]
 
-I filtri basati su caratteri jolly o espressioni (ad esempio, NOD, AND, "None", ecc.) vengono visualizzati in blu scuro nel campo del filtro. Gli elementi selezionati direttamente dall'elenco vengono visualizzati in blu chiaro.
+I filtri basati su caratteri jolly o espressioni (ad esempio NOT, AND, "Nessuno", ecc.) vengono visualizzati in blu scuro nel campo filtro.  Gli elementi selezionati direttamente dall'elenco vengono visualizzati in azzurro.
 
-image:Filter_Kubernetes_Explorer_2.png["Filtro che mostra caratteri jolly e elementi selezionati"]
+image:Filter_Kubernetes_Explorer_2.png["Filtro che mostra caratteri jolly ed elementi selezionati"]
 
-I filtri Kubernetes sono contestuali, il che significa ad esempio che se ci si trova in una pagina di nodo specifica, il filtro pod_name elenca solo i pod correlati a quel nodo. Inoltre, se si applica un filtro per uno spazio dei nomi specifico, il filtro pod_name elencherà solo i pod su quel nodo _e_ in tale spazio dei nomi.
+I filtri di Kubernetes sono contestuali, il che significa che se ci si trova, ad esempio, su una pagina di un nodo specifico, il filtro pod_name elenca solo i pod correlati a quel nodo.  Inoltre, se si applica un filtro per uno specifico namespace, il filtro pod_name elencherà solo i pod su quel nodo _e_ in quello namespace.
 
-Si noti che i caratteri jolly e il filtraggio delle espressioni funzionano con testo o elenchi, ma non con valori numerici, date o booleani.
+Si noti che il filtro con caratteri jolly ed espressioni funziona con testo o elenchi, ma non con valori numerici, date o valori booleani.

@@ -10,27 +10,27 @@ keywords: query, queries, modify, edit, delete, remove
 
 
 [role="lead"]
-È possibile modificare i criteri associati a una query quando si desidera modificare i criteri di ricerca per le risorse che si stanno interrogando.
+È possibile modificare i criteri associati a una query quando si desidera modificare i criteri di ricerca per le risorse su cui si sta eseguendo la query.
 
 
 
 == Modifica di una query
 
-.Fasi
-. Fare clic su *Esplora* e selezionare *tutte le query metriche*.
+.Passi
+. Fare clic su *Esplora* e selezionare *Tutte le query metriche*.
 +
 Viene visualizzata la pagina Query.
 
 . Fare clic sul nome della query
-. Per aggiungere un criterio alla query, fare clic sull'icona colonne e selezionare una metrica o un attributo dall'elenco.
+. Per aggiungere un criterio alla query, fare clic sull'icona Colonne e selezionare una metrica o un attributo dall'elenco.
 
 
-Una volta apportate tutte le modifiche necessarie, effettuare una delle seguenti operazioni:
+Dopo aver apportato tutte le modifiche necessarie, procedere in uno dei seguenti modi:
 
-* Fare clic sul pulsante *Save* (Salva) per salvare la query con il nome utilizzato inizialmente.
-* Fare clic sul menu a discesa accanto al pulsante *Save* (Salva) e selezionare *Save As* (Salva con nome) per salvare la query con un altro nome. Questa operazione non sovrascrive la query originale.
-* Fare clic sul menu a discesa accanto al pulsante *Save* (Salva) e selezionare *Rename* (Rinomina) per modificare il nome della query utilizzato inizialmente. Questa operazione sovrascrive la query originale.
-* Fare clic sul menu a discesa accanto al pulsante *Save* (Salva) e selezionare *Discard changes* (Annulla modifiche) per ripristinare le ultime modifiche salvate.
+* Fare clic sul pulsante *Salva* per salvare la query con il nome utilizzato inizialmente.
+* Fare clic sul menu a discesa accanto al pulsante *Salva* e selezionare *Salva con nome* per salvare la query con un altro nome.  Ciò non sovrascrive la query originale.
+* Fare clic sul menu a discesa accanto al pulsante *Salva* e selezionare *Rinomina* per modificare il nome della query utilizzato inizialmente.  Ciò sovrascrive la query originale.
+* Fare clic sul menu a discesa accanto al pulsante *Salva* e selezionare *Ignora modifiche* per ripristinare la query alle ultime modifiche salvate.
 
 
 
@@ -39,6 +39,6 @@ Una volta apportate tutte le modifiche necessarie, effettuare una delle seguenti
 
 Per eliminare una query, fare clic su *Query* e selezionare *Mostra tutte le query*, quindi eseguire una delle seguenti operazioni:
 
-. Fare clic sul menu a tre punti a destra della query e fare clic su *Delete* (Elimina).
-. Fare clic sul nome della query e selezionare *Delete* (Elimina) dal menu a discesa *Save* (Salva).
+. Fare clic sul menu "tre punti" a destra della query e fare clic su *Elimina*.
+. Fare clic sul nome della query e selezionare *Elimina* dal menu a discesa *Salva*.
 

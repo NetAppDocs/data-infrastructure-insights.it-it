@@ -14,41 +14,41 @@ summary: 'Collettore di dati array ONTAP All-San (ASA r2)'
 
 
 [role="lead"]
-Questo raccolta di dati acquisisce dati di inventario, log EMS e prestazioni dai sistemi storage che eseguono ONTAP 9.16.0 e versioni successive utilizzando chiamate API REST.
+Questo raccoglitore di dati acquisisce dati di inventario, registri EMS e dati sulle prestazioni dai sistemi di archiviazione che eseguono ONTAP 9.16.0 e versioni successive utilizzando chiamate API REST.
 
 
 
 == Requisiti
 
-Di seguito sono riportati i requisiti per configurare e utilizzare questo data collector:
+Di seguito sono riportati i requisiti per configurare e utilizzare questo raccoglitore dati:
 
-* È necessario disporre dell'accesso a un account utente con il livello di accesso richiesto. Tenere presente che le autorizzazioni Admin sono necessarie se si crea un nuovo utente/ruolo REST.
+* È necessario avere accesso a un account utente con il livello di accesso richiesto.  Si noti che sono necessarie le autorizzazioni di amministratore se si crea un nuovo utente/ruolo REST.
 +
-** Dal punto di vista funzionale, Data Infrastructure Insights effettua principalmente richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché Data Infrastructure Insights possa registrarsi con l'array ONTAP. Consultare la _Nota sulle autorizzazioni_ immediatamente riportata di seguito.
+** Dal punto di vista funzionale, Data Infrastructure Insights esegue principalmente richieste di lettura, ma sono necessarie alcune autorizzazioni di scrittura affinché Data Infrastructure Insights possa registrarsi con l'array ONTAP .  Vedere la _Nota sulle autorizzazioni_ subito sotto.
 
 
 * ONTAP versione 9.16.0 o successiva.
-* Requisiti di porta: 443
+* Requisiti della porta: 443
 
 
 
-NOTE: ASA R2 indica i modelli di ultima generazione della piattaforma di storage ONTAP ASA. Sono inclusi i modelli di array ASA A1K, A90, A70, A50, A30 e A20.
+NOTE: ASA R2 indica i modelli di ultima generazione della piattaforma di storage ONTAP ASA .  Sono inclusi i modelli array ASA A1K, A90, A70, A50, A30 e A20.
 
-Per tutti i sistemi ASA di generazione precedente, utilizzare il link:task_dc_na_ontap_rest.html["ONTAP REST"] raccoglitore.
+Per tutti i sistemi ASA di generazione precedente, utilizzarelink:task_dc_na_ontap_rest.html["ONTAP REST"] collettore.
 
 
 
-== Nota sulle autorizzazioni
+== Una nota sui permessi
 
-Poiché una serie di dashboard ONTAP di Data Infrastructure Insights si basano su contatori ONTAP avanzati, è necessario mantenere l'opzione *attiva raccolta dati contatore avanzata* attivata nella sezione Configurazione avanzata del data collector.
+Poiché numerose dashboard ONTAP di Data Infrastructure Insights si basano su contatori ONTAP avanzati, è consigliabile mantenere abilitata l'opzione *Abilita raccolta dati contatore avanzata* nella sezione Configurazione avanzata del raccoglitore dati.
 
-Per creare un account locale per informazioni sull'infrastruttura dati a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore di gestione cluster ed eseguire i seguenti comandi sul server ONTAP:
+Per creare un account locale per Data Infrastructure Insights a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore di gestione del cluster ed eseguire i seguenti comandi sul server ONTAP :
 
-. Prima di iniziare, devi aver effettuato l'accesso a ONTAP con un account _Amministratore_ e abilitare i comandi a livello di diagnostica_.
-. Recuperare il nome del server virtuale di tipo _admin_. Questo nome verrà utilizzato nei comandi successivi.
+. Prima di iniziare, è necessario aver effettuato l'accesso a ONTAP con un account _Amministratore_ e i _comandi a livello diagnostico_ devono essere abilitati.
+. Recupera il nome del vserver di tipo _admin_.  Utilizzerai questo nome nei comandi successivi.
 +
  vserver show -type admin
-. Creare un ruolo utilizzando i seguenti comandi:
+. Crea un ruolo utilizzando i seguenti comandi:
 +
 ....
 security login rest-role create -role {role name} -api /api -access readonly
@@ -56,15 +56,15 @@ security login rest-role create -role {role name} -api /api/cluster/agents -acce
 vserver services web access create -name spi -role {role name} -vserver {vserver name as retrieved above}
 security login create -user-or-group-name {username} -application http -authentication-method password -role {role name}
 ....
-. Creare l'utente di sola lettura utilizzando il seguente comando. Una volta eseguito il comando create, viene richiesto di inserire una password per questo utente.
+. Creare l'utente di sola lettura utilizzando il seguente comando.  Dopo aver eseguito il comando create, ti verrà chiesto di immettere una password per questo utente.
 +
  security login create -username ci_user -application http -authentication-method password -role ci_readonly
 
 
-Se si utilizza un account ad/LDAP, il comando deve essere
+Se viene utilizzato un account AD/LDAP, il comando deve essere
 
  security login create -user-or-group-name DOMAIN\aduser/adgroup -application http -authentication-method domain -role ci_readonly
-Il ruolo e l'accesso utente risultanti saranno simili a quanto segue. L'output effettivo può variare:
+Il ruolo risultante e l'accesso utente saranno simili ai seguenti.  Il risultato effettivo potrebbe variare:
 
 [listing]
 ----
@@ -90,15 +90,15 @@ restUser       http        password      restRole         no     none
 
 == Migrazione
 
-Per migrare da un data collector ONTAP (ontapi) precedente al più recente REST Collector ONTAP, procedere come segue:
+Per migrare da un precedente raccoglitore dati ONTAP (ontapi) al più recente raccoglitore REST ONTAP , procedere come segue:
 
-. Aggiungere il REST Collector. Si consiglia di immettere informazioni per un utente diverso da quello configurato per il collettore precedente. Ad esempio, utilizzare l'utente annotato nella sezione autorizzazioni sopra riportata.
-. Mettere in pausa il collettore precedente, in modo che non continui a raccogliere dati.
-. Lasciare che il nuovo REST Collector acquisisca i dati per almeno 30 minuti. Ignorare i dati che non appaiono "normali" durante questo periodo di tempo.
-. Dopo il periodo di riposo, i dati dovrebbero stabilizzarsi mentre il collettore di REST continua ad acquisire.
+. Aggiungere il REST Collector.  Si consiglia di immettere le informazioni per un utente diverso da quello configurato per il raccoglitore precedente.  Ad esempio, utilizzare l'utente indicato nella sezione Autorizzazioni sopra.
+. Mette in pausa il raccoglitore precedente, in modo che non continui a raccogliere dati.
+. Lasciare che il nuovo collettore REST acquisisca i dati per almeno 30 minuti.  Ignorare tutti i dati che durante questo periodo non sembrano "normali".
+. Dopo il periodo di riposo, dovresti vedere i tuoi dati stabilizzarsi mentre il collettore REST continua ad acquisire.
 
 
-È possibile utilizzare lo stesso processo per tornare al raccoglitore precedente, se lo si desidera.
+Se lo desideri, puoi usare lo stesso procedimento per tornare al collettore precedente.
 
 
 
@@ -109,13 +109,13 @@ Per migrare da un data collector ONTAP (ontapi) precedente al più recente REST 
 | Campo | Descrizione 
 
 
-| Indirizzo IP di gestione ONTAP | Indirizzo IP o nome di dominio completo del cluster NetApp. Deve essere IP/FQDN di gestione cluster. 
+| Indirizzo IP di gestione ONTAP | Indirizzo IP o nome di dominio completo del cluster NetApp .  Deve essere l'IP/FQDN di gestione del cluster. 
 
 
-| Nome utente REST ONTAP | Nome utente del cluster NetApp 
+| Nome utente ONTAP REST | Nome utente per il cluster NetApp 
 
 
-| Password REST ONTAP | Password per il cluster NetApp 
+| Password ONTAP REST | Password per il cluster NetApp 
 |===
 
 
@@ -126,44 +126,44 @@ Per migrare da un data collector ONTAP (ontapi) precedente al più recente REST 
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Il valore predefinito è 60 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60 minuti. 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 60 secondi. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Il valore predefinito è 60 secondi. 
 
 
-| Advanced Counter Data Collection | Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. Attivato per impostazione predefinita. 
+| Raccolta dati avanzata del contatore | Selezionare questa opzione per includere i dati del contatore avanzato ONTAP nei sondaggi. Abilitato per impostazione predefinita. 
 
 
-| Abilita raccolta eventi EMS | Selezionare questa opzione per includere i dati degli eventi del registro EMS di ONTAP. Attivato per impostazione predefinita. 
+| Abilita raccolta eventi EMS | Selezionare questa opzione per includere i dati degli eventi del registro ONTAP EMS. Abilitato per impostazione predefinita. 
 
 
-| Intervallo polling EMS (sec) | Il valore predefinito è 60 secondi. 
+| Intervallo di interrogazione EMS (sec) | Il valore predefinito è 60 secondi. 
 |===
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce dati di inventario, log e performance dal data collector di ONTAP. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce dati di inventario, registri e prestazioni dal raccoglitore dati ONTAP .  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per l'asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco | Disco 
 
 
-| Gruppo RAID | Gruppo di dischi 
+| Gruppo di incursione | Gruppo di dischi 
 
 
-| Cluster | Storage 
+| Grappolo | Magazzinaggio 
 
 
-| Nodo | Nodo di storage 
+| Nodo | Nodo di archiviazione 
 
 
-| Aggregato | Pool di storage 
+| Aggregato | Pool di archiviazione 
 
 
 | LUN | Volume 
@@ -172,90 +172,90 @@ Data Infrastructure Insights acquisisce dati di inventario, log e performance da
 | Volume | Volume interno 
 
 
-| Storage Virtual Machine/Vserver | Macchina virtuale per lo storage 
+| Macchina virtuale di archiviazione/Vserver | Macchina virtuale di archiviazione 
 |===
 
 
-== Terminologia per la gestione dei dati ONTAP
+== Terminologia di gestione dei dati ONTAP
 
-I seguenti termini si applicano agli oggetti o ai riferimenti presenti nelle landing page delle risorse di storage per la gestione dei dati di ONTAP. Molti di questi termini si applicano anche ad altri data collezionisti.
+I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trovare nelle pagine di destinazione delle risorse di archiviazione ONTAP Data Management.  Molti di questi termini si applicano anche ad altri raccoglitori di dati.
 
 
 
-=== Storage
+=== Magazzinaggio
 
-* Modello – un elenco delimitato da virgole dei nomi dei modelli di nodi univoci e discreti all'interno di questo cluster. Se tutti i nodi nei cluster sono dello stesso tipo di modello, viene visualizzato un solo nome di modello.
-* Vendor (vendor): Stesso nome del vendor che si potrebbe vedere se si configurava una nuova origine dati.
-* Numero di serie – UUID dell'array
-* IP (IP): Generalmente corrisponde agli IP o ai nomi host configurati nell'origine dati.
+* Modello: elenco delimitato da virgole dei nomi univoci e discreti dei modelli di nodi all'interno di questo cluster.  Se tutti i nodi nei cluster sono dello stesso tipo di modello, verrà visualizzato un solo nome di modello.
+* Fornitore: lo stesso nome del fornitore che vedresti se stessi configurando una nuova origine dati.
+* Numero di serie: l'UUID dell'array
+* IP: in genere saranno gli IP o i nomi host configurati nell'origine dati.
 * Versione del microcodice – firmware.
-* Capacità raw – somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal ruolo.
-* Latenza: Una rappresentazione di ciò che stanno sperimentando i carichi di lavoro dell'host, sia in lettura che in scrittura. Idealmente, Data Infrastructure Insights sta reperendo questo valore direttamente, ma spesso non è così. Al posto dell'array che lo offre, Data Infrastructure Insights sta generalmente eseguendo un calcolo ponderato in IOPS derivato dalle statistiche dei singoli volumi interni.
-* Throughput: Aggregato da volumi interni. Gestione – può contenere un collegamento ipertestuale per l'interfaccia di gestione del dispositivo. Creato a livello di codice dall'origine dati Data Infrastructure Insights come parte del reporting di inventario.
+* Capacità grezza: somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal loro ruolo.
+* Latenza: rappresentazione di ciò che sta sperimentando l'host sottoposto a carichi di lavoro, sia in lettura che in scrittura.  Idealmente, Data Infrastructure Insights reperirebbe questo valore direttamente, ma spesso non è così.  Invece dell'array che offre questa funzionalità, Data Infrastructure Insights esegue in genere un calcolo ponderato in base agli IOPS derivato dalle statistiche dei singoli volumi interni.
+* Capacità di elaborazione: aggregata dai volumi interni.  Gestione: può contenere un collegamento ipertestuale all'interfaccia di gestione del dispositivo.  Creato a livello di programmazione dalla fonte dati Data Infrastructure Insights come parte della reportistica di inventario.
 
 
 
 
-=== Pool di storage
+=== Pool di archiviazione
 
-* Storage: Su quale array di storage vive questo pool. Obbligatorio.
-* Type (tipo) – un valore descrittivo da un elenco di possibilità enumerate. La maggior parte dei casi sarà "aggregato" o "RAID Group".
-* Nodo – se l'architettura di questo array di storage è tale che i pool appartengano a un nodo di storage specifico, il suo nome verrà visualizzato qui come un collegamento ipertestuale alla propria landing page.
-* Utilizza Flash Pool – valore Sì/No – questo pool basato su SATA/SAS ha SSD utilizzati per l'accelerazione del caching?
-* Ridondanza: Livello RAID o schema di protezione. RAID_DP è a doppia parità, RAID_TP è a tripla parità.
-* Capacity (capacità): I valori qui riportati sono la capacità logica utilizzata, la capacità utilizzabile e la capacità logica totale, nonché la percentuale utilizzata in tali valori.
-* Capacità con overcommit – se utilizzando le tecnologie di efficienza è stata allocata una somma totale di capacità di volume o volume interno superiore alla capacità logica del pool di storage, il valore percentuale qui sarà maggiore dello 0%.
-* Snapshot: Capacità di snapshot utilizzate e totali, se l'architettura del pool di storage dedica parte della sua capacità a segmentare aree esclusivamente per le snapshot. È probabile che le configurazioni ONTAP in MetroCluster mostrino questo aspetto, mentre le altre configurazioni ONTAP lo dimostrano meno.
-* Utilizzo - valore percentuale che indica la percentuale massima di occupato su disco di qualsiasi disco che contribuisce alla capacità di questo pool di storage. L'utilizzo dei dischi non ha necessariamente una forte correlazione con le performance degli array: L'utilizzo potrebbe essere elevato a causa di ricostruzioni dei dischi, attività di deduplica, ecc. in assenza di carichi di lavoro basati su host. Inoltre, le implementazioni di replica di molti array possono favorire l'utilizzo del disco senza essere visualizzate come volume interno o workload di volume.
-* IOPS: La somma degli IOPS di tutti i dischi che contribuiscono alla capacità di questo pool di storage. Throughput (throughput): La somma del throughput di tutti i dischi che contribuiscono alla capacità di questo pool di storage.
-
-
+* Archiviazione: su quale array di archiviazione risiede questo pool.  Obbligatorio.
+* Tipo: un valore descrittivo da un elenco di possibilità enumerate.  Nella maggior parte dei casi sarà "Aggregato" o "Gruppo RAID".
+* Nodo: se l'architettura di questo array di archiviazione è tale che i pool appartengono a un nodo di archiviazione specifico, il suo nome verrà visualizzato qui come collegamento ipertestuale alla relativa landing page.
+* Utilizza Flash Pool – Valore Sì/No – questo pool basato su SATA/SAS ha SSD utilizzati per l'accelerazione della memorizzazione nella cache?
+* Ridondanza: livello RAID o schema di protezione.  RAID_DP è a doppia parità, RAID_TP è a tripla parità.
+* Capacità: i valori qui indicati sono la capacità logica utilizzata, la capacità utilizzabile e la capacità logica totale, nonché la percentuale utilizzata tra queste.
+* Capacità sovraimpegnata: se utilizzando tecnologie di efficienza è stata assegnata una somma totale di volume o capacità di volume interno superiore alla capacità logica del pool di archiviazione, il valore percentuale sarà maggiore dello 0%.
+* Snapshot: capacità di snapshot utilizzate e totali, se l'architettura del pool di archiviazione dedica parte della sua capacità ad aree di segmenti esclusivamente per gli snapshot.  È probabile che le configurazioni ONTAP in MetroCluster presentino questo fenomeno, mentre altre configurazioni ONTAP lo presentano in misura minore.
+* Utilizzo: valore percentuale che indica la percentuale più alta di disco occupato tra tutti i dischi che contribuiscono alla capacità di questo pool di archiviazione.  L'utilizzo del disco non ha necessariamente una forte correlazione con le prestazioni dell'array: l'utilizzo può essere elevato a causa di ricostruzioni del disco, attività di deduplicazione, ecc. in assenza di carichi di lavoro gestiti dall'host.  Inoltre, molte implementazioni di replicazione degli array possono aumentare l'utilizzo del disco senza essere visualizzate come volume interno o carico di lavoro del volume.
+* IOPS: la somma degli IOPS di tutti i dischi che contribuiscono alla capacità di questo pool di archiviazione.  Throughput: la somma del throughput di tutti i dischi che contribuiscono alla capacità di questo pool di archiviazione.
 
 
-=== Nodo di storage
 
-* Storage – a quale array di storage fa parte questo nodo. Obbligatorio.
-* Partner HA: Nelle piattaforme in cui un nodo eseguirà il failover su un nodo e solo su un altro, questo verrà generalmente visualizzato qui.
-* State (Stato): Integrità del nodo. Disponibile solo quando l'array è abbastanza integro da essere inventorato da un'origine dati.
-* Modello – nome del modello del nodo.
-* Version (versione) – nome della versione del dispositivo.
-* Serial number (numero di serie) – il numero di serie del nodo.
-* Memory (memoria): Memoria base 2, se disponibile.
-* Utilization (utilizzo) – in ONTAP, si tratta di un indice di stress del controller di un algoritmo proprietario. Con ogni sondaggio sulle performance, viene riportato un numero compreso tra 0 e 100%, che è il più alto tra il conflitto del disco WAFL o l'utilizzo medio della CPU. Se si osservano valori sostenuti > 50%, ciò è indicativo di un sottodimensionamento: Un controller/nodo potrebbe non essere abbastanza grande o i dischi rotanti non sono sufficienti per assorbire il carico di lavoro di scrittura.
-* IOPS – derivato direttamente da chiamate REST ONTAP sull'oggetto del nodo.
-* Latenza – derivata direttamente da chiamate REST ONTAP sull'oggetto del nodo.
-* Throughput – derivato direttamente da chiamate REST ONTAP sull'oggetto del nodo.
-* Processori: Numero di CPU.
+
+=== Nodo di archiviazione
+
+* Archiviazione: di quale array di archiviazione fa parte questo nodo.  Obbligatorio.
+* Partner HA: sulle piattaforme in cui un nodo esegue il failover su un solo altro nodo, in genere verrà visualizzato qui.
+* Stato: salute del nodo.  Disponibile solo quando l'array è sufficientemente integro da poter essere inventariato da una fonte dati.
+* Modello: nome del modello del nodo.
+* Versione: nome della versione del dispositivo.
+* Numero di serie: il numero di serie del nodo.
+* Memoria: memoria base 2 se disponibile.
+* Utilizzo: su ONTAP, si tratta di un indice di stress del controller derivante da un algoritmo proprietario.  A ogni sondaggio sulle prestazioni verrà segnalato un numero compreso tra 0 e 100%, che rappresenta il valore più alto tra la contesa del disco WAFL o l'utilizzo medio della CPU.  Se si osservano valori sostenuti > 50%, ciò è indicativo di sottodimensionamento, ovvero un controller/nodo non sufficientemente grande o un numero insufficiente di dischi rotanti per assorbire il carico di lavoro di scrittura.
+* IOPS – Derivato direttamente dalle chiamate ONTAP REST sull'oggetto nodo.
+* Latenza: derivata direttamente dalle chiamate ONTAP REST sull'oggetto nodo.
+* Throughput: derivato direttamente dalle chiamate ONTAP REST sull'oggetto nodo.
+* Processori: numero di CPU.
 
 
 
 
 == Metriche di potenza ONTAP
 
-Diversi modelli di ONTAP forniscono metriche di potenza per approfondimenti sull'infrastruttura dati che possono essere utilizzati per il monitoraggio o gli avvisi. Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono completi, ma devono fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di un modello presente nell'elenco, il supporto deve essere lo stesso.
+Diversi modelli ONTAP forniscono metriche di potenza per Data Infrastructure Insights che possono essere utilizzate per il monitoraggio o l'invio di avvisi.  Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono esaustivi, ma dovrebbero fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di uno presente nell'elenco, il supporto dovrebbe essere lo stesso.
 
 Modelli supportati:
 
-A200 A220 A250 A300 A320 A400 A700 A700S A800 A900 C190 FAS2240-4 FAS2552 FAS2650 FAS2720 FAS2750 FAS8200 FAS8300 FAS8700 FAS9000
+A200 A220 A250 A300 A320 A400 A700 A700s A800 A900 C190 FAS2240-4 FAS2552 FAS2650 FAS2720 FAS2750 FAS8200 FAS8300 FAS8700 FAS9000
 
 Modelli non supportati:
 
-FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/AFF 8020 FAS/AFF 8040 FAS/AFF 8060 FAS/AFF 8080
+FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 8060 FAS/ AFF 8080
 
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Quando si tenta di creare un ONTAP REST data Collector, si verifica un errore simile al seguente: Configurazione: 10.193.70.14: ONTAP REST API at 10.193.70.14 non è disponibile: 10.193.70.14 non è riuscito a OTTENERE /api/cluster: 400 richiesta non valida | Ciò è probabilmente dovuto a un array ONTAP obsoleto, ad esempio ONTAP 9,6, che non dispone di funzionalità di API REST. ONTAP 9.14.1 è la versione minima di ONTAP supportata dal REST Collector di ONTAP. Le risposte "400 Bad Request" dovrebbero essere previste nelle release ONTAP pre-REST. Per le versioni di ONTAP che supportano REST ma non sono 9.14.1 o successive, potrebbe essere visualizzato il seguente messaggio simile: Configurazione: 10.193.98.84: ONTAP REST API at 10.193.98.84 is not available: 10.193.98.84: ONTAP REST API at 10.193.98.84 is available: cheryl5-cluster-2 9.10.1 a3cb3247-3d3c-11ee-8ff3-00505b364a7 bnon è della versione minima 9.14.1. 
+| Quando si tenta di creare un raccoglitore di dati REST ONTAP , viene visualizzato un errore simile al seguente: Configurazione: 10.193.70.14: l'API REST ONTAP su 10.193.70.14 non è disponibile: 10.193.70.14 non è riuscito a GET /api/cluster: 400 Richiesta non valida | Ciò è probabilmente dovuto a un array ONTAP più vecchio (ad esempio ONTAP 9.6) che non ha funzionalità API REST.  ONTAP 9.14.1 è la versione minima ONTAP supportata dal collettore REST ONTAP .  Nelle versioni precedenti a REST ONTAP ci si dovrebbe aspettare risposte "400 Bad Request".  Per le versioni ONTAP che supportano REST ma non sono 9.14.1 o successive, potrebbe essere visualizzato il seguente messaggio simile: Configurazione: 10.193.98.84: l'API REST ONTAP su 10.193.98.84 non è disponibile: 10.193.98.84: l'API REST ONTAP su 10.193.98.84 è disponibile: cheryl5-cluster-2 9.10.1 a3cb3247-3d3c-11ee-8ff3-005056b364a7 ma non è della versione minima 9.14.1. 
 
 
-| Vedo metriche vuote o "0" in cui il raccoglitore ONTAP ontapi mostra i dati. | ONTAP REST non riporta le metriche utilizzate internamente solo nel sistema ONTAP. Ad esempio, gli aggregati di sistema non verranno raccolti dal REST di ONTAP, ma verranno raccolte solo le SVM di tipo "dati". Altri esempi di parametri di ONTAP REST che possono riportare dati zero o vuoti: InternalVolumes: REST non riporta più vol0. Aggregati: REST non più riporta aggr0. Storage: La maggior parte delle metriche corrisponde a un incremento delle metriche del volume interno e ne risentirà. Storage Virtual Machine: REST non riporta più SVM di tipo diverso da 'data' (ad esempio 'cluster', 'gmt', 'node'). È inoltre possibile notare una modifica nell'aspetto dei grafici che contengono dati, a causa della modifica del periodo di polling delle prestazioni predefinito da 15 minuti a 5 minuti. Polling più frequente significa più punti di dati da tracciare. 
+| Vedo metriche vuote o "0" dove il collettore ONTAP ontapi mostra i dati. | ONTAP REST non segnala metriche utilizzate internamente solo sul sistema ONTAP .  Ad esempio, gli aggregati di sistema non verranno raccolti da ONTAP REST, ma solo gli SVM di tipo "dati".  Altri esempi di metriche ONTAP REST che potrebbero segnalare dati pari a zero o vuoti: InternalVolumes: REST non segnala più vol0.  Aggregati: REST non segnala più aggr0.  Archiviazione: la maggior parte delle metriche è un riepilogo delle metriche del volume interno e sarà influenzata da quanto sopra.  Macchine virtuali di archiviazione: REST non segnala più SVM di tipo diverso da "dati" (ad esempio "cluster", "mgmt", "nodo").  Potresti anche notare un cambiamento nell'aspetto dei grafici che contengono dati, dovuto alla modifica del periodo di polling delle prestazioni predefinito da 15 a 5 minuti.  Sondaggi più frequenti significano più punti dati da tracciare. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

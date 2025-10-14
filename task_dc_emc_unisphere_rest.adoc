@@ -2,21 +2,21 @@
 sidebar: sidebar 
 permalink: task_dc_emc_unisphere_rest.html 
 keywords: data collector, Unisphere, EMC 
-summary: Configurazione di Dell EMC Unisphere REST Data Collector. 
+summary: Configurazione del raccoglitore dati REST Dell EMC Unisphere. 
 ---
-= Configurazione del data collector DELL EMC Unisphere REST
+= Configurazione del raccoglitore dati REST Dell EMC Unisphere
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Questo data collector acquisisce i dati di inventario e performance da Dell EMC Unisphere per i sistemi di gestione PowerMax/Vmax 3.
+Questo strumento di raccolta dati acquisisce dati di inventario e prestazioni dai sistemi di gestione Dell EMC Unisphere per PowerMax/Vmax 3.
 
-Si noti che Dell/EMC non ha introdotto statistiche per volume fino a Unisphere 10.0 - questo data collector supporta 9.2.0+, ma non sarà in grado di raccogliere statistiche di volume in quanto non esistono.
+Si prega di notare che Dell/EMC non ha introdotto le statistiche per volume fino a Unisphere 10.0; questo raccoglitore dati supporta la versione 9.2.0+, ma non sarà in grado di raccogliere statistiche sui volumi poiché non esistono.
 
-Un'istanza di Unisphere per Vmax/PowerMax potrebbe gestire uno o più array di storage Symmetrix Vmax 3 o superiore - questo collector tenterà per impostazione predefinita di rilevare tutti i file "locali" dell'istanza di Unisphere. Se un'istanza di Unisphere rileva gli array "remoti" (ovvero quelli connessi tramite replica SRDF), questi verranno ignorati e per rilevare quelli è necessario creare un ulteriore Unisphere Collector in Data Infrastructure Insights, indicato in qualsiasi istanza di Unisphere in quel sito li consideri locali.
+Un'istanza di Unisphere per Vmax/PowerMax può gestire uno o più array di archiviazione Symmetrix Vmax 3 o superiore: per impostazione predefinita, questo collector tenterà di rilevare tutti quelli "locali" per quell'istanza di Unisphere.  Se un'istanza Unisphere rileva array "remoti" (ovvero quelli connessi tramite replica SRDF), questi verranno ignorati e per individuarli è necessario creare un ulteriore raccoglitore Unisphere in Data Infrastructure Insights puntato a qualsiasi istanza Unisphere in quel sito li rilevi come locali.
 
-Per la configurazione, il data collector richiede un indirizzo IP/FQDN del server Unisphere, la connettività TCP alla porta 8443 e un nome utente e una password.
+Per la configurazione, il raccoglitore dati richiede un indirizzo IP/FQDN del server Unisphere, connettività TCP alla porta 8443 e un nome utente e una password.
 
 
 
@@ -39,10 +39,10 @@ Per la configurazione, il data collector richiede un indirizzo IP/FQDN del serve
 | Indirizzo IP del server Unisphere | Indirizzo IP o nome di dominio completo del server Unisphere 
 
 
-| Porta Unisphere | Il valore predefinito è 8443 
+| Porto Unisphere | Il valore predefinito è 8443 
 
 
-| Nome utente | Nome utente del server Unisphere 
+| Nome utente | Nome utente per il server Unisphere 
 
 
 | Password | Password utilizzata per il server Unisphere 
@@ -56,25 +56,25 @@ Per la configurazione, il data collector richiede un indirizzo IP/FQDN del serve
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | L'impostazione predefinita è 40 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 40 minuti. 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. 
 
 
-| Scegliere 'Escludi' o 'Includi' per specificare un elenco | Specificare se includere o escludere macchine virtuali 
+| Scegli "Escludi" o "Includi" per specificare un elenco | Specificare se includere o escludere le VM 
 
 
-| Elenco dispositivi filtro inventario | Elenco delle macchine virtuali da filtrare (separate da virgole o da punto e virgola se nel valore viene utilizzata una virgola) per il filtraggio 
+| Elenco dispositivi filtro inventario | Elenco delle VM da filtrare (separate da virgole o da punto e virgola se nel valore viene utilizzata una virgola) per il filtraggio 
 
 
-| Intervallo di polling delle prestazioni unisfero (sec) | L'impostazione predefinita è 300 secondi 
+| Intervallo di sondaggio sulle prestazioni di Unisphere (sec) | Il valore predefinito è 300 secondi 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -82,12 +82,12 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Errore: Autenticazione dell'utente non riuscita. | Assicurarsi che le credenziali per questa periferica siano corrette. 
+| Errore: autenticazione utente fallita. | Assicurati che le credenziali per questo dispositivo siano corrette. 
 
 
-| Inventario stato recente: Dati non previsti recuperati - Array ha riportato 0 volume | In genere indica un problema di autorizzazione (non di autenticazione). Assicurarsi che le credenziali siano corrette e che il nome utente sia in grado di elencare tutti i volumi e visualizzarne gli attributi. 
+| Stato recente dell'inventario: dati inattesi recuperati - Array ha segnalato 0 volume | In genere indica un problema di autorizzazione (non di autenticazione).  Assicurati che le tue credenziali siano corrette e che il nome utente abbia il potere di elencare tutti i volumi e di visualizzarne gli attributi. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

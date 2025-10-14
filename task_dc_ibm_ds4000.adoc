@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_ds4000.html 
 keywords: data collector, IBM, DS4000 
-summary: Data collector IBM TotalStorage DS4000 
+summary: Raccoglitore dati IBM TotalStorage DS4000 
 ---
-= Data collector IBM TotalStorage DS4000
+= Raccoglitore dati IBM TotalStorage DS4000
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Questo data collector acquisisce le informazioni di inventario e performance dal sistema storage IBM DS4000. Esistono due configurazioni possibili (firmware 6.x e firmware 7.x+), entrambe con gli stessi valori.
+Questo raccoglitore di dati acquisisce informazioni sull'inventario e sulle prestazioni dal sistema di archiviazione IBM DS4000.  Sono possibili due configurazioni (firmware 6.x e firmware 7.x+) ed entrambe hanno gli stessi valori.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector IBM DS4000. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati IBM DS4000.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco | Disco 
@@ -29,26 +29,26 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 | Gruppo di volumi | Gruppo di dischi 
 
 
-| Array di storage | Storage 
+| Array di archiviazione | Magazzinaggio 
 
 
-| Controller | Nodo di storage 
+| Controllore | Nodo di archiviazione 
 
 
-| Gruppo di volumi | Pool di storage 
+| Gruppo di volumi | Pool di archiviazione 
 
 
 | Volume | Volume 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-* Indirizzo IP di ciascun array DS5 o FAStT
+* Indirizzo IP di ogni array DS5 o FAStT
 * Convalida dell'accesso tramite ping dell'indirizzo IP di entrambi i controller sull'array
-* Requisiti di porta: 2463
+* Requisiti della porta: 2463
 
 
 
@@ -60,7 +60,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Elenco separato da virgole degli IP controller SANtricity array | Indirizzi IP e/o nomi di dominio pienamente qualificati per i controller degli array 
+| Elenco separato da virgole degli IP del controller Array SANtricity | Indirizzi IP e/o nomi di dominio completi per i controller di array 
 |===
 
 
@@ -71,13 +71,13 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Il valore predefinito è 30 minuti 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 30 minuti 
 
 
-| Intervallo di polling delle performance fino a 3600 secondi | Il valore predefinito è 300 secondi 
+| Intervallo di sondaggio delle prestazioni fino a 3600 secondi | Il valore predefinito è 300 secondi 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

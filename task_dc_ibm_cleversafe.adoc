@@ -2,42 +2,42 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_cleversafe.html 
 keywords: data collector, IBM Cleversafe 
-summary: Configurazione di IBM Cleversafe Data Collector. 
+summary: Configurazione del raccoglitore dati IBM Cleversafe. 
 ---
-= Data collector IBM Cleversafe
+= Raccoglitore dati IBM Cleversafe
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per rilevare i dati di inventario e delle prestazioni dei sistemi di storage IBM Cleversafe.
+Data Infrastructure Insights utilizza questo strumento di raccolta dati per scoprire dati di inventario e prestazioni per i sistemi di storage IBM Cleversafe.
 
 
-NOTE: IBM Cleversafe viene misurato a un tasso diverso da TB raw a unità gestite. Ogni 40 TB di capacità IBM Cleversafe non formattata viene addebitato come 1 link:concept_subscribing_to_cloud_insights.html#pricing["Unità gestita (MU)"].
+NOTE: IBM Cleversafe viene misurato in base a una tariffa Raw TB diversa da quella delle unità gestite.  Ogni 40 TB di capacità IBM Cleversafe non formattata viene addebitato come 1link:concept_subscribing_to_cloud_insights.html#pricing["Unità gestita (MU)"] .
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector IBM Cleversafe. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati IBM Cleversafe.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Pool di storage | Pool di storage 
+| Pool di archiviazione | Pool di archiviazione 
 
 
-| Container | Volume interno 
+| Contenitore | Volume interno 
 
 
-| Container | Condivisione file 
+| Contenitore | Condivisione file 
 
 
 | Condivisione NFS | Condividere 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
@@ -60,10 +60,10 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | IP del gestore o nome host | Indirizzo IP o nome host del nodo di gestione 
 
 
-| Nome utente | Nome utente dell'account utente con ruolo di super utente o amministratore di sistema 
+| Nome utente | Nome utente per l'account utente con ruolo di superutente o amministratore di sistema 
 
 
-| Password | Password per l'account utente con ruolo di super utente o amministratore di sistema 
+| Password | Password per l'account utente con ruolo di superutente o amministratore di sistema 
 |===
 
 
@@ -74,13 +74,13 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Intervallo di polling dell'inventario (min) | Intervallo tra i sondaggi di inventario. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. 
 
 
-| Timeout connessione HTTP (sec) | Timeout HTTP in secondi. 
+| Timeout della connessione HTTP (sec) | Timeout HTTP in secondi. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

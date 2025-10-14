@@ -4,46 +4,46 @@ permalink: cs_notifications_email.html
 summary: Aggiunta di indirizzi e-mail per le notifiche degli avvisi di sicurezza del carico di lavoro. 
 keywords: email, notifications, alerts, warnings, attacks 
 ---
-= Configurazione delle notifiche e-mail per gli avvisi, gli avvisi e lo stato del servizio di raccolta origine dati/agente
+= Configurazione delle notifiche e-mail per avvisi, avvertenze e stato di integrità dell'agente/collettore dell'origine dati
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Per configurare i destinatari degli avvisi di workload Security, fare clic su *Admin > Notifiche* e inserire gli indirizzi e-mail nelle sezioni appropriate per ciascun destinatario.
+Per configurare i destinatari degli avvisi di Workload Security, fare clic su *Amministrazione > Notifiche* e immettere un indirizzo e-mail nelle sezioni appropriate per ciascun destinatario.
 
 
 
 == Avvisi e avvisi di potenziali attacchi
 
-Per inviare notifiche di avviso di _potenziali attacchi_, inserire gli indirizzi e-mail dei destinatari nella sezione _Invia avvisi potenziali attacchi_. Le notifiche e-mail vengono inviate all'elenco dei destinatari degli avvisi per ogni azione dell'avviso.
+Per inviare notifiche di avviso di _Potenziale attacco_, inserisci gli indirizzi email dei destinatari nella sezione _Invia avvisi di potenziale attacco_.  Per ogni azione sull'avviso vengono inviate notifiche e-mail all'elenco dei destinatari dell'avviso.
 
-Per inviare notifiche di tipo _Warning_, inserire gli indirizzi e-mail dei destinatari nella sezione _Send Warning Alerts_.
-
-
-
-== Monitoraggio dello stato di salute di Agent e Data Collector
-
-È possibile monitorare lo stato degli agenti e delle origini dati attraverso le notifiche.
-
-Per ricevere notifiche in caso di mancato funzionamento di un agente o di un Data Source Collector, inserire gli indirizzi e-mail dei destinatari nella sezione _Data Collection Health Alerts_.
-
-Tenere presente quanto segue:
-
-* Gli avvisi sullo stato di salute verranno inviati solo dopo che l'agente/raccoglitore ha interrotto la segnalazione per almeno un'ora.
-* Viene inviata una sola notifica via email ai destinatari in un dato periodo di 24 ore, anche se l'agente o il Data Collector sono disconnessi per un periodo di tempo più lungo.
-* In caso di guasto di un Agente, verrà inviato un avviso (non uno per raccoglitore). L'e-mail includerà un elenco di tutte le SVM interessate.
-* Un errore di raccolta Active Directory viene segnalato come avviso e non influisce sul rilevamento ransomware.
-* L'elenco di configurazione per iniziare ora include una nuova fase di _Configurazione delle notifiche e-mail_.
+Per inviare notifiche di _Avviso_, inserisci gli indirizzi email dei destinatari nella sezione _Invia avvisi di avviso_.
 
 
 
+== Monitoraggio dello stato di salute dell'agente e del raccoglitore dati
 
-== Ricezione delle notifiche di aggiornamento dell'agente e del Data Collector
+È possibile monitorare lo stato di salute degli agenti e delle origini dati tramite notifiche.
 
-* Immettere gli ID e-mail in "Data Collection Health Alerts" (Avvisi integrità raccolta dati).
-* La casella di controllo "Abilita notifiche di aggiornamento" diventa attiva.
-* Le notifiche e-mail di aggiornamento dell'agente e di Data Collector vengono inviate agli ID e-mail un giorno prima dell'aggiornamento pianificato.
+Per ricevere notifiche nel caso in cui un agente o un raccoglitore di origini dati non funzioni, immettere gli indirizzi e-mail dei destinatari nella sezione _Avvisi sullo stato di integrità della raccolta dati_.
+
+Tieni presente quanto segue:
+
+* Gli avvisi sanitari verranno inviati solo dopo che l'agente/esattore avrà smesso di segnalare per almeno un'ora.
+* Viene inviata una sola notifica e-mail ai destinatari previsti in un dato periodo di 24 ore, anche se l'agente o il raccoglitore dati sono disconnessi per un periodo di tempo più lungo.
+* In caso di errore dell'agente, verrà inviato un avviso (non uno per ogni collettore).  L'e-mail conterrà un elenco di tutti gli SVM interessati.
+* L'errore di raccolta di Active Directory viene segnalato come avviso; non influisce sul rilevamento di ransomware.
+* L'elenco di configurazione introduttiva ora include una nuova fase _Configura notifiche e-mail_.
+
+
+
+
+== Ricezione di notifiche di aggiornamento dell'agente e del raccoglitore dati
+
+* Inserire l'ID e-mail in "Avvisi sanitari sulla raccolta dati".
+* La casella di controllo "Abilita notifiche di aggiornamento" diventa abilitata.
+* Le notifiche e-mail relative all'aggiornamento di Agent e Data Collector vengono inviate agli ID e-mail un giorno prima dell'aggiornamento pianificato.
 
 
 
@@ -51,8 +51,8 @@ Tenere presente quanto segue:
 == Risoluzione dei problemi
 
 |===
-| *Problema:* | *Provare questo:* 
+| *Problema:* | *Prova questo:* 
 
 
-| Gli ID e-mail sono presenti in "Data Collector Health Alerts" (Avvisi integrità del Data Collector), tuttavia non si ricevono notifiche. | Le e-mail di notifica vengono inviate dal dominio di approfondimento dell'infrastruttura dati NetApp, ad esempio da_accounts@service.cledy dintevises.NetApp.com_. Alcune aziende bloccano le e-mail in arrivo se provengono da un dominio esterno. Assicurarsi che le notifiche esterne dai domini di NetApp Data Infrastructure Insights siano inserite nella whitelist. 
+| Gli ID e-mail sono presenti negli "Avvisi sullo stato di salute del Data Collector", tuttavia non ricevo notifiche. | Le email di notifica vengono inviate dal dominio NetApp Data Infrastructure Insights , ovvero da _accounts@service.cloudinsights.netapp.com_.  Alcune aziende bloccano le email in arrivo se provengono da un dominio esterno.  Assicurarsi che le notifiche esterne provenienti dai domini NetApp Data Infrastructure Insights siano inserite nella whitelist. 
 |===

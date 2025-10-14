@@ -2,112 +2,112 @@
 sidebar: sidebar 
 permalink: task_dc_emc_isilon_rest.html 
 keywords: data collector, isilon, EMC, DELL, PowerScale 
-summary: Configurazione del data collector REST Dell EMC Isilon/PowerScale. 
+summary: Configurazione del raccoglitore dati REST Dell EMC Isilon/PowerScale. 
 ---
-= Dell EMC Isilon/PowerScale REST Data Collector
+= Raccoglitore dati REST Dell EMC Isilon / PowerScale
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza Dell EMC Isilon / PowerScale REST Data Collector per acquisire dati di inventario e prestazioni dallo storage Dell EMC Isilon o PowerScale. Questo collector supporta gli array che eseguono OneFS 8.0.0+.
+Data Infrastructure Insights utilizza il data collector REST di Dell EMC Isilon/PowerScale per acquisire dati di inventario e prestazioni dallo storage Dell EMC Isilon o PowerScale.  Questo collector supporta array che eseguono OneFS 8.0.0+.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore di dati.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Disco | Disco 
+| Guidare | Disco 
 
 
-| Cluster | Storage 
+| Grappolo | Magazzinaggio 
 
 
-| Nodo | Nodo di storage 
+| Nodo | Nodo di archiviazione 
 
 
 | File system OneFS | Volume interno 
 
 
-| File system OneFS | Pool di storage 
+| File system OneFS | Pool di archiviazione 
 
 
 | Qtree | Qtree 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessarie le seguenti informazioni:
+Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
 
-* Un account utente e una password. Non è necessario che questo account sia admin/root, ma È NECESSARIO concedere un numero considerevole di privilegi di sola lettura all'account di servizio (vedere la tabella riportata di seguito)
-* Indirizzo IP/Nome di dominio completo del cluster Dell EMC Isilon/PowerScale
+* Un account utente e una password.  Questo account NON deve essere necessariamente admin/root, ma DEVI concedere un numero sostanziale di privilegi di sola lettura al tuo account di servizio: vedi tabella qui sotto
+* Indirizzo IP / Nome di dominio completo del cluster Dell EMC Isilon / PowerScale
 * Accesso HTTPS alla porta 8080
-* Cluster Isilon/PowerScale con OneFS 8.0.0 o superiore
+* Cluster Isilon/PowerScale che esegue OneFS 8.0.0 o versione successiva
 
 
 [cols="3*"]
 |===
-| Nome privilegio | Descrizione | r(lettura) o rw (lettura+scrittura) 
+| Nome del privilegio | Descrizione | r(lettura) o rw (lettura+scrittura) 
 
 
-| ISI_PRIV_LOGIN_PAPI | API della piattaforma | r 
+| ISI_PRIV_LOGIN_PAPI | API della piattaforma | R 
 
 
-| ISI_PRIV_SYS_TIME | Ora | r 
+| ISI_PRIV_SYS_TIME | Tempo | R 
 
 
-| ISI_PRIV_AUTH | Auth | r 
+| ISI_PRIV_AUTH | Autenticazione | R 
 
 
-| ISI_PRIV_ROLE | Privilegio | r 
+| ISI_PRIV_RUOLO | Privilegio | R 
 
 
-| ISI_PRIV_DEVICES | Dispositivi | r 
+| ISI_PRIV_DEVICES | Dispositivi | R 
 
 
-| ISI_PRIV_EVENT | Evento | r 
+| ISI_PRIV_EVENT | Evento | R 
 
 
-| ISI_PRIV_HDFS | HDFS | r 
+| ISI_PRIV_HDFS | HDFS | R 
 
 
-| ISI_PRIV_NDMP | NDMP | r 
+| ISI_PRIV_NDMP | NDMP | R 
 
 
-| ISI_PRIV_NETWORK | Rete | r 
+| ISI_PRIV_NETWORK | Rete | R 
 
 
-| ISI_PRIV_NFS | NFS | r 
+| ISI_PRIV_NFS | NFS | R 
 
 
-| ISI_PRIV_PAPI_CONFIG | Configurare l'API della piattaforma | r 
+| ISI_PRIV_PAPI_CONFIG | Configurare l'API della piattaforma | R 
 
 
-| ISI_PRIV_QUOTA | Quota | r 
+| ISI_PRIV_QUOTA | Quota | R 
 
 
-| ISI_PRIV_SMARTPOOLS | SmartPools | r 
+| ISI_PRIV_SMARTPOOLS | Piscine intelligenti | R 
 
 
-| ISI_PRIV_SMB | PMI | r 
+| ISI_PRIV_SMB | PMI | R 
 
 
-| ISI_PRIV_STATISTICS | Statistiche | r 
+| ISI_PRIV_STATISTICS | Statistiche | R 
 
 
-| ISI_PRIV_SWIFT | Rapido | r 
+| ISI_PRIV_SWIFT | Veloce | R 
 
 
-| ISI_PRIV_JOB_ENGINE | Motore di lavoro | r 
+| ISI_PRIV_JOB_ENGINE | Motore di lavoro | R 
 |===
 
 
@@ -121,7 +121,7 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 | Indirizzo IP Isilon | L'indirizzo IP o il nome di dominio completo dello storage Isilon 
 
 
-| Nome utente | Nome utente di Isilon 
+| Nome utente | Nome utente per Isilon 
 
 
 | Password | Password utilizzata per Isilon 
@@ -138,16 +138,16 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 | Porta HTTPS | Il valore predefinito è 8080. 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario.  Il valore predefinito è 20. 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni.  Il valore predefinito è 300. 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -155,12 +155,12 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| "Credenziali di accesso non valide" con messaggi di errore "i comandi non abilitati per l'amministrazione basata sul ruolo richiedono l'accesso dell'utente root" | * Verificare che l'utente disponga delle autorizzazioni per eseguire i seguenti comandi sul dispositivo: > versione isi osrelease > stato isi -q > stato isi -n > dispositivi isi -d %s > licenza isi * verificare che le credenziali utilizzate nella procedura guidata corrispondano alle credenziali del dispositivo 
+| "Credenziali di accesso non valide" con messaggi di errore "I comandi non abilitati per l'amministrazione basata sui ruoli richiedono l'accesso come utente root" | * Verificare che l'utente abbia le autorizzazioni per eseguire i seguenti comandi sul dispositivo: > isi version osrelease > isi status -q > isi status -n > isi devices -d %s > isi license * Verificare che le credenziali utilizzate nella procedura guidata corrispondano alle credenziali del dispositivo 
 
 
-| "Errore interno" con messaggi di errore "esecuzione del comando <Your command> non riuscita con permesso: <Your current permission>. Problema di autorizzazione per l'esecuzione del comando sudo" | Verificare che l'utente disponga delle autorizzazioni sudo per eseguire il seguente comando sul dispositivo 
+| "Errore interno" con messaggi di errore "Esecuzione del comando <Il tuo comando> non riuscita con autorizzazione: <La tua autorizzazione attuale>.  Problema con l'autorizzazione all'esecuzione del comando Sudo" | Verificare che l'utente abbia i permessi sudo per eseguire il seguente comando sul dispositivo 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

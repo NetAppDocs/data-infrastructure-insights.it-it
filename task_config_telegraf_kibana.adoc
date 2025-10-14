@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_kibana.html 
 keywords: telegraf, installation, install, kibana 
-summary: Configurazione del data collector Kibana 
+summary: Configurazione del raccoglitore dati Kibana 
 ---
 = Kibana Data Collector
 :hardbreaks:
@@ -10,28 +10,28 @@ summary: Configurazione del data collector Kibana
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere metriche da Kibana.
+Data Infrastructure Insights utilizza questo strumento di raccolta dati per raccogliere metriche da Kibana.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegli Kibana.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Kibana.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
-
-
-image:KibanaDCConfigLinux.png["Configurazione di Kibana"]
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
+image:KibanaDCConfigLinux.png["Configurazione Kibana"]
 
-== Setup (Configurazione)
 
-Le informazioni sono disponibili nella link:https://www.elastic.co/guide/index.html["Documentazione di Kibana"].
+
+== Impostare
+
+Le informazioni possono essere trovate nellink:https://www.elastic.co/guide/index.html["Documentazione Kibana"] .
 
 
 
@@ -44,10 +44,10 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Kibana | Indirizzo dello spazio dei nomi | Nodo IP Node Name Version Status (Stato versione nome nodo IP) | Connessioni simultanee heap massimo heap richieste utilizzate al secondo tempo di risposta medio tempo di risposta tempo di attività massimo 
+| Kibana | Indirizzo dello spazio dei nomi | IP del nodo Nome del nodo Versione Stato | Heap di connessioni simultanee Heap massimo utilizzato Richieste al secondo Tempo di risposta Tempo di risposta medio Tempo di attività massimo 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_infinidat_infinibox.html 
 keywords: data collector, infinidat, InfiniBox 
-summary: Configurazione del data collector Infinidat InfiniBox. 
+summary: Configurazione del raccoglitore dati Infinidat InfiniBox. 
 ---
-= Data collector Infinidat InfiniBox
+= Raccoglitore dati Infinidat InfiniBox
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector Infinidat InfiniBox (HTTP) viene utilizzato per raccogliere le informazioni di inventario dal sistema storage Infinidat InfiniBox.
+Il raccoglitore dati Infinidat InfiniBox (HTTP) viene utilizzato per raccogliere informazioni di inventario dal sistema di archiviazione Infinidat InfiniBox.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector Infinidat InfiniBox. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati Infinidat InfiniBox.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Pool di storage | Pool di storage 
+| Pool di archiviazione | Pool di archiviazione 
 
 
-| Nodo | Controller 
+| Nodo | Controllore 
 
 
-| Filesystem | Volume interno 
+| File system | Volume interno 
 
 
-| Filesystem | Condivisione file 
+| File system | Condivisione file 
 
 
-| Esportazioni di file system | Condividere 
+| Esportazioni del file system | Condividere 
 |===
 
 
 == Requisiti
 
-Di seguito sono riportati i requisiti per la configurazione di questo data collector.
+Di seguito sono riportati i requisiti per la configurazione di questo raccoglitore dati.
 
 * Indirizzo IP o FQDN del nodo di gestione InfiniBox
-* Admin userid e password
+* ID utente e password amministratore
 * Porta 443 tramite API REST
 
 
@@ -57,13 +57,13 @@ Di seguito sono riportati i requisiti per la configurazione di questo data colle
 | Campo | Descrizione 
 
 
-| Host InfiniBox | Indirizzo IP o nome di dominio completo di InfiniBox Management Node 
+| Host InfiniBox | Indirizzo IP o nome di dominio completo del nodo di gestione InfiniBox 
 
 
-| Nome utente | Nome utente di InfiniBox Management Node 
+| Nome utente | Nome utente per il nodo di gestione InfiniBox 
 
 
-| Password | Password per InfiniBox Management Node 
+| Password | Password per il nodo di gestione InfiniBox 
 |===
 
 
@@ -74,13 +74,13 @@ Di seguito sono riportati i requisiti per la configurazione di questo data colle
 | Campo | Descrizione 
 
 
-| Porta TCP | Porta TCP utilizzata per la connessione a InfiniBox Server. Il valore predefinito è 443. 
+| Porta TCP | Porta TCP utilizzata per connettersi al server InfiniBox.  Il valore predefinito è 443. 
 
 
-| Intervallo polling inventario | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+| Intervallo di sondaggio dell'inventario | Intervallo tra i sondaggi di inventario. Il valore predefinito è 60 minuti. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

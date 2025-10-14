@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_redis.html 
 keywords: telegraf, installation, install, redis 
-summary: Configurazione del data collector Redis 
+summary: Configurazione del raccoglitore dati Redis 
 ---
 = Redis Data Collector
 :hardbreaks:
@@ -10,28 +10,28 @@ summary: Configurazione del data collector Redis
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere metriche da Redis. Redis è un archivio di strutture di dati in-memory open source utilizzato come database, cache e message broker, che supporta le seguenti strutture di dati: Stringhe, hash, elenchi, set e molto altro.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da Redis.  Redis è un archivio di strutture dati in memoria open source utilizzato come database, cache e broker di messaggi, che supporta le seguenti strutture dati: stringhe, hash, elenchi, set e altro ancora.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Redis.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Redis.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
-
-
-image:RedisDCConfigWindows.png["Configurazione di Redis Data Collector"]
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
+image:RedisDCConfigWindows.png["Configurazione del raccoglitore dati Redis"]
 
-== Setup (Configurazione)
 
-Le informazioni sono disponibili nella link:https://redis.io/documentation["Documentazione Redis"].
+
+== Impostare
+
+Le informazioni possono essere trovate nellink:https://redis.io/documentation["Documentazione Redis"] .
 
 
 
@@ -44,10 +44,10 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Redis | Server namespace |  |  
+| Redis | Server dello spazio dei nomi |  |  
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar 
 permalink: concept_data_collector_reference.html 
-summary: Informazioni di riferimento per il data collector specifico del vendor. 
+summary: Informazioni di riferimento sul raccoglitore dati specifico del fornitore. 
 keywords: data collector, vendor, AWS, BROADCOM, Cisco, Dell, EMC, Hitachi, IBM, NetApp, OceanStor, OpenStack, Oracle, Pure Storage, Red Hat, redhat, VMware 
 ---
-= Riferimento specifico del vendor
+= Riferimento specifico del fornitore
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Gli argomenti di questa sezione forniscono informazioni di riferimento specifiche del vendor. Nella maggior parte dei casi, la configurazione di un data collector è semplice. In alcuni casi, potrebbero essere necessarie informazioni o comandi aggiuntivi per configurare correttamente il data collector.
+Gli argomenti in questa sezione forniscono informazioni di riferimento specifiche per ciascun fornitore.  Nella maggior parte dei casi, la configurazione di un raccoglitore di dati è semplice.  In alcuni casi, potrebbero essere necessarie informazioni o comandi aggiuntivi per configurare correttamente il raccoglitore dati.
 
-Fare clic su un *vendor* nel menu a sinistra per visualizzare le informazioni relative ai data collezionisti.
+Fare clic su un *fornitore* nel menu a sinistra per visualizzare le informazioni sui suoi raccoglitori di dati.

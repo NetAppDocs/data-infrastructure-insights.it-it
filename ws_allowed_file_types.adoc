@@ -2,21 +2,21 @@
 sidebar: sidebar 
 permalink: ws_allowed_file_types.html 
 keywords: workload security, cloud secure, include list, allowed, file types, ransomware 
-summary: Aggiungere le estensioni di file a un elenco dei tipi di file consentiti per ridurre gli avvisi. 
+summary: Aggiungere estensioni di file a un elenco di tipi di file consentiti per ridurre gli avvisi. 
 ---
-= Criteri tipi di file consentiti
+= Criteri sui tipi di file consentiti
 :allow-uri-read: 
 
 
 [role="lead"]
-Se viene rilevato un attacco ransomware per un'estensione di file nota e vengono generati degli avvisi nella schermata Alerts, è possibile aggiungere tale estensione a un elenco dei tipi di file _consentiti_ per evitare avvisi non necessari.
+Se viene rilevato un attacco ransomware per un'estensione di file nota e vengono generati avvisi nella schermata Avvisi, è possibile aggiungere tale estensione di file a un elenco di _tipi di file consentiti_ per evitare avvisi non necessari.
 
-Accedere a *sicurezza del carico di lavoro > Criteri* e andare alla scheda _Criteri del tipo di file consentiti_.
+Passare a *Sicurezza del carico di lavoro > Criteri* e andare alla scheda _Criteri sui tipi di file consentiti_.
 
-image:WS_Allowed_File_Type_Policies.png["Criteri tipi di file consentiti"]
+image:WS_Allowed_File_Type_Policies.png["Criteri sui tipi di file consentiti"]
 
-Una volta aggiunto all'elenco _allowed file types_, non verrà generato alcun avviso di attacco ransomware per quel tipo di file consentito. Si noti che la policy _tipi di file consentiti_ è applicabile solo per il rilevamento del ransomware.
+Una volta aggiunto all'elenco dei _tipi di file consentiti_, non verrà generato alcun avviso di attacco ransomware per quel tipo di file consentito.  Si noti che la policy _Tipi di file consentiti_ è applicabile solo per il rilevamento di ransomware.
 
-Ad esempio, se un file denominato _test.txt_ viene rinominato _test.txt.abc_ e workload Security rileva un attacco ransomware a causa dell'estensione _.abc_, l'estensione _.abc_ può essere aggiunta all'elenco _allowed file types_. Dopo essere stati aggiunti all'elenco, gli attacchi ransomware non verranno più generati sui file con estensione _.abc_.
+Ad esempio, se un file denominato _test.txt_ viene rinominato in _test.txt.abc_ e Workload Security rileva un attacco ransomware a causa dell'estensione _.abc_, l'estensione _.abc_ può essere aggiunta all'elenco dei _tipi di file consentiti_.  Dopo l'aggiunta all'elenco, gli attacchi ransomware non verranno più generati contro i file con estensione _.abc_.
 
-I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, ".*type", ".type*" o "*type*"). Le espressioni di tipo “.a*c”, “.p*f” non sono supportate.
+I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, ".*type", ".type*" o "*type*").  Le espressioni di tipo “.a*c”, “.p*f” non sono supportate.

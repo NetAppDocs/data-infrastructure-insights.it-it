@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_docker.html 
 keywords: telegraf, installation, install, docker 
-summary: Configurazione del data collector Docker 
+summary: Configurazione del raccoglitore dati Docker 
 ---
 = Docker Data Collector
 :hardbreaks:
@@ -10,48 +10,48 @@ summary: Configurazione del data collector Docker
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Docker.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da Docker.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegli Docker.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Docker.
 +
-Se non è stato configurato un agente per il ritiro, viene richiesto di selezionare link:task_config_telegraf_agent.html["installare un agente"] il locatario.
+Se non hai configurato un agente per la raccolta, ti verrà richiesto dilink:task_config_telegraf_agent.html["installare un agente"] sul tuo inquilino.
 
 +
-Se si dispone di un agente già configurato, selezionare il sistema operativo o la piattaforma appropriati e fare clic su *continua*.
+Se hai già configurato un agente, seleziona il sistema operativo o la piattaforma appropriati e fai clic su *Continua*.
 
-. Seguire le istruzioni nella schermata Configurazione Docker per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
-
-
-image:DockerDCConfigLinux.png["Configurazione di Docker"]
+. Seguire le istruzioni nella schermata Configurazione Docker per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
+image:DockerDCConfigLinux.png["Configurazione Docker"]
 
-== Setup (Configurazione)
 
-Il plug-in di input Telegraf per Docker raccoglie le metriche attraverso un socket UNIX specificato o un endpoint TCP.
+
+== Impostare
+
+Il plugin di input Telegraf per Docker raccoglie le metriche tramite un socket UNIX specificato o un endpoint TCP.
 
 
 
 === Compatibilità
 
-La configurazione è stata sviluppata rispetto alla versione 1.12.6 di Docker.
+La configurazione è stata sviluppata per Docker versione 1.12.6.
 
 
 
-=== Configurazione
+=== Impostazione
 
 
 
 === Accesso a Docker tramite un socket UNIX
 
-Se l'agente Telegraf è in esecuzione su baretal, aggiungere l'utente telegraf Unix al gruppo docker Unix eseguendo quanto segue:
+Se l'agente Telegraf è in esecuzione su baremetal, aggiungere l'utente Unix Telegraf al gruppo Unix Docker eseguendo quanto segue:
 
  sudo usermod -aG docker telegraf
-Se l'agente Telegraf viene eseguito all'interno di un pod Kubernetes, esporre il socket Unix di Docker mappando il socket nel pod come volume e montandolo su /var/run/docker.sock. Ad esempio, aggiungere quanto segue al PodSpec:
+Se l'agente Telegraf è in esecuzione all'interno di un pod Kubernetes, esporre il socket Docker Unix mappando il socket nel pod come volume e quindi montando tale volume su /var/run/docker.sock.  Ad esempio, aggiungi quanto segue al PodSpec:
 
 [listing]
 ----
@@ -62,7 +62,7 @@ hostPath:
 path: /var/run/docker.sock
 type: File
 ----
-Quindi, aggiungere quanto segue al contenitore:
+Quindi, aggiungi quanto segue al contenitore:
 
 [listing]
 ----
@@ -71,11 +71,11 @@ volumeMounts:
 - name: docker-sock
 mountPath: /var/run/docker.sock
 ----
-Si noti che il programma di installazione di Data Infrastructure Insights fornito per la piattaforma Kubernetes si occupa automaticamente di questa mappatura.
+Si noti che il programma di installazione Data Infrastructure Insights fornito per la piattaforma Kubernetes si occupa automaticamente di questa mappatura.
 
 
 
-=== Accedere a Docker tramite un endpoint TCP
+=== Accedi a Docker tramite un endpoint TCP
 
 Per impostazione predefinita, Docker utilizza la porta 2375 per l'accesso non crittografato e la porta 2376 per l'accesso crittografato.
 
@@ -90,19 +90,19 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Motore Docker | Namespace Docker Engine | Node Name Node IP Node UID Node OS Kubernetes Cluster Docker Version Unit | Container di memoria Container in pausa Container in esecuzione Container CPU interrotte Vai routine immagini listener Eventi utilizzati descrittori di file dati disponibili dati totali utilizzati metadati disponibili metadati totali utilizzati dimensione blocco pool 
+| Motore Docker | Motore Docker dello spazio dei nomi | Nome nodo IP nodo UUID nodo Sistema operativo nodo Cluster Kubernetes Versione Docker Unità | Contenitori di memoria Contenitori Contenitori in pausa Contenitori in esecuzione CPU arrestate Routine di avvio Immagini Eventi di ascolto Descrittori di file utilizzati Dati Dati disponibili Dati totali utilizzati Metadati Metadati disponibili Metadati totali utilizzati Dimensione blocco pool 
 
 
-| Container Docker | Namespace Container Name Docker Engine | Kubernetes container Hash Kubernetes container Ports Kubernetes container Restart Count Kubernetes container Termination message Path Kubernetes container Termination message Policy Kubernetes Pod Termination Grace Period Container Image Container Status Container Version Node Name Kubernetes Container Log Path Kubernetes Container Name Kubernetes Docker Type Kubernetes Pod Name Pod UID Kubernetes Sandbox ID Node IP Node UUID Docker Version Kubernetes io Config visto Kubernetes io Config Source OpenShift io SCC Kubernetes Descrizione Kubernetes Display Name OpenShift Tags Kompose Service Pod Template Hash Controller Revisione Hash Pod Pod generazione Template License Schema build Date Schema License Schema Name Schema URL Schema URL VCS Schema fornitore Schema versione Schema versione Maintainer Customer Pod Kubernetes StatefulSet Pod Name Tenant Webconsole Architecture Authoritative Source URL Data di build RH host RH Component Distribution Scope Install Release Run Summary Uninstall VCS Ref VCS Type VCS Version Vendor Version Health Status Container ID | Memoria attiva Anonymous Memory Active file Memory cache Memory Hierarchical Limit Memory Inactive Anonymous Memory Inactive file Memory Limit Memory Mapped file Memory Max Usage Memory Page Fault Memory Memory Pageed out Memory Resident Set Size Memory Resident Set Size memoria enorme memoria totale attiva Memoria anonima totale memoria file attiva totale memoria cache totale memoria non attiva memoria anonima totale memoria file inattiva memoria totale file mappato memoria totale memoria errori pagine totali memoria principale errori pagine totali memoria totale pagine in uscita memoria totale dimensioni set residenti memoria totale set residenti dimensioni memoria enorme memoria totale Memoria unevictable utilizzo della memoria utilizzo della memoria percentuale di utilizzo Codice di uscita OOM Killed PID Started at Finding Streak 
+| Contenitore Docker | Nome del contenitore dello spazio dei nomi Docker Engine | Hash del contenitore Kubernetes Porte del contenitore Kubernetes Conteggio riavvii del contenitore Kubernetes Percorso del messaggio di terminazione del contenitore Kubernetes Criterio del messaggio di terminazione del contenitore Kubernetes Periodo di grazia per la terminazione del pod Kubernetes Immagine del contenitore Stato del contenitore Versione del contenitore Nome del nodo Percorso del registro del contenitore Kubernetes Nome del contenitore Kubernetes Tipo di Docker Kubernetes Nome del pod Kubernetes Spazio dei nomi del pod Kubernetes UID del pod Kubernetes ID sandbox Kubernetes IP del nodo UUID del nodo Versione Docker Configurazione IO Kubernetes visualizzata Sorgente della configurazione IO Kubernetes SCC IO OpenShift Descrizione Kubernetes Nome visualizzato Kubernetes Tag OpenShift Kompose Service Pod Template Hash Controller Revisione Hash Generazione del modello del pod Licenza Schema Data di build Schema Licenza Nome schema URL schema URL VCS schema Fornitore schema Versione schema Schema Versione schema Manutentore Pod cliente Kubernetes StatefulSet Nome pod Tenant Webconsole Architettura URL origine autorevole Data di build Host build RH Componente RH Ambito di distribuzione Installazione Rilascio Esecuzione Riepilogo Disinstallazione VCS Ref Tipo VCS Fornitore Versione Stato di integrità ID contenitore | Memoria attiva Memoria anonima Memoria attiva Memoria file cache Limite gerarchico della memoria Memoria inattiva Memoria anonima Memoria inattiva Limite di memoria file Memoria file mappata Utilizzo massimo della memoria Errore di pagina della memoria Errore di pagina maggiore della memoria Memoria paginata in memoria paginata in memoria paginata in memoria Dimensione del set residente della memoria Dimensione del set residente della memoria Enorme Memoria totale attiva Memoria anonima Memoria file attiva Memoria cache totale Memoria anonima Memoria file inattiva Memoria file mappata Memoria totale Errore di pagina maggiore della memoria Totale Memoria paginata in memoria totale Paginata in memoria totale Paginata in memoria totale Dimensione del set residente della memoria Totale Dimensione del set residente della memoria Enorme Memoria totale non rimuovibile Utilizzo della memoria non rimuovibile Percentuale di utilizzo della memoria Codice di uscita OOM PID eliminato Avviato con sequenza di errori 
 
 
-| Io blocco container Docker | Namespace Container Name Device Docker Engine | Kubernetes container Hash Kubernetes container Ports Kubernetes container Restart Count Kubernetes container Termination message Path Kubernetes container Termination message Policy Kubernetes Pod Termination Grace Period Container Image Container Status Container Version Node Name Kubernetes Container Log Path Kubernetes Container Name Kubernetes Docker Type Kubernetes Pod Name Pod UID Kubernetes Sandbox ID Node IP Node UUID Docker Version Kubernetes Config visto Kubernetes Config Source OpenShift SCC Kubernetes Descrizione Kubernetes Display Name OpenShift Tags Schema versione modello modello Pod Hash Controller Revisione modello Hash Pod generazione modello Kompose Service Schema Data build Schema licenza Schema Nome Schema fornitore cliente Pod Kubernetes StatefulSet Pod Name Tenant Webconsole Data di build licenza Vendor Architecture Authoritative Source URL RH build host RH Component Distribution Scope Install Maintainer Release Run Summary Uninstall VCS Ref VCS Type Version Schema URL Schema VCS URL Schema versione Container ID | Io Service Bytes Recursive Async io Service Bytes Recursive Read io Service Bytes Recursive Sync io Service Bytes Recursive io Recursive Serviced Async io Serviced Recursive Read io Serviced Recursive io Serviced Recursive Total io Serviced Recursive Recursive Write 
+| Docker Container Block IO | Namespace Contenitore Nome Dispositivo Motore Docker | Hash del contenitore Kubernetes Porte del contenitore Kubernetes Conteggio riavvii del contenitore Kubernetes Percorso del messaggio di terminazione del contenitore Kubernetes Criterio del messaggio di terminazione del contenitore Kubernetes Periodo di grazia per la terminazione del pod Kubernetes Immagine del contenitore Stato del contenitore Versione del contenitore Nome del nodo Percorso del registro del contenitore Kubernetes Nome del contenitore Kubernetes Tipo di Docker Kubernetes Nome del pod Kubernetes Spazio dei nomi del pod Kubernetes UID del pod Kubernetes ID sandbox Kubernetes IP del nodo UUID del nodo Versione Docker Configurazione Kubernetes visualizzata Sorgente della configurazione Kubernetes OpenShift SCC Descrizione di Kubernetes Nome visualizzato di Kubernetes Tag di OpenShift Schema Versione dello schema Hash del modello del pod Hash di revisione del controller Generazione del modello del pod Servizio Kompose Data di build dello schema Licenza dello schema Nome dello schema Fornitore dello schema Pod del cliente Nome del pod StatefulSet di Kubernetes Tenant Webconsole Data di build Fornitore della licenza Architettura URL sorgente autorevole Host di build RH Componente RH Ambito di distribuzione Installa Manutentore Rilascio Riepilogo esecuzione Disinstalla Riferimento VCS Tipo VCS Versione URL schema URL VCS schema Versione schema Contenitore ID | Byte del servizio IO ricorsivi asincroni Byte del servizio IO ricorsivi in lettura Byte del servizio IO ricorsivi in sincronizzazione Byte del servizio IO ricorsivi totali Byte del servizio IO ricorsivi in scrittura Byte del servizio IO ricorsivi in asincroni serviti in lettura ricorsiva Byte del servizio IO ricorsivi in sincronizzazione serviti in lettura ricorsiva Byte del servizio IO ricorsivi totali serviti in scrittura ricorsiva 
 
 
-| Docker Container Network | Namespace Container Name Network Docker Engine | Container Image Container Status Container Version Node Name Node IP Node UUID Node OS K8s Cluster Docker Version Container ID | RX dromed RX bytes RX errors RX packets TX dromed TX bytes TX errors TX packets 
+| Rete di contenitori Docker | Namespace Container Nome Rete Docker Engine | Immagine del contenitore Stato del contenitore Versione del contenitore Nome del nodo IP del nodo UUID del nodo Sistema operativo del nodo Cluster K8s Versione Docker ID del contenitore | RX eliminati Byte RX Errori RX Pacchetti RX TX eliminati Byte TX Errori TX Pacchetti TX 
 
 
-| CPU Docker Container | Namespace Container Name CPU Docker Engine | Contenitore Kubernetes Hash Kubernetes Container Ports Kubernetes Container Restart Count Kubernetes Container Termination message Path Kubernetes Container Termination message Policy Kubernetes Pod Termination Grace Period Kubernetes Config Sawed Kubernetes Config Source OpenShift SCC Container Image Container Status Container Version Node Name Kubernetes Container Log Path Kubernetes Container Digitare Kubernetes Pod Name Kubernetes Pod namespace Kubernetes Pod UID Kubernetes Sandbox ID Node IP Node UUID Node OS Kubernetes Cluster Docker Version Kubernetes Descrizione Kubernetes Display Name OpenShift Tags Schema versione modello Pod modello Hash Controller Revisione modello Hash Pod generazione Servizio Kompose Schema Data di costruzione Schema Schema Schema licenza Schema Nome Schema Vendor Customer Pod Kubernetes StatefulSet Pod Name Tenant Webconsole Data di build License Vendor Architecture Authitative Source URL RH build host RH Component Distribution Scope Install Maintainer Release Run Summary Uninstall VCS Ref VCS Type Version Schema URL Schema VCS URL Schema Version Container ID | Periodi di rallentamento periodi di rallentamento periodi di rallentamento riduzione tempi di rallentamento utilizzo in modalità kernel utilizzo in modalità utente percentuale utilizzo sistema totale 
+| CPU del contenitore Docker | Nome del contenitore dello spazio dei nomi CPU Motore Docker | Hash del contenitore Kubernetes Porte del contenitore Kubernetes Conteggio riavvii del contenitore Kubernetes Percorso del messaggio di terminazione del contenitore Kubernetes Criterio del messaggio di terminazione del contenitore Kubernetes Periodo di grazia per la terminazione del pod Kubernetes Configurazione Kubernetes visualizzata Origine della configurazione Kubernetes Immagine del contenitore OpenShift SCC Stato del contenitore Versione del contenitore Nome del nodo Percorso del registro del contenitore Kubernetes Nome del contenitore Kubernetes Tipo di Docker Kubernetes Nome del pod Kubernetes Spazio dei nomi del pod Kubernetes UID del pod Kubernetes ID sandbox Kubernetes IP del nodo UUID del nodo Sistema operativo del nodo Versione Docker del cluster Kubernetes Descrizione di Kubernetes Nome visualizzato di Kubernetes Tag OpenShift Versione dello schema Hash del modello del pod Hash di revisione del controller Generazione del modello del pod Servizio Kompose Data di build dello schema Licenza dello schema Nome dello schema Fornitore dello schema Pod del cliente Nome del pod StatefulSet Kubernetes Tenant Webconsole Data di build Fornitore della licenza Architettura URL sorgente autorevole Host di build RH Componente RH Ambito di distribuzione Installa Manutentore Rilascio Riepilogo esecuzione Disinstalla Riferimento VCS Tipo VCS Versione URL schema URL Schema VCS Versione Schema ID Contenitore | Periodi di limitazione Periodi di limitazione della limitazione Tempo di limitazione della limitazione Utilizzo in modalità kernel Utilizzo in modalità utente Percentuale di utilizzo Utilizzo del sistema Utilizzo totale 
 |===
 
 
@@ -110,9 +110,9 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Non riesco a trovare le metriche Docker in Data Infrastructure Insights dopo aver seguito le istruzioni sulla pagina di configurazione. | Controllare i registri degli agenti di Telegraf per verificare se riporta il seguente errore: E! Errore nel plug-in [inputs.docker]: Permesso ottenuto negato durante il tentativo di connessione al socket del daemon Docker. In caso contrario, eseguire i passaggi necessari per fornire all'agente Telegrafo l'accesso al socket Docker Unix come specificato sopra. 
+| Dopo aver seguito le istruzioni nella pagina di configurazione, non vedo le mie metriche Docker in Data Infrastructure Insights . | Controllare i registri dell'agente Telegraf per vedere se segnala il seguente errore: E!  Errore nel plugin [inputs.docker]: Autorizzazione negata durante il tentativo di connessione al socket del demone Docker. In tal caso, adottare le misure necessarie per consentire all'agente Telegraf di accedere al socket Unix Docker come specificato sopra. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

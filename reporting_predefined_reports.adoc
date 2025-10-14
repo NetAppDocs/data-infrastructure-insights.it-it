@@ -4,172 +4,172 @@ permalink: reporting_predefined_reports.html
 summary: Panoramica dei report predefiniti 
 keywords: reporting, cognos, data warehouse, dwh, pre-defined 
 ---
-= Creazione semplificata di report predefiniti
+= Report predefiniti semplificati
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights Reporting include report predefiniti che affrontano una serie di requisiti di reporting comuni, fornendo informazioni critiche di cui gli stakeholder hanno bisogno per prendere decisioni informate sull'infrastruttura storage.
+Data Infrastructure Insights Reporting include report predefiniti che soddisfano una serie di requisiti di reporting comuni, fornendo informazioni critiche di cui le parti interessate hanno bisogno per prendere decisioni informate sulla propria infrastruttura di storage.
 
 
-NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzionalità di reporting è disponibile in Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Edizione Premium"] .
 
-È possibile generare report predefiniti dal Data Infrastructure Insights Reporting Portal, inviarli tramite e-mail ad altri utenti e persino modificarli. Diversi report consentono di filtrare per dispositivo, entità aziendale o Tier. Gli strumenti di reporting utilizzano IBM Cognos come base e offrono numerose opzioni di presentazione dei dati.
+È possibile generare report predefiniti dal Data Infrastructure Insights Reporting Portal, inviarli tramite e-mail ad altri utenti e persino modificarli.  Diversi report consentono di filtrare per dispositivo, entità aziendale o livello.  Gli strumenti di reporting utilizzano IBM Cognos come base e offrono numerose opzioni di presentazione dei dati.
 
-I report predefiniti mostrano l'inventario, la capacità dello storage, il chargeback, le performance, l'efficienza dello storage, e dati sui costi del cloud. È possibile modificare questi report predefiniti e salvare le modifiche.
+I report predefiniti mostrano i dati relativi a inventario, capacità di archiviazione, addebiti, prestazioni, efficienza di archiviazione e costi del cloud.  È possibile modificare questi report predefiniti e salvare le modifiche.
 
-È possibile generare report in diversi formati, tra cui HTML, PDF, CSV, XML, Ed Excel.
+È possibile generare report in vari formati, tra cui HTML, PDF, CSV, XML ed Excel.
 
 
 
-== Accedere ai report predefiniti
+== Navigazione verso report predefiniti
 
-Quando si apre il portale di reporting, la cartella _Team Content_ è il punto di partenza per selezionare il tipo di informazioni necessarie nei report di Data Infrastructure Insights.
+Quando si apre il portale di reporting, la cartella _Team Content_ è il punto di partenza per selezionare il tipo di informazioni necessarie nei report di Data Infrastructure Insights .
 
-. Nel riquadro di navigazione a sinistra, selezionare *contenuto > contenuto del team*.
+. Nel riquadro di navigazione a sinistra, seleziona *Contenuto > Contenuto del team*.
 . Selezionare *Report* per accedere ai report predefiniti.
 
 
-image:Reporting_Menu.png["Menu Reporting"] image:Reporting_Team_Content.png["Contenuto del team che mostra i report evidenziati, larghezza=800"]
+image:Reporting_Menu.png["Menu di segnalazione"] image:Reporting_Team_Content.png["Contenuto del team che mostra i report evidenziati, larghezza=800"]
 
 
 
 == Utilizzo di report predefiniti per rispondere a domande comuni
 
-I seguenti report predefiniti sono disponibili in *contenuto del team > Report*.
+I seguenti report predefiniti sono disponibili in *Contenuto del team > Report*.
 
 
 
-=== Performance e capacità del livello di servizio dell'applicazione
+=== Capacità e prestazioni del livello di servizio dell'applicazione
 
-Il report Application Service Level Capacity and Performance fornisce una panoramica di alto livello delle applicazioni. È possibile utilizzare queste informazioni per la pianificazione della capacità o per un piano di migrazione.
-
-
-
-=== Chargeback
-
-Il report Chargeback fornisce informazioni di chargeback della capacità di storage e di responsabilità per host, applicazioni ed entità aziendali e include dati attuali e storici.
-
-Per evitare il doppio conteggio, non includere server ESX, monitorare solo le macchine virtuali.
+Il report Capacità e prestazioni del livello di servizio dell'applicazione fornisce una panoramica di alto livello delle tue applicazioni.  È possibile utilizzare queste informazioni per la pianificazione della capacità o per un piano di migrazione.
 
 
 
-=== Origini dati
+=== Riaddebito
 
-Il report origini dati mostra tutte le origini dati installate nel sito, lo stato dell'origine dati (operazione riuscita/non riuscita) e i messaggi di stato. Il report fornisce informazioni su dove iniziare la risoluzione dei problemi delle origini dati. Le origini dati non riuscite influiscono sulla precisione dei report e sull'usabilità generale del prodotto.
+Il report Chargeback fornisce informazioni sulla capacità di storage chargeback e sulla responsabilità per host, applicazione ed entità aziendali e include sia dati attuali che storici.
 
-
-
-=== Performance di ESX e VM
-
-Il report sulle performance di ESX e VM offre un confronto tra server e macchine virtuali ESX, mostrando IOPS medi e di picco, throughput, latenza e utilizzo per server e macchine virtuali ESX. Per evitare il doppio conteggio, escludere i server ESX; includere solo le macchine virtuali. Una versione aggiornata di questo report è disponibile presso il NetApp Storage Automation Store.
+Per evitare doppi conteggi, non includere i server ESX, ma monitorare solo le VM.
 
 
 
-=== Riepilogo fabric
+=== Fonti dei dati
 
-Il report Fabric Summary identifica le informazioni relative a switch e switch, inclusi il numero di porte, le versioni del firmware e lo stato della licenza. Il report non include le porte dello switch NPV.
-
-
-
-=== HBA host
-
-Il report HBA host fornisce una panoramica degli host nell'ambiente e fornisce il vendor, il modello e la versione firmware degli HBA e il livello firmware degli switch a cui sono collegati. Questo report può essere utilizzato per analizzare la compatibilità del firmware quando si pianifica un aggiornamento del firmware per uno switch o un HBA.
+Il report Origini dati mostra tutte le origini dati installate sul tuo sito, lo stato dell'origine dati (esito positivo/negativo) e i messaggi di stato.  Il report fornisce informazioni su dove iniziare la risoluzione dei problemi relativi alle fonti di dati.  Le fonti di dati non valide incidono sull'accuratezza dei report e sull'usabilità generale del prodotto.
 
 
 
-=== Capacità e performance del livello di servizio host
+=== Prestazioni ESX vs VM
 
-Il report host Service Level Capacity and Performance fornisce una panoramica dell'utilizzo dello storage per host per applicazioni a blocchi.
-
-
-
-=== Riepilogo host
-
-Il report host Summary (Riepilogo host) fornisce una panoramica dell'utilizzo dello storage da parte di ciascun host selezionato con informazioni sugli host Fibre Channel e iSCSI. Il report consente di confrontare porte e percorsi, capacità Fibre Channel e ISCSI e conteggi delle violazioni.
+Il report sulle prestazioni ESX vs VM fornisce un confronto tra server ESX e VM, mostrando IOPS medi e di picco, throughput, latenza e utilizzi per server ESX e VM.  Per evitare doppi conteggi, escludere i server ESX e includere solo le VM.  Una versione aggiornata di questo report è disponibile nel NetApp Storage Automation Store.
 
 
 
-=== Dettagli licenza
+=== Riepilogo del tessuto
 
-Il report License Details (Dettagli licenza) mostra la quantità autorizzata di risorse per le quali si dispone della licenza in tutti i siti con licenze attive. Il report mostra anche una somma della quantità effettiva in tutti i siti con licenze attive. La somma può includere sovrapposizioni di array di storage gestiti da più server.
+Il report Riepilogo Fabric identifica gli switch e le relative informazioni, tra cui il numero di porte, le versioni del firmware e lo stato della licenza.  Il rapporto non include le porte switch NPV.
+
+
+
+=== HBA ospitanti
+
+Il report HBA host fornisce una panoramica degli host nell'ambiente e indica il fornitore, il modello e la versione firmware degli HBA, nonché il livello firmware degli switch a cui sono collegati.  Questo report può essere utilizzato per analizzare la compatibilità del firmware quando si pianifica un aggiornamento del firmware per uno switch o un HBA.
+
+
+
+=== Capacità e prestazioni del livello di servizio host
+
+Il report Capacità e prestazioni del livello di servizio host fornisce una panoramica dell'utilizzo dello storage da parte dell'host per le applicazioni solo a blocchi.
+
+
+
+=== Riepilogo dell'host
+
+Il report Riepilogo host fornisce una panoramica dell'utilizzo dello storage da parte di ciascun host selezionato, con informazioni sugli host Fibre Channel e iSCSI.  Il report consente di confrontare porte e percorsi, capacità Fibre Channel e ISCSI e conteggi delle violazioni.
+
+
+
+=== Dettagli della licenza
+
+Il report Dettagli licenza mostra la quantità di risorse autorizzate per le quali si dispone di licenza su tutti i siti con licenze attive.  Il report mostra anche una sintesi della quantità effettiva in tutti i siti con licenze attive.  La somma può includere sovrapposizioni di array di archiviazione gestiti da più server.
 
 
 
 === Volumi mappati ma non mascherati
 
-Il report Mapped but Not Masked Volumes (volumi mappati ma non mascherati) elenca i volumi il cui numero di unità logica (LUN) è stato mappato per l'utilizzo da parte di un determinato host, ma non è mascherato da tale host. In alcuni casi questi LUN potrebbero essere dismessi e non mascherati. Qualsiasi host può accedere ai volumi senza maschera, rendendoli vulnerabili alla corruzione dei dati.
+Il report Volumi mappati ma non mascherati elenca i volumi il cui numero di unità logica (LUN) è stato mappato per l'utilizzo da parte di un host specifico, ma non è mascherato per quell'host.  In alcuni casi potrebbero trattarsi di LUN dismesse che sono state smascherate.  I volumi non mascherati sono accessibili a qualsiasi host, il che li rende vulnerabili al danneggiamento dei dati.
 
 
 
-=== Capacità e performance di NetApp
+=== Capacità e prestazioni NetApp
 
-Il report NetApp Capacity and Performance fornisce dati globali per la capacità allocata, utilizzata e impegnata con dati di trend e performance per la capacità NetApp.
+Il report Capacità e prestazioni NetApp fornisce dati globali sulla capacità allocata, utilizzata e impegnata, con dati sulle tendenze e sulle prestazioni per la capacità NetApp .
 
 
 
-=== Scorecard
+=== Scheda di valutazione
 
-Il report Scorecard fornisce un riepilogo e lo stato generale di tutti gli asset acquisiti da Data Infrastructure Insights. Lo stato è indicato da indicatori verdi, gialli e rossi:
+Il report Scorecard fornisce un riepilogo e lo stato generale di tutte le risorse acquisite da Data Infrastructure Insights.  Lo stato è indicato con bandiere verdi, gialle e rosse:
 
-* Verde indica la condizione normale
+* Il verde indica condizioni normali
 * Il giallo indica un potenziale problema nell'ambiente
 * Il rosso indica un problema che richiede attenzione
 
 
-Tutti i campi del report sono descritti nel Data Dictionary fornito con il report.
+Tutti i campi del report sono descritti nel dizionario dati fornito con il report.
 
 
 
-=== Riepilogo dello storage
+=== Riepilogo archiviazione
 
-Il report Storage Summary fornisce un riepilogo globale dei dati di capacità utilizzati e inutilizzati per i pool di storage raw, allocati e volumi. Questo report fornisce una panoramica di tutto lo storage rilevato.
-
-
-
-=== Capacità e performance delle macchine virtuali
-
-Descrive l'ambiente della macchina virtuale (VM) e il relativo utilizzo della capacità. Gli strumenti delle macchine virtuali devono essere abilitati per visualizzare alcuni dati, ad esempio quando le macchine virtuali sono state spenti.
+Il report Riepilogo archiviazione fornisce un riepilogo globale dei dati sulla capacità utilizzata e non utilizzata per volumi, pool di archiviazione e dati grezzi e allocati.  Questo report fornisce una panoramica di tutti gli archivi scoperti.
 
 
 
-=== Percorsi delle macchine virtuali
+=== Capacità e prestazioni della VM
 
-Il report sui percorsi delle macchine virtuali fornisce dati sulla capacità dell'archivio dati e metriche delle performance per le quali la macchina virtuale è in esecuzione su quale host, gli host che accedono a quali volumi condivisi, il percorso di accesso attivo e ciò che comprende l'allocazione e l'utilizzo della capacità.
+Descrive l'ambiente della macchina virtuale (VM) e il suo utilizzo della capacità.  Per visualizzare alcuni dati, ad esempio quando le VM sono state spente, è necessario abilitare gli strumenti VM.
 
 
 
-=== Capacità HDS per Thin Pool
+=== Percorsi VM
 
-Il report HDS Capacity by Thin Pool mostra la quantità di capacità utilizzabile in un pool di storage con thin provisioning.
+Il report Percorsi VM fornisce dati sulla capacità dell'archivio dati e metriche sulle prestazioni per sapere quale macchina virtuale è in esecuzione su quale host, quali host accedono a quali volumi condivisi, qual è il percorso di accesso attivo e cosa comprende l'allocazione e l'utilizzo della capacità.
+
+
+
+=== Capacità HDS tramite Thin Pool
+
+Il report Capacità HDS per Thin Pool mostra la quantità di capacità utilizzabile su uno storage pool sottoposto a thin provisioning.
 
 
 
 === Capacità NetApp per aggregato
 
-Il report NetApp Capacity by aggregate mostra lo spazio totale, totale, utilizzato, disponibile e impegnato degli aggregati.
+Il report Capacità NetApp per aggregato mostra lo spazio totale grezzo, totale, utilizzato, disponibile e impegnato degli aggregati.
 
 
 
-=== Capacità Symmetrix per thick array
+=== Capacità Symmetrix per Thick Array
 
-Il report Symmetrix Capacity by Thick Array mostra capacità raw, capacità utilizzabile, capacità libera, mappata, mascherata, e capacità libera totale.
-
-
-
-=== Capacità di Symmetrix per Thin Pool
-
-Il report Symmetrix Capacity by Thin Pool mostra capacità raw, capacità utilizzabile, capacità utilizzata, capacità libera, percentuale utilizzata, capacità sottoscritta e tasso di abbonamento.
+Il report Capacità Symmetrix per Thick Array mostra la capacità grezza, la capacità utilizzabile, la capacità libera, la capacità mappata, quella mascherata e la capacità libera totale.
 
 
 
-=== XIV capacità per array
+=== Capacità Symmetrix di Thin Pool
 
-Il report XIV Capacity by Array (capacità XIV per array) mostra la capacità utilizzata e inutilizzata per l'array.
+Il report Capacità Symmetrix per Thin Pool mostra la capacità grezza, la capacità utilizzabile, la capacità utilizzata, la capacità libera, la percentuale utilizzata, la capacità sottoscritta e la frequenza di sottoscrizione.
 
 
 
-=== XIV capacità per pool
+=== XIV Capacità per Array
 
-Il report XIV Capacity by Pool mostra la capacità utilizzata e inutilizzata per i pool di storage.
+Il report XIV Capacità per array mostra la capacità utilizzata e non utilizzata per l'array.
+
+
+
+=== XIV Capacità per piscina
+
+Il report XIV Capacità per pool mostra la capacità utilizzata e non utilizzata per i pool di archiviazione.

@@ -2,59 +2,59 @@
 sidebar: sidebar 
 permalink: kubernetes_change_analytics.html 
 keywords: changes, management, analysis 
-summary: Il monitoraggio delle modifiche a Kubernetes è più semplice che mai. 
+summary: Monitorare le modifiche di Kubernetes è più facile che mai. 
 ---
-= Analytics delle modifiche di Kubernetes
+= Analisi delle modifiche di Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Kubernetes Change Analytics offre una vista completa delle recenti modifiche all'ambiente K8s. Gli avvisi e lo stato dell'implementazione sono a portata di mano. Con Change Analytics, puoi monitorare ogni modifica di implementazione e configurazione e correlarla con lo stato e le performance dei servizi, dell'infrastruttura e dei cluster K8s.
+Kubernetes Change Analytics ti fornisce una visione completa delle modifiche recenti apportate al tuo ambiente K8s.  Avvisi e stato di distribuzione sono a portata di mano.  Con Change Analytics puoi monitorare ogni modifica di distribuzione e configurazione e correlarla allo stato di salute e alle prestazioni dei servizi, dell'infrastruttura e dei cluster di K8.
 
-In che modo Change Analysis aiuta?
+In che modo l'analisi del cambiamento può essere utile?
 
-* Negli ambienti Kubernetes multi-tenant, le interruzioni possono verificarsi a causa di modifiche non configurate correttamente. L'analisi delle modifiche aiuta a questo scopo fornendo un singolo riquadro per visualizzare e correlare lo stato di salute dei carichi di lavoro e le modifiche alla configurazione. Ciò può risultare utile nella risoluzione dei problemi degli ambienti Kubernetes dinamici.
+* Negli ambienti Kubernetes multi-tenant, le interruzioni possono verificarsi a causa di modifiche configurate in modo errato.  Change Analytics aiuta in questo senso fornendo un unico riquadro per visualizzare e correlare lo stato dei carichi di lavoro e le modifiche alla configurazione.  Ciò può aiutare nella risoluzione dei problemi degli ambienti Kubernetes dinamici.
 
 
-Per visualizzare Kubernetes Change Analytics, accedere a *Kubernetes > Change Analysis*.
+Per visualizzare Kubernetes Change Analytics, vai su *Kubernetes > Change Analysis*.
 
-image:ChangeAnalytitcs_Main_Screen.png["Schermata principale di Kubernetes Change Analytics, che mostra avvisi e allarmi critici, implementazioni riuscite e non riuscite e i 3 principali carichi di lavoro che generano avvisi"].
+image:ChangeAnalytitcs_Main_Screen.png["Schermata principale di Kubernetes Change Analytics, che mostra avvisi e avvisi critici, distribuzioni riuscite e non riuscite e i 3 carichi di lavoro principali che attivano avvisi"] .
 
-La pagina viene aggiornata automaticamente in base all'intervallo di tempo Data Infrastructure Insights attualmente selezionato. Intervalli di tempo più piccoli significano un aggiornamento dello schermo più frequente.
+La pagina si aggiorna automaticamente in base all'intervallo di tempo Data Infrastructure Insights attualmente selezionato.  Intervalli di tempo più brevi implicano aggiornamenti dello schermo più frequenti.
 
 
 
 == Filtraggio
 
-Come per tutte le funzionalità di Data Infrastructure Insights, il filtraggio della lista di modifiche è intuitivo: Nella parte superiore della pagina, immettere o selezionare valori per il cluster Kubernetes, lo spazio dei nomi o il carico di lavoro oppure aggiungere i propri filtri selezionando il pulsante {+].
+Come per tutte le funzionalità di Data Infrastructure Insights, filtrare l'elenco delle modifiche è intuitivo: nella parte superiore della pagina, inserisci o seleziona i valori per il tuo cluster Kubernetes, namespace o workload, oppure aggiungi i tuoi filtri selezionando il pulsante {+].
 
-Quando si applica un filtro a un cluster, uno spazio dei nomi e un carico di lavoro specifici (insieme agli altri filtri impostati), viene visualizzata una timeline di distribuzione e avvisi per il carico di lavoro nello spazio dei nomi in quel cluster. Ingrandire ulteriormente facendo clic e trascinando il grafico per concentrarsi su un intervallo di tempo più specifico.
+Quando si filtra in base a un cluster, uno spazio dei nomi e un carico di lavoro specifici (insieme a tutti gli altri filtri impostati), viene visualizzata una cronologia delle distribuzioni e degli avvisi per quel carico di lavoro in quello spazio dei nomi su quel cluster.  Per ingrandire ulteriormente la visualizzazione, fare clic e trascinare il grafico per concentrarsi su un intervallo di tempo più specifico.
 
-image:ChangeAnalytitcs_Filtered_Timeline.png["Esempio di timeline del carico di lavoro"]
+image:ChangeAnalytitcs_Filtered_Timeline.png["Esempio di cronologia del carico di lavoro"]
 
 
 
 == Stato rapido
 
-Al di sotto dell'area di filtraggio sono presenti diversi indicatori di livello alto. A sinistra si trova il numero di avvisi (attenzione e critico). Questo numero include gli avvisi _Active_ e _Resolved_. Per visualizzare solo gli avvisi _attivi_, imposta un filtro per "Stato" e scegli "attivo".
+Al di sotto dell'area di filtraggio si trovano una serie di indicatori di alto livello.  Sulla sinistra è riportato il numero di avvisi (Avviso e Critico).  Questo numero include sia gli avvisi _Attivi_ che quelli _Risolti_.  Per visualizzare solo gli avvisi _Attivi_, imposta un filtro per "Stato" e scegli "Attivo".
 
-image:ChangeAnalytitcs_Alerts.png["Modifica avvisi di analisi"]
+image:ChangeAnalytitcs_Alerts.png["Avvisi di analisi delle modifiche"]
 
-Qui viene visualizzato anche lo stato di distribuzione. Anche in questo caso, l'impostazione predefinita è quella di mostrare il numero di implementazioni _started_, _complete_ e _Failed_. Per visualizzare solo le distribuzioni _non riuscite_, impostare un filtro per "Stato" e selezionare "non riuscito".
+Qui viene mostrato anche lo stato di distribuzione.  Anche in questo caso, l'impostazione predefinita è quella di mostrare il conteggio delle distribuzioni _Avviate_, _Completate_ e _Non riuscite_.  Per visualizzare solo le distribuzioni _Non riuscite_, imposta un filtro per "Stato" e seleziona "Non riuscito".
 
-image:ChangeAnalytitcs_Deploys.png["Sostituire i DSeploys di Analytics"]
+image:ChangeAnalytitcs_Deploys.png["Analisi dei cambiamenti DSeploys"]
 
-I primi 3 carichi di lavoro con un maggior numero di avvisi sono i prossimi. Il numero in rosso accanto a ciascun carico di lavoro indica il numero di avvisi relativi a tale carico di lavoro. Fare clic sul collegamento del carico di lavoro per esplorare tramite l'infrastruttura (Kubernetes Explorer), le dipendenze (Mappa del carico di lavoro) o l'analisi del registro (registri eventi).
+I successivi sono i 3 carichi di lavoro con il maggior numero di avvisi.  Il numero in rosso accanto a ciascun carico di lavoro indica il numero di avvisi correlati a quel carico di lavoro.  Fare clic sul collegamento del carico di lavoro per esplorare l'infrastruttura (Kubernetes Explorer), le dipendenze (mappa del carico di lavoro) o l'analisi dei registri (registri eventi).
 
-image:ChangeAnalytitcs_ExploreWorkloadAlerts.png["Cambia le opzioni di esplorazione del workload di analytics"]
+image:ChangeAnalytitcs_ExploreWorkloadAlerts.png["Opzioni di esplorazione del carico di lavoro di analisi delle modifiche"]
 
 
 
-== Pannello Dettagli
+== Pannello di dettaglio
 
-Selezionando una modifica nell'elenco si apre un pannello che descrive la modifica in modo più dettagliato. Ad esempio, la selezione di una distribuzione non riuscita mostra un riepilogo della distribuzione, con i tempi di inizio e fine, la durata e il punto in cui è stata attivata la distribuzione, con i collegamenti per esplorare tali risorse. Visualizza inoltre il motivo dell'errore, le eventuali modifiche correlate e gli eventi associati.
+Selezionando una modifica nell'elenco si apre un pannello che descrive la modifica in modo più dettagliato.  Ad esempio, selezionando una distribuzione non riuscita viene visualizzato un riepilogo della distribuzione, con orari di inizio e fine, durata e punto in cui è stata attivata la distribuzione, con collegamenti per esplorare tali risorse.  Visualizza inoltre il motivo dell'errore, eventuali modifiche correlate ed eventuali eventi associati.
 
-image:ChangeAnalytitcs_DeployDetailPanel.png["Pannello Dettagli errore distribuzione"]
+image:ChangeAnalytitcs_DeployDetailPanel.png["Pannello dei dettagli degli errori di distribuzione"]
 
-La selezione di un avviso fornisce dettagli sull'avviso, compreso il monitor che ha attivato l'avviso, nonché un grafico che mostra una timeline visiva per l'avviso.
+Anche selezionando un avviso si ottengono dettagli sull'avviso, tra cui il monitor che ha attivato l'avviso e un grafico che mostra una cronologia visiva dell'avviso.

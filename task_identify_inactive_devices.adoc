@@ -10,17 +10,17 @@ summary: 'L"identificazione dei dispositivi inattivi consente di scegliere se el
 
 
 [role="lead"]
-Identificare le risorse di cui disponi e chi le utilizza è fondamentale per il "dimensionamento corretto" e liberare l'infrastruttura inutilizzata. Puoi riallocare o decommissionare facilmente le risorse sottoutilizzate ed evitare acquisti non necessari.
+Identificare le risorse di cui si dispone e chi le utilizza è fondamentale per "dimensionarle correttamente" e liberare infrastrutture inutilizzate.  È possibile riassegnare o dismettere facilmente le risorse sottoutilizzate ed evitare acquisti non necessari.
 
-Per identificare le risorse inattive, procedere come segue.
+Per identificare le risorse inattive, attenersi alla seguente procedura.
 
-.Fasi
-* Selezionare *osservabilità > Esplora -> +Nuova query metrica*.
-* Selezionate _Storage_ dal menu a discesa.
-* Fate clic sull'ingranaggio e aggiungete _isActive_ come colonna.
+.Passi
+* Vai su *Osservabilità > Esplora -> +Nuova query metrica*.
+* Selezionare _Archiviazione_ dal menu a discesa.
+* Fare clic sull'ingranaggio e aggiungere _isActive_ come colonna.
 +
-Le righe con un segno di spunta sono attive. "X" indica dispositivi inattivi.
+Le righe che mostrano un segno di spunta sono attive.  "X" indica i dispositivi inattivi.
 
 
 
-Per rimuovere i dispositivi inattivi, seleziona i dispositivi da rimuovere e nel menu a discesa *azioni in blocco* seleziona _Elimina dispositivi inattivi_.
+Per rimuovere i dispositivi inattivi, seleziona semplicemente i dispositivi da rimuovere e nel menu a discesa *Azioni in blocco* seleziona _Elimina dispositivi inattivi_.

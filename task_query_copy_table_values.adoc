@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_query_copy_table_values.html 
-summary: È possibile copiare i valori da una tabella agli Appunti per utilizzarli in altre applicazioni. 
+summary: È possibile copiare i valori da una tabella negli appunti per utilizzarli in altre applicazioni. 
 keywords: query, queries, copy, values, clipboard 
 ---
 = Copia dei valori della tabella
@@ -10,15 +10,15 @@ keywords: query, queries, copy, values, clipboard
 
 
 [role="lead"]
-È possibile copiare i valori nelle tabelle negli Appunti per utilizzarli nelle caselle di ricerca o in altre applicazioni.
+È possibile copiare i valori delle tabelle negli appunti per utilizzarli nelle caselle di ricerca o in altre applicazioni.
 
-.A proposito di questa attività
-Esistono due metodi per copiare i valori dalle tabelle o dai risultati delle query negli Appunti.
+.Informazioni su questo compito
+Esistono due metodi per copiare i valori dalle tabelle o i risultati delle query negli appunti.
 
-.Fasi
-. Metodo 1: Evidenziare il testo desiderato con il mouse, copiarlo e incollarlo nei campi di ricerca o in altre applicazioni.
-. Metodo 2: Per i campi a valore singolo, passare il mouse sul campo e fare clic sull'icona degli Appunti visualizzata. Il valore viene copiato negli Appunti per essere utilizzato nei campi di ricerca o in altre applicazioni.
+.Passi
+. Metodo 1: evidenziare il testo desiderato con il mouse, copiarlo e incollarlo nei campi di ricerca o in altre applicazioni.
+. Metodo 2: per i campi a valore singolo, passa il mouse sopra il campo e fai clic sull'icona degli appunti che appare.  Il valore viene copiato negli appunti per essere utilizzato nei campi di ricerca o in altre applicazioni.
 +
-Questo metodo consente di copiare solo i valori che sono collegamenti alle risorse. Solo i campi che includono valori singoli (ad esempio non elenchi) hanno l'icona di copia.
+Si noti che con questo metodo è possibile copiare solo i valori che sono collegamenti ad asset.  Solo i campi che includono valori singoli (ad esempio quelli non elencati) hanno l'icona di copia.
 
 

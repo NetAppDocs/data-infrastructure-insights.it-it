@@ -2,43 +2,43 @@
 sidebar: sidebar 
 permalink: task_dc_na_7mode.html 
 keywords: data collector, 7-mode, NetApp 
-summary: Configurazione di NetApp 7-mode Data Collector. 
+summary: Configurazione del raccoglitore dati NetApp in modalità 7. 
 ---
-= NetApp Data ONTAP opera in data collector 7-Mode
+= NetApp Data ONTAP funzionante nel raccoglitore dati a 7 modalità
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Per i sistemi storage che utilizzano il software Data ONTAP in 7-Mode, si utilizza il data collector 7-mode, che utilizza l'interfaccia CLI per ottenere dati su capacità e performance.
+Per i sistemi di storage che utilizzano il software Data ONTAP che opera in modalità 7, si utilizza il raccoglitore dati a 7 modalità, che sfrutta la CLI per ottenere dati su capacità e prestazioni.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector NetApp 7-Mode. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati NetApp a 7 modalità.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 
-NOTE: Questo data collector è link:task_getting_started_with_cloud_insights.html#useful-definitions["obsoleto"].
+NOTE: Questo raccoglitore di dati èlink:task_getting_started_with_cloud_insights.html#useful-definitions["deprecato"] .
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco | Disco 
 
 
-| Gruppo RAID | Gruppo di dischi 
+| Gruppo di incursione | Gruppo di dischi 
 
 
-| Filer | Storage 
+| Filer | Magazzinaggio 
 
 
-| Filer | Nodo di storage 
+| Filer | Nodo di archiviazione 
 
 
-| Aggregato | Pool di storage 
+| Aggregato | Pool di archiviazione 
 
 
 | LUN | Volume 
@@ -46,25 +46,25 @@ NOTE: Questo data collector è link:task_getting_started_with_cloud_insights.htm
 
 | Volume | Volume interno 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Per configurare e utilizzare questo data collector sono necessari i seguenti elementi:
+Per configurare e utilizzare questo raccoglitore dati è necessario quanto segue:
 
-* Indirizzi IP del partner e del controller di storage FAS.
+* Indirizzi IP del controller di archiviazione FAS e del partner.
 * Porta 443
-* Un nome utente e una password personalizzati a livello di amministratore per controller e partner controller con le seguenti funzionalità di ruolo per 7-Mode:
+* Un nome utente e una password di livello amministratore personalizzati per il controller e il controller partner con le seguenti capacità di ruolo per 7-Mode:
 +
-** "api-*": Utilizzare questa opzione per consentire a OnCommand Insight di eseguire tutti i comandi API dello storage NetApp.
-** "Login-http-admin": Consente a OnCommand Insight di connettersi allo storage NetApp tramite HTTP.
-** "Security-api-vfiler": Utilizzare questa opzione per consentire a OnCommand Insight di eseguire i comandi API dello storage NetApp per recuperare le informazioni sull'unità vFiler.
-** "cli-options" (Opzioni cli): Consente di leggere le opzioni del sistema di storage.
-** "cli-lun": Consente di accedere a questi comandi per la gestione delle LUN. Visualizza lo stato (percorso LUN, dimensione, stato online/offline e stato condiviso) del LUN o della classe di LUN.
-** "cli-df": Consente di visualizzare lo spazio libero su disco.
-** "cli-ifconfig": Consente di visualizzare interfacce e indirizzi IP.
+** "api-*": utilizzare questa opzione per consentire a OnCommand Insight di eseguire tutti i comandi API di storage NetApp .
+** "login-http-admin": utilizzare questa opzione per consentire a OnCommand Insight di connettersi allo storage NetApp tramite HTTP.
+** "security-api-vfiler": utilizzare questa opzione per consentire a OnCommand Insight di eseguire i comandi API di archiviazione NetApp per recuperare le informazioni sull'unità vFiler.
+** "cli-options": utilizzare per leggere le opzioni del sistema di archiviazione.
+** "cli-lun": accedi a questi comandi per gestire i LUN.  Visualizza lo stato (percorso LUN, dimensione, stato online/offline e stato condiviso) del LUN specificato o della classe di LUN.
+** "cli-df": utilizzare per visualizzare lo spazio libero su disco.
+** "cli-ifconfig": utilizzare per visualizzare le interfacce e gli indirizzi IP.
 
 
 
@@ -78,22 +78,22 @@ Per configurare e utilizzare questo data collector sono necessari i seguenti ele
 | Campo | Descrizione 
 
 
-| Indirizzo del sistema storage | Indirizzo IP o nome di dominio completo per il sistema di storage NetApp 
+| Indirizzo del sistema di archiviazione | Indirizzo IP o nome di dominio completo per il sistema di archiviazione NetApp 
 
 
-| Nome utente | Nome utente del sistema storage NetApp 
+| Nome utente | Nome utente per il sistema di archiviazione NetApp 
 
 
-| Password | Password per il sistema storage NetApp 
+| Password | Password per il sistema di archiviazione NetApp 
 
 
-| Indirizzo del partner ha nel cluster | Indirizzo IP o nome di dominio completo per il partner ha 
+| Indirizzo del partner HA nel cluster | Indirizzo IP o nome di dominio completo per il partner HA 
 
 
-| Nome utente del partner ha nel cluster | Nome utente del partner ha 
+| Nome utente del partner HA nel cluster | Nome utente per il partner HA 
 
 
-| Password di ha Partner Filer nel cluster | Password per il partner ha 
+| Password del file partner HA nel cluster | Password per il partner HA 
 |===
 
 
@@ -104,61 +104,61 @@ Per configurare e utilizzare questo data collector sono necessari i seguenti ele
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 20 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20 minuti. 
 
 
 | Tipo di connessione | HTTPS o HTTP, visualizza anche la porta predefinita 
 
 
-| Sovrascrivere la porta di connessione | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+| Sostituisci porta di connessione | Se vuoto, utilizzare la porta predefinita nel campo Tipo di connessione, altrimenti immettere la porta di connessione da utilizzare 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
 |===
 
 
-== Connessione ai sistemi storage
+== Collegamento dei sistemi di stoccaggio
 
-In alternativa all'utilizzo dell'utente amministrativo predefinito per questo data collector, è possibile configurare un utente con diritti amministrativi direttamente sui sistemi storage NetApp in modo che questo data collector possa acquisire dati dai sistemi storage NetApp.
+In alternativa all'utilizzo dell'utente amministrativo predefinito per questo raccoglitore dati, è possibile configurare un utente con diritti amministrativi direttamente sui sistemi di archiviazione NetApp , in modo che questo raccoglitore dati possa acquisire dati dai sistemi di archiviazione NetApp .
 
-La connessione ai sistemi storage NetApp richiede che l'utente, specificato al momento dell'acquisizione del filer principale (su cui è presente il sistema storage), soddisfi le seguenti condizioni:
+Per connettersi ai sistemi di storage NetApp è necessario che l'utente specificato al momento dell'acquisizione del pfiler principale (su cui esiste il sistema di storage) soddisfi le seguenti condizioni:
 
-* L'utente deve trovarsi su vfiler0 (root filer/pfiler).
+* L'utente deve essere su vfiler0 (root filer/pfiler).
 +
-I sistemi storage vengono acquisiti quando si acquisisce il pfiler principale.
+I sistemi di stoccaggio vengono acquisiti al momento dell'acquisizione del pfiler principale.
 
-* I seguenti comandi definiscono le funzionalità del ruolo utente:
+* I seguenti comandi definiscono le capacità del ruolo utente:
 +
-** "api-*": Consente a Data Infrastructure Insights di eseguire tutti i comandi API di storage NetApp.
+** "api-*": utilizzare questa opzione per consentire a Data Infrastructure Insights di eseguire tutti i comandi API di storage NetApp .
 +
 Questo comando è necessario per utilizzare ZAPI.
 
-** "Login-http-admin": Utilizzare questa opzione per consentire a Data Infrastructure Insights di connettersi allo storage NetApp tramite HTTP. Questo comando è necessario per utilizzare ZAPI.
-** "Security-api-vfiler": Utilizzare questo comando per consentire a Data Infrastructure Insights di eseguire comandi API di storage NetApp per recuperare informazioni sull'unità vFiler.
-** "cli-options": Per il comando "options" e utilizzato per l'IP del partner e le licenze abilitate.
-** "cli-lun": Consente di accedere a questi comandi per la gestione delle LUN. Visualizza lo stato (percorso LUN, dimensione, stato online/offline e stato condiviso) del LUN o della classe di LUN.
-** "cli-df": Per i comandi "df -s", "df -r", "df -A -r" e utilizzato per visualizzare lo spazio libero.
-** "cli-ifconfig": Per il comando "ifconfig -a" e utilizzato per ottenere l'indirizzo IP del filer.
-** "cli-rdfile": Per il comando "rdfile /etc/netgroup" e utilizzato per ottenere netgroup.
-** "cli-date": Per il comando "date" e utilizzato per ottenere la data completa per ottenere le copie Snapshot.
-** "cli-SNAP": Per il comando "snap-list" e utilizzato per ottenere le copie Snapshot.
+** "login-http-admin": utilizzare questa opzione per consentire a Data Infrastructure Insights di connettersi allo storage NetApp tramite HTTP.  Questo comando è necessario per utilizzare ZAPI.
+** "security-api-vfiler": utilizzare questa opzione per consentire a Data Infrastructure Insights di eseguire comandi API di storage NetApp per recuperare le informazioni sull'unità vFiler.
+** "cli-options": per il comando "options" e utilizzato per l'IP del partner e le licenze abilitate.
+** "cli-lun": accedi a questi comandi per gestire i LUN.  Visualizza lo stato (percorso LUN, dimensione, stato online/offline e stato condiviso) del LUN specificato o della classe di LUN.
+** "cli-df": per i comandi "df -s", "df -r", "df -A -r" e utilizzato per visualizzare lo spazio libero.
+** "cli-ifconfig": per il comando "ifconfig -a" e utilizzato per ottenere l'indirizzo IP del filer.
+** "cli-rdfile": per il comando "rdfile /etc/netgroup" e utilizzato per ottenere i netgroup.
+** "cli-date": per il comando "date" e utilizzato per ottenere la data completa per ottenere copie Snapshot.
+** "cli-snap": per il comando "snap list" e utilizzato per ottenere copie Snapshot.
 
 
 
 
-Se non vengono fornite le autorizzazioni cli-date o cli-SNAP, l'acquisizione può terminare, ma le copie Snapshot non vengono segnalate.
+Se non vengono fornite le autorizzazioni cli-date o cli-snap, l'acquisizione può essere completata, ma le copie Snapshot non vengono segnalate.
 
-Per acquisire correttamente un'origine dati 7-Mode e non generare avvisi sul sistema di storage, è necessario utilizzare una delle seguenti stringhe di comando per definire i ruoli utente. La seconda stringa qui elencata è una versione semplificata della prima:
+Per acquisire correttamente una sorgente dati 7-Mode e non generare avvisi sul sistema di archiviazione, è necessario utilizzare una delle seguenti stringhe di comando per definire i ruoli utente.  La seconda stringa elencata qui è una versione semplificata della prima:
 
 * login-http-admin,api-*,security-api-vfile,cli-rdfile,cli-options,cli-df,cli-lun,cli-ifconfig,cli-date,cli-snap,_
-* login-http-admin,api-*,security-api-vfile,cli-
+* login-http-admin,api-* ,security-api-vfile,cli-
 
 
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -166,45 +166,45 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Ricevi una risposta HTTP 401 o un codice di errore ZAPI 13003 e ZAPI restituisce "privilegi insufficienti" o "non autorizzati per questo comando" | Controllare nome utente e password e privilegi/permessi dell'utente. 
+| Ricevi la risposta HTTP 401 o il codice di errore ZAPI 13003 e ZAPI restituisce "Privilegi insufficienti" o "non autorizzato per questo comando" | Controllare nome utente, password e privilegi/permessi dell'utente. 
 
 
-| Errore "Impossibile eseguire il comando" | Verificare se l'utente dispone delle seguenti autorizzazioni sul dispositivo: • api-* • cli-date • cli-df • cli-ifconfig • cli-lun • operazioni cli • cli-rdfile • cli-snap • login-http-admin • Security-api-vfiler controllare anche se la versione ONTAP è supportata da Data Infrastructure Insights e verificare se le credenziali utilizzate corrispondono alle credenziali del dispositivo 
+| Errore "Impossibile eseguire il comando" | Verificare se l'utente dispone delle seguenti autorizzazioni sul dispositivo: • api-* • cli-date • cli-df • cli-ifconfig • cli-lun • cli-operations • cli-rdfile • cli-snap • login-http-admin • security-api-vfiler Verificare inoltre se la versione ONTAP è supportata da Data Infrastructure Insights e verificare se le credenziali utilizzate corrispondono alle credenziali del dispositivo 
 
 
-| La versione del cluster è < 8.1 | La versione minima supportata del cluster è 8.1. Eseguire l'aggiornamento alla versione minima supportata. 
+| La versione del cluster è < 8.1 | La versione minima supportata dal cluster è 8.1.  Aggiorna alla versione minima supportata. 
 
 
-| ZAPI restituisce "il ruolo del cluster non è cluster_mgmt LIF" | L'AU deve comunicare con l'IP di gestione del cluster. Controllare l'IP e, se necessario, modificarlo 
+| ZAPI restituisce "il ruolo del cluster non è cluster_mgmt LIF" | L'AU deve comunicare con l'IP di gestione del cluster.  Controllare l'IP e, se necessario, cambiarlo con un IP diverso 
 
 
-| Errore: "I filer 7 Mode non sono supportati" | Questo può accadere se si utilizza questo data collector per rilevare il filer in modalità 7. Modificare l'IP in modo che punti al filer ccot. 
+| Errore: "I filtri in modalità 7 non sono supportati" | Ciò può accadere se si utilizza questo raccoglitore di dati per scoprire il filtro in modalità 7.  Cambiare l'IP in modo che punti al filer cdot. 
 
 
-| Il comando ZAPI non riesce dopo il tentativo | Au ha problemi di comunicazione con il cluster. Controllare la rete, il numero di porta e l'indirizzo IP. L'utente dovrebbe anche provare ad eseguire un comando dalla riga di comando dalla macchina AU. 
+| Il comando ZAPI fallisce dopo il nuovo tentativo | L'AU ha problemi di comunicazione con il cluster.  Controllare la rete, il numero di porta e l'indirizzo IP.  L'utente dovrebbe anche provare a eseguire un comando dalla riga di comando della macchina AU. 
 
 
-| Impossibile connettersi a ZAPI | Controllare la connettività IP/porta e attivare la configurazione ZAPI. 
+| AU non è riuscito a connettersi a ZAPI | Verificare la connettività IP/porta e verificare la configurazione ZAPI. 
 
 
-| L'AU non è riuscito a connettersi a ZAPI tramite HTTP | Controllare se la porta ZAPI accetta testo non crittografato. Se AU tenta di inviare testo non crittografato a un socket SSL, la comunicazione non riesce. 
+| AU non è riuscito a connettersi a ZAPI tramite HTTP | Verificare se la porta ZAPI accetta testo in chiaro.  Se AU tenta di inviare testo in chiaro a un socket SSL, la comunicazione fallisce. 
 
 
-| Comunicazione non riuscita con SSLException | AU sta tentando di inviare SSL a una porta di testo normale su un filer. Controllare se la porta ZAPI accetta SSL o utilizza una porta diversa. 
+| La comunicazione fallisce con SSLException | AU sta tentando di inviare SSL a una porta in chiaro su un filer.  Verificare se la porta ZAPI accetta SSL oppure utilizzare una porta diversa. 
 
 
-| Ulteriori errori di connessione: La risposta ZAPI ha il codice di errore 13001, il codice di errore "database non aperto" ZAPI è 60 e la risposta contiene "API non è stata completata in tempo" la risposta ZAPI contiene "initialize_session() ha restituito l'ambiente NULL" il codice di errore ZAPI è 14007 e la risposta contiene "nodo non è integro" | Controllare la rete, il numero di porta e l'indirizzo IP. L'utente dovrebbe anche provare ad eseguire un comando dalla riga di comando dalla macchina AU. 
+| Errori di connessione aggiuntivi: la risposta ZAPI ha il codice di errore 13001, "database non aperto". Il codice di errore ZAPI è 60 e la risposta contiene "API non completata in tempo". La risposta ZAPI contiene "initialize_session() ha restituito ambiente NULL". Il codice di errore ZAPI è 14007 e la risposta contiene "Nodo non funzionante". | Controllare la rete, il numero di porta e l'indirizzo IP.  L'utente dovrebbe anche provare a eseguire un comando dalla riga di comando della macchina AU. 
 
 
-| Errore di timeout socket con ZAPI | Controllare la connettività del filer e/o aumentare il timeout. 
+| Errore di timeout del socket con ZAPI | Controllare la connettività del filer e/o aumentare il timeout. 
 
 
-| "I cluster C Mode non sono supportati dall'origine dati 7 Mode". | Selezionare IP e impostare l'IP su un cluster 7 Mode. 
+| Errore "I cluster in modalità C non sono supportati dalla sorgente dati in modalità 7" | Controllare l'IP e modificarlo in un cluster in modalità 7. 
 
 
-| Errore "Impossibile connettersi a vFiler" | Verificare che le funzionalità dell'utente in fase di acquisizione includano almeno quanto segue: api-* Security-api-vfiler login-http-admin verificare che il filer utilizzi almeno ONTAPI versione 1.7. 
+| Errore "Impossibile connettersi a vFiler" | Verificare che le capacità di acquisizione dell'utente includano almeno quanto segue: api-* security-api-vfiler login-http-admin Verificare che il filer esegua almeno la versione ONTAPI 1.7. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

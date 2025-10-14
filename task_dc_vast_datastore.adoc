@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: task_dc_vast_datastore.html 
 keywords: data collector, VAST storage, VAST data 
-summary: Configurazione di VAST Data datastore storage data collector. 
+summary: Configurazione del raccoglitore dati di archiviazione VAST Data DataStore. 
 ---
-= AMPIO data collector del datastore
+= Raccoglitore dati VAST DataStore
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza l'AMPIO data collector del datastore per raccogliere dati di inventario e di performance.
+Data Infrastructure Insights utilizza il raccoglitore dati VAST DataStore per raccogliere dati di inventario e prestazioni.
 
 
 
 == Terminologia
 
-Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per la risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Vettori | Dischi (parte del campo di posizione dello shelf di dischi) 
+| Vettori | Dischi (parte del campo di posizione dello scaffale dei dischi) 
 
 
-| Cluster | Storage 
+| Grappolo | Magazzinaggio 
 
 
-| CNode | StorageNode (tipo = cnode) 
+| CNodi | StorageNode (tipo = cnode) 
 
 
 | DNode | StorageNode (tipo = dnode) 
@@ -38,10 +38,10 @@ Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizz
 | NVRAM | Dischi 
 
 
-| Percorsi protetti | Sincronizzazione volume interna 
+| Percorsi protetti | Sincronizzazione del volume interno 
 
 
-| Policy di QOS | Volume interno (limiti QOS) 
+| Criteri QOS | Volume interno (limiti QOS) 
 
 
 | Quote | Quota 
@@ -50,23 +50,23 @@ Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizz
 | SSD | Dischi 
 
 
-| Tenant | Macchina virtuale per lo storage 
+| inquilini | Macchina virtuale di archiviazione 
 
 
-| ViewPolicies | FileShare (per autorizzazioni) 
+| VisualizzaPolitiche | FileShare (per i permessi) 
 
 
-| Viste | Volume interno 
+| Visualizzazioni | Volume interno 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-* Indirizzo IP del sistema del datastore VAST o nome di dominio completo
+* Indirizzo IP del sistema VAST DataStore o nome di dominio completo
 * Nome utente / Password per accedere al sistema VAST
-* Requisiti porta: HTTPS 443
+* Requisito porta: HTTPs 443
 
 
 
@@ -78,10 +78,10 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Indirizzo IP/nome host storage datastore VAST | Indirizzo IP o FQDN del sistema di archiviazione 
+| IP/nome host di archiviazione VAST DataStore | Indirizzo IP o FQDN del sistema di archiviazione 
 
 
-| Utente | Nome utente VAST Storage 
+| Utente | Nome utente di archiviazione VAST 
 
 
 | Password | Password di archiviazione VAST 
@@ -95,22 +95,22 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Tipo di connessione | Scegliere HTTP o HTTPS. Visualizza anche la porta predefinita. 
+| Tipo di connessione | Scegli HTTP o HTTPS.  Visualizza anche la porta predefinita. 
 
 
-| Eseguire l'override della porta TCP | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+| Sostituisci la porta TCP | Se vuoto, utilizzare la porta predefinita nel campo Tipo di connessione, altrimenti immettere la porta di connessione da utilizzare 
 
 
-| Intervallo di polling dell'inventario (min) | L'impostazione predefinita è 60 minuti 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60 minuti 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 
+| Intervallo di sondaggio sulle prestazioni (sec) | Il valore predefinito è 300 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -118,9 +118,9 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| "Credenziali di accesso non valide" con messaggi di errore "la policy non consente" o "non sei autorizzato" | Convalidare l'account utente e la password pure tramite l'interfaccia pure http 
+| "Credenziali di accesso non valide" con messaggi di errore "La policy non consente" o "Non sei autorizzato" | Convalida l'account utente e la password Pure tramite l'interfaccia http Pure 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

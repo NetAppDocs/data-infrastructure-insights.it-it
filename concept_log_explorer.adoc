@@ -2,31 +2,31 @@
 sidebar: sidebar 
 permalink: concept_log_explorer.html 
 keywords: logs, monitors, alerts, EMS, 
-summary: 'Log Explorer è un potente strumento per l"analisi dei problemi attraverso diversi log di sistema.' 
+summary: Log Explorer è uno strumento potente per analizzare i problemi tramite diversi registri di sistema. 
 ---
-= Esplora log
+= Esploratore di log
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Lo strumento Data Infrastructure Insights Log Explorer è un potente strumento per eseguire query sui registri di sistema. Oltre a fornire assistenza per le analisi, è possibile salvare una query di log in un monitor per fornire avvisi quando vengono attivati i trigger di log specifici.
+Data Infrastructure Insights Log Explorer è un potente strumento per interrogare i log di sistema.  Oltre ad agevolare le indagini, è anche possibile salvare una query di registro in un Monitor per ricevere avvisi quando vengono attivati ​​specifici trigger di registro.
 
-Per iniziare a esplorare i registri, fare clic su *Log queries > +New Log Query*.
+Per iniziare a esplorare i log, fare clic su *Query log > +Nuova query log*.
 
 Selezionare un registro disponibile dall'elenco.
 
-image:LogExplorer_2022.png["Scegliere il registro"]
+image:LogExplorer_2022.png["Scegli il tuo registro"]
 
 
-NOTE: I tipi di log disponibili per le query possono variare a seconda dell'ambiente in uso. È possibile aggiungere altri tipi di log nel tempo.
+NOTE: I tipi di log disponibili per le query possono variare in base all'ambiente.  Nel tempo potrebbero essere aggiunti altri tipi di log.
 
-È possibile impostare filtri per perfezionare ulteriormente i risultati della query. Ad esempio, per trovare tutti i messaggi di registro che mostrano un errore, impostare un filtro per _messaggi_ contenente la parola "non riuscito".
+È possibile impostare filtri per perfezionare ulteriormente i risultati della query.  Ad esempio, per trovare tutti i messaggi di registro che indicano un errore, impostare un filtro per i _Messaggi_ contenenti la parola "errore".
 
 
-TIP: È possibile iniziare a digitare il testo desiderato nel campo del filtro; in Data Infrastructure Insights viene richiesto di creare una ricerca con caratteri jolly contenente la stringa durante la digitazione.
+TIP: Puoi iniziare a digitare il testo desiderato nel campo filtro; Data Infrastructure Insights ti chiederà di creare una ricerca con caratteri jolly contenente la stringa mentre digiti.
 
-I risultati vengono visualizzati in un grafico che mostra il numero di istanze di log in ciascun periodo di tempo visualizzato. Sotto il grafico sono riportati i modelli di voci di log. Il grafico e le voci si aggiornano automaticamente in base all'intervallo di tempo selezionato.
+I risultati vengono visualizzati in un grafico che mostra il numero di istanze di registro in ciascun periodo di tempo mostrato.  Sotto il grafico si trovano le voci di registro stesse.  Il grafico e le voci si aggiornano automaticamente in base all'intervallo di tempo selezionato.
 
 image:LogExplorer_QueryForFailed.png["Esempio di query che mostra il filtro"]
 
@@ -36,42 +36,42 @@ image:LogExplorer_QueryForFailed.png["Esempio di query che mostra il filtro"]
 
 
 
-=== Includi/Escludi
+=== Includi / Escludi
 
-Quando si filtrano i log, è possibile scegliere di *includere* (ad esempio "filtro a") o *escludere* le stringhe digitate. Le stringhe escluse vengono visualizzate nel filtro completato come "NON <string>".
+Quando si filtrano i log, è possibile scegliere di *includere* (ad esempio "Filtra per") o *escludere* le stringhe digitate.  Le stringhe escluse vengono visualizzate nel filtro completato come "NOT <stringa>".
 
 image:Log_Advanced_Query_Filter_Exclude.png["Filtro registro che mostra l'opzione Escludi"]
 
-I filtri basati su caratteri jolly o espressioni (ad esempio, NO, O "None", ecc.) vengono visualizzati in blu scuro nel campo del filtro. Gli elementi selezionati direttamente dall'elenco vengono visualizzati in blu chiaro.
+I filtri basati su caratteri jolly o espressioni (ad esempio NOT, OR, "Nessuno", ecc.) vengono visualizzati in blu scuro nel campo filtro.  Gli elementi selezionati direttamente dall'elenco vengono visualizzati in azzurro.
 
 
-NOTE: In qualsiasi momento, è possibile fare clic su _Create a Log Monitor_ per creare un nuovo monitor in base al filtro corrente.
+NOTE: In qualsiasi momento puoi cliccare su _Crea un Log Monitor_ per creare un nuovo Monitor basato sul filtro corrente.
 
 
 
 === Filtraggio avanzato
 
-Quando si filtrano valori di testo o di elenco nelle query o nei widget della dashboard, quando si inizia a digitare viene visualizzata l'opzione per creare un filtro * con caratteri jolly* in base al testo corrente. Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione con caratteri jolly. È inoltre possibile creare espressioni utilizzando NON, E, o o, oppure selezionare l'opzione "Nessuno" per filtrare i valori nulli.
+Quando si filtrano valori di testo o di elenco in query o widget della dashboard, quando si inizia a digitare viene presentata l'opzione per creare un *filtro con caratteri jolly* in base al testo corrente.  Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione jolly.  È anche possibile creare espressioni utilizzando NOT, AND o OR, oppure selezionare l'opzione "Nessuno" per filtrare i valori nulli.
 
 
-NOTE: Assicurarsi di salvare la query in anticipo e spesso durante la creazione del filtro. L'interrogazione avanzata è una voce di stringa "free-form" e gli errori di analisi possono verificarsi durante la compilazione.
+NOTE: Assicurati di salvare la tua query in anticipo e spesso mentre crei il tuo filtro.  Le query avanzate sono immissioni di stringhe "in formato libero" e potrebbero verificarsi errori di analisi durante la compilazione.
 
-Date un'occhiata a questa immagine della schermata che mostra i risultati filtrati per una query avanzata del log _logs.kuPQ.event_. C'è molto in corso in questa pagina, che è spiegato sotto l'immagine:
+Diamo un'occhiata a questa immagine dello schermo che mostra i risultati filtrati per una query avanzata del registro _logs.kubernetes.event_.  In questa pagina succedono molte cose, come spiegato sotto l'immagine:
 
-image:Log_Advanced_Query_ScreenExplained.png["Viene illustrata la schermata Advanced Query (interrogazione avanzata)"]
+image:Log_Advanced_Query_ScreenExplained.png["Spiegazione della schermata di query avanzata"]
 
 . Questa stringa di query avanzata filtra per quanto segue:
 +
-** Filtro per le voci di registro con _reason_ che include la parola "FAILED", ma non qualsiasi cosa con il motivo specifico di "FailedMount".
-** Includere una qualsiasi di quelle voci che includono anche un _metadata.namespace_ compresa la parola "monitoraggio", ma escludere gli spazi dei nomi specifici di "monitoraggio cm" o "monitoraggio es.".
+** Filtra le voci di registro con un _motivo_ che include la parola "failed", ma non nulla con il motivo specifico "FailedMount".
+** Includere tutte le voci che includono anche un _metadata.namespace_ contenente la parola "monitoring", ma escludere gli spazi dei nomi specifici di "cm-monitoring" o "eg-monitoring".
 +
-Si noti che nel caso precedente, poiché sia "cm-monitoring" che "eg-monitoring" contengono un trattino ("-"), le stringhe devono essere incluse tra virgolette doppie o verrà visualizzato un errore di analisi. Le stringhe che non includono trattini, spazi, ecc. non devono essere racchiuse tra virgolette. In caso di dubbi, provare a inserire la stringa tra virgolette.
+Si noti che nel caso sopra, poiché sia "cm-monitoring" che "eg-monitoring" contengono un trattino ("-"), le stringhe devono essere racchiuse tra virgolette doppie, altrimenti verrà visualizzato un errore di analisi.  Le stringhe che non includono trattini, spazi, ecc. non devono essere racchiuse tra virgolette.  In caso di dubbi, prova a mettere la stringa tra virgolette.
 
 
 
-. I risultati del filtro corrente, compresi i valori "Filtra per" E il filtro query avanzate, vengono visualizzati nell'elenco dei risultati. L'elenco può essere ordinato in base alle colonne visualizzate. Per visualizzare colonne aggiuntive, selezionare l'icona "marcia".
-. Il grafico è stato ingrandito per visualizzare solo i risultati del registro che si sono verificati in un intervallo di tempo specifico. L'intervallo di tempo mostrato qui riflette il livello di zoom corrente. Selezionare il pulsante _Reimposta zoom_ per riportare il livello di zoom all'intervallo temporale corrente di Data Infrastructure Insights.
-. I risultati del grafico sono stati raggruppati in base al campo _source_. Il grafico mostra i risultati in ogni colonna raggruppati in colori. Passando con il mouse sopra una colonna del grafico vengono visualizzati alcuni dettagli relativi alle voci specifiche.
+. I risultati del filtro corrente, inclusi tutti i valori "Filtra per" E il filtro Query avanzata, vengono visualizzati nell'elenco dei risultati.  L'elenco può essere ordinato in base a qualsiasi colonna visualizzata.  Per visualizzare colonne aggiuntive, seleziona l'icona "ingranaggio".
+. Il grafico è stato ingrandito per mostrare solo i risultati del log che si sono verificati in un intervallo di tempo specifico.  L'intervallo di tempo mostrato qui riflette il livello di zoom corrente.  Selezionare il pulsante _Reimposta zoom_ per ripristinare il livello di zoom all'intervallo di tempo corrente Data Infrastructure Insights .
+. I risultati del grafico sono stati raggruppati in base al campo _source_.  Il grafico mostra i risultati in ogni colonna raggruppati per colore.  Passando il mouse su una colonna del grafico verranno visualizzati alcuni dettagli sulle voci specifiche.
 +
 image:Log_Advanced_Query_Group_Detail.png["Dettagli del passaggio del mouse raggruppati"]
 
@@ -79,68 +79,68 @@ image:Log_Advanced_Query_Group_Detail.png["Dettagli del passaggio del mouse ragg
 
 
 
-==== Raffinazione dei filtri
+==== Filtri di affinamento
 
-Per perfezionare il filtro, utilizzare quanto segue:
+Per affinare il filtro puoi usare quanto segue:
 
 |===
 
 
-| Filtro | Che cosa fa 
+| Filtro | Cosa fa 
 
 
-| * (Asterisco) | consente di cercare tutto 
+| * (Asterisco) | ti permette di cercare tutto 
 
 
-| ? (punto interrogativo) | consente di cercare un numero specifico di caratteri 
+| ?  (punto interrogativo) | consente di cercare un numero specifico di caratteri 
 
 
-| OPPURE | consente di specificare più entità 
+| O | consente di specificare più entità 
 
 
-| NO | consente di escludere il testo dai risultati della ricerca 
+| NON | consente di escludere il testo dai risultati della ricerca 
 
 
-| _Nessuno_ | Ricerca i valori NULL in tutti i campi 
+| _Nessuno_ | cerca valori NULL in tutti i campi 
 
 
-| Non * | Cerca i valori NULL nei campi _text-only_ 
+| Non * | cerca valori NULL nei campi _solo testo_ 
 |===
-Se racchiudi una stringa di filtro tra virgolette doppie, Insight tratta tutto ciò che va dalla prima all'ultima quotazione come una corrispondenza esatta. Tutti i caratteri speciali o gli operatori all'interno delle virgolette saranno trattati come valori letterali. Ad esempio, il filtraggio per "*" restituirà risultati che sono un asterisco letterale; in questo caso, l'asterisco non verrà trattato come carattere jolly. Gli operatori O e NON verranno trattati come stringhe letterali se racchiusi tra virgolette doppie.
+Se si racchiude una stringa di filtro tra virgolette doppie, Insight considera tutto ciò che si trova tra la prima e l'ultima virgoletta come una corrispondenza esatta.  Tutti i caratteri speciali o gli operatori all'interno delle virgolette verranno trattati come valori letterali.  Ad esempio, filtrando per "*" si otterranno risultati che sono un asterisco letterale; in questo caso l'asterisco non verrà trattato come un carattere jolly.  Anche gli operatori OR e NOT verranno trattati come stringhe letterali se racchiusi tra virgolette doppie.
 
-È possibile combinare un filtro semplice con un filtro query avanzato; il filtro risultante è un "AND" dei due.
+È possibile combinare un filtro semplice con un filtro di query avanzato; il filtro risultante è un "AND" dei due.
 
 
 
 === La legenda del grafico
 
-Anche la _Legend_ sotto il grafico presenta alcune sorprese. Per ciascun risultato (in base al filtro corrente) visualizzato nella legenda, è possibile visualizzare solo i risultati per tale riga (Aggiungi filtro) o i risultati NON per quella riga (Aggiungi filtro esclusione). Il grafico e l'elenco voci registro vengono aggiornati per visualizzare i risultati in base alla selezione effettuata. Per rimuovere questo filtro, aprire nuovamente la legenda e selezionare [X] per cancellare il filtro basato su legenda.
+Anche la _Legend_ sotto il grafico riserva qualche sorpresa.  Per ogni risultato (in base al filtro corrente) mostrato nella Legenda, hai la possibilità di visualizzare solo i risultati per quella riga (Aggiungi filtro) oppure di visualizzare tutti i risultati NON per quella riga (Aggiungi filtro di esclusione).  Il grafico e l'elenco delle voci di registro vengono aggiornati per mostrare i risultati in base alla selezione effettuata.  Per rimuovere questo filtro, aprire nuovamente la Legenda e selezionare la [X] per cancellare il filtro basato sulla Legenda.
 
-image:Log_Advanced_Query_Legend.png["Legen query avanzate che mostra \"Aggiungi filtro\" per il primo risultato"]
+image:Log_Advanced_Query_Legend.png["Legenda query avanzata che mostra \"Aggiungi filtro\" per il primo risultato"]
 
 
 
-== Dettagli registro
+== Dettagli del registro
 
-Facendo clic in un punto qualsiasi di una voce di registro nell'elenco, viene aperto un riquadro dei dettagli per tale voce. Qui puoi esplorare ulteriori informazioni sull'evento.
+Facendo clic in un punto qualsiasi di una voce del registro nell'elenco, si aprirà un riquadro dei dettagli per quella voce.  Qui puoi trovare maggiori informazioni sull'evento.
 
-Fare clic su "Add Filter" (Aggiungi filtro) per aggiungere il campo selezionato al filtro corrente. L'elenco delle voci di registro viene aggiornato in base al nuovo filtro.
+Fare clic su "Aggiungi filtro" per aggiungere il campo selezionato al filtro corrente.  L'elenco delle voci del registro verrà aggiornato in base al nuovo filtro.
 
 Si noti che alcuni campi non possono essere aggiunti come filtri; in questi casi, l'icona _Aggiungi filtro_ non è disponibile.
 
-image:LogExplorer_DetailPane.png["Riquadro Log Entry Detail"]
+image:LogExplorer_DetailPane.png["Riquadro dei dettagli delle voci di registro"]
 
 
 
 == Risoluzione dei problemi
 
-Qui troverai suggerimenti per la risoluzione dei problemi relativi alle query di log.
+Qui troverete suggerimenti per la risoluzione dei problemi relativi alle query di registro.
 
 |===
 
 
-| *Problema:* | *Provare questo:* 
+| *Problema:* | *Prova questo:* 
 
 
-| Non vengono visualizzati messaggi di "debug" nella query del log | La messaggistica del registro di debug non viene raccolta. Per acquisire i messaggi desiderati, impostare la gravità del messaggio su _informativo, errore, avviso, emergenza o livello _avviso_. 
+| Non vedo messaggi di "debug" nella mia query di registro | I messaggi del registro di debug non vengono raccolti.  Per acquisire i messaggi desiderati, modifica la gravità del messaggio in livello _informativo, errore, avviso, emergenza_ o _avviso_. 
 |===

@@ -2,66 +2,66 @@
 sidebar: sidebar 
 permalink: concept_high_consuming_workloads.html 
 keywords: insight, greedy, degraded, bully, victim, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Le informazioni ti danno uno sguardo all"impatto delle risorse su altre risorse sul tenant.' 
+summary: Gli approfondimenti ti consentono di vedere in che modo le risorse influiscono sulle altre risorse del tuo tenant. 
 ---
-= Approfondimenti: Carichi di lavoro che consumano molto
+= Approfondimenti: carichi di lavoro ad alto consumo
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse sul tenant.
+I carichi di lavoro ad alto impatto possono ridurre le prestazioni di altri carichi di lavoro in una risorsa condivisa.  Data Infrastructure Insights fornisce strumenti che ti aiutano a esaminare la saturazione delle risorse e l'impatto sul tuo tenant.
 
 
 
 === Terminologia
 
-Quando si parla di impatto sul carico di lavoro o sulle risorse, sono utili le seguenti definizioni.
+Quando si parla di carico di lavoro o di impatto sulle risorse, le seguenti definizioni sono utili.
 
-Una risorsa *di impatto* o _avida_ è una risorsa che causa un impatto negativo su un'altra risorsa. Ad esempio, un volume con IOPS molto elevati può causare una maggiore latenza in altri volumi (ad esempio risorse _influenzate_ o _degradate_). Le risorse di impatto e interessate sono "peer" che utilizzano la stessa risorsa condivisa, ad esempio un pool di storage o un volume.
+Una risorsa *di impatto* o _avida_ è una risorsa che provoca un impatto negativo su un'altra risorsa.  Ad esempio, un volume con IOPS molto elevati può causare una latenza maggiore in altri volumi (ovvero risorse _impattate_ o _degradate_).  Le risorse impattate e quelle impattate sono "peer" che utilizzano la stessa risorsa condivisa, ad esempio un pool di archiviazione o un volume.
 
-Un *carico di lavoro ad alto consumo* è un carico di lavoro che attualmente viene identificato come un impatto sulle altre risorse nel pool di storage condiviso. Questi carichi di lavoro consentono IOPS più elevati, riducendo gli IOPS nei carichi di lavoro interessati. In Data Infrastructure Insights questi sono identificati come *carichi di lavoro impegnativi*.
+Un *carico di lavoro ad alto consumo* è un carico di lavoro che attualmente è identificato come avente un impatto su altre risorse nel pool di archiviazione condiviso.  Questi carichi di lavoro determinano IOPS più elevati, riducendo gli IOPS nei carichi di lavoro interessati.  In Data Infrastructure Insights questi vengono identificati come *Carichi di lavoro impegnativi*.
 
-Un carico di lavoro * con impatto è un carico di lavoro influenzato da un carico di lavoro molto elevato nel pool di storage condiviso. Questi carichi di lavoro stanno sperimentando IOPS ridotti e/o latenza superiore, causati dai carichi di lavoro esigenti.
+Un *carico di lavoro interessato* è un carico di lavoro interessato da un carico di lavoro ad alto consumo nel pool di archiviazione condiviso.  Questi carichi di lavoro presentano IOPS ridotti e/o latenza più elevata, a causa dei carichi di lavoro impegnativi.
 
-*La saturazione delle risorse condivise* è il rapporto tra IOPS e _baseline_.
+*Saturazione delle risorse condivise* è il rapporto tra IOPS impattanti e _baseline_.
 
 *Baseline* è definito come il punto dati massimo riportato per ciascun carico di lavoro nell'ora immediatamente precedente la saturazione rilevata.
 
-Si verifica un *conflitto* quando gli IOPS influiscono su altre risorse o carichi di lavoro nel pool di storage condiviso.
+Si verifica una *contesa* quando si determina che gli IOPS stanno influenzando altre risorse o carichi di lavoro nel pool di archiviazione condiviso.
 
 
 
-=== Carichi di lavoro che consumano molto
+=== Carichi di lavoro ad alto consumo
 
-Tutti i carichi di lavoro ad alto consumo rilevati da Data Infrastructure Insights sono mostrati in _Shared Resources in stress_ Insight. Accedere a *osservabilità > Approfondimenti sull'infrastruttura* per visualizzare questi approfondimenti.
+Tutti i carichi di lavoro ad alto consumo rilevati da Data Infrastructure Insights vengono mostrati nell'Insight _Risorse condivise sotto stress_.  Per visualizzare queste informazioni, vai su *Osservabilità > Approfondimenti sull'infrastruttura*.
 
-image:Impacts_Workloads_Menu.png["Risorse condivise"]
+image:Impacts_Workloads_Menu.png["Condividi Risorse"]
 
-Fare clic su un carico di lavoro per visualizzare la relativa pagina dei dettagli. Il grafico in alto mostra l'attività sulla risorsa condivisa (ad esempio, un pool di storage) in cui si verifica il conflitto.
+Fare clic su un carico di lavoro per visualizzarne la pagina dei dettagli.  Il grafico in alto mostra l'attività sulla risorsa condivisa (ad esempio, un pool di archiviazione) su cui si verifica la contesa.
 
 image:Insights_Shared_Resource_Contention_Chart.png["Grafico che mostra l'attività sulla risorsa condivisa"]
 
-Di seguito sono riportati due grafici che mostrano i carichi di lavoro esigenti e quelli che sono influenzati da quelli esigenti.
+Di seguito sono riportati due grafici che mostrano i carichi di lavoro impegnativi e i carichi di lavoro che sono interessati da tali carichi di lavoro impegnativi.
 
-image:Insights_Demanding_Workload_Chart.png["Grafico dei carichi di lavoro esigenti"] image:Insights_Impacted_Workload_Chart.png["Grafico dei carichi di lavoro interessati"]
+image:Insights_Demanding_Workload_Chart.png["Grafico del carico di lavoro impegnativo"] image:Insights_Impacted_Workload_Chart.png["Grafico del carico di lavoro interessato"]
 
 
 
-=== Cosa devo fare per risolvere la saturazione?
+=== Cosa posso fare per risolvere il problema della saturazione?
 
-È possibile eseguire una serie di operazioni per ridurre o eliminare la possibilità di saturazione sul tenant. Ecco alcune cose che puoi provare.
+Esistono diversi accorgimenti che puoi adottare per ridurre o eliminare il rischio di saturazione del tuo inquilino.  Ecco alcune cose che puoi provare.
 
-* Sposta i consumatori con IOPS elevati
+* Spostare i consumatori con IOPS elevati
 +
-Sposta i carichi di lavoro "avidi" in pool di storage meno saturi. Si consiglia di valutare il Tier e la capacità di questi pool prima di spostare i carichi di lavoro, per evitare costi non necessari o ulteriori vincoli.
+Spostare i carichi di lavoro "avidi" in pool di archiviazione meno saturi.  Si consiglia di valutare il livello e la capacità di questi pool prima di spostare i carichi di lavoro, per evitare costi inutili o ulteriori conflitti.
 
-* Implementare una policy di qualità del servizio (QoS)
+* Implementare una politica di qualità del servizio (QoS)
 +
-L'implementazione di una policy di QoS per ogni workload per garantire una quantità sufficiente di risorse disponibili riduce la saturazione dello storage Pool. Si tratta di una soluzione a lungo termine.
+L'implementazione di una policy QoS per ogni carico di lavoro per garantire la disponibilità di risorse libere sufficienti allevierà la saturazione del pool di archiviazione.  Questa è una soluzione a lungo termine.
 
-* Aggiungere risorse aggiuntive
+* Aggiungi risorse aggiuntive
 +
-Se la risorsa condivisa (ad esempio, lo Storage Pool) ha raggiunto il punto di saturazione IOPS, l'aggiunta di più dischi o più veloci al pool garantisce risorse disponibili sufficienti per ridurre la saturazione.
+Se la risorsa condivisa (ad esempio, Storage Pool) ha raggiunto il punto di saturazione IOPS, l'aggiunta di dischi più numerosi o più veloci al pool garantirà la disponibilità di risorse libere sufficienti per alleviare la saturazione.
 
 

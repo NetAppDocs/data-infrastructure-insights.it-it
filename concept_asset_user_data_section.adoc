@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_user_data_section.html 
-summary: 'La sezione User Data (dati utente) di una pagina di risorse consente di assegnare annotazioni o applicazioni alla risorsa corrente.' 
+summary: La sezione Dati utente di una pagina di risorse consente di assegnare annotazioni o applicazioni alla risorsa corrente. 
 keywords: asset page, user data, applications, annotations 
 ---
 = Sezione dati utente
@@ -10,51 +10,51 @@ keywords: asset page, user data, applications, annotations
 
 
 [role="lead"]
-Viene visualizzata la sezione User Data (dati utente) di una pagina di risorse che consente di modificare i dati definiti dall'utente, ad esempio le applicazioni e le annotazioni.
+La sezione Dati utente di una pagina di risorse visualizza e consente di modificare tutti i dati definiti dall'utente, come applicazioni e annotazioni.
 
 
 
-== Utilizzo della sezione User Data (dati utente) per assegnare o modificare le applicazioni
+== Utilizzo della sezione Dati utente per assegnare o modificare le applicazioni
 
-Puoi assegnare le applicazioni in esecuzione sul tenant a determinati asset (host, macchine virtuali, volumi, volumi interni, qtree e hypervisor). La sezione User Data (dati utente) consente di aggiungere, modificare o rimuovere le applicazioni assegnate a una risorsa. Per tutti questi tipi di risorse, ad eccezione dei volumi, è possibile assegnare più di un'applicazione.
+È possibile assegnare le applicazioni in esecuzione sul tenant a determinate risorse (host, macchine virtuali, volumi, volumi interni, qtree e hypervisor).  La sezione Dati utente consente di aggiungere, modificare o rimuovere le applicazioni assegnate a una risorsa.  Per tutti questi tipi di asset, ad eccezione dei volumi, è possibile assegnare più di un'applicazione.
 
-.Fasi
-. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
+.Passi
+. Per individuare una pagina di risorse, procedere in uno dei seguenti modi:
 +
-.. Cercare un elenco di risorse, quindi selezionarne uno dall'elenco.
-.. In una dashboard, individuare il nome di una risorsa e fare clic su di essa.
-.. Eseguire una ricerca e scegliere una risorsa dai risultati.
+.. Richiedi un elenco di risorse e selezionane una dall'elenco.
+.. In una Dashboard, individua il nome di una risorsa e fai clic su di essa.
+.. Esegui una ricerca e scegli una risorsa dai risultati.
 +
-Viene visualizzata la pagina delle risorse. La sezione User Data (dati utente) della pagina mostra le applicazioni o le annotazioni attualmente assegnate.
+Viene visualizzata la pagina delle risorse.  La sezione Dati utente della pagina mostra le applicazioni o le annotazioni attualmente assegnate.
 
 
 
 
 
-Per modificare l'applicazione assegnata o per assegnare un'applicazione o applicazioni aggiuntive, selezionare l'elenco *applicazione* e scegliere le applicazioni che si desidera assegnare alla risorsa. È possibile digitare per cercare un'applicazione o selezionarne una dall'elenco.
+Per modificare l'applicazione assegnata o per assegnare un'applicazione o più applicazioni aggiuntive, apri l'elenco a discesa *Applicazione* e seleziona l'applicazione/le applicazioni che desideri assegnare alla risorsa.  È possibile digitare per cercare un'applicazione oppure selezionarne una dall'elenco.
 
-Per rimuovere un'applicazione, selezionare l'elenco a discesa e deselezionare l'applicazione.
+Per rimuovere un'applicazione, apri l'elenco delle applicazioni e deseleziona l'applicazione.
 
 
 
-== Utilizzare la sezione User Data (dati utente) per assegnare o modificare le annotazioni
+== Utilizzo della sezione Dati utente per assegnare o modificare annotazioni
 
-Durante la personalizzazione di Data Infrastructure Insights per tenere traccia dei dati per i tuoi requisiti aziendali, puoi definire note specializzate denominate annotazioni e assegnarle alle tue risorse. La sezione User Data (dati utente) di una pagina asset visualizza le annotazioni assegnate a una risorsa e consente di modificare le annotazioni assegnate a tale risorsa.
+Quando si personalizza Data Infrastructure Insights per monitorare i dati in base alle esigenze aziendali, è possibile definire note specializzate chiamate annotazioni e assegnarle alle risorse.  La sezione Dati utente di una pagina di risorse visualizza le annotazioni assegnate a una risorsa e consente inoltre di modificare le annotazioni assegnate a tale risorsa.
 
-.Fasi
-. Per aggiungere un'annotazione alla risorsa, nella sezione User Data (dati utente) della pagina delle risorse, fare clic su *+Annotation (Annotazione)*.
-. Selezionare un'annotazione dall'elenco.
-. Fare clic su Value (valore) ed eseguire una delle seguenti operazioni, a seconda del tipo di annotazione selezionato:
+.Passi
+. Per aggiungere un'annotazione alla risorsa, nella sezione Dati utente della pagina della risorsa, fare clic su *+Annotazione*.
+. Seleziona un'annotazione dall'elenco.
+. Fare clic su Valore ed effettuare una delle seguenti operazioni, a seconda del tipo di annotazione selezionato:
 +
-.. Se il tipo di annotazione è list, date o booleano, selezionare un valore dall'elenco.
+.. Se il tipo di annotazione è elenco, data o booleano, selezionare un valore dall'elenco.
 .. Se il tipo di annotazione è testo, digitare un valore.
 
 
 . Fare clic su Salva.
 
 
-L'annotazione viene assegnata alla risorsa. È possibile filtrare le risorse in un secondo momento mediante un'annotazione utilizzando una query.
+L'annotazione viene assegnata alla risorsa.  Successivamente è possibile filtrare le risorse in base all'annotazione utilizzando una query.
 
-Se si desidera modificare il valore dell'annotazione dopo averlo assegnato, selezionare l'elenco delle annotazioni e immettere un valore diverso.
+Se si desidera modificare il valore dell'annotazione dopo averla assegnata, scorrere l'elenco delle annotazioni e immettere un valore diverso.
 
-Se l'annotazione è di tipo elenco per cui è selezionata l'opzione _Add new values on the fly_, è possibile digitare per aggiungere un nuovo valore oltre alla selezione di un valore esistente.
+Se l'annotazione è di tipo elenco per cui è selezionata l'opzione _Aggiungi nuovi valori al volo_, è possibile digitare per aggiungere un nuovo valore oltre a selezionare un valore esistente.

@@ -1,28 +1,28 @@
 ---
 sidebar: sidebar 
 permalink: data_collector_list.html 
-summary: Elenco dei data collettori supportati. 
+summary: Elenco dei raccoglitori di dati supportati. 
 keywords: data collector, vendor, infrastructure, integration, service 
 ---
-= Elenco Data Collector di Data Insights dell'infrastruttura dati
+= Elenco dei collettori Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights supporta una varietà di Data Collector di molti fornitori e servizi.
+Data Infrastructure Insights supporta una varietà di Data Collector di numerosi fornitori e servizi.
 
-I Data Collector sono classificati in base ai seguenti tipi:
+I raccoglitori di dati sono classificati in base a queste tipologie:
 
-* Infrastruttura: Acquisita da dispositivi vendor come storage array, switch, hypervisor o dispositivi di backup.
-* Servizio: Acquistato da servizi come Kubernetes o Docker. Chiamato anche _integrazione_.
+* Infrastruttura: acquisita da dispositivi del fornitore quali array di archiviazione, switch, hypervisor o dispositivi di backup.
+* Servizio: acquisito da servizi come Kubernetes o Docker.  Chiamato anche _Integrazione_.
 
 
 Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 
 [cols="<,<"]
 |===
-| Data Collector | Tipo 
+| Responsabile della raccolta dati | Tipo 
 
 
 | link:task_dc_amazon_ec2.html["Amazon EC2 ed EBS"] | Infrastruttura 
@@ -31,7 +31,7 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_aws_s3.html["AWS S3 come storage"] | Infrastruttura 
 
 
-| link:task_dc_na_amazon_fsx.html["Amazon FSX per NetApp ONTAP"] | Infrastruttura 
+| link:task_dc_na_amazon_fsx.html["Amazon FSx for NetApp ONTAP"] | Infrastruttura 
 
 
 | link:task_config_telegraf_apache.html["Apache"] | Servizio 
@@ -40,10 +40,10 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_ms_anf.html["Azure NetApp Files"] | Infrastruttura 
 
 
-| link:task_dc_ms_azure.html["Macchine virtuali Azure e VHD"] | Infrastruttura 
+| link:task_dc_ms_azure.html["Macchine virtuali e VHD di Azure"] | Infrastruttura 
 
 
-| link:task_dc_brocade_bna.html["Brocade Network Advisor (BNA)"] | Infrastruttura 
+| link:task_dc_brocade_bna.html["Consulente di rete Brocade (BNA)"] | Infrastruttura 
 
 
 | link:task_dc_brocade_fc_switch.html["Switch Fibre Channel Brocade"] | Infrastruttura 
@@ -61,28 +61,28 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_config_telegraf_couchbase.html["Couchbase"] | Servizio 
 
 
-| link:task_config_telegraf_couchdb.html["Database dei CouchDB"] | Servizio 
+| link:task_config_telegraf_couchdb.html["CouchDB"] | Servizio 
 
 
-| link:task_dc_cohesity_smartfiles.html["SmartFiles di Cohesity"] | Infrastruttura 
+| link:task_dc_cohesity_smartfiles.html["Cohesity SmartFiles"] | Infrastruttura 
 
 
 | link:task_dc_emc_datadomain.html["Dominio dati Dell EMC"] | Infrastruttura 
 
 
-| link:task_dc_emc_ecs.html["ECS Dell EMC"] | Infrastruttura 
+| link:task_dc_emc_ecs.html["Dell EMC ECS"] | Infrastruttura 
 
 
 | link:task_dc_emc_isilon.html["Dell EMC PowerScale (in precedenza Isilon)"] | Infrastruttura 
 
 
-| link:task_dc_emc_isilon_rest.html["Dell EMC Isilon/PowerScale REST"] | Infrastruttura 
+| link:task_dc_emc_isilon_rest.html["Dell EMC Isilon / PowerScale REST"] | Infrastruttura 
 
 
 | link:task_dc_emc_powerstore.html["Dell EMC PowerStore"] | Infrastruttura 
 
 
-| link:task_dc_emc_recoverpoint.html["Recoverpoint Dell EMC"] | Infrastruttura 
+| link:task_dc_emc_recoverpoint.html["Dell EMC Recoverpoint"] | Infrastruttura 
 
 
 | link:task_dc_emc_scaleio.html["Dell EMC ScaleIO/PowerFlex"] | Infrastruttura 
@@ -91,7 +91,7 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_emc_unity.html["Dell EMC Unity"] | Infrastruttura 
 
 
-| link:task_dc_emc_unisphere_rest.html["Dell EMC Unisphere REST (RIPOSO unisfer"] | Infrastruttura 
+| link:task_dc_emc_unisphere_rest.html["Dell EMC Unisphere REST"] | Infrastruttura 
 
 
 | link:task_dc_emc_vmax_powermax.html["Famiglia di dispositivi Dell EMC VMAX/PowerMax"] | Infrastruttura 
@@ -100,7 +100,7 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_emc_vnx_block.html["Storage a blocchi Dell EMC VNX"] | Infrastruttura 
 
 
-| link:task_dc_emc_vnx_file.html["File VNX Dell EMC"] | Infrastruttura 
+| link:task_dc_emc_vnx_file.html["File Dell EMC VNX"] | Infrastruttura 
 
 
 | link:task_dc_emc_vnx_unified.html["Dell EMC VNX Unified"] | Infrastruttura 
@@ -112,7 +112,7 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_emc_xio.html["Dell EMC XtremIO"] | Infrastruttura 
 
 
-| link:task_dc_dell_xc_series.html["Dell serie XC"] | Infrastruttura 
+| link:task_dc_dell_xc_series.html["Serie Dell XC"] | Infrastruttura 
 
 
 | link:task_config_telegraf_docker.html["Docker"] | Servizio 
@@ -127,7 +127,7 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_fujitsu_eternus.html["Fujitsu ETERNUS DX"] | Infrastruttura 
 
 
-| link:task_dc_google_cloud.html["Calcolo e storage Google"] | Infrastruttura 
+| link:task_dc_google_cloud.html["Google Compute e Storage"] | Infrastruttura 
 
 
 | link:task_dc_google_cloud_netapp_volumes.html["Google Cloud NetApp Volumes"] | Infrastruttura 
@@ -139,22 +139,22 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_config_telegraf_haproxy.html["HAProxy"] | Servizio 
 
 
-| link:task_dc_hds_hcp.html["Hitachi Content Platform (HCP)"] | Infrastruttura 
+| link:task_dc_hds_hcp.html["Piattaforma di contenuti Hitachi (HCP)"] | Infrastruttura 
 
 
-| link:task_dc_hds_commandsuite.html["Suite di comandi Hitachi Vantara"] | Infrastruttura 
+| link:task_dc_hds_commandsuite.html["Suite di comando Hitachi Vantara"] | Infrastruttura 
 
 
 | link:task_dc_hds_nas.html["Piattaforma NAS Hitachi Vantara"] | Infrastruttura 
 
 
-| link:task_dc_hds_ops_center.html["Hitachi Ops Center"] | Infrastruttura 
+| link:task_dc_hds_ops_center.html["Centro operativo Hitachi"] | Infrastruttura 
 
 
-| link:task_dc_hpe_nimble.html["Storage HP Enterprise Alletra 6000 (precedentemente agile)"] | Infrastruttura 
+| link:task_dc_hpe_nimble.html["Storage HP Enterprise Alletra 6000 (in precedenza Nimble)"] | Infrastruttura 
 
 
-| link:task_dc_hp_3par.html["Storage HP Enterprise Alletra 9000 / Primera (in precedenza 3PAR)"] | Infrastruttura 
+| link:task_dc_hp_3par.html["Archiviazione HP Enterprise Alletra 9000 / Primera (in precedenza 3PAR)"] | Infrastruttura 
 
 
 | link:task_dc_hpe_commandview.html["HP Enterprise Command View"] | Infrastruttura 
@@ -166,31 +166,31 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_ibm_cleversafe.html["IBM Cleversafe"] | Infrastruttura 
 
 
-| link:task_dc_ibm_cs.html["IBM CS Series"] | Infrastruttura 
+| link:task_dc_ibm_cs.html["Serie IBM CS"] | Infrastruttura 
 
 
 | link:task_dc_ibm_powervm.html["IBM PowerVM"] | Infrastruttura 
 
 
-| link:task_dc_ibm_svc.html["IBM SAN Volume Controller (SVC)"] | Infrastruttura 
+| link:task_dc_ibm_svc.html["Controller del volume IBM SAN (SVC)"] | Infrastruttura 
 
 
 | link:task_dc_ibm_ds.html["IBM System Storage serie DS8000"] | Infrastruttura 
 
 
-| link:task_dc_ibm_xiv.html["IBM XIV e A9000 Storages"] | Infrastruttura 
+| link:task_dc_ibm_xiv.html["Archiviazione IBM XIV e A9000"] | Infrastruttura 
 
 
 | link:task_dc_infinidat_infinibox.html["Infinidat InfiniBox"] | Infrastruttura 
 
 
-| link:task_config_telegraf_jvm.html["Java"] | Servizio 
+| link:task_config_telegraf_jvm.html["Giava"] | Servizio 
 
 
 | link:task_config_telegraf_kafka.html["Kafka"] | Servizio 
 
 
-| link:task_config_telegraf_kapacitor.html["Kapacitor"] | Servizio 
+| link:task_config_telegraf_kapacitor.html["Condensatore"] | Servizio 
 
 
 | link:task_config_telegraf_kibana.html["Kibana"] | Servizio 
@@ -199,16 +199,16 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_config_telegraf_agent_k8s.html["Kubernetes"] | Servizio 
 
 
-| link:task_dc_lenovo.html["Lenovo serie HX"] | Infrastruttura 
+| link:task_dc_lenovo.html["Serie Lenovo HX"] | Infrastruttura 
 
 
 | link:task_config_telegraf_memcached.html["Memcached"] | Servizio 
 
 
-| link:task_dc_ms_anf.html["Microsoft Azure NetApp Files"] | Infrastruttura 
+| link:task_dc_ms_anf.html["Azure NetApp Files"] | Infrastruttura 
 
 
-| link:task_dc_ms_hyperv.html["Microsoft Hyper-V."] | Infrastruttura 
+| link:task_dc_ms_hyperv.html["Microsoft Hyper-V"] | Infrastruttura 
 
 
 | link:task_config_telegraf_mongodb.html["MongoDB"] | Servizio 
@@ -220,40 +220,40 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP"] | Infrastruttura 
 
 
-| link:task_dc_na_cloud_volumes.html["NetApp Cloud Volumes Services per AWS"] | Infrastruttura 
+| link:task_dc_na_cloud_volumes.html["Servizi NetApp Cloud Volumes per AWS"] | Infrastruttura 
 
 
-| link:task_dc_na_cloud_connection.html["Connessione cloud NetApp per ONTAP 9.9+"] | Infrastruttura 
+| link:task_dc_na_cloud_connection.html["Connessione NetApp Cloud per ONTAP 9.9+"] | Infrastruttura 
 
 
 | link:task_dc_na_7mode.html["NetApp Data ONTAP 7-Mode"] | Infrastruttura 
 
 
-| link:task_dc_na_eseries.html["NetApp e-Series"] | Infrastruttura 
+| link:task_dc_na_eseries.html["NetApp E-Series"] | Infrastruttura 
 
 
-| link:task_dc_netapp_eseries_rest.html["NetApp e-Series REST"] | Infrastruttura 
+| link:task_dc_netapp_eseries_rest.html["NetApp E-Series REST"] | Infrastruttura 
 
 
-| link:task_dc_na_amazon_fsx.html["Amazon FSX per NetApp ONTAP"] | Infrastruttura 
+| link:task_dc_na_amazon_fsx.html["Amazon FSx for NetApp ONTAP"] | Infrastruttura 
 
 
 | link:task_dc_na_hci.html["Centro virtuale NetApp HCI"] | Infrastruttura 
 
 
-| link:task_dc_na_cdot.html["Software per la gestione dei dati NetApp ONTAP"] | Infrastruttura 
+| link:task_dc_na_cdot.html["Software di gestione dati NetApp ONTAP"] | Infrastruttura 
 
 
-| link:task_dc_na_ontap_rest.html["Collettore REST NetApp ONTAP"] | Infrastruttura 
+| link:task_dc_na_ontap_rest.html["Raccoglitore REST NetApp ONTAP"] | Infrastruttura 
 
 
 | link:task_dc_na_ontap_all_san_array.html["Raccoglitore NetApp ONTAP ASA r2 (All-SAN Array)"] | Infrastruttura 
 
 
-| link:task_dc_na_cdot.html["NetApp ONTAP Select"] | Infrastruttura 
+| link:task_dc_na_cdot.html["ONTAP Select NetApp ONTAP"] | Infrastruttura 
 
 
-| link:task_dc_na_solidfire.html["Array all-flash NetApp SolidFire"] | Infrastruttura 
+| link:task_dc_na_solidfire.html["Array NetApp SolidFire All-Flash"] | Infrastruttura 
 
 
 | link:task_dc_na_storagegrid.html["NetApp StorageGRID"] | Infrastruttura 
@@ -268,19 +268,19 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_config_telegraf_node.html["Nodo"] | Servizio 
 
 
-| link:task_dc_nutanix.html["Nutanix serie NX"] | Infrastruttura 
+| link:task_dc_nutanix.html["Serie Nutanix NX"] | Infrastruttura 
 
 
 | link:task_config_telegraf_openzfs.html["OpenZFS"] | Servizio 
 
 
-| link:task_dc_oracle_zfs.html["Appliance di storage Oracle ZFS"] | Infrastruttura 
+| link:task_dc_oracle_zfs.html["Dispositivo di archiviazione Oracle ZFS"] | Infrastruttura 
 
 
 | link:task_config_telegraf_postgresql.html["PostgreSQL"] | Servizio 
 
 
-| link:task_config_telegraf_puppetagent.html["Agente di puppet"] | Servizio 
+| link:task_config_telegraf_puppetagent.html["Agente burattino"] | Servizio 
 
 
 | link:task_dc_pure_flasharray.html["Pure Storage FlashArray"] | Infrastruttura 
@@ -292,26 +292,26 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_config_telegraf_redis.html["Redis"] | Servizio 
 
 
-| link:task_config_telegraf_rethinkdb.html["RethinkDB"] | Servizio 
+| link:task_config_telegraf_rethinkdb.html["Ripensare DB"] | Servizio 
 
 
-| link:task_config_telegraf_agent.html#rhel-and-centos[" RHEL; CentOS"] | Servizio 
+| link:task_config_telegraf_agent.html#rhel-and-centos["RHEL e CentOS"] | Servizio 
 
 
-| link:task_dc_rubrik_cdm.html["Storage CDM Rubrik"] | Infrastruttura 
+| link:task_dc_rubrik_cdm.html["Archiviazione CDM di Rubrik"] | Infrastruttura 
 
 
-| link:task_config_telegraf_agent.html#ubuntu-and-debian["Ubuntu  Debian"] | Servizio 
+| link:task_config_telegraf_agent.html#ubuntu-and-debian["Ubuntu e Debian"] | Servizio 
 
 
-| link:task_dc_vast_datastore.html["AMPIO datastore"] | Infrastruttura 
+| link:task_dc_vast_datastore.html["VAST DataStore"] | Infrastruttura 
 
 
 | link:task_dc_vmware.html["VMware vSphere"] | Infrastruttura 
 
 
-| link:task_config_telegraf_agent.html#windows["Windows"] | Servizio 
+| link:task_config_telegraf_agent.html#windows["Finestre"] | Servizio 
 
 
-| link:task_config_telegraf_zookeeper.html["Zoosekeeper"] | Servizio 
+| link:task_config_telegraf_zookeeper.html["Guardiano dello Zoo"] | Servizio 
 |===

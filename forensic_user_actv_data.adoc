@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_user_actv_data.html 
 keywords: Forensic, user activity, user activity data, 
-summary: dati sulle attività degli utenti forensi 
+summary: dati forensi sulle attività degli utenti 
 ---
-= Forensic User Activity Data (dati attività utente forensi)
+= Dati forensi sull'attività degli utenti
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: dati sulle attività degli utenti forensi
 
 
 [role="lead"]
-La pagina User Activity (attività utente) consente di comprendere le azioni eseguite dagli utenti sulle entità.
+La pagina Attività utente ti aiuta a comprendere le azioni eseguite dagli utenti sulle entità.
 
-I dati disponibili in questa pagina, descrivono:
+I dati disponibili in questa pagina descrivono:
 
-* Il tempo di accesso dell'entità, inclusi mese, giorno, anno e ora.
-* L'utente che ha effettuato l'accesso all'entità con un collegamento a link:forensic_user_overview.html["Dati dettagliati dell'utente"].
-* L'attività eseguita dall'utente:
+* L'orario di accesso dell'entità, inclusi mese, giorno, anno e ora.
+* L'utente che ha avuto accesso all'entità con un collegamento alink:forensic_user_overview.html["Dati dettagliati dell'utente"] .
+* L'attività svolta dall'utente:
 +
-** Di scrittura
-** Leggi
-** Accedere ai metadati
+** Scrivere
+** Leggere
+** Accedi ai metadati
 
 
-* Il percorso all'entità con un collegamento al link:forensic_entity_detail.html["Dati di dettaglio dell'entità"]
+* Il percorso verso l'entità con un collegamento alink:forensic_entity_detail.html["Dati di dettaglio dell'entità"]
 * Il tipo di entità:
 +
 ** File
-** Percorso
+** Sentiero
 
 
 * L'indirizzo IP da cui è stata eseguita l'operazione.

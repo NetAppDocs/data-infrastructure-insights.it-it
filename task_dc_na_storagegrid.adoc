@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_storagegrid.html 
-summary: Configurare NetApp StorageGRID data collector 
+summary: Configurare il raccoglitore dati NetApp StorageGRID 
 keywords: data collector, queries, create, storagegrid 
 ---
-= Data collector NetApp StorageGRID
+= Raccoglitore dati NetApp StorageGRID
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector NetApp StorageGRID supporta la raccolta di inventario e performance dalle configurazioni StorageGRID.
+Il raccoglitore dati NetApp StorageGRID supporta la raccolta di inventario e prestazioni dalle configurazioni StorageGRID .
 
 [NOTE]
 ====
@@ -25,23 +25,23 @@ Per i clienti che utilizzano il modello di licenza legacy (MU), StorageGRID vien
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal NetApp StorageGRID Collector. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore NetApp StorageGRID .  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| StorageGRID | Storage 
+| StorageGRID | Magazzinaggio 
 
 
 | Nodo | Nodo 
 
 
-| Tenant | Pool di storage 
+| Inquilino | Pool di archiviazione 
 
 
-| Bucket | Volume interno 
+| Secchio | Volume interno 
 |===
 
 
@@ -50,7 +50,7 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 Di seguito sono riportati i requisiti per la configurazione di questa origine dati:
 
 * Indirizzo IP host StorageGRID
-* Nome utente e password per un utente a cui sono stati assegnati i ruoli di Metric Query e accesso tenant
+* Un nome utente e una password per un utente a cui sono stati assegnati i ruoli Metric Query e Tenant Access
 * Porta 443
 
 
@@ -63,7 +63,7 @@ Di seguito sono riportati i requisiti per la configurazione di questa origine da
 | Campo | Descrizione 
 
 
-| Indirizzo IP host StorageGRID | Gestione Indirizzo IP virtuale dell'appliance StorageGRID 
+| Indirizzo IP host StorageGRID | Indirizzo IP virtuale di gestione dell'appliance StorageGRID 
 
 
 | Nome utente | Nome utilizzato per accedere all'appliance StorageGRID 
@@ -80,33 +80,33 @@ Di seguito sono riportati i requisiti per la configurazione di questa origine da
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Il valore predefinito è 60 minuti 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60 minuti 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 900 secondi 
+| Intervallo di sondaggio delle prestazioni (sec) | Il valore predefinito è 900 secondi 
 |===
 
 
-== Single Sign-on (SSO)
+== Accesso singolo (SSO)
 
-Le link:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"]versioni del firmware hanno versioni API corrispondenti; le versioni 3,0 API e più recenti supportano l'accesso SSO (Single Sign-on).
+ILlink:https://docs.netapp.com/sgws-112/index.jsp["StorageGRID"] Le versioni del firmware hanno le corrispondenti versioni API; l'API 3.0 e le versioni più recenti supportano l'accesso Single Sign-On (SSO).
 
 |===
 
 
-| Versione del firmware | Versione di API | Supporto SSO (Single Sign-on) 
+| Versione del firmware | Versione API | Supporta l'accesso singolo (SSO) 
 
 
-| 11,1 | 2 | No 
+| 11,1 | 2 | NO 
 
 
-| 11,2 | 3,0 | Sì 
+| 11,2 | 3,0 | SÌ 
 
 
-| 11,5 | 3,3 | Sì 
+| 11,5 | 3,3 | SÌ 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

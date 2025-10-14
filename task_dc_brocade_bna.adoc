@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_bna.html 
 keywords: data collector, Brocade, BNA 
-summary: Configurazione di Brocade BNA Collector. 
+summary: Configurazione del raccoglitore Brocade BNA. 
 ---
-= Data collector di Brocade Network Advisor
+= Raccoglitore dati Brocade Network Advisor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector di Brocade Network Advisor per acquisire dati di inventario e prestazioni dagli switch Brocade.
+Data Infrastructure Insights utilizza il raccoglitore dati Brocade Network Advisor per acquisire dati di inventario e prestazioni dagli switch Brocade .
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati di Brocade Network Advisor. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati Brocade Network Advisor.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Switch | Switch 
+| Interruttore | Interruttore 
 
 
 | Porta | Porta 
 
 
-| Fabric virtuale, fabric fisico | Fabric 
+| Tessuto virtuale, tessuto fisico | Tessuto 
 
 
-| Switch logico | Switch logico 
+| Interruttore logico | Interruttore logico 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessari i seguenti requisiti:
+Per configurare questo raccoglitore dati sono necessari i seguenti elementi:
 
-* L'unità di acquisizione Data Infrastructure Insights inizializza le connessioni alla porta TCP 443 sul server BNA. Il server BNA deve eseguire la versione 14.2.1 o superiore.
+* L'unità di acquisizione Data Infrastructure Insights avvierà le connessioni alla porta TCP 443 sul server BNA.  Il server BNA deve eseguire la versione 14.2.1 o successiva.
 * Indirizzo IP del server Brocade Network Advisor
-* Nome utente e password di un account amministratore
+* Nome utente e password per un account amministratore
 * Requisito porta: HTTP/HTTPS 443
 
 
@@ -60,7 +60,7 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 | IP del server Brocade Network Advisor | Indirizzo IP del server Network Advisor 
 
 
-| Nome utente | Nome utente dello switch 
+| Nome utente | Nome utente per lo switch 
 
 
 | Nome utente | Nome utente amministratore 
@@ -80,25 +80,25 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 | Tipo di connessione | HTTPS (porta predefinita 443) o HTTP (porta predefinita 80) 
 
 
-| Sovrascrivere la porta di connessione | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+| Sostituisci porta di connessione | Se vuoto, utilizzare la porta predefinita nel campo Tipo di connessione, altrimenti immettere la porta di connessione da utilizzare 
 
 
 | Password | Password per lo switch 
 
 
-| Intervallo di polling dell'inventario (min) | Il valore predefinito è 40 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 40 
 
 
-| Gateway di accesso ai report | Selezionare questa opzione per includere i dispositivi in modalità Access Gateway 
+| Gateway di accesso ai report | Selezionare per includere i dispositivi in modalità Access Gateway 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 1800 
+| Intervallo di sondaggio sulle prestazioni (sec) | Il valore predefinito è 1800 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -106,9 +106,9 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Ricevere un messaggio che indica che più di un nodo è connesso alla porta di Access Gateway o che il data collector non riesce a rilevare il dispositivo Access Gateway. | Verificare che il dispositivo NPV funzioni correttamente e che siano presenti tutti i WWN collegati. Non acquisire direttamente il dispositivo NPV. Invece, l'acquisizione dello switch fabric core raccoglierà i dati del dispositivo NPV. 
+| Ricevi un messaggio che indica che più di un nodo è connesso alla porta Access Gateway oppure che il raccoglitore dati non riesce a rilevare il dispositivo Access Gateway. | Verificare che il dispositivo NPV funzioni correttamente e che tutti i WWN collegati siano previsti.  Non acquistare direttamente il dispositivo NPV.  Invece, l'acquisizione dello switch core fabric raccoglierà i dati del dispositivo NPV. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

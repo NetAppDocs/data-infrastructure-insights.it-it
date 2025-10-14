@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ws_webhook_example_teams.html 
 keywords: webhook, notification, Microsoft, Teams, integration 
-summary: Creare un webhook per la protezione del carico di lavoro per i team Microsoft per avvisare sulla sicurezza 
+summary: Crea un webhook di sicurezza del carico di lavoro per Microsoft Teams per avvisare sulla sicurezza 
 ---
-= Esempio di Webhook sulla sicurezza del carico di lavoro per Microsoft Teams
+= Esempio di webhook di sicurezza del carico di lavoro per Microsoft Teams
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,47 +14,47 @@ summary: Creare un webhook per la protezione del carico di lavoro per i team Mic
 
 
 [role="lead"]
-I webhook consentono agli utenti di inviare notifiche di avviso a varie applicazioni utilizzando un canale webhook personalizzato. Questa pagina fornisce un esempio per la configurazione di webhook per i team.
+I webhook consentono agli utenti di inviare notifiche di avviso a varie applicazioni utilizzando un canale webhook personalizzato.  Questa pagina fornisce un esempio per la configurazione di webhook per Teams.
 
 
-NOTE: Questa pagina fa riferimento alle istruzioni di terze parti, che sono soggette a modifiche. Per le informazioni più aggiornate, fare riferimento alla link:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["Documentazione del team"].
+NOTE: Questa pagina fa riferimento a istruzioni di terze parti, soggette a modifiche.  Fare riferimento allink:https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook["Documentazione dei team"] per le informazioni più aggiornate.
 
 
 
-== Configurazione dei team:
+== Configurazione delle squadre:
 
-. In Teams (squadre), selezionare il kebab e cercare Incoming Webhook (Webhook in entrata).
+. In Teams, seleziona il kebab e cerca Webhook in arrivo.
 +
-image:Webhooks_Teams_Create_Webhook.png["Webhook in entrata nei team"]
+image:Webhooks_Teams_Create_Webhook.png["Webhook in arrivo in Teams"]
 
-. Selezionare *Aggiungi a un raggruppamento > Seleziona un raggruppamento > Configura un connettore*.
-. Copiare l'URL del webhook. Dovrai incollarlo nella configurazione del webhook workload Security.
-
-
+. Seleziona *Aggiungi a un team > Seleziona un team > Imposta un connettore*.
+. Copia l'URL del webhook.  Sarà necessario incollarlo nella configurazione del webhook di Workload Security.
 
 
-== Creare il webhook dei team di sicurezza del carico di lavoro:
 
-. Accedere a Amministrazione > Notifiche e selezionare la scheda _“workload Security webhook_. Selezionare _+ Webhook_ per creare un nuovo webhook.
-. Dare al webhook un nome significativo.
-. Nell'elenco a discesa _Template Type_, selezionare *Teams*.
+
+== Crea webhook per i team di sicurezza del carico di lavoro:
+
+. Vai su Amministrazione > Notifiche e seleziona la scheda "Webhook di sicurezza del carico di lavoro".  Selezionare _+ Webhook_ per creare un nuovo webhook.
+. Assegnare al webhook un nome significativo.
+. Nel menu a discesa _Tipo di modello_, seleziona *Team*.
 +
-image:ws_webhook_teams_example.png["Esempio di webhook per i team di sicurezza del carico di lavoro"]
+image:ws_webhook_teams_example.png["Esempio di webhook dei team di sicurezza del carico di lavoro"]
 
-. Incollare l'URL dall'alto nel campo _URL_.
+. Incolla l'URL sopra nel campo _URL_.
 
 
 
 
 == Notifiche tramite Webhook
 
-Per notificare gli eventi tramite webhook, accedere a _sicurezza del carico di lavoro > Criteri_. Selezionare _+Attack Policy_ o _+Warning Policy_.
+Per ricevere notifiche sugli eventi tramite webhook, vai su _Sicurezza del carico di lavoro > Criteri_.  Selezionare _+Criterio di attacco_ o _+Criterio di avviso_.
 
-* Immettere un nome di policy significativo.
-* Selezionare i tipi di attacco richiesti, i dispositivi a cui è necessario collegare il criterio e le azioni richieste.
-* Nell'elenco a discesa _webhook Notifications_, selezionare i webhook necessari per le squadre. Salvare il criterio.
+* Immettere un nome significativo per la policy.
+* Selezionare i tipi di attacco richiesti, i dispositivi a cui deve essere associata la policy e le azioni richieste.
+* Nel menu a discesa _Notifiche webhook_, seleziona i webhook di Teams desiderati. Salva la polizza.
 
 
-Nota: I webhook possono anche essere allegati alle policy esistenti modificandole.
+Nota: i webhook possono anche essere allegati a policy esistenti modificandole.
 
-image:ws_add_attack_policy.png["Finestra di dialogo Aggiungi criteri di attacco che mostra webhook"]
+image:ws_add_attack_policy.png["Aggiungi finestra di dialogo della politica di attacco che mostra il webhook"]

@@ -2,37 +2,37 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vplex.html 
 keywords: data collector, VPLEX, EMC 
-summary: Configurazione di VPLEX data collector. 
+summary: Configurazione del raccoglitore dati VPLEX. 
 ---
-= Configurazione del data collector EMC VPLEX
+= Configurazione del raccoglitore dati EMC VPLEX
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Questo data collector acquisisce i dati di inventario e performance dai sistemi storage EMC VPLEX. Per la configurazione, il data collector richiede un indirizzo IP del server VPLEX e un account di dominio di livello amministrativo.
+Questo raccoglitore di dati acquisisce dati di inventario e prestazioni dai sistemi di storage EMC VPLEX.  Per la configurazione, il raccoglitore dati necessita di un indirizzo IP del server VPLEX e di un account di dominio di livello amministrativo.
 
 
-NOTE: La raccolta delle prestazioni di Data Infrastructure Insights dai cluster Vplex richiede che il servizio di archiviazione delle prestazioni sia operativo, al fine di popolare i file .CSV e i registri che Data Infrastructure Insights recupera tramite copie di file basate su SCP. NetApp ha osservato che molti aggiornamenti delle stazioni di gestione/aggiornamento del firmware Vplex non funzioneranno. I clienti che pianificano tali aggiornamenti potrebbero voler chiedere in maniera proattiva a Dell/EMC se l'upgrade pianificato non consente di utilizzare questa funzionalità e, in caso affermativo, come possono riattivarla per ridurre al minimo le lacune nella visibilità delle performance? Il codice delle prestazioni Vplex di Cloud Insight valuterà ad ogni sondaggio se tutti i file previsti esistono e se vengono aggiornati correttamente; se mancano o sono obsoleti, Data Infrastructure Insights registrerà gli errori di raccolta delle prestazioni.
+NOTE: Per poter raccogliere dati sulle prestazioni di Data Infrastructure Insights dai cluster Vplex, è necessario che il servizio di archiviazione delle prestazioni sia operativo, per popolare i file .CSV e i log che Data Infrastructure Insights recupera tramite copie di file basate su SCP.  NetApp ha osservato che molti aggiornamenti del firmware/della stazione di gestione Vplex renderanno questa funzionalità non operativa.  I clienti che pianificano tali aggiornamenti potrebbero voler chiedere in modo proattivo a Dell/EMC se l'aggiornamento pianificato renderà questa funzionalità inutilizzabile e, in tal caso, come possono riattivarla per ridurre al minimo le lacune nella visibilità delle prestazioni?  Il codice delle prestazioni Vplex di Cloud Insight valuterà a ogni polling se tutti i file previsti esistono e se vengono aggiornati correttamente; se sono mancanti o obsoleti, Data Infrastructure Insights registrerà gli errori di raccolta delle prestazioni.
 
 
 
 == Terminologia
 
-Data Infrastructure Insightst acquisisce le seguenti informazioni di inventario dal data collector VPLEX. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insightst acquisisce le seguenti informazioni di inventario dal raccoglitore dati VPLEX.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Cluster | Storage 
+| Grappolo | Magazzinaggio 
 
 
-| Motore | Nodo di storage 
+| Motore | Nodo di archiviazione 
 
 
-| Dispositivo, estensione del sistema | Pool di storage back-end 
+| Dispositivo, estensione del sistema | Pool di archiviazione back-end 
 
 
 | Volume virtuale | Volume 
@@ -41,28 +41,28 @@ Data Infrastructure Insightst acquisisce le seguenti informazioni di inventario 
 | Porta front-end, porta back-end | Porta 
 
 
-| Dispositivo distribuito | Sincronizzazione dello storage 
+| Dispositivo distribuito | Sincronizzazione dell'archiviazione 
 
 
-| Vista storage | Mappa del volume, maschera del volume 
+| Vista di archiviazione | Mappa del volume, maschera del volume 
 
 
-| Volume di storage | LUN back-end 
+| Volume di archiviazione | LUN di backend 
 
 
-| ITL | Percorso back-end 
+| ITL | Percorso backend 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-* Indirizzo IP della console di gestione VPLEX
+* Un indirizzo IP della console di gestione VPLEX
 * Account di dominio a livello amministrativo per il server VPLEX
-* Porta 443 (HTTPS). Richiede la connettività in uscita alla porta TCP 443 sulla stazione di gestione VPLEX.
-* Per le performance, nome utente e password di sola lettura per l'accesso ssh/SCP.
-* Per le prestazioni, è necessaria la porta 22.
+* Porta 443 (HTTPS).  Richiede connettività in uscita alla porta TCP 443 sulla stazione di gestione VPLEX.
+* Per migliorare le prestazioni, nome utente e password di sola lettura per l'accesso ssh/scp.
+* Per le prestazioni è richiesta la porta 22.
 
 
 
@@ -77,19 +77,19 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Indirizzo IP della console di gestione VPLEX | Indirizzo IP o nome di dominio completo della console di gestione VPLEX 
 
 
-| Nome utente | Nome utente per CLI VPLEX 
+| Nome utente | Nome utente per VPLEX CLI 
 
 
-| Password | Password utilizzata per CLI VPLEX 
+| Password | Password utilizzata per VPLEX CLI 
 
 
-| Performance Remote IP Address (Indirizzo IP remoto performance) | Performance Remote IP address (Indirizzo IP remoto delle performance) della console di gestione VPLEX 
+| Indirizzo IP remoto delle prestazioni | Indirizzo IP remoto delle prestazioni della console di gestione VPLEX 
 
 
-| Performance Remote User Name (Nome utente remoto performance) | Performance Remote user name of VPLEX Management Console (Nome utente remoto delle performance di VPLEX Management 
+| Nome utente remoto delle prestazioni | Nome utente remoto delle prestazioni della console di gestione VPLEX 
 
 
-| Password remota delle performance | Performance Remote Password di VPLEX Management Console 
+| Password remota per le prestazioni | Password remota delle prestazioni della console di gestione VPLEX 
 |===
 
 
@@ -100,16 +100,16 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Porta di comunicazione | Porta utilizzata per VPLEX CLI. Il valore predefinito è 443. 
+| Porta di comunicazione | Porta utilizzata per VPLEX CLI.  Il valore predefinito è 443. 
 
 
-| Intervallo polling inventario (min) | L'impostazione predefinita è 20 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 20 minuti. 
 
 
 | Numero di tentativi di connessione | Il valore predefinito è 3. 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 600 secondi. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 600 secondi. 
 
 
 | Numero di tentativi | Il valore predefinito è 2. 
@@ -118,7 +118,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -126,35 +126,35 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Errore: Autenticazione dell'utente non riuscita. | Assicurarsi che le credenziali per questa periferica siano corrette. 
+| Errore: autenticazione utente fallita. | Assicurati che le credenziali per questo dispositivo siano corrette. 
 |===
 
 
-=== Performance
+=== Prestazione
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Errore: Le prestazioni VPLEX per la versione inferiore alla 5.3 non sono supportate. | Aggiornare VPLEX alla versione 5.3 o superiore 
+| Errore: le prestazioni di VPLEX per la versione precedente alla 5.3 non sono supportate. | Aggiorna VPLEX alla versione 5.3 o successiva 
 
 
-| Errore: Dati non raccolti a sufficienza. | • Controllare la data e l'ora di raccolta nel file di log e modificare di conseguenza l'intervallo di polling • attendere più a lungo 
+| Errore: non sono stati raccolti dati sufficienti. | • Controllare il timestamp della raccolta nel file di registro e modificare di conseguenza l'intervallo di polling • Attendere un tempo più lungo 
 
 
-| Errore: I file di log perpetui non vengono aggiornati. | Contattare il supporto EMC per consentire l'aggiornamento dei file di log perpetui 
+| Errore: i file di registro perpetui non vengono aggiornati. | Contattare il supporto EMC per abilitare l'aggiornamento dei file di registro perpetui 
 
 
-| Errore: L'intervallo di polling delle prestazioni è troppo grande. | Controllare la data e l'ora di raccolta nel file di registro{logfile} e modificare di conseguenza l'intervallo di polling 
+| Errore: l'intervallo di polling delle prestazioni è troppo grande. | Controllare il timestamp della raccolta nel file di registro ${logfile} e modificare di conseguenza l'intervallo di polling 
 
 
-| Errore: L'indirizzo IP remoto delle prestazioni della console di gestione VPLEX non è configurato. | Modificare l'origine dati per impostare l'indirizzo IP remoto delle prestazioni della console di gestione VPLEX. 
+| Errore: l'indirizzo IP remoto delle prestazioni della console di gestione VPLEX non è configurato. | Modificare l'origine dati per impostare l'indirizzo IP remoto delle prestazioni della console di gestione VPLEX. 
 
 
-| Errore: Nessun dato di performance segnalato da Director | • Verificare che i monitor delle performance di sistema funzionino correttamente • contattare il supporto EMC per abilitare l'aggiornamento dei file di log del monitor delle performance di sistema 
+| Errore: nessun dato sulle prestazioni segnalato dal direttore | • Verificare che i monitor delle prestazioni del sistema funzionino correttamente • Contattare il supporto EMC per abilitare l'aggiornamento dei file di registro del monitor delle prestazioni del sistema 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

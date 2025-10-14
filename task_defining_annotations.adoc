@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_defining_annotations.html 
 keywords: annotations, monitor, notes, tags 
-summary: Tenere traccia dei dati utilizzando le annotazioni. 
+summary: Tieni traccia dei dati utilizzando le annotazioni. 
 ---
 = Definizione delle annotazioni
 :hardbreaks:
@@ -14,36 +14,36 @@ summary: Tenere traccia dei dati utilizzando le annotazioni.
 
 
 [role="lead"]
-Durante la personalizzazione di Data Infrastructure Insights per il monitoraggio dei dati per i tuoi requisiti aziendali, puoi definire note specializzate, denominate annotazioni e assegnarle alle tue risorse.
+Quando si personalizza Data Infrastructure Insights per monitorare i dati in base alle esigenze aziendali, è possibile definire note specializzate, denominate annotazioni, e assegnarle alle risorse.
 
-È possibile assegnare annotazioni alle risorse con informazioni quali fine del ciclo di vita delle risorse, data center, posizione dell'edificio, Tier di storage o livello di servizio del volume.
+È possibile assegnare annotazioni alle risorse con informazioni quali fine del ciclo di vita della risorsa, data center, ubicazione dell'edificio, livello di archiviazione o livello di servizio del volume.
 
-L'utilizzo delle annotazioni per il monitoraggio dell'ambiente include le seguenti attività di alto livello:
+L'utilizzo delle annotazioni per monitorare l'ambiente include le seguenti attività di alto livello:
 
-* Creazione o modifica delle definizioni per tutti i tipi di annotazione.
+* Creazione o modifica di definizioni per tutti i tipi di annotazione.
 * Visualizzazione delle pagine delle risorse e associazione di ciascuna risorsa a una o più annotazioni.
 +
-Ad esempio, se una risorsa viene affittata e il leasing scade entro due mesi, potrebbe essere necessario applicare un'annotazione di fine ciclo di vita alla risorsa. In questo modo si impedisce ad altri di utilizzare tale risorsa per un periodo di tempo prolungato.
+Ad esempio, se un bene è in leasing e il leasing scade entro due mesi, potrebbe essere opportuno applicare un'annotazione di fine vita al bene.  Ciò aiuta a impedire che altri utilizzino tale risorsa per un periodo di tempo prolungato.
 
-* Creazione di regole per applicare automaticamente le annotazioni a più risorse dello stesso tipo.
-* Filtrare le risorse in base alle annotazioni.
+* Creazione di regole per applicare automaticamente annotazioni a più risorse dello stesso tipo.
+* Filtra le risorse in base alle loro annotazioni.
 
 
 
 
 == Tipi di annotazione predefiniti
 
-Data Infrastructure Insights fornisce alcuni tipi di annotazioni predefinite. Queste annotazioni possono essere utilizzate per filtrare o raggruppare i dati.
+Data Infrastructure Insights fornisce alcuni tipi di annotazione predefiniti.  Queste annotazioni possono essere utilizzate per filtrare o raggruppare i dati.
 
-È possibile associare le risorse ai tipi di annotazione predefiniti, ad esempio:
+È possibile associare le risorse a tipi di annotazione predefiniti come i seguenti:
 
-* Ciclo di vita delle risorse, ad esempio compleanno, tramonto o fine vita
-* Informazioni sulla posizione di un dispositivo, ad esempio data center, edificio o piano
-* Classificazione delle risorse, ad esempio per qualità (Tier), per dispositivi connessi (livello di switch) o per livello di servizio
-* Stato, ad esempio hot (utilizzo elevato)
+* Ciclo di vita delle risorse, come compleanno, tramonto o fine vita
+* Informazioni sulla posizione di un dispositivo, come centro dati, edificio o piano
+* Classificazione delle risorse, ad esempio per qualità (livelli), per dispositivi connessi (livello di switch) o per livello di servizio
+* Stato, ad esempio caldo (utilizzo elevato)
 
 
-La tabella seguente elenca i tipi di annotazioni forniti da Data Infrastructure Insights.
+Nella tabella seguente sono elencati i tipi di annotazione forniti da Data Infrastructure Insights.
 
 [cols="30,53, 16"]
 |===
@@ -55,31 +55,31 @@ La tabella seguente elenca i tipi di annotazioni forniti da Data Infrastructure 
 | Alias | Nome intuitivo per una risorsa | Testo 
 
 
-| Gruppo di risorse di calcolo | Assegnazione del gruppo utilizzata dal data collector host e VM Filesystems | Elenco 
+| Gruppo di risorse di calcolo | Assegnazione di gruppo utilizzata dal raccoglitore dati dei file system host e VM | Lista 
 
 
-| Data center | Ubicazione fisica | Elenco 
+| Centro dati | Posizione fisica | Lista 
 
 
-| Caldo | Dispositivi che utilizzano in modo intensivo su base regolare o alla soglia di capacità | Booleano 
+| Caldo | Dispositivi sottoposti a un uso intenso su base regolare o al limite della capacità | Booleano 
 
 
 | Nota | Commenti associati a una risorsa | Test 
 
 
-| Livello di servizio | Un insieme di livelli di servizio supportati che è possibile assegnare alle risorse. Fornisce un elenco di opzioni ordinate per volumi interni, qtree e volumi. Modificare i livelli di servizio per impostare le policy di performance per diversi livelli. | Elenco 
+| Livello di servizio | Un insieme di livelli di servizio supportati che è possibile assegnare alle risorse.  Fornisce un elenco di opzioni ordinate per volumi interni, qtree e volumi.  Modifica i livelli di servizio per impostare criteri di prestazione per livelli diversi. | Lista 
 
 
-| Tramonto | Soglia impostata dopo la quale non è possibile assegnare nuove allocazioni a quel dispositivo. Utile per migrazioni pianificate e altre modifiche di rete in sospeso. | Data 
+| Tramonto | Soglia impostata dopo la quale non è più possibile effettuare nuove allocazioni a quel dispositivo.  Utile per migrazioni pianificate e altre modifiche di rete in sospeso. | Data 
 
 
-| Livello switch | Opzioni predefinite per l'impostazione delle categorie per gli switch. In genere, queste designazioni rimangono valide per la durata del dispositivo, anche se è possibile modificarle. Disponibile solo per gli switch. | Elenco 
+| Cambia livello | Opzioni predefinite per l'impostazione delle categorie per gli switch.  In genere, queste designazioni rimangono valide per tutta la vita del dispositivo, anche se è possibile modificarle.  Disponibile solo per gli switch. | Lista 
 
 
-| Tier | Può essere utilizzato per definire diversi livelli di servizio all'interno del proprio ambiente. I Tier possono definire il tipo di livello, ad esempio la velocità necessaria (ad esempio, oro o argento). Questa funzione è disponibile solo su volumi interni, qtree, storage array, storage pool e volumi. | Elenco 
+| Livello | Può essere utilizzato per definire diversi livelli di servizio all'interno del tuo ambiente.  I livelli possono definire il tipo di livello, ad esempio la velocità necessaria (ad esempio, oro o argento).  Questa funzionalità è disponibile solo su volumi interni, qtree, array di archiviazione, pool di archiviazione e volumi. | Lista 
 
 
-| Severità della violazione | Classificazione (ad esempio, maggiore) di una violazione (ad esempio, porte host mancanti o ridondanza mancante), in una gerarchia di importanza da massima a minima. | Elenco 
+| Gravità della violazione | Grado (ad esempio, maggiore) di una violazione (ad esempio, porte host mancanti o ridondanza mancante), in una gerarchia dall'importanza più alta a quella più bassa. | Lista 
 |===
 
 NOTE: Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Tier e Violation Severity sono annotazioni a livello di sistema che non è possibile eliminare o rinominare; è possibile modificare solo i valori assegnati.
@@ -88,24 +88,24 @@ NOTE: Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Tier e Viola
 
 == Creazione di annotazioni personalizzate
 
-Utilizzando le annotazioni, è possibile aggiungere dati personalizzati specifici del business che corrispondano alle esigenze del business alle risorse. Sebbene Data Infrastructure Insights fornisca una serie di annotazioni predefinite, è possibile che si desideri visualizzare i dati in altri modi. I dati contenuti nelle annotazioni personalizzate integrano i dati dei dispositivi già raccolti, ad esempio produttore dello storage, volumi numerici e statistiche delle performance. I dati aggiunti mediante le annotazioni non vengono rilevati da Data Infrastructure Insights.
+Utilizzando le annotazioni, puoi aggiungere alle risorse dati aziendali personalizzati e specifici che corrispondono alle tue esigenze aziendali.  Sebbene Data Infrastructure Insights fornisca un set di annotazioni predefinite, potresti voler visualizzare i dati in altri modi.  I dati nelle annotazioni personalizzate integrano i dati del dispositivo già raccolti, come il produttore dell'archiviazione, i volumi numerici e le statistiche sulle prestazioni.  I dati aggiunti tramite annotazioni non vengono rilevati da Data Infrastructure Insights.
 
-.Fasi
-. Nel menu Data Infrastructure Insights, fare clic su *Manage > Annotations* (Gestione > Annotazioni*).
+.Passi
+. Nel menu Data Infrastructure Insights , fare clic su *Gestisci > Annotazioni*.
 +
-La pagina Annotazioni visualizza l'elenco delle annotazioni.
+La pagina Annotazioni mostra l'elenco delle annotazioni.
 
-. Fare clic su *+Aggiungi*
-. Inserire *Nome* e *Descrizione* dell'annotazione.
+. Fai clic su *+Aggiungi*
+. Inserisci un *Nome* e una *Descrizione* dell'annotazione.
 +
-È possibile inserire fino a 255 caratteri in questi campi.
+In questi campi è possibile immettere fino a 255 caratteri.
 
-. Fare clic su *Type* (tipo), quindi selezionare una delle seguenti opzioni che rappresentano il tipo di dati consentiti in questa annotazione:
+. Fare clic su *Tipo* e quindi selezionare una delle seguenti opzioni che rappresenta il tipo di dati consentiti in questa annotazione:
 
 
 .Tipi di annotazione
 * Booleano: crea un elenco a discesa con le opzioni Sì e No. Ad esempio, l'annotazione "Allegato diretto" è booleana.
-* Data: crea un campo che contiene una data.  Ad esempio, se l'annotazione sarà una data, selezionare questa opzione.
+* Data: crea un campo che contiene una data. Ad esempio, se l'annotazione sarà una data, selezionare questa opzione.
 * Elenco: crea uno dei seguenti:
 +
 ** Un elenco fisso a discesa
@@ -118,27 +118,27 @@ Se selezioni l'opzione Aggiungi nuovi valori al volo quando crei questo elenco, 
 
 
 
-* Numero: Consente di creare un campo in cui l'utente che assegna l'annotazione può immettere un numero. Ad esempio, se il tipo di annotazione è "Floor" (piano), l'utente può selezionare il tipo di valore "Number" (numero) e inserire il numero di piano.
-* Testo: Consente di creare un campo che consenta il testo in formato libero. Ad esempio, è possibile inserire "Lingua" come tipo di annotazione, selezionare "testo" come tipo di valore e immettere una lingua come valore.
+* Numero: crea un campo in cui l'utente che assegna l'annotazione può immettere un numero.  Ad esempio, se il tipo di annotazione è "Piano", l'utente può selezionare il tipo di valore "numero" e immettere il numero del piano.
+* Testo: crea un campo che consente l'inserimento di testo libero.  Ad esempio, potresti immettere "Lingua" come tipo di annotazione, selezionare "Testo" come tipo di valore e immettere una lingua come valore.
 
 
 
-NOTE: Dopo aver impostato il tipo e salvato le modifiche, non è possibile modificare il tipo di annotazione. Se è necessario modificare il tipo, eliminare l'annotazione e crearne una nuova.
+NOTE: Dopo aver impostato il tipo e salvato le modifiche, non è più possibile modificare il tipo di annotazione.  Se è necessario modificare il tipo, è necessario eliminare l'annotazione e crearne una nuova.
 
-. Se si seleziona Elenca come tipo di annotazione, procedere come segue:
+. Se selezioni Elenco come tipo di annotazione, procedi come segue:
 +
-.. Selezionare *Add new values on the fly* (Aggiungi nuovi valori in tempo reale) se si desidera aggiungere altri valori all'annotazione quando ci si trova in una pagina di risorse, che crea un elenco flessibile.
+.. Seleziona *Aggiungi nuovi valori al volo* se desideri avere la possibilità di aggiungere più valori all'annotazione quando ti trovi su una pagina di risorse, creando un elenco flessibile.
 +
-Si supponga, ad esempio, di trovarsi in una pagina di risorse e di avere l'annotazione City (Città) con i valori Detroit, Tampa e Boston. Se è stata selezionata l'opzione *Aggiungi nuovi valori al volo*, è possibile aggiungere valori aggiuntivi a Città come San Francisco e Chicago direttamente nella pagina delle risorse, invece di andare alla pagina Annotazioni per aggiungerli. Se non si sceglie questa opzione, non è possibile aggiungere nuovi valori di annotazione quando si applica l'annotazione; in questo modo si crea un elenco fisso.
+Ad esempio, supponiamo di trovarci su una pagina di risorse e che la risorsa abbia l'annotazione Città con i valori Detroit, Tampa e Boston.  Se hai selezionato l'opzione *Aggiungi nuovi valori al volo*, puoi aggiungere valori aggiuntivi a città come San Francisco e Chicago direttamente nella pagina delle risorse, invece di dover andare alla pagina Annotazioni per aggiungerli.  Se non si sceglie questa opzione, non sarà possibile aggiungere nuovi valori di annotazione quando si applica l'annotazione; ciò creerà un elenco fisso.
 
-.. Immettere un valore e una descrizione nei campi *valore* e *Descrizione*.
+.. Inserisci un valore e una descrizione nei campi *Valore* e *Descrizione*.
 .. Fare clic su *+Aggiungi+* per aggiungere altri valori.
-.. Fare clic sull'icona Cestino per eliminare un valore.
+.. Fare clic sull'icona del cestino per eliminare un valore.
 
 
-. Fare clic su *Save* (Salva)
+. Fai clic su *Salva*
 +
-Le annotazioni vengono visualizzate nell'elenco della pagina Annotazioni.
+Le tue annotazioni vengono visualizzate nell'elenco nella pagina Annotazioni.
 
 
 
@@ -146,10 +146,10 @@ Le annotazioni vengono visualizzate nell'elenco della pagina Annotazioni.
 Quando si filtra un'annotazione booleana, potrebbero essere presentati i seguenti valori su cui filtrare:
 
 * *Qualsiasi*: restituirà _tutti_ i risultati, compresi i risultati impostati su "Sì", "No" o non impostati affatto.
-* *Sì*: Restituisce solo risultati "Sì".  Si noti che DII mostra "Sì" come segno di spunta nella maggior parte delle tabelle.  I valori possono essere impostati su "True", "On", ecc.; DII li tratta tutti come "Sì".
-* *No*: restituisce solo risultati "No".  Si noti che DII mostra "No" come una "X" nella maggior parte delle tabelle.  I valori possono essere impostati su "Falso", "Off", ecc.; DII li tratta tutti come "No".
-* *Nessuno*: restituisce solo i risultati in cui l'annotazione non è stata impostata.  Chiamati anche valori "Null".
+* *Sì*: Restituisce solo risultati "Sì". Si noti che DII mostra "Sì" come segno di spunta nella maggior parte delle tabelle. I valori possono essere impostati su "True", "On", ecc.; DII li tratta tutti come "Sì".
+* *No*: restituisce solo risultati "No". Si noti che DII mostra "No" come una "X" nella maggior parte delle tabelle. I valori possono essere impostati su "Falso", "Off", ecc.; DII li tratta tutti come "No".
+* *Nessuno*: restituisce solo i risultati in cui l'annotazione non è stata impostata. Chiamati anche valori "Null".
 
 
-.Al termine
-Nell'interfaccia utente, l'annotazione è immediatamente disponibile per l'utilizzo.
+.Dopo aver finito
+Nell'interfaccia utente, l'annotazione è immediatamente disponibile per l'uso.

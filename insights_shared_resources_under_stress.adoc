@@ -2,72 +2,72 @@
 sidebar: sidebar 
 permalink: insights_shared_resources_under_stress.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Le informazioni ti danno uno sguardo all"impatto delle risorse su altre risorse sul tenant.' 
+summary: Gli approfondimenti ti consentono di vedere in che modo le risorse influiscono sulle altre risorse del tuo tenant. 
 ---
-= Approfondimenti: Risorse condivise sotto stress
+= Approfondimenti: risorse condivise sotto stress
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse sul tenant.
+I carichi di lavoro ad alto impatto possono ridurre le prestazioni di altri carichi di lavoro in una risorsa condivisa.  Ciò mette sotto stress la risorsa condivisa.  Data Infrastructure Insights fornisce strumenti che ti aiutano a esaminare la saturazione delle risorse e l'impatto sul tuo tenant.
 
 
 
 == Terminologia
 
-Quando si parla di impatto sul carico di lavoro o sulle risorse, sono utili le seguenti definizioni.
+Quando si parla di carico di lavoro o di impatto sulle risorse, le seguenti definizioni sono utili.
 
-Un *carico di lavoro impegnativo* è un carico di lavoro attualmente identificato come un impatto sulle altre risorse nel pool di storage condiviso. Questi carichi di lavoro consentono IOPS più elevati (ad esempio), riducendo gli IOPS nei carichi di lavoro interessati. I carichi di lavoro esigenti vengono talvolta chiamati _carichi di lavoro ad alto consumo_.
+Un *carico di lavoro impegnativo* è un carico di lavoro che attualmente è identificato come avente un impatto su altre risorse nel pool di archiviazione condiviso.  Questi carichi di lavoro determinano IOPS più elevati (ad esempio), riducendo gli IOPS nei carichi di lavoro interessati.  I carichi di lavoro impegnativi sono talvolta chiamati _carichi di lavoro ad alto consumo_.
 
-Un carico di lavoro * con impatto è un carico di lavoro che viene influenzato da un carico di lavoro molto elevato nel pool di storage condiviso. Questi carichi di lavoro stanno sperimentando IOPS ridotti e/o latenza superiore, causati dai carichi di lavoro esigenti.
+Un *carico di lavoro interessato* è un carico di lavoro che è influenzato da un carico di lavoro ad alto consumo nel pool di archiviazione condiviso.  Questi carichi di lavoro presentano IOPS ridotti e/o latenza più elevata, causati dai carichi di lavoro impegnativi.
 
-Se Data Infrastructure Insights non ha rilevato il carico di lavoro di calcolo leader, il volume o il volume interno stesso verrà riconosciuto come carico di lavoro. Questo vale per carichi di lavoro esigenti e interessati.
+Si noti che se Data Infrastructure Insights non ha rilevato il carico di lavoro di elaborazione principale, il volume o il volume interno stesso verrà riconosciuto come carico di lavoro.  Ciò vale sia per i carichi di lavoro impegnativi che per quelli con impatto.
 
-*La saturazione delle risorse condivise* è il rapporto tra IOPS e _baseline_.
+*Saturazione delle risorse condivise* è il rapporto tra IOPS impattanti e _baseline_.
 
 *Baseline* è definito come il punto dati massimo riportato per ciascun carico di lavoro nell'ora immediatamente precedente la saturazione rilevata.
 
-Si verifica un *conflitto* o *saturazione* quando gli IOPS influiscono su altre risorse o carichi di lavoro nel pool di storage condiviso.
+Si verifica una *contesa* o una *saturazione* quando si determina che gli IOPS stanno influenzando altre risorse o carichi di lavoro nel pool di archiviazione condiviso.
 
 
 
 == Carichi di lavoro impegnativi
 
-Per iniziare a esaminare i carichi di lavoro impegnativi e influenzati nelle risorse condivise, fare clic su *Dashboard > Insights* e selezionare l'Insight * risorse condivise sotto stress*.
+Per iniziare a esaminare i carichi di lavoro impegnativi e interessati nelle risorse condivise, fare clic su *Dashboard > Approfondimenti* e selezionare l'approfondimento *Risorse condivise sotto stress*.
 
-image:InsightsMenu.png["Menu Insight"]
+image:InsightsMenu.png["Menu Approfondimenti"]
 
-Data Infrastructure Insights visualizza un elenco di tutti i carichi di lavoro in cui è stata rilevata una saturazione. Si noti che Data Infrastructure Insights mostrerà i carichi di lavoro in cui è stata rilevata almeno una risorsa _impegnativa_ *o* _risorsa interessata_.
+Data Infrastructure Insights visualizza un elenco di tutti i carichi di lavoro in cui è stata rilevata una saturazione.  Si noti che Data Infrastructure Insights mostrerà i carichi di lavoro in cui è stata rilevata almeno una _risorsa impegnativa_ *o* una _risorsa interessata_.
 
-Fare clic su un carico di lavoro per visualizzare la relativa pagina dei dettagli. Il grafico in alto mostra l'attività sulla risorsa condivisa (ad esempio, un pool di storage) in cui si verifica il conflitto/saturazione.
+Fare clic su un carico di lavoro per visualizzarne la pagina dei dettagli.  Il grafico in alto mostra l'attività sulla risorsa condivisa (ad esempio, un pool di archiviazione) su cui si verifica la contesa/saturazione.
 
-image:ResourceInsightShared.png["Risorsa condivisa che mostra conflitti"]
+image:ResourceInsightShared.png["Risorsa condivisa che mostra contesa"]
 
-Di seguito sono riportati due grafici che mostrano i carichi di lavoro _esigenti_ e i carichi di lavoro _interessati_ da quelli esigenti.
+Di seguito sono riportati due grafici che mostrano i carichi di lavoro _impegnativi_ e i carichi di lavoro che sono _influenzati_ da tali carichi di lavoro.
 
-image:ResourceInsightDemanding.png["Grafico dei carichi di lavoro esigenti"] image:ResourceInsightImpacted-a.png["Grafico dei carichi di lavoro interessati"]
+image:ResourceInsightDemanding.png["Grafico del carico di lavoro impegnativo"] image:ResourceInsightImpacted-a.png["Grafico del carico di lavoro interessato"]
 
-Sotto ogni tabella è riportato un elenco dei carichi di lavoro e/o delle risorse che influiscono o sono interessate dal conflitto. Facendo clic su una risorsa (ad esempio, una macchina virtuale) si apre una pagina dei dettagli relativa a tale risorsa. Facendo clic su un workload si apre una pagina di query che mostra i pod coinvolti. Si noti che se il collegamento apre una query vuota, il pod interessato potrebbe non essere più parte del conflitto attivo. È possibile modificare l'intervallo di tempo della query per visualizzare l'elenco di pod in un intervallo di tempo maggiore o più mirato.
+Sotto ogni tabella è presente un elenco dei carichi di lavoro e/o delle risorse che incidono o sono interessati dalla contesa.  Facendo clic su una risorsa (ad esempio, una VM) si apre una pagina dei dettagli per quella risorsa.  Facendo clic su un carico di lavoro si apre una pagina di query che mostra i pod coinvolti.  Tieni presente che se il collegamento apre una query vuota, potrebbe essere perché il pod interessato non fa più parte della contesa attiva.  È possibile modificare l'intervallo di tempo della query per visualizzare l'elenco dei pod in un intervallo di tempo più ampio o più mirato.
 
 
 
-== Cosa devo fare per risolvere la saturazione?
+== Cosa posso fare per risolvere il problema della saturazione?
 
-È possibile eseguire una serie di operazioni per ridurre o eliminare la possibilità di saturazione sul tenant. Per visualizzare tali suggerimenti, espandere il link *+Mostra consigli* nella pagina. Ecco alcune cose che puoi provare.
+Esistono diversi accorgimenti che puoi adottare per ridurre o eliminare il rischio di saturazione del tuo inquilino.  Per visualizzarli, espandere il link *+Mostra suggerimenti* nella pagina.  Ecco alcune cose che puoi provare.
 
-* Sposta i consumatori con IOPS elevati
+* Spostare i consumatori con IOPS elevati
 +
-Sposta i carichi di lavoro "avidi" in pool di storage meno saturi. Si consiglia di valutare il Tier e la capacità di questi pool prima di spostare i carichi di lavoro, per evitare costi non necessari o ulteriori vincoli.
+Spostare i carichi di lavoro "avidi" in pool di archiviazione meno saturi.  Si consiglia di valutare il livello e la capacità di questi pool prima di spostare i carichi di lavoro, per evitare costi inutili o ulteriori conflitti.
 
-* Implementare una policy di qualità del servizio (QoS)
+* Implementare una politica di qualità del servizio (QoS)
 +
-L'implementazione di una policy di QoS per ogni workload per garantire una quantità sufficiente di risorse disponibili riduce la saturazione dello storage Pool. Si tratta di una soluzione a lungo termine.
+L'implementazione di una policy QoS per ogni carico di lavoro per garantire la disponibilità di risorse libere sufficienti allevierà la saturazione del pool di archiviazione.  Questa è una soluzione a lungo termine.
 
-* Aggiungere risorse aggiuntive
+* Aggiungi risorse aggiuntive
 +
-Se la risorsa condivisa (ad esempio, lo Storage Pool) ha raggiunto il punto di saturazione IOPS, l'aggiunta di più dischi o più veloci al pool garantisce risorse disponibili sufficienti per ridurre la saturazione.
+Se la risorsa condivisa (ad esempio, Storage Pool) ha raggiunto il punto di saturazione IOPS, l'aggiunta di dischi più numerosi o più veloci al pool garantirà la disponibilità di risorse libere sufficienti per alleviare la saturazione.
 
 
 
-Infine, è possibile fare clic su *Copy Insight link* per copiare l'URL della pagina negli Appunti e condividerlo più facilmente con i colleghi.
+Infine, puoi cliccare su *Copia collegamento Insight* per copiare l'URL della pagina negli appunti e condividerlo più facilmente con i colleghi.

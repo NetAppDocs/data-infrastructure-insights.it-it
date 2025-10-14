@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_na_db_host.html 
 keywords: data collector, generic db 
-summary: Collettore del programma di risoluzione host DB generico 
+summary: Collettore di risolutori host DB generico 
 ---
-= Resolver host DB generico NetApp
+= Risolutore host DB generico NetApp
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Questo data collector acquisisce l'inventario
+Questo raccoglitore di dati acquisisce l'inventario
 
 
 
@@ -30,16 +30,16 @@ Data Infrastructure Insights acquisisce l'inventario da questo raccoglitore.
 | Indirizzo IP del server DB | Indirizzo IP del server DB 
 
 
-| Porta server DB | il valore predefinito è 3306 
+| Porta del server DB | il valore predefinito è 3306 
 
 
-| Nome classe driver qualificato | Nome classe per il conducente. 
+| Nome della classe di conducenti qualificati | Nome della classe del driver. 
 
 
-| URL del driver JDBC | URL del driver 
+| URL del driver JDBC | URL per il driver 
 
 
-| Query SQL | Query utilizzata per restituire i dati dalla tabella 
+| Query SQL | La query utilizzata per restituire i dati dalla tabella 
 |===
 
 
@@ -50,12 +50,12 @@ Data Infrastructure Insights acquisisce l'inventario da questo raccoglitore.
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Il valore predefinito è 60 minuti 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60 minuti 
 
 
-| Attiva connessione SSL | Selezionare per attivare la connessione tramite SSL 
+| Abilita connessione SSL | Selezionare per abilitare la connessione tramite SSL 
 
 
-| Segnala alias WWN | Selezionare per segnalare l'alias WWN 
+| Segnala alias WWN | Seleziona per segnalare l'alias WWN 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

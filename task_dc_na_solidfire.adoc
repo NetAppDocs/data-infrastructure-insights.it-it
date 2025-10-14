@@ -1,37 +1,37 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_na_solidfire.html 
-summary: Configurare NetApp SolidFire data collector 
+summary: Configurare il raccoglitore dati NetApp SolidFire 
 keywords: data collector, queries, create 
 ---
-= Data collector per array all-flash NetApp SolidFire
+= Raccoglitore dati NetApp SolidFire All-Flash Array
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector per array all-flash NetApp SolidFire supporta la raccolta di inventario e performance da configurazioni SolidFire iSCSI e Fibre Channel.
+Il raccoglitore di dati NetApp SolidFire All-Flash Array supporta la raccolta di inventario e prestazioni da configurazioni SolidFire sia iSCSI che Fibre Channel.
 
-Il data collector SolidFire utilizza l'API REST di SolidFire. L'unità di acquisizione in cui risiede il data collector deve essere in grado di avviare connessioni HTTPS alla porta TCP 443 sull'indirizzo IP di gestione del cluster SolidFire. Il data collector necessita di credenziali in grado di eseguire query API REST sul cluster SolidFire.
+Il raccoglitore dati SolidFire utilizza la SolidFire REST API.  L'unità di acquisizione in cui risiede il raccoglitore dati deve essere in grado di avviare connessioni HTTPS alla porta TCP 443 sull'indirizzo IP di gestione del cluster SolidFire .  Il raccoglitore dati necessita di credenziali in grado di effettuare query REST API sul cluster SolidFire .
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati di NetApp SolidFire All-Flash Array. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati NetApp SolidFire All-Flash Array.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Disco | Disco 
+| Guidare | Disco 
 
 
-| Cluster | Storage 
+| Grappolo | Magazzinaggio 
 
 
-| Nodo | Nodo di storage 
+| Nodo | Nodo di archiviazione 
 
 
 | Volume | Volume 
@@ -43,15 +43,15 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 | Gruppo di accesso al volume, assegnazione LUN | Mappa del volume 
 
 
-| Sessione iSCSI | Maschera di volume 
+| Sessione iSCSI | Maschera del volume 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Di seguito sono riportati i requisiti per la configurazione di questo data collector:
+Di seguito sono riportati i requisiti per la configurazione di questo raccoglitore dati:
 
 * Indirizzo IP virtuale di gestione
 * Nome utente e credenziali di sola lettura
@@ -67,7 +67,7 @@ Di seguito sono riportati i requisiti per la configurazione di questo data colle
 | Campo | Descrizione 
 
 
-| Management Virtual IP Address (MVIP) (Indirizzo IP virtuale di gestione) | Indirizzo IP virtuale di gestione del cluster SolidFire 
+| Indirizzo IP virtuale di gestione (MVIP) | Indirizzo IP virtuale di gestione del cluster SolidFire 
 
 
 | Nome utente | Nome utilizzato per accedere al cluster SolidFire 
@@ -84,30 +84,30 @@ Di seguito sono riportati i requisiti per la configurazione di questo data colle
 | Campo | Descrizione 
 
 
-| Tipo di connessione | Scegliere il tipo di connessione 
+| Tipo di connessione | Scegli il tipo di connessione 
 
 
-| Porta di comunicazione | Porta utilizzata per le API NetApp 
+| Porta di comunicazione | Porta utilizzata per l'API NetApp 
 
 
-| Intervallo polling inventario (min) | Il valore predefinito è 20 minuti 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 20 minuti 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 secondi 
+| Intervallo di sondaggio sulle prestazioni (sec) | Il valore predefinito è 300 secondi 
 |===
 
 
 == Risoluzione dei problemi
 
-Quando SolidFire segnala un errore, viene visualizzato in informazioni sull'infrastruttura dati come segue:
+Quando SolidFire segnala un errore, questo viene visualizzato in Data Infrastructure Insights come segue:
 
-_È stato ricevuto un messaggio di errore da un dispositivo SolidFire durante il tentativo di recuperare i dati. La chiamata era <method> (<parameterString>). Il messaggio di errore del dispositivo era (consultare il manuale del dispositivo): <message>_
+_È stato ricevuto un messaggio di errore da un dispositivo SolidFire durante il tentativo di recupero dei dati.  La chiamata era <metodo> (<stringaparametro> ).  Il messaggio di errore del dispositivo era (controllare il manuale del dispositivo): <messaggio>_
 
 Dove:
 
-* <method> è un metodo HTTP, ad esempio GET o PUT.
-* <parameterString> è un elenco separato da virgole di parametri inclusi nella chiamata DI PAUSA.
-* Il <message> corrisponde a quello che il dispositivo ha restituito come messaggio di errore.
+* <metodo> è un metodo HTTP, come GET o PUT.
+* <parameterString> è un elenco separato da virgole di parametri inclusi nella chiamata REST.
+* Il <messaggio> è qualsiasi cosa il dispositivo abbia restituito come messaggio di errore.
 
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

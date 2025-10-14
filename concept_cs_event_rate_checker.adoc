@@ -1,16 +1,16 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_event_rate_checker.html 
-summary: Questo script può essere eseguito per controllare la frequenza degli eventi nella SVM prima di installare una DSC SVM ONTAP 
+summary: 'Questo script può essere eseguito per controllare la frequenza degli eventi nell"SVM prima di installare un ONTAP SVM DSC' 
 keywords: event, checker, rate, sizing, cloud secure 
 ---
-= SVM Event Rate Checker (Guida al dimensionamento dell'agente)
+= SVM Event Rate Checker (Guida al dimensionamento degli agenti)
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-La funzione di verifica del tasso di eventi viene utilizzata per controllare la velocità di eventi combinata NFS/SMB nella SVM prima di installare un data collector SVM ONTAP, per verificare il numero di macchine SVM che un agente è in grado di monitorare. Utilizza Event Rate Checker come guida al dimensionamento per pianificare il tuo ambiente di sicurezza.
+Event Rate Checker viene utilizzato per controllare la frequenza degli eventi combinata NFS/SMB nell'SVM prima di installare un raccoglitore dati ONTAP SVM, per vedere quanti SVM una macchina agente sarà in grado di monitorare.  Utilizza Event Rate Checker come guida alle dimensioni per pianificare il tuo ambiente di sicurezza.
 
 Un agente può supportare fino a un massimo di 50 raccoglitori di dati.
 
@@ -18,69 +18,69 @@ Un agente può supportare fino a un massimo di 50 raccoglitori di dati.
 
 == Requisiti:
 
-* IP cluster
+* IP del cluster
 * Nome utente e password dell'amministratore del cluster
 
 
 
-NOTE: Durante l'esecuzione di questo script, non deve essere eseguito alcun Data Collector SVM ONTAP per la SVM per la quale viene determinata la frequenza degli eventi.
+NOTE: Quando si esegue questo script, non deve essere in esecuzione alcun ONTAP SVM Data Collector per l'SVM per cui si sta determinando la frequenza degli eventi.
 
-Fasi:
+Passaggi:
 
-. Installare l'Agent seguendo le istruzioni in CloudSecure.
+. Installare l'agente seguendo le istruzioni in CloudSecure.
 . Una volta installato l'agente, eseguire lo script _server_data_rate_checker.sh_ come utente sudo:
 +
  /opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh
-. Questo script richiede l'installazione di _sshpass_ nella macchina linux. Esistono due modi per installarlo:
+. Questo script richiede che _sshpass_ sia installato sulla macchina Linux.  Ci sono due modi per installarlo:
 +
-.. Eseguire il seguente comando:
+.. Esegui il seguente comando:
 +
  linux_prompt> yum install sshpass
-.. Se questo non funziona, scaricare _sshpass_ sulla macchina linux dal web ed eseguire il seguente comando:
+.. Se ciò non funziona, scarica _sshpass_ dal web sul computer Linux ed esegui il seguente comando:
 +
  linux_prompt> rpm -i sshpass
 
 
-. Fornire i valori corretti quando richiesto. Per un esempio, vedere di seguito.
-. L'esecuzione dello script richiede circa 5 minuti.
-. Al termine dell'esecuzione, lo script stampa la frequenza degli eventi dalla SVM. È possibile controllare il tasso di eventi per SVM nell'output della console:
+. Fornire i valori corretti quando richiesto.  Di seguito è riportato un esempio.
+. L'esecuzione dello script richiederà circa 5 minuti.
+. Una volta completata l'esecuzione, lo script stamperà la frequenza degli eventi dall'SVM.  È possibile controllare la frequenza degli eventi per SVM nell'output della console:
 +
  “Svm svm_rate is generating 100 events/sec”.
 
 
-Ciascun Data Collector SVM di ONTAP può essere associato a una singola SVM, il che significa che ciascun data collector potrà ricevere il numero di eventi generati da una singola SVM.
+Ogni Ontap SVM Data Collector può essere associato a un singolo SVM, il che significa che ogni data collector sarà in grado di ricevere il numero di eventi generati da un singolo SVM.
 
-Tenere presente quanto segue:
+Tieni presente quanto segue:
 
-A) utilizzare questa tabella come guida generale al dimensionamento. È possibile aumentare il numero di core e/o memoria per aumentare il numero di data collector supportati, fino a un massimo di 50 data collector:
+A) Utilizzare questa tabella come guida generale alle taglie.  È possibile aumentare il numero di core e/o di memoria per aumentare il numero di collettori dati supportati, fino a un massimo di 50 collettori dati:
 
 |===
 
 
-| Configurazione del computer dell'agente | Numero di Data Collector SVM | Tasso massimo di eventi che il computer dell'agente può gestire 
+| Configurazione della macchina agente | Numero di collettori di dati SVM | Frequenza massima degli eventi che la macchina agente può gestire 
 
 
-| 4 core, 16 GB | 10 raccolta di dati | 20.000 eventi/sec 
+| 4 core, 16 GB | 10 raccoglitori di dati | 20K eventi/sec 
 
 
-| 4 core, 32 GB | 20 raccolta di dati | 20.000 eventi/sec 
+| 4 core, 32 GB | 20 raccoglitori di dati | 20K eventi/sec 
 |===
-B) per calcolare il totale degli eventi, aggiungere gli eventi generati per tutte le SVM per quell'agente.
+B) Per calcolare il totale degli eventi, sommare gli eventi generati per tutti gli SVM per quell'agente.
 
-C) se lo script non viene eseguito durante le ore di punta o se il traffico di picco è difficile da prevedere, mantenere un buffer del tasso di eventi del 30%.
+C) Se lo script non viene eseguito durante le ore di punta o se è difficile prevedere il traffico di punta, mantenere un buffer di frequenza degli eventi del 30%.
 
-B + C deve essere inferiore A A, altrimenti il computer dell'agente non potrà eseguire il monitoraggio.
+B + C Dovrebbe essere minore di A, altrimenti la macchina agente non riuscirà a monitorare.
 
-In altre parole, il numero di raccolta dati che è possibile aggiungere a una macchina a singolo agente deve essere conforme alla formula seguente:
+In altre parole, il numero di collettori di dati che possono essere aggiunti a una singola macchina agente dovrebbe essere conforme alla formula seguente:
 
  Sum of all Event rate of all Data Source Collectors + Buffer Event rate of 30% < 20000 events/second
-Consultare la link:concept_cs_agent_requirements.html["Requisiti dell'agente"] pagina per ulteriori prerequisiti e requisiti.
+Vedi illink:concept_cs_agent_requirements.html["Requisiti dell'agente"] pagina per ulteriori prerequisiti e requisiti.
 
 
 
 == Esempio
 
-Diciamo che abbiamo tre SVM che generano percentuali di eventi rispettivamente di 100, 200 e 300 eventi al secondo.
+Supponiamo di avere tre SVMS che generano frequenze di eventi rispettivamente di 100, 200 e 300 eventi al secondo.
 
 Applichiamo la formula:
 
@@ -88,16 +88,16 @@ Applichiamo la formula:
  (100+200+300) + [(100+200+300)*30%] = 600+180 = 780events/sec
 780 events/second is < 20000 events/second, so the 3 SVMs can be monitored via one agent box.
 ....
-L'output della console è disponibile nella macchina Agente nel nome del file __fpolicy_stat_<SVM Name>.log__ nella directory di lavoro corrente.
+L'output della console è disponibile nella macchina dell'agente nel nome file __fpolicy_stat_<Nome SVM>.log__ nella directory di lavoro corrente.
 
-Lo script può fornire risultati errati nei seguenti casi:
+Lo script potrebbe dare risultati errati nei seguenti casi:
 
-* Vengono fornite credenziali, IP o nome SVM errati.
-* Un fpolicy già esistente con lo stesso nome, numero di sequenza, ecc. genera un errore.
-* Lo script viene arrestato bruscamente durante l'esecuzione.
+* Sono state fornite credenziali, IP o nome SVM errati.
+* Una fpolicy già esistente con lo stesso nome, numero di sequenza, ecc. genererà un errore.
+* Lo script si interrompe bruscamente durante l'esecuzione.
 
 
-Di seguito è riportato un esempio di esecuzione di script:
+Di seguito è riportato un esempio di esecuzione dello script:
 
  [root@ci-cs-data agent]# /opt/netapp/cloudsecure/agent/install/svm_event_rate_checker.sh
 ....
@@ -147,20 +147,20 @@ Overall svm audit_svm is generating 300 events/sec
 | Domanda | Risposta 
 
 
-| Se si esegue questo script su una SVM già configurata per la sicurezza del carico di lavoro, viene utilizzata solo la configurazione fpolicy esistente sulla SVM oppure viene impostata una configurazione temporanea ed è possibile eseguire il processo? | La funzione Event Rate Checker può essere eseguita correttamente anche per una SVM già configurata per la sicurezza del carico di lavoro. Non dovrebbe esserci alcun impatto. 
+| Se eseguo questo script su una SVM già configurata per Workload Security, utilizza semplicemente la configurazione fpolicy esistente sulla SVM oppure ne imposta una temporanea ed esegue il processo? | Event Rate Checker può funzionare correttamente anche per una SVM già configurata per Workload Security.  Non dovrebbe esserci alcun impatto. 
 
 
-| È possibile aumentare il numero di SVM su cui è possibile eseguire lo script? | Sì. È sufficiente modificare lo script e modificare il numero massimo di SVM da 5 a qualsiasi numero desiderato. 
+| Posso aumentare il numero di SVM su cui può essere eseguito lo script? | Sì. Basta modificare lo script e cambiare il numero massimo di SVM da 5 a qualsiasi numero desiderato. 
 
 
-| Se si aumenta il numero di SVM, si aumenterà il tempo di esecuzione dello script? | No. Lo script viene eseguito per un massimo di 5 minuti, anche in caso di aumento del numero di SVM. 
+| Se aumento il numero di SVM, aumenterà il tempo di esecuzione dello script? | No. Lo script verrà eseguito per un massimo di 5 minuti, anche se il numero di SVM viene aumentato. 
 
 
-| È possibile aumentare il numero di SVM su cui è possibile eseguire lo script? | Sì. È necessario modificare lo script e modificare il numero massimo di SVM da 5 a qualsiasi numero desiderato. 
+| Posso aumentare il numero di SVM su cui può essere eseguito lo script? | Sì. È necessario modificare lo script e cambiare il numero massimo di SVM da 5 a qualsiasi numero desiderato. 
 
 
-| Se si aumenta il numero di SVM, si aumenterà il tempo di esecuzione dello script? | No. Lo script viene eseguito per un massimo di 5mins TB, anche in caso di aumento del numero di SVM. 
+| Se aumento il numero di SVM, aumenterà il tempo di esecuzione dello script? | No. Lo script verrà eseguito per un massimo di 5 minuti, anche se il numero di SVM viene aumentato. 
 
 
-| Cosa succede se si esegue Event Rate Checker con un agente esistente? | L'esecuzione di Event Rate Checker con un agente già esistente può causare un aumento della latenza sulla SVM. Questo aumento sarà temporaneo durante l'esecuzione di Event Rate Checker. 
+| Cosa succede se eseguo Event Rate Checker con un agente esistente? | L'esecuzione di Event Rate Checker su un agente già esistente potrebbe causare un aumento della latenza sull'SVM.  Questo aumento sarà di natura temporanea mentre è in esecuzione Event Rate Checker. 
 |===

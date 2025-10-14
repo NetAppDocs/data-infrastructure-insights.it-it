@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar 
 permalink: concept_preview_features.html 
-summary: Le funzionalità di anteprima sono disponibili in capacità limitata e le funzionalità di evidenziazione non sono ancora pronte per il primo tempo. 
+summary: Le funzionalità di anteprima sono disponibili in quantità limitata e le funzionalità in evidenza non sono ancora pronte per il grande pubblico. 
 keywords: coming soon, preview, 
 ---
-= Funzionalità e funzionalità di anteprima
+= Anteprima delle caratteristiche e funzionalità
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights mette in evidenza nuove caratteristiche e funzionalità in modo _Preview_. Le funzionalità di anteprima sono disponibili in ambienti limitati o con capacità limitata.
+Data Infrastructure Insights evidenzia le nuove caratteristiche e funzionalità in modalità _Anteprima_.  Le funzionalità di anteprima sono disponibili in ambienti limitati o con capacità limitata.
 
 Se sei interessato a provare in anteprima una o più di queste funzionalità, contatta il team vendite NetApp per maggiori informazioni.

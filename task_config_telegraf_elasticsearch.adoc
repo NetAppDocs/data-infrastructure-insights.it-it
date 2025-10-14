@@ -2,32 +2,32 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_elasticsearch.html 
 keywords: telegraf, installation, install, ElasticSearch 
-summary: Configurazione del data collector Elasticsearch 
+summary: Configurazione del raccoglitore dati Elasticsearch 
 ---
-= Elasticsearch Data Collector
+= Raccoglitore dati Elasticsearch
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Elasticsearch.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da Elasticsearch.
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Elasticsearch.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Elasticsearch.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
-
-
-image:ElasticsearchDCConfigLinux.png["Configurazione di Elasticsearch"]
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
+image:ElasticsearchDCConfigLinux.png["Configurazione Elasticsearch"]
 
-== Setup (Configurazione)
 
-Le informazioni sono disponibili nella link:https://www.elastic.co/guide/index.html["Documentazione Elasticsearch"].
+
+== Impostare
+
+Le informazioni possono essere trovate nellink:https://www.elastic.co/guide/index.html["Documentazione di Elasticsearch"] .
 
 
 
@@ -40,13 +40,13 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: 
 
 
-| Cluster Elasticsearch | Cluster di namespace | Nodo IP Node Name Cluster Status (Nome nodo IP Stato cluster) 
+| Cluster Elasticsearch | Cluster di spazi dei nomi | IP del nodo Nome del nodo Stato del cluster 
 
 
-| Nodo Elasticsearch | Namespace Cluster ES Node ID ES Node IP ES Node | ID zona 
+| Nodo Elasticsearch | Cluster dello spazio dei nomi ID nodo ES IP nodo ES Nodo ES | ID zona 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reporting_creating_custom_reports.html 
-summary: 'Utilizzo di strumenti per la creazione di report personalizzati ("ad-hoc")' 
+summary: 'Utilizzo di strumenti di creazione di report per creare report personalizzati ("ad hoc")' 
 keywords: reporting, cognos, data warehouse, dwh, ad-hoc, custom 
 ---
 = Creazione di report personalizzati
@@ -10,80 +10,80 @@ keywords: reporting, cognos, data warehouse, dwh, ad-hoc, custom
 
 
 [role="lead"]
-È possibile utilizzare gli strumenti di creazione dei report per creare report personalizzati. Dopo aver creato i report, è possibile salvarli ed eseguirli in base a una pianificazione regolare. I risultati dei report possono essere inviati automaticamente via email a te e ad altri.
+È possibile utilizzare gli strumenti di creazione dei report per creare report personalizzati.  Dopo aver creato i report, è possibile salvarli ed eseguirli regolarmente.  I risultati dei report possono essere inviati automaticamente via e-mail a te stesso e ad altri.
 
 
-NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzionalità di reporting è disponibile in Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Edizione Premium"] .
 
-Gli esempi in questa sezione mostrano il seguente processo, che può essere utilizzato per qualsiasi modello di dati Data Infrastructure Insights Reporting:
+Gli esempi in questa sezione mostrano il seguente processo, che può essere utilizzato per qualsiasi modello di dati di Data Infrastructure Insights Reporting:
 
-* Identificazione di una domanda a cui rispondere con un report
-* Determinazione dei dati necessari per supportare i risultati
-* Selezione degli elementi dei dati per il report
-
-
-Prima di progettare un report personalizzato, è necessario completare alcune attività preliminari. Se non vengono completati, i report potrebbero essere imprecisi o incompleti.
-
-Ad esempio, se non si completa il processo di identificazione del dispositivo, i report relativi alla capacità non saranno accurati. In alternativa, se non si finisce di impostare annotazioni (ad esempio Tier, business unit e data center), i report personalizzati potrebbero non riportare in modo preciso i dati nel dominio o mostrare "N/A" per alcuni data point.
-
-Prima di progettare i report, completare le seguenti attività:
-
-* Configurare tutti link:task_configure_data_collectors.html["raccolta di dati"] correttamente.
-* Inserisci annotazioni (come Tier, data center e business unit) su dispositivi e risorse sul tuo tenant. È utile che le annotazioni siano stabili prima di generare i report, perché Data Infrastructure Insights Reporting raccoglie informazioni cronologiche.
+* Identificare una domanda a cui rispondere con un report
+* Determinazione dei dati necessari a supporto dei risultati
+* Selezione degli elementi dati per il report
 
 
+Prima di progettare il tuo report personalizzato, devi completare alcune attività preliminari.  Se non si compilano queste informazioni, i report potrebbero risultare inaccurati o incompleti.
+
+Ad esempio, se non si completa il processo di identificazione del dispositivo, i report sulla capacità non saranno accurati.  Oppure, se non completi l'impostazione delle annotazioni (ad esempio livelli, unità aziendali e data center), i tuoi report personalizzati potrebbero non riportare accuratamente i dati nel tuo dominio o potrebbero mostrare "N/D" per alcuni punti dati.
+
+Prima di progettare i report, completa le seguenti attività:
+
+* Configura tuttolink:task_configure_data_collectors.html["raccoglitori di dati"] correttamente.
+* Inserisci annotazioni (ad esempio livelli, data center e unità aziendali) sui dispositivi e sulle risorse del tuo tenant.  È utile disporre di annotazioni stabili prima di generare report, perché Data Infrastructure Insights Reporting raccoglie informazioni storiche.
 
 
-== Processo di creazione dei report
 
-Il processo di creazione di report personalizzati (denominati anche "ad hoc") prevede diverse attività:
 
-* Pianificare i risultati del report.
+== Processo di creazione del report
+
+Il processo di creazione di report personalizzati (chiamati anche "ad hoc") prevede diverse attività:
+
+* Pianifica i risultati del tuo report.
 * Identifica i dati a supporto dei tuoi risultati.
-* Selezionare il modello di dati (ad esempio, modello di dati Chargeback, modello di dati di inventario e così via) che contiene i dati.
-* Selezionare gli elementi dei dati per il report.
-* Facoltativamente, è possibile formattare, ordinare e filtrare i risultati dei report.
+* Selezionare il modello di dati (ad esempio, modello di dati di addebito, modello di dati di inventario e così via) che contiene i dati.
+* Selezionare gli elementi dati per il report.
+* Facoltativamente, formattare, ordinare e filtrare i risultati del report.
 
 
 
 
 === Pianificazione dei risultati del report personalizzato
 
-Prima di aprire gli strumenti di creazione dei report, è possibile pianificare i risultati desiderati dal report. Con gli strumenti per la creazione di report, è possibile creare report in modo semplice e senza bisogno di una grande pianificazione; tuttavia, è consigliabile avere un'idea dei requisiti dei report da parte del richiedente.
+Prima di aprire gli strumenti di creazione del report, potrebbe essere opportuno pianificare i risultati che si desidera ottenere dal report.  Con gli strumenti di creazione di report, è possibile creare report facilmente e potrebbe non essere necessaria una grande pianificazione; tuttavia, è una buona idea chiedere al richiedente del report quali siano i requisiti del report.
 
-* Identificare la domanda esatta a cui si desidera rispondere. Ad esempio:
+* Individua la domanda esatta a cui vuoi rispondere. Per esempio:
 +
-** Quanta capacità ho ancora a disposizione?
-** Quali sono i costi di chargeback per business unit?
-** Qual è la capacità per Tier per garantire che le business unit siano allineate al livello di storage appropriato?
-** Come posso prevedere i requisiti di alimentazione e raffreddamento? (Aggiungere metadati personalizzati aggiungendo annotazioni alle risorse).
+** Quanta capacità mi rimane?
+** Quali sono i costi di chargeback per unità aziendale?
+** Qual è la capacità per livello per garantire che le unità aziendali siano allineate al livello di archiviazione appropriato?
+** Come posso prevedere i requisiti di alimentazione e raffreddamento?  (Aggiungi metadati personalizzati inserendo annotazioni alle risorse.)
 
 
-* Identificare gli elementi dei dati necessari per supportare la risposta.
-* Identificare le relazioni tra i dati che si desidera visualizzare nella risposta. Non includere relazioni illogiche nella domanda, ad esempio "desidero vedere le porte relative alla capacità".
-* Identificare i calcoli necessari sui dati.
-* Determinare i tipi di filtraggio necessari per limitare i risultati.
-* Determinare se è necessario utilizzare dati correnti o storici.
-* Determinare se è necessario impostare i privilegi di accesso sui report per limitare i dati a un pubblico specifico.
-* Identificare la modalità di distribuzione del report. Ad esempio, deve essere inviato tramite e-mail in base a una pianificazione prestabilita o incluso nell'area della cartella dei contenuti del team?
-* Determinare chi gestirà il report. Questo potrebbe influire sulla complessità del progetto.
-* Creare un modello del report.
+* Identifica gli elementi dati necessari a supportare la risposta.
+* Identifica le relazioni tra i dati che vuoi vedere nella risposta.  Non includere relazioni illogiche nella tua domanda, ad esempio "Voglio vedere le porte correlate alla capacità".
+* Identificare eventuali calcoli necessari sui dati.
+* Determinare quali tipi di filtraggio sono necessari per limitare i risultati.
+* Determina se devi utilizzare dati attuali o storici.
+* Determina se è necessario impostare privilegi di accesso sui report per limitare i dati a un pubblico specifico.
+* Definire come verrà distribuito il report.  Ad esempio, dovrebbe essere inviato tramite e-mail secondo una pianificazione prestabilita o incluso nell'area della cartella dei contenuti del team?
+* Stabilire chi si occuperà della manutenzione del rapporto.  Ciò potrebbe influire sulla complessità del progetto.
+* Creare un mockup del report.
 
 
 
 
-=== Suggerimenti per la progettazione dei report
+=== Suggerimenti per la progettazione di report
 
-Durante la progettazione dei report, potrebbero essere utili diversi suggerimenti.
+Quando si progettano report, potrebbero essere utili alcuni suggerimenti.
 
-* Determinare se è necessario utilizzare dati correnti o storici.
+* Determina se devi utilizzare dati attuali o storici.
 +
-La maggior parte dei report deve generare report solo sui dati più recenti disponibili in Data Infrastructure Insights.
+La maggior parte dei report deve riportare solo i dati più recenti disponibili in Data Infrastructure Insights.
 
-* Il report di approfondimento sull'infrastruttura dati fornisce informazioni cronologiche su capacità e prestazioni, ma non sull'inventario.
-* Tutti vedono tutti i dati; tuttavia, potrebbe essere necessario limitare i dati a un pubblico specifico.
+* Data Infrastructure Insights Reporting fornisce informazioni storiche sulla capacità e sulle prestazioni, ma non sull'inventario.
+* Tutti possono vedere tutti i dati; tuttavia, potrebbe essere necessario limitare i dati a un pubblico specifico.
 +
-Per segmentare le informazioni per diversi utenti, è possibile creare report e impostare autorizzazioni di accesso per tali utenti.
+Per segmentare le informazioni per diversi utenti, è possibile creare report e impostare per ciascuno di essi le autorizzazioni di accesso.
 
 
 
@@ -91,245 +91,245 @@ Per segmentare le informazioni per diversi utenti, è possibile creare report e 
 
 == Modelli di dati di reporting
 
-Data Infrastructure Insights include diversi modelli di dati da cui è possibile selezionare report predefiniti o creare report personalizzati.
+Data Infrastructure Insights include diversi modelli di dati dai quali è possibile selezionare report predefiniti o creare report personalizzati.
 
-Ogni modello di dati contiene un semplice data mart e un data mart avanzato:
+Ogni modello di dati contiene un data mart semplice e un data mart avanzato:
 
-* Il data mart semplice fornisce un rapido accesso agli elementi di dati più comunemente utilizzati e include solo l'ultima snapshot dei dati di Data Warehouse; non include dati storici.
-* Il data mart avanzato fornisce tutti i valori e i dettagli disponibili dal data mart semplice e include l'accesso ai valori dei dati storici.
+* Il data mart semplice fornisce un rapido accesso agli elementi dati più comunemente utilizzati e include solo l'ultima istantanea dei dati del Data Warehouse; non include dati storici.
+* Il data mart avanzato fornisce tutti i valori e i dettagli disponibili nel data mart semplice e include l'accesso ai valori dei dati storici.
 
 
 
 
 === Modelli di dati di capacità
 
-Consente di rispondere a domande sulla capacità dello storage, sull'utilizzo del file system, sulla capacità del volume interno, sulla capacità delle porte, sulla capacità del qtree, E capacità delle macchine virtuali (VM). Il modello di dati Capacity è un container per diversi modelli di dati di capacità. È possibile creare report che rispondono a diversi tipi di domande utilizzando questo modello di dati:
+Consente di rispondere a domande sulla capacità di archiviazione, sull'utilizzo del file system, sulla capacità del volume interno, sulla capacità delle porte, sulla capacità di qtree e sulla capacità della macchina virtuale (VM).  Il modello di dati di capacità è un contenitore per diversi modelli di dati di capacità.  Utilizzando questo modello di dati è possibile creare report che rispondano a vari tipi di domande:
 
 
 
-==== Modello di dati sulla capacità dello storage e del pool di storage
+==== Modello di dati di archiviazione e capacità del pool di archiviazione
 
-Consente di rispondere a domande sulla pianificazione delle risorse di capacità dello storage, inclusi i pool di storage e storage, e include dati del pool di storage fisico e virtuale. Questo semplice modello di dati può aiutarti a rispondere alle domande relative alla capacità sul piano e all'utilizzo della capacità dei pool di storage per Tier e data center nel tempo. Se non sei ancora al reporting della capacità, devi iniziare con questo modello di dati perché si tratta di un modello di dati più semplice e mirato. Con questo modello di dati puoi rispondere a domande simili a quelle riportate di seguito:
+Consente di rispondere a domande sulla pianificazione delle risorse di capacità di archiviazione, inclusi storage e pool di archiviazione, e include dati di pool di archiviazione sia fisici che virtuali.  Questo semplice modello di dati può aiutarti a rispondere a domande relative alla capacità sul pavimento e all'utilizzo della capacità dei pool di archiviazione per livello e data center nel tempo.  Se non hai familiarità con i report sulla capacità, dovresti iniziare con questo modello di dati perché è un modello di dati più semplice e mirato.  Utilizzando questo modello di dati è possibile rispondere a domande simili alle seguenti:
 
-* Qual è la data prevista per raggiungere la soglia di capacità del 80% dello storage fisico?
-* Qual è la capacità dello storage fisico su un array per un determinato Tier?
-* Qual è la mia capacità di storage per produttore, famiglia e data center?
-* Qual è la tendenza all'utilizzo dello storage su un array per tutti i Tier?
-* Quali sono i primi 10 sistemi storage con il massimo utilizzo?
-* Qual è la tendenza all'utilizzo dello storage dei pool di storage?
-* Quanta capacità è già allocata?
-* Quale capacità è disponibile per l'allocazione?
-
-
-
-
-==== Modello di dati sull'utilizzo del file system
-
-Questo modello di dati offre visibilità sull'utilizzo della capacità da parte degli host a livello di file system. Gli amministratori possono determinare la capacità allocata e utilizzata per file system, determinare il tipo di file system e identificare le statistiche di trend in base al tipo di file system. Puoi rispondere alle seguenti domande utilizzando questo modello di dati:
-
-* Quali sono le dimensioni del file system?
-* Dove vengono conservati i dati e come si accede, ad esempio, a livello locale o SAN?
-* Quali sono le tendenze storiche per la capacità del file system? Quindi, in base a questo, cosa possiamo prevedere per le esigenze future?
+* Qual è la data prevista per il raggiungimento della soglia di capacità dell'80% del mio spazio di archiviazione fisico?
+* Qual è la capacità di archiviazione fisica di un array per un dato livello?
+* Qual è la mia capacità di archiviazione in base al produttore, alla famiglia e al data center?
+* Qual è l'andamento dell'utilizzo dello storage su un array per tutti i livelli?
+* Quali sono i miei 10 sistemi di storage con il maggiore utilizzo?
+* Qual è l'andamento dell'utilizzo dello storage nei pool di storage?
+* Quanta capacità è già stata assegnata?
+* Quale capacità è disponibile per l'assegnazione?
 
 
 
 
-==== Modello di dati interno sulla capacità del volume
+==== Modello di dati di utilizzo del file system
 
-Consente di rispondere alle domande relative alla capacità utilizzata per il volume interno, alla capacità allocata e all'utilizzo della capacità nel tempo:
+Questo modello di dati fornisce visibilità sull'utilizzo della capacità da parte degli host a livello di file system.  Gli amministratori possono determinare la capacità allocata e utilizzata per ogni file system, determinare il tipo di file system e identificare le statistiche di tendenza in base al tipo di file system.  Utilizzando questo modello di dati è possibile rispondere alle seguenti domande:
+
+* Qual è la dimensione del file system?
+* Dove vengono conservati i dati e come vengono consultati, ad esempio in locale o in SAN?
+* Quali sono le tendenze storiche per la capacità del file system?  Quindi, sulla base di ciò, cosa possiamo prevedere per le esigenze future?
+
+
+
+
+==== Modello di dati di capacità del volume interno
+
+Consente di rispondere a domande sulla capacità utilizzata del volume interno, sulla capacità assegnata e sull'utilizzo della capacità nel tempo:
 
 * Quali volumi interni hanno un utilizzo superiore a una soglia predefinita?
-* Quali volumi interni rischiano di esaurire la capacità in base a una tendenza? 8 Qual è la capacità utilizzata rispetto alla capacità allocata sui nostri volumi interni?
+* Quali volumi interni rischiano di esaurire la capacità in base a un trend?  8 Qual è la capacità utilizzata rispetto alla capacità assegnata sui nostri volumi interni?
 
 
 
 
-==== Modello di dati Port Capacity
+==== Modello di dati sulla capacità del porto
 
-Consente di rispondere a domande sulla connettività delle porte dello switch, sullo stato delle porte e sulla velocità delle porte nel tempo. Puoi rispondere a domande simili a quelle riportate di seguito per aiutarti a pianificare l'acquisto di nuovi switch: Come posso creare una previsione del consumo delle porte che preveda la disponibilità delle risorse (porte) (in base al data center, al vendor dello switch e alla velocità delle porte)?
+Consente di rispondere a domande sulla connettività delle porte dello switch, sullo stato delle porte e sulla velocità delle porte nel tempo.  Puoi rispondere a domande simili alle seguenti per aiutarti a pianificare l'acquisto di nuovi switch: Come posso creare una previsione del consumo di porte che preveda la disponibilità delle risorse (porte) (in base al data center, al fornitore dello switch e alla velocità della porta)?
 
-* Quali porte potrebbero esaurire la capacità, fornendo velocità dei dati, data center, vendor e numero di porte host e storage?
-* Quali sono le tendenze della capacità delle porte dello switch nel tempo?
+* Quali porte rischiano di esaurire la loro capacità, in base alla velocità dei dati, al data center, al fornitore e al numero di porte host e di archiviazione?
+* Quali sono le tendenze nel tempo della capacità delle porte degli switch?
 * Quali sono le velocità delle porte?
-* Quale tipo di capacità delle porte è necessaria e quale organizzazione sta per esaurire un determinato tipo di porta o fornitore?
-* Qual è il momento migliore per acquistare tale capacità e renderla disponibile?
+* Quale tipo di capacità portuale è necessaria e quale organizzazione sta per esaurire un certo tipo di porto o fornitore?
+* Qual è il momento ottimale per acquistare tale capacità e renderla disponibile?
 
 
 
 
-==== Modello di dati qtree Capacity
+==== Modello di dati di capacità Qtree
 
-Consente di trend dell'utilizzo del qtree (con dati come capacità utilizzata e allocata) nel tempo. È possibile visualizzare le informazioni in base a diverse dimensioni, ad esempio per entità aziendale, applicazione, Tier e livello di servizio. Puoi rispondere alle seguenti domande utilizzando questo modello di dati:
+Consente di tracciare l'andamento dell'utilizzo di qtree (con dati quali la capacità utilizzata rispetto a quella assegnata) nel tempo.  È possibile visualizzare le informazioni in base a diverse dimensioni, ad esempio per entità aziendale, applicazione, livello e livello di servizio.  Utilizzando questo modello di dati è possibile rispondere alle seguenti domande:
 
 * Qual è la capacità utilizzata per i qtree rispetto ai limiti impostati per applicazione o entità aziendale?
-* Quali sono le tendenze della nostra capacità utilizzata e gratuita, in modo da poter pianificare la capacità?
-* Quali entità aziendali utilizzano la capacità maggiore?
-* Quali applicazioni consumano il maggior numero di capacità?
+* Quali sono le tendenze della nostra capacità utilizzata e libera in modo da poter pianificare la capacità?
+* Quali entità aziendali stanno utilizzando la maggiore capacità?
+* Quali applicazioni consumano più capacità?
 
 
 
 
-==== Modello di dati della capacità delle macchine virtuali
+==== Modello di dati di capacità della VM
 
-Consente di creare report sull'ambiente virtuale e sull'utilizzo della capacità. Questo modello di dati consente di creare report sulle modifiche dell'utilizzo della capacità nel tempo per le macchine virtuali e gli archivi di dati. Il modello di dati fornisce anche dati di thin provisioning e chargeback delle macchine virtuali.
+Consente di segnalare l'ambiente virtuale e l'utilizzo della sua capacità.  Questo modello di dati consente di segnalare le variazioni nell'utilizzo della capacità nel tempo per VM e archivi dati.  Il modello di dati fornisce anche dati di thin provisioning e di chargeback delle macchine virtuali.
 
-* Come è possibile determinare il chargeback della capacità in base alla capacità fornita a macchine virtuali e archivi dati?
-* Quale capacità non viene utilizzata dalle macchine virtuali e quale porzione di inutilizzato è libera, orfana o di altro tipo?
-* Quali sono i requisiti per l'acquisto in base alle tendenze di consumo?
-* Quali sono i risparmi in termini di efficienza dello storage ottenuti utilizzando le tecnologie di thin provisioning e deduplica dello storage?
-
-
-Le capacità del modello di dati della capacità della macchina virtuale sono prese dai dischi virtuali (VMDK). Ciò significa che la dimensione di provisioning di una macchina virtuale che utilizza il modello di dati della capacità della macchina virtuale corrisponde alla dimensione dei dischi virtuali. Si tratta di un'operazione diversa dalla capacità sottoposta a provisioning nella vista Virtual Machine (macchine virtuali) di Data Infrastructure Insights, che mostra le dimensioni del provisioning per la macchina virtuale stessa.
+* Come posso determinare il chargeback della capacità in base alla capacità fornita alle VM e agli archivi dati?
+* Quale capacità non viene utilizzata dalle VM e quale parte inutilizzata è libera, orfana o altro?
+* Cosa dobbiamo acquistare in base alle tendenze di consumo?
+* Quali risparmi in termini di efficienza di storage si ottengono utilizzando le tecnologie di thin provisioning e deduplicazione dello storage?
 
 
+Le capacità nel modello di dati VM Capacity vengono ricavate dai dischi virtuali (VMDK).  Ciò significa che la dimensione fornita di una VM utilizzando il modello di dati Capacità VM è la dimensione dei suoi dischi virtuali.  Questa è diversa dalla capacità fornita nella vista Macchine virtuali in Data Infrastructure Insights, che mostra la dimensione fornita per la VM stessa.
 
-==== Modello di dati Volume Capacity
 
-Permette di analizzare tutti gli aspetti dei volumi sul tenant e di organizzare i dati per vendor, modello, Tier, livello di servizio e data center.
 
-È possibile visualizzare la capacità relativa ai volumi orfani, ai volumi inutilizzati e ai volumi di protezione (utilizzati per la replica). È inoltre possibile visualizzare diverse tecnologie di volume (iSCSI o FC) e confrontare volumi virtuali con volumi non virtuali per problemi di virtualizzazione degli array.
+==== Modello di dati di capacità del volume
 
-Questo modello di dati consente di rispondere a domande simili a quelle riportate di seguito:
+Consente di analizzare tutti gli aspetti dei volumi sul tenant e di organizzare i dati in base a fornitore, modello, livello, livello di servizio e data center.
+
+È possibile visualizzare la capacità relativa ai volumi orfani, ai volumi inutilizzati e ai volumi di protezione (utilizzati per la replica).  È inoltre possibile visualizzare diverse tecnologie di volume (iSCSI o FC) e confrontare volumi virtuali con volumi non virtuali per problemi di virtualizzazione degli array.
+
+Con questo modello di dati puoi rispondere a domande simili alle seguenti:
 
 * Quali volumi hanno un utilizzo superiore a una soglia predefinita?
-* Qual è la tendenza del mio data center per quanto riguarda la capacità dei volumi orfani?
-* Quanta capacità del mio data center è virtualizzata o con thin provisioning?
-* Quanta capacità del data center deve essere riservata alla replica?
+* Qual è la tendenza nel mio data center per quanto riguarda la capacità dei volumi orfani?
+* Quanta capacità del mio data center è virtualizzata o sottoposta a thin provisioning?
+* Quanta capacità del mio data center deve essere riservata alla replica?
 
 
 
 
-=== Modello di dati di chargeback
+=== Modello di dati di addebito
 
-Consente di rispondere alle domande sulla capacità utilizzata e allocata sulle risorse di storage (volumi, volumi interni e qtree). Questo modello di dati fornisce informazioni di chargeback della capacità dello storage e di responsabilità per host, applicazioni ed entità aziendali e include dati attuali e storici. I dati dei report possono essere classificati in base al livello di servizio e al livello di storage.
+Consente di rispondere a domande sulla capacità utilizzata e sulla capacità allocata sulle risorse di archiviazione (volumi, volumi interni e qtree).  Questo modello di dati fornisce informazioni sulla capacità di storage e sulla responsabilità per host, applicazioni ed entità aziendali e include sia dati attuali che storici.  I dati del report possono essere classificati in base al livello di servizio e al livello di archiviazione.
 
-È possibile utilizzare questo modello di dati per generare report di chargeback individuando la quantità di capacità utilizzata da un'entità aziendale. Questo modello di dati consente di creare report unificati di più protocolli (tra cui NAS, SAN, FC e iSCSI).
+È possibile utilizzare questo modello di dati per generare report di addebito in conto individuando la quantità di capacità utilizzata da un'entità aziendale.  Questo modello di dati consente di creare report unificati di più protocolli (tra cui NAS, SAN, FC e iSCSI).
 
-* Per lo storage senza volumi interni, i report di chargeback mostrano il chargeback in base ai volumi.
-* Per lo storage con volumi interni:
+* Per l'archiviazione senza volumi interni, i report di addebito mostrano l'addebito in base ai volumi.
+* Per l'archiviazione con volumi interni:
 +
-** Se le entità aziendali sono assegnate ai volumi, i report di chargeback mostrano il chargeback per volumi.
-** Se le entità di business non sono assegnate ai volumi ma assegnate ai qtree, i report di chargeback mostrano il chargeback per qtree.
-** Se le entità di business non sono assegnate ai volumi e non alle qtree, i report di chargeback mostrano il volume interno.
-** La decisione se mostrare il chargeback per volume, qtree o volume interno viene presa per ogni volume interno, pertanto è possibile che diversi volumi interni nello stesso pool di storage mostrino il chargeback a diversi livelli.
+** Se le entità aziendali sono assegnate ai volumi, i report di addebito mostrano l'addebito in base ai volumi.
+** Se le entità aziendali non sono assegnate ai volumi ma ai qtree, i report di addebito mostrano l'addebito per qtree.
+** Se le entità aziendali non sono assegnate a volumi e non sono assegnate a qtree, i report di addebito mostrano il volume interno.
+** La decisione se visualizzare il chargeback per volume, qtree o volume interno viene presa per ciascun volume interno, quindi è possibile che diversi volumi interni nello stesso pool di archiviazione visualizzino il chargeback a livelli diversi.
 
 
 
 
-I dati relativi alla capacità vengono eliminati dopo un intervallo di tempo predefinito. Per ulteriori informazioni, vedere processi di data warehouse.
+I dati sulla capacità vengono eliminati dopo un intervallo di tempo predefinito.  Per maggiori dettagli, vedere Processi del Data Warehouse.
 
-I report che utilizzano il modello di dati Chargeback potrebbero visualizzare valori diversi rispetto ai report che utilizzano il modello di dati Storage Capacity.
+I report che utilizzano il modello dati Chargeback potrebbero visualizzare valori diversi rispetto ai report che utilizzano il modello dati Storage Capacity.
 
-* Per gli array di storage che non sono sistemi di storage NetApp, i dati di entrambi i modelli di dati sono gli stessi.
-* Per i sistemi storage NetApp e Celerra, il modello di dati Chargeback utilizza un singolo layer (di volumi, volumi interni o qtree) per basare le proprie spese, mentre il modello di dati Storage Capacity utilizza più layer (di volumi e volumi interni) per basare le proprie spese.
+* Per gli array di storage che non sono sistemi di storage NetApp , i dati di entrambi i modelli di dati sono gli stessi.
+* Per i sistemi di storage NetApp e Celerra, il modello di dati Chargeback utilizza un singolo livello (di volumi, volumi interni o qtree) per basare i propri addebiti, mentre il modello di dati Storage Capacity utilizza più livelli (di volumi e volumi interni) per basare i propri addebiti.
 
 
 
 
 === Modello di dati di inventario
 
-Consente di rispondere a domande sulle risorse di inventario, tra cui host, sistemi storage, switch, dischi, nastri, qtree, quote, macchine virtuali e server e dispositivi generici. Il modello di dati di inventario include diversi sottomarini che consentono di visualizzare informazioni su repliche, percorsi FC, percorsi iSCSI, percorsi NFS e violazioni. Il modello di dati di inventario non include dati storici. Domande a cui puoi rispondere con questi dati
+Consente di rispondere a domande sulle risorse di inventario, tra cui host, sistemi di archiviazione, switch, dischi, nastri, qtree, quote, macchine virtuali e server e dispositivi generici.  Il modello di dati Inventory include diversi sottomart che consentono di visualizzare informazioni su repliche, percorsi FC, percorsi iSCSI, percorsi NFS e violazioni.  Il modello di dati di inventario non include dati storici.  Domande a cui puoi rispondere con questi dati
 
-* Quali risorse sono disponibili e dove si trovano?
+* Quali beni ho e dove sono?
 * Chi utilizza le risorse?
-* Quali tipi di dispositivi sono disponibili e quali sono i componenti di tali dispositivi?
-* Quanti host per sistema operativo sono disponibili e quante porte esistono su tali host?
-* Quali array di storage per vendor esistono in ogni data center?
-* Quanti switch per vendor ho in ogni data center?
-* Quante porte non sono concesse in licenza?
-* Quali nastri vendor utilizziamo e quante porte esistono su ciascun nastro?tutti i dispositivi generici identificati prima di iniziare a lavorare sui report?
-* Quali sono i percorsi tra host e volumi o nastri di storage?
-* Quali sono i percorsi tra dispositivi generici e volumi o nastri di storage?
+* Che tipo di dispositivi ho e quali sono i componenti di tali dispositivi?
+* Quanti host ho per sistema operativo e quante porte ci sono su quegli host?
+* Quali array di storage per fornitore sono presenti in ciascun data center?
+* Quanti switch per fornitore ho in ogni data center?
+* Quanti porti non sono autorizzati?
+* Quali nastri del fornitore stiamo utilizzando e quante porte sono presenti su ciascun nastro? Sono stati identificati tutti i dispositivi generici prima di iniziare a lavorare sui report?
+* Quali sono i percorsi tra host e volumi di archiviazione o nastri?
+* Quali sono i percorsi tra dispositivi generici e volumi di archiviazione o nastri?
 * Quante violazioni di ogni tipo ho per data center?
-* Per ciascun volume replicato, quali sono i volumi di origine e di destinazione?
-* Sono presenti incompatibilità del firmware o discorrispondenze della velocità delle porte tra HBA host Fibre Channel e switch?
+* Per ogni volume replicato, quali sono i volumi di origine e di destinazione?
+* Ci sono incompatibilità di firmware o discrepanze di velocità delle porte tra gli HBA host Fibre Channel e gli switch?
 
 
 
 
-=== Modello di dati sulle performance
+=== Modello di dati sulle prestazioni
 
-Consente di rispondere a domande sulle performance di volumi, volumi applicativi, volumi interni, switch, applicazioni, VM, VMDK, ESX rispetto a VM, host e nodi applicativi. Molti di questi report riportano i dati _Hourly_, _Daily_ o entrambi. Utilizzando questo modello di dati, è possibile creare report in grado di rispondere a diversi tipi di domande sulla gestione delle performance:
+Consente di rispondere a domande sulle prestazioni di volumi, volumi applicativi, volumi interni, switch, applicazioni, VM, VMDK, ESX rispetto a VM, host e nodi applicativi.  Molti di questi riportano dati _orari_, dati _giornalieri_ o entrambi.  Utilizzando questo modello di dati, è possibile creare report che rispondono a diversi tipi di domande sulla gestione delle prestazioni:
 
-* Quali volumi o volumi interni non sono stati utilizzati o a cui non è stato effettuato l'accesso durante un periodo specifico?
-* Possiamo individuare eventuali errori di configurazione dello storage per un'applicazione (non utilizzata)?
-* Qual è stato il modello generale di comportamento di accesso per un'applicazione?
-* I volumi a più livelli sono assegnati in modo appropriato per una data applicazione?
-* Potremmo utilizzare uno storage più conveniente per un'applicazione attualmente in esecuzione senza alcun impatto sulle performance delle applicazioni?
-* Quali sono le applicazioni che producono più accessi allo storage attualmente configurato?
-
-
-Quando si utilizzano le tabelle delle prestazioni dello switch, è possibile ottenere le seguenti informazioni:
-
-* Il traffico host attraverso le porte connesse è bilanciato?
-* Quali switch o porte presentano un elevato numero di errori?
-* Quali sono gli switch più utilizzati in base alle performance delle porte?
-* Quali sono gli switch sottoutilizzati in base alle performance delle porte?
-* Qual è il throughput di tendenza dell'host in base alle performance delle porte?
-* Qual è l'utilizzo delle performance degli ultimi X giorni per uno specifico host, sistema storage, nastro o switch?
-* Quali dispositivi producono traffico su uno switch specifico (ad esempio, quali dispositivi sono responsabili dell'utilizzo di uno switch altamente utilizzato)?
-* Qual è il throughput per una specifica business unit nel nostro ambiente?
+* Quali volumi o volumi interni non sono stati utilizzati o consultati durante un periodo specifico?
+* Possiamo individuare eventuali errori di configurazione per l'archiviazione di un'applicazione (non utilizzata)?
+* Qual era il modello generale di comportamento di accesso per un'applicazione?
+* I volumi a livelli sono assegnati in modo appropriato per una determinata applicazione?
+* Potremmo utilizzare uno spazio di archiviazione più economico per un'applicazione attualmente in esecuzione senza compromettere le prestazioni dell'applicazione?
+* Quali sono le applicazioni che generano più accessi allo storage attualmente configurato?
 
 
-Quando si utilizzano le tabelle delle prestazioni dei dischi, è possibile ottenere le seguenti informazioni:
+Utilizzando le tabelle delle prestazioni dello switch, è possibile ottenere le seguenti informazioni:
 
-* Qual è il throughput per un pool di storage specifico in base ai dati sulle performance dei dischi?
-* Qual è il pool di storage più utilizzato?
-* Qual è l'utilizzo medio del disco per uno storage specifico?
-* Qual è la tendenza all'utilizzo di un sistema storage o di un pool di storage in base ai dati sulle performance dei dischi?
-* Qual è l'andamento dell'utilizzo del disco per uno specifico pool di storage?
+* Il traffico del mio host attraverso le porte connesse è bilanciato?
+* Quali switch o porte presentano un numero elevato di errori?
+* Quali sono gli switch più utilizzati in base alle prestazioni delle porte?
+* Quali sono gli switch sottoutilizzati in base alle prestazioni delle porte?
+* Qual è l'andamento della produttività dell'host in base alle prestazioni della porta?
+* Qual è stato l'utilizzo delle prestazioni negli ultimi X giorni per un host, un sistema di archiviazione, un nastro o uno switch specificato?
+* Quali dispositivi producono traffico su uno switch specifico (ad esempio, quali dispositivi sono responsabili dell'utilizzo di uno switch molto utilizzato)?
+* Qual è la produttività di una specifica unità aziendale nel nostro ambiente?
 
 
-Quando si utilizzano le tabelle delle performance di VM e VMDK, è possibile ottenere le seguenti informazioni:
+Utilizzando le tabelle delle prestazioni del disco, è possibile ottenere le seguenti informazioni:
+
+* Qual è la produttività per un pool di archiviazione specificato in base ai dati sulle prestazioni del disco?
+* Qual è il pool di archiviazione più utilizzato?
+* Qual è l'utilizzo medio del disco per uno specifico storage?
+* Qual è la tendenza di utilizzo di un sistema di archiviazione o di un pool di archiviazione in base ai dati sulle prestazioni del disco?
+* Qual è l'andamento dell'utilizzo del disco per uno specifico pool di archiviazione?
+
+
+Quando si utilizzano le tabelle delle prestazioni VM e VMDK, è possibile ottenere le seguenti informazioni:
 
 * Il mio ambiente virtuale funziona in modo ottimale?
-* Quali VMDK stanno riportando i carichi di lavoro più elevati?
-* Come posso utilizzare le performance riportate dai VMD mappati a diversi datastore per prendere decisioni sul re-tiering.
+* Quali VMDK segnalano i carichi di lavoro più elevati?
+* Come posso utilizzare le prestazioni segnalate dai VMD mappati su diversi datastore per prendere decisioni sulla riorganizzazione in livelli?
 
 
-Il modello di dati sulle performance include informazioni che consentono di determinare l'adeguatezza dei Tier, le configurazioni errate dello storage per le applicazioni e gli ultimi tempi di accesso dei volumi e dei volumi interni. Questo modello di dati fornisce dati quali tempi di risposta, IOPS, throughput, numero di scritture in sospeso e stato di accesso.
-
-
-
-=== Modello di dati sull'efficienza dello storage
-
-Consente di tenere traccia del potenziale e del punteggio di efficienza dello storage nel tempo. Questo modello di dati memorizza le misurazioni non solo della capacità fornita, ma anche della quantità utilizzata o consumata (la misurazione fisica). Ad esempio, quando il thin provisioning è abilitato, Data Infrastructure Insights indica la capacità acquisita dal dispositivo. È inoltre possibile utilizzare questo modello per determinare l'efficienza quando la deduplica è attivata. Puoi rispondere a diverse domande utilizzando il data mart sull'efficienza dello storage:
-
-* Quali sono i nostri risparmi in termini di efficienza dello storage derivanti dall'implementazione delle tecnologie di thin provisioning e deduplica?
-* Quali sono i risparmi in termini di storage nei data center?
-* In base alle tendenze storiche della capacità, quando è necessario acquistare storage aggiuntivo?
-* Quale sarebbe il guadagno di capacità se si abilassero tecnologie come il thin provisioning e la deduplica?
-* Per quanto riguarda la capacità dello storage, sono a rischio adesso?
+Il modello di dati Performance include informazioni che aiutano a determinare l'adeguatezza dei livelli, le configurazioni errate di archiviazione per le applicazioni e gli orari dell'ultimo accesso dei volumi e dei volumi interni.  Questo modello di dati fornisce dati quali tempi di risposta, IOPS, throughput, numero di scritture in sospeso e stato di accesso.
 
 
 
+=== Modello di dati di efficienza di archiviazione
 
-=== Tabelle di dimensioni e fatti del modello di dati
+Consente di monitorare il punteggio e il potenziale di efficienza dello storage nel tempo.  Questo modello di dati memorizza le misurazioni non solo della capacità fornita, ma anche della quantità utilizzata o consumata (la misurazione fisica).  Ad esempio, quando è abilitato il thin provisioning, Data Infrastructure Insights indica quanta capacità viene utilizzata dal dispositivo.  È possibile utilizzare questo modello anche per determinare l'efficienza quando la deduplicazione è abilitata.  Utilizzando il data mart Storage Efficiency è possibile rispondere a diverse domande:
 
-Ogni modello di dati include tabelle di fatti e dimensioni.
-
-* Tabelle dei fatti: Contengono dati misurati, ad esempio quantità, capacità raw e utilizzabile. Contiene chiavi esterne per dimensionare le tabelle.
-* Dimension tables (tabelle delle dimensioni): Contiene informazioni descrittive su fatti, ad esempio, data center e business unit. Una dimensione è una struttura, spesso composta da gerarchie, che classifica i dati. Gli attributi dimensionali aiutano a descrivere i valori dimensionali.
-
-
-Utilizzando attributi di dimensione diversi o multipli (visti come colonne nei report), si creano report che accedono ai dati per ogni dimensione descritta nel modello di dati.
-
+* Quali sono i risparmi in termini di efficienza di storage ottenuti grazie all'implementazione di tecnologie di thin provisioning e deduplicazione?
+* Quali sono i risparmi di spazio di archiviazione nei data center?
+* In base ai trend storici della capacità, quando è necessario acquistare ulteriore spazio di archiviazione?
+* Quale sarebbe il guadagno di capacità se abilitassimo tecnologie come il thin provisioning e la deduplicazione?
+* Per quanto riguarda la capacità di archiviazione, sono a rischio adesso?
 
 
-=== Colori utilizzati negli elementi del modello di dati
 
-I colori sugli elementi del modello di dati hanno indicazioni diverse.
 
-* Risorse gialle: Rappresentano le misurazioni.
-* Risorse non gialle: Rappresentano gli attributi. Questi valori non vengono aggregati.
+=== Tabelle dei fatti e delle dimensioni del modello di dati
+
+Ogni modello di dati include sia tabelle dei fatti che tabelle delle dimensioni.
+
+* Tabelle dei fatti: contengono dati misurati, ad esempio quantità, capacità grezza e utilizzabile.  Contiene chiavi esterne per le tabelle delle dimensioni.
+* Tabelle dimensionali: contengono informazioni descrittive sui fatti, ad esempio data center e unità aziendali.  Una dimensione è una struttura, spesso composta da gerarchie, che categorizza i dati.  Gli attributi dimensionali aiutano a descrivere i valori dimensionali.
+
+
+Utilizzando attributi di dimensione diversi o multipli (visualizzati come colonne nei report), è possibile creare report che accedono ai dati per ciascuna dimensione descritta nel modello di dati.
+
+
+
+=== Colori utilizzati negli elementi del modello dati
+
+I colori sugli elementi del modello dati hanno indicazioni diverse.
+
+* Risorse gialle: rappresentano le misurazioni.
+* Risorse non gialle: rappresentano attributi.  Questi valori non si sommano.
 
 
 
 
 === Utilizzo di più modelli di dati in un unico report
 
-In genere, si utilizza un modello di dati per ogni report. Tuttavia, è possibile scrivere un report che combina i dati di più modelli di dati.
+In genere, si utilizza un modello di dati per report.  Tuttavia, è possibile scrivere un report che combini dati provenienti da più modelli di dati.
 
-Per scrivere un report che combina dati provenienti da più modelli di dati, scegliere uno dei modelli di dati da utilizzare come base, quindi scrivere query SQL per accedere ai dati dai data mart aggiuntivi. È possibile utilizzare la funzionalità di Unione SQL per combinare i dati delle diverse query in una singola query che è possibile utilizzare per scrivere il report.
+Per scrivere un report che combina dati provenienti da più modelli di dati, scegli uno dei modelli di dati da utilizzare come base, quindi scrivi query SQL per accedere ai dati dai data mart aggiuntivi.  È possibile utilizzare la funzionalità SQL Join per combinare i dati provenienti da diverse query in un'unica query che è possibile utilizzare per scrivere il report.
 
-Ad esempio, supponiamo di voler utilizzare la capacità corrente per ciascun array di storage e di voler acquisire annotazioni personalizzate sugli array. È possibile creare il report utilizzando il modello di dati Storage Capacity. È possibile utilizzare gli elementi delle tabelle capacità e dimensioni correnti e aggiungere una query SQL separata per accedere alle informazioni sulle annotazioni nel modello di dati di inventario. Infine, è possibile combinare i dati collegando i dati dello storage di inventario alla tabella Storage Dimension utilizzando il nome dello storage e i criteri di Unione.
+Ad esempio, supponiamo di voler conoscere la capacità corrente di ogni array di archiviazione e di voler acquisire annotazioni personalizzate sugli array.  È possibile creare il report utilizzando il modello di dati Capacità di archiviazione.  È possibile utilizzare gli elementi delle tabelle Capacità corrente e Dimensioni e aggiungere una query SQL separata per accedere alle informazioni sulle annotazioni nel modello di dati Inventario.  Infine, è possibile combinare i dati collegando i dati di archiviazione dell'inventario alla tabella delle dimensioni di archiviazione utilizzando il nome dell'archiviazione e i criteri di unione.

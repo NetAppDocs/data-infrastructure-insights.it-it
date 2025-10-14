@@ -2,42 +2,42 @@
 sidebar: sidebar 
 permalink: task_configure_data_collectors.html 
 keywords: acquisition, AU, data collector, collector, notification, notify, 
-summary: Istruzioni generali per il data collector 
+summary: Istruzioni generali per la raccolta dati 
 ---
-= Configurazione di Data Collector
+= Configurazione dei raccoglitori di dati
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-È possibile configurare Data Collector nell'ambiente Data Infrastructure Insights per raccogliere dati dai dispositivi del data center.
+È possibile configurare i Data Collector nel proprio ambiente Data Infrastructure Insights per raccogliere dati dai dispositivi nel data center.
 
 .Prima di iniziare
-* È necessario aver configurato un'unità di acquisizione prima di iniziare la raccolta dei dati.
-* Sono necessarie le credenziali per i dispositivi da cui si stanno raccogliendo i dati.
-* Per tutti i dispositivi da cui si stanno raccogliendo i dati sono necessari indirizzi di rete, informazioni sull'account e password.
+* Prima di poter iniziare a raccogliere dati, è necessario aver configurato un'unità di acquisizione.
+* Sono necessarie le credenziali per i dispositivi da cui si raccolgono i dati.
+* Per tutti i dispositivi da cui raccogli dati sono richiesti gli indirizzi di rete, le informazioni sull'account e le password.
 
 
-.Fasi
-. Dal menu Data Infrastructure Insights (analisi dell'infrastruttura dati), fare clic su *Observability (osservabilità) > Collector* (collezionisti)
+.Passi
+. Dal menu Data Infrastructure Insights , fare clic su *Osservabilità > Collettori*
 +
-Il sistema visualizza i Data Collector disponibili organizzati in base al vendor.
+Il sistema visualizza i Data Collector disponibili, ordinati per fornitore.
 
-. Fare clic su *+ Collector* e selezionare il data collector da configurare.
+. Fare clic su *+ Collector* e selezionare il raccoglitore dati da configurare.
 +
-Nella finestra di dialogo è possibile configurare il data collector e aggiungere un'unità di acquisizione.
+Nella finestra di dialogo è possibile configurare il raccoglitore dati e aggiungere un'unità di acquisizione.
 
-. Inserire un nome per il data collector.
-. Fare clic su *Advanced Configuration* (Configurazione avanzata) per aggiungere ulteriori campi di configurazione. (Non tutti i data collettori richiedono una configurazione avanzata).
-. Fare clic su *Test Configuration* per verificare che il data collector sia configurato correttamente.
-. Fare clic su *Aggiungi Collector* per salvare la configurazione e aggiungere il data collector al tenant di Data Infrastructure Insights.
-
-
-Potrebbero essere necessari fino a due periodi di polling prima che i dati del servizio vengano visualizzati in dashboard o disponibili per la query.
-
-* primo sondaggio di inventario: immediatamente
-* 1° sondaggio sui dati delle performance per stabilire un riferimento: immediatamente dopo il sondaggio dell'inventario
-* secondo sondaggio sulle performance: entro 15 secondi dal completamento del primo sondaggio sulle performance
+. Inserisci un nome per il raccoglitore dati.
+. Fare clic su *Configurazione avanzata* per aggiungere ulteriori campi di configurazione.  (Non tutti i raccoglitori di dati richiedono una configurazione avanzata.)
+. Fare clic su *Test configurazione* per verificare che il raccoglitore dati sia configurato correttamente.
+. Fare clic su *Aggiungi raccoglitore* per salvare la configurazione e aggiungere il raccoglitore dati al tenant di Data Infrastructure Insights .
 
 
-Il polling procede quindi in base agli intervalli di polling delle performance e dell'inventario configurati.
+Potrebbero essere necessari fino a due periodi di sondaggio prima che i dati del servizio vengano visualizzati nelle dashboard o siano disponibili per l'interrogazione.
+
+* 1° sondaggio di inventario: immediatamente
+* 1° sondaggio sui dati delle prestazioni per stabilire una linea di base: subito dopo il sondaggio dell'inventario
+* 2° sondaggio sulle prestazioni: entro 15 secondi dal completamento del 1° sondaggio sulle prestazioni
+
+
+Il polling procede quindi in base agli intervalli di polling dell'inventario e delle prestazioni configurati.

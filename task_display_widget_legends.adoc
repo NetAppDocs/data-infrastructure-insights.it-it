@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_display_widget_legends.html 
-summary: Visualizzazione di legende sui widget della dashboard. 
+summary: Visualizzazione delle legende sui widget della dashboard. 
 keywords: dashboard, widget, legends 
 ---
 = Visualizzazione delle legende dei widget
@@ -12,8 +12,8 @@ keywords: dashboard, widget, legends
 [role="lead"]
 I widget sui dashboard possono essere visualizzati con o senza legende.
 
-Quando si visualizza la dashboard, le legende nei widget possono essere attivate o disattivate facendo clic sul pulsante *Opzioni* sul widget e selezionando *Mostra legende* nel menu.
+Quando si visualizza la dashboard, è possibile attivare o disattivare le legende nei widget facendo clic sul pulsante *Opzioni* sul widget e selezionando *Mostra legende* nel menu.
 
 Man mano che i dati visualizzati nel widget cambiano, la legenda del widget viene aggiornata dinamicamente.
 
-Quando vengono visualizzate le legende, se è possibile accedere alla pagina di destinazione della risorsa indicata dalla legenda, la legenda viene visualizzata come collegamento alla pagina della risorsa.
+Quando vengono visualizzate le legende, se è possibile raggiungere la pagina di destinazione della risorsa indicata dalla legenda, la legenda verrà visualizzata come collegamento alla pagina di tale risorsa.

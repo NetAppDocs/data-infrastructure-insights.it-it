@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_configure_acquisition_unit.html 
 keywords: Acquisition Unit, AU, install, configure, Linux, add, remove, uninstall, delete, deleting, move, moving 
-summary: Unità di acquisizione installazione, disinstallazione, configurazione del supporto proxy e altro ancora su Windows e Linux. 
+summary: Installazione, disinstallazione, configurazione del supporto proxy e altro ancora di Acquisition Unit su Windows e Linux. 
 ---
 = Configurazione delle unità di acquisizione
 :hardbreaks:
@@ -10,46 +10,46 @@ summary: Unità di acquisizione installazione, disinstallazione, configurazione 
 
 
 [role="lead"]
-Data Infrastructure Insights raccoglie i dati dei dispositivi utilizzando una o più unità di acquisizione installate sui server locali. Ogni unità di acquisizione può ospitare più Data Collector, che inviano metriche di dispositivo a Data Infrastructure Insights per l'analisi.
+Data Infrastructure Insights raccoglie i dati dei dispositivi utilizzando una o più unità di acquisizione installate su server locali.  Ogni unità di acquisizione può ospitare più Data Collector, che inviano le metriche dei dispositivi a Data Infrastructure Insights per l'analisi.
 
-In questo argomento viene descritto come aggiungere unità di acquisizione e vengono descritte le procedure aggiuntive necessarie quando l'ambiente utilizza un proxy.
+In questo argomento viene descritto come aggiungere unità di acquisizione e vengono descritti i passaggi aggiuntivi richiesti quando l'ambiente utilizza un proxy.
 
 
-NOTE: Per un controllo accurato e la creazione di report dei dati, si consiglia vivamente di sincronizzare l'ora sulla macchina dell'unità di acquisizione utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
+NOTE: Per un audit e una rendicontazione dei dati accurati, si consiglia vivamente di sincronizzare l'ora sulla macchina dell'unità di acquisizione utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
 
-Informazioni sulla sicurezza di Data Infrastructure Insights link:security_overview.html["qui"].
+Scopri di più sulla sicurezza Data Infrastructure Insightslink:security_overview.html["Qui"] .
 
 
 
 == Aggiunta di un'unità di acquisizione Linux
 
 .Prima di iniziare
-* Se il sistema utilizza un proxy, è necessario impostare le variabili di ambiente proxy prima di installare l'unità di acquisizione. Per ulteriori informazioni, vedere <<Impostazione delle variabili di ambiente proxy>>.
+* Se il sistema utilizza un proxy, è necessario impostare le variabili di ambiente del proxy prima di installare l'unità di acquisizione. Per ulteriori informazioni, consultare <<Impostazione delle variabili di ambiente proxy>> .
 
 
-.Procedura per l'installazione dell'unità di acquisizione Linux
-. Accedere come Amministratore o Proprietario dell'account al proprio ambiente Data Infrastructure Insights.
-. Fare clic su *osservabilità > Collector > unità di acquisizione > +unità di acquisizione*
+.Passaggi per l'installazione dell'unità di acquisizione Linux
+. Accedi come amministratore o proprietario dell'account al tuo ambiente Data Infrastructure Insights .
+. Fare clic su *Osservabilità > Collezionisti > Unità di acquisizione > +Unità di acquisizione*
 +
-Viene visualizzata la finestra di dialogo _Install Acquisition Unit_ (Installa unità di acquisizione). Scegli Linux.
+Il sistema visualizza la finestra di dialogo _Installa unità di acquisizione_.  Scegli Linux.
 
 
 
 [role="thumb"]
-image:NewLinuxAUInstall.png["Istruzioni Linux AU"]
+image:NewLinuxAUInstall.png["Istruzioni per Linux AU"]
 
-. Verificare che il server o la macchina virtuale che ospita l'unità di acquisizione soddisfi i requisiti di sistema consigliati.
-. Verificare che sul server sia in esecuzione una versione supportata di Linux. Fare clic su _versioni del sistema operativo supportate (i)_ per un elenco delle versioni supportate.
-. Copiare il frammento del comando di installazione nella finestra di dialogo in una finestra terminale sul server o sulla macchina virtuale che ospiterà l'unità di acquisizione.
-. Incollare ed eseguire il comando nella shell di Bash.
+. Verificare che il server o la VM che ospita l'unità di acquisizione soddisfi i requisiti di sistema consigliati.
+. Verificare che sul server sia installata una versione supportata di Linux.  Fare clic su _Versioni del sistema operativo supportate (i)_ per un elenco delle versioni supportate.
+. Copiare il frammento di comando Installazione nella finestra di dialogo in una finestra del terminale sul server o sulla macchina virtuale che ospiterà l'unità di acquisizione.
+. Incolla ed esegui il comando nella shell Bash.
 
 
-.Al termine
-* Fare clic su *osservabilità > Collector > unità di acquisizione* per controllare lo stato delle unità di acquisizione.
-* È possibile accedere ai registri delle unità di acquisizione all'indirizzo /var/log/netapp/cloudsights/acq/acq.log
+.Dopo aver finito
+* Fare clic su *Osservabilità > Collettori > Unità di acquisizione* per verificare lo stato delle Unità di acquisizione.
+* È possibile accedere ai registri dell'unità di acquisizione in /var/log/netapp/cloudinsights/acq/acq.log
 * Utilizzare il seguente script per controllare l'unità di acquisizione:
 +
-** cloudinsights-service.sh (arrestare, avviare, riavviare, controllare lo stato)
+** cloudinsights-service.sh (arresta, avvia, riavvia, controlla lo stato)
 
 
 * Utilizzare il seguente script per disinstallare l'unità di acquisizione:
@@ -63,117 +63,117 @@ image:NewLinuxAUInstall.png["Istruzioni Linux AU"]
 
 === Impostazione delle variabili di ambiente proxy
 
-Per gli ambienti che utilizzano un proxy, è necessario impostare le variabili di ambiente proxy prima di aggiungere l'unità di acquisizione. Le istruzioni per la configurazione del proxy sono disponibili nella finestra di dialogo _Add Acquisition Unit_ (Aggiungi unità di acquisizione).
+Per gli ambienti che utilizzano un proxy, è necessario impostare le variabili di ambiente del proxy prima di aggiungere l'unità di acquisizione.  Le istruzioni per la configurazione del proxy sono fornite nella finestra di dialogo _Aggiungi unità di acquisizione_.
 
-. Fare clic su + in _have a Proxy Server?_
-. Copiare i comandi in un editor di testo e impostare le variabili proxy in base alle necessità.
+. Fai clic su + in _Hai un server proxy?_
+. Copia i comandi in un editor di testo e imposta le variabili proxy secondo necessità.
 +
-Nota: Prestare attenzione alle restrizioni relative ai caratteri speciali nei campi del nome utente e della password del proxy: '%' e '!' sono consentiti nel campo nome utente. ':', '%' e '!' sono consentiti nel campo password.
+Nota: tieni presente le restrizioni sui caratteri speciali nei campi nome utente e password del proxy: nel campo nome utente sono consentiti '%' e '!'.  Nel campo password sono consentiti i caratteri ':', '%' e '!'.
 
 . Eseguire il comando modificato in un terminale utilizzando la shell Bash.
-. Installare il software dell'unità di acquisizione.
+. Installare il software Acquisition Unit.
 
 
 
 
-=== Configurazione del proxy
+=== Configurazione proxy
 
-L'unità di acquisizione utilizza l'autenticazione reciproca/a 2 vie per connettersi al server Data Infrastructure Insights. Il certificato client deve essere passato al server Data Infrastructure Insights per essere autenticato. A tal fine, è necessario impostare il proxy per inoltrare la richiesta https al server Data Infrastructure Insights senza decrittografare i dati.
+L'unità di acquisizione utilizza l'autenticazione reciproca/bidirezionale per connettersi al server Data Infrastructure Insights .  Per l'autenticazione, il certificato client deve essere trasmesso al server Data Infrastructure Insights .  Per raggiungere questo obiettivo, il proxy deve essere configurato per inoltrare la richiesta https al server Data Infrastructure Insights senza decrittografare i dati.
 
-Il modo più semplice per farlo è specificare la configurazione con caratteri jolly nel proxy/firewall per comunicare con Data Infrastructure Insights, ad esempio:
+Il modo più semplice per farlo è specificare la configurazione jolly nel proxy/firewall per comunicare con Data Infrastructure Insights, ad esempio:
 
  *.cloudinsights.netapp.com
 
-NOTE: L'uso di un asterisco (*) per i caratteri jolly è comune, ma la configurazione del proxy/firewall potrebbe utilizzare un formato diverso. Consultare la documentazione del proxy per verificare la correttezza delle specifiche dei caratteri jolly nell'ambiente in uso.
+NOTE: L'uso di un asterisco (*) come carattere jolly è comune, ma la configurazione del proxy/firewall potrebbe utilizzare un formato diverso.  Consultare la documentazione del proxy per garantire la corretta specifica dei caratteri jolly nel proprio ambiente.
 
-Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Knowledge base"] .
+Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Base di conoscenza"] .
 
 
 
 ==== Visualizzazione degli URL proxy
 
-È possibile visualizzare gli URL degli endpoint proxy facendo clic sul collegamento *Proxy Settings* (Impostazioni proxy) quando si sceglie un data collector durante l'acquisizione oppure sul collegamento _Proxy Settings_ (Impostazioni proxy) nella pagina *Help > Support* (Guida > supporto). Viene visualizzata una tabella simile alla seguente.
+Puoi visualizzare gli URL degli endpoint proxy facendo clic sul collegamento *Impostazioni proxy* quando scegli un raccoglitore dati durante l'onboarding oppure sul collegamento in _Impostazioni proxy_ nella pagina *Guida > Supporto*.  Viene visualizzata una tabella come la seguente.
 
 image:ProxyEndpoints_NewTable.png["Tabella degli endpoint proxy"]
 
-Se il tenant dispone di sicurezza del carico di lavoro, anche gli URL degli endpoint configurati verranno visualizzati in questo elenco.
+Se sul tenant è presente Workload Security, in questo elenco verranno visualizzati anche gli URL degli endpoint configurati.
 
 
 
 == Aggiunta di un'unità di acquisizione Windows
 
-.Procedura per l'installazione dell'unità di acquisizione Windows
+.Passaggi per l'installazione dell'unità di acquisizione Windows
 . Accedere al server/VM dell'unità di acquisizione come utente con autorizzazioni di amministratore.
-. Sul server, aprire una finestra del browser e accedere all'ambiente Data Infrastructure Insights come Amministratore o Proprietario dell'account.
-. Fare clic su *osservabilità > Collettori > unità di acquisizione > +unità di acquisizione* .
+. Su quel server, apri una finestra del browser e accedi al tuo ambiente Data Infrastructure Insights come amministratore o proprietario dell'account.
+. Fare clic su *Osservabilità > Collettori > Unità di acquisizione > +Unità di acquisizione*.
 +
-Viene visualizzata la finestra di dialogo _Install Acquisition Unit_ (Installa unità di acquisizione). Scegliere Windows.
+Il sistema visualizza la finestra di dialogo _Installa unità di acquisizione_.  Scegli Windows.
 
 
 
 [role="thumb"]
 image:NewWindowsAUInstall.png["Installazione di Windows AU"]
 
-. Verificare che il server o la macchina virtuale che ospita l'unità di acquisizione soddisfi i requisiti di sistema consigliati.
-. Verificare che sul server sia in esecuzione una versione supportata di Windows. Fare clic su _versioni del sistema operativo supportate (i)_ per un elenco delle versioni supportate.
-. Fare clic sul pulsante *Download Installer (Windows 64-bit)*.
-. Copiare la chiave di accesso. Ciò sarà necessario durante l'installazione.
+. Verificare che il server o la VM che ospita l'unità di acquisizione soddisfi i requisiti di sistema consigliati.
+. Verificare che sul server sia installata una versione supportata di Windows.  Fare clic su _Versioni del sistema operativo supportate (i)_ per un elenco delle versioni supportate.
+. Fare clic sul pulsante *Scarica programma di installazione (Windows a 64 bit)*.
+. Copia la chiave di accesso.  Ne avrai bisogno durante l'installazione.
 . Sul server/VM dell'unità di acquisizione, eseguire il programma di installazione scaricato.
 . Quando richiesto, incollare la chiave di accesso nella procedura guidata di installazione.
-. Durante l'installazione, verrà visualizzata l'opportunità di fornire le impostazioni del server proxy.
+. Durante l'installazione, ti verrà offerta l'opportunità di fornire le impostazioni del tuo server proxy.
 
 
-.Al termine
-* Fare clic su * > osservabilità > Collector > unità di acquisizione* per controllare lo stato delle unità di acquisizione.
-* È possibile accedere al log dell'unità di acquisizione in <install dir>/informazioni sul cloud/unità di acquisizione/log acq.log
-* Utilizzare il seguente script per arrestare, avviare, riavviare o controllare lo stato dell'unità di acquisizione:
+.Dopo aver finito
+* Fare clic su * > Osservabilità > Collettori > Unità di acquisizione* per verificare lo stato delle Unità di acquisizione.
+* È possibile accedere al registro dell'unità di acquisizione in <directory di installazione>\ Cloud Insights\Acquisition Unit\log\acq.log
+* Utilizzare lo script seguente per arrestare, avviare, riavviare o controllare lo stato dell'unità di acquisizione:
 +
  cloudinsights-service.sh
 
 
 
 
-=== Configurazione del proxy
+=== Configurazione proxy
 
-L'unità di acquisizione utilizza l'autenticazione reciproca/a 2 vie per connettersi al server Data Infrastructure Insights. Il certificato client deve essere passato al server Data Infrastructure Insights per essere autenticato. A tal fine, è necessario impostare il proxy per inoltrare la richiesta https al server Data Infrastructure Insights senza decrittografare i dati.
+L'unità di acquisizione utilizza l'autenticazione reciproca/bidirezionale per connettersi al server Data Infrastructure Insights .  Per l'autenticazione, il certificato client deve essere trasmesso al server Data Infrastructure Insights .  Per raggiungere questo obiettivo, il proxy deve essere configurato per inoltrare la richiesta https al server Data Infrastructure Insights senza decrittografare i dati.
 
-Il modo più semplice per farlo è specificare la configurazione con caratteri jolly nel proxy/firewall per comunicare con Data Infrastructure Insights, ad esempio:
+Il modo più semplice per farlo è specificare la configurazione jolly nel proxy/firewall per comunicare con Data Infrastructure Insights, ad esempio:
 
  *.cloudinsights.netapp.com
 
-NOTE: L'uso di un asterisco (*) per i caratteri jolly è comune, ma la configurazione del proxy/firewall potrebbe utilizzare un formato diverso. Consultare la documentazione del proxy per verificare la correttezza delle specifiche dei caratteri jolly nell'ambiente in uso.
+NOTE: L'uso di un asterisco (*) come carattere jolly è comune, ma la configurazione del proxy/firewall potrebbe utilizzare un formato diverso.  Consultare la documentazione del proxy per garantire la corretta specifica dei caratteri jolly nel proprio ambiente.
 
-Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Knowledge base"] .
+Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Base di conoscenza"] .
 
 
 
 ==== Visualizzazione degli URL proxy
 
-È possibile visualizzare gli URL degli endpoint proxy facendo clic sul collegamento *Proxy Settings* (Impostazioni proxy) quando si sceglie un data collector durante l'acquisizione oppure sul collegamento _Proxy Settings_ (Impostazioni proxy) nella pagina *Help > Support* (Guida > supporto). Viene visualizzata una tabella simile alla seguente.
+Puoi visualizzare gli URL degli endpoint proxy facendo clic sul collegamento *Impostazioni proxy* quando scegli un raccoglitore dati durante l'onboarding oppure sul collegamento in _Impostazioni proxy_ nella pagina *Guida > Supporto*.  Viene visualizzata una tabella come la seguente.
 
 image:ProxyEndpoints_NewTable.png["Tabella degli endpoint proxy"]
 
-Se il tenant dispone di sicurezza del carico di lavoro, anche gli URL degli endpoint configurati verranno visualizzati in questo elenco.
+Se sul tenant è presente Workload Security, in questo elenco verranno visualizzati anche gli URL degli endpoint configurati.
 
 
 
 == Disinstallazione di un'unità di acquisizione
 
-Per disinstallare il software dell'unità di acquisizione, procedere come indicato di seguito:
+Per disinstallare il software Acquisition Unit, procedere come segue:
 
 '''
-*Windows:*
+*Finestre:*
 
-Se si disinstalla un'unità di acquisizione *Windows*:
+Se si sta disinstallando un'unità di acquisizione *Windows*:
 
-. Sul server/VM dell'unità di acquisizione, aprire il pannello di controllo e scegliere *Disinstalla un programma*. Selezionare il programma Data Infrastructure Insights Acquisition Unit per la rimozione.
+. Sul server/VM dell'unità di acquisizione, aprire il Pannello di controllo e selezionare *Disinstalla un programma*.  Selezionare il programma Data Infrastructure Insights Acquisition Unit per la rimozione.
 . Fare clic su Disinstalla e seguire le istruzioni.
 
 
 '''
 *Linux:*
 
-Se si disinstalla un'unità di acquisizione *Linux*:
+Se si sta disinstallando un'unità di acquisizione *Linux*:
 
 . Sul server/VM dell'unità di acquisizione, eseguire il seguente comando:
 +
@@ -186,70 +186,70 @@ Se si disinstalla un'unità di acquisizione *Linux*:
 '''
 *Windows e Linux:*
 
-*Dopo* disinstallazione dell'AU:
+*Dopo* aver disinstallato l'AU:
 
-. In Data Infrastructure Insights, andare su *Observability > Collectors (osservabilità > Collector) e selezionare la scheda *Acquisition Units* (unità di acquisizione).
-. Fare clic sul pulsante Options (Opzioni) a destra dell'unità di acquisizione che si desidera disinstallare e selezionare _Delete_ (Elimina). È possibile eliminare un'unità di acquisizione solo se non vi sono raccoglitori di dati assegnati.
+. In Data Infrastructure Insights, vai su *Osservabilità > Collettori e seleziona la scheda *Unità di acquisizione*.
+. Fare clic sul pulsante Opzioni a destra dell'unità di acquisizione che si desidera disinstallare e selezionare _Elimina_.  È possibile eliminare un'unità di acquisizione solo se non le sono assegnati collettori di dati.
 
 
 
-NOTE: Non è possibile eliminare un'unità di acquisizione (AU) a cui sono collegati i collettori di dati. Spostare tutti i raccoglitori di dati dell'unità AU in un'altra unità AU (modificare il raccoglitore e selezionare semplicemente un'altra unità AU) prima di eliminare l'unità AU originale.
+NOTE: Non è possibile eliminare un'unità di acquisizione (AU) a cui sono collegati dei collettori dati.  Spostare tutti i raccoglitori di dati dell'AU in un'altra AU (modificare il raccoglitore e selezionare semplicemente un'AU diversa) prima di eliminare l'AU originale.
 
-Per la risoluzione del dispositivo viene utilizzata un'unità di acquisizione con una stella accanto. Prima di rimuovere questa AU, è necessario selezionare un'altra AU da utilizzare per la risoluzione del dispositivo. Passare il mouse su un'AU diversa e aprire il menu "tre punti" per selezionare "Usa per la risoluzione del dispositivo".
+Per la risoluzione del dispositivo viene utilizzata un'unità di acquisizione contrassegnata da una stella.  Prima di rimuovere questa AU, è necessario selezionarne un'altra da utilizzare per la risoluzione del dispositivo.  Passa il mouse su un'AU diversa e apri il menu "tre puntini" per selezionare "Usa per risoluzione dispositivo".
 
-image:AU_for_Device_Resolution.png["Au utilizzato per la risoluzione del dispositivo"]
+image:AU_for_Device_Resolution.png["AU utilizzato per la risoluzione del dispositivo"]
 
 
 
 == Reinstallazione di un'unità di acquisizione
 
-Per reinstallare un'unità di acquisizione sullo stesso server/macchina virtuale, attenersi alla seguente procedura:
+Per reinstallare un'unità di acquisizione sullo stesso server/VM, è necessario seguire questi passaggi:
 
 .Prima di iniziare
-Prima di reinstallare un'unità di acquisizione, è necessario configurare un'unità di acquisizione temporanea su un server/macchina virtuale separato.
+Prima di reinstallare un'unità di acquisizione, è necessario configurare un'unità di acquisizione temporanea su un server/VM separato.
 
-.Fasi
+.Passi
 . Accedere al server/VM dell'unità di acquisizione e disinstallare il software AU.
-. Accedere all'ambiente Data Infrastructure Insights e andare a *osservabilità > Collector*.
-. Per ciascun data collector, fare clic sul menu Options (Opzioni) a destra e selezionare _Edit_ (Modifica). Assegnare il data collector all'unità di acquisizione temporanea e fare clic su *Save* (Salva).
+. Accedi al tuo ambiente Data Infrastructure Insights e vai su *Osservabilità > Collettori*.
+. Per ogni raccoglitore di dati, fare clic sul menu Opzioni a destra e selezionare _Modifica_.  Assegnare il raccoglitore dati all'unità di acquisizione temporanea e fare clic su *Salva*.
 +
-È inoltre possibile selezionare più raccoglitori di dati dello stesso tipo e fare clic sul pulsante *azioni in blocco*. Scegliere _Edit_ e assegnare i data collezioner all'unità di acquisizione temporanea.
+È anche possibile selezionare più raccoglitori di dati dello stesso tipo e fare clic sul pulsante *Azioni in blocco*.  Selezionare _Modifica_ e assegnare i raccoglitori di dati all'Unità di acquisizione temporanea.
 
-. Dopo aver spostato tutti i raccoglitori di dati nell'unità di acquisizione temporanea, andare su *osservabilità > Collector* e selezionare la scheda *unità di acquisizione*.
-. Fare clic sul pulsante Options (Opzioni) a destra dell'unità di acquisizione che si desidera reinstallare e selezionare _Delete_ (Elimina). È possibile eliminare un'unità di acquisizione solo se non vi sono raccoglitori di dati assegnati.
-. È ora possibile reinstallare il software dell'unità di acquisizione sul server/VM originale. Fare clic su *+Acquisition Unit* (unità di acquisizione) e seguire le istruzioni riportate sopra per installare l'unità di acquisizione.
-. Una volta reinstallata l'unità di acquisizione, riassegnare i dati raccolti all'unità di acquisizione.
+. Dopo aver spostato tutti i collettori di dati nell'unità di acquisizione temporanea, andare su *Osservabilità > Collettori* e selezionare la scheda *Unità di acquisizione*.
+. Fare clic sul pulsante Opzioni a destra dell'unità di acquisizione che si desidera reinstallare e selezionare _Elimina_.  È possibile eliminare un'unità di acquisizione solo se non le sono assegnati collettori di dati.
+. Ora puoi reinstallare il software Acquisition Unit sul server/VM originale.  Fare clic su *+Unità di acquisizione* e seguire le istruzioni sopra riportate per installare l'Unità di acquisizione.
+. Una volta reinstallata l'Unità di acquisizione, riassegnare i raccoglitori di dati all'Unità di acquisizione.
 
 
 
 
 == Visualizzazione dei dettagli AU
 
-La pagina dei dettagli dell'unità di acquisizione (AU) fornisce dettagli utili per un AU e informazioni utili per la risoluzione dei problemi. La pagina dei dettagli AU contiene le seguenti sezioni:
+La pagina dei dettagli dell'Unità di acquisizione (AU) fornisce informazioni utili su un'AU, nonché informazioni utili per la risoluzione dei problemi.  La pagina dei dettagli dell'AU contiene le seguenti sezioni:
 
-* Una sezione *riepilogativa* che mostra quanto segue:
+* Una sezione *riepilogo* che mostra quanto segue:
 +
-** *Nome* e *IP* dell'unità di acquisizione
-** Connessione corrente *Stato* dell'AU
-** *Ultimo report* tempo di polling riuscito del data collector
-** Il *sistema operativo* della macchina AU
-** Qualsiasi *Nota* corrente per l'AU. Utilizzare questo campo per inserire un commento per l'AU. Il campo visualizza la nota aggiunta più di recente.
+** *Nome* e *IP* dell'Unità di acquisizione
+** Stato attuale della connessione dell'AU
+** *Ultimo report* tempo di polling del raccoglitore dati riuscito
+** Il *Sistema operativo* della macchina AU
+** Qualche *Nota* attuale per l'UA.  Utilizzare questo campo per inserire un commento per l'AU.  Il campo visualizza la nota aggiunta più di recente.
 
 
-* Una tabella dei *Data Collector* dell'AU che mostra, per ciascun data collector:
+* Una tabella dei *raccoglitori di dati* dell'AU che mostra, per ciascun raccoglitore di dati:
 +
-** *Nome* - fare clic su questo collegamento per accedere alla pagina dei dettagli del data collector con ulteriori informazioni
-** *Status* - informazioni sull'errore o sul successo
-** *Tipo* - fornitore/modello
-** Indirizzo *IP* del data collector
-** Livello di *impatto* corrente
-** Ora *ultima acquisizione* - l'ultima volta in cui il data collector è stato eseguito correttamente
+** *Nome* - Fai clic su questo collegamento per accedere alla pagina dei dettagli del raccoglitore dati con informazioni aggiuntive
+** *Stato* - Informazioni su successo o errore
+** *Tipo* - Fornitore/modello
+** Indirizzo *IP* del raccoglitore dei dati
+** Livello attuale di *impatto*
+** *Ultima acquisizione* - data dell'ultimo polling riuscito del raccoglitore dati
 
 
 
 
-image:AU_Detail_Example.png["Au Detail Page esempio"]
+image:AU_Detail_Example.png["Esempio di pagina dei dettagli AU"]
 
-Per ciascun data collector, è possibile fare clic sul menu "Three dots" (tre punti) per clonare, modificare, polling o eliminare il data collector. In questo elenco è inoltre possibile selezionare più data raccoglitori per eseguire azioni in blocco su di essi.
+Per ogni raccoglitore di dati, puoi cliccare sul menu "tre puntini" per clonare, modificare, interrogare o eliminare il raccoglitore di dati.  È anche possibile selezionare più raccoglitori di dati in questo elenco per eseguire su di essi azioni in blocco.
 
-Per riavviare l'unità di acquisizione, fare clic sul pulsante *Restart* (Riavvia) nella parte superiore della pagina. Selezionare questo pulsante per tentare di *ripristinare la connessione* all'AU in caso di problemi di connessione.
+Per riavviare l'Unità di acquisizione, fare clic sul pulsante *Riavvia* nella parte superiore della pagina.  Fai clic su questo pulsante per tentare di *Ripristinare la connessione* all'AU in caso di problemi di connessione.

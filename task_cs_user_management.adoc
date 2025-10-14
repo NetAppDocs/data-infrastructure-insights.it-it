@@ -2,17 +2,17 @@
 sidebar: sidebar 
 permalink: task_cs_user_management.html 
 keywords: Workload Security, User, Login, account, cloud secure 
-summary: Sicurezza del carico di lavoro gli account utente vengono gestiti tramite Data Infrastructure Insights User Management 
+summary: Gli account utente di Workload Security sono gestiti tramite la gestione degli utenti Data Infrastructure Insights 
 ---
-= Gestione utenti
+= Gestione degli utenti
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Gli account utente di sicurezza del carico di lavoro vengono gestiti tramite Data Infrastructure Insights.
+Gli account utente di Workload Security vengono gestiti tramite Data Infrastructure Insights.
 
-Data Infrastructure Insights fornisce quattro livelli di account utente: Proprietario dell'account, amministratore, utente e ospite. A ciascun account vengono assegnati livelli di autorizzazione specifici. Un account utente con privilegi di amministratore può creare o modificare gli utenti e assegnare a ciascun utente uno dei seguenti ruoli di workload Security:
+Data Infrastructure Insights fornisce quattro livelli di account utente: proprietario dell'account, amministratore, utente e ospite.  A ciascun account vengono assegnati livelli di autorizzazione specifici.  Un account utente con privilegi di amministratore può creare o modificare utenti e assegnare a ciascun utente uno dei seguenti ruoli di sicurezza del carico di lavoro:
 
 |===
 
@@ -20,23 +20,23 @@ Data Infrastructure Insights fornisce quattro livelli di account utente: Proprie
 | Ruolo | Accesso alla sicurezza del carico di lavoro 
 
 
-| Amministratore | È in grado di eseguire tutte le funzioni di workload Security, incluse quelle per Avvisi, analisi, raccolta dati, policy di risposta automatizzate e API per workload Security. Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di sicurezza del carico di lavoro. 
+| Amministratore | Può eseguire tutte le funzioni di sicurezza del carico di lavoro, comprese quelle per avvisi, analisi forense, raccoglitori di dati, criteri di risposta automatizzati e API per la sicurezza del carico di lavoro.  Un amministratore può anche invitare altri utenti, ma può assegnare solo ruoli di sicurezza del carico di lavoro. 
 
 
-| Utente | Consente di visualizzare e gestire gli avvisi e visualizzare le analisi. Il ruolo dell'utente può modificare lo stato degli avvisi, aggiungere una nota, creare snapshot manualmente e limitare l'accesso dell'utente. 
+| Utente | Può visualizzare e gestire gli avvisi e visualizzare le analisi forensi.  Il ruolo utente può modificare lo stato dell'avviso, aggiungere una nota, acquisire manualmente snapshot e limitare l'accesso utente. 
 
 
-| Ospite | Consente di visualizzare avvisi e analisi. Il ruolo ospite non può modificare lo stato degli avvisi, aggiungere una nota, creare snapshot manualmente o limitare l'accesso dell'utente. 
+| Ospite | È possibile visualizzare avvisi e analisi forensi.  Il ruolo ospite non può modificare lo stato dell'avviso, aggiungere una nota, acquisire manualmente snapshot o limitare l'accesso degli utenti. 
 |===
-.Fasi
-. Accedere a workload Security
-. Nel menu, fare clic su *Admin > User Management*
+.Passi
+. Accedi a Workload Security
+. Nel menu, fare clic su *Amministrazione > Gestione utenti*
 +
-Verrai inoltrato alla pagina Gestione utenti di Data Infrastructure Insights.
+Verrai indirizzato alla pagina Gestione utenti di Data Infrastructure Insights.
 
 . Selezionare il ruolo desiderato per ciascun utente.
 
 
-Durante l'aggiunta di un nuovo utente, è sufficiente selezionare il ruolo desiderato (di solito utente o ospite).
+Quando si aggiunge un nuovo utente, è sufficiente selezionare il ruolo desiderato (solitamente Utente o Ospite).
 
-Ulteriori informazioni sugli account utente e sui ruoli sono disponibili nella documentazione di Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["Ruolo dell'utente"].
+Ulteriori informazioni sugli account utente e sui ruoli sono disponibili in Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsights/concept_user_roles.html["Ruolo utente"] documentazione.

@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_efcm.html 
 keywords: data collector, Brocade, EFCM, 
-summary: Configurazione del data collector Brocade. 
+summary: Configurazione del raccoglitore dati Brocade . 
 ---
-= Configurazione del data collector Brocade Enterprise Fabric Connectivity Manager
+= Configurazione del raccoglitore dati Brocade Enterprise Fabric Connectivity Manager
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector Brocade Enterprise Fabric Connectivity Manager (EFCM) per rilevare l'inventario degli switch Brocade EFCM. Data Infrastructure Insights supporta le versioni 9,5, 9,6 e 9,7 di EFCM.
+Data Infrastructure Insights utilizza il raccoglitore dati Brocade Enterprise Fabric Connectivity Manager (EFCM) per scoprire l'inventario degli switch Brocade EFCM.  Data Infrastructure Insights supporta le versioni EFCM 9.5, 9.6 e 9.7.
 
 
 
 == Requisiti
 
 * Indirizzo di rete o nome di dominio completo per il server EFCM
-* La versione dell'EFCM deve essere 9.5, 9.6 o 9.7
+* La versione EFCM deve essere 9.5, 9.6 o 9.7
 * Indirizzo IP del server EFCM
 * Nome utente e password di sola lettura per il server EFCM
-* Accesso convalidato allo switch Connecttrix tramite Telnet dal server Data Infrastructure Insights, utilizzando il nome utente e la password di sola lettura sulla porta 51512
+* Accesso convalidato allo switch Connectrix tramite Telnet dal server Data Infrastructure Insights , utilizzando il nome utente e la password di sola lettura sulla porta 51512
 
 
 
@@ -32,10 +32,10 @@ Data Infrastructure Insights utilizza il data collector Brocade Enterprise Fabri
 | Campo | Descrizione 
 
 
-| Server EFC | Indirizzo IP o nome di dominio completo del server EFC 
+| server EFC | Indirizzo IP o nome di dominio completo del server EFC 
 
 
-| Nome utente | Nome utente dello switch 
+| Nome utente | Nome utente per lo switch 
 
 
 | Password | Password per lo switch 
@@ -49,32 +49,32 @@ Data Infrastructure Insights utilizza il data collector Brocade Enterprise Fabri
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 15 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 15 minuti. 
 
 
-| Nome fabric | Nome del fabric che deve essere segnalato dal data collector EFCM. Lasciare vuoto per riportare il nome del fabric come WWN. 
+| Nome del tessuto | Nome del tessuto che deve essere segnalato dal raccoglitore dati EFCM.  Lasciare vuoto per segnalare il nome del tessuto come WWN. 
 
 
 | Porta di comunicazione | Porta utilizzata per la comunicazione con lo switch 
 
 
-| Attivare il trapping | Selezionare questa opzione per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo. Se si seleziona enable trapping (attiva trap), è necessario attivare anche SNMP. 
+| Abilita Trapping | Selezionare per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo.  Se si seleziona Abilita trapping, è necessario attivare anche SNMP. 
 
 
-| Tempo minimo tra trap (sec) | Tempo minimo tra i tentativi di acquisizione attivati dalle trap. Il valore predefinito è 15 secondi. 
+| Tempo minimo tra le trappole (sec) | Tempo minimo tra i tentativi di acquisizione attivati dalle trappole. Il valore predefinito è 15 secondi. 
 
 
-| Zonesets inattivi | Elenco separato da virgole di zone inattive su cui eseguire l'acquisizione, oltre a eseguire l'acquisizione sui set di zone attive 
+| Zoneset inattivi | Elenco separato da virgole di Zoneset inattivi su cui eseguire l'acquisizione, oltre all'esecuzione dell'acquisizione sui set di zone attivi 
 
 
-| NIC da utilizzare | Specificare l'interfaccia di rete da utilizzare sulla RAU quando si esegue la creazione di report sui dispositivi SAN 
+| NIC da utilizzare | Specificare quale interfaccia di rete deve essere utilizzata sulla RAU quando si segnalano dispositivi SAN 
 
 
-| Escludi dispositivi | Elenco separato da virgole dei nomi di unità da includere o escludere dal polling 
+| Escludi dispositivi | Elenco separato da virgole dei nomi delle unità da includere o escludere dal sondaggio 
 
 
-| Utilizzare il nome alternativo dello switch EFCM come nome dello switch | Selezionare per utilizzare il soprannome dell'interruttore EFCM come nome dell'interruttore Data Infrastructure Insights. 
+| Utilizzare il soprannome dello switch EFCM come nome dello switch | Selezionare per utilizzare il soprannome dello switch EFCM come nome dello switch Data Infrastructure Insights . 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
 |===

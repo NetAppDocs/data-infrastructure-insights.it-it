@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reporting_managing_reports.html 
-summary: 'Personalizzazione dell"output e della consegna dei report, copia dei report negli Appunti, apertura dei report (XML).' 
+summary: 'Personalizzazione dell"output e della consegna dei report, copia dei report negli appunti, apertura dei report (XML).' 
 keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying 
 ---
 = Gestione dei report
@@ -13,10 +13,10 @@ keywords: reporting, cognos, data warehouse, dwh, managing, customizing, copying
 È possibile personalizzare il formato di output e la consegna di un report, impostare le proprietà o le pianificazioni del report e inviare i report tramite e-mail.
 
 
-NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzionalità di reporting è disponibile in Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Edizione Premium"] .
 
 
-IMPORTANT: Prima di apportare modifiche alle autorizzazioni o alla sicurezza dei report, è necessario copiare i report "contenuto personale" nella cartella "contenuto team" per assicurarsi che i report vengano salvati.
+IMPORTANT: Prima di apportare modifiche alle autorizzazioni di reporting o alla sicurezza, è necessario copiare i report "I miei contenuti" nella cartella "Contenuti del team" per assicurarsi che i report vengano salvati.
 
 
 
@@ -24,83 +24,83 @@ IMPORTANT: Prima di apportare modifiche alle autorizzazioni o alla sicurezza dei
 
 È possibile personalizzare il formato e il metodo di consegna dei report.
 
-. Nel Data Infrastructure Insights Reporting Portal, andare a *Menu > Content > My Content/Team Content*. Passare il mouse sul report che si desidera personalizzare e aprire il menu "tre punti".
+. Nel portale di reporting di Data Infrastructure Insights , vai a *Menu > Contenuto > Contenuto personale/Contenuto del team*.  Passa il mouse sul report che vuoi personalizzare e apri il menu "tre punti".
 
 
-image:Reporting_Output_and_Delivery.png["Output e consegna dei report"]
+image:Reporting_Output_and_Delivery.png["Output e consegna del report"]
 
 . Fare clic su *Proprietà > Pianificazione*
 . È possibile impostare le seguenti opzioni:
 +
-** *Pianificazione* per l'esecuzione dei report.
-** Scegliere *Opzioni* per il formato e l'invio del report (Salva, Stampa, e-mail) e le lingue per il report.
+** *Pianifica* quando vuoi che i report vengano eseguiti.
+** Selezionare *Opzioni* per il formato e la consegna del report (Salva, Stampa, E-mail) e le lingue per il report.
 
 
-. Fare clic su *Save* (Salva) per produrre il report utilizzando le selezioni effettuate.
+. Fare clic su *Salva* per produrre il report utilizzando le selezioni effettuate.
 
 
 
 
-== Copia di un report negli Appunti
+== Copia di un report negli appunti
 
-Questa procedura consente di copiare un report negli Appunti.
+Utilizzare questa procedura per copiare un report negli appunti.
 
-. Selezionare un report da cui copiare (*Menu > contenuto > contenuto personale o contenuto del team*)
-. Scegliere _Modifica report_ dal menu a discesa del report
+. Seleziona un report da cui copiare (*Menu > Contenuto > Il mio contenuto o Contenuto del team*)
+. Seleziona _Modifica report_ dal menu a discesa del report
 +
 image:Reporting_Edit_Report.png["Modifica di un report"]
 
-. Nella parte superiore destra dello schermo, aprire il menu "tre punti" accanto a "Proprietà".
-. Selezionare *Copia report negli Appunti*.
+. Nell'angolo in alto a destra dello schermo, apri il menu "tre puntini" accanto a "Proprietà".
+. Selezionare *Copia report negli appunti*.
 +
-image:Reporting_Copy_To_Clipboard.png["Copia di un report negli Appunti"]
+image:Reporting_Copy_To_Clipboard.png["Copia di un report negli appunti"]
 
 
 
 
 
-== Apertura di report dagli Appunti
+== Apertura dei report dagli appunti
 
-È possibile aprire una specifica del report precedentemente copiata negli Appunti.
+È possibile aprire una specifica del report precedentemente copiata negli appunti.
 
-A proposito di questa attività iniziare creando un nuovo report o aprendo un report esistente che si desidera sostituire con il report copiato. La procedura riportata di seguito riguarda un nuovo report.
+Informazioni su questa attività Inizia creando un nuovo report o aprendo un report esistente che desideri sostituire con il report copiato.  I passaggi seguenti sono per un nuovo report.
 
-. Selezionare *Menu > +New > Report* e creare un report vuoto.
-. Nella parte superiore destra dello schermo, aprire il menu "tre punti" accanto a "Proprietà".
-. Selezionare *Apri report dagli Appunti*.
+. Selezionare *Menu > +Nuovo > Report* e creare un report vuoto.
+. Nell'angolo in alto a destra dello schermo, apri il menu "tre puntini" accanto a "Proprietà".
+. Selezionare *Apri report dagli appunti*.
 
 
-image:Reporting_Open_From_Clipboard.png["Apertura di un report dagli Appunti"]
+image:Reporting_Open_From_Clipboard.png["Apertura di un report dagli appunti"]
 
-. Incollare il codice copiato nella finestra e selezionare *OK*.
-. Selezionare l'icona del disco floppy per salvare il report.
-. Scegliere dove salvare il report (_My Content_, _Team Content_ o creare una nuova cartella).
-. Assegnare un nome significativo al nuovo report e selezionare *Salva*.
+. Incolla il codice copiato nella finestra e seleziona *OK*.
+. Selezionare l'icona del floppy disk per salvare il report.
+. Scegli dove salvare il report (_I miei contenuti_, _Contenuti del team_ o crea una nuova cartella).
+. Assegna un nome significativo al nuovo report e seleziona *Salva*.
 
 
 
 
 == Modifica di un report esistente
 
-Tenere presente che la modifica dei file nella posizione predefinita comporta il rischio di sovrascrittura dei report al successivo aggiornamento del catalogo dei report. Si consiglia di salvare il report modificato con un nuovo nome o di memorizzarlo in una posizione non predefinita.
+Tieni presente che la modifica dei file nella loro posizione predefinita comporta il rischio che i report vengano sovrascritti al successivo aggiornamento del catalogo dei report.  Si consiglia di salvare il report modificato con un nuovo nome o di memorizzarlo in una posizione diversa da quella predefinita.
 
 
 
 == Risoluzione dei problemi
 
-Qui troverai suggerimenti per la risoluzione dei problemi con Reporting.
+Qui troverete suggerimenti per la risoluzione dei problemi relativi alla segnalazione.
 
 |===
 
 
-| *Problema:* | *Provare questo:* 
+| *Problema:* | *Prova questo:* 
 
 
-| Quando si pianifica l'invio di un report via email, il nome dell'utente che ha effettuato l'accesso viene precompilato nel campo "a" dell'email. Tuttavia, il nome è sotto forma di "firstname lastname" (nome, spazio, cognome). Poiché non si tratta di un indirizzo e-mail valido, l'e-mail non viene inviata quando viene eseguito il report pianificato. | Quando si pianifica l'invio del report via e-mail, cancellare il nome precompilato e inserire un indirizzo e-mail valido e correttamente formattato nel campo "a". 
+| Quando si pianifica l'invio di un report tramite e-mail, il nome dell'utente che ha effettuato l'accesso viene precompilato nel campo "A" dell'e-mail.  Tuttavia, il nome è nella forma "nome cognome" (nome, spazio, cognome).  Poiché non si tratta di un indirizzo email valido, l'email non verrà inviata quando verrà eseguito il report pianificato. | Quando si pianifica l'invio del report tramite e-mail, cancellare il nome precompilato e immettere un indirizzo e-mail valido e formattato correttamente nel campo "A". 
 
 
-| Il report pianificato viene inviato tramite e-mail, ma non è possibile accedervi se l'origine è dalla cartella "i miei contenuti". | Per evitare questo problema, il report o la visualizzazione del report devono essere salvati nella cartella "Team Content > Custom Reports - xxxxxx" e nella pianificazione creata da quella versione salvata. La cartella "Report personalizzati - xxxxxx" è visibile a tutti gli utenti del tenant. 
+| Il mio report programmato viene inviato via e-mail, ma non è possibile accedervi se l'origine è la cartella "I miei contenuti". | Per evitare ciò, il report o la visualizzazione del report devono essere salvati nella cartella "Contenuto del team > Report personalizzati - xxxxxx" e la pianificazione deve essere creata da quella versione salvata.  La cartella "Report personalizzati - xxxxxx" è visibile a tutti gli utenti del tenant. 
 
 
-| Quando si salva un processo, la cartella potrebbe mostrare "contenuto del team" con l'elenco dei contenuti da "Report personalizzati - xxxxxx", tuttavia non è possibile salvare il processo in questa posizione perché Cognos ritiene che questa sia la cartella "contenuti del team" in cui non si dispone dell'accesso per la scrittura. | La soluzione consiste nel creare una nuova cartella con un nome univoco (ad esempio "NewFolder") e salvarla, oppure salvare in "My Content" (contenuto personale) e quindi copiare/spostare in "Custom Reports - xxxxxx" (rapporti personalizzati - xxxxxx). 
+| quando si salva un lavoro, la cartella potrebbe mostrare "Contenuto del team" con l'elenco del contenuto da "Report personalizzati - xxxxxx", tuttavia non è possibile salvare il lavoro qui perché Cognos ritiene che questa sia la cartella "Contenuto del team" in cui non si ha accesso in scrittura. | La soluzione alternativa è creare una nuova cartella con un nome univoco (ad esempio "NewFolder") e salvarla lì, oppure salvarla in "My Content" e poi copiarla/spostarla in "Custom Reports - xxxxxx". 
 |===

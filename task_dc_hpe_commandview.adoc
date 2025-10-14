@@ -2,80 +2,80 @@
 sidebar: sidebar 
 permalink: task_dc_hpe_commandview.html 
 keywords: data collector, HP Command View, HP, CVAE 
-summary: Configurazione di HP Enterprise Command View data collector. 
+summary: Configurazione del raccoglitore dati HP Enterprise Command View. 
 ---
-= Data collector HP Enterprise Command View
+= Raccoglitore dati HP Enterprise Command View
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector HP Enterprise Command View Advanced Edition supporta il rilevamento degli array XP e P9500 tramite il server Command View Advanced Edition (CVAE). Data Infrastructure Insights comunica con CVAE utilizzando l'API Command View standard per raccogliere dati di inventario e sulle performance.
+Il raccoglitore dati HP Enterprise Command View Advanced Edition supporta l'individuazione di array XP e P9500 tramite il server Command View Advanced Edition (CVAE).  Data Infrastructure Insights comunica con CVAE tramite l'API standard Command View per raccogliere dati di inventario e prestazioni.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector di HP Enterprise Command View. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati HP Enterprise Command View.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | PDEV | Disco 
 
 
-| Pool di giornale | Gruppo di dischi 
+| Raccolta di riviste | Gruppo di dischi 
 
 
-| Array di storage | Storage 
+| Array di archiviazione | Magazzinaggio 
 
 
-| Port Controller (Controller porta) | Nodo di storage 
+| Controllore di porta | Nodo di archiviazione 
 
 
-| Gruppo di array, DP Pool | Pool di storage 
+| Gruppo di array, pool DP | Pool di archiviazione 
 
 
 | Unità logica, LDEV | Volume 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti di inventario
 
-Per raccogliere i dati di inventario, è necessario disporre di quanto segue:
+Per raccogliere i dati di inventario è necessario disporre di quanto segue:
 
 * Indirizzo IP del server CVAE
 * Nome utente e password di sola lettura per il software CVAE e privilegi peer
-* Requisiti delle porte: 2001
+* Requisito portuale: 2001
 
 
 
 
-== Requisiti relativi alle performance
+== Requisiti di prestazione
 
-Per raccogliere i dati sulle performance, è necessario soddisfare i seguenti requisiti:
+Per raccogliere dati sulle prestazioni è necessario soddisfare i seguenti requisiti:
 
-* Prestazioni di HDS USP, USP V e VSP
+* Prestazioni HDS USP, USP V e VSP
 +
-** Performance Monitor deve essere concesso in licenza.
-** Lo switch di monitoraggio deve essere attivato.
-** Lo strumento di esportazione (Export.exe) deve essere copiato nell'AU di Data Infrastructure Insights ed estratto in una posizione. Su ci Linux aus, assicurarsi che "cisys" disponga dei permessi di lettura ed esecuzione.
+** Performance Monitor deve essere dotato di licenza.
+** L'interruttore di monitoraggio deve essere abilitato.
+** Lo strumento di esportazione (Export.exe) deve essere copiato in Data Infrastructure Insights AU ed estratto in una posizione.  Nelle AU Linux CI, assicurarsi che "cisys" abbia i permessi di lettura ed esecuzione.
 ** La versione dello strumento di esportazione deve corrispondere alla versione del microcodice dell'array di destinazione.
 
 
-* Performance AMS:
+* Prestazioni AMS:
 +
-** Performance Monitor deve essere concesso in licenza.
-** L'utility CLI di Storage Navigator Modular 2 (SNM2) deve essere installata sull'unità AU di Data Infrastructure Insights.
+** Performance Monitor deve essere dotato di licenza.
+** L'utilità Storage Navigator Modular 2 (SNM2) CLI deve essere installata su Data Infrastructure Insights AU.
 
 
 * Requisiti di rete
 +
-** Gli strumenti di esportazione sono basati su Java e utilizzano RMI per comunicare con l'array. Questi strumenti potrebbero non essere compatibili con il firewall, in quanto potrebbero negoziare dinamicamente le porte TCP di origine e di destinazione su ogni chiamata. Inoltre, gli strumenti di esportazione di diversi array di modelli possono comportarsi in modo diverso in tutta la rete. Consulta HPE per conoscere i requisiti del tuo modello
+** Gli strumenti di esportazione sono basati su Java e utilizzano RMI per comunicare con l'array.  Questi strumenti potrebbero non essere compatibili con i firewall, in quanto potrebbero negoziare dinamicamente le porte TCP di origine e di destinazione a ogni invocazione.  Inoltre, gli strumenti di esportazione di array di modelli diversi potrebbero comportarsi in modo diverso sulla rete: consultare HPE per i requisiti del modello.
 
 
 
@@ -89,36 +89,36 @@ Per raccogliere i dati sulle performance, è necessario soddisfare i seguenti re
 | Campo | Descrizione 
 
 
-| Server Command View | Indirizzo IP o nome di dominio completo del server Command View 
+| Server di visualizzazione dei comandi | Indirizzo IP o nome di dominio completo del server Command View 
 
 
-| Nome utente | Nome utente del server Command View. 
+| Nome utente | Nome utente per il server Command View. 
 
 
 | Password | Password utilizzata per il server Command View. 
 
 
-| DISPOSITIVI: STORAGE VSP G1000 (R800), VSP (R700), HUS VM (HM700) E USP | Elenco dei dispositivi per storage VSP G1000 (R800), VSP (R700), HUS VM (HM700) e USP. Ogni storage richiede: * IP dell'array: Indirizzo IP dello storage * Nome utente: Nome utente dello storage * Password: Password dello storage * cartella contenente file JAR dell'utility di esportazione 
+| Dispositivi - Archiviazioni VSP G1000 (R800), VSP (R700), HUS VM (HM700) e USP | Elenco dispositivi per gli storage VSP G1000 (R800), VSP (R700), HUS VM (HM700) e USP.  Ogni storage richiede: * IP dell'array: indirizzo IP dello storage * Nome utente: nome utente per lo storage * Password: password per lo storage * Cartella contenente i file JAR dell'utilità di esportazione 
 
 
-| SNM2Devices - Storage WMS/SMS/AMS | Elenco dei dispositivi per gli storage WMS/SMS/AMS. Ogni storage richiede: * IP dell'array: Indirizzo IP dello storage * Storage Navigator CLI Path: SNM2 CLI path * account Authentication Valid: Select to Choose Valid account Authentication * User Name: User name for the storage * Password: Password for the storage 
+| SNM2Devices - Archiviazione WMS/SMS/AMS | Elenco dispositivi per archivi WMS/SMS/AMS.  Ogni storage richiede: * IP dell'array: indirizzo IP dello storage * Percorso CLI di Storage Navigator: percorso CLI SNM2 * Autenticazione account valida: selezionare per scegliere un'autenticazione account valida * Nome utente: nome utente per lo storage * Password: password per lo storage 
 
 
-| Scegli Tuning Manager per le performance | Eseguire l'override di altre opzioni di performance 
+| Scegli Tuning Manager per le prestazioni | Ignora altre opzioni di prestazioni 
 
 
-| Tuning Manager host | Indirizzo IP o nome di dominio completo del tuning manager 
+| Host del gestore di ottimizzazione | Indirizzo IP o nome di dominio completo del gestore di ottimizzazione 
 
 
-| Porta Tuning Manager | Porta utilizzata per Tuning Manager 
+| Porta del gestore di ottimizzazione | Porta utilizzata per Tuning Manager 
 
 
-| Nome utente Tuning Manager | Nome utente di Tuning Manager 
+| Nome utente del responsabile della messa a punto | Nome utente per Tuning Manager 
 
 
-| Password Tuning Manager | Password per Tuning Manager 
+| Password del gestore di ottimizzazione | Password per Tuning Manager 
 |===
-Nota: In HDS USP, USP V e VSP, qualsiasi disco può appartenere a più di un gruppo di array.
+Nota: in HDS USP, USP V e VSP, qualsiasi disco può appartenere a più di un gruppo di array.
 
 
 
@@ -130,31 +130,31 @@ Nota: In HDS USP, USP V e VSP, qualsiasi disco può appartenere a più di un gru
 | Campo | Descrizione 
 
 
-| Porta del server Command View | Porta utilizzata per Command View Server 
+| Porta del server di visualizzazione dei comandi | Porta utilizzata per Command View Server 
 
 
-| HTTPS attivato | Selezionare per attivare HTTPS 
+| HTTPS abilitato | Seleziona per abilitare HTTPS 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 40. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario.  Il valore predefinito è 40. 
 
 
-| Scegliere 'Escludi' o 'Includi' per specificare un elenco | Specificare se includere o escludere l'elenco di array riportato di seguito durante la raccolta dei dati. 
+| Selezionare "Escludi" o "Includi" per specificare un elenco | Specificare se includere o escludere l'elenco di array sottostante durante la raccolta dei dati. 
 
 
-| Escludere o includere i dispositivi | Elenco separato da virgole di ID dispositivo o nomi di array da includere o escludere 
+| Escludi o includi dispositivi | Elenco separato da virgole di ID dispositivo o nomi di array da includere o escludere 
 
 
-| Query host Manager (Gestore host query) | Selezionare per eseguire query sul gestore host 
+| Query Host Manager | Seleziona per interrogare il gestore host 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+| Intervallo di polling delle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni.  Il valore predefinito è 300. 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -162,47 +162,47 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Errore: L'utente non dispone di autorizzazioni sufficienti | Utilizzare un account utente diverso con più privilegi o aumentare il privilegio dell'account utente configurato nel data collector 
+| Errore: l'utente non ha autorizzazioni sufficienti | Utilizzare un account utente diverso con maggiori privilegi o aumentare i privilegi dell'account utente configurato nel raccoglitore dati 
 
 
-| Errore: L'elenco di storage è vuoto. I dispositivi non sono configurati o l'utente non dispone di autorizzazioni sufficienti | * Utilizzare DeviceManager per verificare se i dispositivi sono configurati. * Utilizzare un account utente diverso con più privilegi o aumentare il privilegio dell'account utente 
+| Errore: l'elenco degli archivi è vuoto.  O i dispositivi non sono configurati o l'utente non ha autorizzazioni sufficienti | * Utilizzare DeviceManager per verificare se i dispositivi sono configurati.  * Utilizzare un account utente diverso con più privilegi o aumentare i privilegi dell'account utente 
 
 
-| Errore: L'array di storage HDS non è stato aggiornato per alcuni giorni | Esaminare il motivo per cui questo array non viene aggiornato in HP CommandView AE. 
+| Errore: l'array di archiviazione HDS non è stato aggiornato per alcuni giorni | Scopri perché questa matrice non viene aggiornata in HP CommandView AE. 
 |===
 
 
-=== Performance
+=== Prestazione
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Errore: * Errore durante l'esecuzione dell'utility di esportazione * errore durante l'esecuzione di un comando esterno | * Confermare che l'utilità di esportazione sia installata sull'unità di acquisizione di Data Infrastructure Insights * confermare che la posizione dell'utilità di esportazione sia corretta nella configurazione del data collector * confermare che l'IP dell'array USP/R600 sia corretto nella configurazione del data collector * confermare che il nome utente e la password siano corretti nella configurazione del data collector * confermare che la versione dell'utilità di esportazione è compatibile con la versione del micro-codice dell'array di archiviazione * dall'unità di acquisizione di Data Infrastructure Insights, aprire un file CMD - eseguire la seguente procedura di installazione del file runWin.bat configurato per effettuare la directory di archiviazione: Eseguire la seguente procedura di archiviazione 
+| Errore: * Errore durante l'esecuzione dell'utilità di esportazione * Errore durante l'esecuzione del comando esterno | * Verificare che Export Utility sia installato sull'unità di acquisizione Data Infrastructure Insights * Verificare che la posizione di Export Utility sia corretta nella configurazione del data collector * Verificare che l'IP dell'array USP/R600 sia corretto nella configurazione del data collector * Verificare che il nome utente e la password siano corretti nella configurazione del data collector * Verificare che la versione di Export Utility sia compatibile con la versione del microcodice dell'array di archiviazione * Dall'unità di acquisizione Data Infrastructure Insights , aprire un prompt CMD ed effettuare le seguenti operazioni: - Cambiare la directory nella directory di installazione configurata - Provare a stabilire una connessione con l'array di archiviazione configurato eseguendo il file batch runWin.bat 
 
 
-| Errore: Accesso allo strumento di esportazione non riuscito per l'IP di destinazione | * Confermare che nome utente/password sono corretti * creare un ID utente principalmente per questo data collector HDS * verificare che nessun altro data collector sia configurato per acquisire questo array 
+| Errore: accesso allo strumento di esportazione non riuscito per l'IP di destinazione | * Conferma che il nome utente/password siano corretti * Crea un ID utente principalmente per questo raccoglitore dati HDS * Conferma che nessun altro raccoglitore dati sia configurato per acquisire questo array 
 
 
-| Errore: Gli strumenti di esportazione hanno registrato "Impossibile ottenere l'intervallo di tempo per il monitoraggio". | * Verificare che il monitoraggio delle performance sia attivato sull'array. * Provare a richiamare gli strumenti di esportazione al di fuori di Data Infrastructure Insights per confermare che il problema non rientra in Data Infrastructure Insights. 
+| Errore: gli strumenti di esportazione hanno registrato "Impossibile ottenere l'intervallo di tempo per il monitoraggio". | * Verificare che il monitoraggio delle prestazioni sia abilitato sulla matrice.  * Provare a richiamare gli strumenti di esportazione al di fuori di Data Infrastructure Insights per confermare che il problema si trova al di fuori di Data Infrastructure Insights. 
 
 
-| Errore: * Errore di configurazione: Storage Array non supportato da Export Utility * errore di configurazione: Storage Array non supportato da Storage Navigator Modular CLI | * Configurare solo gli array di storage supportati. * Utilizzare l'opzione "Filter Device List" (Filtra elenco dispositivi) per escludere gli array di storage non supportati. 
+| Errore: * Errore di configurazione: Storage Array non supportato da Export Utility * Errore di configurazione: Storage Array non supportato da Storage Navigator Modular CLI | * Configurare solo gli array di archiviazione supportati.  * Utilizzare "Filtra elenco dispositivi" per escludere array di archiviazione non supportati. 
 
 
-| Errore: * Errore durante l'esecuzione del comando esterno * errore di configurazione: Storage Array non segnalato dall'inventario * errore di configurazione: La cartella di esportazione non contiene file jar | * Controllare la posizione dell'utility di esportazione. * Controllare se l'array di storage in questione è configurato nel server Command View * impostare l'intervallo di polling delle prestazioni su più di 60 secondi. 
+| Errore: * Errore durante l'esecuzione del comando esterno * Errore di configurazione: Array di archiviazione non segnalato da Inventory * Errore di configurazione: la cartella di esportazione non contiene file jar | * Controllare la posizione dell'utilità di esportazione.  * Verificare se l'array di archiviazione in questione è configurato nel server Command View. * Impostare l'intervallo di polling delle prestazioni come multiplo di 60 secondi. 
 
 
-| Errore: * Errore CLI di Storage Navigator * errore durante l'esecuzione del comando auPerform * errore durante l'esecuzione del comando esterno | * Verificare che Storage Navigator Modular CLI sia installato sull'unità di acquisizione di Data Infrastructure Insights * verificare che la posizione dell'interfaccia CLI modulare di Storage Navigator sia corretta nella configurazione del data collector * verificare che l'indirizzo IP dell'array WMS/SMS/SMS sia corretto nella configurazione del data collector * confermare che la versione dell'interfaccia CLI modulare di Storage Navigator è compatibile con la versione microcodice dell'array di storage configurata nel data collector * dall'unità di acquisizione di Data Infrastructure Insights, aprire un prompt di CMD ed eseguire il seguente comando "eseguire la directory auitref:" 
+| Errore: * Errore Storage Navigator CLI * Errore durante l'esecuzione del comando auperform * Errore durante l'esecuzione del comando esterno | * Verificare che Storage Navigator Modular CLI sia installato sull'unità di acquisizione Data Infrastructure Insights * Verificare che la posizione di Storage Navigator Modular CLI sia corretta nella configurazione del data collector * Verificare che l'IP dell'array WMS/SMS/SMS sia corretto nella configurazione del data collector * Verificare che la versione di Storage Navigator Modular CLI sia compatibile con la versione del microcodice dell'array di archiviazione configurato nel data collector * Dall'unità di acquisizione Data Infrastructure Insights , aprire un prompt CMD ed effettuare le seguenti operazioni: - Cambiare la directory nella directory di installazione configurata - Provare a stabilire una connessione con l'array di archiviazione configurato eseguendo il seguente comando "auunitref.exe" 
 
 
-| Errore: Errore di configurazione: Storage Array non segnalato dall'inventario | Controllare se lo Storage Array in questione è configurato nel server Command View 
+| Errore: Errore di configurazione: Array di archiviazione non segnalato dall'inventario | Verificare se l'array di archiviazione in questione è configurato nel server Command View 
 
 
-| Errore: * Nessun array registrato con la CLI modulare 2 di Storage Navigator * l'array non è registrato con la CLI modulare 2 di Storage Navigator * errore di configurazione: Storage Array non registrato con la CLI modulare di StorageNavigator | * Aprire il prompt dei comandi e cambiare la directory nel percorso configurato * eseguire il comando “set=STONAVM_HOME=.” * Eseguire il comando “auunitref” * confermare che l'output del comando contiene i dettagli dell'array con IP * se l'output non contiene i dettagli dell'array, registrare l'array con Storage Navigator CLI: - Aprire il prompt dei comandi e modificare la directory nel percorso configurato - eseguire il comando “set=STONAVM_HOME=.” - Eseguire il comando "auunitaddauto -ip ${ip}". Sostituire{ip} con un IP reale 
+| Errore: * Nessun array registrato con Storage Navigator Modular 2 CLI * Array non registrato con Storage Navigator Modular 2 CLI * Errore di configurazione: Storage Array non registrato con StorageNavigator Modular CLI | * Aprire il prompt dei comandi e cambiare directory nel percorso configurato. * Eseguire il comando “set=STONAVM_HOME=.”  * Eseguire il comando "auunitref" * Verificare che l'output del comando contenga i dettagli dell'array con IP * Se l'output non contiene i dettagli dell'array, registrare l'array con Storage Navigator CLI: - Aprire il prompt dei comandi e cambiare directory nel percorso configurato - Eseguire il comando "set=STONAVM_HOME=."  - Eseguire il comando “auunitaddauto -ip ${ip}”.  Sostituisci ${ip} con l'IP reale 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

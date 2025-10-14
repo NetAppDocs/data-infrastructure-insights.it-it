@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_create_annotation_rules.html 
-summary: È possibile creare regole di annotazione per applicare automaticamente le annotazioni a più risorse. 
+summary: È possibile creare regole di annotazione per applicare automaticamente annotazioni a più risorse. 
 keywords: annotate, annotation, rules 
 ---
 = Creazione di regole di annotazione
@@ -14,34 +14,34 @@ keywords: annotate, annotation, rules
 
 
 [role="lead"]
-È possibile utilizzare le regole di annotazione per applicare automaticamente le annotazioni a più risorse in base ai criteri definiti dall'utente. Data Infrastructure Insights assegna le annotazioni agli asset in base a tali regole. Le annotazioni impostate manualmente su una singola pagina di risorse hanno la precedenza sulle annotazioni basate su regole quando Cloud Insight valuta le regole di annotazione.
+È possibile utilizzare le regole di annotazione per applicare automaticamente annotazioni a più risorse in base ai criteri definiti.  Data Infrastructure Insights assegna le annotazioni alle risorse in base a queste regole.  Le annotazioni impostate manualmente sulle singole pagine delle risorse hanno la precedenza sulle annotazioni basate su regole quando Cloud Insight valuta le regole di annotazione.
 
 .Prima di iniziare
-È necessario aver creato una query per la regola di annotazione.
+Devi aver creato una query per la regola di annotazione.
 
-.Fasi
-. Nel menu Data Infrastructure Insights fare clic su *Manage > Annotation rules* (Gestisci > regole annotazioni*).
-. Fare clic su *+ Rule* per aggiungere una nuova regola di annotazione.
+.Passi
+. Nel menu Data Infrastructure Insights fare clic su *Gestisci > Regole di annotazione*.
+. Fare clic su *+ Regola* per aggiungere una nuova regola di annotazione.
 +
-Viene visualizzata la finestra di dialogo Add Rule (Aggiungi regola).
+Viene visualizzata la finestra di dialogo Aggiungi regola.
 
-. Effettuare le seguenti operazioni:
+. Procedi come segue:
 +
 .. Nella casella *Nome*, immettere un nome univoco che descriva la regola.
 +
-Il nome viene visualizzato nella pagina Annotation Rules (regole di annotazione).
+Il nome appare nella pagina Regole di annotazione.
 
-.. Fare clic su *Query* e selezionare la query utilizzata da Data Infrastructure Insights per identificare le risorse a cui si applica l'annotazione.
-.. Fare clic su *Annotation* (Annotazione) e selezionare l'annotazione da applicare.
-.. Fare clic su *valore* e selezionare un valore per l'annotazione.
+.. Fare clic su *Query* e selezionare la query che Data Infrastructure Insights utilizza per identificare le risorse a cui si applica l'annotazione.
+.. Fare clic su *Annotazione* e selezionare l'annotazione che si desidera applicare.
+.. Fare clic su *Valore* e selezionare un valore per l'annotazione.
 +
-Ad esempio, se si sceglie compleanno come annotazione, si specifica una data per il valore.
+Ad esempio, se si sceglie Compleanno come annotazione, si specifica una data per il valore.
 
-.. Fare clic su *Save* (Salva)
-.. Fare clic su *Run All rules* (Esegui tutte le regole) se si desidera eseguire tutte le regole immediatamente; in caso contrario, le regole vengono eseguite a intervalli regolari pianificati.
+.. Fai clic su *Salva*
+.. Fare clic su *Esegui tutte le regole* se si desidera eseguire tutte le regole immediatamente; in caso contrario, le regole vengono eseguite a intervalli regolari pianificati.
 +
 
-NOTE: In un ambiente Data Infrastructure Insights di grandi dimensioni, si potrebbe notare che l'esecuzione delle regole di annotazione sembra richiedere del tempo. Questo perché l'indicizzatore viene eseguito per primo e deve essere completato prima di eseguire le regole. L'indicizzatore è ciò che offre a Data Infrastructure Insights la possibilità di cercare o filtrare oggetti e contatori nuovi o aggiornati dei dati. Prima di applicare le regole, il motore delle regole attende che l'indicizzatore completi l'aggiornamento.
+NOTE: In un ambiente Data Infrastructure Insights di grandi dimensioni, potresti notare che l'esecuzione delle regole di annotazione sembra richiedere un po' di tempo per essere completata.  Ciò avviene perché l'indicizzatore viene eseguito per primo e deve essere completato prima di eseguire le regole.  L'indicizzatore è ciò che consente a Data Infrastructure Insights di cercare o filtrare oggetti e contatori nuovi o aggiornati nei dati.  Il motore delle regole attende che l'indicizzatore completi l'aggiornamento prima di applicare le regole.
 
 
 
@@ -51,57 +51,57 @@ NOTE: In un ambiente Data Infrastructure Insights di grandi dimensioni, si potre
 
 == Modifica delle regole di annotazione
 
-È possibile modificare una regola di annotazione per modificare il nome della regola, la relativa annotazione, il valore dell'annotazione o la query associata alla regola.
+È possibile modificare una regola di annotazione per cambiare il nome della regola, la sua annotazione, il valore dell'annotazione o la query associata alla regola.
 
-.Fasi
-. Nel menu Data Infrastructure Insights, fare clic su *Manage > Annotation rules* (Gestione > regole annotazioni*).
+.Passi
+. Nel menu Data Infrastructure Insights , fare clic su *Gestisci > Regole di annotazione*.
 +
-La pagina Annotation Rules (regole di annotazione) visualizza l'elenco delle regole di annotazione esistenti.
+La pagina Regole di annotazione visualizza l'elenco delle regole di annotazione esistenti.
 
-. Individuare la regola di annotazione che si desidera modificare.
+. Individua la regola di annotazione che desideri modificare.
 +
-È possibile filtrare le regole di annotazione immettendo un valore nella casella di filtro o facendo clic su un numero di pagina per sfogliare le regole di annotazione per pagina.
+È possibile filtrare le regole di annotazione inserendo un valore nella casella del filtro oppure facendo clic su un numero di pagina per sfogliare le regole di annotazione per pagina.
 
-. Fare clic sull'icona del menu corrispondente alla regola che si desidera modificare.
-. Fare clic su *Edit* (Modifica)
+. Fare clic sull'icona del menu relativa alla regola che si desidera modificare.
+. Fai clic su *Modifica*
 +
-Viene visualizzata la finestra di dialogo Edit Rule (Modifica regola).
+Viene visualizzata la finestra di dialogo Modifica regola.
 
 . Modificare il nome, l'annotazione, il valore o la query della regola di annotazione.
 
 
 
 
-== Modifica dell'ordine delle regole
+== Cambiare l'ordine delle regole
 
-Le regole di annotazione vengono elaborate dall'inizio dell'elenco delle regole alla fine. Per modificare l'ordine di elaborazione di una regola, procedere come segue:
+Le regole di annotazione vengono elaborate dall'alto verso il basso nell'elenco delle regole.  Per modificare l'ordine in cui viene elaborata una regola, procedere come segue:
 
-.Fasi
-. Fare clic sull'icona del menu corrispondente alla regola che si desidera spostare.
-. Fare clic su *Sposta in alto* o *Sposta in basso* fino a visualizzare la regola nella posizione desiderata.
+.Passi
+. Fare clic sull'icona del menu relativa alla regola che si desidera spostare.
+. Fare clic su *Sposta su* o *Sposta giù*, a seconda delle necessità, finché la regola non viene visualizzata nella posizione desiderata.
 
 
-Quando si eseguono più regole che aggiornano la stessa annotazione su una risorsa, la prima regola (eseguita dall'alto verso il basso) applica l'annotazione e aggiorna la risorsa, quindi la seconda regola si applica senza modificare alcuna annotazione già impostata dalla regola precedente.
+Tieni presente che quando si eseguono più regole che aggiornano la stessa annotazione su una risorsa, la prima regola (eseguita dall'alto verso il basso) applica l'annotazione e aggiorna la risorsa, quindi si applica la seconda regola ma non modifica alcuna annotazione già impostata dalla regola precedente.
 
 
 
 == Eliminazione delle regole di annotazione
 
-Si consiglia di eliminare le regole di annotazione non più utilizzate.
+Potresti voler eliminare le regole di annotazione che non vengono più utilizzate.
 
-.Fasi
-. Nel menu Data Infrastructure Insights, fare clic su *Manage > Annotation rules* (Gestione > regole annotazioni*).
+.Passi
+. Nel menu Data Infrastructure Insights , fare clic su *Gestisci > Regole di annotazione*.
 +
-La pagina Annotation Rules (regole di annotazione) visualizza l'elenco delle regole di annotazione esistenti.
+La pagina Regole di annotazione visualizza l'elenco delle regole di annotazione esistenti.
 
-. Individuare la regola di annotazione che si desidera eliminare.
+. Individua la regola di annotazione che desideri eliminare.
 +
-È possibile filtrare le regole di annotazione immettendo un valore nella casella di filtro o facendo clic su un numero di pagina per sfogliare le regole di annotazione per pagina.
+È possibile filtrare le regole di annotazione inserendo un valore nella casella del filtro oppure facendo clic su un numero di pagina per sfogliare le regole di annotazione per pagina.
 
-. Fare clic sull'icona del menu corrispondente alla regola che si desidera eliminare.
-. Fare clic su *Delete* (Elimina)
+. Fare clic sull'icona del menu relativa alla regola che si desidera eliminare.
+. Fai clic su *Elimina*
 +
-Viene visualizzato un messaggio di conferma che richiede se si desidera eliminare la regola.
+Viene visualizzato un messaggio di conferma che chiede se si desidera eliminare la regola.
 
 . Fare clic su *OK*
 

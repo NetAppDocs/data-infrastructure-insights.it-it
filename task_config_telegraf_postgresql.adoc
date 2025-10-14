@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_postgresql.html 
 keywords: telegraf, installation, install, postgresql 
-summary: Configurazione del data collector PostgreSQL 
+summary: Configurazione del raccoglitore dati PostgreSQL 
 ---
-= PostgreSQL Data Collector
+= Raccoglitore dati PostgreSQL
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da PostgreSQL.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da PostgreSQL.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere PostgreSQL.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli PostgreSQL.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
-
-
-image:PostgreSQLDCConfigLinux.png["Configurazione PostgreSQL"]
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
+image:PostgreSQLDCConfigLinux.png["Configurazione di PostgreSQL"]
 
-== Setup (Configurazione)
 
-Le informazioni sono disponibili nella link:https://www.postgresql.org/docs/["Documentazione PostgreSQL"].
+
+== Impostare
+
+Le informazioni possono essere trovate nellink:https://www.postgresql.org/docs/["Documentazione PostgreSQL"] .
 
 
 
@@ -44,13 +44,13 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Server PostgreSQL | Server database namespace | Nome nodo IP nodo | Buffer allocati buffer backend buffer di sincronizzazione file backend buffer di controllo buffer di controllo punti di controllo puliti punti di controllo di sincronizzazione tempo di scrittura punti di controllo Richieste punti di controllo Timed Max scritto pulito 
+| Server PostgreSQL | Server di database dello spazio dei nomi | Nome nodo IP nodo | Buffer allocati Buffer backend Buffer di sincronizzazione file backend Buffer di checkpoint Checkpoint puliti Checkpoint di tempo di sincronizzazione Checkpoint di tempo di scrittura Richieste Checkpoint Tempo massimo di scrittura pulita 
 
 
-| Database PostgreSQL | Server database namespace | Database OID Node Name Node IP | Blocchi di tempo di lettura blocchi di tempo di scrittura blocchi di accessi blocchi di lettura conflitti deadlock numero di client file di temperatura byte file di temperatura numero di righe cancellate righe recuperate righe inserite righe restituite transazioni aggiornate transazioni impegnate operazioni supportate dal rollback 
+| Database PostgreSQL | Server di database dello spazio dei nomi | OID del database Nome del nodo IP del nodo | Blocchi Tempo di lettura Blocchi Tempo di scrittura Blocchi Hit Blocchi Letture Conflitti Deadlock Numero client File temporanei Byte Numero file temporanei Righe Righe eliminate Righe recuperate Righe inserite Righe restituite Transazioni aggiornate Transazioni confermate Rollback 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

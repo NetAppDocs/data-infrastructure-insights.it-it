@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_rubrik_cdm.html 
 keywords: data collector, Rubrik, 
-summary: Configurazione di Rubrik CDM data collector. 
+summary: Configurazione del raccoglitore dati Rubrik CDM. 
 ---
-= Rubrik CDM Data Collector
+= Raccoglitore dati CDM Rubrik
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data Collector di Rubrik per acquisire i dati di inventario e relativi alle performance dalle appliance di storage Rubrik.
+Data Infrastructure Insights utilizza il raccoglitore dati Rubrik per acquisire dati di inventario e prestazioni dagli storage appliance Rubrik.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data Collector di Rubrik. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati Rubrik.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Cluster | Storage, pool di storage 
+| Grappolo | Deposito, piscina di stoccaggio 
 
 
-| Nodo | Nodo di storage 
+| Nodo | Nodo di archiviazione 
 
 
 | Disco | Disco 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa fonte dati.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessari i seguenti requisiti:
+Per configurare questo raccoglitore dati sono necessari i seguenti elementi:
 
-* L'unità di acquisizione di Data Infrastructure Insights avvierà le connessioni alla porta TCP 443 al cluster Rubrik. Un collector per cluster.
+* L'unità di acquisizione Data Infrastructure Insights avvierà le connessioni alla porta TCP 443 al cluster Rubrik.  Un collettore per cluster.
 * Indirizzo IP del cluster Rubrik.
-* Nome utente e password del cluster.
+* Nome utente e password per il cluster.
 * Indirizzo IP o nome host del cluster Rubrik.
-* Per l'autenticazione di base, un nome utente e una password per il cluster. Se si preferisce utilizzare l'autenticazione basata sull'account del servizio, è necessario disporre di un account del servizio, di un segreto e di un ID organizzazione
-* Requisito della porta: HTTPS 443
+* Per l'autenticazione di base, un nome utente e una password per il cluster.  Se preferisci utilizzare l'autenticazione basata sull'account di servizio, hai bisogno di un account di servizio, di un segreto e di un ID organizzazione
+* Requisito porta: HTTPS 443
 
 
 
@@ -56,10 +56,10 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 | Campo | Descrizione 
 
 
-| IP | Indirizzo IP del cluster Rubrik 
+| Proprietà intellettuale | Indirizzo IP del cluster Rubrik 
 
 
-| Nome utente / Account di servizio | Nome utente del cluster 
+| Nome utente / Account di servizio | Nome utente per il cluster 
 
 
 | Password / Segreto | Password per il cluster 
@@ -73,16 +73,16 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 
 [cols="2*"]
 |===
-| Intervallo di polling dell'inventario (min) | Il valore predefinito è 60 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 
+| Intervallo di sondaggio sulle prestazioni (sec) | Il valore predefinito è 300 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -90,12 +90,12 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Ho ricevuto un messaggio che indica la creazione di più storage. | Verificare che il cluster sia configurato correttamente e che il raccoglitore faccia riferimento a un singolo cluster. 
+| Ho ricevuto un messaggio che indica che è stato creato più di uno spazio di archiviazione. | Verificare che il cluster sia configurato correttamente e che il collettore punti a un singolo cluster. 
 
 
 | Il sondaggio fallisce con 400 [Richiesta non valida].... ManagedId non valido.... | Hai popolato il campo ID organizzazione con un valore, ma il cluster Rubrik NON ritiene che si tratti di un ID organizzazione valido, nonostante il messaggio di errore di Rubrik lo chiami "ManagedId" 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

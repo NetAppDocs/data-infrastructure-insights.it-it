@@ -2,63 +2,63 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_block.html 
 keywords: data collector, EMC, clariion, VNX block 
-summary: 'Configurazione DELLO storage a blocchi DELL EMC VNX (in precedenza CLARiiON).' 
+summary: 'Configurazione di DELL EMC VNX Block Storage (in precedenza CLARiiON).' 
 ---
-= Data collector Dell EMC VNX Block Storage (navicli)
+= Raccoglitore dati Dell EMC VNX Block Storage (NaviCLI)
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector (precedentemente CLARiiON) di Dell EMC VNX Block Storage (NaviSec) per acquisire dati di inventario e prestazioni.
+Data Infrastructure Insights utilizza il raccoglitore dati Dell EMC VNX Block Storage (NaviSec) (in precedenza CLARiiON) per acquisire dati di inventario e prestazioni.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal collettore di dati dello storage a blocchi EMC VNX. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector EMC VNX Block Storage.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco | Disco 
 
 
-| Storage | Storage 
+| Magazzinaggio | Magazzinaggio 
 
 
-| Processore per lo storage | Nodo di storage 
+| Processore di archiviazione | Nodo di archiviazione 
 
 
-| Questo pool, gruppo RAID | Pool di storage 
+| Questo pool, gruppo RAID | Pool di archiviazione 
 
 
 | LUN | Volume 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa fonte dati.
 
 
 
 == Requisiti
 
-Per raccogliere i dati, è necessario soddisfare i seguenti requisiti:
+Per poter raccogliere i dati è necessario soddisfare i seguenti requisiti:
 
-* Un indirizzo IP di ciascun processore di storage a blocchi VNX
-* Nome utente e password Navisphere di sola lettura per gli array di storage a blocchi VNX
-* NaviSecCli deve essere installato sull'AU di Data Infrastructure Insights
-* Convalida dell'accesso: Eseguire NaviSecCLI dall'AU di Data Infrastructure Insights a ciascun array utilizzando il nome utente e la password.
-* Requisiti delle porte: 80, 443
-* La versione di NaviSecCLI deve corrispondere al codice FLARE più recente sull'array
-* Per le performance, è necessario attivare la registrazione delle statistiche.
-
-
+* Un indirizzo IP di ciascun processore di archiviazione a blocchi VNX
+* Nome utente e password Navisphere di sola lettura per gli array di archiviazione a blocchi VNX
+* NaviSecCli deve essere installato su Data Infrastructure Insights AU
+* Convalida dell'accesso: eseguire NaviSecCLI da Data Infrastructure Insights AU su ciascun array utilizzando il nome utente e la password.
+* Requisiti della porta: 80, 443
+* La versione di NaviSecCLI dovrebbe corrispondere al codice FLARE più recente sul tuo array
+* Per migliorare le prestazioni, è necessario abilitare la registrazione delle statistiche.
 
 
-== Sintassi dell'interfaccia della riga di comando di Navisphere
 
-naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope,use 0 for global scope> -port comando <use 443 by default>
+
+== Sintassi dell'interfaccia della riga di comando di NaviSphere
+
+naviseccli.exe -h <indirizzo IP> -user <utente> -password <password> -scope <ambito, usa 0 per l'ambito globale> -port <usa 443 per impostazione predefinita> comando
 
 
 
@@ -69,16 +69,16 @@ naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope,u
 | Campo | Descrizione 
 
 
-| Indirizzo IP dello storage a blocchi VNX | Indirizzo IP o nome di dominio completo dello storage a blocchi VNX 
+| Indirizzo IP di archiviazione a blocchi VNX | Indirizzo IP o nome di dominio completo dell'archiviazione a blocchi VNX 
 
 
-| Nome utente | Nome utilizzato per accedere al dispositivo di storage a blocchi VNX. 
+| Nome utente | Nome utilizzato per accedere al dispositivo di archiviazione a blocchi VNX. 
 
 
-| Password | Password utilizzata per accedere al dispositivo di storage a blocchi VNX. 
+| Password | Password utilizzata per accedere al dispositivo di archiviazione a blocchi VNX. 
 
 
-| Percorso CLI a naviseccli.exe | Percorso completo della cartella contenente l'eseguibile _navigeccli.exe_ 
+| Percorso CLI per naviseccli.exe | Percorso completo della cartella contenente l'eseguibile _naviseccli.exe_ 
 |===
 
 
@@ -89,19 +89,19 @@ naviseccli.exe -h <IP address> -user <user> -password <password> -scope <scope,u
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 40 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario.  Il valore predefinito è 40 minuti. 
 
 
-| Scopo | L'ambito del client sicuro. L'impostazione predefinita è Globale. 
+| Ambito | Ambito client sicuro.  L'impostazione predefinita è Globale. 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -109,7 +109,7 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2a, 2a"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
  a| 
@@ -117,18 +117,18 @@ Errore:
 
 * Agente non in esecuzione
 * Impossibile trovare naviseccli
-* Impossibile eseguire qualsiasi comando
+* Impossibile eseguire alcun comando
 
  a| 
-* Verificare che Navisphere CLI sia installato sull'unità di acquisizione di Cloud Insight
-* Non è stata selezionata l'opzione "Use Secure client" (Usa client protetto) nella configurazione guidata di raccolta dati e non è stata installata una versione non protetta di Naviphere CLI.
-* Verificare che la directory di installazione della CLI Navisphere sia corretta nella configurazione del data collector
-* Verificare che l'IP dello storage a blocchi VNX sia corretto nella configurazione del data Collector:
-* Dall'unità di acquisizione di Data Infrastructure Insights:
+* Verificare che NaviSphere CLI sia installato su Cloud Insight Acquisition Unit
+* Non hai selezionato l'opzione "Usa client sicuro" nella procedura guidata di configurazione del raccoglitore dati e non hai installato una versione non sicura di Naviphere CLI.
+* Verificare che la directory di installazione di NaviSphere CLI sia corretta nella configurazione del raccoglitore dati
+* Verificare che l'IP dell'archiviazione a blocchi VNX sia corretto nella configurazione del raccoglitore dati:
+* Dall'unità di acquisizione Data Infrastructure Insights :
 +
 ** Aprire un CMD.
-** Modificare la directory nella directory di installazione configurata
-** Provare a stabilire una connessione con il dispositivo di storage a blocchi VNX digitando "navicli -h {ip} getAgent" (sostituire il {ip} con l'IP effettivo).
+** Cambiare la directory nella directory di installazione configurata
+** Prova a stabilire una connessione con il dispositivo di archiviazione a blocchi VNX digitando "navicli -h {ip} getagent" (sostituisci {ip} con l'IP effettivo)
 
 
 
@@ -136,41 +136,41 @@ Errore:
 
 
  a| 
-Errore: 4.29 emc235848 emc241018 getall Impossibile analizzare le informazioni alias host
+Errore: 4.29 emc235848 emc241018 getall Impossibile analizzare le informazioni sull'alias dell'host
  a| 
-Questo è probabilmente causato da un problema DI corruzione FLARE 29 del database iniziatore host sull'array stesso. Consulta gli articoli della Knowledge base EMC: Emc235848, emc241018. È anche possibile controllare https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
-
-
-
- a| 
-Errore: Impossibile recuperare i Meta LUN. Errore durante l'esecuzione di java -jar navicli.jar
- a| 
-* Modificare la configurazione del data collector per utilizzare il client protetto (consigliato)
-* Installare navicli.jar nel percorso CLI a navicli.exe O naviseccli.exe
-* Nota: navicli.jar è obsoleto a partire da EMC Navisphere versione 6,26
-* navicli.jar potrebbe essere disponibile su \http://powerlink.emc.com
-
+Ciò è probabilmente causato da un problema di danneggiamento FLARE 29 del database dell'iniziatore host sull'array stesso.  Vedere gli articoli della knowledge base EMC: emc235848, emc241018.  Puoi anche controllare https://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb58128[]
 
 
 
  a| 
-Errore: I pool di storage non riportano i dischi sul Service Processor all'indirizzo IP configurato
+Errore: impossibile recuperare i Meta LUN.  Errore durante l'esecuzione di java -jar navicli.jar
  a| 
-Configurare il data collector con entrambi gli IP del Service Processor, separati da una virgola
+* Modificare la configurazione del raccoglitore dati per utilizzare il client sicuro (consigliato)
+* Installare navicli.jar nel percorso CLI per navicli.exe O naviseccli.exe
+* Nota: navicli.jar è obsoleto a partire dalla versione 6.26 di EMC Navisphere
+* Il file navicli.jar potrebbe essere disponibile su \ http://powerlink.emc.com
+
+
+
+
+ a| 
+Errore: i pool di archiviazione non segnalano i dischi sul processore di servizio all'indirizzo IP configurato
+ a| 
+Configurare il raccoglitore dati con entrambi gli IP del processore di servizio, separati da una virgola
 
 
 
  a| 
-Errore: Errore di mancata corrispondenza della revisione
+Errore: errore di mancata corrispondenza della revisione
  a| 
-* Questo problema è in genere causato dall'aggiornamento del firmware sul dispositivo di storage a blocchi VNX, ma non dall'aggiornamento dell'installazione di navicli.exe. Questo potrebbe essere causato anche dalla presenza di dispositivi diversi con firmware diversi, ma solo una CLI installata (con una versione firmware diversa).
-* Verificare che la periferica e l'host eseguano entrambe versioni identiche del software:
+* In genere, ciò è causato dall'aggiornamento del firmware sul dispositivo di archiviazione a blocchi VNX, ma non dall'aggiornamento dell'installazione di NaviCLI.exe.  Ciò potrebbe essere causato anche dalla presenza di dispositivi diversi con firmware diversi, ma di una sola CLI installata (con una versione firmware diversa).
+* Verificare che sia il dispositivo che l'host eseguano versioni identiche del software:
 +
-** Dall'unità di acquisizione di Data Infrastructure Insights, aprire una finestra a riga di comando
-** Modificare la directory nella directory di installazione configurata
-** Stabilire una connessione con il dispositivo CLARiiON digitando “navicli -h <ip> getagent”.
-** Cercare il numero di versione sulla prima coppia di righe. Esempio: "Rev. Agente: 6.16.2 (0,1)"
-** Cercare e confrontare la versione sulla prima riga. Esempio: "Navisphere CLI Revisione 6.07.00.04.07"
+** Dall'unità di acquisizione Data Infrastructure Insights , aprire una finestra della riga di comando
+** Cambiare la directory nella directory di installazione configurata
+** Stabilisci una connessione con il dispositivo CLARiiON digitando “navicli -h <ip> getagent”
+** Cerca il numero di versione nelle prime due righe.  Esempio: “Agente Rev: 6.16.2 (0.1)”
+** Cerca e confronta la versione sulla prima riga.  Esempio: "Navisphere CLI Revisione 6.07.00.04.07"
 
 
 
@@ -178,9 +178,9 @@ Errore: Errore di mancata corrispondenza della revisione
 
 
  a| 
-Errore: Configurazione non supportata - Nessuna porta Fibre Channel
+Errore: configurazione non supportata - nessuna porta Fibre Channel
  a| 
-Il dispositivo non è configurato con porte Fibre Channel. Attualmente, sono supportate solo le configurazioni FC. Verificare che questa versione/firmware sia supportata.
+Il dispositivo non è configurato con alcuna porta Fibre Channel.  Attualmente sono supportate solo le configurazioni FC.  Verificare che questa versione/firmware sia supportata.
 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

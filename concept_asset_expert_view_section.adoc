@@ -1,58 +1,62 @@
 ---
 sidebar: sidebar 
 permalink: concept_asset_expert_view_section.html 
-summary: La sezione Expert View di una pagina di risorse è un potente strumento per la risoluzione dei problemi o il monitoraggio. 
-keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, refresh 
+summary: La sezione Prestazioni di una pagina di risorse è uno strumento potente per la risoluzione dei problemi o il monitoraggio. 
+keywords: asset page, expert view, metrics, greedy, degraded, correlated, contributors, chart, refresh, performance 
 ---
-= Vista degli esperti
+= Sezione Performance
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-La sezione Expert View di una pagina di risorse consente di visualizzare un esempio di performance per la risorsa di base in base a un numero qualsiasi di metriche applicabili nel contesto, con un periodo di tempo selezionato nel grafico delle performance e le risorse ad essa correlate. I dati nei grafici si aggiornano automaticamente quando i data collector effettuano il polling e vengono acquisiti i dati aggiornati.
+La sezione Prestazioni di una pagina di risorse o di un pannello scorrevole consente di visualizzare un campione di prestazioni per la risorsa di base in base a un numero qualsiasi di metriche applicabili nel contesto di un periodo di tempo scelto nel grafico delle prestazioni e di tutte le risorse ad esso correlate.  I dati nei grafici vengono aggiornati automaticamente man mano che i raccoglitori di dati interrogano e acquisiscono i dati aggiornati.
 
 
 
-== Utilizzando la sezione visualizzazione avanzata
+== Utilizzo della sezione Prestazioni
 
-Di seguito viene riportato un esempio della sezione Expert View in una pagina di risorse di storage:
+Di seguito è riportato un esempio della sezione Prestazioni in una pagina di risorse di archiviazione:
 
-image:Expert_View_2021.png["Esempio di vista degli esperti"]
+image:asset_page_performance_section.png["Sezione Performance"]
 
-È possibile selezionare le metriche che si desidera visualizzare nel grafico delle performance per il periodo di tempo selezionato. Fare clic sull'elenco a discesa _Display Metrics_ e scegliere una delle metriche elencate.
+È possibile selezionare le metriche che si desidera visualizzare nel grafico delle prestazioni per il periodo di tempo selezionato.  Fare clic sul menu a discesa _Visualizza metriche_ e scegliere tra le metriche elencate.
 
-La sezione *risorse* mostra il nome della risorsa di base e il colore che rappresenta la risorsa di base nel grafico delle performance. Se la sezione *Top Correlated* non contiene una risorsa che si desidera visualizzare nel grafico delle performance, è possibile utilizzare la casella *Search Assets* (Cerca risorse) nella sezione *Additional Resources* (risorse aggiuntive) per individuare la risorsa e aggiungerla al grafico delle performance. Quando si aggiungono risorse, queste vengono visualizzate nella sezione risorse aggiuntive.
+La sezione *Risorse* mostra il nome della risorsa di base e il colore che la rappresenta nel grafico delle prestazioni.  Se la sezione *Più correlate* non contiene una risorsa che desideri visualizzare nel grafico delle prestazioni, puoi utilizzare la casella *Cerca risorse* nella sezione *Risorse aggiuntive* per individuare la risorsa e aggiungerla al grafico delle prestazioni.  Man mano che aggiungi risorse, queste vengono visualizzate nella sezione Risorse aggiuntive.
 
-Nella sezione risorse, se applicabile, sono inoltre riportate le risorse correlate alla risorsa di base nelle seguenti categorie:
+Nella sezione Risorse, ove applicabile, vengono inoltre mostrate tutte le risorse correlate alla risorsa di base nelle seguenti categorie:
 
-* Correlato in alto
+* Principalmente correlato
 +
-Mostra le risorse con un'elevata correlazione (percentuale) con una o più metriche delle performance rispetto alla risorsa di base.
+Mostra le risorse che presentano un'elevata correlazione (percentuale) con una o più metriche di performance rispetto alla risorsa di base.
 
-* Principali collaboratori
+* I principali contributori
 +
-Mostra le risorse che contribuiscono (percentuale) alla risorsa di base.
+Mostra le attività che contribuiscono (in percentuale) all'attività di base.
 
-* Carichi di lavoro contenuti
+* Contese sul carico di lavoro
 +
-Mostra le risorse che influiscono o sono influenzate da altre risorse condivise, come host, reti e storage. Queste risorse sono talvolta denominate risorse _greedy_ e _degradate_.
+Mostra le risorse che hanno un impatto o sono influenzate da altre risorse condivise, come host, reti e storage.  A volte vengono chiamate risorse _avide_ e _degradate_.
 
 
 
 
 
-== Avvisi in visualizzazione esperti
+== Avvisi nella sezione Prestazioni
 
-Gli avvisi vengono visualizzati anche nella sezione visualizzazione esperti di una landing page di risorsa, che mostra l'ora e la durata dell'avviso, nonché la condizione di monitoraggio che lo ha attivato.
+Gli avvisi vengono visualizzati anche nella sezione Prestazioni della landing page di una risorsa, mostrando l'ora e la durata dell'avviso, nonché la condizione del monitor che lo ha attivato.  Passa il mouse sopra un indicatore di avviso per visualizzare i dettagli sull'avviso.
 
-image:Alerts_In_Expert_View.png["Avvisi in visualizzazione esperti"]
+image:asset_page_alert_section.png["Avvisi nella sezione prestazioni"]
 
 
 
-== Definizioni metriche Expert View
+== Definizioni delle metriche di prestazione
 
-La sezione visualizzazione avanzata di una pagina di risorse visualizza diverse metriche in base al periodo di tempo selezionato per la risorsa. Ogni metrica viene visualizzata nel proprio grafico delle performance. Puoi aggiungere o rimuovere metriche e risorse correlate dai grafici a seconda dei dati che desideri visualizzare. Le metriche che puoi scegliere variano a seconda del tipo di risorsa.
+La sezione Prestazioni di una pagina di risorsa visualizza diverse metriche in base al periodo di tempo selezionato per la risorsa.  Ogni metrica viene visualizzata nel proprio grafico delle prestazioni.  È possibile aggiungere o rimuovere metriche e risorse correlate dai grafici a seconda dei dati che si desidera visualizzare.  Le metriche che puoi scegliere variano a seconda del tipo di risorsa.
 
 |===
 
@@ -60,94 +64,94 @@ La sezione visualizzazione avanzata di una pagina di risorse visualizza diverse 
 | *Metrico* | *Descrizione* 
 
 
-| BB Credit zero Rx, Tx | Numero di volte in cui il conteggio del credito buffer-to-buffer di ricezione/trasmissione è passato a zero durante il periodo di campionamento. Questa metrica rappresenta il numero di volte in cui la porta collegata ha dovuto interrompere la trasmissione perché questa porta non era in credito da fornire. 
+| BB credito zero Rx, Tx | Numero di volte in cui il conteggio del credito buffer-to-buffer di ricezione/trasmissione è passato a zero durante il periodo di campionamento.  Questa metrica rappresenta il numero di volte in cui la porta collegata ha dovuto interrompere la trasmissione perché non aveva più crediti da fornire. 
 
 
-| Durata zero credito BB Tx | Tempo in millisecondi durante il quale il credito BB trasmesso era pari a zero durante l'intervallo di campionamento. 
+| BB credito durata zero Tx | Tempo in millisecondi durante il quale il credito BB di trasmissione era zero durante l'intervallo di campionamento. 
 
 
-| Percentuale di hit della cache (totale, lettura, scrittura) % | Percentuale di richieste che generano riscontri nella cache. Maggiore è il numero di accessi rispetto agli accessi al volume, migliori sono le performance. Questa colonna è vuota per gli array di storage che non raccolgono le informazioni di accesso alla cache. 
+| Percentuale di hit della cache (totale, lettura, scrittura) % | Percentuale di richieste che generano hit nella cache.  Maggiore è il numero di accessi al volume rispetto agli accessi, migliore è la prestazione.  Questa colonna è vuota per gli array di archiviazione che non raccolgono informazioni sui risultati della cache. 
 
 
-| Utilizzo della cache (totale) % | Percentuale totale di richieste di cache che determinano accessi alla cache 
+| Utilizzo della cache (totale) % | Percentuale totale di richieste di cache che danno luogo a hit della cache 
 
 
-| Scartati di classe 3 | Numero di scarti di trasporto dati Fibre Channel di classe 3. 
+| Scarti di classe 3 | Conteggio degli scarti del trasporto dati Fibre Channel Classe 3. 
 
 
-| Utilizzo della CPU (totale) % | Quantità di risorse CPU utilizzate attivamente, come percentuale del totale disponibile (su tutte le CPU virtuali). 
+| Utilizzo della CPU (totale) % | Quantità di risorse della CPU utilizzate attivamente, come percentuale del totale disponibile (su tutte le CPU virtuali). 
 
 
-| Errore CRC | Numero di frame con CRC (Cyclic Redundancy Check) non validi rilevati dalla porta durante il periodo di campionamento 
+| errore CRC | Numero di frame con controlli di ridondanza ciclica (CRC) non validi rilevati dalla porta durante il periodo di campionamento 
 
 
-| Frame rate | Frame rate di trasmissione in frame al secondo (FPS) 
+| Frequenza dei fotogrammi | Trasmetti la frequenza dei fotogrammi in fotogrammi al secondo (FPS) 
 
 
-| Dimensione media frame (Rx, Tx) | Rapporto tra traffico e dimensione del frame. Questa metrica consente di identificare la presenza di frame overhead nel fabric. 
+| Dimensioni medie del fotogramma (Rx, Tx) | Rapporto tra traffico e dimensione del frame.  Questa metrica consente di identificare se nel tessuto sono presenti dei frame sospesi. 
 
 
-| Dimensione frame troppo lunga | Numero di frame di trasmissione dati Fibre Channel troppo lunghi. 
+| Dimensioni del frame troppo lunghe | Conteggio dei frame di trasmissione dati Fibre Channel troppo lunghi. 
 
 
-| Dimensione del frame troppo breve | Numero di frame di trasmissione dati Fibre Channel troppo brevi. 
+| Dimensioni del telaio troppo corte | Numero di frame di trasmissione dati Fibre Channel troppo brevi. 
 
 
-| Densità i/o (totale, lettura, scrittura) | Numero di IOPS diviso per la capacità utilizzata (acquisita dall'ultimo sondaggio di inventario dell'origine dati) per il volume, il volume interno o l'elemento di storage. Misurato in numero di operazioni di i/o al secondo per TB. 
+| Densità I/O (totale, lettura, scrittura) | Numero di IOPS diviso per la capacità utilizzata (come acquisita dal sondaggio di inventario più recente dell'origine dati) per l'elemento Volume, Volume interno o Archiviazione.  Misurato in numero di operazioni I/O al secondo per TB. 
 
 
-| IOPS (totale, lettura, scrittura) | Numero di richieste di servizio i/o in lettura/scrittura che passano attraverso il canale i/o o una parte di tale canale per unità di tempo (misurato in i/o al secondo) 
+| IOPS (totale, lettura, scrittura) | Numero di richieste di servizio I/O di lettura/scrittura che passano attraverso il canale I/O o una parte di tale canale per unità di tempo (misurato in I/O al secondo) 
 
 
-| Throughput IP (totale, lettura, scrittura) | Total (totale): Tasso aggregato alla quale i dati IP sono stati trasmessi e ricevuti in megabyte al secondo. 
+| Throughput IP (totale, lettura, scrittura) | Totale: velocità aggregata alla quale i dati IP sono stati trasmessi e ricevuti in megabyte al secondo. 
 
 
-| Lettura: Throughput IP (ricezione): | Tasso medio di ricezione dei dati IP in megabyte al secondo. 
+| Lettura: Velocità di trasmissione IP (ricezione): | Velocità media di ricezione dei dati IP in megabyte al secondo. 
 
 
-| Scrittura: Throughput IP (trasmissione): | Tasso medio di trasmissione dei dati IP in megabyte al secondo. 
+| Scrittura: Velocità di trasmissione IP: | Velocità media alla quale venivano trasmessi i dati IP in megabyte al secondo. 
 
 
-| Latenza (totale, lettura, scrittura) | Latenza (R&W): Velocità con cui i dati vengono letti o scritti sulle macchine virtuali in un periodo di tempo fisso. Il valore viene misurato in megabyte al secondo. 
+| Latenza (totale, lettura, scrittura) | Latenza (R&W): velocità con cui i dati vengono letti o scritti sulle macchine virtuali in un intervallo di tempo fisso.  Il valore è misurato in megabyte al secondo. 
 
 
 | Latenza: | Tempo medio di risposta delle macchine virtuali in un archivio dati. 
 
 
-| Latenza massima: | Il tempo di risposta più elevato dalle macchine virtuali in un archivio dati. 
+| Latenza massima: | Il tempo di risposta più elevato delle macchine virtuali in un archivio dati. 
 
 
-| Errore di collegamento | Numero di errori di collegamento rilevati dalla porta durante il periodo di campionamento. 
+| Errore di collegamento | Numero di guasti di collegamento rilevati dalla porta durante il periodo di campionamento. 
 
 
-| Link RESET Rx, Tx | Numero di ripristini del collegamento di ricezione o trasmissione durante il periodo di campionamento. Questa metrica rappresenta il numero di ripristini del collegamento emessi dalla porta collegata a questa porta. 
+| Ripristino collegamento Rx, Tx | Numero di ripristini del collegamento di ricezione o trasmissione durante il periodo di campionamento.  Questa metrica rappresenta il numero di ripristini di collegamento emessi dalla porta collegata a questa porta. 
 
 
 | Utilizzo della memoria (totale) % | Soglia per la memoria utilizzata dall'host. 
 
 
-| % Parziale R/W (totale) | Numero totale di volte in cui un'operazione di lettura/scrittura attraversa un limite di stripe su qualsiasi modulo di disco in un LUN RAID 5, RAID 1/0 o RAID 0 generalmente, gli attraversamenti di stripe non sono vantaggiosi, perché ciascuno richiede un i/O. aggiuntivo Una percentuale bassa indica una dimensione efficiente degli elementi di stripe e indica un allineamento non corretto di un volume (o di un LUN NetApp). Per CLARiiON, questo valore è il numero di passaggi di stripe diviso per il numero totale di IOPS. 
+| % R/W parziale (totale) | Numero totale di volte in cui un'operazione di lettura/scrittura attraversa un limite di stripe su qualsiasi modulo disco in un LUN RAID 5, RAID 1/0 o RAID 0. In genere, gli attraversamenti di stripe non sono vantaggiosi, perché ognuno di essi richiede un I/O aggiuntivo.  Una percentuale bassa indica una dimensione efficiente dell'elemento stripe ed è indice di un allineamento non corretto di un volume (o di una LUN NetApp ).  Per CLARiiON, questo valore è il numero di attraversamenti di stripe diviso per il numero totale di IOPS. 
 
 
-| Errori di porta | Report degli errori di porta nel periodo di campionamento/intervallo di tempo specificato. 
+| Errori di porta | Segnalazione degli errori delle porte durante il periodo di campionamento/intervallo di tempo specificato. 
 
 
-| Conteggio delle perdite di segnale | Numero di errori di perdita del segnale. Se si verifica un errore di perdita del segnale, non è presente alcun collegamento elettrico e si è verificato un problema fisico. 
+| Conteggio delle perdite di segnale | Numero di errori di perdita del segnale.  Se si verifica un errore di perdita del segnale, non c'è connessione elettrica e si verifica un problema fisico. 
 
 
-| Tasso di swap (tasso totale, tasso in entrata, tasso in uscita) | Velocità con cui la memoria viene scambiata in entrata, in uscita o entrambe le cose da disco a memoria attiva durante il periodo di campionamento. Questo contatore si applica alle macchine virtuali. 
+| Tasso di swap (tasso totale, tasso di entrata, tasso di uscita) | Velocità con cui la memoria viene trasferita, estratta o entrambe le operazioni dal disco alla memoria attiva durante il periodo di campionamento.  Questo contatore si applica alle macchine virtuali. 
 
 
-| Numero di perdite di sincronizzazione | Numero di errori di perdita della sincronizzazione. Se si verifica un errore di perdita della sincronizzazione, l'hardware non può rilevare il traffico o bloccarsi su di esso. Tutte le apparecchiature potrebbero non utilizzare la stessa velocità di trasmissione dati oppure le ottiche o le connessioni fisiche potrebbero essere di scarsa qualità. La porta deve risincronizzarsi dopo ogni errore, con un impatto sulle prestazioni del sistema. Misurato in KB/sec. 
+| Conteggio delle perdite di sincronizzazione | Numero di errori di perdita di sincronizzazione.  Se si verifica un errore di perdita di sincronizzazione, l'hardware non riesce a dare un senso al traffico o a bloccarlo.  È possibile che non tutte le apparecchiature utilizzino la stessa velocità di trasmissione dati oppure che le connessioni ottiche o fisiche siano di scarsa qualità.  Dopo ogni errore di questo tipo, la porta deve risincronizzarsi, il che influisce sulle prestazioni del sistema.  Misurato in KB/sec. 
 
 
-| Throughput (totale, lettura, scrittura) | Velocità con cui i dati vengono trasmessi, ricevuti o entrambi in un periodo di tempo fisso in risposta alle richieste di servizio i/o (misurata in MB al secondo). 
+| Throughput (totale, lettura, scrittura) | Velocità con cui i dati vengono trasmessi, ricevuti o entrambi in un intervallo di tempo fisso in risposta alle richieste del servizio I/O (misurata in MB al secondo). 
 
 
-| Timeout Discard frames - Tx | Numero di frame di trasmissione scartati a causa del timeout. 
+| Timeout fotogrammi di scarto - Tx | Conteggio dei frame di trasmissione scartati a causa del timeout. 
 
 
-| Velocità di traffico (totale, lettura, scrittura) | Traffico trasmesso, ricevuto o entrambi ricevuti durante il periodo di campionamento, in megibyte al secondo. 
+| Velocità di traffico (totale, lettura, scrittura) | Traffico trasmesso, ricevuto o entrambi ricevuti durante il periodo di campionamento, in mebibyte al secondo. 
 
 
 | Utilizzo del traffico (totale, lettura, scrittura) | Rapporto tra traffico ricevuto/trasmesso/totale e capacità di ricezione/trasmissione/totale, durante il periodo di campionamento. 
@@ -156,61 +160,61 @@ La sezione visualizzazione avanzata di una pagina di risorse visualizza diverse 
 | Utilizzo (totale, lettura, scrittura) % | Percentuale della larghezza di banda disponibile utilizzata per la trasmissione (Tx) e la ricezione (Rx). 
 
 
-| Scrittura in sospeso (totale) | Numero di richieste di servizio i/o in scrittura in sospeso. 
+| Scrittura in sospeso (totale) | Numero di richieste di servizio di scrittura I/O in sospeso. 
 |===
 
 
-== Utilizzando la sezione visualizzazione avanzata
+== Utilizzo della sezione Prestazioni
 
-La sezione visualizzazione avanzata consente di visualizzare i grafici delle performance di una risorsa in base a un numero qualsiasi di metriche applicabili in un determinato periodo di tempo e di aggiungere risorse correlate per confrontare e confrontare le performance delle risorse e delle risorse correlate in diversi periodi di tempo.
+La sezione Prestazioni consente di visualizzare grafici delle prestazioni per una risorsa in base a un numero qualsiasi di parametri applicabili durante un periodo di tempo scelto e di aggiungere risorse correlate per confrontare e contrapporre le prestazioni della risorsa e delle risorse correlate in diversi periodi di tempo.
 
-.Fasi
-. Individuare una pagina di risorse effettuando una delle seguenti operazioni:
+.Passi
+. Per individuare una pagina di risorse, procedere in uno dei seguenti modi:
 +
-** Cercare e selezionare una risorsa specifica.
-** Selezionare una risorsa da un widget della dashboard.
-** Cercare un insieme di risorse e selezionarne uno dall'elenco dei risultati.
+** Cerca e seleziona una risorsa specifica.
+** Seleziona una risorsa da un widget della dashboard.
+** Esegui una query per un set di risorse e selezionane una dall'elenco dei risultati.
 +
-Viene visualizzata la pagina delle risorse. Per impostazione predefinita, il grafico delle performance mostra due metriche per il periodo di tempo selezionato per la pagina delle risorse. Ad esempio, per uno storage, il grafico delle performance mostra la latenza e gli IOPS totali per impostazione predefinita. La sezione risorse visualizza il nome della risorsa e una sezione risorse aggiuntive, che consente di cercare le risorse. A seconda della risorsa, è possibile visualizzare le risorse anche nelle sezioni Top Correlated, Top Contributor, Greedy e Degraded. Se non sono presenti risorse pertinenti a queste sezioni, non vengono visualizzate.
+Viene visualizzata la pagina delle risorse.  Per impostazione predefinita, il grafico delle prestazioni mostra due metriche per il periodo di tempo selezionato per la pagina delle risorse.  Ad esempio, per un archivio, il grafico delle prestazioni mostra per impostazione predefinita la latenza e gli IOPS totali.  La sezione Risorse mostra il nome della risorsa e una sezione Risorse aggiuntive, che consente di cercare risorse.  A seconda della risorsa, potresti vedere le risorse anche nelle sezioni Principali correlati, Principali contributori, Greedy e Degradati.  Se non ci sono risorse pertinenti a queste sezioni, queste non vengono visualizzate.
 
 
 
-. È possibile aggiungere un grafico delle performance per una metrica facendo clic su *Display Metrics* (Visualizza metriche) e selezionando le metriche che si desidera visualizzare.
+. Puoi aggiungere un grafico delle prestazioni per una metrica cliccando sull'icona a forma di ingranaggio in *Impostazioni* e selezionando le metriche che desideri visualizzare.
 +
-Viene visualizzato un grafico separato per ciascuna metrica selezionata. Il grafico visualizza i dati relativi al periodo di tempo selezionato. È possibile modificare il periodo di tempo facendo clic su un altro periodo di tempo nell'angolo in alto a destra della pagina delle risorse o ingrandendo qualsiasi grafico.
+Per ogni metrica selezionata viene visualizzato un grafico separato.  Il grafico mostra i dati per il periodo di tempo selezionato.  È possibile modificare il periodo di tempo cliccando su un altro periodo di tempo nell'angolo in alto a destra della pagina delle risorse oppure ingrandendo un grafico.
 
 +
-Fare clic su *Display Metrics* (Visualizza metriche) per deselezionare un grafico. Il grafico delle performance per la metrica viene rimosso da Expert View.
+Fare clic su *Impostazioni* per deselezionare un grafico.  Il grafico delle prestazioni per la metrica è stato rimosso dalla sezione Prestazioni.
 
-. È possibile posizionare il cursore sul grafico e modificare i dati metrici visualizzati per tale grafico facendo clic su una delle seguenti opzioni, a seconda della risorsa:
+. È possibile posizionare il cursore sul grafico e modificare i dati metrici visualizzati per quel grafico facendo clic su uno dei seguenti pulsanti, a seconda della risorsa:
 +
-** Lettura, scrittura o totale
-** TX, Rx o Total (totale)
+** Leggi, scrivi o totale
+** Tx, Rx o Totale
 +
-Total (totale) è l'impostazione predefinita.
+Il totale è l'impostazione predefinita.
 
 +
 È possibile trascinare il cursore sui punti dati nel grafico per vedere come cambia il valore della metrica nel periodo di tempo selezionato.
 
 
 
-. Nella sezione risorse, è possibile aggiungere qualsiasi risorsa correlata ai grafici delle performance:
+. Nella sezione Risorse puoi aggiungere qualsiasi risorsa correlata ai grafici delle prestazioni:
 +
-** È possibile selezionare una risorsa correlata nelle sezioni *Top Correlated*, *Top Contributors*, *greedy* e *Degraded* per aggiungere i dati da tale risorsa al grafico delle performance per ciascuna metrica selezionata.
+** È possibile selezionare una risorsa correlata nelle sezioni *Più correlati*, *Più importanti collaboratori*, *Avidi* e *Degradati* per aggiungere i dati di tale risorsa al grafico delle prestazioni per ogni metrica selezionata.
 +
-Dopo aver selezionato la risorsa, viene visualizzato un blocco di colori accanto alla risorsa per indicare il colore dei punti dati nel grafico.
+Dopo aver selezionato la risorsa, accanto alla risorsa viene visualizzato un blocco colorato per indicare il colore dei suoi punti dati nel grafico.
 
 
 
-. Fare clic su *Hide Resources* (Nascondi risorse) per nascondere il riquadro delle risorse aggiuntive. Fare clic su *risorse* per visualizzare il riquadro.
+. Fare clic su *Nascondi risorse* per nascondere il riquadro delle risorse aggiuntive.  Fare clic su *Risorse* per visualizzare il riquadro.
 +
-** Per qualsiasi risorsa visualizzata, è possibile fare clic sul nome della risorsa per visualizzarne la pagina oppure fare clic sulla percentuale in cui la risorsa è correlata o contribuisce alla risorsa di base per visualizzare ulteriori informazioni sulla relazione della risorsa con la risorsa di base.
+** Per ogni risorsa visualizzata, puoi fare clic sul nome della risorsa per visualizzare la relativa pagina oppure puoi fare clic sulla percentuale di correlazione o contributo della risorsa alla risorsa di base per visualizzare maggiori informazioni sulla relazione della risorsa con la risorsa di base.
 +
-Ad esempio, facendo clic sulla percentuale collegata accanto a una risorsa correlata in alto viene visualizzato un messaggio informativo che confronta il tipo di correlazione della risorsa con la risorsa di base.
+Ad esempio, cliccando sulla percentuale collegata accanto a una delle risorse maggiormente correlate, viene visualizzato un messaggio informativo che confronta il tipo di correlazione di tale risorsa con la risorsa di base.
 
-** Se la sezione Top Correlated non contiene una risorsa che si desidera visualizzare in un grafico delle performance a scopo di confronto, è possibile utilizzare la casella Search Assets (Cerca risorse) nella sezione Additional Resources (risorse aggiuntive) per individuare altre risorse.
-
-
+** Se la sezione Principali risorse correlate non contiene una risorsa che si desidera visualizzare in un grafico delle prestazioni a scopo di confronto, è possibile utilizzare la casella Cerca risorse nella sezione Risorse aggiuntive per individuare altre risorse.
 
 
-Una volta selezionata, la risorsa viene visualizzata nella sezione delle risorse aggiuntive. Se non si desidera più visualizzare le informazioni sulla risorsa, fare clic sull'icona del cestino per eliminarla.
+
+
+Dopo aver selezionato una risorsa, questa viene visualizzata nella sezione delle risorse aggiuntive.  Quando non vuoi più visualizzare le informazioni sulla risorsa, fai clic sull'icona del cestino per eliminarla.

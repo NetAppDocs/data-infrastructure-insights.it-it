@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_consul.html 
 keywords: telegraf, installation, install, consul 
-summary: Configurazione del data collector console 
+summary: Configurazione del raccoglitore dati del console 
 ---
 = Consul Data Collector
 :hardbreaks:
@@ -10,27 +10,27 @@ summary: Configurazione del data collector console
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Consul.
+Data Infrastructure Insights utilizza questo strumento di raccolta dati per raccogliere metriche da Consul.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Console.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Console.
 +
-Se non è stato configurato un agente per il ritiro, viene richiesto di selezionare link:task_config_telegraf_agent.html["installare un agente"] il locatario.
+Se non hai configurato un agente per la raccolta, ti verrà richiesto dilink:task_config_telegraf_agent.html["installare un agente"] sul tuo inquilino.
 
 +
-Se si dispone di un agente già configurato, selezionare il sistema operativo o la piattaforma appropriati e fare clic su *continua*.
+Se hai già configurato un agente, seleziona il sistema operativo o la piattaforma appropriati e fai clic su *Continua*.
 
-. Seguire le istruzioni nella schermata Consul Configuration (Configurazione console) per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
-
-
+. Seguire le istruzioni nella schermata Configurazione del Consul per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
-== Setup (Configurazione)
 
-Le informazioni sono disponibili nella link:https://www.consul.io/docs/index.html["Documentazione di Consul"].
+
+== Impostare
+
+Le informazioni possono essere trovate nellink:https://www.consul.io/docs/index.html["Documentazione del console"] .
 
 
 
@@ -43,10 +43,10 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Console | Namespace Check ID Service Node | Nodo IP nodo SO nodo UUID nodo Nome nodo Nome servizio Nome controllo ID servizio Stato | Avviso di passaggio critico 
+| Console | Nodo del servizio ID di controllo dello spazio dei nomi | IP del nodo Sistema operativo del nodo UUID del nodo Nome del nodo Nome del servizio Controlla nome ID del servizio Stato | Avviso di sorpasso critico 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

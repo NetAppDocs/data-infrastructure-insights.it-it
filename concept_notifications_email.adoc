@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_notifications_email.html 
-summary: Aggiunta di indirizzi e-mail per le notifiche. 
+summary: Aggiungere indirizzi email per le notifiche. 
 keywords: email, notifications, signature, recipient, list, subscription 
 ---
 = Configurazione delle notifiche e-mail
@@ -10,9 +10,9 @@ keywords: email, notifications, signature, recipient, list, subscription
 
 
 [role="lead"]
-È possibile configurare un elenco e-mail per le notifiche relative all'abbonamento e un elenco e-mail globale di destinatari per la notifica delle violazioni delle soglie dei criteri di performance.
+È possibile configurare un elenco di posta elettronica per le notifiche relative agli abbonamenti, nonché un elenco di posta elettronica globale di destinatari per la notifica delle violazioni delle soglie dei criteri di prestazione.
 
-Per configurare le impostazioni del destinatario della notifica via email, accedere alla pagina *Admin > Notifiche* e selezionare la scheda _Email_.
+Per configurare le impostazioni del destinatario delle notifiche via e-mail, vai alla pagina *Amministrazione > Notifiche* e seleziona la scheda _E-mail_.
 
 [role="thumb"]
 image:Notifications_email_list.png["Notifiche e-mail"]
@@ -21,35 +21,35 @@ image:Notifications_email_list.png["Notifiche e-mail"]
 
 == Destinatari della notifica di abbonamento
 
-Per configurare i destinatari delle notifiche degli eventi relative all'abbonamento, passare alla sezione "destinatari delle notifiche di abbonamento". È possibile scegliere di inviare notifiche via email per gli eventi relativi all'abbonamento a uno o a tutti i seguenti destinatari:
+Per configurare i destinatari delle notifiche degli eventi relativi all'abbonamento, vai alla sezione "Destinatari delle notifiche di abbonamento".  Puoi scegliere di inviare notifiche e-mail per gli eventi relativi all'abbonamento a uno o a tutti i seguenti destinatari:
 
-* Tutti i proprietari di account
-* Tutti gli amministratori di _monitoraggio e ottimizzazione_
-* Indirizzi e-mail aggiuntivi specificati dall'utente
+* Tutti i titolari di account
+* Tutti gli amministratori di _Monitor & Optimize_
+* Indirizzi email aggiuntivi che specifichi
 
 
-Di seguito sono riportati alcuni esempi dei tipi di notifiche che è possibile inviare e delle azioni dell'utente che è possibile eseguire.
+Di seguito sono riportati alcuni esempi dei tipi di notifiche che potrebbero essere inviate e delle azioni che l'utente può intraprendere.
 
 |===
 
 
-| *Notifica:* | *Azione utente:* 
+| *Notifica:* | *Azione dell'utente:* 
 
 
-| La versione di prova o l'abbonamento sono stati aggiornati | Controlla i dettagli dell'abbonamento nella link:concept_subscribing_to_cloud_insights.html["Iscrizione"] pagina 
+| La versione di prova o l'abbonamento sono stati aggiornati | Rivedi i dettagli dell'abbonamento sulink:concept_subscribing_to_cloud_insights.html["Sottoscrizione"] pagina 
 
 
-| L'abbonamento scadrà tra 90 giorni. L'abbonamento scadrà tra 30 giorni | Non è necessario eseguire alcuna azione se è attivata l'opzione "rinnovo automatico", contattare il reparto vendite NetApp per rinnovare l'abbonamento 
+| L'abbonamento scadrà tra 90 giorni L'abbonamento scadrà tra 30 giorni | Nessuna azione necessaria se è abilitato il "Rinnovo automatico". Contattare il reparto vendite NetApp per rinnovare l'abbonamento. 
 
 
-| La prova termina in 2 giorni | Rinnova la prova dalla link:concept_subscribing_to_cloud_insights.html["Iscrizione"]pagina. Puoi rinnovare una prova una volta sola. Contattare il reparto vendite NetApp per acquistare un abbonamento 
+| Il processo termina tra 2 giorni | Rinnova la prova dallink:concept_subscribing_to_cloud_insights.html["Sottoscrizione"] pagina.  È possibile rinnovare la prova una sola volta.  Contatta il reparto vendite NetApp per acquistare un abbonamento 
 
 
-| La prova o l'abbonamento sono scaduti. L'account interrompe la raccolta dei dati in 48 ore. L'account verrà cancellato dopo 48 ore | Contattare il reparto vendite NetApp per acquistare un abbonamento 
+| La prova o l'abbonamento sono scaduti. L'account smetterà di raccogliere dati tra 48 ore. L'account verrà eliminato dopo 48 ore. | Contatta il reparto vendite NetApp per acquistare un abbonamento 
 |===
 [NOTE]
 ====
-Per garantire che i destinatari ricevano notifiche da Data Infrastructure Insights, aggiungere i seguenti indirizzi e-mail a qualsiasi elenco "Consenti":
+Per assicurarti che i tuoi destinatari ricevano notifiche da Data Infrastructure Insights, aggiungi i seguenti indirizzi email a tutti gli elenchi "consentiti":
 
 * \accounts@service.cloudinsights.netapp.com
 * \DoNotReply@cloudinsights.netapp.com
@@ -58,25 +58,25 @@ Per garantire che i destinatari ricevano notifiche da Data Infrastructure Insigh
 ====
 
 
-== Elenco globale destinatari per gli avvisi
+== Elenco globale dei destinatari per gli avvisi
 
-Le notifiche e-mail degli avvisi vengono inviate all'elenco dei destinatari degli avvisi per ogni azione dell'avviso. È possibile scegliere di inviare notifiche di avviso a un elenco globale di destinatari.
+Le notifiche e-mail degli avvisi vengono inviate all'elenco dei destinatari degli avvisi per ogni azione sull'avviso.  È possibile scegliere di inviare notifiche di avviso a un elenco di destinatari globale.
 
-Per configurare i destinatari degli avvisi globali, selezionare i destinatari desiderati nella sezione *destinatari delle notifiche globali di monitoraggio*.
+Per configurare i destinatari degli avvisi globali, selezionare i destinatari desiderati nella sezione *Destinatari delle notifiche di Global Monitor*.
 
-Durante la creazione o la modifica del monitor, è sempre possibile ignorare l'elenco globale dei destinatari di un singolo monitor.
+È sempre possibile sovrascrivere l'elenco dei destinatari globali per un singolo monitor durante la creazione o la modifica del monitor.
 
 
-NOTE: Le notifiche del Data Collector di ONTAP hanno la precedenza su qualsiasi notifica specifica del Monitor rilevante per il cluster/data collector. L'elenco dei destinatari impostato per Data Collector riceverà gli avvisi di data collector. Se non sono presenti avvisi di data collector attivi, gli avvisi generati dal monitor verranno inviati a destinatari specifici del monitor.
+NOTE: Le notifiche di ONTAP Data Collector hanno la precedenza su qualsiasi notifica specifica di Monitor pertinente al cluster/data collector.  L'elenco dei destinatari impostato per il Data Collector riceverà gli avvisi del Data Collector.  Se non sono presenti avvisi attivi del raccoglitore dati, gli avvisi generati dal monitor verranno inviati a destinatari specifici del monitor.
 
 
 
 == Modifica delle notifiche per ONTAP
 
-Puoi modificare le notifiche per i cluster ONTAP selezionando _Modifica notifiche_ dall'elenco a discesa in alto a destra in una landing page dello storage.
+È possibile modificare le notifiche per i cluster ONTAP selezionando _Modifica notifiche_ dal menu a discesa in alto a destra nella landing page di Storage.
 
 image:EditONTAPNotifications.png["Notifiche di modifica ONTAP"]
 
-Da qui è possibile impostare le notifiche per gli avvisi critici, di avviso, informativi e/o risolti. Ogni scenario può inviare una notifica all'elenco Global Recipient (destinatari globali) o ad altri destinatari scelti.
+Da qui puoi impostare le notifiche per avvisi critici, di avviso, informativi e/o risolti.  Ogni scenario può inviare notifiche all'elenco dei destinatari globali o ad altri destinatari scelti da te.
 
 image:EditONTAPNotifications_MultipleScenarios.png["Notifiche ONTAP per diversi scenari"]

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept_feature_tutorials.html 
-summary: Data Infrastructure Insights dispone di tutorial che illustrano come eseguire molte attività. 
+summary: Data Infrastructure Insights contiene tutorial che mostrano come eseguire numerose attività. 
 keywords: onboarding, getting started, video, tutorial, resolution, dashboard, query, troubleshooting 
 ---
-= Tutorial sulle funzioni
+= Tutorial sulle funzionalità
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,27 +14,27 @@ keywords: onboarding, getting started, video, tutorial, resolution, dashboard, q
 
 
 [role="lead"]
-Data Infrastructure Insights è dotato di utili funzionalità che consentono di risolvere i problemi in modo rapido e semplice e di fornire informazioni dettagliate sull'ambiente aziendale. Trova facilmente i dati con potenti query, visualizza i dati in dashboard e invia avvisi e-mail per le soglie dei dati impostate.
+Data Infrastructure Insights è ricco di utili funzionalità che consentono di risolvere rapidamente e facilmente i problemi e di ottenere informazioni dettagliate sull'ambiente aziendale.  Trova facilmente i dati con query potenti, visualizza i dati nelle dashboard e invia avvisi via e-mail per le soglie di dati che hai impostato.
 
 
 
-== Checklist e video tutorial
+== Lista di controllo e tutorial video
 
-La *Startup Checklist* visualizzata sul tenant Data Infrastructure Insights contiene un elenco di diverse attività e concetti utili. Selezionando un elemento nella lista di controllo si accede alla pagina Data Infrastructure Insights (informazioni sull'infrastruttura dati) appropriata per tale concetto. Ad esempio, facendo clic sull'elemento _Create a Dashboard_ si apre la pagina Data Infrastructure Insights *Dashboard*.
+L'*elenco di controllo di avvio* visualizzato nel tenant di Data Infrastructure Insights contiene un elenco di diverse attività e concetti utili.  Selezionando un elemento nella checklist si accede alla pagina Data Infrastructure Insights appropriata per quel concetto.  Ad esempio, cliccando sulla voce _Crea una dashboard_ si apre la pagina *Dashboard* Data Infrastructure Insights .
 
-image:OnboardingChecklist.png["Avanzamento dell'elenco di controllo del tutorial"]
+image:OnboardingChecklist.png["Avanzamento della checklist del tutorial"]
 
-Nella parte superiore della pagina è presente un link a un tutorial video che mostra come creare una dashboard. È possibile visualizzare il video tutte le volte che si desidera fino a quando non si fa clic sul pulsante _got it! Non mostrare più questo link per quel video. Il video è disponibile ogni volta che si accede alla pagina Dashboards, fino a quando non viene visualizzato.
+Nella parte superiore della pagina è presente un collegamento a un tutorial video che mostra come creare una dashboard.  Puoi guardare il video tutte le volte che vuoi finché non clicchi su _Ho capito!  Non mostrare più questo link per quel video.  Il video è disponibile ogni volta che accedi alla pagina Dashboard, finché non lo chiudi.
 
-image:Startup-DashboardWatchVideo.png["Guarda il link video"]
+image:Startup-DashboardWatchVideo.png["Guarda il collegamento video"]
 
-Dopo aver guardato il video almeno una volta, la voce _Create a Dashboard_ nella lista di controllo è selezionata, a indicare che il tutorial è stato completato. Quindi passare al tutorial successivo.
-
-
-NOTE: È possibile visualizzare i tutorial in qualsiasi ordine, tutte le volte che si desidera, fino a quando non vengono scartati.
+Dopo aver guardato il video almeno una volta, la voce _Crea una dashboard_ nella checklist risulta selezionata, a indicare che hai completato il tutorial.  Puoi quindi procedere al tutorial successivo.
 
 
+NOTE: Puoi visualizzare i tutorial nell'ordine che preferisci, tutte le volte che vuoi, finché non li ignori.
 
-=== Disperdere l'elenco di controllo
 
-L'elenco di controllo di avvio viene visualizzato finché non si fa clic sul collegamento _non mostrare più_ in fondo all'elenco di controllo. Anche dopo aver eliminato l'elenco di controllo, i tutorial sono ancora disponibili in ciascuna pagina di approfondimento dell'infrastruttura dati appropriata fino a quando non si ignora ciascuno di essi dalla barra dell'intestazione del messaggio.
+
+=== Ignorare la checklist
+
+L'elenco di controllo di avvio viene visualizzato finché non si fa clic sul collegamento _Non mostrare più_ nella parte inferiore dell'elenco di controllo.  Anche dopo aver eliminato la checklist, i tutorial restano disponibili in ogni pagina appropriata Data Infrastructure Insights finché non li elimini tutti dalla barra dell'intestazione del messaggio.

@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_unified.html 
 keywords: data collector, VNX, EMC, Dell 
-summary: Configurazione di VNX data collector. 
+summary: Configurazione del raccoglitore dati VNX. 
 ---
-= Configurazione di Dell EMC VNX Unified Data Collector
+= Configurazione del data collector Dell EMC VNX Unified
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Per la configurazione, il data collector Dell EMC VNX Unified (SSH) richiede l'indirizzo IP della stazione di controllo e un nome utente e una password di sola lettura.
+Per la configurazione, il data collector Dell EMC VNX Unified (SSH) richiede l'indirizzo IP della Control Station e un nome utente e una password di sola lettura.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore di dati.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco | Disco 
 
 
-| Disk Folder (cartella disco | Gruppo di dischi 
+| Cartella del disco | Gruppo di dischi 
 
 
-| File system | Volume interno 
+| Sistema di file | Volume interno 
 
 
-| Storage | Storage 
+| Magazzinaggio | Magazzinaggio 
 
 
-| Processore per lo storage | Nodo di storage 
+| Processore di archiviazione | Nodo di archiviazione 
 
 
-| Pool di storage, gruppo RAID | Pool di storage 
+| Pool di archiviazione, gruppo RAID | Pool di archiviazione 
 
 
 | LUN | Volume 
 
 
-| Data Mover. (Mover dati | Controller 
+| Spostamento dati | Controllore 
 
 
 | File System montato su un data mover | Condivisione file 
@@ -53,17 +53,17 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 | Esportazioni CIFS e NFS | Condividere 
 
 
-| Volume del disco | LUN back-end 
+| Volume del disco | LUN di backend 
 |===
 
 
 == Requisiti
 
-Per configurare il data collector VNX (SSH) sono necessari i seguenti elementi:
+Per configurare il raccoglitore dati VNX (SSH) è necessario quanto segue:
 
 * Indirizzo IP VNX e credenziali per la stazione di controllo Celerra.
 * Nome utente e password di sola lettura.
-* Il data collector è in grado di eseguire comandi navicli/NaviSecCLI sull'array di back-end utilizzando le testine NAS del sistema operativo DART
+* Il raccoglitore di dati è in grado di eseguire comandi NaviCLI/NaviSecCLI sull'array backend utilizzando le testine NAS del sistema operativo DART
 
 
 
@@ -78,7 +78,7 @@ Per configurare il data collector VNX (SSH) sono necessari i seguenti elementi:
 | Indirizzo IP VNX | Indirizzo IP o nome di dominio completo della stazione di controllo VNX 
 
 
-| Nome utente | Nome utente della stazione di controllo VNX 
+| Nome utente | Nome utente per la stazione di controllo VNX 
 
 
 | Password | Password per la stazione di controllo VNX 
@@ -92,13 +92,13 @@ Per configurare il data collector VNX (SSH) sono necessari i seguenti elementi:
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 40 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 40 minuti. 
 
 
-| Performance poll Interval (sec). | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio sulle prestazioni (sec). | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

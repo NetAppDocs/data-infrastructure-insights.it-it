@@ -1,29 +1,29 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_integration_with_ontap_arp.html 
-summary: La sicurezza del carico di lavoro si integra con la protezione ransomware autonoma di ONTAP per migliorare il rilevamento ransomware. 
+summary: Workload Security si integra con ONTAP Autonomous Ransomware Protection per migliorare il rilevamento dei ransomware. 
 keywords: ransomware, ARP, Protection, Security 
 ---
-= Integrazione con la protezione ransomware autonoma di ONTAP
+= Integrazione con la protezione autonoma dai ransomware ONTAP
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-La funzionalità ARP (Autonomous ransomware Protection) di ONTAP utilizza l'analisi dei carichi di lavoro in ambienti NAS (NFS e SMB) per rilevare e avvisare in modo proattivo circa attività anomale nel file che potrebbero indicare un attacco ransomware.
+La funzionalità ONTAP Autonomous Ransomware Protection (ARP) utilizza l'analisi del carico di lavoro negli ambienti NAS (NFS e SMB) per rilevare in modo proattivo e avvisare in caso di attività anomale nei file che potrebbero indicare un attacco ransomware.
 
-Ulteriori dettagli e requisiti di licenza su ARP sono disponibili link:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["qui"].
+Ulteriori dettagli e requisiti di licenza su ARP possono essere trovatilink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Qui"] .
 
-La sicurezza del carico di lavoro si integra con ONTAP per ricevere eventi ARP e fornire un ulteriore livello di analisi e risposte automatiche.
+Workload Security si integra con ONTAP per ricevere eventi ARP e fornire un ulteriore livello di analisi e risposte automatiche.
 
-Workload Security riceve gli eventi ARP da ONTAP e intraprende le seguenti azioni:
+Workload Security riceve gli eventi ARP da ONTAP ed esegue le seguenti azioni:
 
-. Correla gli eventi di crittografia dei volumi con l'attività dell'utente per identificare chi sta causando il danno.
-. Implementa policy di risposta automatica (se definite)
-. Offre funzionalità di analisi legale:
+. Correla gli eventi di crittografia del volume con l'attività dell'utente per identificare chi sta causando il danno.
+. Implementa politiche di risposta automatica (se definite)
+. Fornisce funzionalità forensi:
 +
 ** Consentire ai clienti di condurre indagini sulle violazioni dei dati.
-** Identificare i file interessati, contribuendo a ripristinarli più rapidamente e a condurre indagini sulle violazioni dei dati.
+** Identificare i file interessati, contribuendo a un recupero più rapido e a condurre indagini sulle violazioni dei dati.
 
 
 
@@ -32,10 +32,10 @@ Workload Security riceve gli eventi ARP da ONTAP e intraprende le seguenti azion
 
 == Prerequisiti
 
-. Versione ONTAP minima: 9.11.1
-. Volumi abilitati ARP. È possibile trovare ulteriori informazioni sull'abilitazione di ARP link:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["qui"]. ARP deve essere abilitato tramite Gestore di sistema di OnCommand. La sicurezza del carico di lavoro non può abilitare ARP.
-. Workload Security Collector deve essere aggiunto tramite l'IP del cluster.
-. Per il funzionamento di questa funzionalità sono necessarie credenziali a livello di cluster. In altre parole, è necessario utilizzare le credenziali a livello di cluster quando si aggiunge la SVM.
+. Versione minima ONTAP : 9.11.1
+. Volumi abilitati ARP.  I dettagli sull'abilitazione di ARP possono essere trovatilink:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Qui"] .  ARP deve essere abilitato tramite OnCommand System Manager.  Workload Security non può abilitare ARP.
+. Il collettore di sicurezza del carico di lavoro deve essere aggiunto tramite l'IP del cluster.
+. Per il funzionamento di questa funzionalità sono necessarie le credenziali a livello di cluster.  In altre parole, quando si aggiunge l'SVM è necessario utilizzare le credenziali a livello di cluster.
 
 
 
@@ -44,42 +44,42 @@ Workload Security riceve gli eventi ARP da ONTAP e intraprende le seguenti azion
 
 Se si utilizzano credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
 
-Se si utilizza un utente personalizzato (ad esempio, _csuser_) con autorizzazioni assegnate all'utente, seguire la procedura riportata di seguito per assegnare le autorizzazioni alla sicurezza del carico di lavoro per raccogliere informazioni relative all'ARP da ONTAP.
+Se si utilizza un utente personalizzato (ad esempio, _csuser_) con autorizzazioni concesse all'utente, seguire i passaggi sottostanti per concedere a Workload Security le autorizzazioni per raccogliere informazioni relative ad ARP da ONTAP.
 
-Per _csuser_ con credenziali cluster, eseguire le seguenti operazioni dalla riga di comando ONTAP:
+Per _csuser_ con credenziali del cluster, procedere come segue dalla riga di comando ONTAP :
 
 ....
 security login role create -role csrole -cmddirname "volume" -access readonly
 security login role create -role csrole -cmddirname "security anti-ransomware volume" -access readonly
 ....
-Ulteriori informazioni sulla configurazione di Altro link:task_add_collector_svm.html["Permessi ONTAP"].
+Per saperne di più sulla configurazione di altrilink:task_add_collector_svm.html["Autorizzazioni ONTAP"] .
 
 
 
-== Avviso di esempio
+== Esempio di avviso
 
 Di seguito è riportato un esempio di avviso generato a causa di un evento ARP:
 
-image:CS_Ransomware_Example_1.png["Ransomware Alert, sezione superiore"] image:CS_Ransomware_Example_2.png["Ransomware Alert, sezione superiore"] image:CS_Ransomware_Example_3.png["Ransomware Alert, sezione superiore"]
+image:CS_Ransomware_Example_1.png["Sezione superiore dell'avviso ransomware"] image:CS_Ransomware_Example_2.png["Sezione superiore dell'avviso ransomware"] image:CS_Ransomware_Example_3.png["Sezione superiore dell'avviso ransomware"]
 
-Un banner di alta fiducia indica che l'attacco ha mostrato un comportamento ransomware insieme alle attività di crittografia dei file. Il grafico dei file crittografati indica la data e l'ora in cui l'attività di crittografia del volume è stata rilevata dalla soluzione ARP.
+Un banner di alta affidabilità indica che l'attacco ha mostrato un comportamento ransomware insieme ad attività di crittografia dei file.  Il grafico dei file crittografati indica il timestamp in cui l'attività di crittografia del volume è stata rilevata dalla soluzione ARP.
 
 
 
 == Limitazioni
 
-Nel caso in cui una SVM non venga monitorata dalla sicurezza del carico di lavoro, ma vi siano eventi ARP generati da ONTAP, gli eventi verranno comunque ricevuti e visualizzati dalla sicurezza del carico di lavoro. Tuttavia, le informazioni Forensic relative all'avviso, così come la mappatura dell'utente, non verranno acquisite o visualizzate.
+Nel caso in cui un SVM non sia monitorato da Workload Security, ma vi siano eventi ARP generati da ONTAP, gli eventi verranno comunque ricevuti e visualizzati da Workload Security.  Tuttavia, le informazioni forensi relative all'avviso, così come la mappatura degli utenti, non verranno acquisite o mostrate.
 
 
 
 == Risoluzione dei problemi
 
-I problemi noti e le relative risoluzioni sono descritti nella seguente tabella.
+Nella tabella seguente sono descritti i problemi noti e le relative soluzioni.
 
 [cols="2*"]
 |===
 | Problema: | Risoluzione: 
 
 
-| Gli avvisi e-mail vengono ricevuti 24 ore dopo il rilevamento di un attacco. Nell'interfaccia utente, gli avvisi vengono visualizzati 24 ore prima della ricezione delle e-mail da parte di Data Infrastructure Insights workload Security. | Quando ONTAP invia l'evento _ransomware rilevato_ alla sicurezza del carico di lavoro di Data Infrastructure Insights (ad es. Sicurezza del carico di lavoro), l'email viene inviata. L'evento contiene un elenco di attacchi e i relativi indicatori di data e ora. L'interfaccia utente di workload Security visualizza la data e l'ora di avviso del primo file attaccato. ONTAP invia l'evento _ransomware Detected_ a informazioni sull'infrastruttura dati quando viene codificato un determinato numero di file. Pertanto, potrebbe esserci una differenza tra l'ora in cui l'avviso viene visualizzato nell'interfaccia utente e l'ora in cui l'e-mail viene inviata. 
+| Gli avvisi via e-mail vengono ricevuti 24 ore dopo il rilevamento di un attacco.  Nell'interfaccia utente, gli avvisi vengono visualizzati 24 ore prima che le e-mail vengano ricevute da Data Infrastructure Insights Workload Security. | Quando ONTAP invia l'evento _Ransomware Detected_ a Data Infrastructure Insights Workload Security (ovvero Workload Security), l'e-mail viene inviata.  L'evento contiene un elenco degli attacchi e i relativi timestamp.  L'interfaccia utente di Workload Security visualizza il timestamp dell'avviso del primo file attaccato.  ONTAP invia l'evento _Ransomware Detected_ a Data Infrastructure Insights quando viene codificato un certo numero di file.  Potrebbe quindi esserci una differenza tra l'orario in cui l'avviso viene visualizzato nell'interfaccia utente e l'orario in cui viene inviata l'e-mail. 
 |===

@@ -2,53 +2,53 @@
 sidebar: sidebar 
 permalink: task_dc_fujitsu_eternus.html 
 keywords: data collector, Fujitsu, Eternus 
-summary: Configurazione di Fujitsu Eternus data collector. 
+summary: Configurazione del raccoglitore dati Fujitsu Eternus. 
 ---
-= Data collector Fujitsu Eternus
+= Raccoglitore dati Fujitsu Eternus
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector Fujitsu Eternus acquisisce i dati di inventario utilizzando l'accesso a livello di amministrazione al sistema storage.
+Il raccoglitore dati Fujitsu Eternus acquisisce i dati di inventario utilizzando l'accesso a livello di amministrazione al sistema di archiviazione.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dallo storage Fujitsu Eternus. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dallo storage Fujitsu Eternus.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco | Disco 
 
 
-| Storage | Storage 
+| Magazzinaggio | Magazzinaggio 
 
 
-| Thin Pool, Flexible Tier Pool, RAID Group | Pool di storage 
+| Pool sottile, pool di livelli flessibile, gruppo raid | Pool di archiviazione 
 
 
-| Volume standard, Snap Data Volume (SDV), Snap Data Pool Volume (SDPV), Thin Provisioning Volume (TPV), Flexible Tier Volume (FTV), Wide Striping Volume (WSV) | Volume 
+| Volume standard, volume dati Snap (SDV), volume pool dati Snap (SDPV), volume thin provisioning (TPV), volume livello flessibile (FTV), volume wide striping (WSV) | Volume 
 
 
-| Adattatore di canale | Controller 
+| Adattatore di canale | Controllore 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare ogni caso per questo data collectior.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessari i seguenti requisiti:
+Per configurare questo raccoglitore dati sono necessari i seguenti elementi:
 
-* Indirizzo IP dello storage Eternus, che non può essere delimitato da virgole
-* Nome utente e password a livello di amministrazione SSH
+* Un indirizzo IP dello storage Eternus, che non può essere delimitato da virgole
+* Nome utente e password di livello di amministrazione SSH
 * Porta 22
-* Assicurarsi che lo scorrimento della pagina sia disattivato (disattivazione di Clienv-show-more-scroll)
+* Assicurarsi che lo scorrimento della pagina sia disabilitato (clienv-show-more-scroll disable)
 
 
 
@@ -60,13 +60,13 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 | Campo | Descrizione 
 
 
-| Indirizzo IP dello storage Eternus | Indirizzo IP dello storage Eternus 
+| Indirizzo IP di Eternus Storage | Indirizzo IP dello storage Eternus 
 
 
-| Nome utente | Nome utente dello storage Eternus 
+| Nome utente | Nome utente per l'archiviazione Eternus 
 
 
-| Password | Password per lo storage Eternus 
+| Password | Password per l'archiviazione Eternus 
 |===
 
 
@@ -77,13 +77,13 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | L'impostazione predefinita è 20 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 20 minuti. 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -91,12 +91,12 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| "Errore durante il recupero dei dati" con i messaggi di errore "Error Finding prompt CLI" o "Error Finding prompt at the end of shell results" | Probabile causa: Lo scorrimento delle pagine del sistema di storage è attivato. Soluzione possibile: * Provare a disattivare lo scorrimento delle pagine eseguendo il seguente comando: Set clientv-show-more -scroll disable 
+| "Errore durante il recupero dei dati" con messaggi di errore "Errore durante la ricerca del prompt CLI" o "Errore durante la ricerca del prompt alla fine dei risultati della shell" | Probabilmente causato da: il sistema di archiviazione ha lo scorrimento delle pagine abilitato.  Possibile soluzione: * Provare a disabilitare lo scorrimento della pagina eseguendo il seguente comando: set clienv-show-more -scroll disable 
 
 
-| "Errore di connessione" con messaggi di errore "Impossibile creare un'istanza di connessione SSH allo storage" o "Impossibile creare un'istanza di connessione a VirtualCenter" | Cause probabili: * Credenziali errate. * Indirizzo IP errato. * Problema di rete. * Lo storage potrebbe essere inattivo o non rispondere. Possibili soluzioni: * Verificare le credenziali e l'indirizzo IP immessi. * Provare a comunicare con lo storage utilizzando il client SSH. 
+| "Errore di connessione" con messaggi di errore "Impossibile creare un'istanza di una connessione SSH allo storage" o "Impossibile creare un'istanza di una connessione a VirtualCenter" | Probabili cause: * Credenziali errate.  * Indirizzo IP errato.  * Problema di rete.  * Lo storage potrebbe essere inattivo o non rispondere.  Possibili soluzioni: * Verificare le credenziali e l'indirizzo IP immessi.  * Prova a comunicare con l'archiviazione utilizzando il client SSH. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

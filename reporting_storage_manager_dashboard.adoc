@@ -1,80 +1,80 @@
 ---
 sidebar: sidebar 
 permalink: reporting_storage_manager_dashboard.html 
-summary: È possibile utilizzare Storage Manager Dashboard per la gestione quotidiana dei servizi di storage. 
+summary: Puoi utilizzare la Dashboard di Storage Manager per la gestione quotidiana dei tuoi servizi di archiviazione. 
 keywords: reporting, cognos, data warehouse, dwh, smd, storage manager dashboard 
 ---
-= Dashboard di Storage Manager
+= Dashboard del gestore dell'archiviazione
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-La dashboard di Storage Manager offre una visualizzazione centralizzata che consente di confrontare e confrontare l'utilizzo delle risorse nel tempo con gli intervalli accettabili e i giorni di attività precedenti. Mostrando solo le metriche chiave delle performance per i tuoi servizi storage, puoi prendere decisioni su come gestire i tuoi data center.
+La dashboard di Storage Manager fornisce una visualizzazione centralizzata che consente di confrontare e contrapporre l'utilizzo delle risorse nel tempo rispetto agli intervalli accettabili e ai giorni di attività precedenti.  Visualizzando solo le metriche chiave delle prestazioni per i tuoi servizi di archiviazione, puoi prendere decisioni su come gestire i tuoi data center.
 
 
-NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"].
+NOTE: La funzionalità di reporting è disponibile in Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Edizione Premium"] .
 
 
 
 == Riepilogo
 
-Selezionando *Storage Manager Dashboard* da Team Content, vengono forniti diversi report che forniscono informazioni sul traffico e sullo storage.
+Selezionando *Storage Manager Dashboard* da Team Content vengono visualizzati diversi report che forniscono informazioni sul traffico e sullo spazio di archiviazione.
 
-image:Reporting_Storage_Manager_Dashboard_Choices.png["Opzioni del pannello di controllo di Storage Manager"]
+image:Reporting_Storage_Manager_Dashboard_Choices.png["Opzioni della dashboard di Storage Manager"]
 
-Per una visualizzazione immediata, il report * Storage Manager comprende sette componenti che contengono informazioni contestuali su molti aspetti dell'ambiente di storage. È possibile approfondire gli aspetti dei servizi storage per eseguire un'analisi approfondita di una sezione che interessa di più.
+Per una panoramica immediata, il *Storage Manager Report* è composto da sette componenti che contengono informazioni contestuali su numerosi aspetti dell'ambiente di archiviazione.  Puoi approfondire gli aspetti dei tuoi servizi di archiviazione per eseguire un'analisi approfondita della sezione che più ti interessa.
 
-image:Reporting-SMD.png["Dashboard di Storage Manager"]
+image:Reporting-SMD.png["Dashboard del gestore dell'archiviazione"]
 
-Questo componente mostra la capacità di storage utilizzata rispetto a quella utilizzabile, il numero totale di porte switch rispetto al numero di porte switch connesse e l'utilizzo totale delle porte switch connesse rispetto alla larghezza di banda totale, nonché l'andamento di ciascuna di queste nel tempo. È possibile visualizzare l'utilizzo effettivo rispetto ai range bassi, medi e alti, che consente di confrontare e confrontare l'utilizzo tra le proiezioni e gli effettivi desiderati, in base a un target. Per la capacità e le porte dello switch, è possibile configurare questa destinazione. La previsione si basa su un'estrapolazione del tasso di crescita corrente e della data impostata. Quando la capacità utilizzata prevista, che si basa sulla data di proiezione dell'utilizzo futuro, supera la destinazione, viene visualizzato un avviso (cerchio rosso fisso) accanto a Capacity (capacità).
-
-
-
-=== Capacità dei Tier di storage
-
-Questo componente mostra la capacità del Tier utilizzata rispetto alla capacità allocata al Tier, che indica come la capacità utilizzata aumenta o diminuisce in un periodo di 12 mesi e quanti mesi rimangono alla capacità completa. L'utilizzo della capacità viene visualizzato con i valori forniti per l'utilizzo effettivo, la previsione di utilizzo e una destinazione per la capacità, che è possibile configurare. Quando la capacità utilizzata prevista, basata sulla data di proiezione dell'utilizzo futuro, supera la capacità di destinazione, viene visualizzato un avviso (cerchio rosso) accanto a un livello.
-
-È possibile fare clic su qualsiasi Tier per visualizzare il report Storage Pools Capacity and Performance Details, che mostra le capacità gratuite rispetto a quelle utilizzate, il numero di giorni da esaurire e i dettagli delle performance (IOPS e tempo di risposta) per tutti i pool del Tier selezionato. È inoltre possibile fare clic su qualsiasi nome di storage o pool di storage in questo report per visualizzare la pagina delle risorse che riepiloga lo stato corrente di tale risorsa.
+Questo componente mostra la capacità di archiviazione utilizzata rispetto a quella utilizzabile, il numero totale di porte switch rispetto al numero di porte switch connesse e l'utilizzo totale delle porte switch connesse rispetto alla larghezza di banda totale, nonché l'andamento di ciascuno di questi nel tempo.  È possibile visualizzare l'utilizzo effettivo confrontandolo con i valori basso, medio e alto, consentendo di confrontare e contrapporre l'utilizzo tra le proiezioni e i valori effettivi desiderati, in base a un obiettivo.  Per capacità e porte switch, è possibile configurare questa destinazione.  La previsione si basa su un'estrapolazione del tasso di crescita attuale e della data impostata.  Quando la capacità utilizzata prevista, basata sulla data di proiezione dell'utilizzo futuro, supera l'obiettivo, accanto a Capacità viene visualizzato un avviso (cerchio rosso pieno).
 
 
 
-=== Traffico di storage giornaliero
+=== Capacità dei livelli di archiviazione
 
-Questo componente mostra le performance dell'ambiente, in caso di crescita elevata, cambiamenti o potenziali problemi rispetto ai sei mesi precedenti. Mostra inoltre il traffico medio rispetto al traffico dei sette giorni precedenti e del giorno precedente. È possibile visualizzare eventuali anomalie nelle prestazioni dell'infrastruttura, in quanto fornisce informazioni che evidenziano variazioni cicliche (sette giorni precedenti) e stagionali (sei mesi precedenti).
+Questo componente mostra la capacità di livello utilizzata rispetto alla capacità assegnata al livello, che indica come la capacità utilizzata aumenta o diminuisce in un periodo di 12 mesi e quanti mesi rimangono per raggiungere la piena capacità.  L'utilizzo della capacità viene mostrato con valori forniti per l'utilizzo effettivo, la previsione di utilizzo e un obiettivo per la capacità, che è possibile configurare.  Quando la capacità utilizzata prevista, basata sulla data di proiezione dell'utilizzo futuro, supera la capacità target, accanto a un livello viene visualizzato un avviso (cerchio rosso pieno).
 
-È possibile fare clic sul titolo (Daily Storage Traffic) per visualizzare il report Storage Traffic Details, che mostra la mappa termica del traffico di storage orario per il giorno precedente per ciascun sistema di storage. Fare clic su un nome di storage qualsiasi in questo report per visualizzare la pagina delle risorse che riepiloga lo stato corrente della risorsa.
-
-
-
-=== Data Center Time to Full (i data center sono in fase di
-
-Questo componente mostra tutti i data center rispetto a tutti i Tier e la capacità residua in ogni data center per ciascun Tier di storage in base ai tassi di crescita previsti. Il livello di capacità del Tier viene visualizzato in blu; più scuro è il colore, minore è il tempo trascorso dal Tier nella posizione prima che sia pieno.
-
-È possibile fare clic su una sezione di un livello per visualizzare il report Storage Pools Days to Full Details (giorni di archiviazione per dettagli completi), che mostra la capacità totale, la capacità libera e il numero di giorni da esaurire per tutti i pool nel Tier selezionato e nel data center. Fare clic su un nome di storage o pool di storage in questo report per visualizzare la pagina delle risorse che riepiloga lo stato corrente della risorsa.
+È possibile fare clic su qualsiasi livello per visualizzare il report Dettagli capacità e prestazioni dei pool di archiviazione, che mostra le capacità libere rispetto a quelle utilizzate, il numero di giorni mancanti al riempimento e i dettagli sulle prestazioni (IOPS e tempo di risposta) per tutti i pool nel livello selezionato.  È anche possibile fare clic su qualsiasi nome di storage o pool di storage in questo report per visualizzare la pagina delle risorse che riassume lo stato corrente di tale risorsa.
 
 
 
-=== 10 applicazioni principali
+=== Traffico di archiviazione giornaliero
 
-Questo componente mostra le prime 10 applicazioni in base alla capacità utilizzata. Indipendentemente dal modo in cui il Tier organizza i dati, quest'area visualizza la capacità corrente utilizzata e la condivisione dell'infrastruttura. È possibile visualizzare la gamma di esperienze utente dei sette giorni precedenti per verificare se i consumatori sperimentano tempi di risposta accettabili (o, cosa più importante, inaccettabili).
+Questo componente mostra le prestazioni dell'ambiente, se si sono verificate grandi crescite, cambiamenti o potenziali problemi rispetto ai sei mesi precedenti.  Mostra anche il traffico medio rispetto al traffico dei sette giorni precedenti e del giorno precedente.  È possibile visualizzare eventuali anomalie nelle prestazioni dell'infrastruttura, poiché fornisce informazioni che evidenziano sia le variazioni cicliche (sette giorni precedenti) sia quelle stagionali (sei mesi precedenti).
 
-Quest'area mostra anche i trend, che indicano se le applicazioni soddisfano gli obiettivi di performance del livello di servizio (SLO). È possibile visualizzare il tempo di risposta minimo della settimana precedente, il primo quartile, il terzo quartile e il tempo di risposta massimo, con una mediana visualizzata rispetto a un SLO accettabile, che è possibile configurare. Quando il tempo di risposta medio di un'applicazione non rientra nell'intervallo SLO accettabile, accanto all'applicazione viene visualizzato un avviso (cerchio rosso fisso). È possibile fare clic su un'applicazione per visualizzare la pagina delle risorse che riepiloga lo stato corrente di tale risorsa.
+È possibile fare clic sul titolo (Traffico di archiviazione giornaliero) per visualizzare il report Dettagli traffico di archiviazione, che mostra la mappa termica del traffico di archiviazione orario del giorno precedente per ciascun sistema di archiviazione.  Fare clic su un nome di archiviazione in questo report per visualizzare la pagina delle risorse che riassume lo stato corrente di tale risorsa.
 
 
 
-=== Performance giornaliere dei Tier di storage
+=== Tempo di completamento dei data center
 
-Questo componente mostra un riepilogo delle performance del Tier per i tempi di risposta e gli IOPS per i sette giorni precedenti. Queste performance vengono confrontate con un SLO, che è possibile configurare, per verificare se esiste l'opportunità di consolidare i Tier, riallineare i carichi di lavoro forniti da tali Tier o identificare problemi con determinati Tier. Quando il tempo di risposta mediano o l'IOPS mediano non rientra nell'intervallo SLO accettabile, viene visualizzato un avviso (cerchio rosso pieno) accanto a un livello.
+Questo componente mostra tutti i data center rispetto a tutti i livelli e quanta capacità rimane in ciascun data center per ciascun livello di storage in base ai tassi di crescita previsti.  Il livello di capacità del livello è mostrato in blu; più scuro è il colore, minore è il tempo rimanente prima che il livello nella posizione sia pieno.
 
-È possibile fare clic sul nome di un Tier per visualizzare il report Storage Pools Capacity and Performance Details, che mostra le capacità gratuite rispetto a quelle utilizzate, il numero di giorni da esaurire e i dettagli delle performance (IOPS e tempo di risposta) per tutti i pool del Tier selezionato. Fare clic su uno storage o pool di storage in questo report per visualizzare la pagina delle risorse che riepiloga lo stato corrente della risorsa.
+È possibile fare clic su una sezione di un livello per visualizzare il report Dettagli giorni mancanti al riempimento dei pool di archiviazione, che mostra la capacità totale, la capacità libera e il numero di giorni mancanti al riempimento per tutti i pool nel livello selezionato e nel data center.  Fare clic su qualsiasi nome di storage o pool di storage in questo report per visualizzare la pagina delle risorse che riassume lo stato corrente di tale risorsa.
+
+
+
+=== Le 10 migliori applicazioni
+
+Questo componente mostra le 10 applicazioni principali in base alla capacità utilizzata.  Indipendentemente dal modo in cui il livello organizza i dati, quest'area mostra la capacità attualmente utilizzata e la quota dell'infrastruttura.  È possibile visualizzare l'intervallo di esperienza utente nei sette giorni precedenti per verificare se i consumatori hanno riscontrato tempi di risposta accettabili (o, cosa più importante, inaccettabili).
+
+Quest'area mostra anche le tendenze, che indicano se le applicazioni soddisfano i loro obiettivi di livello di servizio (SLO) in termini di prestazioni.  È possibile visualizzare il tempo di risposta minimo della settimana precedente, il primo quartile, il terzo quartile e il tempo di risposta massimo, con una mediana visualizzata rispetto a un SLO accettabile, che è possibile configurare.  Quando il tempo di risposta mediano per un'applicazione non rientra nell'intervallo SLO accettabile, accanto all'applicazione viene visualizzato un avviso (cerchio rosso pieno).  È possibile fare clic su un'applicazione per visualizzare la pagina delle risorse che riassume lo stato attuale di tale risorsa.
+
+
+
+=== Livelli di archiviazione - Prestazioni giornaliere
+
+Questo componente mostra un riepilogo delle prestazioni del livello in termini di tempo di risposta e IOPS per i sette giorni precedenti.  Queste prestazioni vengono confrontate con uno SLO, che è possibile configurare, consentendo di verificare se è possibile consolidare i livelli, riallineare i carichi di lavoro forniti da tali livelli o identificare problemi con livelli specifici.  Quando il tempo di risposta mediano o l'IOPS mediano non rientrano nell'intervallo SLO accettabile, accanto a un livello viene visualizzato un avviso (cerchio rosso pieno).
+
+È possibile fare clic sul nome di un livello per visualizzare il report Dettagli capacità e prestazioni dei pool di archiviazione, che mostra le capacità libere rispetto a quelle utilizzate, il numero di giorni mancanti al riempimento e i dettagli sulle prestazioni (IOPS e tempo di risposta) per tutti i pool nel livello selezionato.  Fare clic su qualsiasi archivio o pool di archiviazione in questo report per visualizzare la pagina delle risorse che riassume lo stato corrente di tale risorsa.
 
 
 
 === Capacità orfana
 
-Questa componente mostra la capacità orfana totale e la capacità orfana per Tier, confrontandola con gli intervalli accettabili per la capacità utilizzabile totale e mostrando la capacità effettiva orfana. La capacità orfana è definita dalla configurazione e dalle performance. Lo storage orfano in base alla configurazione descrive una situazione in cui lo storage è allocato a un host. Tuttavia, la configurazione non è stata eseguita correttamente e l'host non può accedere allo storage. Le performance sono orfane quando lo storage è configurato correttamente per l'accesso da parte di un host. Tuttavia, non c'è stato traffico di storage.
+Questo componente mostra la capacità orfana totale e la capacità orfana per livello, confrontandola con intervalli accettabili per la capacità totale utilizzabile e mostrando la capacità effettiva orfana.  La capacità orfana è definita dalla configurazione e dalle prestazioni.  L'archiviazione orfana per configurazione descrive una situazione in cui è presente spazio di archiviazione allocato a un host.  Tuttavia, la configurazione non è stata eseguita correttamente e l'host non riesce ad accedere allo storage.  L'archiviazione è orfana in termini di prestazioni quando è correttamente configurata per essere accessibile da un host.  Tuttavia, non si è verificato alcun traffico di archiviazione.
 
-La barra orizzontale sovrapposta mostra gli intervalli accettabili. Più scuro è il grigio, più inaccettabile è la situazione. La situazione effettiva viene mostrata con la stretta barra di bronzo che mostra la capacità effettiva che è orfana.
+La barra orizzontale sovrapposta mostra gli intervalli accettabili.  Più scuro è il grigio, più inaccettabile è la situazione.  La situazione reale è mostrata dalla barra stretta in bronzo che indica la capacità effettivamente rimasta orfana.
 
-È possibile fare clic su un Tier per visualizzare il report "Orphaned Storage Details" (Dettagli storage orfani), che mostra tutti i volumi identificati come orfani in base alla configurazione e alle performance per il Tier selezionato. Fare clic su qualsiasi storage, pool di storage o volume in questo report per visualizzare la pagina delle risorse che riepiloga lo stato corrente della risorsa.
+È possibile fare clic su un livello per visualizzare il report Dettagli archiviazione orfani, che mostra tutti i volumi identificati come orfani in base alla configurazione e alle prestazioni per il livello selezionato.  Fare clic su qualsiasi archivio, pool di archiviazione o volume in questo report per visualizzare la pagina delle risorse che riassume lo stato corrente di tale risorsa.

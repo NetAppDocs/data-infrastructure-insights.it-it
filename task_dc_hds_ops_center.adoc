@@ -2,72 +2,72 @@
 sidebar: sidebar 
 permalink: task_dc_hds_ops_center.html 
 keywords: data collector, Hitachi Ops Center 
-summary: Configurazione di HDS Ops Center data collector. 
+summary: Configurazione del raccoglitore dati HDS Ops Center. 
 ---
-= Data collector Hitachi Ops Center
+= Raccoglitore dati Hitachi Ops Center
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Questo data collector utilizza la suite integrata di applicazioni di Hitachi Ops Center per accedere ai dati di inventario e performance di più dispositivi storage. Per il rilevamento dell'inventario e della capacità, l'installazione di Ops Center deve includere i componenti "Common Services" e "Administrator". Per la raccolta delle performance, è necessario implementare anche "Analyzer".
+Questo raccoglitore di dati utilizza la suite integrata di applicazioni di Hitachi Ops Center per accedere ai dati di inventario e alle prestazioni di più dispositivi di archiviazione.  Per l'individuazione dell'inventario e della capacità, l'installazione di Ops Center deve includere sia i componenti "Common Services" sia "Administrator".  Per la raccolta delle prestazioni, è necessario che sia distribuito anche "Analyzer".
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore di dati.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Sistemi storage | Storage 
+| Sistemi di archiviazione | Magazzinaggio 
 
 
 | Volume | Volume 
 
 
-| Gruppi di parità | Pool di storage (RAID), gruppi di dischi 
+| Gruppi di parità | Pool di archiviazione (RAID), gruppi di dischi 
 
 
 | Disco | Disco 
 
 
-| Pool di storage | Pool di storage (sottile, SNAP) 
+| Pool di archiviazione | Pool di archiviazione (sottile, SNAP) 
 
 
-| Gruppi di parità esterni | Pool di storage (back-end), gruppi di dischi 
+| Gruppi di parità esterni | Pool di archiviazione (backend), gruppi di dischi 
 
 
-| Porta | Nodo di storage → nodo controller → porta 
+| Porta | Nodo di archiviazione → Nodo controller → Porta 
 
 
-| Gruppi di host | Mappatura e mascheramento dei volumi 
+| Gruppi ospitanti | Mappatura e mascheramento del volume 
 
 
-| Coppie di volumi | Sincronizzazione dello storage 
+| Coppie di volumi | Sincronizzazione dell'archiviazione 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti di inventario
 
-Per raccogliere i dati di inventario, è necessario disporre di quanto segue:
+Per raccogliere i dati di inventario è necessario disporre di quanto segue:
 
-* Indirizzo IP o nome host del server Ops Center che ospita il componente "servizi comuni"
-* Account utente root/sysadmin e password presenti su tutti i server che ospitano i componenti di Ops Center. HDS non ha implementato il supporto API REST per l'utilizzo da parte degli utenti LDAP/SSO fino a quando Ops Center 10.8+
-
-
+* Indirizzo IP o nome host del server Ops Center che ospita il componente "Common Services"
+* Account utente root/sysadmin e password presenti su tutti i server che ospitano i componenti di Ops Center.  HDS non ha implementato il supporto REST API per l'utilizzo da parte di utenti LDAP/SSO fino a Ops Center 10.8+
 
 
-== Requisiti relativi alle performance
 
-Per raccogliere i dati sulle performance, è necessario soddisfare i seguenti requisiti:
 
-Il modulo "Analyzer" di HDS Ops Center deve essere installato gli Storage Array devono alimentare il modulo "Analyzer" di Ops Center
+== Requisiti di prestazione
+
+Per raccogliere dati sulle prestazioni è necessario soddisfare i seguenti requisiti:
+
+Il modulo "Analyzer" di HDS Ops Center deve essere installato. Gli array di storage devono alimentare il modulo "Analyzer" di Ops Center.
 
 
 
@@ -78,10 +78,10 @@ Il modulo "Analyzer" di HDS Ops Center deve essere installato gli Storage Array 
 | Campo | Descrizione 
 
 
-| Hitachi Ops Center IP Address (Indirizzo IP centro Hitachi Ops) | Indirizzo IP o nome di dominio completo del server Ops Center che ospita il componente "servizi comuni" 
+| Indirizzo IP del centro operativo Hitachi | Indirizzo IP o nome di dominio completo del server Ops Center che ospita il componente "Common Services" 
 
 
-| Nome utente | Nome utente del server Ops Center. 
+| Nome utente | Nome utente per il server Ops Center. 
 
 
 | Password | Password utilizzata per il server Ops Center. 
@@ -99,18 +99,18 @@ Il modulo "Analyzer" di HDS Ops Center deve essere installato gli Storage Array 
 | Tipo di connessione | HTTPS (porta 443) è l'impostazione predefinita 
 
 
-| Sovrascrivere la porta TCP | Specificare la porta da utilizzare se non quella predefinita 
+| Sostituisci porta TCP | Specificare la porta da utilizzare se non è quella predefinita 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 40. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario.  Il valore predefinito è 40. 
 
 
-| Scegliere 'Escludi' o 'Includi' per specificare un elenco | Specificare se includere o escludere l'elenco di array riportato di seguito durante la raccolta dei dati. 
+| Selezionare "Escludi" o "Includi" per specificare un elenco | Specificare se includere o escludere l'elenco di array sottostante durante la raccolta dei dati. 
 
 
-| Filtra elenco dispositivi | Elenco separato da virgole dei numeri di serie delle periferiche da includere o escludere 
+| Elenco dispositivi filtro | Elenco separato da virgole dei numeri di serie dei dispositivi da includere o escludere 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni.  Il valore predefinito è 300. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

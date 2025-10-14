@@ -2,55 +2,55 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_ds.html 
 keywords: data collector, IBM DS6xxx, IBM DS6xxx, IBM, IBM DS 
-summary: Configurazione di System Storage DS8000 Series Data Collector. 
+summary: Configurazione del raccoglitore dati System Storage DS8000 Series. 
 ---
-= IBM System Storage serie DS8000 Data Collector
+= Raccoglitore dati IBM System Storage serie DS8000
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector IBM DS (CLI) supporta l'acquisizione di dati relativi a inventario e performance per i dispositivi DS6xxx e DS8xxx.
+Il raccoglitore dati IBM DS (CLI) supporta l'acquisizione di dati di inventario e prestazioni per i dispositivi DS6xxx e DS8xxx.
 
-I dispositivi DS3xxx, DS4xxx e DS5xxx sono supportati da link:task_dc_na_eseries.html["Data collector NetApp e-Series"]. Fare riferimento alla matrice di supporto di Data Infrastructure Insights per i modelli e le versioni firmware supportati.
+I dispositivi DS3xxx, DS4xxx e DS5xxx sono supportati dalink:task_dc_na_eseries.html["Raccoglitore dati NetApp E-Series"] .  Per i modelli supportati e le versioni del firmware, fare riferimento alla matrice di supporto Data Infrastructure Insights .
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector IBM DS. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati IBM DS.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Modulo unità disco | Disco 
 
 
-| Immagine di storage | Storage 
+| Immagine di archiviazione | Magazzinaggio 
 
 
-| Pool di estensione | Nodo di storage 
+| Pool di estensione | Nodo di archiviazione 
 
 
-| Volume a blocchi fisso | Volume 
+| Volume di blocco fisso | Volume 
 
 
-| Iniziatore FC host (mappato) | Maschera di volume 
+| Iniziatore FC host (mappato) | Maschera del volume 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collecor.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessari i seguenti elementi:
+Per configurare questo raccoglitore dati è necessario quanto segue:
 
-* Indirizzo IP di ciascun array DS
-* Nome utente e password di sola lettura su ciascun array DS
+* Indirizzo IP di ogni array DS
+* Nome utente e password di sola lettura su ogni array DS
 * Software di terze parti installato su Data Infrastructure Insights AU: IBM _dscli_
-* Convalida dell'accesso: Eseguire i comandi _dscli_ utilizzando il nome utente e la password
+* Validazione dell'accesso: eseguire i comandi _dscli_ utilizzando il nome utente e la password
 * Requisiti delle porte: 80, 443 e 1750
 
 
@@ -63,10 +63,10 @@ Per configurare questo data collector sono necessari i seguenti elementi:
 | Campo | Descrizione 
 
 
-| Storage DS | Indirizzo IP o nome di dominio completo del dispositivo DS 
+| Archiviazione DS | Indirizzo IP o nome di dominio completo del dispositivo DS 
 
 
-| Nome utente | Nome utente per la CLI DS 
+| Nome utente | Nome utente per DS CLI 
 
 
 | Password | Password per la CLI DS 
@@ -83,28 +83,28 @@ Per configurare questo data collector sono necessari i seguenti elementi:
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario (min). Il valore predefinito è 40. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario (min).  Il valore predefinito è 40. 
 
 
-| Nome visualizzato dello storage | Nome dello storage array IBM DS 
+| Nome visualizzato di archiviazione | Nome dell'array di archiviazione IBM DS 
 
 
-| Inventario Escludi i dispositivi | Elenco separato da virgole dei numeri di serie dei dispositivi da escludere dalla raccolta dell'inventario 
+| Dispositivi esclusi dall'inventario | Elenco separato da virgole dei numeri di serie dei dispositivi da escludere dalla raccolta dell'inventario 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 300. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Il valore predefinito è 300. 
 
 
-| Tipo di filtro delle prestazioni | Includi: Dati raccolti solo dai dispositivi presenti nell'elenco. Escludi: Non vengono raccolti dati da questi dispositivi 
+| Tipo di filtro delle prestazioni | Includi: dati raccolti solo dai dispositivi presenti nell'elenco.  Escludi: nessun dato da questi dispositivi viene raccolto 
 
 
-| Elenco dispositivi filtro prestazioni | Elenco separato da virgole degli ID dei dispositivi da includere o escludere dalla raccolta delle performance 
+| Elenco dispositivi filtro prestazioni | Elenco separato da virgole degli ID dispositivo da includere o escludere dalla raccolta delle prestazioni 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -112,12 +112,12 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Errore contenente: CMUC00192E, CMUC00191E o CMUC00190E | * Verificare le credenziali e l'indirizzo IP immessi. * Provare a comunicare con l'array tramite la console di gestione Web \https://<ip>:8452/DS8000/Console. Sostituire <ip> con IP configurato per il data collector. 
+| Errore contenente: CMUC00192E, CMUC00191E o CMUC00190E | * Verificare le credenziali e l'indirizzo IP immessi.  * Provare a comunicare con l'array tramite la console di gestione Web \https://<ip>:8452/DS8000/Console.  Sostituisci <ip> con l'IP configurato dal raccoglitore dati. 
 
 
-| Errore: * Impossibile eseguire il programma * errore durante l'esecuzione del comando | * Da Data Infrastructure Insights Acquisition Unit aprire un file CMD * Open CLI.CFG nella directory home/lib della CLI e controllare la proprietà JAVA_INSTALL, modificare il valore in modo che corrisponda all'ambiente in uso * visualizzare la versione java installata su questo computer, digitando: "java -version" * Ping l'indirizzo IP del dispositivo di archiviazione IBM specificato nel comando CLI emesso. * Se tutte le operazioni descritte in precedenza funzionavano correttamente, eseguire manualmente un comando CLI 
+| Errore: * Impossibile eseguire il programma * Errore durante l'esecuzione del comando | * Da Data Infrastructure Insights Acquisition Unit, aprire un CMD * Aprire il file CLI.CFG nella directory/lib home della CLI e controllare la proprietà JAVA_INSTALL, modificare il valore in modo che corrisponda al proprio ambiente * Visualizzare la versione Java installata su questa macchina, digitando: "java -version" * Eseguire il ping dell'indirizzo IP del dispositivo IBM Storage specificato nel comando CLI emesso.  * Se tutto quanto sopra ha funzionato correttamente, eseguire manualmente un comando CLI 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

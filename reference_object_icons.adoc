@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference_object_icons.html 
-summary: Riferimento icona oggetto Data Infrastructure Insights. 
+summary: 'Riferimento all"icona dell"oggetto Data Infrastructure Insights .' 
 keywords: icons, assets, objects, reference, map 
 ---
-= Riferimento icona oggetto
+= Riferimento alle icone degli oggetti
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -20,16 +20,16 @@ Icone degli oggetti utilizzate in Data Infrastructure Insights.
 
 == Icone dell'infrastruttura:
 
-image:Icon_Glossary.png["Riferimento icona infrastruttura"]
+image:Icon_Glossary.png["Riferimento alle icone dell'infrastruttura"]
 
 
 
-== Icone Kubernetes:
+== Icone di Kubernetes:
 
-image:K8sIconsWithLabels.png["Riferimento icona Kubernetes, larghezza=180"]
+image:K8sIconsWithLabels.png["Riferimento all'icona di Kubernetes, larghezza=180"]
 
 
 
-== Icone mappa e monitoraggio delle performance di rete di Kubernetes:
+== Icone di monitoraggio delle prestazioni di rete e mappa di Kubernetes:
 
-image:ServiceMap_Icons.png["Kubernetes Network Performance Monitoring and Map (monitoraggio e mappa delle performance di rete Kubernetes), WIDTH=640"]
+image:ServiceMap_Icons.png["Monitoraggio e mappa delle prestazioni della rete Kubernetes, larghezza=640"]

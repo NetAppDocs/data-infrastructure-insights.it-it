@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: task_research_failed_collector.html 
 keywords: data collector, changes, failures 
-summary: Errori di data collector 
+summary: Errori del raccoglitore dati 
 ---
-= Ricerca di un data collector guasto
+= Ricerca di un raccoglitore di dati fallito
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Se un data collector presenta un messaggio di errore e un impatto alto o medio, è necessario ricercare il problema utilizzando la pagina di riepilogo del data collector con le relative informazioni collegate.
+Se un raccoglitore dati presenta un messaggio di errore e un impatto elevato o medio, è necessario analizzare il problema utilizzando la pagina di riepilogo del raccoglitore dati con le relative informazioni collegate.
 
-Attenersi alla seguente procedura per determinare la causa dei dati non riusciti. I messaggi di errore di Data Collector vengono visualizzati nel menu *Admin* e nella pagina *Installed Data Collector*.
+Per determinare la causa del mancato funzionamento dei raccoglitori dati, attenersi alla seguente procedura.  I messaggi di errore del Data Collector vengono visualizzati nel menu *Amministrazione* e nella pagina *Data Collector installati*.
 
-.Fasi
-. Fare clic su *Admin* > *Data Collector* > *Installed Data Collector*.
-. Fare clic sul Linked Name (Nome collegato) del data collector in errore per aprire la pagina Summary (Riepilogo).
-. Nella pagina Summary (Riepilogo), consultare l'area Comments (commenti) per leggere eventuali note lasciate da un altro tecnico che potrebbe anche esaminare questo guasto.
-. Annotare eventuali messaggi relativi alle prestazioni.
-. Spostare il puntatore del mouse sui segmenti del grafico della cronologia degli eventi per visualizzare ulteriori informazioni.
-. Selezionare un messaggio di errore per un dispositivo e visualizzato sotto la cronologia degli eventi, quindi fare clic sull'icona Dettagli errore visualizzata a destra del messaggio.
+.Passi
+. Fare clic su *Amministrazione* > *Raccolta dati* > *Raccolta dati installati*.
+. Fare clic sul nome collegato del raccoglitore dati non riuscito per aprire la pagina Riepilogo.
+. Nella pagina Riepilogo, controlla l'area Commenti per leggere eventuali note lasciate da un altro tecnico che potrebbe stare indagando su questo guasto.
+. Annotare eventuali messaggi sulle prestazioni.
+. Sposta il puntatore del mouse sui segmenti del grafico della cronologia degli eventi per visualizzare informazioni aggiuntive.
+. Selezionare un messaggio di errore per un dispositivo visualizzato sotto la cronologia degli eventi e fare clic sull'icona Dettagli errore visualizzata a destra del messaggio.
 +
-I dettagli relativi all'errore includono il testo del messaggio di errore, le cause più probabili, le informazioni in uso e i suggerimenti su come risolvere il problema.
+I dettagli dell'errore includono il testo del messaggio di errore, le cause più probabili, le informazioni in uso e i suggerimenti su cosa si può fare per correggere il problema.
 
-. Nell'area dispositivi segnalati da questo Data Collector, è possibile filtrare l'elenco in modo da visualizzare solo i dispositivi di interesse ed è possibile fare clic sul collegamento *Nome* di un dispositivo per visualizzare la pagina delle risorse per tale dispositivo.
-. Quando si torna alla pagina di riepilogo del data collector, controllare l'area *Show Recent Changes* (Mostra modifiche recenti) nella parte inferiore della pagina per verificare se le modifiche recenti potrebbero aver causato il problema.
+. Nell'area Dispositivi segnalati da questo raccoglitore dati, è possibile filtrare l'elenco per visualizzare solo i dispositivi di interesse e fare clic sul *Nome* collegato di un dispositivo per visualizzare la pagina delle risorse per quel dispositivo.
+. Quando torni alla pagina di riepilogo del raccoglitore dati, controlla l'area *Mostra modifiche recenti* in fondo alla pagina per verificare se le modifiche recenti potrebbero aver causato il problema.
 

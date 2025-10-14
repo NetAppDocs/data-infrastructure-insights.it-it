@@ -13,21 +13,21 @@ sidebar:
   entries:
   - title: Documentazione Data Infrastructure Insights
     url: "/index.html"
-  - title: Novità
+  - title: Cosa c'è di nuovo
     url: "/concept_whats_new.html"
-  - title: Iscrizione alle informazioni sull'infrastruttura dati
+  - title: Iscrizione a Data Infrastructure Insights
     url: "/task_cloud_insights_onboarding_1.html"
   - title: Sicurezza
     entries:
-    - title: Procedure di sicurezza
+    - title: Pratiche di sicurezza
       url: "/security_overview.html"
-    - title: Cosa memorizzare e dove
+    - title: Cosa conserviamo e dove
       url: "/security_information_and_region.html"
-    - title: Strumento securityadmin
+    - title: Strumento SecurityAdmin
       url: "/security_admin_tool.html"
-  - title: Per iniziare
+  - title: Iniziare
     entries:
-    - title: Raccolta dei dati
+    - title: Raccolta dati
       entries:
       - title: Panoramica
         url: "/task_getting_started_with_cloud_insights.html"
@@ -37,19 +37,19 @@ sidebar:
         url: "/task_configure_acquisition_unit.html"
       - title: Configurazione di un agente su Windows/Linux
         url: "/task_config_telegraf_agent.html"
-      - title: Configurazione di Data Collector
+      - title: Configurazione dei raccoglitori di dati
         url: "/task_configure_data_collectors.html"
       - title: Determinazione dello stato di acquisizione del Data Collector
         url: "/concept_determining_data_collector_acq_status.html"
-      - title: Gestire i Data Collector configurati
+      - title: Gestisci i raccoglitori di dati configurati
         url: "/task_view_configured_data_collectors.html"
-      - title: Ricercare gli errori del data collector
+      - title: Errori del raccoglitore di dati di ricerca
         url: "/task_research_failed_collector.html"
-    - title: Importazione di dashboard consigliati
+    - title: Importazione di dashboard consigliate
       url: "/concept_import_from_dashboard_gallery.html"
     - title: Account utente e ruoli
       url: "/concept_user_roles.html"
-  - title: Data Collector List (elenco Data Collector)
+  - title: Elenco dei raccoglitori di dati
     url: "/data_collector_list.html"
   - title: Iscrizione a Data Infrastructure Insights
     url: "/concept_subscribing_to_cloud_insights.html"
@@ -59,31 +59,31 @@ sidebar:
       entries:
       - title: Panoramica della dashboard
         url: "/concept_dashboards_overview.html"
-      - title: Funzionalità dei dashboard
+      - title: Caratteristiche delle dashboard
         url: "/concept_dashboard_features.html"
       - title: Dashboard di esempio
         entries:
-        - title: Performance delle macchine virtuali
+        - title: Prestazioni della macchina virtuale
           url: "/task_dashboard_example_VM_performance.html"
-      - title: Best practice per la dashboard
+      - title: Migliori pratiche per la dashboard
         url: "/concept_dashboard_best_practices.html"
     - title: Lavorare con le query
       entries:
-      - title: Esecuzione di query sulle risorse
+      - title: Interrogazione delle risorse
         url: "/concept_querying_assets.html"
       - title: Creazione di una query
         url: "/task_create_query.html"
       - title: Visualizzazione delle query disponibili
         url: "/task_view_queries.html"
-      - title: Esportazione dei risultati delle query in formato .CSV
+      - title: Esportazione dei risultati della query in formato .CSV
         url: "/task_export_query_results.html"
       - title: Modifica o eliminazione di una query
         url: "/task_modify_delete_query.html"
       - title: Assegnazione di più applicazioni/annotazioni agli oggetti
         url: "/task_query_assign_multiple_applications.html"
-      - title: Copia dei valori delle tabelle negli Appunti
+      - title: Copia dei valori della tabella negli Appunti
         url: "/task_query_copy_table_values.html"
-      - title: Query dei registri
+      - title: Interrogazione dei registri
         url: "/concept_log_explorer.html"
       - title: Identificazione dei dispositivi inattivi
         url: "/task_identify_inactive_devices.html"
@@ -93,9 +93,9 @@ sidebar:
         url: "/insights_overview.html"
       - title: Risorse condivise sotto stress
         url: "/insights_shared_resources_under_stress.html"
-      - title: Kubernetes Namespace che esauriscono lo spazio
+      - title: Gli spazi dei nomi di Kubernetes stanno esaurendo lo spazio
         url: "/insights_k8s_namespaces_running_out_of_space.html"
-      - title: Recuperare lo storage a freddo ONTAP
+      - title: Reclaim ONTAP Cold Storage
         url: "/insights_reclaim_ontap_cold_storage.html"
     - title: Monitor e avvisi
       entries:
@@ -105,25 +105,25 @@ sidebar:
         url: "/task_view_and_manage_alerts.html"
       - title: Configurazione dei destinatari delle notifiche
         url: "/concept_notifications_email.html"
-      - title: Monitoraggio rilevamento anomalie
+      - title: Monitor di rilevamento delle anomalie
         url: "/concept_anomaly_detection.html"
       - title: Monitor definiti dal sistema
         url: "/task_system_monitors.html"
       - title: Configurazione dei destinatari delle notifiche
         url: "/concept_notifications_email.html"
-      - title: Notifiche Webhook
+      - title: Notifiche webhook
         entries:
         - title: Configurazione dei webhook
           url: "/task_create_webhook.html"
-        - title: Esempio di Webhook - discordanza
+        - title: Esempio di webhook - Discord
           url: "/task_webhook_example_discord.html"
-        - title: Esempio di Webhook - PagerDuty
+        - title: Esempio di webhook - PagerDuty
           url: "/task_webhook_example_pagerduty.html"
-        - title: Esempio di Webhook - Slack
+        - title: Esempio di webhook - Slack
           url: "/task_webhook_example_slack.html"
-        - title: Esempio di Webhook - squadre
+        - title: Esempio di webhook - Teams
           url: "/task_webhook_example_teams.html"
-    - title: Utilizzo delle annotazioni
+    - title: Lavorare con le annotazioni
       entries:
       - title: Definizione delle annotazioni
         url: "/task_defining_annotations.html"
@@ -133,7 +133,7 @@ sidebar:
         url: "/task_create_annotation_rules.html"
       - title: Importazione di annotazioni con API
         url: "/task_annotation_import.html"
-    - title: Utilizzo delle applicazioni
+    - title: Lavorare con le applicazioni
       entries:
       - title: Concetti applicativi
         url: "/concept_about_applications.html"
@@ -141,9 +141,9 @@ sidebar:
         url: "/task_create_application.html"
     - title: Risoluzione automatica del dispositivo
       entries:
-      - title: Panoramica sulla risoluzione dei dispositivi
+      - title: Panoramica sulla risoluzione del dispositivo
         url: "/concept_device_resolution_overview.html"
-      - title: Regole di risoluzione dei dispositivi
+      - title: Regole di risoluzione del dispositivo
         url: "/task_device_resolution_rules.html"
       - title: Risoluzione del dispositivo Fibre Channel
         url: "/task_device_resolution_fibre_channel.html"
@@ -157,11 +157,11 @@ sidebar:
       entries:
       - title: Panoramica della pagina delle risorse
         url: "/concept_asset_page_overview.html"
-      - title: Filtraggio nel contesto degli oggetti
+      - title: Filtraggio in contesto per oggetti
         url: "/concept_in_context_filters.html"
       - title: Virtualizzazione dello storage
         url: "/concept_storage_virtualization.html"
-      - title: Suggerimenti e suggerimenti per la ricerca delle risorse
+      - title: Suggerimenti e consigli per la ricerca di risorse
         url: "/concept_searching_assets.html"
     - title: Analisi dei dati
       entries:
@@ -171,15 +171,15 @@ sidebar:
         url: "/vm_analyzer_overview.html"
       - title: Monitorare lo stato di salute delle infrastrutture
         url: "/monitor_infrastructure_health.html"
-    - title: Creazione di report
+    - title: Segnalazione
       entries:
-      - title: Panoramica sui report
+      - title: Panoramica dei report
         url: "/reporting_overview.html"
-      - title: Ruoli utente di reporting
+      - title: Segnalazione dei ruoli utente
         url: "/reporting_user_roles.html"
-      - title: Utilizzo dei report predefiniti
+      - title: Utilizzo di report predefiniti
         url: "/reporting_predefined_reports.html"
-      - title: Dashboard di Storage Manager
+      - title: Dashboard del gestore dell'archiviazione
         url: "/reporting_storage_manager_dashboard.html"
       - title: Creazione di un report di esempio
         url: "/reporting_create_example.html"
@@ -193,13 +193,13 @@ sidebar:
         url: "/reporting_querying_database.html"
       - title: Conservazione dei dati
         url: "/reporting_data_retention.html"
-      - title: Diagrammi dello schema
+      - title: Diagrammi di schema
         url: "/reporting_schema_diagrams.html"
-      - title: Tabelle dello schema
+      - title: Tabelle di schema
         url: "/reference_schemas.html"
   - title: Kubernetes
     entries:
-    - title: Pagina panoramica di Kubernetes
+    - title: Pagina di panoramica di Kubernetes
       url: "/kubernetes_landing_page.html"
     - title: Prima di installare o aggiornare l'operatore
       url: "/pre-requisites_for_k8s_operator.html"
@@ -209,19 +209,19 @@ sidebar:
       url: "/telegraf_agent_k8s_config_options.html"
     - title: Pagina del cluster Kubernetes
       url: "/kubernetes_cluster_detail.html"
-    - title: Monitoraggio di rete e mappa
+    - title: Monitoraggio e mappa della rete
       url: "/concept_kubernetes_network_monitoring_and_map.html"
-    - title: Cambia analisi
+    - title: Analisi dei cambiamenti
       url: "/kubernetes_change_analytics.html"
-  - title: Elementi di base di ONTAP
+  - title: Elementi essenziali ONTAP
     url: "/concept_ontap_essentials.html"
   - title: Amministrazione e altre attività
     entries:
-    - title: Utilizzo delle API
+    - title: Lavorare con le API
       url: "/API_Overview.html"
     - title: Monitoraggio dell'ambiente
       entries:
-      - title: Eventi di controllo
+      - title: Eventi di auditing
         url: "/concept_audit.html"
       - title: TTL e downsampling
         url: concept_ttl_and_downsampling.html
@@ -231,45 +231,45 @@ sidebar:
     entries:
     - title: Informazioni sulla sicurezza del carico di lavoro
       url: "/cs_intro.html"
-    - title: Per iniziare
+    - title: Iniziare
       entries:
       - title: Introduzione alla sicurezza del carico di lavoro
         url: "/task_cs_getting_started.html"
-      - title: Requisiti dell'agente per la sicurezza del carico di lavoro
+      - title: Requisiti dell'agente di sicurezza del carico di lavoro
         url: "/concept_cs_agent_requirements.html"
-      - title: Configurazione di Workload Security Agent
+      - title: Configurazione di un agente di sicurezza del carico di lavoro
         url: "/task_cs_add_agent.html"
       - title: Eliminazione di un agente di sicurezza del carico di lavoro
         url: "/task_cs_delete_agent.html"
-      - title: Configurazione di un servizio di raccolta directory ad
+      - title: Configurazione di un AD Directory Collector
         url: "/task_config_user_dir_connect.html"
-      - title: Configurazione di un servizio di raccolta directory LDAP
+      - title: Configurazione di un raccoglitore di directory LDAP
         url: "/task_config_user_dir_connect_ldap.html"
-      - title: Configurazione del Data Collector SVM di ONTAP
+      - title: Configurazione del raccoglitore dati ONTAP SVM
         url: "/task_add_collector_svm.html"
-      - title: Risoluzione dei problemi di SVM Collector
+      - title: Risoluzione dei problemi del collettore SVM
         url: "/troubleshooting_collector_svm.html"
-      - title: Configurazione di Cloud ONTAP Data Collector
+      - title: Configurazione del Cloud ONTAP Data Collector
         url: "/task_config_cs_incloud.html"
       - title: Gestione degli utenti per la sicurezza del carico di lavoro
         url: "/task_cs_user_management.html"
-      - title: Event Rate Checker (Guida alle dimensioni dell'agente)
+      - title: Event Rate Checker (Guida al dimensionamento degli agenti)
         url: "/concept_cs_event_rate_checker.html"
     - title: Avvisi
       url: "/cs_alert_data.html"
-    - title: Analisi
+    - title: Medicina legale
       entries:
-      - title: Analisi delle attività - tutte le attività
+      - title: Attività Forensics - Tutte le attività
         url: "/forensic_activity_history.html"
       - title: Utenti
         url: "/forensic_user_overview.html"
-    - title: Policy di risposta automatizzate
+    - title: Criteri di risposta automatizzati
       url: "/cs_automated_response_policies.html"
-    - title: Criteri tipi di file consentiti
+    - title: Criteri sui tipi di file consentiti
       url: "/ws_allowed_file_types.html"
-    - title: Integrazione della protezione ransomware autonoma di ONTAP
+    - title: Integrazione della protezione autonoma dal ransomware ONTAP
       url: "/concept_cs_integration_with_ontap_arp.html"
-    - title: Integrazione con accesso ONTAP negato
+    - title: Integrazione ONTAP Access Denied
       url: "/concept_ws_integration_with_ontap_access_denied.html"
     - title: Blocco dell'accesso utente
       url: "/cs_restrict_user_access.html"
@@ -277,59 +277,59 @@ sidebar:
       url: "/concept_cs_attack_simulator.html"
     - title: Notifiche e-mail
       url: "/cs_notifications_email.html"
-    - title: Notifiche Webhook
+    - title: Notifiche webhook
       entries:
       - title: Creazione di webhook
         url: "/ws_notifications_using_webhooks.html"
-      - title: Esempio di discordino
+      - title: Esempio di webhook Discord
         url: "/ws_webhook_example_discord.html"
-      - title: Esempio di Webhook PagerDuty
+      - title: Esempio di webhook PagerDuty
         url: "/ws_webhook_example_pagerduty.html"
-      - title: Esempio di slack Webhook
+      - title: Esempio di webhook Slack
         url: "/ws_webhook_example_slack.html"
-      - title: Esempio di Team Webhook
+      - title: Esempio di webhook di squadra
         url: "/ws_webhook_example_teams.html"
-    - title: API per la sicurezza del carico di lavoro
+    - title: API di sicurezza del carico di lavoro
       url: "/concept_cs_api.html"
-    - title: Risoluzione dei problemi di SVM Collector
+    - title: Risoluzione dei problemi del collettore SVM
       url: "/troubleshooting_collector_svm.html"
   - title: Risoluzione dei problemi
     entries:
-    - title: Risoluzione generale dei problemi
+    - title: Risoluzione dei problemi generali
       url: "/task_troubleshooting_general_problems.html"
-    - title: Risoluzione dei problemi relativi all'unità di acquisizione Linux
+    - title: Risoluzione dei problemi dell'unità di acquisizione Linux
       url: "/task_troubleshooting_linux_acquisition_unit_problems.html"
-    - title: Risoluzione dei problemi relativi all'unità di acquisizione di Windows
+    - title: Risoluzione dei problemi dell'unità di acquisizione di Windows
       url: "/task_troubleshooting_windows_acquisition_unit_problems.html"
-    - title: Ricerca degli errori di Data Collector
+    - title: Ricerca degli errori del Data Collector
       url: "/task_research_failed_collector.html"
-  - title: Matrice di supporto Data Collector
+  - title: Matrice di supporto del raccoglitore dati
     url: "/reference_data_collector_support_matrix.html"
-  - title: Riferimento e supporto
+  - title: Riferimenti e supporto
     entries:
     - title: Richiesta di supporto
       url: "/concept_requesting_support.html"
-    - title: Data Collector Reference - infrastruttura
+    - title: Riferimento al Data Collector - Infrastruttura
       entries:
-      - title: Panoramica di riferimento del vendor
+      - title: Panoramica dei riferimenti del fornitore
         url: "/concept_data_collector_reference.html"
       - title: AWS
         url: "/task_dc_amazon_ec2.html"
-      - title: Amazon FSX per NetApp ONTAP
+      - title: Amazon FSx for NetApp ONTAP
         url: "/task_dc_na_amazon_fsx.html"
-      - title: Azure
+      - title: Azzurro
         url: "/task_dc_ms_azure.html"
       - title: Broadcom
         entries:
-        - title: Brocade Network Advisor
+        - title: Consulente di rete Brocade
           url: "/task_dc_brocade_bna.html"
-        - title: Switch Fibre Channel
+        - title: Commutatore Fibre Channel
           url: "/task_dc_brocade_fc_switch.html"
         - title: Brocade FOS REST
           url: "/task_dc_brocade_rest.html"
       - title: Cisco
         url: "/task_dc_cisco_fc_switch.html"
-      - title: SmartfFiles di Cohesity
+      - title: Cohesity SmartFiles
         url: "/task_dc_cohesity_smartfiles.html"
       - title: Dell
         entries:
@@ -337,13 +337,13 @@ sidebar:
           url: "/task_dc_dell_xc_series.html"
       - title: Dell EMC
         entries:
-        - title: Data Domain (dominio dati)
+        - title: Dominio dei dati
           url: "/task_dc_emc_datadomain.html"
         - title: ECS
           url: "/task_dc_emc_ecs.html"
-        - title: PowerScale
+        - title: Scala di potenza
           url: "/task_dc_emc_isilon.html"
-        - title: ISILON/PowerScale REST
+        - title: Isilon / PowerScale REST
           url: "/task_dc_emc_isilon_rest.html"
         - title: PowerStore
           url: "/task_dc_emc_powerstore.html"
@@ -355,11 +355,11 @@ sidebar:
           url: "/task_dc_emc_unity.html"
         - title: VMAX/PowerMax
           url: "/task_dc_emc_vmax_powermax.html"
-        - title: Blocco VNX (CLARiiON)
+        - title: Blocco VNX (Clariion)
           url: "/task_dc_emc_vnx_block.html"
         - title: File VNX (Celerra)
           url: "/task_dc_emc_vnx_file.html"
-        - title: VNX unificato
+        - title: VNX Unificato
           url: "/task_dc_emc_vnx_unified.html"
         - title: VPLEX
           url: "/task_dc_emc_vplex.html"
@@ -375,15 +375,15 @@ sidebar:
         entries:
         - title: HP Alletra 9000 e Primera
           url: "/task_dc_hp_3par.html"
-        - title: AE HP Command View
+        - title: HP Command View AE
           url: "/task_dc_hpe_commandview.html"
         - title: HPE Alletra 6000
           url: "/task_dc_hpe_nimble.html"
-      - title: Hitachi Data Systems
+      - title: Sistemi di dati Hitachi
         entries:
-        - title: Suite di comandi HDS
+        - title: Suite di comando HDS
           url: "/task_dc_hds_commandsuite.html"
-        - title: HNAS HDS
+        - title: HDS HNAS
           url: "/task_dc_hds_nas.html"
         - title: Centro operativo HDS
           url: "/task_dc_hds_ops_center.html"
@@ -395,13 +395,13 @@ sidebar:
         entries:
         - title: Cleversafe
           url: "/task_dc_ibm_cleversafe.html"
-        - title: SERIE CS
+        - title: Serie CS
           url: "/task_dc_ibm_cs.html"
-        - title: Storage di sistema serie DS8000
+        - title: Sistema di archiviazione serie DS8000
           url: "/task_dc_ibm_ds.html"
         - title: PowerVM
           url: "/task_dc_ibm_powervm.html"
-        - title: Controller volume SAN (SVC)
+        - title: Controllore del volume San (SVC)
           url: "/task_dc_ibm_svc.html"
         - title: XIV/A9000
           url: "/task_dc_ibm_xiv.html"
@@ -411,25 +411,25 @@ sidebar:
         entries:
         - title: Azure NetApp Files
           url: "/task_dc_ms_anf.html"
-        - title: Hyper-V.
+        - title: Hyper-V
           url: "/task_dc_ms_hyperv.html"
       - title: NetApp
         entries:
         - title: Cloud Volumes ONTAP
           url: "/task_dc_na_cloud_volumes_ontap.html"
-        - title: Cloud Volumes Services per AWS
+        - title: Servizi Cloud Volumes per AWS
           url: "/task_dc_na_cloud_volumes.html"
         - title: ONTAP ASA (array All-SAN) r2
           url: "/task_dc_na_ontap_all_san_array.html"
-        - title: Software per la gestione dei dati ONTAP
+        - title: Software di gestione dati ONTAP
           url: "/task_dc_na_cdot.html"
-        - title: Collettore REST ONTAP
+        - title: Collettore ONTAP REST
           url: "/task_dc_na_ontap_rest.html"
-        - title: Modalità Data ONTAP 7
+        - title: Data ONTAP 7-mode
           url: "/task_dc_na_7mode.html"
-        - title: E-Series
+        - title: Serie E
           url: "/task_dc_na_eseries.html"
-        - title: REST di e-Series
+        - title: Serie E REST
           url: "/task_dc_netapp_eseries_rest.html"
         - title: Server di gestione NetApp HCI
           url: "/task_dc_na_hci.html"
@@ -439,19 +439,19 @@ sidebar:
           url: "/task_dc_na_storagegrid.html"
       - title: Nutanix
         url: "/task_dc_nutanix.html"
-      - title: Oracle
+      - title: Oracolo
         url: "/task_dc_oracle_zfs.html"
       - title: Puro
         url: "/task_dc_pure_flasharray.html"
-      - title: Red Hat
+      - title: Cappello rosso
         url: "/task_dc_redhat_virtualization.html"
       - title: Rubrik CDM
         url: "/task_dc_rubrik_cdm.html"
       - title: VMware
         url: "/task_dc_vmware.html"
-    - title: Riferimento Data Collector - servizi
+    - title: Riferimento al Data Collector - Servizi
       entries:
-      - title: Host/nodo
+      - title: Host/Nodo
         url: "/task_config_telegraf_node.html"
       - title: ActiveMQ
         url: "/task_config_telegraf_activemq.html"
@@ -461,7 +461,7 @@ sidebar:
         url: "/task_config_telegraf_consul.html"
       - title: Couchbase
         url: "/task_config_telegraf_couchbase.html"
-      - title: Database dei CouchDB
+      - title: CouchDB
         url: "/task_config_telegraf_couchdb.html"
       - title: Docker
         url: "/task_config_telegraf_docker.html"
@@ -473,11 +473,11 @@ sidebar:
         url: "/task_config_telegraf_hadoop.html"
       - title: HAProxy
         url: "/task_config_telegraf_haproxy.html"
-      - title: Java
+      - title: Giava
         url: "/task_config_telegraf_jvm.html"
       - title: Kafka
         url: "/task_config_telegraf_kafka.html"
-      - title: Kapacitor
+      - title: Condensatore
         url: task_config_telegraf_kapacitor.html
       - title: Kibana
         url: "/task_config_telegraf_kibana.html"
@@ -497,15 +497,15 @@ sidebar:
         url: task_config_telegraf_openzfs.html
       - title: PostgreSQL
         url: "/task_config_telegraf_postgresql.html"
-      - title: Marionetta
+      - title: Fantoccio
         url: "/task_config_telegraf_puppetagent.html"
       - title: Redis
         url: "/task_config_telegraf_redis.html"
-      - title: RethinkDB
+      - title: Ripensare DB
         url: task_config_telegraf_rethinkdb.html
-      - title: Zoosekeeper
+      - title: Guardiano dello zoo
         url: task_config_telegraf_zookeeper.html
-    - title: Riferimento icona oggetto
+    - title: Riferimento alle icone degli oggetti
       url: "/reference_object_icons.html"
   - title: Note legali
     url: "/legal-notices.html"

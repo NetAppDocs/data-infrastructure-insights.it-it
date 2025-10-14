@@ -10,7 +10,7 @@ keywords: monitor, alert, viewing
 
 
 [role="lead"]
-Data Infrastructure Insights visualizza gli avvisi quando link:task_create_monitor.html["soglie monitorate"] vengono superati.
+Data Infrastructure Insights visualizza avvisi quandolink:task_create_monitor.html["soglie monitorate"] vengono superati.
 
 
 TIP: Monitor e avvisi sono disponibili in Data Infrastructure Insights Standard Edition e versioni successive.
@@ -21,61 +21,61 @@ TIP: Monitor e avvisi sono disponibili in Data Infrastructure Insights Standard 
 
 Per visualizzare e gestire gli avvisi, procedere come segue.
 
-. Accedere alla pagina *Avvisi > tutti gli avvisi*.
-. Viene visualizzato un elenco dei 1,000 avvisi più recenti. È possibile ordinare questo elenco in qualsiasi campo facendo clic sull'intestazione della colonna corrispondente al campo. L'elenco visualizza le seguenti informazioni. Nota: Non tutte queste colonne vengono visualizzate per impostazione predefinita. È possibile selezionare le colonne da visualizzare facendo clic sull'icona "Gear" (marcia):
+. Vai alla pagina *Avvisi > Tutti gli avvisi*.
+. Viene visualizzato un elenco contenente fino ai 1.000 avvisi più recenti.  È possibile ordinare questo elenco in base a qualsiasi campo facendo clic sull'intestazione della colonna corrispondente.  L'elenco visualizza le seguenti informazioni.  Si noti che non tutte queste colonne vengono visualizzate per impostazione predefinita.  È possibile selezionare le colonne da visualizzare cliccando sull'icona "ingranaggio":
 +
 ** *ID avviso*: ID avviso univoco generato dal sistema
-** *Triggered time* (tempo di attivazione): L'ora in cui il monitor interessato ha attivato l'avviso
-** *Severità corrente* (scheda Avvisi attivi): La severità corrente dell'avviso attivo
-** *Severità massima* (scheda Avvisi risolti); la severità massima dell'avviso prima che sia stato risolto
+** *Ora di attivazione*: l'ora in cui il monitor pertinente ha attivato l'avviso
+** *Gravità attuale* (scheda Avvisi attivi): la gravità attuale dell'avviso attivo
+** *Gravità massima* (scheda Avvisi risolti); la gravità massima dell'avviso prima che venisse risolto
 ** *Monitor*: Il monitor configurato per attivare l'avviso
-** *Triggered on*: L'oggetto in cui è stata violata la soglia monitorata
-** *Status*: Stato corrente degli avvisi, _New_ o _in process_
-** *Stato attivo*: _Attivo_ o _risolto_
-** *Condizione*: Condizione di soglia che ha attivato l'avviso
-** *Metrico*: La metrica dell'oggetto su cui è stata violata la soglia monitorata
-** *Monitor Status* (Stato monitor): Stato corrente del monitor che ha attivato l'allarme
-** *Ha un'azione correttiva*: L'avviso ha suggerito delle azioni correttive. Aprire la pagina degli avvisi per visualizzarli.
+** *Attivato su*: l'oggetto su cui è stata superata la soglia monitorata
+** *Stato*: Stato attuale dell'avviso, _Nuovo_ o _In elaborazione_
+** *Stato attivo*: _Attivo_ o _Risolto_
+** *Condizione*: la condizione di soglia che ha attivato l'avviso
+** *Metrica*: la metrica dell'oggetto su cui è stata superata la soglia monitorata
+** *Stato del monitor*: Stato attuale del monitor che ha attivato l'avviso
+** *Ha un'azione correttiva*: l'avviso ha suggerito azioni correttive.  Per visualizzarli, apri la pagina degli avvisi.
 
 
 
 
-È possibile gestire un avviso facendo clic sul menu a destra dell'avviso e scegliendo una delle seguenti opzioni:
+È possibile gestire un avviso cliccando sul menu a destra dell'avviso e scegliendo una delle seguenti opzioni:
 
-* *In corso* per indicare che l'avviso è in fase di analisi o deve essere mantenuto aperto
-* *Chiudi* per rimuovere l'avviso dall'elenco degli avvisi attivi.
+* *In corso* per indicare che l'avviso è sotto inchiesta o che deve comunque essere mantenuto aperto
+* *Ignora* per rimuovere l'avviso dall'elenco degli avvisi attivi.
 
 
-È possibile gestire più avvisi selezionando la casella di controllo a sinistra di ciascun avviso e facendo clic su _Change Selected Alerts Status_.
+È possibile gestire più avvisi selezionando la casella di controllo a sinistra di ciascun avviso e facendo clic su _Modifica stato avvisi selezionati_.
 
-Facendo clic su un ID avviso, viene visualizzata la pagina Dettagli avviso.
+Facendo clic su un ID avviso si apre la pagina dei dettagli dell'avviso.
 
 
 
 == Pannello dettagli avviso
 
-Seleziona una riga di avviso per aprire il pannello dei dettagli dell'avviso. Il pannello dei dettagli dell'avviso fornisce ulteriori dettagli sull'avviso, tra cui un _Riepilogo_, una _Vista Esperto_ che mostra grafici relativi ai dati dell'oggetto, eventuali _Risorse Correlate_ e _Commenti_ inseriti dagli investigatori dell'avviso.
+Selezionare una riga di avviso per aprire il pannello dei dettagli dell'avviso.  Il pannello dei dettagli dell'avviso fornisce ulteriori dettagli sull'avviso, tra cui un _Riepilogo_, una sezione _Prestazioni_ che mostra grafici relativi ai dati dell'oggetto, eventuali _Risorse correlate_ e _Commenti_ inseriti dagli investigatori dell'avviso.
 
 image:metric_alert_detail_pane.png["pannello dei dettagli degli avvisi metrici"]
 
 
 
-== Avvisa quando mancano dati
+== Avvisi quando mancano dati
 
-In un sistema in tempo reale, ad esempio Data Infrastructure Insights, per attivare l'analisi di un monitor e decidere se generare un avviso, ci basiamo su una delle due cose seguenti:
+In un sistema in tempo reale come Data Infrastructure Insights, per avviare l'analisi di un Monitor e decidere se generare un Alert, ci affidiamo a uno di questi due fattori:
 
-* il prossimo datapoint per arrivare
-* un timer da attivare quando non c'è data apoint e hai atteso abbastanza a lungo
-
-
-Come è il caso con l'arrivo lento dei dati--o nessun arrivo dei dati--il meccanismo di temporizzatore deve prendere il controllo poichè il tasso di arrivo dei dati è insufficiente per attivare gli avvisi in "tempo reale". Quindi la domanda diventa in genere "quanto tempo attendo prima di chiudere la finestra di analisi e guardare quello che ho?" Se si attende troppo a lungo, gli avvisi non vengono generati abbastanza velocemente da risultare utili.
-
-Se si dispone di un monitor con una finestra di 30 minuti che rileva che una condizione viene violata dall'ultimo data point prima di una perdita di dati a lungo termine, Viene generato un avviso perché il monitor non ha ricevuto altre informazioni da utilizzare per confermare un ripristino della metrica o per notare che la condizione è rimasta.
+* il prossimo punto dati ad arrivare
+* un timer da attivare quando non c'è alcun punto dati e hai atteso abbastanza a lungo
 
 
+Come nel caso di un arrivo lento dei dati, o di nessun arrivo dei dati, il meccanismo del timer deve subentrare poiché la velocità di arrivo dei dati non è sufficiente per attivare gli avvisi in "tempo reale".  Quindi la domanda in genere diventa: "Quanto tempo devo aspettare prima di chiudere la finestra di analisi e guardare cosa ho?"  Se aspetti troppo a lungo, gli avvisi non verranno generati abbastanza velocemente da risultare utili.
 
-== Avvisi "permanentemente attivi"
+Se si dispone di un Monitor con una finestra di 30 minuti che rileva che una condizione è stata violata dall'ultimo punto dati prima di una perdita di dati a lungo termine, verrà generato un avviso perché il Monitor non ha ricevuto altre informazioni da utilizzare per confermare il ripristino della metrica o per rilevare che la condizione persiste.
 
-È possibile configurare un monitor in modo che la condizione sia *sempre* sull'oggetto monitorato, ad esempio IOPS > 1 o latenza > 0. Questi vengono spesso creati come monitor di "test" e poi dimenticati. Tali monitor creano avvisi che rimangono costantemente aperti sugli oggetti costitutivi, causando problemi di stress e stabilità del sistema nel tempo.
 
-Per evitare questo problema, Data Infrastructure Insights chiuderà automaticamente qualsiasi avviso "permanentemente attivo" dopo 7 giorni. Tenere presente che le condizioni di monitoraggio sottostanti potrebbero (probabilmente continueranno) sussistere, causando l'emissione quasi immediata di un nuovo avviso, ma questa chiusura degli avvisi "sempre attivi" riduce alcune delle sollecitazioni del sistema che altrimenti potrebbero verificarsi.
+
+== Avvisi "Permanentemente attivi"
+
+È possibile configurare un monitor in modo che la condizione sia *sempre* presente sull'oggetto monitorato, ad esempio IOPS > 1 o latenza > 0.  Spesso vengono creati come monitor "di prova" e poi dimenticati.  Tali monitor creano avvisi che rimangono costantemente aperti sugli oggetti costituenti, il che può causare stress al sistema e problemi di stabilità nel tempo.
+
+Per evitare ciò, Data Infrastructure Insights chiuderà automaticamente tutti gli avvisi "permanentemente attivi" dopo 7 giorni.  Si noti che le condizioni di monitoraggio sottostanti potrebbero (probabilmente) continuare a sussistere, causando l'emissione quasi immediata di un nuovo avviso, ma questa chiusura degli avvisi "sempre attivi" allevia parte dello stress del sistema che potrebbe altrimenti verificarsi.

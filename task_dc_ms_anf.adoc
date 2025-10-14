@@ -2,29 +2,29 @@
 sidebar: sidebar 
 permalink: task_dc_ms_anf.html 
 keywords: data collector, azure, Netapp files, anf 
-summary: Configurazione di Azure NetApp Files data collector. 
+summary: Configurazione del raccoglitore dati Azure NetApp Files . 
 ---
-= Configurazione del data collector Azure NetApp Files
+= Configurazione del raccoglitore dati Azure NetApp Files
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector di Azure NetApp Files per acquisire i dati di inventario e delle prestazioni.
+Data Infrastructure Insights utilizza il raccoglitore dati Azure NetApp Files per acquisire dati di inventario e prestazioni.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessarie le seguenti informazioni.
+Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni.
 
 * Requisito porta: 443 HTTPS
-* IP REST di Azure Management (management.azure.com)
-* ID client principale del servizio Azure (account utente)
-* Chiave di autenticazione principale del servizio Azure (password utente)
-* Devi configurare un account Azure per il rilevamento Data Infrastructure Insights.
+* IP REST di gestione di Azure (management.azure.com)
+* ID client dell'entità servizio di Azure (account utente)
+* Chiave di autenticazione dell'entità servizio di Azure (password utente)
+* È necessario configurare un account Azure per l'individuazione di Data Infrastructure Insights .
 +
-Una volta configurato correttamente l'account e registrata l'applicazione in Azure, si disporranno delle credenziali necessarie per rilevare l'istanza di Azure con Data Infrastructure Insights. Il seguente collegamento descrive come configurare l'account per il rilevamento:
+Una volta configurato correttamente l'account e registrata l'applicazione in Azure, si avranno le credenziali necessarie per individuare l'istanza di Azure con Data Infrastructure Insights.  Il seguente link descrive come impostare l'account per la scoperta:
 
 
 
@@ -34,23 +34,23 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 
 == Configurazione
 
-Inserire i dati nei campi di raccolta dati in base alla tabella riportata di seguito:
+Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 
 [cols="2*"]
 |===
 | Campo | Descrizione 
 
 
-| ID client principale del servizio Azure | ID di accesso ad Azure 
+| ID client dell'entità servizio di Azure | ID di accesso ad Azure 
 
 
-| ID tenant Azure | ID tenant Azure 
+| ID tenant di Azure | ID tenant di Azure 
 
 
-| Chiave di autenticazione principale del servizio Azure | Chiave di autenticazione per l'accesso 
+| Chiave di autenticazione dell'entità servizio di Azure | Chiave di autenticazione di accesso 
 
 
-| Ho capito che Microsoft mi ha dato la bolletta per le richieste API | Controlla questa sezione per verificare che Microsoft ti presenti la fattura per le richieste API effettuate tramite il polling Insight. 
+| Capisco che Microsoft mi fattura le richieste API | Seleziona questa casella per verificare di aver compreso che Microsoft ti addebita le richieste API effettuate tramite polling di Insight. 
 |===
 
 
@@ -61,14 +61,14 @@ Inserire i dati nei campi di raccolta dati in base alla tabella riportata di seg
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Il valore predefinito è 60 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60 
 |===
 
 
 == Risoluzione dei problemi
 
-* Le credenziali utilizzate dal data collector ANF devono avere accesso a qualsiasi sottoscrizione di Azure che contenga volumi ANF.
-* Se l'accesso a Reader causa un errore nella raccolta delle performance, provare a concedere l'accesso del collaboratore a livello di gruppo di risorse.
+* Le credenziali utilizzate dal raccoglitore dati ANF devono avere accesso a tutte le sottoscrizioni di Azure che contengono volumi ANF.
+* Se l'accesso come lettore causa il fallimento della raccolta delle prestazioni, provare a concedere l'accesso come collaboratore a livello di gruppo di risorse.
 
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

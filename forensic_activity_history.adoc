@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_activity_history.html 
 keywords: Forensic, activity history, activity data, history 
-summary: dati della cronologia delle attività forensi 
+summary: dati storici delle attività forensi 
 ---
-= Forensics - tutte le attività
+= Analisi forense - Tutte le attività
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,84 +14,84 @@ summary: dati della cronologia delle attività forensi
 
 
 [role="lead"]
-La pagina All Activity (tutte le attività) consente di comprendere le azioni eseguite sulle entità nell'ambiente workload Security.
+La pagina Tutte le attività consente di comprendere le azioni eseguite sulle entità nell'ambiente Workload Security.
 
 
 
-== Esame di tutti i dati delle attività
+== Esame di tutti i dati di attività
 
-Fare clic su *Forensics > Activity Forensics* (analisi > analisi delle attività) e fare clic sulla scheda *All Activity* (tutte le attività) per accedere alla pagina All Activity (tutte le attività). In questa pagina viene fornita una panoramica delle attività sul tenant, evidenziando le seguenti informazioni:
+Fare clic su *Forensics > Activity Forensics* e quindi sulla scheda *Tutte le attività* per accedere alla pagina Tutte le attività.  Questa pagina fornisce una panoramica delle attività svolte sul tuo inquilino, evidenziando le seguenti informazioni:
 
-* Un grafico che mostra _Cronologia attività_ (in base all'intervallo temporale globale selezionato)
+* Un grafico che mostra la _cronologia delle attività_ (in base all'intervallo di tempo globale selezionato)
 +
-È possibile ingrandire il grafico trascinando un rettangolo nel grafico. L'intera pagina viene caricata per visualizzare l'intervallo di tempo di zoom. Quando si esegue lo zoom avanti, viene visualizzato un pulsante che consente all'utente di eseguire lo zoom indietro.
+È possibile ingrandire il grafico trascinando un rettangolo al suo interno.  Verrà caricata l'intera pagina per visualizzare l'intervallo di tempo ingrandito.  Quando si esegue lo zoom avanti, viene visualizzato un pulsante che consente all'utente di rimpicciolire.
 
-* Un elenco dei dati _tutte le attività_.
+* Un elenco dei dati di _Tutte le attività_.
 * Un menu a discesa "Raggruppa per" fornirà l'opzione di raggruppare l'attività in base a utenti, cartelle, tipo di entità, ecc.
-* Un pulsante di percorso comune sarà disponibile sopra la tabella con un clic del quale è possibile estrarre il pannello con i dettagli del percorso dell'entità.
+* Un pulsante di percorso comune sarà disponibile sopra la tabella, cliccando sul quale potremo ottenere un pannello scorrevole con i dettagli del percorso dell'entità.
 
 
-La tabella *tutte le attività* mostra le seguenti informazioni. Nota: Non tutte queste colonne vengono visualizzate per impostazione predefinita. È possibile selezionare le colonne da visualizzare facendo clic sull'icona "marcia".
+La tabella *Tutte le attività* mostra le seguenti informazioni.  Si noti che non tutte queste colonne vengono visualizzate per impostazione predefinita.  È possibile selezionare le colonne da visualizzare cliccando sull'icona "ingranaggio".
 
-* L'ora * in cui è stato effettuato l'accesso a un'entità, inclusi l'anno, il mese, il giorno e l'ora dell'ultimo accesso.
-* Il *utente* che ha effettuato l'accesso all'entità con un collegamento al link:forensic_user_overview.html["Informazioni sull'utente"]come pannello scorrevole.
+* *Ora* in cui è stato effettuato l'accesso a un'entità, inclusi anno, mese, giorno e ora dell'ultimo accesso.
+* L'*utente* che ha avuto accesso all'entità con un collegamento alink:forensic_user_overview.html["Informazioni utente"] come pannello scorrevole.
 
 
-* L'attività * eseguita dall'utente. I tipi supportati sono:
+* L'*attività* svolta dall'utente.  I tipi supportati sono:
 +
-** *Cambia proprietà del gruppo* - la proprietà del gruppo è del file o della cartella è stata modificata. Per ulteriori informazioni sulla proprietà del gruppo, vedere link:https://docs.microsoft.com/en-us/previous-versions/orphan-topics/ws.11/dn789205(v=ws.11)?redirectedfrom=MSDN["questo link."]
-** *Cambia proprietario* - la proprietà del file o della cartella viene modificata in un altro utente.
-** *Cambia permesso* - l'autorizzazione per file o cartelle viene modificata.
+** *Modifica proprietà del gruppo* - La proprietà del gruppo del file o della cartella è stata modificata.  Per maggiori dettagli sulla proprietà del gruppo, vederelink:https://docs.microsoft.com/en-us/previous-versions/orphan-topics/ws.11/dn789205(v=ws.11)?redirectedfrom=MSDN["questo collegamento."]
+** *Cambia proprietario* - La proprietà del file o della cartella è stata cambiata a un altro utente.
+** *Modifica autorizzazione* - L'autorizzazione del file o della cartella è stata modificata.
 ** *Crea* - Crea file o cartella.
-** *Delete* - Elimina file o cartella. Se una cartella viene eliminata, si ottengono gli eventi _delete_ per tutti i file in quella cartella e sottocartelle.
-** *Read* - il file viene letto.
-** *Read Metadata* - solo se si attiva l'opzione di monitoraggio delle cartelle. Verrà generato all'apertura di una cartella in Windows o all'esecuzione di "ls" all'interno di una cartella in Linux.
-** *Rinomina* - Rinomina il file o la cartella.
-** *Write* - i dati vengono scritti in un file.
-** *Write Metadata* - i metadati del file vengono scritti, ad esempio, i permessi modificati.
-** *Altra modifica* - qualsiasi altro evento non descritto in precedenza. Tutti gli eventi non mappati vengono mappati al tipo di attività "altra modifica". Applicabile a file e cartelle.
+** *Elimina* - Elimina file o cartella.  Se una cartella viene eliminata, vengono ottenuti eventi _delete_ per tutti i file presenti in quella cartella e nelle sottocartelle.
+** *Lettura* - Il file è stato letto.
+** *Leggi metadati* - Solo se si abilita l'opzione di monitoraggio delle cartelle.  Verrà generato all'apertura di una cartella su Windows o eseguendo "ls" all'interno di una cartella su Linux.
+** *Rinomina* - Rinomina file o cartella.
+** *Scrittura* - I dati vengono scritti in un file.
+** *Scrivi metadati* - I metadati del file vengono scritti, ad esempio, se è stata modificata l'autorizzazione.
+** *Altro cambiamento* - Qualsiasi altro evento non descritto sopra.  Tutti gli eventi non mappati vengono mappati al tipo di attività "Altra modifica".  Applicabile a file e cartelle.
 
 
-* Il percorso *Path* è il percorso _entity_. Questo deve essere il percorso esatto dell'entità (ad esempio, "_/home/userX/nested1/nested2/abc.txt_") O la parte di directory del percorso per la ricerca ricorsiva (ad esempio, "_/home/userX/nested1/nested2/_"). NOTA: I modelli di percorso regex (ad esempio, \*nested*) NON sono consentiti qui. In alternativa, è possibile specificare filtri a livello di cartella di percorso singoli, come indicato di seguito, per il filtraggio dei percorsi.
-* La cartella *1st Level (Root)* è la directory principale del percorso dell'entità in minuscolo.
-* La cartella *2nd Level* è la directory di secondo livello del percorso dell'entità in minuscolo.
-* La cartella *3rd Level* è la directory di terzo livello del percorso dell'entità in minuscolo.
-* La cartella *4th Level* è la directory di quarto livello del percorso dell'entità in minuscolo.
-* L'estensione *Entity Type*, inclusa l'entità (ad esempio file) (.doc, .docx, .tmp, ecc.).
-* Il *dispositivo* in cui risiedono le entità.
-* Il *protocollo* utilizzato per recuperare gli eventi.
-* Il percorso *originale* utilizzato per rinominare gli eventi quando il file originale è stato rinominato. Questa colonna non è visibile nella tabella per impostazione predefinita. Utilizzare il selettore di colonna per aggiungere questa colonna alla tabella.
-* Il *Volume* in cui risiedono le entità. Questa colonna non è visibile nella tabella per impostazione predefinita. Utilizzare il selettore di colonna per aggiungere questa colonna alla tabella.
-* Il *Nome entità* è l'ultimo componente del percorso dell'entità; per il tipo di entità come file, è il nome del file.
+* Il *Percorso* è il percorso dell'_entità_.  Dovrebbe essere il percorso esatto dell'entità (ad esempio, "_/home/userX/nested1/nested2/abc.txt_") OPPURE la parte di directory del percorso per la ricerca ricorsiva (ad esempio, "_/home/userX/nested1/nested2/_").  NOTA: i modelli di percorso regex (ad esempio, \*nested*) NON sono consentiti qui.  In alternativa, è possibile specificare anche filtri individuali a livello di cartella del percorso, come indicato di seguito, per il filtraggio del percorso.
+* La *Cartella di 1° livello (Radice)* è la directory radice del percorso dell'entità in minuscolo.
+* La *Cartella di secondo livello* è la directory di secondo livello del percorso dell'entità in minuscolo.
+* La *Cartella di terzo livello* è la directory di terzo livello del percorso dell'entità in minuscolo.
+* La *Cartella di 4° livello* è la directory di quarto livello del percorso dell'entità in minuscolo.
+* *Tipo di entità*, inclusa l'estensione dell'entità (ad esempio file) (.doc, .docx, .tmp, ecc.).
+* Il *Dispositivo* in cui risiedono le entità.
+* Il *Protocollo* utilizzato per recuperare gli eventi.
+* Il *Percorso originale* utilizzato per gli eventi di ridenominazione quando il file originale è stato rinominato.  Per impostazione predefinita, questa colonna non è visibile nella tabella.  Utilizzare il selettore di colonna per aggiungere questa colonna alla tabella.
+* Il *Volume* in cui risiedono le entità.  Per impostazione predefinita, questa colonna non è visibile nella tabella.  Utilizzare il selettore di colonna per aggiungere questa colonna alla tabella.
+* *Nome entità* è l'ultimo componente del percorso dell'entità; per il tipo di entità come file, è il nome del file.
 
 
-Selezionando una riga di tabella si apre un pannello a scorrimento con il profilo utente in una scheda e la panoramica dell'attività e dell'entità in un'altra scheda.
+Selezionando una riga della tabella si apre un pannello scorrevole con il profilo utente in una scheda e la panoramica delle attività e delle entità in un'altra scheda.
 
-image:ws_forensics_slideout.png["pagina forensics che mostra la presentazione che mostra l'attività dell'utente"]
+image:ws_forensics_slideout.png["pagina forense che mostra una slideout che mostra l'attività dell'utente"]
 
-Il metodo _Group by_ predefinito è _Activity forensics_. Se si seleziona un metodo _Raggruppa per_ diverso, ad esempio tipo di entità, verrà visualizzata la tabella entità _Raggruppa per_. Se non viene effettuata alcuna selezione, viene visualizzato _Group by_ *All* (Raggruppa per_ *tutto*).
+Il metodo _Raggruppa per_ predefinito è _Attività forense_.  Se si seleziona un metodo _Raggruppa per_ diverso, ad esempio Tipo di entità, verrà visualizzata la tabella _Raggruppa per_ dell'entità.  Se non viene effettuata alcuna selezione, viene visualizzato _Raggruppa per_ *tutto*.
 
-* Il conteggio delle attività viene visualizzato come collegamento ipertestuale; selezionando questa opzione si aggiunge il raggruppamento selezionato come filtro. La tabella delle attività verrà aggiornata in base a quel filtro.
-* Se si modifica il filtro, si modifica l'intervallo di tempo o si aggiorna lo schermo, non sarà possibile tornare ai risultati filtrati senza dover impostare nuovamente il filtro.
-* Quando si seleziona Nome entità come filtro, il menu a discesa Raggruppa per viene disattivato; inoltre, quando l'utente si trova già nella schermata Raggruppa per, il filtro Nome entità come viene disattivato.
-
-
+* Il conteggio delle attività viene visualizzato come collegamento ipertestuale; selezionando questa opzione, il raggruppamento selezionato verrà aggiunto come filtro.  La tabella delle attività verrà aggiornata in base a quel filtro.
+* Tieni presente che se modifichi il filtro, modifichi l'intervallo di tempo o aggiorni la schermata, non potrai tornare ai risultati filtrati senza impostare nuovamente il filtro.
+* Si noti che quando si seleziona Nome entità come filtro, il menu a discesa Raggruppa per sarà disabilitato; inoltre, quando l'utente si trova già nella schermata Raggruppa per, il filtro Nome entità sarà disabilitato.
 
 
-== Filtraggio dei dati Forensic Activity History
 
-Per filtrare i dati è possibile utilizzare due metodi.
 
-* Il filtro può essere aggiunto dal pannello scorrevole. Il valore viene aggiunto ai filtri appropriati nell'elenco _Filter by_ principale.
-* Filtrare i dati digitando il campo _Filtra per_:
+== Filtraggio dei dati della cronologia delle attività forensi
+
+Esistono due metodi per filtrare i dati.
+
+* Il filtro può essere aggiunto dal pannello scorrevole.  Il valore viene aggiunto ai filtri appropriati nell'elenco _Filtra per_ in alto.
+* Filtra i dati digitando nel campo _Filtra per_:
 +
-Seleziona il filtro appropriato dal widget "Filtra per" in alto facendo clic sul pulsante *[+]*:
-
-+
-image:Forensic_Activity_Filter.png["Entity Filer, width=500"]
+Seleziona il filtro appropriato dal widget in alto "Filtra per" cliccando sul pulsante *[+]*:
 
 +
-Inserire il testo di ricerca
+image:Forensic_Activity_Filter.png["Entity Filer, larghezza=500"]
+
++
+Inserisci il testo da cercare
 
 +
 Premere Invio o fare clic all'esterno della casella del filtro per applicare il filtro.
@@ -100,155 +100,155 @@ Premere Invio o fare clic all'esterno della casella del filtro per applicare il 
 
 È possibile filtrare i dati delle attività forensi in base ai seguenti campi:
 
-* Il tipo *Activity*.
-* *Protocollo* per recuperare le attività specifiche del protocollo.
-* *Nome utente* dell'utente che esegue l'attività. Specificare il nome utente esatto da filtrare. La ricerca con un nome utente parziale o un nome utente parziale con prefisso o suffisso con '*' non funziona.
-* *Riduzione del rumore* per filtrare i file creati nelle ultime 2 ore dall'utente. Viene inoltre utilizzato per filtrare i file temporanei (ad esempio, i file .tmp) a cui l'utente accede.
-* *Dominio* dell'utente che esegue l'attività. È necessario fornire il *dominio esatto* da filtrare. La ricerca di un dominio parziale o di un dominio parziale prefisso o suffisso con carattere jolly ('*') non funzionerà. _Nessuno_ può essere specificato per cercare il dominio mancante.
+* Il tipo *Attività*.
+* *Protocollo* per recuperare attività specifiche del protocollo.
+* *Nome utente* dell'utente che esegue l'attività.  Per filtrare è necessario fornire il nome utente esatto.  La ricerca con nome utente parziale o con nome utente parziale preceduto o suffisso '*' non funzionerà.
+* *Riduzione rumore* per filtrare i file creati nelle ultime 2 ore dall'utente.  Viene utilizzato anche per filtrare i file temporanei (ad esempio, i file .tmp) a cui accede l'utente.
+* *Dominio* dell'utente che esegue l'attività.  Per filtrare è necessario fornire il *dominio esatto*.  La ricerca di domini parziali o di domini parziali con prefisso o suffisso con carattere jolly ('*') non funzionerà.  È possibile specificare _None_ per cercare il dominio mancante.
 
 
-I seguenti campi sono soggetti a speciali regole di filtraggio:
+I seguenti campi sono soggetti a regole di filtraggio speciali:
 
-* *Tipo di entità*, utilizzando l'estensione dell'entità (file) - è preferibile specificare il tipo di entità esatto all'interno delle virgolette. Ad esempio _"txt"_.
-* *Percorso* dell'entità - questo dovrebbe essere il percorso esatto dell'entità (ad esempio, "_/home/userX/nested1/nested2/abc.txt_") O la parte di directory del percorso per la ricerca ricorsiva (ad esempio, "_/home/userX/nested1/nested2/_"). NOTA: I modelli di percorso regex (ad esempio, \*nested*) NON sono consentiti qui. Filtri percorso directory (stringa di percorso che termina con /) per risultati più rapidi si consiglia di utilizzare fino a 4 directory di profondità. Ad esempio, "_/home/userX/nested1/nested2/_". Fare riferimento alla tabella riportata di seguito per ulteriori dettagli.
-* Cartella livello 1st (radice) - directory principale di percorso entità come filtri. Per esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, allora home O "home" possono essere usati.
-* Cartella a 2nd livelli - directory a 2nd livelli di filtri percorso entità. Per esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, allora userX O "userX" possono essere usati.
-* Cartella a 3rd livelli: Directory a 3rd livelli di filtri percorso entità.
-* Ad esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, allora è possibile utilizzare nested1 O "nested1".
-* Cartella a 4th livelli - Directory a 4th livelli directory dei filtri percorso entità. Ad esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, allora è possibile utilizzare nested2 O "nested2".
-* *Utente* esecuzione dell'attività - è preferibile specificare l'utente esatto tra virgolette. Ad esempio, _"Amministratore"_.
+* *Tipo di entità*, utilizzando l'estensione dell'entità (file): è preferibile specificare il tipo di entità esatto tra virgolette.  Ad esempio _"txt"_.
+* *Percorso* dell'entità: deve essere il percorso esatto dell'entità (ad esempio, "_/home/userX/nested1/nested2/abc.txt_") OPPURE la parte di directory del percorso per la ricerca ricorsiva (ad esempio, "_/home/userX/nested1/nested2/_").  NOTA: i modelli di percorso regex (ad esempio, \*nested*) NON sono consentiti qui.  Per risultati più rapidi, si consiglia di utilizzare filtri del percorso della directory (stringa del percorso che termina con /) fino a 4 directory di profondità.  Ad esempio, "_/home/userX/nested1/nested2/_".  Per maggiori dettagli, consultare la tabella sottostante.
+* Cartella di 1° livello (radice): directory radice dell'entità Percorso come filtri.  Ad esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, è possibile utilizzare home OPPURE "home".
+* Cartella di 2° livello: directory di 2° livello dei filtri del percorso dell'entità.  Ad esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, è possibile utilizzare userX OPPURE "userX".
+* Cartella di 3° livello: directory di 3° livello dei filtri del percorso dell'entità.
+* Ad esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, è possibile utilizzare nested1 OPPURE "nested1".
+* Cartella di 4° livello - Directory Directory di 4° livello dei filtri del percorso dell'entità.  Ad esempio, se il percorso dell'entità è /home/userX/nested1/nested2/, è possibile utilizzare nested2 OPPURE "nested2".
+* *Utente* che esegue l'attività: è preferibile specificare l'utente esatto tra virgolette.  Ad esempio, _"Amministratore"_.
 * *Dispositivo* (SVM) in cui risiedono le entità
-* *Volume* dove risiedono le entità
-* Il percorso *originale* utilizzato per rinominare gli eventi quando il file originale è stato rinominato.
+* *Volume* in cui risiedono le entità
+* Il *Percorso originale* utilizzato per gli eventi di ridenominazione quando il file originale è stato rinominato.
 * *IP di origine* da cui è stato effettuato l'accesso all'entità.
 +
-** È possibile utilizzare i caratteri jolly * e ?. Ad esempio:10,0.0.*, 10,0?.0,10, 10,10*
-** Se è richiesta la corrispondenza esatta, è necessario fornire un indirizzo IP di origine valido tra virgolette doppie, ad esempio "10,1.1,1.". IP incompleti con virgolette doppie come "10,1.1.", "10,1..*", ecc. non funzioneranno.
+** È possibile utilizzare i caratteri jolly * e ?.  Ad esempio: 10.0.0.*, 10.0?.0.10, 10.10*
+** Se è richiesta una corrispondenza esatta, è necessario fornire un indirizzo IP sorgente valido tra virgolette doppie, ad esempio "10.1.1.1.".  Gli IP incompleti con virgolette doppie come "10.1.1.", "10.1..*", ecc. non funzioneranno.
 
 
-* Il *Nome entità* - il nome file del percorso entità come filtri. Ad esempio, se il percorso dell'entità è /home/userX/nested1/testfile.txt, il nome dell'entità è testfile.txt. Si consiglia di specificare il nome esatto del file tra virgolette; cercare di evitare le ricerche con caratteri jolly. Ad esempio, "testfile.txt". Si noti inoltre che questo filtro per il nome dell'entità è consigliato per intervalli di tempo più brevi (fino a 3 giorni).
+* *Nome entità*: il nome del file del percorso dell'entità come filtro.  Ad esempio, se il percorso dell'entità è /home/userX/nested1/testfile.txt, il nome dell'entità sarà testfile.txt.  Si prega di notare che si consiglia di specificare il nome esatto del file tra virgolette; cercare di evitare le ricerche con caratteri jolly.  Ad esempio, "testfile.txt".  Si noti inoltre che questo filtro per nome entità è consigliato per intervalli di tempo più brevi (fino a 3 giorni).
 
 
 I campi precedenti sono soggetti a quanto segue durante il filtraggio:
 
-* Il valore esatto deve essere compreso tra virgolette: Esempio: "Searchtext"
-* Le stringhe wildcard non devono contenere virgolette: Ad esempio, searchtext, \*searchtext*, filtreranno tutte le stringhe contenenti 'searchtext'.
-* Stringa con un prefisso, ad esempio: Searchtext* , cercherà tutte le stringhe che iniziano con 'searchtext'.
+* Il valore esatto deve essere racchiuso tra virgolette: Esempio: "searchtext"
+* Le stringhe jolly non devono contenere virgolette: Esempio: searchtext, \*searchtext*, filtrerà tutte le stringhe contenenti 'searchtext'.
+* Stringa con un prefisso, ad esempio: searchtext* , cercherà tutte le stringhe che iniziano con 'searchtext'.
 
 
-Tutti i campi dei filtri fanno distinzione tra maiuscole e minuscole. Ad esempio: Se il filtro applicato è tipo di entità con valore come 'testo parziale', restituirà i risultati con tipo di entità come 'testo parziale', 'testo ricerca', 'SEARCHTEXT'
+Si prega di notare che tutti i campi filtro sono di ricerca senza distinzione tra maiuscole e minuscole.  Ad esempio: se il filtro applicato è Tipo di entità con valore come 'searchtext', restituirà risultati con Tipo di entità come 'searchtext', 'SearchText', 'SEARCHTEXT'
 
 
 
-== Esempi di filtro analisi attività:
+== Esempi di filtri forensi per l'attività:
 
 |===
-| Espressione filtro applicato dall'utente | Risultato previsto | Valutazione delle prestazioni | Commento 
+| Espressione del filtro applicata dall'utente | Risultato atteso | Valutazione delle prestazioni | Commento 
 
 
-| Percorso = "/home/userX/nested1/nested2/" | Ricerca ricorsiva di tutti i file e le cartelle in una determinata directory | Veloce | Le ricerche nelle directory sono rapide fino a 4 directory. 
+| Percorso = "/home/utenteX/nested1/nested2/" | Ricerca ricorsiva di tutti i file e le cartelle nella directory specificata | Veloce | Le ricerche nelle directory fino a 4 directory saranno rapide. 
 
 
-| Percorso = "/home/userX/nested1/" | Ricerca ricorsiva di tutti i file e le cartelle in una determinata directory | Veloce | Le ricerche nelle directory sono rapide fino a 4 directory. 
+| Percorso = "/home/utenteX/nested1/" | Ricerca ricorsiva di tutti i file e le cartelle nella directory specificata | Veloce | Le ricerche nelle directory fino a 4 directory saranno rapide. 
 
 
-| Percorso = "/home/userX/nested1/test" | Corrispondenza esatta dove il valore del percorso corrisponde a /home/userX/nested1/test | Più lento | La ricerca esatta sarà più lenta rispetto alle ricerche nella directory. 
+| Percorso = "/home/userX/nested1/test" | Corrispondenza esatta in cui il valore del percorso corrisponde a /home/userX/nested1/test | Più lentamente | La ricerca esatta sarà più lenta rispetto alle ricerche nella directory. 
 
 
-| Percorso = "/home/userX/nested1/nested2/nested3/" | Ricerca ricorsiva di tutti i file e le cartelle in una determinata directory | Più lento | Più di 4 ricerche di directory sono più lente da ricercare. 
+| Percorso = "/home/utenteX/nested1/nested2/nested3/" | Ricerca ricorsiva di tutti i file e le cartelle nella directory specificata | Più lentamente | Le ricerche su più di 4 directory risultano più lente. 
 
 
-| Qualsiasi altro filtro non basato su percorso. Si consiglia di inserire tra virgolette i filtri User e Entity Type, ad esempio User="Administrator" Entity Type="txt" |  | Veloce |  
+| Qualsiasi altro filtro non basato sul percorso.  Si consiglia di racchiudere i filtri di tipo utente ed entità tra virgolette, ad esempio Utente="Amministratore" Tipo di entità="txt" |  | Veloce |  
 
 
-| Nome entità = "test.log" | Corrispondenza esatta dove il nome del file è test.log | Veloce | Come è corrispondenza esatta 
+| Nome entità = "test.log" | Corrispondenza esatta in cui il nome del file è test.log | Veloce | Poiché è una corrispondenza esatta 
 
 
-| Nome entità = *test.log | Nomi di file che terminano con test.log | Lento | A causa del carattere jolly, può essere lento. 
+| Nome entità = *test.log | Nomi di file che terminano con test.log | Lento | A causa della wild card, può essere lento. 
 
 
-| Nome entità = test*.log | I nomi dei file che iniziano con test e terminano con .log | Lento | A causa del carattere jolly, può essere lento. 
+| Nome entità = test*.log | I nomi dei file iniziano con test e terminano con .log | Lento | A causa della wild card, può essere lento. 
 
 
-| Nome entità = test.lo | Nomi di file che iniziano con test.lo ad esempio: Corrispondono a test.log, test.log.1, test.log1 | Più lento | A causa del carattere jolly alla fine, può essere lento. 
+| Nome entità = test.lo | Nomi di file che iniziano con test.lo Ad esempio: corrisponderà a test.log, test.log.1, test.log1 | Più lentamente | A causa della wild card alla fine, il gioco può risultare lento. 
 
 
-| Nome entità = test | Nomi file che iniziano con test | Più lenta | A causa del carattere jolly alla fine e del valore più generico utilizzato, può essere più lento. 
+| Nome entità = test | Nomi di file che iniziano con test | Il più lento | A causa della presenza di un carattere jolly alla fine e del valore più generico utilizzato, può risultare più lento. 
 |===
 NOTA:
 
-. Il conteggio delle attività visualizzato accanto all'icona tutte le attività viene arrotondato a 30 minuti quando l'intervallo di tempo selezionato si estende per più di 3 giorni. Ad esempio, un intervallo di tempo compreso tra _settembre 1st 10:15 e settembre 7th 10:15_ mostra i conteggi delle attività tra settembre 1st 10:00 e settembre 7th 10:30.
-. Analogamente, le metriche di conteggio visualizzate nel grafico Cronologia attività vengono arrotondate a 30 minuti quando l'intervallo di tempo selezionato si estende per più di 3 giorni.
+. Il conteggio delle attività visualizzato accanto all'icona Tutte le attività viene arrotondato a 30 minuti quando l'intervallo di tempo selezionato si estende per più di 3 giorni. Ad esempio, un intervallo di tempo dal 1° settembre alle 10:15 al 7 settembre alle 10:15 mostrerà i conteggi delle attività dal 1° settembre alle 10:00 al 7 settembre alle 10:30.
+. Allo stesso modo, le metriche di conteggio mostrate nel grafico Cronologia attività vengono arrotondate a 30 minuti quando l'intervallo di tempo selezionato si estende per più di 3 giorni.
 
 
 
 
-== Ordinamento dei dati Forensic Activity History
+== Ordinamento dei dati della cronologia delle attività forensi
 
-È possibile ordinare i dati della cronologia delle attività in base a _ora, utente, IP di origine, attività,_, _tipo di entità_, cartella a 1st livelli (principale), cartella a 2nd livelli, cartella a 3rd livelli e cartella a 4th livelli. Per impostazione predefinita, la tabella viene ordinata in base a un ordine _time_ decrescente, il che significa che i dati più recenti verranno visualizzati per primi. L'ordinamento è disattivato per i campi _Device_ e _Protocol_.
+È possibile ordinare i dati della cronologia delle attività in base a _Ora, Utente, IP sorgente, Attività,_, _Tipo di entità_, Cartella di 1° livello (radice), Cartella di 2° livello, Cartella di 3° livello e Cartella di 4° livello.  Per impostazione predefinita, la tabella è ordinata in base all'ordine decrescente _Time_, ovvero i dati più recenti verranno visualizzati per primi.  L'ordinamento è disabilitato per i campi _Dispositivo_ e _Protocollo_.
 
 
 
-== Guida dell'utente per le esportazioni asincrone
+== Guida utente per le esportazioni asincrone
 
 
 
 === Panoramica
 
-La funzionalità di esportazione asincrona di Storage workload Security è progettata per gestire grandi esportazioni di dati.
+La funzionalità Esportazioni asincrone di Storage Workload Security è progettata per gestire esportazioni di dati di grandi dimensioni.
 
 
 
-=== Guida dettagliata: Esportazione dei dati con esportazioni asincrone
+=== Guida passo passo: esportazione di dati con esportazioni asincrone
 
-. *Initiate Export* (inizia esportazione): Selezionare la durata desiderata e i filtri per l'esportazione, quindi fare clic sul pulsante Export (Esporta).
-. *Attendere il completamento dell'esportazione*: Il tempo di elaborazione può variare da alcuni minuti a poche ore. Potrebbe essere necessario aggiornare la pagina forense alcune volte. Una volta completato il processo di esportazione, viene attivato il pulsante "Scarica ultimo file CSV di esportazione".
-. *Download*: Fare clic sul pulsante "Scarica ultimo file di esportazione creato" per ottenere i dati esportati in formato .zip. Questi dati saranno disponibili per il download fino a quando l'utente non inizia un'altra esportazione asincrona o fino a quando non sono trascorsi 3 giorni, a seconda di quale delle due condizioni si verifica per prima. Il pulsante rimane abilitato fino a quando non viene avviata un'altra esportazione asincrona.
+. *Avvia esportazione*: seleziona la durata e i filtri desiderati per l'esportazione e fai clic sul pulsante Esporta.
+. *Attendi il completamento dell'esportazione*: il tempo di elaborazione può variare da pochi minuti ad alcune ore.  Potrebbe essere necessario aggiornare la pagina forense più volte.  Una volta completato il processo di esportazione, verrà abilitato il pulsante "Scarica l'ultimo file CSV esportato".
+. *Download*: Fare clic sul pulsante "Scarica l'ultimo file di esportazione creato" per ottenere i dati esportati in formato .zip.  Questi dati saranno disponibili per il download finché l'utente non avvierà un'altra esportazione asincrona o finché non saranno trascorsi 3 giorni, a seconda di quale evento si verifichi per primo.  Il pulsante rimarrà abilitato finché non verrà avviata un'altra esportazione asincrona.
 . *Limitazioni*:
 +
-** Al momento, il numero di download asincroni è limitato a 1 per utente per ciascuna attività e attività Analytics Table e a 3 per tenant.
-** I dati esportati sono limitati a un massimo di 1 milioni di record per la tabella delle attività; mentre per il gruppo per, il limite è di mezzo milione di record.
+** Il numero di download asincroni è attualmente limitato a 1 per utente per ogni tabella Attività e Analisi Attività e a 3 per tenant.
+** I dati esportati sono limitati a un massimo di 1 milione di record per la tabella Attività; mentre per Raggruppa per, il limite è di mezzo milione di record.
 
 
 
 
-Un esempio di script per estrarre dati forensi tramite API è presente all'indirizzo _/opt/NetApp/cloudSecure/Agent/export-script/_ dell'agente. Per ulteriori informazioni sullo script, vedere il file Leggimi in questa posizione.
+Uno script di esempio per estrarre dati forensi tramite API è presente in _/opt/netapp/cloudsecure/agent/export-script/_ sull'agente.  Per maggiori dettagli sullo script, consultare il file readme in questa posizione.
 
 
 
-== Selezione colonna per tutte le attività
+== Selezione della colonna per tutte le attività
 
-La tabella _All activity_ mostra le colonne Select per impostazione predefinita. Per aggiungere, rimuovere o modificare le colonne, fare clic sull'icona a forma di ingranaggio a destra della tabella e selezionare dall'elenco delle colonne disponibili.
+Per impostazione predefinita, la tabella _Tutte le attività_ mostra colonne selezionate.  Per aggiungere, rimuovere o modificare le colonne, fare clic sull'icona dell'ingranaggio a destra della tabella e selezionare dall'elenco delle colonne disponibili.
 
-image:CloudSecure_ActivitySelection.png["Activity Selector, width=30%"]
+image:CloudSecure_ActivitySelection.png["Selettore attività, larghezza=30%"]
 
 
 
 == Conservazione della cronologia delle attività
 
-La cronologia delle attività viene mantenuta per 13 mesi per gli ambienti di sicurezza dei workload attivi.
+La cronologia delle attività viene conservata per 13 mesi per gli ambienti Workload Security attivi.
 
 
 
-== Applicabilità dei filtri nella pagina Forensics
+== Applicabilità dei filtri nella pagina forense
 
 |===
-| Filtro | Che cosa fa | Esempio | Applicabile per questi filtri | Non applicabile per questi filtri | Risultato 
+| Filtro | Cosa fa | Esempio | Applicabile per questi filtri | Non applicabile per questi filtri | Risultato 
 
 
-| * (Asterisco) | consente di cercare tutto | Auto*03172022 se il testo di ricerca contiene un trattino o un trattino basso, date l'espressione tra parentesi. Es. (svm*) per la ricerca in svm-123 | Utente, tipo di entità, dispositivo, volume, percorso originale, cartella 1stLevel, cartella 2ndLevel, cartella 3rdLevel, cartella 4thLevel, Nome entità, IP di origine |  | Restituisce tutte le risorse che iniziano con "Auto" e terminano con "03172022" 
+| * (Asterisco) | ti permette di cercare tutto | Auto*03172022 Se il testo di ricerca contiene un trattino o un carattere di sottolineatura, fornire l'espressione tra parentesi. Ad esempio, (svm*) per la ricerca di svm-123 | Utente, Tipo di entità, Dispositivo, Volume, Percorso originale, Cartella di 1° livello, Cartella di 2° livello, Cartella di 3° livello, Cartella di 4° livello, Nome entità, IP sorgente |  | Restituisce tutte le risorse che iniziano con "Auto" e terminano con "03172022" 
 
 
-| ? (punto interrogativo) | consente di cercare un numero specifico di caratteri | AutoSabotageUser1_03172022? | Utente, tipo di entità, periferica, Volume, cartella 1stLevel, cartella 2ndLevel, cartella 3rdLevel, cartella 4thLevel, Nome entità, IP di origine |  | Restituisce AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225 e così via 
+| ?  (punto interrogativo) | consente di cercare un numero specifico di caratteri | AutoSabotageUser1_03172022? | Utente, Tipo di entità, Dispositivo, Volume, Cartella di 1° livello, Cartella di 2° livello, Cartella di 3° livello, Cartella di 4° livello, Nome entità, IP sorgente |  | restituisce AutoSabotageUser1_03172022A, AutoSabotageUser1_03172022B, AutoSabotageUser1_031720225 e così via 
 
 
-| OPPURE | consente di specificare più entità | AutoSabotageUser1_03172022 O AutoRansomUser4_03162022 | Utente, dominio, tipo di entità, percorso originale, Nome entità, IP di origine |  | Restituisce uno qualsiasi di AutoSabotageUser1_03172022 O AutoRansomUser4_03162022 
+| O | consente di specificare più entità | AutoSabotageUser1_03172022 O AutoRansomUser4_03162022 | Utente, Dominio, Tipo di entità, Percorso originale, Nome entità, IP sorgente |  | restituisce uno qualsiasi tra AutoSabotageUser1_03172022 O AutoRansomUser4_03162022 
 
 
-| NO | consente di escludere il testo dai risultati della ricerca | NON AutoRansomUser4_03162022 | Utente, dominio, tipo di entità, percorso originale, cartella 1stLevel, cartella 2ndLevel, cartella 3rdLevel, cartella 4thLevel, Nome entità, IP di origine | Dispositivo | Restituisce tutto ciò che non inizia con "AutoRansomUser4_03162022" 
+| NON | consente di escludere il testo dai risultati della ricerca | NOT AutoRansomUser4_03162022 | Utente, dominio, tipo di entità, percorso originale, cartella di 1° livello, cartella di 2° livello, cartella di 3° livello, cartella di 4° livello, nome dell'entità, IP di origine | Dispositivo | restituisce tutto ciò che non inizia con "AutoRansomUser4_03162022" 
 
 
-| Nessuno | Ricerca i valori NULL in tutti i campi | Nessuno | Dominio |  | restituisce risultati in cui il campo di destinazione è vuoto 
+| Nessuno | cerca valori NULL in tutti i campi | Nessuno | Dominio |  | restituisce risultati in cui il campo di destinazione è vuoto 
 |===
 
 
@@ -259,16 +259,16 @@ I risultati della ricerca con e senza / saranno diversi
 |===
 
 
-| "/AutoDir1/AutoFile03242022" | Funziona solo la ricerca esatta; restituisce tutte le attività con percorso esatto come /AutoDir1/AutoFile03242022 (caso non sensibile) 
+| "/AutoDir1/AutoFile03242022" | Funziona solo la ricerca esatta; restituisce tutte le attività con percorso esatto come /AutoDir1/AutoFile03242022 (senza distinzione tra maiuscole e minuscole) 
 
 
-| "/AutoDir1/ " | Funziona; restituisce tutte le attività con directory a 1st livelli corrispondenti a AutoDir1 (caso non sensibile) 
+| "/AutoDir1/ " | Funziona; restituisce tutte le attività con directory di primo livello corrispondente ad AutoDir1 (senza distinzione tra maiuscole e minuscole) 
 
 
-| "/AutoDir1/AutoFile03242022/" | Funziona; restituisce tutte le attività con directory a 1st livelli corrispondenti a directory a AutoDir1 e 2nd livelli corrispondenti a AutoFile03242022 (caso non sensibile) 
+| "/AutoDir1/AutoFile03242022/" | Funziona; restituisce tutte le attività con la directory di 1° livello corrispondente ad AutoDir1 e la directory di 2° livello corrispondente ad AutoFile03242022 (senza distinzione tra maiuscole e minuscole) 
 
 
-| /AutoDir1/AutoFile03242022 O /AutoDir1/AutoFile03242022 | Non funziona 
+| /AutoDir1/AutoFile03242022 OPPURE /AutoDir1/AutoFile03242022 | Non funziona 
 
 
 | NON /AutoDir1/AutoFile03242022 | Non funziona 
@@ -284,17 +284,17 @@ I risultati della ricerca con e senza / saranno diversi
 |===
 
 
-== Modifiche all'attività utente della SVM principale locale
+== Modifiche all'attività dell'utente SVM radice locale
 
-Se un utente della SVM root locale sta eseguendo un'attività, l'IP del client su cui è montata la condivisione NFS viene ora considerato nel nome utente, che verrà mostrato come root@<ip-address-of-the-client> sia nelle pagine di attività forense che in quelle di attività utente.
+Se un utente root SVM locale sta eseguendo un'attività, l'IP del client su cui è montata la condivisione NFS viene ora considerato nel nome utente, che verrà visualizzato come root@<indirizzo-ip-del-client> sia nelle pagine delle attività forensi che in quelle delle attività utente.
 
-Ad esempio:
+Per esempio:
 
-* Se SVM-1 viene monitorato tramite la sicurezza del carico di lavoro e l'utente root di tale SVM monta la condivisione su un client con indirizzo IP 10.197.12.40, il nome utente mostrato nella pagina dell'attività forense sarà _root@10.197.12.40_.
-* Se la stessa SVM-1 è montata in un altro client con indirizzo IP 10.197.12.41, il nome utente mostrato nella pagina dell'attività forense sarà _root@10.197.12.41_.
+* Se SVM-1 è monitorato da Workload Security e l'utente root di tale SVM monta la condivisione su un client con indirizzo IP 10.197.12.40, il nome utente mostrato nella pagina delle attività forensi sarà _root@10.197.12.40_.
+* Se lo stesso SVM-1 viene montato su un altro client con indirizzo IP 10.197.12.41, il nome utente mostrato nella pagina delle attività forensi sarà _root@10.197.12.41_.
 
 
-*• questo è fatto per separare l'attività dell'utente root NFS dall'indirizzo IP. In precedenza, tutta l'attività veniva considerata eseguita solo da _root_ utente, senza distinzione IP.
+*• Ciò viene fatto per separare l'attività dell'utente root NFS in base all'indirizzo IP.  In precedenza, tutte le attività erano considerate eseguite solo dall'utente _root_, senza distinzione di IP.
 
 
 
@@ -303,23 +303,23 @@ Ad esempio:
 |===
 
 
-| Problema | Provare 
+| Problema | Prova questo 
 
 
-| Nella tabella "tutte le attività", nella colonna 'utente', il nome utente viene visualizzato come: "ldap:HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817" o "ldap:default:80038003" | I motivi possibili potrebbero essere: 1. Nessun User Directory Collector ancora configurato. Per aggiungerne uno, andare a *sicurezza workload > Collector > User Directory Collector* e fare clic su *+User Directory Collector*. Scegliere _Active Directory_ o _LDAP Directory Server_. 2. È stato configurato un servizio di raccolta directory utente, tuttavia è stato arrestato o si trova in stato di errore. Andare a *Collector > User Directory Collectors* e controllare lo stato. Per suggerimenti sulla risoluzione dei problemi, consultare link:http://docs.netapp.com/us-en/cloudinsights/task_config_user_dir_connect.html#troubleshooting-user-directory-collector-configuration-errors["Risoluzione dei problemi di User Directory Collector"]la sezione della documentazione. Una volta eseguita la configurazione corretta, il nome verrà risolto automaticamente entro 24 ore. Se il problema persiste, verificare di aver aggiunto il Data Collector utente corretto. Assicurarsi che l'utente faccia effettivamente parte del server Active Directory/LDAP Directory aggiunto. 
+| Nella tabella "Tutte le attività", nella colonna "Utente", il nome utente è visualizzato come: "ldap:HQ.COMPANYNAME.COM:S-1-5-21-3577637-1906459482-1437260136-1831817" o "ldap:default:80038003" | Le possibili ragioni potrebbero essere: 1.  Non è stato ancora configurato alcun raccoglitore di directory utente.  Per aggiungerne uno, vai su *Sicurezza del carico di lavoro > Collettori > Collettori directory utente* e fai clic su *+Collettore directory utente*.  Scegliere _Active Directory_ o _LDAP Directory Server_. 2.  È stato configurato un User Directory Collector, ma si è arrestato o è in stato di errore.  Vai su *Collezionisti > Collezionisti directory utenti* e controlla lo stato.  Fare riferimento allink:http://docs.netapp.com/us-en/cloudinsights/task_config_user_dir_connect.html#troubleshooting-user-directory-collector-configuration-errors["Risoluzione dei problemi di User Directory Collector"] sezione della documentazione per suggerimenti sulla risoluzione dei problemi.  Dopo aver effettuato la configurazione corretta, il nome verrà risolto automaticamente entro 24 ore.  Se il problema persiste, controlla di aver aggiunto il corretto User Data Collector.  Assicurarsi che l'utente faccia effettivamente parte del server Active Directory/LDAP Directory aggiunto. 
 
 
-| Alcuni eventi NFS non vengono visualizzati nell'interfaccia utente. | Controllare quanto segue: 1. È necessario eseguire un User Directory Collector per server ad con attributi POSIX impostati con l'attributo unixid attivato dall'interfaccia utente. 2. Qualsiasi utente che effettua l'accesso NFS deve essere visualizzato quando effettua una ricerca nella pagina utente dall'interfaccia utente 3. Gli eventi raw (eventi per i quali l'utente non è ancora stato scoperto) non sono supportati per NFS 4. L'accesso anonimo all'esportazione NFS non verrà monitorato. 5. Assicurarsi che la versione di NFS utilizzata sia la 4,1 o inferiore. (NFS 4,1 è supportato con ONTAP 9,15 o versioni successive). 
+| Alcuni eventi NFS non vengono visualizzati nell'interfaccia utente. | Controllare quanto segue: 1.  Un raccoglitore di directory utente per il server AD con attributi POSIX impostati dovrebbe essere in esecuzione con l'attributo unixid abilitato dall'interfaccia utente. 2.  Tutti gli utenti che effettuano l'accesso NFS dovrebbero essere visibili quando si effettua una ricerca nella pagina utente dall'interfaccia utente 3.  Gli eventi non elaborati (eventi per i quali l'utente non è ancora stato individuato) non sono supportati per NFS 4.  L'accesso anonimo all'esportazione NFS non verrà monitorato. 5.  Assicurarsi che la versione NFS utilizzata sia la 4.1 o una versione precedente.  (Si noti che NFS 4.1 è supportato con ONTAP 9.15 o versioni successive.) 
 
 
-| Dopo aver digitato alcune lettere contenenti un carattere jolly come l'asterisco (*) nei filtri delle pagine Forensics _All Activity_ o _Entities_, le pagine vengono caricate molto lentamente. | Un asterisco (*) nella stringa di ricerca cerca tutto. Tuttavia, le stringhe di caratteri jolly iniziali come _*<searchTerm>_ o _*<searchTerm>*_ comporteranno una query lenta. Per ottenere prestazioni migliori, utilizzare le stringhe di prefisso nel formato _<searchTerm>*_ (in altre parole, aggiungere l'asterisco (*) _dopo_ un termine di ricerca). Esempio: Utilizzare la stringa _testvolume*_, invece di _*testvolume_ o _*test*volume_. Usate una ricerca di directory per vedere tutte le attività sotto una data cartella ricorsivamente (ricerca gerarchica). Es. "/path1/path2/PATH3/" elencherà ricorsivamente tutte le attività sotto /path1/path2/PATH3. In alternativa, utilizzare l'opzione "Aggiungi al filtro" nella scheda tutte le attività." 
+| Dopo aver digitato alcune lettere contenenti un carattere jolly come l'asterisco (*) nei filtri delle pagine Forensics _All Activity_ o _Entities_, le pagine si caricano molto lentamente. | Un asterisco (\*) nella stringa di ricerca cerca tutto.  Tuttavia, l'uso di stringhe jolly iniziali come _*<searchTerm>_ o _*<searchTerm>*_ causerà una query lenta.  Per ottenere prestazioni migliori, utilizzare invece stringhe di prefisso nel formato _<searchTerm>*_ (in altre parole, aggiungere l'asterisco (*) _dopo_ un termine di ricerca).  Esempio: utilizzare la stringa _testvolume*_, anziché _*testvolume_ o _*test*volume_.  Utilizzare una ricerca di directory per visualizzare ricorsivamente tutte le attività presenti in una determinata cartella (ricerca gerarchica). Ad esempio, "/path1/path2/path3/" elencherà ricorsivamente tutte le attività presenti in /path1/path2/path3.  In alternativa, utilizzare l'opzione "Aggiungi al filtro" nella scheda Tutte le attività. 
 
 
-| Si verifica un errore di richiesta non riuscita con codice di stato 500/503 quando si utilizza un filtro percorso. | Provare a utilizzare un intervallo di date più piccolo per filtrare i record. 
+| Quando utilizzo un filtro Percorso, ricevo l'errore "Richiesta non riuscita con codice di stato 500/503". | Prova a utilizzare un intervallo di date più piccolo per filtrare i record. 
 
 
-| L'interfaccia utente forense sta caricando i dati lentamente quando si utilizza il filtro _path_. | Filtri percorso directory (stringa di percorso che termina con /) per ottenere risultati più rapidi si consiglia di utilizzare fino a 4 directory profonde. Ad esempio, se il percorso della directory è /AAA/BBB/CCC/DDD, cercare "/AAA/BBB/CCC/DDD/" per caricare i dati più velocemente. 
+| L'interfaccia utente forense carica i dati lentamente quando si utilizza il filtro _path_. | Per risultati più rapidi, si consiglia di utilizzare filtri del percorso della directory (stringa del percorso che termina con /) fino a 4 directory di profondità. Ad esempio, se il percorso della directory è /Aaa/Bbb/Ccc/Ddd, provare a cercare "/Aaa/Bbb/Ccc/Ddd/" per caricare i dati più velocemente. 
 
 
-| L'interfaccia utente di Forensics sta caricando i dati lentamente e affrontando errori quando si utilizza il filtro del nome dell'entità. | Provare con intervalli di tempo più piccoli e con la ricerca esatta dei valori con virgolette doppie. Ad esempio, se entityPath è "/home/userX/nested1/nested2/nested3/testfile.txt" allora, provare con "testfile.txt" come filtro del nome dell'entità. 
+| L'interfaccia utente di Forensics carica i dati lentamente e riscontra errori quando si utilizza il filtro del nome dell'entità. | Prova con intervalli di tempo più piccoli e con la ricerca del valore esatto con virgolette doppie. Ad esempio, se entityPath è "/home/userX/nested1/nested2/nested3/testfile.txt", prova con "testfile.txt" come filtro del nome dell'entità. 
 |===

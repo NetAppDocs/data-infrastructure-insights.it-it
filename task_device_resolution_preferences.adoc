@@ -10,13 +10,13 @@ summary:
 
 
 [role="lead"]
-La scheda Device resolution preferences (Preferenze risoluzione dispositivo) consente di creare una pianificazione di risoluzione automatica, specificare i vender di storage e nastri da includere o escludere dall'identificazione e impostare le opzioni di ricerca DNS.
+La scheda delle preferenze di risoluzione del dispositivo consente di creare una pianificazione di risoluzione automatica, specificare i fornitori di storage e nastri da includere o escludere dall'identificazione e impostare le opzioni di ricerca DNS.
 
 
 
-== Pianificazione automatica della risoluzione
+== Pianificazione della risoluzione automatica
 
-Un programma di risoluzione automatica può specificare quando eseguire la risoluzione automatica del dispositivo:
+Una pianificazione di risoluzione automatica può specificare quando eseguire la risoluzione automatica del dispositivo:
 
 |===
 
@@ -27,34 +27,34 @@ Un programma di risoluzione automatica può specificare quando eseguire la risol
 | Ogni | Utilizzare questa opzione per eseguire la risoluzione automatica del dispositivo a intervalli di giorni, ore o minuti. 
 
 
-| Ogni giorno | Utilizzare questa opzione per eseguire la risoluzione automatica giornaliera del dispositivo a un orario specifico. 
+| Ogni giorno | Utilizzare questa opzione per eseguire la risoluzione automatica del dispositivo ogni giorno a un orario specifico. 
 
 
-| Manualmente | Utilizzare questa opzione solo per eseguire manualmente la risoluzione automatica del dispositivo. 
+| Manualmente | Utilizzare questa opzione per eseguire manualmente solo la risoluzione automatica del dispositivo. 
 
 
-| Ad ogni cambiamento di ambiente | Utilizzare questa opzione per eseguire la risoluzione automatica del dispositivo ogni volta che si verifica un cambiamento nell'ambiente. 
+| Ad ogni cambiamento ambientale | Utilizzare questa opzione per eseguire la risoluzione automatica del dispositivo ogni volta che si verifica una modifica nell'ambiente. 
 |===
-Se si specifica _manually_, la risoluzione automatica notturna del dispositivo viene disattivata.
+Se si specifica _Manualmente_, la risoluzione automatica notturna del dispositivo è disabilitata.
 
 
 
 == Opzioni di elaborazione DNS
 
-Le opzioni di elaborazione DNS consentono di selezionare le seguenti funzioni:
+Le opzioni di elaborazione DNS consentono di selezionare le seguenti funzionalità:
 
-* Quando l'elaborazione dei risultati della ricerca DNS è attivata, è possibile aggiungere un elenco di nomi DNS da aggiungere ai dispositivi risolti.
-* È possibile selezionare Auto resolution of IPs (risoluzione automatica degli IP): Per abilitare la risoluzione automatica degli host per gli iniziatori iSCSI e gli host che accedono alle condivisioni NFS utilizzando la ricerca DNS. Se non viene specificato, viene eseguita solo la risoluzione basata su FC.
-* È possibile scegliere di consentire i caratteri di sottolineatura nei nomi host e di utilizzare un alias "connesso a" invece dell'alias della porta standard nei risultati.
-
-
+* Quando l'elaborazione dei risultati della ricerca DNS è abilitata, è possibile aggiungere un elenco di nomi DNS da aggiungere ai dispositivi risolti.
+* È possibile selezionare Risoluzione automatica degli IP: per abilitare la risoluzione automatica degli host per gli iniziatori iSCSI e gli host che accedono alle condivisioni NFS tramite la ricerca DNS.  Se non viene specificato, viene eseguita solo la risoluzione basata su FC.
+* È possibile scegliere di consentire i caratteri di sottolineatura nei nomi host e di utilizzare un alias "connesso a" anziché l'alias di porta standard nei risultati.
 
 
-=== Inclusi o esclusi vendor di storage e nastri specifici
-
-È possibile includere o escludere vendor di storage e nastri specifici per la risoluzione automatica. È possibile escludere vendor specifici se, ad esempio, si sa che un host specifico diventerà un host legacy e dovrebbe essere escluso dal nuovo ambiente. Puoi anche aggiungere di nuovo i vendor che hai precedentemente escluso, ma che non vuoi più escludere.
 
 
-NOTE: Le regole di risoluzione dei dispositivi per i nastri funzionano solo per i WWN in cui il fornitore per quel WWN è impostato su _incluso come solo nastro_ nelle preferenze del vendor.
+=== Inclusione o esclusione di specifici fornitori di storage e nastri
 
-Vedere anche: link:concept_device_resolution_regex_examples.html["Esempi di espressioni regolari"]
+È possibile includere o escludere specifici fornitori di storage e nastri per la risoluzione automatica.  Potresti voler escludere fornitori specifici se sai, ad esempio, che un host specifico diventerà un host legacy e dovrà essere escluso dal tuo nuovo ambiente.  Puoi anche aggiungere nuovamente i fornitori che hai escluso in precedenza ma che non desideri più escludere.
+
+
+NOTE: Le regole di risoluzione del dispositivo per il nastro funzionano solo per i WWN in cui il fornitore per quel WWN è impostato su _Incluso solo come nastro_ nelle preferenze del fornitore.
+
+Vedi anche:link:concept_device_resolution_regex_examples.html["Esempi di espressioni regolari"]

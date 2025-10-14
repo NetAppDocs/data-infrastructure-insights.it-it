@@ -2,49 +2,49 @@
 sidebar: sidebar 
 permalink: task_dc_huawei_oceanstor.html 
 keywords: data collector, Huawei, OceanStor, Dorado 
-summary: 'Configurazione del data collector Huawei OceanStor (REST/HTTPS).' 
+summary: 'Configurazione del raccoglitore dati Huawei OceanStor (REST/HTTPS).' 
 ---
-= Data collector di Huawei OceanStor
+= Raccoglitore dati Huawei OceanStor
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector Huawei OceanStor (REST/HTTPS) per rilevare l'inventario e le performance dello storage Huawei OceanStor e OceanStor Dorado.
+Data Infrastructure Insights utilizza il raccoglitore di dati Huawei OceanStor (REST/HTTPS) per scoprire l'inventario e le prestazioni per lo storage Huawei OceanStor e OceanStor Dorado.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario e prestazioni da Huawei OceanStor. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni sull'inventario e sulle prestazioni da Huawei OceanStor.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Pool di storage | Pool di storage 
+| Pool di archiviazione | Pool di archiviazione 
 
 
-| File System | Volume interno 
+| Sistema di file | Volume interno 
 
 
-| Controller | Nodo di storage 
+| Controllore | Nodo di archiviazione 
 
 
-| Porta FC (mappata) | Mappa del volume 
+| Porta FC (Mappata) | Mappa del volume 
 
 
-| Iniziatore FC host (mappato) | Maschera di volume 
+| Iniziatore FC host (mappato) | Maschera del volume 
 
 
 | Condivisione NFS/CIFS | Condividere 
 
 
-| Destinazione del collegamento iSCSI | Nodo di destinazione iSCSI 
+| Destinazione collegamento iSCSI | Nodo di destinazione iSCSI 
 
 
-| ISCSI link Initiator | Nodo iniziatore iSCSI 
+| Iniziatore di collegamento iSCSI | Nodo iniziatore iSCSI 
 
 
 | Disco | Disco 
@@ -56,10 +56,10 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario e
 
 == Requisiti
 
-Per configurare questo data collector sono necessari i seguenti requisiti:
+Per configurare questo raccoglitore dati sono richiesti i seguenti requisiti:
 
 * Indirizzo IP del dispositivo
-* Credenziali per accedere a OceanStor Device Manager
+* Credenziali per accedere al gestore dispositivi OceanStor
 * La porta 8088 deve essere disponibile
 
 
@@ -89,16 +89,16 @@ Per configurare questo data collector sono necessari i seguenti requisiti:
 | Campo | Descrizione 
 
 
-| Porta TCP | Porta TCP utilizzata per la connessione a OceanStor Device Manager. Il valore predefinito è 8088. 
+| Porta TCP | Porta TCP utilizzata per connettersi a OceanStor Device Manager.  Il valore predefinito è 8088. 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 60 minuti. 
 
 
-| Intervallo di polling delle performance (sec). | Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio delle prestazioni (sec). | Il valore predefinito è 300 secondi. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

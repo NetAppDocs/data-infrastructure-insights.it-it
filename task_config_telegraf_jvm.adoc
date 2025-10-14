@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_jvm.html 
 keywords: telegraf, installation, install, jvm 
-summary: Configurazione del data collector JVM 
+summary: Configurazione del raccoglitore dati JVM 
 ---
-= Data Collector JVM
+= Raccoglitore dati JVM
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da JVM.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da JVM.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere JVM.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli JVM.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
 image:JVMDCConfigLinux.png["Configurazione JVM"]
 
 
 
-== Setup (Configurazione)
+== Impostare
 
-Le informazioni sono disponibili in link:https://docs.oracle.com/javase/specs/jvms/se12/html/index.html["Documentazione JVM"].
+Le informazioni possono essere trovate inlink:https://docs.oracle.com/javase/specs/jvms/se12/html/index.html["Documentazione JVM"] .
 
 
 
@@ -44,10 +44,10 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| JVM | JVM spazio dei nomi | Architettura del sistema operativo Nome del sistema operativo versione Runtime specifica del runtime fornitore specifica del runtime versione tempo di attività Runtime Nome della macchina virtuale Runtime fornitore versione della macchina virtuale Nome del nodo IP | Classe caricata Classe totale caricata Classe scaricata memoria heap memoria impegnata heap Init memoria heap utilizzata memoria massima heap utilizzata memoria non heap memoria impegnata memoria non heap memoria init memoria non heap memoria massima non heap oggetti memoria utilizzati in attesa di finalizzazione OS processori disponibili OS memoria virtuale impegnata dimensione OS libero Memoria fisica dimensione OS spazio libero di swap dimensione OS massimo file descrittore Conteggio OS Open file Descriptors Conteggio OS processore CPU carico OS processore tempo SO sistema operativo carico sistema operativo carico sistema operativo medio totale memoria fisica dimensione OS spazio totale di swap dimensione thread Conteggio dei demon thread Conteggio dei picchi di thread Conteggio thread totale iniziato Conteggio Garbage Collector Copy Collection Conteggio Garbage Collector tempo di raccolta Garbage Collector Mark-sweep Collector Conteggio Garbage Collector tempo di raccolta Garbage Collector G1 tempo di raccolta Old Generation Garbage Collector G1 Conteggio raccolta Young Generation Garbage Collector G1 Tempo di raccolta di giovani generazioni Garbage Collector tempo di raccolta di Mark-sweep simultanei Garbage Collector tempo di raccolta di Garbage Collector tempo di raccolta di Garbage Collector tempo di raccolta di Garbage Collector Parallel Scavenge Mark-sweep Collection tempo di raccolta Garbage Collector Parallel Scavenge Collection Conteggio di raccolta di Garbage Collector Parallel Scavenge Tempo di raccolta 
+| JVM | JVM dello spazio dei nomi | Architettura del sistema operativo Nome del sistema operativo Versione del sistema operativo Specifiche di runtime Fornitore delle specifiche di runtime Versione delle specifiche di runtime Tempo di attività Nome della VM di runtime Fornitore della VM di runtime Versione della VM di runtime Nome del nodo IP del nodo | Classe caricata Classe caricata Totale Classe scaricata Heap di memoria impegnato Heap di memoria inizializzato Heap di memoria utilizzato Heap di memoria massimo utilizzato Memoria non heap impegnata Memoria non heap inizializzato Memoria non heap massima Memoria non heap utilizzata Oggetti di memoria in attesa di finalizzazione Processori del sistema operativo disponibili Dimensione della memoria virtuale impegnata del sistema operativo Dimensione della memoria fisica libera del sistema operativo Dimensione dello spazio di swap libero del sistema operativo Conteggio massimo dei descrittori di file del sistema operativo Conteggio dei descrittori di file aperti del sistema operativo Carico CPU del processore del sistema operativo Tempo CPU del processore del sistema operativo Carico CPU del sistema del sistema operativo Carico medio del sistema operativo Dimensione totale della memoria fisica del sistema operativo Dimensione totale dello spazio di swap del sistema operativo Conteggio dei daemon dei thread Conteggio dei picchi dei thread Conteggio dei thread Conteggio totale dei thread avviati Conteggio della raccolta copie del Garbage Collector Tempo di raccolta copie del Garbage Collector Conteggio della raccolta Mark-sweep del Garbage Collector Tempo di raccolta Mark-sweep del Garbage Collector Conteggio della raccolta di vecchia generazione del Garbage Collector G1 Tempo di raccolta della vecchia generazione del Garbage Collector G1 Conteggio della raccolta di nuova generazione del Garbage Collector G1 Tempo di raccolta di nuova generazione del Garbage Collector Conteggio della raccolta Mark-sweep simultanea del Garbage Collector Conteggio della raccolta Mark-sweep simultanea del Garbage Collector Tempo di raccolta Mark-sweep Conteggio raccolta parallela Garbage Collector Tempo di raccolta parallela Garbage Collector Scavenge parallelo Conteggio raccolta Mark-sweep Garbage Collector Scavenge parallelo Tempo di raccolta Mark-sweep Conteggio raccolta parallela Garbage Collector Scavenge parallelo Tempo di raccolta Garbage Collector 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

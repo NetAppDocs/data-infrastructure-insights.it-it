@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_xiv.html 
 keywords: IBM, XIV, SAN, A9000 
-summary: Configurazione di IBM XIV/A9000 Data Collector. 
+summary: Configurazione del raccoglitore dati IBM XIV/A9000. 
 ---
-= Configurazione del data collector IBM XIV/A9000
+= Configurazione del raccoglitore dati IBM XIV/A9000
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector IBM XIV e A9000 (CLI) utilizza l'interfaccia della riga di comando XIV per raccogliere i dati di inventario, mentre la raccolta delle performance viene eseguita effettuando chiamate SMI-S all'array XIV/A9000, che esegue un provider SMI-S sulla porta 7778.
+Il raccoglitore dati IBM XIV e A9000 (CLI) utilizza l'interfaccia della riga di comando XIV per raccogliere i dati di inventario, mentre la raccolta delle prestazioni viene eseguita effettuando chiamate SMI-S all'array XIV/A9000, che esegue un provider SMI-S sulla porta 7778.
 
 
 
@@ -18,16 +18,16 @@ Il data collector IBM XIV e A9000 (CLI) utilizza l'interfaccia della riga di com
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco | Disco 
 
 
-| Sistema storage | Storage 
+| Sistema di archiviazione | Magazzinaggio 
 
 
-| Pool di storage | Pool di storage 
+| Pool di archiviazione | Pool di archiviazione 
 
 
 | Volume | Volume 
@@ -36,25 +36,25 @@ Il data collector IBM XIV e A9000 (CLI) utilizza l'interfaccia della riga di com
 
 == Requisiti
 
-Per configurare e utilizzare questo data collector devono essere soddisfatti i seguenti requisiti:
+Per configurare e utilizzare questo raccoglitore dati è necessario soddisfare i seguenti requisiti:
 
-* Requisiti della porta: Porta TCP 7778
+* Requisito porta: porta TCP 7778
 * Nome utente e password di sola lettura
-* XIV CLI deve essere installato sull'AU
+* La CLI XIV deve essere installata sull'AU
 
 
 
 
-== Requisiti relativi alle performance
+== Requisiti di prestazione
 
-Di seguito sono riportati i requisiti per la raccolta delle performance:
+Di seguito sono riportati i requisiti per la riscossione delle prestazioni:
 
-* Agente SMI-S 1.4 o superiore
-* CIMService compatibile con SMI-S in esecuzione su array. La maggior parte degli array XIV dispone di un CIMServer installato per impostazione predefinita.
-* È necessario fornire l'accesso utente per CIMServer. L'accesso deve avere accesso completo in lettura alla configurazione e alle proprietà dell'array.
-* Spazio dei nomi SMI-S. Il valore predefinito è root/ibm. È configurabile in CIMServer.
-* Requisiti delle porte: 5988 per HTTP, 5989 per HTTPS.
-* Fare riferimento al seguente collegamento su come creare un account per la raccolta delle prestazioni SMI-S: https://www.ibm.com/docs/en/products?topic=/com.ibm.tpc_V41.doc/fqz0_t_adding_cim_agent.html[]
+* SMI-S Agent 1.4 o superiore
+* CIMService compatibile con SMI-S in esecuzione su array.  La maggior parte degli array XIV ha un CIMServer installato di default.
+* È necessario fornire l'accesso utente per CIMServer.  L'accesso deve avere accesso completo in lettura alla configurazione e alle proprietà dell'array.
+* Spazio dei nomi SMI-S.  L'impostazione predefinita è root/ibm.  Questa opzione è configurabile in CIMServer.
+* Requisiti porta: 5988 per HTTP, 5989 per HTTPS.
+* Per informazioni su come creare un account per la raccolta delle prestazioni SMI-S, fare riferimento al seguente collegamento: https://www.ibm.com/docs/en/products?topic=/com.ibm.tpc_V41.doc/fqz0_t_adding_cim_agent.html[]
 
 
 
@@ -66,19 +66,19 @@ Di seguito sono riportati i requisiti per la raccolta delle performance:
 | Campo | Descrizione 
 
 
-| Indirizzo IP XIV | Indirizzo IP o nome di dominio completo dello storage XIV 
+| XIV indirizzo IP | Indirizzo IP o nome di dominio completo dello storage XIV 
 
 
-| Nome utente | Nome utente dello storage XIV 
+| Nome utente | Nome utente per l'archiviazione XIV 
 
 
-| Password | Password per lo storage XIV 
+| Password | Password per l'archiviazione XIV 
 
 
-| Percorso completo alla directory CLI XIV | Percorso completo della cartella contenente la CLI XIV 
+| Percorso completo alla directory XIV CLI | Percorso completo della cartella contenente la CLI XIV 
 
 
-| Indirizzo IP host SMI-S. | Indirizzo IP dell'host SMI-S. 
+| Indirizzo IP host SMI-S | Indirizzo IP dell'host SMI-S 
 |===
 
 
@@ -89,25 +89,25 @@ Di seguito sono riportati i requisiti per la raccolta delle performance:
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 40 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 40 minuti. 
 
 
-| Protocollo SMI-S. | Protocollo utilizzato per connettersi al provider SMI-S. Visualizza anche la porta predefinita. 
+| Protocollo SMI-S | Protocollo utilizzato per connettersi al provider SMI-S.  Visualizza anche la porta predefinita. 
 
 
-| Eseguire l'override della porta SMI-S. | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+| Sostituisci porta SMI-S | Se vuoto, utilizzare la porta predefinita nel campo Tipo di connessione, altrimenti immettere la porta di connessione da utilizzare 
 
 
-| Nome utente | Nome utente dell'host del provider SMI-S. 
+| Nome utente | Nome utente per l'host del provider SMI-S 
 
 
-| Password | Password per l'host del provider SMI-S. 
+| Password | Password per l'host del provider SMI-S 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

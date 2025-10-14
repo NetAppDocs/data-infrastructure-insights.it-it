@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: cs_alert_data.html 
 keywords: alert, attack, ransomware, activity, security, abnormal 
-summary: 'Workload Security crea avvisi in caso di attività utente anomale o potenziale attacco. La pagina Avvisi elenca queste attività per un"analisi rapida e semplice.' 
+summary: 'Workload Security crea avvisi in caso di attività anomale dell"utente o di potenziali attacchi.  Nella pagina Avvisi sono elencate queste attività per consentire un"indagine rapida e semplice.' 
 ---
 = Avvisi
 :hardbreaks:
@@ -14,141 +14,141 @@ summary: 'Workload Security crea avvisi in caso di attività utente anomale o po
 
 
 [role="lead"]
-La pagina Workload Security Alerts (Avvisi di sicurezza del carico di lavoro) mostra una tempistica degli attacchi e/o degli avvisi recenti e consente di visualizzare i dettagli relativi a ciascun problema.
+La pagina Avvisi sulla sicurezza del carico di lavoro mostra una cronologia degli attacchi e/o degli avvisi recenti e consente di visualizzare i dettagli per ciascun problema.
 
 image:CloudSecureAlertsListPage.png["Elenco degli avvisi"]
 
 
 
-== Avviso
+== Attenzione
 
-L'elenco degli avvisi visualizza un grafico che mostra il numero totale di potenziali attacchi e/o avvisi che sono stati generati nell'intervallo di tempo selezionato, seguito da un elenco degli attacchi e/o avvisi che si sono verificati in quell'intervallo di tempo. È possibile modificare l'intervallo di tempo regolando i cursori ora di inizio e ora di fine nel grafico.
+L'elenco degli avvisi visualizza un grafico che mostra il numero totale di potenziali attacchi e/o avvisi emessi nell'intervallo di tempo selezionato, seguito da un elenco degli attacchi e/o avvisi verificatisi in tale intervallo di tempo.  È possibile modificare l'intervallo di tempo regolando i cursori dell'ora di inizio e dell'ora di fine nel grafico.
 
 Per ogni avviso viene visualizzato quanto segue:
 
 *Potenziali attacchi:*
 
-* Il tipo di _potenziale attacco_ (ad esempio ransomware o Sabotage)
-* La data e l'ora in cui il potenziale attacco è stato _rilevato_
-* Il _Stato_ dell'avviso:
+* Il tipo di _Potenziale attacco_ (ad esempio, Ransomware o Sabotaggio)
+* Data e ora in cui è stato rilevato il potenziale attacco
+* Lo _Stato_ dell'avviso:
 +
-** *Nuovo*: Impostazione predefinita per i nuovi avvisi.
-** *In corso*: L'avviso è sotto esame da uno o più membri del team.
-** *Resolved*: L'avviso è stato contrassegnato come risolto da un membro del team.
-** *Respinto*: L'avviso è stato respinto come comportamento falso positivo o previsto.
+** *Nuovo*: questa è l'impostazione predefinita per i nuovi avvisi.
+** *In corso*: l'avviso è in fase di analisi da parte di uno o più membri del team.
+** *Risolto*: l'avviso è stato contrassegnato come risolto da un membro del team.
+** *Ignorato*: l'avviso è stato ignorato come falso positivo o comportamento previsto.
 +
-Un amministratore può modificare lo stato dell'avviso e aggiungere una nota per agevolare l'analisi.
+Un amministratore può modificare lo stato dell'avviso e aggiungere una nota per facilitare l'indagine.
 
 +
-image:CloudSecureChangeAlertStatus.png["Modifica stato avviso"]
+image:CloudSecureChangeAlertStatus.png["Cambia stato di avviso"]
 
 
 
-* L' _utente_ il cui comportamento ha attivato l'avviso
+* L'_Utente_ il cui comportamento ha attivato l'avviso
 * _Prova_ dell'attacco (ad esempio, un gran numero di file è stato crittografato)
-* L' _azione intrapresa_ (ad esempio, è stata scattata una snapshot)
+* L'_azione intrapresa_ (ad esempio, è stata scattata un'istantanea)
 
 
 *Avvertenze:*
 
 * Il _comportamento anomalo_ che ha attivato l'avviso
-* La data e l'ora in cui il comportamento è stato _rilevato_
-* Il _Stato_ dell'avviso (nuovo, in corso, ecc.)
-* L' _utente_ il cui comportamento ha attivato l'avviso
-* Una descrizione di _Change_ (ad esempio, un aumento anomalo dell'accesso al file)
-* L' _azione intrapresa_
+* La data e l'ora in cui il comportamento è stato _Rilevato_
+* Lo _Stato_ dell'avviso (Nuovo, In corso, ecc.)
+* L'_Utente_ il cui comportamento ha attivato l'avviso
+* Una descrizione della _Modifica_ (ad esempio, un aumento anomalo dell'accesso ai file)
+* L'azione intrapresa
 
 
 
 
 == Opzioni filtro
 
-È possibile filtrare gli avvisi in base a quanto segue:
+Puoi filtrare gli avvisi in base a quanto segue:
 
-* Il _Stato_ dell'avviso
+* Lo _Stato_ dell'avviso
 * Testo specifico nella _Nota_
-* Il tipo di _attacchi/Avvertenze_
-* L' _utente_ le cui azioni hanno attivato l'avviso/avviso
+* Il tipo di _Attacchi/Avvisi_
+* L'_Utente_ le cui azioni hanno attivato l'avviso/segnalazione
 
 
 
 
 == La pagina Dettagli avviso
 
-È possibile fare clic su un collegamento di avviso nella pagina dell'elenco degli avvisi per aprire una pagina dei dettagli per l'avviso. I dettagli degli avvisi possono variare in base al tipo di attacco o avviso. Ad esempio, una pagina dei dettagli di un attacco ransomware potrebbe mostrare le seguenti informazioni:
+È possibile fare clic sul collegamento di un avviso nella pagina dell'elenco degli avvisi per aprire una pagina dei dettagli dell'avviso.  I dettagli dell'avviso possono variare a seconda del tipo di attacco o di avviso.  Ad esempio, una pagina dei dettagli di un attacco ransomware potrebbe mostrare le seguenti informazioni:
 
 
 
-=== Sezione riepilogativa:
+=== Sezione riassuntiva:
 
-* Tipo di attacco (ransomware, Sabotage) e ID avviso (assegnato da workload Security)
+* Tipo di attacco (ransomware, sabotaggio) e ID avviso (assegnato da Workload Security)
 * Data e ora in cui è stato rilevato l'attacco
-* Azione intrapresa (ad esempio, è stata eseguita una snapshot automatica. L'ora dell'istantanea viene visualizzata immediatamente sotto la sezione riepilogativa)
-* Stato (nuovo, in corso, ecc.)
+* Azione intrapresa (ad esempio, è stata scattata un'istantanea automatica).  L'ora dello snapshot è mostrata immediatamente sotto la sezione di riepilogo))
+* Stato (Nuovo, In corso, ecc.)
 
 
 
 
-=== Sezione dei risultati degli attacchi:
+=== Sezione Risultati dell'attacco:
 
-* Numero di volumi e file interessati
-* Un riepilogo del rilevamento
+* Conteggio dei volumi e dei file interessati
+* Un riassunto allegato del rilevamento
 * Un grafico che mostra l'attività del file durante l'attacco
 
 
 
 
-=== Sezione utenti correlati:
+=== Sezione Utenti correlati:
 
-Questa sezione mostra i dettagli relativi all'utente coinvolto nel potenziale attacco, incluso un grafico delle attività principali per l'utente.
+Questa sezione mostra i dettagli sull'utente coinvolto nel potenziale attacco, incluso un grafico delle principali attività dell'utente.
 
-Pagina Alert (questo esempio mostra un potenziale attacco ransomware): image:RansomwareAlertExample.png["Esempio di ransomware Alert"]
+Pagina degli avvisi (questo esempio mostra un potenziale attacco ransomware):image:RansomwareAlertExample.png["Esempio di avviso ransomware"]
 
-Pagina dei dettagli (questo esempio mostra un potenziale attacco ransomware): image:RansomwareDetailPageExample.png["Esempio di pagina dettaglio ransomware"]
+Pagina dei dettagli (questo esempio mostra un potenziale attacco ransomware):image:RansomwareDetailPageExample.png["Esempio di pagina dei dettagli del ransomware"]
 
 
 
-== _Eseguire un'azione Snapshot_
+== _Scatta un'istantanea_ Azione
 
-Workload Security protegge i tuoi dati eseguendo automaticamente un'istantanea quando vengono rilevate attività dannose, garantendo un backup sicuro dei tuoi dati.
+Workload Security protegge i tuoi dati eseguendo automaticamente uno snapshot quando viene rilevata un'attività dannosa, garantendo così che i tuoi dati vengano sottoposti a backup in modo sicuro.
 
-Puoi definire link:cs_automated_response_policies.html["policy di risposta automatizzate"] che acquisiscono una snapshot quando viene rilevato un attacco ransomware o un'altra attività anomala dell'utente. È anche possibile acquisire un'istantanea manualmente dalla pagina di avviso.
+Puoi definirelink:cs_automated_response_policies.html["politiche di risposta automatizzate"] che scattano un'istantanea quando viene rilevato un attacco ransomware o altre attività anomale dell'utente.  È anche possibile acquisire manualmente uno snapshot dalla pagina di avviso.
 
-Snapshot automatica acquisita: image:AlertActionsAutomaticExample.png["Schermata Alert Action (azione allarme),1000"]
+Istantanea automatica scattata:image:AlertActionsAutomaticExample.png["Schermata di azione di avviso, 1000"]
 
-Istantanea manuale: image:AlertActionsExample.png["Schermata Alert Action (azione allarme),1000"]
+Istantanea manuale:image:AlertActionsExample.png["Schermata di azione di avviso, 1000"]
 
 
 
 == Notifiche di avviso
 
-Le notifiche e-mail degli avvisi vengono inviate a un elenco di destinatari degli avvisi per ogni azione dell'avviso. Per configurare i destinatari degli avvisi, fare clic su *Admin > Notifiche* e inserire un indirizzo e-mail per ciascun destinatario.
+Le notifiche e-mail degli avvisi vengono inviate a un elenco di destinatari degli avvisi per ogni azione sull'avviso.  Per configurare i destinatari degli avvisi, fare clic su *Amministrazione > Notifiche* e immettere un indirizzo e-mail per ciascun destinatario.
 
 
 
-== Policy di conservazione
+== Politica di conservazione
 
-Gli avvisi e le avvertenze vengono conservati per 13 mesi. Gli avvisi e le avvertenze di età superiore a 13 mesi verranno eliminati. Se si elimina l'ambiente workload Security, vengono eliminati anche tutti i dati associati all'ambiente.
+Gli avvisi e le segnalazioni vengono conservati per 13 mesi.  Gli avvisi e le segnalazioni più vecchi di 13 mesi verranno eliminati.  Se l'ambiente Workload Security viene eliminato, vengono eliminati anche tutti i dati associati all'ambiente.
 
 
 
 == Risoluzione dei problemi
 
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Esiste una situazione in cui ONTAP esegue snapshot orarie al giorno. Le snapshot di workload Security (WS) ne influenzeranno? WS Snapshot prenderà lo snapshot orario? Lo snapshot orario predefinito viene arrestato? | Le snapshot di workload Security non influiscono sulle snapshot orarie. Le snapshot WS non acquisiranno lo spazio orario delle snapshot e questo dovrebbe continuare come prima. Lo snapshot orario predefinito non viene arrestato. 
+| Esiste una situazione in cui ONTAP acquisisce snapshot orari al giorno.  Gli snapshot di Workload Security (WS) avranno ripercussioni?  Lo snapshot WS sostituirà lo snapshot orario?  Lo snapshot orario predefinito verrà interrotto? | Gli snapshot di Workload Security non influiranno sugli snapshot orari.  Gli snapshot WS non occuperanno lo spazio degli snapshot orari e la situazione dovrebbe continuare come prima.  Lo snapshot orario predefinito non verrà interrotto. 
 
 
-| Cosa accade se viene raggiunto il numero massimo di snapshot in ONTAP? | Se viene raggiunto il numero massimo di snapshot, l'acquisizione successiva di Snapshot non riesce e Workload Security visualizza un messaggio di errore che indica che Snapshot è pieno. L'utente deve definire le policy di Snapshot per eliminare le snapshot meno recenti, altrimenti non verranno eseguite. In ONTAP 9.3 e versioni precedenti, un volume può contenere fino a 255 copie Snapshot. In ONTAP 9.4 e versioni successive, un volume può contenere fino a 1023 copie Snapshot. Consultare la documentazione di ONTAP per informazioni su link:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-cmpr-960%2Fvolume__snapshot__autodelete__modify.html["Impostazione del criterio di eliminazione Snapshot"]. 
+| Cosa succede se viene raggiunto il numero massimo di snapshot in ONTAP? | Se viene raggiunto il numero massimo di snapshot, l'acquisizione successiva degli snapshot non riuscirà e Workload Security mostrerà un messaggio di errore che indica che lo snapshot è pieno.  L'utente deve definire criteri di snapshot per eliminare gli snapshot più vecchi, altrimenti gli snapshot non verranno acquisiti.  In ONTAP 9.3 e versioni precedenti, un volume può contenere fino a 255 copie Snapshot.  In ONTAP 9.4 e versioni successive, un volume può contenere fino a 1023 copie Snapshot.  Consultare la documentazione ONTAP per informazioni sulink:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-cmpr-960%2Fvolume__snapshot__autodelete__modify.html["impostazione della politica di eliminazione degli snapshot"] . 
 
 
-| Workload Security non è in grado di acquisire snapshot. | Assicurarsi che il ruolo utilizzato per creare gli snapshot abbia il link: https://docs.NetApp.com/us-en/cloudinsights/task_add_collector_svm.html#a-note-about-permissions[diritti appropriati assegnati]. Assicurarsi che _csrole_ sia creato con i diritti di accesso appropriati per lo snapshot: Ruolo di login di sicurezza create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all 
+| Workload Security non è in grado di acquisire snapshot. | Assicurarsi che il ruolo utilizzato per creare snapshot abbia il collegamento: https://docs.netapp.com/us-en/cloudinsights/task_add_collector_svm.html#a-note-about-permissions [diritti appropriati assegnati].  Assicurarsi che _csrole_ sia stato creato con i diritti di accesso appropriati per l'acquisizione di snapshot: security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all 
 
 
-| Gli snapshot non riescono per gli avvisi precedenti sulle SVM che sono stati rimossi da workload Security e successivamente aggiunti di nuovo. Per i nuovi avvisi che si verificano dopo l'aggiunta di SVM, vengono create delle istantanee. | Si tratta di uno scenario raro. In caso di problemi, accedere a ONTAP e acquisire manualmente le istantanee per gli avvisi precedenti. 
+| Gli snapshot non funzionano per gli avvisi più vecchi sulle SVM che sono state rimosse da Workload Security e successivamente aggiunte di nuovo.  Per i nuovi avvisi che si verificano dopo aver aggiunto nuovamente SVM, vengono creati degli snapshot. | Si tratta di uno scenario raro.  Nel caso in cui si verifichi questo problema, accedere a ONTAP ed eseguire manualmente gli snapshot per gli avvisi più vecchi. 
 
 
-| Nella pagina _Dettagli avviso_, sotto il pulsante _Esegui snapshot_ viene visualizzato il messaggio di errore "ultimo tentativo non riuscito". Passando il mouse sull'errore viene visualizzato il messaggio "Invoke API command has timeout for the data collector with id" (il comando API Invoke è scaduto per il data collector con id). | Questo può accadere quando un data collector viene aggiunto alla sicurezza del carico di lavoro tramite l'IP di gestione SVM, se la LIF della SVM è nello stato _disabled_ in ONTAP. Attivare la LIF specifica in ONTAP e attivare _Take Snapshot Manually_ dalla sicurezza del carico di lavoro. L'azione Snapshot avrà esito positivo. 
+| Nella pagina _Dettagli avviso_, sotto il pulsante _Acquisisci istantanea_ viene visualizzato il messaggio di errore "Ultimo tentativo fallito".  Passando il mouse sopra l'errore viene visualizzato il messaggio "Il comando Invoke API è scaduto per il raccoglitore dati con ID". | Ciò può accadere quando un data collector viene aggiunto a Workload Security tramite SVM Management IP, se il LIF dell'SVM è nello stato _disabilitato_ in ONTAP.  Abilitare il LIF specifico in ONTAP e attivare _Esegui snapshot manualmente_ da Workload Security.  L'azione Snapshot avrà quindi esito positivo. 
 |===

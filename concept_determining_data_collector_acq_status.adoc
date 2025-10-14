@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: concept_determining_data_collector_acq_status.html 
-summary: Stato di acquisizione di Data Collector 
+summary: Stato di acquisizione del Data Collector 
 keywords: collector, acquisition, status 
 ---
-= Determinazione dello stato di acquisizione del data collector
+= Determinazione dello stato di acquisizione del raccoglitore dati
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Poiché i data collector sono la principale fonte di informazioni per Data Infrastructure Insights, è essenziale assicurarsi che rimangano in esecuzione.
+Poiché i raccoglitori di dati sono la fonte primaria di informazioni per Data Infrastructure Insights, è fondamentale assicurarsi che rimangano in esecuzione.
 
-Lo stato del data collector viene visualizzato nell'angolo in alto a destra di qualsiasi pagina asset come messaggio "Acquisited N minutes ago" (acquisito N minuti fa), dove N indica il tempo di acquisizione più recente del data collector dell'asset. Viene visualizzata anche la data e l'ora di acquisizione.
+Lo stato del raccoglitore dati viene visualizzato nell'angolo in alto a destra di qualsiasi pagina di risorsa come messaggio "Acquisito N minuti fa", dove N indica l'ora di acquisizione più recente del/i raccoglitore/i dati della risorsa.  Viene visualizzata anche la data/ora di acquisizione.
 
-Facendo clic sul messaggio viene visualizzata una tabella con il nome del data collector, lo stato e l'ultimo tempo di acquisizione riuscito. Se si effettua l'accesso come amministratore, facendo clic sul collegamento relativo al nome del data collector nella tabella si accede alla pagina dei dettagli del data collector.
+Facendo clic sul messaggio viene visualizzata una tabella con il nome del raccoglitore dati, lo stato e l'ora dell'ultima acquisizione riuscita.  Se hai effettuato l'accesso come amministratore, cliccando sul collegamento del nome del raccoglitore dati nella tabella verrai indirizzato alla pagina dei dettagli di quel raccoglitore dati.

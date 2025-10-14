@@ -2,40 +2,40 @@
 sidebar: sidebar 
 permalink: task_dc_brocade_fc_switch.html 
 keywords: data collector, Brocade, FC switch, 
-summary: Configurazione del data collector degli switch Brocade FC. 
+summary: Configurazione del raccoglitore dati degli switch FC Brocade . 
 ---
-= Data collector per switch Brocade FC
+= Raccoglitore dati Brocade FC Switch
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza l'origine dati SSH (Brocade FC Switch) per rilevare l'inventario dei dispositivi Brocade o per switch con marchio che eseguono il firmware 4,2 e versioni successive del sistema operativo fattoriale (FOS). Sono supportati i dispositivi in entrambe le modalità switch FC e Access Gateway.
+Data Infrastructure Insights utilizza la fonte dati Brocade FC Switch (SSH) per scoprire l'inventario dei dispositivi switch Brocade o rinominati che eseguono il firmware Factored Operating System (FOS) 4.2 e versioni successive.  Sono supportati i dispositivi sia in modalità switch FC che Access Gateway.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector degli switch FC Brocade. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati Brocade FC Switch.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Switch | Switch 
+| Interruttore | Interruttore 
 
 
 | Porta | Porta 
 
 
-| Fabric virtuale, fabric fisico | Fabric 
+| Tessuto virtuale, tessuto fisico | Tessuto 
 
 
 | Zona | Zona 
 
 
-| Switch logico | Switch logico 
+| Interruttore logico | Interruttore logico 
 
 
 | Volume virtuale | Volume 
@@ -43,17 +43,17 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 
 | Zona LSAN | Zona IVR 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-* L'unità di acquisizione di informazioni sull'infrastruttura dati (AU) avvierà connessioni alla porta TCP 22 sugli switch Brocade per raccogliere i dati di inventario. L'AU avvierà inoltre le connessioni alla porta UDP 161 per la raccolta dei dati sulle prestazioni.
-* Deve essere presente una connettività IP a tutti gli switch del fabric. Se si seleziona la casella di controllo rileva tutti gli switch nel fabric, Data Infrastructure Insights identifica tutti gli switch nel fabric; tuttavia, per rilevarli è necessaria la connettività IP a tali switch aggiuntivi.
-* Lo stesso account è necessario a livello globale per tutti gli switch del fabric. È possibile utilizzare putty (emulatore di terminale open source) per confermare l'accesso.
-* Le porte 161 e 162 devono essere aperte per tutti gli switch del fabric per il polling delle prestazioni SNMP.
-* Stringa di comunità di sola lettura SNMP
+* L'unità di acquisizione (AU) Data Infrastructure Insights avvierà le connessioni alla porta TCP 22 sugli switch Brocade per raccogliere i dati di inventario.  L'AU avvierà anche connessioni alla porta UDP 161 per la raccolta dei dati sulle prestazioni.
+* Deve essere presente connettività IP per tutti gli switch nel fabric.  Se selezioni la casella di controllo Scopri tutti gli switch nel fabric, Data Infrastructure Insights identifica tutti gli switch nel fabric; tuttavia, necessita della connettività IP a questi switch aggiuntivi per rilevarli.
+* È necessario lo stesso account a livello globale su tutti gli switch del fabric.  Per confermare l'accesso è possibile utilizzare PuTTY (emulatore di terminale open source).
+* Le porte 161 e 162 devono essere aperte a tutti gli switch nel fabric per il polling delle prestazioni SNMP.
+* Stringa di comunità SNMP di sola lettura
 
 
 
@@ -65,25 +65,25 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| IP dello switch | Indirizzo IP o nome di dominio completo del server EFC 
+| Cambia IP | Indirizzo IP o nome di dominio completo del server EFC 
 
 
-| Nome utente | Nome utente dello switch 
+| Nome utente | Nome utente per lo switch 
 
 
 | Password | Password per lo switch 
 
 
-| SNMP | Versione di SNMP 
+| SNMP | Versione SNMP 
 
 
-| Stringa di comunità SNMP | Stringa di comunità di sola lettura SNMP utilizzata per accedere allo switch 
+| Stringa della comunità SNMP | Stringa di comunità SNMP di sola lettura utilizzata per accedere allo switch 
 
 
 | Nome utente SNMP | Nome utente SNMP 
 
 
-| Password SNMP | Password SNMP 
+| Password SNMP | password SNMP 
 |===
 
 
@@ -94,49 +94,49 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Nome fabric | Nome del fabric che deve essere segnalato dal data collector. Lasciare vuoto per riportare il nome del fabric come WWN. 
+| Nome del tessuto | Nome del tessuto che deve essere segnalato dal raccoglitore dati.  Lasciare vuoto per segnalare il nome del tessuto come WWN. 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 15. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario.  Il valore predefinito è 15. 
 
 
-| Dispositivi esclusi | Elenco separato da virgole degli ID dei dispositivi da escludere dal polling 
+| Dispositivi esclusi | Elenco separato da virgole degli ID dispositivo da escludere dal polling 
 
 
-| Domini amministrativi attivi | Selezionare se si utilizzano i domini di amministrazione 
+| Domini amministrativi attivi | Selezionare se si utilizzano domini amministrativi 
 
 
-| Recuperare i dati MPR | Selezionare questa opzione per acquisire i dati di routing dal router multiprotocollo. 
+| Recupera i dati MPR | Selezionare per acquisire i dati di routing dal router multiprotocollo. 
 
 
-| Attivare il trapping | Selezionare questa opzione per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo. Se si seleziona enable trapping (attiva trap), è necessario attivare anche SNMP. 
+| Abilita Trapping | Selezionare per abilitare l'acquisizione alla ricezione di una trap SNMP dal dispositivo.  Se si seleziona Abilita trapping, è necessario attivare anche SNMP. 
 
 
-| Tempo minimo tra trap (sec) | Tempo minimo tra i tentativi di acquisizione attivati dalle trap. Il valore predefinito è 10. 
+| Tempo minimo tra le trappole (sec) | Tempo minimo tra i tentativi di acquisizione attivati dalle trappole.  Il valore predefinito è 10. 
 
 
-| Scopri tutti gli switch del fabric | Selezionare per rilevare tutti gli switch nel fabric 
+| Scopri tutti gli interruttori nel tessuto | Seleziona per scoprire tutti gli switch nel fabric 
 
 
-| Scegliere tra HBA e alias zona | Scegliere se favorire gli alias HBA o di zona 
+| Scegli di preferire HBA rispetto agli alias di zona | Scegli se favorire gli alias HBA o di zona 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni.  Il valore predefinito è 300. 
 
 
-| Protocollo SNMP Auth | Protocollo di autenticazione SNMP (solo SNMP v3) 
+| Protocollo di autenticazione SNMP | Protocollo di autenticazione SNMP (solo SNMP v3) 
 
 
-| Password per la privacy SNMP | Password per la privacy SNMP (solo SNMP v3) 
+| Password di privacy SNMP | Password di privacy SNMP (solo SNMP v3) 
 
 
-| Tentativi SNMP | Numero di tentativi SNMP 
+| Tentativi SNMP | Numero di tentativi di ripetizione SNMP 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -144,47 +144,47 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| L'acquisizione dell'inventario dell'origine dati Brocade non riesce e viene visualizzato l'errore: ERRORE <date> <time> [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] errore 2 su 2: <datasource name> [errore interno] - Impossibile generare il modello per Device <IP>. Richiesta di rilevamento degli errori ([Device name <name>]): Impossibile generare il modello per Device <IP>. Richiesta di rilevamento degli errori) | Il problema potrebbe essere causato quando lo switch Brocade impiega troppo tempo per tornare con un prompt, superando il timeout predefinito di 5 secondi. Nelle impostazioni di configurazione avanzata del data collector in Data Infrastructure Insights, provare ad aumentare il valore _SSH Banner Wait Timeout (sec)_. 
+| L'acquisizione dell'inventario della sorgente dati Brocade non riesce con l'errore: <data> <ora> ERRORE [com.onaro.sanscreen.acquisition.framework.datasource.BaseDataSource] Errore 2 su 2: <nome sorgente dati> [Errore interno] - Impossibile generare il modello per il dispositivo <IP>.  Errore durante il rilevamento del prompt ([Nome dispositivo <nome>]: Impossibile generare il modello per il dispositivo <IP>.  Errore durante il rilevamento del prompt) | Il problema potrebbe verificarsi quando lo switch Brocade impiega troppo tempo per rispondere a un prompt, superando il timeout predefinito di 5 secondi.  Nelle impostazioni di Configurazione avanzata del raccoglitore dati in Data Infrastructure Insights, prova ad aumentare il valore di _Timeout di attesa banner SSH (sec)_ a un valore più alto. 
 
 
-| Errore: "Il Data Infrastructure Insights ha ricevuto un ruolo di telaio non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione per il ruolo dello chassis. 
+| Errore: "Data Infrastructure Insights ha ricevuto un ruolo chassis non valido" | Verificare che all'utente configurato in questa origine dati sia stata concessa l'autorizzazione al ruolo chassis. 
 
 
-| Errore: "Indirizzo IP chassis non corrispondente" | In generale, DII NON supporta la traduzione degli indirizzi di rete (NAT) o la traduzione degli indirizzi di porta (PAT) tra l'unità di acquisizione e i dispositivi. DII potrebbe rilevare che il nome host/indirizzo IP nella configurazione del collettore NON corrisponde a nessuno degli indirizzi che il dispositivo ritiene di avere. 
+| Errore: "Indirizzo IP dello chassis non corrispondente" | Di norma, DII NON supporta la traduzione degli indirizzi di rete o la traduzione degli indirizzi di porta tra l'unità di acquisizione e i dispositivi.  DII potrebbe rilevare che il nome host/indirizzo IP nella configurazione del collettore NON corrisponde a nessuno degli indirizzi che il dispositivo ritiene di avere. 
 
 
-| Viene visualizzato un messaggio che indica che più di un nodo è connesso alla porta Access Gateway | Verificare che il dispositivo NPV funzioni correttamente e che siano presenti tutti i WWN collegati. Non acquisire direttamente il dispositivo NPV. Invece, l'acquisizione dello switch fabric core raccoglierà i dati del dispositivo NPV. 
+| Ricevi un messaggio che indica che più di un nodo è connesso alla porta Access Gateway | Verificare che il dispositivo NPV funzioni correttamente e che tutti i WWN collegati siano previsti.  Non acquistare direttamente il dispositivo NPV.  Invece, l'acquisizione dello switch core fabric raccoglierà i dati del dispositivo NPV. 
 
 
-| Errore: ....Numero massimo di sessioni remote per l'accesso... | FOS ha limiti diversi per il numero di sessioni SSH simultanee supportate per ruolo utente. La sessione SSH di DII verso questo dispositivo viene rifiutata all'accesso per violazione di tali limiti. Questo potrebbe indicare che collettori duplicati stanno scoprendo la stessa risorsa, il che dovrebbe essere evitato. 
+| Errore: ....Numero massimo di sessioni remote per l'accesso... | FOS ha limiti diversi per il numero di sessioni SSH contemporanee supportate per ruolo utente.  La sessione SSH di DII su questo dispositivo viene rifiutata all'accesso perché viola tali limiti.  Questo può essere un segnale che dei collezionisti duplicatori stanno scoprendo lo stesso bene, cosa che dovrebbe essere evitata 
 |===
 
 
-=== Performance
+=== Prestazione
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| La raccolta delle prestazioni non riesce e viene visualizzato il messaggio "Timed out during sending SNMP request". | A seconda delle variabili di query e della configurazione dello switch, alcune query potrebbero superare il timeout predefinito. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Scopri di più"] . 
+| La raccolta delle prestazioni non riesce con "Timeout durante l'invio della richiesta SNMP". | A seconda delle variabili di query e della configurazione dello switch, alcune query potrebbero superare il timeout predefinito. link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Data_Infrastructure_Insights_Brocade_data_source_fails_performance_collection_with_a_timeout_due_to_default_SNMP_configuration["Saperne di più"] . 
 
 
-| La raccolta delle prestazioni non riesce con ...Righe duplicate trovate nella tabella SNMP... | DII ha rilevato risposte SNMP errate. Probabilmente stai utilizzando FOS 8.2.3e. Aggiorna a 8.2.3e2 o versione successiva. 
+| La raccolta delle prestazioni non riesce con ...Righe duplicate trovate nella tabella SNMP... | DII ha rilevato risposte SNMP errate.  Probabilmente stai utilizzando FOS 8.2.3e.  Aggiorna alla versione 8.2.3e2 o successiva. 
 
 
-| La raccolta delle prestazioni fallisce con ...Nome utente sconosciuto... | Hai configurato il tuo raccoglitore DII con un valore "Nome utente SNMP" che non è presente in uno degli slot utente SNMPv3. La semplice creazione di un utente su Brocade FOS NON lo abilita necessariamente come utente SNMPv3: è necessario inserirlo in uno degli slot utente v3. 
+| La raccolta delle prestazioni non riesce con ...Nome utente sconosciuto... | Hai configurato il tuo raccoglitore DII con un valore "Nome utente SNMP" che non è inserito in uno degli slot utente SNMPv3.  La semplice creazione di un utente su Brocade FOS NON lo abilita necessariamente come utente SNMPv3: è necessario inserirlo in uno degli slot utente v3. 
 
 
-| La raccolta delle prestazioni fallisce con ...Livello di sicurezza non supportato... | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3, ma con impostazioni di crittografia (ovvero privacy) e/o di autorizzazione non abilitate sul dispositivo in questione. 
+| Le raccolte di prestazioni non riescono con ...Livello di sicurezza non supportato... | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3, ma con impostazioni di crittografia (ovvero privacy) e/o di autorizzazione non abilitate sul dispositivo in questione. 
 
 
-| La raccolta delle prestazioni fallisce con ...La password di privacy vuota è consentita solo per il protocollo di privacy NESSUNO | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3, con un protocollo di crittografia noto anche come protocollo di privacy (AES, ecc.), ma hai un valore "SNMP Privacy Password" vuoto, quindi DII non può negoziare flussi di dati SNMPv3 crittografati con questo dispositivo 
+| La raccolta delle prestazioni non riesce con ...La password di privacy vuota è consentita solo per il protocollo di privacy NESSUNO | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3, con un protocollo di crittografia noto anche come protocollo di privacy (AES, ecc.), ma hai un valore "SNMP Privacy Password" vuoto, quindi DII non può negoziare flussi di dati SNMPv3 crittografati con questo dispositivo 
 
 
-| La raccolta delle prestazioni fallisce con .....VF:nn, errore: nessun accesso... | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3 su un dispositivo con più Virtual Fabric abilitati, ma l'utente SNMPv3 NON dispone dei diritti per VF NN. DII non supporta il rilevamento parziale di una risorsa fisica: dovresti sempre concedere a DII l'accesso a tutti i 128 VF possibili in modo proattivo, poiché DII tenterà sempre di recuperare i dati sulle prestazioni per qualsiasi VF esistente su un dato dispositivo fisico. 
+| La raccolta delle prestazioni fallisce con .....VF:nn, errore: nessun accesso... | Hai configurato il tuo raccoglitore DII per utilizzare SNMPv3 su un dispositivo con più Virtual Fabric abilitati, ma l'utente SNMPv3 NON ha diritti per VF NN.  DII non supporta la scoperta parziale di una risorsa fisica: dovresti sempre concedere a DII l'accesso a tutti i 128 VF possibili in modo proattivo, poiché DII tenterà sempre di recuperare i dati sulle prestazioni per qualsiasi VF esistente su un dato dispositivo fisico. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

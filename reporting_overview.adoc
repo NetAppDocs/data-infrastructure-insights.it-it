@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reporting_overview.html 
-summary: Reporting pre-definito e personalizzato dei dati con Data Infrastructure Insights. 
+summary: Report predefiniti e personalizzati dei tuoi dati con Data Infrastructure Insights. 
 keywords: reporting, cognos, data warehouse, dwh 
 ---
-= Panoramica dei report di approfondimento sull'infrastruttura dati
+= Panoramica dei report di Data Infrastructure Insights Insights
 :hardbreaks:
 :allow-uri-read: 
 
@@ -13,46 +13,46 @@ keywords: reporting, cognos, data warehouse, dwh
 Il reporting di Data Infrastructure Insights è uno strumento di business intelligence che consente di visualizzare report predefiniti o di creare report personalizzati.
 
 
-NOTE: La funzione di creazione di report è disponibile in Data Infrastructure Insights link:concept_subscribing_to_cloud_insights.html["Premium Edition"]. La disponibilità della funzionalità di reporting è soggetta a un requisito di ingombro minimo. link:https://www.netapp.com/forms/cloud-insights-contact-us/["Contatta il tuo rappresentante commerciale NetApp"] per maggiori informazioni.
+NOTE: La funzionalità di reporting è disponibile in Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Edizione Premium"] .  La disponibilità della funzionalità di reporting è soggetta a un requisito di ingombro minimo. link:https://www.netapp.com/forms/cloud-insights-contact-us/["Contatta il tuo rappresentante commerciale NetApp"] per maggiori informazioni.
 
-Il reporting Data Infrastructure Insights ti consente di eseguire le seguenti attività:
+Con i report di Data Infrastructure Insights puoi svolgere le seguenti attività:
 
-* Eseguire un report predefinito
-* Creare un report personalizzato
-* Personalizzare il formato e il metodo di consegna di un report
-* Pianificare l'esecuzione automatica dei report
-* Invia report via email
+* Esegui un report predefinito
+* Crea un report personalizzato
+* Personalizza il formato e il metodo di consegna di un report
+* Pianifica l'esecuzione automatica dei report
+* Rapporti via e-mail
 * Utilizzare i colori per rappresentare le soglie sui dati
 
 
-I report di Data Infrastructure Insights possono generare report personalizzati per aree come il chargeback, l'analisi del consumo e le previsioni e possono aiutare a rispondere a domande come le seguenti:
+Data Infrastructure Insights Reporting può generare report personalizzati per aree quali chargeback, analisi dei consumi e previsioni e può aiutare a rispondere a domande come le seguenti:
 
-* Di quale inventario dispongo?
+* Che inventario ho?
 * Dov'è il mio inventario?
-* Chi utilizza le nostre risorse?
-* Qual è il chargeback per lo storage allocato per una business unit?
-* Per quanto tempo è necessario acquisire ulteriore capacità di storage?
-* Le business unit sono allineate lungo i livelli di storage appropriati?
-* Come cambia l'allocazione dello storage in un mese, un quarto o un anno?
+* Chi utilizza i nostri beni?
+* A cosa si riferisce il chargeback per lo spazio di archiviazione assegnato a un'unità aziendale?
+* Quanto tempo ci vorrà prima che io abbia bisogno di acquisire ulteriore capacità di archiviazione?
+* Le unità aziendali sono allineate lungo i livelli di archiviazione appropriati?
+* Come cambia l'allocazione dello spazio di archiviazione nel corso di un mese, un trimestre o un anno?
 
 
 
 
-== Accesso ai report di approfondimento sull'infrastruttura dati
+== Accesso ai report Data Infrastructure Insights
 
-È possibile accedere a Data Infrastructure Insights Reporting facendo clic sul collegamento *Reports* nel menu.
+È possibile accedere a Data Infrastructure Insights Reporting facendo clic sul collegamento *Report* nel menu.
 
-Viene quindi utilizzata l'interfaccia di reporting. Data Infrastructure Insights utilizza IBM Cognos Analytics per il proprio motore di reporting.
+Verrai indirizzato all'interfaccia di reporting.  Data Infrastructure Insights utilizza IBM Cognos Analytics per il suo motore di reporting.
 
 
 
 == Che cos'è ETL?
 
-Quando si lavora con Reporting, si sentiranno i termini "Data Warehouse" e "ETL". ETL sta per "Estrai, trasforma e carica". Il processo ETL recupera i dati raccolti in Data Infrastructure Insights e trasforma i dati in un formato da utilizzare in Reporting. Per "Data Warehouse" si intendono i dati raccolti disponibili per il reporting.
+Quando si lavora con la creazione di report, si sentiranno i termini "Data Warehouse" ed "ETL".  ETL è l'acronimo di "Extract, Transform, and Load".  Il processo ETL recupera i dati raccolti in Data Infrastructure Insights e li trasforma in un formato utilizzabile nella creazione di report.  Per "Data Warehouse" si intendono i dati raccolti disponibili per la creazione di report.
 
-Il processo ETL include i seguenti processi:
+Il processo ETL comprende i seguenti processi individuali:
 
-* *Estrai*: Prende i dati da Data Infrastructure Insights.
-* *Transform*: Applica regole o funzioni di logica aziendale ai dati così come vengono estratti da Data Infrastructure Insights.
-* *Load*: Consente di salvare i dati trasformati nel data warehouse per utilizzarli in Reporting.
+* *Estratto*: estrae i dati da Data Infrastructure Insights.
+* *Trasforma*: applica regole o funzioni logiche aziendali ai dati così come vengono estratti da Data Infrastructure Insights.
+* *Carica*: salva i dati trasformati nel data warehouse per utilizzarli nella creazione di report.
 

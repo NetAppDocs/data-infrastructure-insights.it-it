@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: task_dc_lenovo.html 
 keywords: data collector,Lenovo, HX Series 
-summary: Configurazione di Lenovo data collector. 
+summary: Configurazione del raccoglitore dati Lenovo. 
 ---
-= Data collector Lenovo
+= Raccoglitore dati Lenovo
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector Lenovo per rilevare i dati di inventario e relativi alle performance dei sistemi di storage Lenovo HX.
+Data Infrastructure Insights utilizza il raccoglitore dati Lenovo per scoprire dati di inventario e prestazioni per i sistemi di storage Lenovo HX.
 
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-* Indirizzo IP esterno PRISM
+* Indirizzo IP esterno Prism
 * Nome utente e password dell'amministratore
-* Requisiti della porta TCP: 9440
+* Porta TCP richiesta: 9440
 
 
 
@@ -32,13 +32,13 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Indirizzo IP esterno PRISM | L'indirizzo IP dei servizi dati esterni per il cluster 
+| Indirizzo IP esterno Prism | L'indirizzo IP dei servizi dati esterni per il cluster 
 
 
-| Nome utente | Nome utente per l'account Admin 
+| Nome utente | Nome utente per l'account amministratore 
 
 
-| Password | Password per l'account Admin 
+| Password | Password per l'account amministratore 
 |===
 
 
@@ -49,16 +49,16 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Porta TCP | Porta TCP utilizzata per la connessione all'array. Il valore predefinito è 9440. 
+| porta TCP | Porta TCP utilizzata per connettersi all'array.  Il valore predefinito è 9440. 
 
 
-| Intervallo di polling dell'inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 60 minuti. 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio delle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

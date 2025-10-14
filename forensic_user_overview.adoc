@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: forensic_user_overview.html 
 keywords: Forensic, user, user, activity 
-summary: 'dettagli forensi per l"utente' 
+summary: dettaglio utente forense 
 ---
-= Panoramica dell'utente legale
+= Panoramica utente forense
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,17 +14,17 @@ summary: 'dettagli forensi per l"utente'
 
 
 [role="lead"]
-Le informazioni per ciascun utente sono fornite nella Panoramica utente. Utilizzare queste viste per comprendere le caratteristiche dell'utente, le entità associate e le attività recenti.
+Le informazioni per ciascun utente sono fornite nella Panoramica utente.  Utilizzare queste visualizzazioni per comprendere le caratteristiche degli utenti, le entità associate e le attività recenti.
 
 
 
 == Profilo utente
 
-Le informazioni del profilo utente includono le informazioni di contatto e la posizione dell'utente. Il profilo fornisce le seguenti informazioni:
+Le informazioni del profilo utente includono le informazioni di contatto e la posizione dell'utente.  Il profilo fornisce le seguenti informazioni:
 
 * Nome dell'utente
-* Indirizzo e-mail dell'utente
-* Manager dell'utente
+* Indirizzo email dell'utente
+* Responsabile dell'utente
 * Contatto telefonico per l'utente
 * Posizione dell'utente
 
@@ -33,18 +33,18 @@ Le informazioni del profilo utente includono le informazioni di contatto e la po
 
 == Comportamento dell'utente
 
-Le informazioni sul comportamento dell'utente identificano le attività e le operazioni recenti eseguite dall'utente. Queste informazioni includono:
+Le informazioni sul comportamento dell'utente identificano le attività e le operazioni recenti eseguite dall'utente.  Queste informazioni includono:
 
-* Attività recente
+* Attività recenti
 +
-** Ultima posizione di accesso
+** Ultimo luogo di accesso
 ** Grafico delle attività
 ** Avvisi
 
 
 
 
-* Operazioni per gli ultimi sette giorni
+* Operazioni degli ultimi sette giorni
 +
 ** Numero di operazioni
 
@@ -53,12 +53,12 @@ Le informazioni sul comportamento dell'utente identificano le attività e le ope
 
 
 
-== Intervallo di refresh
+== Intervallo di aggiornamento
 
-L'elenco utenti viene aggiornato ogni 12 ore.
+L'elenco degli utenti viene aggiornato ogni 12 ore.
 
 
 
-== Policy di conservazione
+== Politica di conservazione
 
-Se non viene aggiornato nuovamente, l'elenco utenti viene conservato per 13 mesi. Dopo 13 mesi, i dati verranno cancellati. Se l'ambiente workload Security viene cancellato, tutti i dati associati all'ambiente vengono cancellati.
+Se non viene aggiornato nuovamente, l'elenco degli utenti viene conservato per 13 mesi.  Dopo 13 mesi i dati verranno cancellati.  Se l'ambiente Workload Security viene eliminato, tutti i dati associati all'ambiente vengono eliminati.

@@ -2,57 +2,57 @@
 sidebar: sidebar 
 permalink: task_dc_ibm_powervm.html 
 keywords: IBM, powerVM, 
-summary: Configurazione di IBM PowerVM Data Collector. 
+summary: Configurazione del raccoglitore dati IBM PowerVM. 
 ---
-= Configurazione del data collector IBM PowerVM
+= Configurazione del raccoglitore dati IBM PowerVM
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector IBM PowerVM (SSH) viene utilizzato per raccogliere informazioni sulle partizioni virtuali in esecuzione sulle istanze hardware IBM POWER gestite da una console di gestione hardware (HMC).
+Il raccoglitore dati IBM PowerVM (SSH) viene utilizzato per raccogliere informazioni sulle partizioni virtuali in esecuzione su istanze hardware IBM POWER gestite da una console di gestione hardware (HMC).
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le informazioni di inventario dalle partizioni virtuali in esecuzione sulle istanze hardware IBM POWER. Per ogni tipo di risorsa acquisita, viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce informazioni di inventario dalle partizioni virtuali in esecuzione sulle istanze hardware IBM POWER.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per l'asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| hdisk | Disco virtuale 
+| disco rigido | Disco virtuale 
 
 
-| Sistema gestito | Host 
+| Sistema gestito | Ospite 
 
 
-| Server LPAR, VIO | Macchina virtuale 
+| LPAR, server VIO | Macchina virtuale 
 
 
-| Gruppo di volumi | Data Store 
+| Gruppo di volumi | Archivio dati 
 
 
 | Volume fisico | LUN 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Per configurare e utilizzare questo data collector devono essere soddisfatti i seguenti requisiti:
+Per configurare e utilizzare questo raccoglitore dati è necessario soddisfare i seguenti requisiti:
 
-* Indirizzo IP della console di gestione hardware (HMC)
-* Nome utente e password che consentono di accedere a hardware Management Console (HMC) tramite SSH
-* Requisito di porta SSH-22
-* Visualizzare l'autorizzazione su tutti i sistemi di gestione e i domini di protezione delle partizioni logiche
+* Indirizzo IP della Hardware Management Console (HMC)
+* Nome utente e password che consentono l'accesso alla Hardware Management Console (HMC) tramite SSH
+* Requisito porta SSH-22
+* Visualizza l'autorizzazione su tutti i sistemi di gestione e sui domini di sicurezza delle partizioni logiche
 +
-L'utente deve anche disporre dell'autorizzazione View per le configurazioni HMC e della capacità di raccogliere le informazioni VPD per il raggruppamento di sicurezza della console HMC. L'utente deve anche essere autorizzato all'accesso a Virtual io Server Command nel gruppo di protezione partizione logica. È consigliabile iniziare da un ruolo di operatore e rimuovere tutti i ruoli. Gli utenti di sola lettura su HMC non dispongono dei privilegi necessari per eseguire i comandi proxy sugli host AIX.
+L'utente deve inoltre disporre dell'autorizzazione di visualizzazione sulle configurazioni HMC e della possibilità di raccogliere informazioni VPD per il raggruppamento di sicurezza della console HMC.  All'utente deve inoltre essere consentito l'accesso al comando Virtual IO Server nel raggruppamento di sicurezza Partizione logica.  È buona norma iniziare dal ruolo di operatore e poi rimuovere tutti i ruoli.  Gli utenti di sola lettura sull'HMC non hanno privilegi per eseguire comandi proxy sugli host AIX.
 
-* La Best practice di IBM consiste nel fare in modo che i dispositivi siano monitorati da due o più HMCS. Tenere presente che questo potrebbe causare la segnalazione di dispositivi duplicati da parte di OnCommand Insight, pertanto si consiglia vivamente di aggiungere dispositivi ridondanti all'elenco "Escludi dispositivi" nella configurazione avanzata per questo data collector.
+* La best practice di IBM prevede che i dispositivi siano monitorati da due o più HMC.  Tieni presente che ciò potrebbe far sì che OnCommand Insight segnali dispositivi duplicati, pertanto è altamente consigliato aggiungere dispositivi ridondanti all'elenco "Escludi dispositivi" nella Configurazione avanzata per questo raccoglitore dati.
 
 
 
@@ -64,10 +64,10 @@ L'utente deve anche disporre dell'autorizzazione View per le configurazioni HMC 
 | Campo | Descrizione 
 
 
-| Indirizzo IP della console di gestione hardware (HMC) | Indirizzo IP o nome di dominio completo della console di gestione hardware PowerVM 
+| Indirizzo IP della console di gestione hardware (HMC) | Indirizzo IP o nome di dominio completo della PowerVM Hardware Management Console 
 
 
-| Utente HMC | Nome utente della console di gestione hardware 
+| Utente HMC | Nome utente per la console di gestione hardware 
 
 
 | Password | Password utilizzata per la console di gestione hardware 
@@ -81,7 +81,7 @@ L'utente deve anche disporre dell'autorizzazione View per le configurazioni HMC 
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 20 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20 minuti. 
 
 
 | Porta SSH | Porta utilizzata per SSH su PowerVM 
@@ -90,13 +90,13 @@ L'utente deve anche disporre dell'autorizzazione View per le configurazioni HMC 
 | Password | Password utilizzata per la console di gestione hardware 
 
 
-| Numero di tentativi | Numero di tentativi di inventario 
+| Numero di tentativi | Numero di tentativi di ripetizione dell'inventario 
 
 
-| Escludi dispositivi | Elenco separato da virgole degli ID dei dispositivi o dei nomi visualizzati da escludere 
+| Escludi dispositivi | Elenco separato da virgole di ID dispositivo o nomi visualizzati da escludere 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

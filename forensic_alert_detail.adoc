@@ -2,51 +2,51 @@
 sidebar: sidebar 
 permalink: forensic_alert_detail.html 
 keywords: alert, Critical, Warning, Low, alert detail Synopsis, Time range, Start time, End time, user 
-summary: dettagli degli avvisi 
+summary: 'dettagli dell"avviso' 
 ---
-= Dettagli avviso
+= Dettagli dell'avviso
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Facendo clic sulla sinossi di un avviso, viene visualizzata la pagina contenente informazioni dettagliate per l'utente e l'avviso generato.
+Facendo clic sulla sinossi di un avviso si apre la pagina che fornisce informazioni dettagliate sull'utente e sull'avviso che ha generato.
 
 
 
-== La pagina Dettagli avviso visualizza l'utente
+== La pagina Dettagli avviso mostra l'utente
 
-Alert Details (Dettagli avviso) fornisce informazioni relative all'avviso selezionato nella pagina Alerts (Avvisi).
+Dettagli avviso fornisce informazioni sull'avviso selezionato nella pagina Avvisi.
 
-* La severità dell'avviso
+* La gravità dell'allerta
 * L'utente che ha generato l'avviso e il tipo di avviso:
 +
 ** Accesso anomalo da parte dell'utente
-** Accesso anomalo per community
-** Accesso anomalo da parte dell'utente nella community
-** L'utente si è Unito a molte community
+** Accesso anomalo da parte della comunità
+** Accesso anomalo da parte dell'utente nella comunità
+** L'utente si è unito a molte comunità
 
 
 * Data e ora in cui è stato rilevato l'avviso
 * L'azione intrapresa
 +
-** Messo in quarantena
+** In quarantena
 ** Altro
 ** Altro
 
 
-* Lo stato dell'avviso
+* Lo stato dell'allerta
 +
-** Novità
+** Nuovo
 ** In corso
-** Respinto
+** Licenziato
 ** Risolto
 
 
-* Modifica del tasso di attività dell'utente
+* Variazione del tasso di attività dell'utente
 +
-** Attività tipiche all'ora
-** Attività all'ora in cui è stato generato l'avviso.
+** Attività tipiche orarie
+** Attività orarie al momento dell'attivazione dell'allerta.
 ** Percentuale di variazione del tasso che ha causato l'avviso.
 
 
@@ -58,8 +58,8 @@ Alert Details (Dettagli avviso) fornisce informazioni relative all'avviso selezi
 === Utente correlato
 
 * Nome utente e titolo
-* Reparto
-* E-mail con un link all'indirizzo e-mail
+* Dipartimento
+* E-mail con un collegamento all'indirizzo e-mail
 * Manager
 * Telefono
 * Posizione
@@ -69,11 +69,11 @@ Alert Details (Dettagli avviso) fornisce informazioni relative all'avviso selezi
 
 === Attività
 
-Mostra l'attività dell'utente per gli ultimi 7 giorni e l'ultima posizione da cui l'utente ha effettuato l'accesso.
+Mostra l'attività dell'utente negli ultimi 7 giorni e l'ultima posizione da cui l'utente ha effettuato l'accesso.
 
 * Attività:
 +
-** Leggi
+** Leggere
 ** Altro
 ** Creare
 
@@ -82,4 +82,4 @@ Mostra l'attività dell'utente per gli ultimi 7 giorni e l'ultima posizione da c
 * Numero totale di attività negli ultimi 7 giorni.
 
 
-Fare clic su *Visualizza dettaglio attività* per accedere al link:forensic_activity_history["Cronologia delle attività"] dell'utente in esame.
+Fare clic su *Visualizza dettagli attività* per accederelink:forensic_activity_history["Cronologia delle attività"] dell'utente esaminato.

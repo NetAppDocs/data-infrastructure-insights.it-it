@@ -2,53 +2,53 @@
 sidebar: sidebar 
 permalink: task_dc_pure_flashblade.html 
 keywords: data collector, Pure Storage, pure, FlashBlade 
-summary: Configurazione di pure Storage Data Collector. 
+summary: Configurazione del raccoglitore dati Pure Storage. 
 ---
-= Pure Storage FlashBlade Data Collector
+= Raccoglitore dati Pure Storage FlashBlade
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector di pure Storage FlashBlade per raccogliere dati di inventario e relativi alle performance dai cluster FlashBlade che espongono la versione 2 delle proprie API REST
+Data Infrastructure Insights utilizza il raccoglitore dati Pure Storage FlashBlade per raccogliere dati di inventario e prestazioni dai cluster FlashBlade che espongono la versione 2 della loro API REST
 
 
 
 == Terminologia
 
-Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per la risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per la risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Disco (SSD) | Disco 
+| Unità (SSD) | Disco 
 
 
-| Array | Storage 
+| Vettore | Magazzinaggio 
 
 
-| Lama | Nodo di storage 
+| Lama | Nodo di archiviazione 
 
 
-| File System | Volume interno 
+| Sistema di file | Volume interno 
 
 
-| Bucket dello storage a oggetti | Qtree 
+| Bucket di archiviazione degli oggetti | Qtree 
 
 
-| Iniziatore, destinazione | Maschera di volume 
+| Iniziatore, bersaglio | Maschera del volume 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
 * Indirizzo IP del sistema di archiviazione o nome di dominio completo
-* Token API, idealmente con una durata infinita. Un utente di livello di sola lettura dovrebbe essere sufficiente.
-* Requisito della porta: HTTPS 443
+* Token API, idealmente con durata infinita.  Dovrebbe essere sufficiente un utente con livello di sola lettura.
+* Requisito porta: HTTPS 443
 
 
 
@@ -60,10 +60,10 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Indirizzo IP host FlashBlade | Indirizzo IP del sistema di storage 
+| Indirizzo IP host FlashBlade | Indirizzo IP del sistema di archiviazione 
 
 
-| Nome utente | Nome utente per aiutare gli amministratori di Data Infrastructure Insights a ricordare a quale utente appartiene il token API 
+| Nome utente | Nome utente per aiutare gli amministratori Data Infrastructure Insights a ricordare a quale utente appartiene il loro token API 
 
 
 | Token API | Token API 
@@ -77,22 +77,22 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 | Campo | Descrizione 
 
 
-| Tipo di connessione | Scegliere HTTP o HTTPS. Visualizza anche la porta predefinita. 
+| Tipo di connessione | Scegli HTTP o HTTPS.  Visualizza anche la porta predefinita. 
 
 
-| Eseguire l'override della porta TCP | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+| Sostituisci la porta TCP | Se vuoto, utilizzare la porta predefinita nel campo Tipo di connessione, altrimenti immettere la porta di connessione da utilizzare 
 
 
-| Intervallo di polling dell'inventario (min) | L'impostazione predefinita è 60 minuti 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60 minuti 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 300 
+| Intervallo di sondaggio sulle prestazioni (sec) | Il valore predefinito è 300 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -100,9 +100,9 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| "Credenziali di accesso non valide" con messaggi di errore "la policy non consente" o "non sei autorizzato" | Convalidare l'account utente e la password pure tramite l'interfaccia pure http 
+| "Credenziali di accesso non valide" con messaggi di errore "La policy non consente" o "Non sei autorizzato" | Convalida l'account utente e la password Pure tramite l'interfaccia http Pure 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

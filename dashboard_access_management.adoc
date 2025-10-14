@@ -1,26 +1,26 @@
 ---
 sidebar: sidebar 
 permalink: dashboard_access_management.html 
-summary: Si determina se un dashboard creato è pubblico o privato. 
+summary: Puoi stabilire se la dashboard che crei è pubblica o privata. 
 keywords: dashboard, public, shared, private 
 ---
-= Gestione degli accessi tramite dashboard
+= Gestione degli accessi alla dashboard
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-Data Infrastructure Insights ti offre ora un maggiore controllo sull'accesso alle dashboard create. È possibile scegliere chi può modificare i grafici. L'utente controlla l'esposizione a informazioni potenzialmente riservate. Mantenere un dashboard privato consente di finalizzare le visualizzazioni fino a quando non sono pronte ad essere consumate da altri all'interno dell'organizzazione.
+Data Infrastructure Insights ora ti offre un maggiore controllo sull'accesso alle dashboard che crei.  Puoi scegliere chi può modificare i tuoi grafici.  Puoi controllare l'esposizione a informazioni potenzialmente sensibili.  Mantenere una dashboard privata ti consente di finalizzare le tue visualizzazioni finché non saranno pronte per essere utilizzate da altri nella tua organizzazione.
 
-image:Dashboard_Sharing_Options.png["opzioni di condivisione dashboard, larghezza=300"]
+image:Dashboard_Sharing_Options.png["opzioni di condivisione della dashboard, larghezza=300"]
 
-Per impostazione predefinita, quando si crea una nuova dashboard, tale dashboard è visibile solo all'utente, il creatore. Nessun altro utente può visualizzare o modificare il dashboard.
+Per impostazione predefinita, quando crei una nuova dashboard, questa è visibile solo a te, il creatore.  Nessun altro utente può vedere o modificare la dashboard.
 
-Una volta completata la finalizzazione del dashboard, è possibile scegliere di consentire ad altri utenti dell'organizzazione di visualizzarlo. Per condividere un dashboard, nell'elenco del dashboard, seleziona _Share_ dal menu di destra.
+Una volta completata la dashboard, puoi scegliere di consentire ad altri membri della tua organizzazione di visualizzarla.  Per condividere una dashboard, nell'elenco delle dashboard, seleziona _Condividi_ dal menu a destra.
 
-image:dashboard_access_share_menu.png["accesso alla condivisione del dashboard dal menu"]
+image:dashboard_access_share_menu.png["condivisione dell'accesso alla dashboard dal menu"]
 
-È possibile scegliere di condividere il dashboard a tutti o di selezionare gli utenti, con autorizzazioni Modifica o sola lettura.
+Puoi scegliere di condividere la dashboard con tutti o di selezionare solo gli utenti, con autorizzazioni di modifica o di sola lettura.
 
-image:dashboard_access_share_drop-down.png["Menu a discesa per condividere un dashboard con autorizzazione Modifica o lettura"]
+image:dashboard_access_share_drop-down.png["Menu a discesa per condividere una dashboard con autorizzazione di modifica o lettura"]

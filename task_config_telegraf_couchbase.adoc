@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_couchbase.html 
 keywords: telegraf, installation, install, couchbase 
-summary: Configurazione del data collector di Couchbase 
+summary: Configurazione del raccoglitore dati Couchbase 
 ---
 = Couchbase Data Collector
 :hardbreaks:
@@ -10,28 +10,28 @@ summary: Configurazione del data collector di Couchbase
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Couchbase.
+Data Infrastructure Insights utilizza questo strumento di raccolta dati per raccogliere metriche da Couchbase.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegliere Couchbase.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Couchbase.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
-
-
-image:CouchbaseDCConfigWindows.png["Configurazione di Couchbase"]
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
+image:CouchbaseDCConfigWindows.png["Configurazione Couchbase"]
 
-== Setup (Configurazione)
 
-Le informazioni sono disponibili nella link:https://docs.couchbase.com/home/index.html["Documentazione di Couchbase"].
+
+== Impostare
+
+Le informazioni possono essere trovate nellink:https://docs.couchbase.com/home/index.html["Documentazione di Couchbase"] .
 
 
 
@@ -44,13 +44,13 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Nodo Couchbase | Namespace Cluster Couchbase Node Hostname | Nome nodo IP nodo | Memoria libera totale 
+| Nodo Couchbase | Nome host del nodo Couchbase del cluster dello spazio dei nomi | Nome nodo IP nodo | Memoria libera Memoria totale 
 
 
-| Bucket Couchbase | Cluster bucket namespace | Nome nodo IP nodo | Data used Data Fetches Disk used Item Count Memory used Operations per second quota utilizzata 
+| Secchio Couchbase | Cluster di bucket dello spazio dei nomi | Nome nodo IP nodo | Dati utilizzati Recuperi dati Disco utilizzato Numero di elementi Memoria utilizzata Operazioni al secondo Quota utilizzata 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

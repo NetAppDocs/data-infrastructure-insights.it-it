@@ -10,26 +10,26 @@ keywords: query, queries, export, csv
 
 
 [role="lead"]
-È possibile esportare i risultati di qualsiasi query in un file .CSV, che consente di analizzare i dati o importarli in un'altra applicazione.
+È possibile esportare i risultati di qualsiasi query in un file .CSV, che consentirà di analizzare i dati o di importarli in un'altra applicazione.
 
-.Fasi
+.Passi
 . Accedi a Data Infrastructure Insights.
 . Fare clic su *Query* e selezionare *Mostra tutte le query*.
 +
 Viene visualizzata la pagina Query.
 
 . Fare clic su una query.
-. Fare clic su image:ExportButton.png["Pulsante Export (Esporta)"] per esportare i risultati della query in un file .CSV.
+. Clicimage:ExportButton.png["Pulsante Esporta"] per esportare i risultati della query in un file .CSV.
 
 
 
-NOTE: L'esportazione in .CSV è disponibile anche nel menu "Three dots" (tre punti) nei widget della tabella della dashboard e nella maggior parte delle tabelle delle landing page.
+NOTE: L'esportazione in formato .CSV è disponibile anche nel menu "tre punti" nei widget delle tabelle della dashboard e nella maggior parte delle tabelle delle landing page.
 
 
 
 == Esportazione asincrona
 
-L'esportazione dei dati in formato .CSV può richiedere da pochi secondi a un certo numero di ore, a seconda della quantità di dati da esportare. Data Infrastructure Insights esporta tali dati in modo asincrono, così puoi continuare a lavorare mentre il file .CSV viene compilato.
+L'esportazione dei dati in formato .CSV può richiedere da pochi secondi a diverse ore, a seconda della quantità di dati da esportare.  Data Infrastructure Insights esporta tali dati in modo asincrono, così puoi continuare a lavorare mentre il file .CSV viene compilato.
 
 Visualizza e scarica le tue esportazioni .CSV selezionando l'icona "Campana" nella barra degli strumenti in alto a destra.
 
@@ -41,24 +41,24 @@ I dati esportati rifletteranno il filtro corrente, le colonne e i nomi delle col
 
 == Virgole nei nomi delle risorse
 
-Nota: Quando viene visualizzata una virgola nel nome di una risorsa, l'esportazione racchiude il nome tra virgolette, conservando il nome della risorsa e il formato .csv appropriato.
+Nota: quando nel nome di una risorsa è presente una virgola, l'esportazione racchiude il nome tra virgolette, preservando il nome della risorsa e il formato .csv corretto.
 
 
 
 == Formato dell'ora o non formato dell'ora?
 
-Quando si apre un file .CSV esportato con Excel, se si dispone di un nome oggetto o di un altro campo nel formato NN:NN (due cifre seguite da due punti e altre due cifre), Excel a volte interpreta tale nome come formato orario, anziché come formato testo. Ciò può causare la visualizzazione di valori errati in tali colonne in Excel. Ad esempio, un oggetto denominato "81:45" viene visualizzato in Excel come "81:45:00".
+Quando si apre un file .CSV esportato con Excel, se si ha un nome di oggetto o un altro campo nel formato NN:NN (due cifre seguite da due punti seguiti da altre due cifre), Excel a volte interpreterà quel nome come un formato Ora, anziché come un formato Testo.  Ciò può comportare la visualizzazione di valori errati in tali colonne da parte di Excel.  Ad esempio, un oggetto denominato "81:45" verrebbe visualizzato in Excel come "81:45:00".
 
-Per risolvere questo problema, importare il file .CSV in Excel seguendo la procedura riportata di seguito:
+Per ovviare a questo problema, importa il file .CSV in Excel seguendo i passaggi seguenti:
 
-. Aprire un nuovo foglio in Excel.
-. Nella scheda "dati", scegliere "da testo".
-. Individuare il file .CSV desiderato e fare clic su "Import" (Importa).
-. Nella procedura guidata di importazione, scegliere "delimitato" e fare clic su Avanti.
-. Scegliere "virgola" per il delimitatore e fare clic su Avanti.
-. Selezionare le colonne desiderate e scegliere "testo" per il formato dei dati della colonna.
-. Fare clic su fine.
+. Apri un nuovo foglio in Excel.
+. Nella scheda "Dati", seleziona "Da testo".
+. Individua il file .CSV desiderato e fai clic su "Importa".
+. Nella procedura guidata di importazione, seleziona "Delimitato" e fai clic su Avanti.
+. Selezionare "Virgola" come delimitatore e fare clic su Avanti.
+. Selezionare le colonne desiderate e scegliere "Testo" come formato dei dati della colonna.
+. Fare clic su Fine.
 +
-Gli oggetti devono essere visualizzati in Excel nel formato corretto.
+Gli oggetti dovrebbero essere visualizzati in Excel nel formato corretto.
 
 

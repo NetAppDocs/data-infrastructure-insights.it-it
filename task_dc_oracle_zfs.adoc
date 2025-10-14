@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: task_dc_oracle_zfs.html 
 keywords: data collector, Oracle, ZFS, storage applicance 
-summary: Configurazione di Oracle ZFS data collector. 
+summary: Configurazione del raccoglitore dati Oracle ZFS. 
 ---
-= Data collector di Oracle ZFS Storage Appliance
+= Raccoglitore dati Oracle ZFS Storage Appliance
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector di Oracle ZFS Storage Appliance per raccogliere dati di inventario e prestazioni.
+Data Infrastructure Insights utilizza il raccoglitore dati Oracle ZFS Storage Appliance per raccogliere dati di inventario e prestazioni.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le informazioni di inventario con Oracle ZFS Data Collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce informazioni di inventario con il raccoglitore dati Oracle ZFS.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
 | Disco (SSD) | Disco 
 
 
-| Cluster | Storage 
+| Grappolo | Magazzinaggio 
 
 
-| Controller | Nodo di storage 
+| Controllore | Nodo di archiviazione 
 
 
 | LUN | Volume 
@@ -38,12 +38,12 @@ Data Infrastructure Insights acquisisce le informazioni di inventario con Oracle
 | Mappa LUN | Mappa del volume 
 
 
-| Iniziatore, destinazione | Maschera di volume 
+| Iniziatore, bersaglio | Maschera del volume 
 
 
 | Condividere | Volume interno 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa origine dati.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questa fonte dati.
 
 
 
@@ -56,17 +56,17 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 
 
-== Metriche di performance richieste
+== Metriche di prestazione richieste
 
-Le appliance Oracle ZFS offrono agli amministratori dello storage una grande flessibilità per acquisire le statistiche delle performance. Data Infrastructure Insights prevede che _ciascun_ controller in una coppia ad alta disponibilità sia configurato per acquisire le seguenti metriche:
+Gli appliance Oracle ZFS offrono agli amministratori di storage un'ampia flessibilità nell'acquisizione di statistiche sulle prestazioni.  Data Infrastructure Insights prevede che ogni controller in una coppia ad alta disponibilità sia configurato per acquisire le seguenti metriche:
 
-* smb2.ops[condividere]
-* nfs3.ops[condividere]
-* nfs4.ops[condividere]
-* nfs4-1.ops[condividere]
+* smb2.ops[condividi]
+* nfs3.ops[condividi]
+* nfs4.ops[condividi]
+* nfs4-1.ops[condividi]
 
 
-La mancata acquisizione del controller di tali elementi o di tutti questi elementi causa probabilmente la mancata disponibilità o il sottreporting di Data Infrastructure Insights del carico di lavoro sui "volumi interni".
+Se il controller non acquisisce uno o tutti questi dati, probabilmente Data Infrastructure Insights non avrà o segnalerà in modo insufficiente il carico di lavoro sui "Volumi interni".
 
 
 
@@ -77,13 +77,13 @@ La mancata acquisizione del controller di tali elementi o di tutti questi elemen
 | Campo | Descrizione 
 
 
-| Nome host controller-1 ZFS | Nome host del controller di storage 1 
+| Nome host del controller ZFS-1 | Nome host per il controller di archiviazione 1 
 
 
-| Nome host controller-2 ZFS | Nome host del controller di storage 2 
+| Nome host del controller ZFS-2 | Nome host per il controller di archiviazione 2 
 
 
-| Nome utente | Nome utente dell'account utente amministratore del sistema di storage 
+| Nome utente | Nome utente per l'account utente dell'amministratore del sistema di archiviazione 
 
 
 | Password | Password per l'account utente amministratore 
@@ -100,19 +100,19 @@ La mancata acquisizione del controller di tali elementi o di tutti questi elemen
 | Tipo di connessione | HTTPS o HTTP, visualizza anche la porta predefinita 
 
 
-| Sovrascrivere la porta di connessione | Se vuoto, utilizzare la porta predefinita nel campo Connection Type (tipo di connessione), altrimenti inserire la porta di connessione da utilizzare 
+| Sostituisci porta di connessione | Se vuoto, utilizzare la porta predefinita nel campo Tipo di connessione, altrimenti immettere la porta di connessione da utilizzare 
 
 
-| Intervallo di polling dell'inventario | L'impostazione predefinita è 60 secondi 
+| Intervallo di sondaggio dell'inventario | Il valore predefinito è 60 secondi 
 
 
-| Intervallo di polling delle performance (sec) | Il valore predefinito è 300. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Il valore predefinito è 300. 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -120,43 +120,43 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2a, 2a"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
  a| 
 "Credenziali di accesso non valide"
  a| 
-Convalidare l'account utente e la password ZFS
+convalidare l'account utente e la password di Zfs
 
 
 
  a| 
-"Richiesta non riuscita con stato 404 \https://.....:215/api/access/v1"
+"Richiesta fallita con stato 404 \https://.....:215/api/access/v1"
  a| 
-L'array ZFS potrebbe essere troppo vecchio per avere il supporto dell'API REST. AK 2013.1.3.0 è stata la prima release del sistema operativo ZFS compatibile con le API REST e non tutti gli appliance ZFS possono essere aggiornati.
-
-
-
- a| 
-"Errore di configurazione" con messaggio di errore "Servizio REST disattivato"
- a| 
-Verificare che il servizio REST sia attivato su questo dispositivo.
+Il tuo array ZFS potrebbe essere troppo vecchio per supportare l'API REST.  AK 2013.1.3.0 è stata la prima versione del sistema operativo ZFS compatibile con REST API e non tutti gli appliance ZFS possono essere aggiornati a questa versione.
 
 
 
  a| 
-"Errore di configurazione " con messaggio di errore "utente non autorizzato per comando"
+"Errore di configurazione" con messaggio di errore "Il servizio REST è disabilitato"
  a| 
-Questo errore è probabilmente dovuto al fatto che alcuni ruoli (ad esempio, "Advanced_Analytics") non sono inclusi per l'utente configurato.
+Verificare che il servizio REST sia abilitato su questo dispositivo.
 
-L'applicazione dell'ambito Analytics per l'utente con ruolo di sola lettura può rimuovere l'errore. Attenersi alla seguente procedura:
 
-. Nel sistema ZFS, dalla schermata Configurazione -> utenti, spostare il mouse sul ruolo e fare doppio clic per consentire la modifica
-. Selezionare "Analytics" (analisi) dal menu a discesa Scope (ambito). Viene visualizzato un elenco delle proprietà possibili.
-. Fare clic sulla casella di controllo in alto per selezionare tutte e tre le proprietà.
+
+ a| 
+"Errore di configurazione" con messaggio di errore "Utente non autorizzato per il comando"
+ a| 
+Questo errore è probabilmente dovuto al fatto che alcuni ruoli (ad esempio, 'advanced_analytics') non sono inclusi per l'utente configurato.
+
+L'applicazione dell'ambito Analytics all'utente con ruolo di sola lettura potrebbe eliminare l'errore. Segui questi passaggi:
+
+. Nel sistema ZFs, dalla schermata Configurazione -> Utenti, sposta il mouse sul ruolo e fai doppio clic per consentire la modifica
+. Selezionare "Analisi" dal menu a discesa Ambito.  Viene visualizzato un elenco delle possibili proprietà.
+. Fare clic sulla casella di controllo più in alto per selezionare tutte e tre le proprietà.
 . Fare clic sul pulsante Aggiungi sul lato destro.
-. Fare clic sul pulsante Apply (Applica) nella parte superiore destra della finestra a comparsa. La finestra a comparsa si chiude.
+. Fare clic sul pulsante Applica in alto a destra della finestra pop-up.  La finestra pop-up si chiuderà.
 
 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

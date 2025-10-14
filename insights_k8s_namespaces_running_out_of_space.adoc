@@ -2,39 +2,39 @@
 sidebar: sidebar 
 permalink: insights_k8s_namespaces_running_out_of_space.html 
 keywords: insight, pv, persistent volume, backend 
-summary: Le informazioni possono aiutarti a prevedere quando gli spazi Kubernetes saranno probabilmente pieni. 
+summary: Le informazioni possono aiutarti a prevedere quando è probabile che gli spazi Kubernetes si riempiano. 
 ---
-= Approfondimenti: Kubernetes Namespace che esauriscono lo spazio
+= Approfondimenti: gli spazi dei nomi di Kubernetes stanno esaurendo lo spazio
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Esaurire lo spazio del tenant non è mai una buona situazione. Data Infrastructure Insights ti aiuta a prevedere il tempo necessario prima che i volumi persistenti di Kubernetes si esauriscano.
+Rimanere senza spazio sul proprio inquilino non è mai una bella situazione.  Data Infrastructure Insights ti aiuta a prevedere quanto tempo hai a disposizione prima che i volumi persistenti di Kubernetes si riempiano.
 
-L'Insight _Kubernetes Namespace running of Space_ ti offre una vista dei carichi di lavoro degli spazi dei nomi Kubernetes che rischiano di esaurire lo spazio, con una stima del numero di giorni rimanenti prima che ogni volume persistente si esaurisca.
+L'Insight _Kubernetes Namespaces Running Out of Space_ fornisce una panoramica dei carichi di lavoro sui namespace Kubernetes che rischiano di esaurire lo spazio, con una stima del numero di giorni rimanenti prima che ogni volume persistente si riempia.
 
-Per visualizzare questa Insight, accedere a *Dashboard > Insights*.
+Puoi visualizzare questa Insight andando su *Dashboard > Insight*.
 
 image:K8sRunningOutOfSpaceWorkloadList.png["Elenco dei carichi di lavoro negli spazi dei nomi K8s che rischiano di esaurire lo spazio"]
 
-Fare clic su un carico di lavoro per aprire una pagina dei dettagli per Insight. In questa pagina viene visualizzato un grafico che mostra le tendenze della capacità del carico di lavoro e una tabella che mostra quanto segue:
+Fare clic su un carico di lavoro per aprire una pagina dettagliata per Insight.  In questa pagina vedrai un grafico che mostra le tendenze della capacità del carico di lavoro e una tabella che mostra quanto segue:
 
 * Nome del carico di lavoro
 * Volume persistente interessato
-* Tempo previsto per il pieno in giorni
-* Capacità del volume persistente
-* Risorse di storage back-end interessate, con capacità corrente utilizzata fuori dalla capacità totale. Facendo clic su questo collegamento viene visualizzata la landing page dettagliata del volume di back-end.
+* Tempo previsto per il completamento in giorni
+* Capacità di volume persistente
+* Risorsa di archiviazione back-end interessata, con capacità corrente utilizzata rispetto alla capacità totale.  Facendo clic su questo collegamento si aprirà la pagina di destinazione dettagliata per il volume backend.
 
 
-image:K8sRunningOutOfSpaceWorkloadTable.png["Tabella dei carichi di lavoro che mostra i dettagli"]
+image:K8sRunningOutOfSpaceWorkloadTable.png["Tabella del carico di lavoro che mostra i dettagli"]
 
 
 
-=== Cosa posso fare se lo spazio è esaurito?
+=== Cosa posso fare se sto esaurendo lo spazio?
 
-Nella pagina Insight, fare clic su *+Mostra consigli* per visualizzare le possibili soluzioni. L'opzione più semplice quando si esaurisce lo spazio è sempre quella di aggiungere maggiore capacità e Data Infrastructure Insights mostra la capacità ottimale da aggiungere per aumentare il time-to-full a una previsione di 60 giorni. Vengono inoltre mostrati altri consigli.
+Nella pagina Insight, fare clic su *+Mostra suggerimenti* per visualizzare le possibili soluzioni.  L'opzione più semplice quando lo spazio si esaurisce è sempre quella di aggiungere più capacità. Data Infrastructure Insights mostra la capacità ottimale da aggiungere per aumentare il tempo di riempimento fino a una previsione target di 60 giorni.  Vengono mostrate anche altre raccomandazioni.
 
-image:K8sRunningOutOfSpaceRecommendations.png["Capacità da aggiungere per tornare a TTF di 60 giorni"]
+image:K8sRunningOutOfSpaceRecommendations.png["Capacità di aggiungere per tornare al TTF a 60 giorni"]
 
-È anche possibile copiare un comodo link a questa Insight, per aggiungere ai preferiti la pagina o per condividerla facilmente con il tuo team.
+Qui puoi anche copiare un comodo collegamento a questa Insight, per aggiungere la pagina ai preferiti o per condividerla facilmente con il tuo team.

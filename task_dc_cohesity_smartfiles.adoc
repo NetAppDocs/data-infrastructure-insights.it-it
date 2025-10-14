@@ -2,15 +2,15 @@
 sidebar: sidebar 
 permalink: task_dc_cohesity_smartfiles.html 
 keywords: data collector, cohesity 
-summary: Configurazione del data collector SmartFiles di Cohesity. 
+summary: Configurazione del raccoglitore dati Cohesity SmartFiles. 
 ---
-= Data collector SmartFiles di Cohesity
+= Raccoglitore dati Cohesity SmartFiles
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Questo raccoglitore basato su API REST acquisirà un cluster Cohesity, scoprendo le "viste" (come Data Infrastructure Insights Internal Volumes) e i vari nodi, oltre a raccogliere le metriche delle performance.
+Questo collettore basato su API REST acquisirà un cluster Cohesity, scoprendo le "Visualizzazioni" (come volumi interni Data Infrastructure Insights ), i vari nodi e raccogliendo metriche sulle prestazioni.
 
 
 
@@ -21,10 +21,10 @@ Questo raccoglitore basato su API REST acquisirà un cluster Cohesity, scoprendo
 | Campo | Descrizione 
 
 
-| IP del cluster di Cohesity | Indirizzo IP del cluster Cohesity 
+| IP del cluster Cohesity | Indirizzo IP del cluster Cohesity 
 
 
-| Nome utente | Nome utente del cluster Cohesity 
+| Nome utente | Nome utente per il cluster Cohesity 
 
 
 | Password | Password utilizzata per il cluster Cohesity 
@@ -41,13 +41,13 @@ Questo raccoglitore basato su API REST acquisirà un cluster Cohesity, scoprendo
 | Porta TCP | Porta utilizzata per la comunicazione TCP con il cluster Cohesity 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 60 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 60 minuti. 
 
 
-| Intervallo di polling delle performance (min) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 900 secondi. 
+| Intervallo di sondaggio sulle prestazioni (min) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 900 secondi. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

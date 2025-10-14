@@ -14,19 +14,19 @@ keywords: dashboard, widget, custom, view, data
 
 
 [role="lead"]
-Data Infrastructure Insights fornisce agli utenti la flessibilità necessaria per creare viste operative dei dati dell'infrastruttura, consentendo di creare dashboard personalizzate con una varietà di widget, ciascuno dei quali fornisce un'ampia flessibilità nella visualizzazione e nella creazione di grafici dei dati.
+Data Infrastructure Insights offre agli utenti la flessibilità di creare visualizzazioni operative dei dati dell'infrastruttura, consentendo di creare dashboard personalizzate con una varietà di widget, ognuno dei quali offre un'ampia flessibilità nella visualizzazione e nella rappresentazione grafica dei dati.
 
 
-IMPORTANT: Gli esempi in queste sezioni hanno solo scopo esplicativo e non coprono tutti gli scenari possibili. I concetti e le fasi qui descritti possono essere utilizzati per creare dashboard personalizzati per evidenziare i dati specifici per le esigenze specifiche.
+IMPORTANT: Gli esempi riportati in queste sezioni hanno solo scopo esplicativo e non coprono tutti gli scenari possibili.  I concetti e i passaggi descritti in questo documento possono essere utilizzati per creare dashboard personalizzate, evidenziando i dati specifici per le proprie esigenze specifiche.
 
 
 
 == Creazione di una dashboard
 
-È possibile creare una nuova dashboard in due posizioni:
+Puoi creare una nuova dashboard in uno dei due posti seguenti:
 
 * *Dashboard > [+Nuova dashboard]*
-* *Dashboard > Mostra tutti i dashboard >* fare clic sul pulsante *[+Dashboard]*
+* *Dashboard > Mostra tutte le dashboard >* clicca sul pulsante *[+Dashboard]*
 
 
 
@@ -37,80 +37,80 @@ link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8[
 
 
 
-== Comandi della dashboard
+== Controlli del cruscotto
 
-La schermata Dashboard dispone di diversi comandi:
+La schermata Dashboard presenta diversi controlli:
 
-* *Time selector*: Consente di visualizzare i dati della dashboard per un intervallo di tempo compreso tra gli ultimi 15 minuti e gli ultimi 30 giorni o un intervallo di tempo personalizzato fino a 31 giorni. È possibile scegliere di ignorare questo intervallo di tempo globale nei singoli widget.
-* Pulsante *Save* (Salva): Consente di salvare o eliminare la dashboard.
+* *Selettore di tempo*: consente di visualizzare i dati della dashboard per un intervallo di tempo che va dagli ultimi 15 minuti agli ultimi 30 giorni oppure per un intervallo di tempo personalizzato fino a 31 giorni.  È possibile scegliere di ignorare questo intervallo di tempo globale nei singoli widget.
+* Pulsante *Salva*: consente di salvare o eliminare la dashboard.
 +
-È possibile rinominare il dashboard corrente facendo clic su *Rinomina* dal menu Salva.
+È possibile rinominare la dashboard corrente facendo clic su *Rinomina* dal menu Salva.
 
-* Pulsante *+ Aggiungi widget*, che consente di aggiungere un numero qualsiasi di tabelle, grafici o altri widget al dashboard.
+* Pulsante *+ Aggiungi widget*, che consente di aggiungere un numero qualsiasi di tabelle, grafici o altri widget alla dashboard.
 +
-I widget possono essere ridimensionati e ricollocati in diverse posizioni all'interno della dashboard, per offrire la migliore visualizzazione dei dati in base alle esigenze attuali.
+I widget possono essere ridimensionati e riposizionati in diverse posizioni all'interno della dashboard, per offrirti la migliore visualizzazione dei tuoi dati in base alle tue esigenze attuali.
 
-* Pulsante *+ Aggiungi variabile*, che consente di utilizzare le variabili per filtrare attivamente i dati del dashboard.
+* Pulsante *+ Aggiungi variabile*, che consente di utilizzare variabili per filtrare attivamente i dati della dashboard.
 
 
 
 
 == Tipi di widget
 
-È possibile scegliere tra i seguenti tipi di widget:
+Puoi scegliere tra i seguenti tipi di widget:
 
-* *Widget tabella*: Una tabella che visualizza i dati in base ai filtri e alle colonne scelti. I dati delle tabelle possono essere combinati in gruppi che possono essere compressi ed espansi.
+* *Widget Tabella*: una tabella che visualizza i dati in base ai filtri e alle colonne scelti.  I dati della tabella possono essere combinati in gruppi che possono essere compressi ed espansi.
 +
 image:TableWidgetPerformanceData.png["Widget tabella"]
 
-* *Grafici di linee, spline, area, area sovrapposte*: Sono widget grafici di serie temporali su cui è possibile visualizzare le performance e altri dati nel tempo.
+* *Grafici a linee, spline, ad area e ad area impilata*: si tratta di widget grafici di serie temporali su cui è possibile visualizzare le prestazioni e altri dati nel tempo.
 +
-image:Time-SeriesCharts.png["Area, area impilata, linea, grafici Spline"]
+image:Time-SeriesCharts.png["Grafici ad area, ad area sovrapposta, a linee, spline"]
 
-* *Widget a valore singolo*: Widget che consente di visualizzare un singolo valore che può essere derivato direttamente da un contatore o calcolato utilizzando una query o un'espressione. È possibile definire le soglie di formattazione del colore per indicare se il valore rientra nell'intervallo previsto, di avviso o critico.
+* *Widget Valore singolo*: un widget che consente di visualizzare un singolo valore che può essere derivato direttamente da un contatore o calcolato tramite una query o un'espressione.  È possibile definire soglie di formattazione del colore per indicare se il valore rientra nell'intervallo previsto, di avviso o critico.
 +
 image:Single-ValueWidgets.png["Widget a valore singolo con e senza formattazione"]
 
-* *Widget indicatore*: Visualizza i dati a valore singolo in un indicatore tradizionale (solido) o in un indicatore a punti, con colori basati su valori "attenzione" o "critici"link:concept_dashboard_features.html#formatting-gauge-widgets["personalizzare"].
+* *Widget indicatore*: visualizza i dati a valore singolo in un indicatore tradizionale (solido) o in un indicatore a proiettile, con colori basati sui valori "Avvertenza" o "Critici" chelink:concept_dashboard_features.html#formatting-gauge-widgets["personalizzare"] .
 +
-image:GaugeWidgets.png["Valore singolo con formattazione, indicatore tradizionale, indicatore elenco"]
+image:GaugeWidgets.png["Valore singolo con formattazione, indicatore tradizionale, indicatore proiettile"]
 
-* *Barra, grafici a colonne*: Visualizza i valori N superiori o inferiori, ad esempio i primi 10 storage in base alla capacità o i 5 volumi inferiori in base agli IOPS.
+* *Grafici a barre e a colonne*: visualizza i valori N più alti o più bassi, ad esempio i primi 10 archivi in base alla capacità o gli ultimi 5 volumi in base agli IOPS.
 +
 image:BarandColumnCharts.png["Grafici a barre e a colonne"]
 
-* *Box Plot Chart*: Un grafico del minimo, massimo, mediano e dell'intervallo tra il quartile inferiore e quello superiore dei dati in un singolo grafico.
+* *Grafico a scatola*: un grafico che rappresenta il minimo, il massimo, la mediana e l'intervallo tra il quartile inferiore e quello superiore dei dati in un singolo grafico.
 +
-image:BoxPlot.png["Grafico a caselle"]
+image:BoxPlot.png["Diagramma a scatola"]
 
-* *Grafico di dispersione*: Traccia i dati correlati come punti, ad esempio IOPS e latenza. In questo esempio, è possibile individuare rapidamente le risorse con throughput elevato e IOPS ridotti.
+* *Grafico a dispersione*: rappresenta graficamente i dati correlati come punti, ad esempio IOPS e latenza.  In questo esempio, è possibile individuare rapidamente le risorse con un throughput elevato e un basso IOPS.
 +
-image:ScatterPlot.png["Grafico a dispersione"]
+image:ScatterPlot.png["Diagramma di dispersione"]
 
-* *Grafico a torta*: Un grafico a torta tradizionale per visualizzare i dati come parte del totale.
+* *Grafico a torta*: un grafico a torta tradizionale per visualizzare i dati come una parte del totale.
 +
 image:PieChart.png["Grafico a torta"]
 
-* *Widget Nota*: Fino a 1000 caratteri di testo libero.
+* *Widget Nota*: fino a 1000 caratteri di testo libero.
 +
-image:NoteWidget.png["Nota Widget"]
+image:NoteWidget.png["Widget Nota"]
 
-* *Grafico a barre del tempo*: Visualizza i dati log o metrici nel tempo.
-
-
-image:time_bar_chart.png["esempio di grafico a barre del tempo che mostra i dati del registro, larghezza=200"]
-
-* *Alerts Table*: Visualizza fino agli ultimi 1,000 avvisi.
+* *Grafico a barre temporali*: visualizza i dati di registro o le metriche nel tempo.
 
 
-Per spiegazioni più dettagliate su queste e altre funzioni del dashboard, link:concept_dashboard_features.html["fare clic qui"].
+image:time_bar_chart.png["esempio di grafico a barre temporali che mostra i dati di registro, larghezza=200"]
+
+* *Tabella avvisi*: visualizza fino agli ultimi 1.000 avvisi.
+
+
+Per spiegazioni più dettagliate su queste e altre funzionalità della Dashboard,link:concept_dashboard_features.html["clicca qui"] .
 
 
 
 == Impostazione di una dashboard come home page
 
-È possibile scegliere quale dashboard impostare come home page * del tenant utilizzando uno dei seguenti metodi:
+Puoi scegliere quale dashboard impostare come *home page* del tuo tenant utilizzando uno dei seguenti metodi:
 
-* Andare a *Dashboard > Mostra tutti i dashboard* per visualizzare l'elenco dei dashboard sul tenant. Fare clic sul menu delle opzioni a destra della dashboard desiderata e selezionare *Imposta come home page*.
-* Fare clic su una dashboard dall'elenco per aprire la dashboard. Fare clic sul menu a discesa nell'angolo superiore e selezionare *Imposta come home page*.
+* Vai a *Dashboard > Mostra tutte le dashboard* per visualizzare l'elenco delle dashboard sul tuo tenant.  Fare clic sul menu delle opzioni a destra della dashboard desiderata e selezionare *Imposta come home page*.
+* Fare clic su una dashboard dall'elenco per aprirla.  Fare clic sul menu a discesa nell'angolo superiore e selezionare *Imposta come pagina iniziale*.
 

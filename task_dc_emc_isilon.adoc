@@ -2,47 +2,47 @@
 sidebar: sidebar 
 permalink: task_dc_emc_isilon.html 
 keywords: data collector, isilon, EMC, DELL, PowerScale 
-summary: 'Configurazione del data collector Dell EMC PowerScale (in precedenza Isilon).' 
+summary: 'Configurazione del raccoglitore dati Dell EMC PowerScale (in precedenza Isilon).' 
 ---
-= Data collector Dell EMC PowerScale
+= Raccoglitore dati Dell EMC PowerScale
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il data collector SSH Dell EMC PowerScale (precedentemente Isilon) per acquisire dati di inventario e prestazioni dallo storage NAS scale-out PowerScale.
+Data Infrastructure Insights utilizza il raccoglitore dati SSH Dell EMC PowerScale (in precedenza Isilon) per acquisire dati di inventario e prestazioni dallo storage NAS scalabile PowerScale.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo data collector. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore di dati.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Disco | Disco 
+| Guidare | Disco 
 
 
-| Cluster | Storage 
+| Grappolo | Magazzinaggio 
 
 
-| Nodo | Nodo di storage 
+| Nodo | Nodo di archiviazione 
 
 
-| File System | Volume interno 
+| Sistema di file | Volume interno 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessarie le seguenti informazioni:
+Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
 
-* Autorizzazioni di amministratore per lo storage PowerScale
+* Autorizzazioni di amministratore per l'archiviazione PowerScale
 * Indirizzo IP del cluster PowerScale
 * Accesso SSH alla porta 22
 
@@ -56,10 +56,10 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 | Campo | Descrizione 
 
 
-| Indirizzo IP | L'indirizzo IP o il nome di dominio completo del cluster PowerScale 
+| indirizzo IP | L'indirizzo IP o il nome di dominio completo del cluster PowerScale 
 
 
-| Nome utente | Nome utente del cluster PowerScale 
+| Nome utente | Nome utente per il cluster PowerScale 
 
 
 | Password | Password utilizzata per il cluster PowerScale 
@@ -73,19 +73,19 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario.  Il valore predefinito è 20. 
 
 
-| Intervallo di polling delle performance (sec) | Intervallo tra i sondaggi delle performance. Il valore predefinito è 300. 
+| Intervallo di sondaggio sulle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni.  Il valore predefinito è 300. 
 
 
-| Porta SSH | Porta di servizio SSH. Il valore predefinito è 22. 
+| Porta SSH | Porta del servizio SSH.  Il valore predefinito è 22. 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -93,12 +93,12 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| "Credenziali di accesso non valide" con messaggi di errore "i comandi non abilitati per l'amministrazione basata sul ruolo richiedono l'accesso dell'utente root" | * Verificare che l'utente disponga delle autorizzazioni per eseguire i seguenti comandi sul dispositivo: > versione isi osrelease > stato isi -q > stato isi -n > dispositivi isi -d %s > licenza isi * verificare che le credenziali utilizzate nella procedura guidata corrispondano alle credenziali del dispositivo 
+| "Credenziali di accesso non valide" con messaggi di errore "I comandi non abilitati per l'amministrazione basata sui ruoli richiedono l'accesso come utente root" | * Verificare che l'utente abbia le autorizzazioni per eseguire i seguenti comandi sul dispositivo: > isi version osrelease > isi status -q > isi status -n > isi devices -d %s > isi license * Verificare che le credenziali utilizzate nella procedura guidata corrispondano alle credenziali del dispositivo 
 
 
-| "Errore interno" con messaggi di errore "esecuzione del comando <Your command> non riuscita con permesso: <Your current permission>. Problema di autorizzazione per l'esecuzione del comando sudo" | Verificare che l'utente disponga delle autorizzazioni sudo per eseguire il seguente comando sul dispositivo 
+| "Errore interno" con messaggi di errore "Esecuzione del comando <Il tuo comando> non riuscita con autorizzazione: <La tua autorizzazione attuale>.  Problema con l'autorizzazione all'esecuzione del comando Sudo" | Verificare che l'utente abbia i permessi sudo per eseguire il seguente comando sul dispositivo 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

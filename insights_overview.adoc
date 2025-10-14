@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: insights_overview.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload, ttf, time to full, k8s, kubernetes, namespace 
-summary: 'Le informazioni ti danno un"occhiata all"utilizzo delle risorse e ai trend.' 
+summary: 'Gli approfondimenti ti offrono una panoramica sull"utilizzo delle risorse e sulle tendenze.' 
 ---
 = Approfondimenti
 :hardbreaks:
@@ -10,31 +10,31 @@ summary: 'Le informazioni ti danno un"occhiata all"utilizzo delle risorse e ai t
 
 
 [role="lead"]
-Le informazioni ti consentono di esaminare aspetti come l'utilizzo delle risorse e il modo in cui questo influisce sulle altre risorse o sulle analisi time-to-full.
+Gli approfondimenti consentono di analizzare aspetti quali l'utilizzo delle risorse e il modo in cui influisce su altre risorse, oppure di effettuare analisi del tempo di utilizzo completo.
 
-Sono disponibili numerose informazioni. Accedere a *Dashboard > Insights* per avviare l'immersione. È possibile visualizzare l'Insights attivo (Insights che si sta verificando) nella scheda principale o l'Insights inattivo nella scheda _Insights_. Le informazioni inattive sono quelle che erano precedentemente attive ma non si verificano più.
+Sono disponibili numerosi approfondimenti.  Vai su *Dashboard > Approfondimenti* per iniziare a esplorare. Puoi visualizzare gli Approfondimenti attivi (in corso di elaborazione) nella scheda principale, oppure gli Approfondimenti inattivi nella scheda _Approfondimenti inattivi_.  Gli Insight inattivi sono quelli che erano precedentemente attivi ma che non si verificano più.
 
 
 
-== Tipi di Insight
+== Tipi di intuizione
 
 
 
 === Risorse condivise sotto stress
 
-I carichi di lavoro ad alto impatto possono ridurre le performance di altri carichi di lavoro in una risorsa condivisa. In questo modo, la risorsa condivisa viene sottoposta a stress. Data Infrastructure Insights fornisce strumenti per aiutarti a valutare la saturazione e l'impatto delle risorse sul tenant. link:insights_shared_resources_under_stress.html["Scopri di più"]
+I carichi di lavoro ad alto impatto possono ridurre le prestazioni di altri carichi di lavoro in una risorsa condivisa.  Ciò mette sotto stress la risorsa condivisa.  Data Infrastructure Insights fornisce strumenti che ti aiutano a esaminare la saturazione delle risorse e l'impatto sul tuo tenant.link:insights_shared_resources_under_stress.html["Saperne di più"]
 
 
 
-=== Kubernetes Namespace che esauriscono lo spazio
+=== Gli spazi dei nomi di Kubernetes stanno esaurendo lo spazio
 
-I namespaces di Kubernetes che stanno esaurendo Space Insight offrono una vista dei carichi di lavoro sui namespace di Kubernetes che sono a rischio di esaurimento dello spazio, con una stima per il numero di giorni rimanenti prima che ogni spazio si esaurisca. link:insights_k8s_namespaces_running_out_of_space.html["Scopri di più"]
-
-
-
-=== Recuperare lo storage a freddo ONTAP
-
-Il _Reclaim ONTAP Cold Storage_ Insight fornisce dati sulla capacità ridotta, sui potenziali risparmi in termini di costi/energia e sulle azioni consigliate per i volumi sui sistemi ONTAP. link:insights_reclaim_ontap_cold_storage.html["Scopri di più"]
+Kubernetes Namespaces Running Out of Space Insight fornisce una panoramica dei carichi di lavoro sui namespace Kubernetes che rischiano di esaurire lo spazio, con una stima del numero di giorni rimanenti prima che ogni spazio si riempia.link:insights_k8s_namespaces_running_out_of_space.html["Saperne di più"]
 
 
-NOTE: Si tratta di una funzione _Preview_ che può cambiare nel tempo man mano che vengono apportati dei miglioramenti. link:/concept_preview_features.html["Scopri di più"] Informazioni sulle funzioni di anteprima di Data Infrastructure Insights.
+
+=== Reclaim ONTAP Cold Storage
+
+_Reclaim ONTAP Cold Storage_ Insight fornisce dati sulla capacità di raffreddamento, sui potenziali risparmi in termini di costi/energia e sulle azioni consigliate per i volumi sui sistemi ONTAP .link:insights_reclaim_ontap_cold_storage.html["Saperne di più"]
+
+
+NOTE: Questa è una funzionalità di _Anteprima_ e potrebbe cambiare nel tempo man mano che vengono apportati miglioramenti. link:/concept_preview_features.html["Saperne di più"] Informazioni sulle funzionalità di Data Infrastructure Insights Preview.

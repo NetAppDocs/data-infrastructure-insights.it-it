@@ -2,29 +2,29 @@
 sidebar: sidebar 
 permalink: task_dc_emc_recoverpoint.html 
 keywords: data collector, RecoverPoint, EMC, DELL 
-summary: Configurazione di DELL EMC RecoverPoint Data Collector. 
+summary: Configurazione del raccoglitore dati DELL EMC RecoverPoint. 
 ---
-= Data collector Dell EMC RecoverPoint
+= Raccoglitore dati Dell EMC RecoverPoint
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il caso d'utilizzo principale del data collector EMC RecoverPoint consiste nel rilevare le relazioni di replica volume-volume che l'appliance di storage RecoverPoint facilita. Questo collector rileverà anche l'appliance Recoverpoint. Dell/EMC vende una soluzione di backup VMware per macchine virtuali --"RecoverPoint per macchine virtuali" - che non è supportata da questo collector
+Il caso d'uso principale del raccoglitore dati EMC RecoverPoint è quello di scoprire le relazioni di replica tra volumi facilitate dall'appliance di storage RecoverPoint.  Questo raccoglitore scoprirà anche l'appliance Recoverpoint stessa.  Si prega di notare che Dell/EMC vende una soluzione di backup VMware per VM, "RecoverPoint for VMs", che non è supportata da questo collector.
 
-Per la configurazione, il data collector richiede l'indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.
+Per la configurazione, il raccoglitore dati richiede l'indirizzo IP dei processori di archiviazione e un nome utente e una password di sola lettura.
 
-Il data collector EMC RecoverPoint raccoglie le relazioni di replica volume-volume che RecoverPoint coordina tra altri storage array. Data Infrastructure Insights mostra uno storage array per ogni cluster RecoverPoint e raccoglie dati di inventario per i nodi e le porte storage in tale cluster. Non vengono raccolti dati di volumi o pool di storage.
+Il raccoglitore dati EMC RecoverPoint raccoglie le relazioni di replica da volume a volume che RecoverPoint coordina tra altri array di storage.  Data Infrastructure Insights mostra un array di archiviazione per ogni cluster RecoverPoint e raccoglie i dati di inventario per i nodi e le porte di archiviazione su quel cluster.  Non vengono raccolti dati di pool di archiviazione o di volume.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessarie le seguenti informazioni:
+Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
 
-* Indirizzo IP o nome di dominio completo del processore di storage
+* Indirizzo IP o nome di dominio completo del processore di archiviazione
 * Nome utente e password di sola lettura
-* Accesso API REST tramite la porta 443
+* Accesso API REST tramite porta 443
 
 
 
@@ -39,7 +39,7 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 | Indirizzo di RecoverPoint | Indirizzo IP o nome di dominio completo del cluster RecoverPoint 
 
 
-| Nome utente | Nome utente del cluster RecoverPoint 
+| Nome utente | Nome utente per il cluster RecoverPoint 
 
 
 | Password | Password utilizzata per il cluster RecoverPoint 
@@ -53,16 +53,16 @@ Per configurare questo data collector sono necessarie le seguenti informazioni:
 | Campo | Descrizione 
 
 
-| Porta TCP | Porta TCP utilizzata per la connessione al cluster Recoverpoint 
+| Porta TCP | Porta TCP utilizzata per connettersi al cluster Recoverpoint 
 
 
-| Intervallo polling inventario (minuti) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 20 minuti. 
+| Intervallo di sondaggio dell'inventario (minuti) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20 minuti. 
 
 
-| Cluster esclusi | Elenco separato da virgole di ID cluster o nomi da escludere durante il polling. 
+| Cluster esclusi | Elenco separato da virgole di ID o nomi di cluster da escludere durante il polling. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni su questo Data Collector sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

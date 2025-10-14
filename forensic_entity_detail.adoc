@@ -14,18 +14,18 @@ summary: Pagina delle entità forensi
 
 
 [role="lead"]
-La pagina entità di analisi fornisce informazioni dettagliate sull'attività dell'entità sul tenant.
+La pagina Entità forensi fornisce informazioni dettagliate sulle attività delle entità sul tuo tenant.
 
 
 
 == Esame delle informazioni sull'entità
 
-Fare clic su *Forensics > Activity Forensics* e fare clic sulla scheda _Entities_ per accedere alla pagina Entities.
+Fare clic su *Forensics > Activity Forensics* e fare clic sulla scheda _Entità_ per accedere alla pagina Entità.
 
-Questa pagina fornisce una panoramica dell'attività dell'entità sul locatario, evidenziando le seguenti informazioni: * Un grafico che mostra _entità univoche_ accessibili al minuto * Un grafico di _tipi di entità accessibili_ * Una suddivisione dei _percorsi comuni_ * Un elenco delle _prime 50 entità_ rispetto al numero totale di entità
+Questa pagina fornisce una panoramica dell'attività dell'entità sul tuo tenant, evidenziando le seguenti informazioni: * Un grafico che mostra le _Entità uniche_ a cui si accede al minuto * Un grafico dei _Tipi di entità a cui si accede_ * Una ripartizione dei _Percorsi comuni_ * Un elenco delle _50 entità principali_ sul numero totale di entità
 
-image:CS-Entities-Page.png["Pagina Entities"]
+image:CS-Entities-Page.png["Pagina Entità"]
 
-Facendo clic su un'entità nell'elenco, viene visualizzata una pagina panoramica dell'entità, che mostra un profilo dell'entità con dettagli come nome, tipo, nome del dispositivo, indirizzo IP e percorso più utilizzati, oltre al comportamento dell'entità come l'utente, l'IP, e ora dell'ultimo accesso all'entità.
+Facendo clic su un'entità nell'elenco si apre una pagina di panoramica per l'entità, che mostra un profilo dell'entità con dettagli quali nome, tipo, nome del dispositivo, IP della posizione più utilizzata e percorso, nonché il comportamento dell'entità, come utente, IP e ora dell'ultimo accesso all'entità.
 
-image:CS-entity-detail-page.png["Pagina Entity Overview"]
+image:CS-entity-detail-page.png["Pagina di panoramica dell'entità"]

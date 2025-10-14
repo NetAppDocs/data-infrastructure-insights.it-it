@@ -2,95 +2,95 @@
 sidebar: sidebar 
 permalink: concept_anomaly_detection.html 
 keywords: Anomalies, anomaly, patterns, monitor, alert 
-summary: 'Monitorare le metriche per verificare l"eventuale presenza di anomalie' 
+summary: Monitorare le metriche per anomalie 
 ---
-= Monitoraggio rilevamento anomalie
+= Monitor di rilevamento delle anomalie
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 
 
 [role="lead"]
-Rilevamento delle anomalie fornisce informazioni utili sui cambiamenti imprevisti nei modelli di dati sul tenant. Un'anomalia si verifica quando il modello del comportamento di un oggetto cambia, per esempio, se un oggetto sperimenta un certo livello di latenza ad un certo tempo il mercoledì, ma picchi di latenza sopra quel livello a quell'ora il mercoledì successivo, quel picco sarebbe considerato un'anomalia. Data Infrastructure Insights consente la creazione di monitor per avvisare in caso di anomalie in tal senso.
+Il rilevamento delle anomalie fornisce informazioni su cambiamenti imprevisti nei modelli di dati del tenant.  Un'anomalia si verifica quando cambia il modello di comportamento di un oggetto, ad esempio se un oggetto presenta un certo livello di latenza a un certo orario di mercoledì, ma la latenza supera quel livello a quell'orario del mercoledì successivo, tale picco verrà considerato un'anomalia.  Data Infrastructure Insights consente di creare monitor per avvisare quando si verificano anomalie di questo tipo.
 
-Il rilevamento delle anomalie è adatto per le metriche degli oggetti che mostrano un modello ricorrente e prevedibile. Quando queste metriche dell'oggetto superano o scendono al di sotto dei livelli previsti, Data Infrastructure Insights può generare un avviso per un'analisi tempestiva.
+Il rilevamento delle anomalie è adatto per metriche di oggetti che presentano uno schema ricorrente e prevedibile.  Quando queste metriche degli oggetti superano o scendono al di sotto dei livelli previsti, Data Infrastructure Insights può generare un avviso per sollecitare un'indagine.
 
 image:anomaly_detection_expert_view.png["grafico che mostra l'anomalia rilevata"]
 
 
 
-== Cos'è il rilevamento delle anomalie?
+== Che cos'è il rilevamento delle anomalie?
 
-Un'anomalia si verifica quando il valore medio di una metrica è un numero di deviazioni standard lontano dalla media ponderata di quella metrica per le settimane precedenti, con settimane recenti che hanno più peso rispetto alle settimane precedenti. Data Infrastructure Insights offre la possibilità di monitorare i dati e avvisare in caso di anomalie. È possibile impostare i livelli di rilevamento della "sensibilità". Ad esempio, una sensibilità maggiore è quando il valore medio è meno deviazioni standard dalla media, causando così la generazione di un maggior numero di avvisi. Al contrario, minore sensibilità = più deviazioni standard dalla media = meno avvisi.
-
-
-
-=== Il monitoraggio del rilevamento delle anomalie differisce dal monitoraggio della soglia.
-
-* *Il monitoraggio basato su soglia* funziona quando si dispone di soglie predefinite per metriche specifiche. In altre parole, quando si ha una chiara comprensione di ciò che ci si aspetta (cioè all'interno di un intervallo normale).
-
-
-image:MetricMonitor_blurb.png["I monitor metrici sono adatti a quando si conosce la gamma operativa"]
-
-* *Monitoraggio rilevamento anomalie* utilizza algoritmi di apprendimento automatico per identificare gli outliers che si discostano dalla norma, per quando la definizione di "normale" non è chiara.
-
-
-image:ADMonitor_blurb.png["I monitor di rilevamento delle anomalie sono destinati a quando si desidera conoscere picchi o cadute"]
+Si verifica un'anomalia quando il valore medio di una metrica si discosta di un certo numero di deviazioni standard dalla media ponderata di tale metrica per le settimane precedenti, con le settimane recenti che hanno un peso maggiore rispetto alle settimane precedenti.  Data Infrastructure Insights offre la possibilità di monitorare i dati e di inviare avvisi quando vengono rilevate anomalie.  È possibile impostare i livelli di "sensibilità" del rilevamento.  Ad esempio, una sensibilità maggiore si avrebbe quando il valore medio si discosta dalla media con meno deviazioni standard, determinando così la generazione di più avvisi.  Al contrario, minore sensibilità = più deviazioni standard dalla media = meno avvisi.
 
 
 
-== Quando è necessario il rilevamento delle anomalie?
+=== Il monitoraggio del rilevamento delle anomalie è diverso dal monitoraggio delle soglie.
 
-Il monitoraggio del rilevamento delle anomalie può fornire avvisi utili per molte situazioni, tra cui:
-
-* Quando la definizione di _normale_ non è chiara. Ad esempio, è possibile che le percentuali di errore SAN siano diverse in base alla porta. La segnalazione di un errore è rumorosa e non necessaria, ma un aumento improvviso o significativo potrebbe indicare un problema diffuso.
-* Dove ci sono cambiamenti nel tempo. Carichi di lavoro caratterizzati da stagionalità (ovvero, sono occupati o silenziosi in determinati momenti). Ciò potrebbe includere periodi di inattività imprevisti che potrebbero indicare un blocco del batch.
-* Lavorare con grandi quantità di dati quando la definizione e la regolazione manuale delle soglie non sono pratiche. Ad esempio, un tenant con un elevato numero di host e/o volumi con carichi di lavoro variabili. Ciascuno di essi può disporre di SLA diversi, pertanto è importante comprendere quelli che superano la norma.
+* Il *monitoraggio basato su soglie* funziona quando si hanno soglie predefinite per metriche specifiche.  In altre parole, quando si ha una chiara comprensione di cosa ci si aspetta (ovvero entro un intervallo normale).
 
 
+image:MetricMonitor_blurb.png["I monitor metrici sono adatti quando si conosce l'intervallo operativo"]
+
+* Il *monitoraggio tramite rilevamento delle anomalie* utilizza algoritmi di apprendimento automatico per identificare i valori anomali che si discostano dalla norma, quando la definizione di "normale" non è chiara.
 
 
-== Creazione di un monitor di rilevamento anomalie
+image:ADMonitor_blurb.png["I monitor di rilevamento delle anomalie sono utili quando si desidera conoscere picchi o cali"]
 
-Per segnalare eventuali anomalie, creare un monitor accedendo a *osservabilità > Avvisi > +Monitor*. Selezionare _monitoraggio rilevamento anomalie_ come tipo di monitor.
+
+
+== Quando avrei bisogno del rilevamento delle anomalie?
+
+Il monitoraggio del rilevamento delle anomalie può fornire avvisi utili in molte situazioni, tra cui:
+
+* Quando la definizione di _normale_ non è chiara.  Ad esempio, è possibile che i tassi di errore SAN varino a seconda della porta.  Segnalare un errore è rumoroso e superfluo, ma un aumento improvviso o significativo potrebbe indicare un problema diffuso.
+* Dove si verificano cambiamenti nel tempo.  Carichi di lavoro che presentano stagionalità (ad esempio, sono intensi o silenziosi in determinati periodi).  Ciò potrebbe includere periodi di silenzio inaspettati che potrebbero indicare un blocco del lotto.
+* Lavorare con grandi quantità di dati in cui definire e regolare manualmente le soglie risulta poco pratico.  Ad esempio, un tenant con un numero elevato di host e/o volumi con carichi di lavoro variabili.  Ognuno di essi può avere SLA diversi, quindi è importante capire quali sono quelli che superano la norma.
+
+
+
+
+== Creazione di un monitor di rilevamento delle anomalie
+
+Per ricevere avvisi sulle anomalie, creare un monitor andando su *Osservabilità > Avvisi > +Monitor*.  Selezionare _Anomaly Detection Monitor_ come tipo di monitor.
 
 image:AnomalyDetectionMonitorChoice.png["Selezione del rilevamento delle anomalie durante la creazione di un monitor, larghezza=480"]
 
-Scegliere l'oggetto e la metrica da monitorare. È possibile impostare filtri e raggruppamenti come per altri tipi di monitor.
+Scegli l'oggetto e la metrica che vuoi monitorare.  È possibile impostare filtri e raggruppamenti come con altri tipi di monitor.
 
-Quindi, impostare le condizioni per il monitor.
+Successivamente, impostare le condizioni per il monitor.
 
-* Attiva un avviso quando la metrica selezionata _picchi sopra_ i limiti previsti, _scende sotto_ quei limiti o entrambi.
-* Impostare la sensibilità su _Medium_, _Low_ (vengono rilevate meno anomalie) o _High_ (vengono rilevate più anomalie).
-* Determinare se il livello di avviso è _critico_ o _Avviso_.
-* Facoltativamente, impostare un valore al di sotto del quale le anomalie sono _ignorate_. Questo può contribuire a ridurre il rumore. Questo valore viene visualizzato come una linea tratteggiata sul grafico campione.
-
-
-image:AnomalyDetectionMonitorConditions.png["Impostazione delle condizioni per il monitor di rilevamento anomalie"]
-
-Infine, è possibile configurare un metodo di recapito per gli avvisi (e-mail, webhook o entrambi), fornire al monitor una descrizione opzionale o azioni correttive e, se lo si desidera, aggiungere il monitor a un gruppo personalizzato.
-
-Salvate il monitor con un nome significativo e avete finito.
-
-Al momento della creazione, il monitor analizza i dati della settimana precedente per stabilire una linea di base iniziale. Il rilevamento delle anomalie diventa più accurato con il passare del tempo e con una maggiore cronologia.
+* Attiva un avviso quando la metrica selezionata _Raggiunge un picco_ oltre i limiti previsti, _Scende al di sotto_ di tali limiti o entrambe le cose.
+* Impostare la sensibilità su _Media_, _Bassa_ (vengono rilevate meno anomalie) o _Alta_ (vengono rilevate più anomalie).
+* Determina se il livello di allerta è _Critico_ o _Avviso_.
+* Facoltativamente, imposta un valore al di sotto del quale le anomalie vengono _ignorate_.  Ciò può contribuire a ridurre il rumore.  Questo valore è mostrato come una linea tratteggiata nel grafico di esempio.
 
 
-NOTE: Quando viene creato un monitor, DII esamina tutti i dati esistenti della settimana precedente per individuare picchi o cali significativi; questi sono considerati anomalie. Durante la prima settimana successiva alla creazione del monitor (la fase di "apprendimento"), è possibile che si verifichi un aumento del "rumore" negli avvisi. Per mitigare questo rumore, solo i picchi o i cali che durano più di 30 minuti sono considerati anomalie e generano avvisi. Nella settimana successiva, man mano che vengono analizzati più dati, il rumore solitamente si riduce e un picco o un calo significativo che duri un certo lasso di tempo verrà considerato un'anomalia.
+image:AnomalyDetectionMonitorConditions.png["Impostazione delle condizioni per il monitor di rilevamento delle anomalie"]
+
+Infine, è possibile configurare un metodo di recapito per gli avvisi (e-mail, webhook o entrambi), fornire al monitor una descrizione facoltativa o azioni correttive e aggiungere il monitor a un gruppo personalizzato, se lo si desidera.
+
+Salva il monitor con un nome significativo e il gioco è fatto.
+
+Dopo la creazione, il monitor analizza i dati della settimana precedente per stabilire una base di riferimento iniziale.  Il rilevamento delle anomalie diventa più accurato con il passare del tempo e con l'aumentare della cronologia.
+
+
+NOTE: Quando viene creato un monitor, DII esamina tutti i dati esistenti della settimana precedente per individuare picchi o cali significativi; questi sono considerati anomalie.  Durante la prima settimana successiva alla creazione del monitor (fase di "apprendimento"), è possibile che si verifichi un aumento del "rumore" negli avvisi.  Per attenuare questo rumore, solo i picchi o i cali che durano più di 30 minuti vengono considerati anomalie e generano avvisi.  Nella settimana successiva, man mano che vengono analizzati più dati, il rumore solitamente si riduce e un picco o un calo significativo che duri un certo periodo di tempo viene considerato un'anomalia.
 
 
 
 == Visualizzazione delle anomalie
 
-In una pagina di destinazione di un avviso, gli avvisi attivati quando vengono rilevate anomalie mostrano una banda evidenziata nel grafico, dal momento in cui la metrica è aggiunta al di fuori dei limiti previsti al momento in cui si è spostata indietro all'interno di tali limiti.
+Nella landing page di un avviso, gli avvisi attivati quando vengono rilevate anomalie mostreranno una banda evidenziata nel grafico, dal momento in cui la metrica ha raggiunto un picco al di fuori dei limiti previsti fino a quando è tornata all'interno di tali limiti.
 
 image:Anomaly_Detection_Chart_Example_Expert_View.png["Grafico che mostra l'ora in cui si è verificata un'anomalia"]
 
-Durante la visualizzazione di un grafico delle anomalie in una landing page degli avvisi, puoi scegliere le seguenti opzioni:
+Durante la visualizzazione di un grafico delle anomalie nella landing page di un avviso, è possibile scegliere le seguenti opzioni:
 
-* Trend settimanale: Confrontare i valori con la stessa ora, nello stesso giorno delle settimane precedenti, fino a 5 settimane precedenti.
-* Limiti di anomalia completi: Per impostazione predefinita, il grafico si concentra sul valore metrico in modo da poter analizzare meglio il comportamento metrico. Selezionare per visualizzare i limiti di anomalia completi (valore massimo, ecc.)
+* Andamento settimanale: confronta i valori con la stessa ora, lo stesso giorno delle settimane precedenti, per un massimo di 5 settimane.
+* Limiti di anomalia completi: per impostazione predefinita, il grafico si concentra sul valore della metrica, in modo da poterne analizzare meglio il comportamento.  Selezionare per visualizzare i limiti completi delle anomalie (valore massimo, ecc.)
 
 
-È inoltre possibile visualizzare gli oggetti che hanno contribuito all'anomalia selezionandoli nella visualizzazione esperto della pagina di destinazione. Il grafico mostra il comportamento degli oggetti selezionati.
+È anche possibile visualizzare gli oggetti che hanno contribuito all'anomalia selezionandoli nella sezione prestazioni della landing page.  Il grafico mostrerà il comportamento degli oggetti selezionati.
 
-image:Anomaly_Detection_Contributing_Objects.png["inserimento di oggetti che contribuiscono all'anomalia"]
+image:Anomaly_Detection_Contributing_Objects.png["mappatura degli oggetti che contribuiscono all'anomalia"]

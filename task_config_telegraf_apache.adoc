@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_apache.html 
 keywords: telegraf, installation, install, apache 
-summary: Configurazione del data collector Apache 
+summary: Configurazione del raccoglitore dati Apache 
 ---
 = Apache Data Collector
 :hardbreaks:
@@ -10,46 +10,46 @@ summary: Configurazione del data collector Apache
 
 
 [role="lead"]
-Questo data collector consente la raccolta di dati dai server Apache sul tenant.
+Questo raccoglitore di dati consente la raccolta di dati dai server Apache sul tuo tenant.
 
 .Prerequisiti
-* Il server HTTP Apache deve essere configurato e correttamente in esecuzione
-* È necessario disporre delle autorizzazioni di sudo o amministratore per l'host/VM dell'agente
-* In genere, il modulo Apache _mod_status_ è configurato per esporre una pagina nella posizione '/server-status?auto' del server Apache. L'opzione _ExtendedStatus_ deve essere attivata per raccogliere tutti i campi disponibili. Per informazioni su come configurare il server, consultare la documentazione del modulo Apache: https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
+* Devi avere il tuo server Apache HTTP configurato e funzionante correttamente
+* Devi avere i permessi sudo o amministratore sul tuo host agente/VM
+* In genere, il modulo Apache _mod_status_ è configurato per esporre una pagina nella posizione '/server-status?auto' del server Apache.  Per raccogliere tutti i campi disponibili, è necessario abilitare l'opzione _ExtendedStatus_.  Per informazioni su come configurare il server, consultare la documentazione del modulo Apache: https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable[]
 
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegli Apache.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Apache.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
 image:ApacheDCConfigLinux.png["Configurazione di Apache"]
 
 
 
-== Setup (Configurazione)
+== Impostare
 
-Il plug-in di Telegraf per HTTP Server di Apache si basa sul modulo 'mod_status' per essere attivato. Quando questa opzione è attivata, il server HTTP di Apache espone un endpoint HTML che può essere visualizzato sul browser o scartato per l'estrazione dello stato di tutte le configurazioni HTTP Server di Apache.
+Il plugin di Telegraf per il server HTTP di Apache si basa sull'abilitazione del modulo 'mod_status'.  Se questa opzione è abilitata, il server HTTP di Apache esporrà un endpoint HTML che può essere visualizzato sul browser o recuperato per l'estrazione dello stato di tutta la configurazione del server HTTP di Apache.
 
 
 
 === Compatibilità:
 
-La configurazione è stata sviluppata rispetto al server HTTP Apache versione 2.4.38.
+La configurazione è stata sviluppata per la versione 2.4.38 del server HTTP di Apache.
 
 
 
-=== Abilitazione mod_status:
+=== Abilitazione di mod_status:
 
-L'attivazione e l'esposizione dei moduli "mod_status" richiede due passaggi:
+L'abilitazione e l'esposizione dei moduli 'mod_status' comporta due passaggi:
 
 * Modulo di abilitazione
 * Esposizione delle statistiche dal modulo
@@ -59,15 +59,15 @@ L'attivazione e l'esposizione dei moduli "mod_status" richiede due passaggi:
 
 === Modulo di abilitazione:
 
-Il caricamento dei moduli è controllato dal file di configurazione sotto '/usr/local/apache/conf/httpd.conf'. Modificare il file di configurazione e rimuovere il commento dalle seguenti righe:
+Il caricamento dei moduli è controllato dal file di configurazione in '/usr/local/apache/conf/httpd.conf'.  Modifica il file di configurazione e rimuovi il commento dalle seguenti righe:
 
  LoadModule status_module modules/mod_status.so
  Include conf/extra/httpd-info.conf
 
 
-=== Esposizione delle statistiche dal modulo:
+=== Visualizzazione delle statistiche dal modulo:
 
-L'esposizione di 'mod_status' è controllata dal file di configurazione in '/usr/local/apache2/conf/extra/httpd-info.conf'. Assicurarsi di avere quanto segue nel file di configurazione (almeno altre direttive saranno presenti):
+L'esposizione di 'mod_status' è controllata dal file di configurazione in '/usr/local/apache2/conf/extra/httpd-info.conf'.  Assicuratevi di avere quanto segue nel file di configurazione (almeno, ci saranno altre direttive):
 
 [listing]
 ----
@@ -84,7 +84,7 @@ L'esposizione di 'mod_status' è controllata dal file di configurazione in '/usr
 #
 ExtendedStatus On
 ----
-Per istruzioni dettagliate sul modulo 'mod_status', vedere la link:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Documentazione di Apache"]
+Per istruzioni dettagliate sul modulo 'mod_status', vederelink:https://httpd.apache.org/docs/2.4/mod/mod_status.html#enable["Documentazione di Apache"]
 
 
 
@@ -97,10 +97,10 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| Apache | Server namespace | Nodo IP Node Name Port Parent Server Config Generation Parent Server MPM Generation Server uptime is stopping | Occupati byte per richiesta byte per secondo CPU bambini CPU sistema bambini CPU utente carico CPU sistema CPU utente connessioni asincrone chiusura connessioni asincrone mantenimento connessioni asincrone scrittura connessioni totale durata per richiesta lavoratori inattivi carico medio (ultimi 1 m) carico medio (ultimi 15 m) carico medio (ultimi 5 m) Elabora le richieste al secondo accessi totali durata totale KByte Scoreboard chiusura Scoreboard Lookups DNS Scoreboard finitura Scoreboard Idle Cleanup Scoreboard Keep Alive Scoreboard Logging Scoreboard Open Scoreboard Reading Scoreboard Sending Scoreboard Starting Scoreboard Waiting 
+| Apache | Server dello spazio dei nomi | IP del nodo Nome del nodo Porta Generazione della configurazione del server padre Generazione MPM del server padre Il tempo di attività del server si sta interrompendo | Lavoratori occupati Byte per richiesta Byte al secondo CPU CPU di sistema figli CPU utente figli Carico CPU di sistema CPU utente Connessioni asincrone Chiusura Connessioni asincrone Keep Alive Connessioni asincrone Scrittura Connessioni Durata totale per richiesta Lavoratori inattivi Carico medio (ultimo minuto) Carico medio (ultimi 15 minuti) Carico medio (ultimi 5 minuti) Processi Richieste al secondo Accessi totali Durata totale Kbyte totali Tabellone segnapunti Chiusura tabellone segnapunti Ricerche DNS Tabellone segnapunti Completamento tabellone segnapunti Pulizia inattiva tabellone segnapunti Keep Alive Registrazione tabellone segnapunti Apertura tabellone segnapunti Lettura tabellone segnapunti Invio tabellone segnapunti Avvio tabellone segnapunti In attesa 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

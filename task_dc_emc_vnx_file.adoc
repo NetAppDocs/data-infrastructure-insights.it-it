@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: task_dc_emc_vnx_file.html 
 keywords: data collector, Celerra, EMC, DELL, VNX File 
-summary: Configurazione di DELL EMC Celerra Data Collector. 
+summary: Configurazione del raccoglitore dati DELL EMC Celerra. 
 ---
-= Data collector DELL EMC VNX file (precedentemente noto come Celerra Unified Storage System)
+= Raccoglitore dati DELL EMC VNX File (in precedenza Celerra Unified Storage System)
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Questo data collector acquisisce le informazioni di inventario dal file Storage System VNX. Per la configurazione, questo data collector richiede l'indirizzo IP dei processori di storage e un nome utente e una password di sola lettura.
+Questo raccoglitore di dati acquisisce informazioni di inventario dal sistema di archiviazione file VNX.  Per la configurazione, questo raccoglitore di dati richiede l'indirizzo IP dei processori di archiviazione e un nome utente e una password di sola lettura.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati file VNX. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati VNX File.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Server di rete Celerra/Pool di storage Celerra | Pool di storage 
+| Server di rete Celerra/pool di archiviazione Celerra | Pool di archiviazione 
 
 
-| File System | Volume interno 
+| Sistema di file | Volume interno 
 
 
-| Data Mover. (Mover dati | Controller 
+| Spostamento dati | Controllore 
 
 
 | File System montato su un data mover | Condivisione file 
@@ -38,17 +38,17 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 | Esportazioni CIFS e NFS | Condividere 
 
 
-| Volume del disco | LUN back-end 
+| Volume del disco | LUN di backend 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-Per configurare questo data collector sono necessari i seguenti elementi:
+Per configurare questo raccoglitore dati è necessario quanto segue:
 
-* L'indirizzo IP del processore di storage
+* L'indirizzo IP del processore di archiviazione
 * Nome utente e password di sola lettura
 * Porta SSH 22
 
@@ -62,13 +62,13 @@ Per configurare questo data collector sono necessari i seguenti elementi:
 | Campo | Descrizione 
 
 
-| Indirizzo IP del file VNX | Indirizzo IP o nome di dominio completo del file device VNX 
+| Indirizzo IP del file VNX | Indirizzo IP o nome di dominio completo del dispositivo file VNX 
 
 
-| Nome utente | Nome utilizzato per accedere al file device VNX 
+| Nome utente | Nome utilizzato per accedere al dispositivo VNX File 
 
 
-| Password | Password utilizzata per accedere al file device VNX 
+| Password | Password utilizzata per accedere al dispositivo VNX File 
 |===
 
 
@@ -79,13 +79,13 @@ Per configurare questo data collector sono necessari i seguenti elementi:
 | Campo | Descrizione 
 
 
-| Intervallo polling inventario (minuti) | Intervallo tra i sondaggi di inventario. L'impostazione predefinita è 20 minuti. 
+| Intervallo di sondaggio dell'inventario (minuti) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 20 minuti. 
 |===
 
 
 == Risoluzione dei problemi
 
-Alcune operazioni da eseguire in caso di problemi con questo data collector:
+Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
@@ -93,9 +93,9 @@ Alcune operazioni da eseguire in caso di problemi con questo data collector:
 
 [cols="2*"]
 |===
-| Problema: | Prova: 
+| Problema: | Prova questo: 
 
 
-| Errore: Impossibile continuare mentre è in corso l'aggiornamento DART | Soluzione possibile: Mettere in pausa il data collector e attendere il completamento dell'aggiornamento DART prima di tentare un'altra richiesta di acquisizione. 
+| Errore: impossibile procedere mentre è in corso l'aggiornamento DART | Soluzione possibile: mettere in pausa il raccoglitore dati e attendere il completamento dell'aggiornamento DART prima di tentare un'altra richiesta di acquisizione. 
 |===
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

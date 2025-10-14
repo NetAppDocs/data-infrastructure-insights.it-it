@@ -14,109 +14,109 @@ summary: 'Come creare un"annotazione.'
 
 
 [role="lead"]
-È possibile creare annotazioni e assegnarle alle risorse monitorate. Le annotazioni sono note che forniscono informazioni su una risorsa, ad esempio posizione fisica, fine del ciclo di vita, Tier di storage o livelli di servizio del volume.
+Puoi creare annotazioni e assegnarle alle risorse che monitori.  Le annotazioni sono note che forniscono informazioni su una risorsa, ad esempio la posizione fisica, la fine del ciclo di vita, il livello di archiviazione o i livelli di servizio del volume.
 
 
 
 == Definizione delle annotazioni
 
-Utilizzando le annotazioni, è possibile aggiungere dati personalizzati specifici del business che corrispondano alle esigenze del business alle risorse. Anche se Data Infrastructure Insights fornisce un set di annotazioni predefinite, come ciclo di vita degli asset (compleanno o fine vita), ubicazione del data center o Tier, potresti trovarti interessato a visualizzare i dati in altri modi.
+Utilizzando le annotazioni, puoi aggiungere alle risorse dati aziendali personalizzati e specifici che corrispondono alle tue esigenze aziendali.  Sebbene Data Infrastructure Insights fornisca una serie di annotazioni predefinite, come il ciclo di vita delle risorse (data di nascita o fine vita), l'ubicazione dell'edificio o del data center e il livello, potresti voler visualizzare i dati in altri modi.
 
-I dati contenuti nelle annotazioni personalizzate integrano i dati dei dispositivi già raccolti, ad esempio il produttore dello switch, il numero di porte e le statistiche sulle prestazioni. I dati aggiunti mediante le annotazioni non vengono rilevati da Data Infrastructure Insights.
+I dati nelle annotazioni personalizzate integrano i dati del dispositivo già raccolti, come il produttore dello switch, il numero di porte e le statistiche sulle prestazioni.  I dati aggiunti tramite annotazioni non vengono rilevati da Data Infrastructure Insights.
 
 .Prima di iniziare
-* Elencare qualsiasi terminologia del settore a cui devono essere associati i dati dell'ambiente.
-* Elencare la terminologia aziendale a cui devono essere associati i dati dell'ambiente.
-* Identificare i tipi di annotazione predefiniti che potrebbero essere utilizzabili.
-* Identificare le annotazioni personalizzate da creare. È necessario creare l'annotazione prima di assegnarla a una risorsa.
+* Elencare qualsiasi terminologia del settore a cui devono essere associati i dati ambientali.
+* Elencare la terminologia aziendale a cui devono essere associati i dati ambientali.
+* Identifica i tipi di annotazione predefiniti che potresti essere in grado di utilizzare.
+* Identifica quali annotazioni personalizzate devi creare.  È necessario creare l'annotazione prima di poterla assegnare a una risorsa.
 
 
-Per creare un'annotazione, procedere come segue.
+Per creare un'annotazione, attenersi alla seguente procedura.
 
-.Fasi
-. Nel menu Data Infrastructure Insights (informazioni sull'infrastruttura dati), fare clic su *Observability (osservabilità) > Enrich (arricchisci) > Annotazioni*
-. Fare clic su *+ Annotation* per creare una nuova annotazione.
-. Immettere un Nome, una Descrizione e un tipo per la nuova annotazione.
+.Passi
+. Nel menu Data Infrastructure Insights , fare clic su *Osservabilità > Arricchisci > Annotazioni*
+. Fare clic su *+ Annotazione* per creare una nuova annotazione.
+. Inserisci un nome, una descrizione e un tipo per la nuova annotazione.
 +
 Ad esempio, immettere quanto segue per creare un'annotazione di testo che definisca la posizione fisica di una risorsa nel Data Center 4:
 
 +
-** Inserire un nome per l'annotazione, ad esempio "Location" (posizione)
-** Inserire una descrizione dell'annotazione, ad esempio "la posizione fisica è data center 4"
-** Inserire il "tipo" di annotazione, ad esempio "testo".
+** Inserisci un nome per l'annotazione, ad esempio "Posizione"
+** Inserisci una descrizione di ciò che l'annotazione descrive, ad esempio "La posizione fisica è il Data Center 4"
+** Inserisci il "tipo" di annotazione, ad esempio "Testo".
 
 
 
 
 
 
-== Assegnazione manuale delle annotazioni alle risorse
+== Assegnazione manuale di annotazioni alle risorse
 
-L'assegnazione di annotazioni alle risorse consente di ordinare, raggruppare e creare report sulle risorse in modi rilevanti per la tua azienda. Sebbene sia possibile assegnare automaticamente annotazioni a risorse di un tipo particolare utilizzando le regole di annotazione, è possibile assegnare annotazioni a una singola risorsa utilizzando la relativa pagina delle risorse.
+L'assegnazione di annotazioni alle risorse ti aiuta a ordinare, raggruppare e creare report sulle risorse in modi pertinenti alla tua attività.  Sebbene sia possibile assegnare automaticamente annotazioni a risorse di un tipo specifico utilizzando le regole di annotazione, è possibile assegnare annotazioni a una singola risorsa utilizzando la relativa pagina delle risorse.
 
 .Prima di iniziare
-* È necessario aver creato l'annotazione che si desidera assegnare.
+* Devi aver creato l'annotazione che vuoi assegnare.
 
 
-.Fasi
-. Effettua l'accesso al tuo ambiente Data Infrastructure Insights.
-. Individuare la risorsa a cui si desidera applicare l'annotazione.
+.Passi
+. Accedi al tuo ambiente Data Infrastructure Insights .
+. Individua la risorsa a cui desideri applicare l'annotazione.
 +
-** È possibile individuare le risorse eseguendo query, scegliendo da un widget dashoard o effettuando una ricerca. Una volta individuata la risorsa desiderata, fare clic sul collegamento per aprire la landing page della risorsa.
+** È possibile individuare le risorse tramite query, selezionandole da un widget del dashboard o tramite ricerca.  Una volta individuata la risorsa desiderata, clicca sul link per aprire la landing page della risorsa.
 
 
-. Nella pagina delle risorse, nella sezione User Data (dati utente), fare clic su *+ Annotation (Annotazione)*.
-. Viene visualizzata la finestra di dialogo Add Annotation (Aggiungi annotazione).
-. Selezionare un'annotazione dall'elenco.
-. Fare clic su Value (valore) ed eseguire una delle seguenti operazioni, a seconda del tipo di annotazione selezionato:
+. Nella pagina delle risorse, nella sezione Dati utente, fare clic su *+ Annotazione*.
+. Viene visualizzata la finestra di dialogo Aggiungi annotazione.
+. Seleziona un'annotazione dall'elenco.
+. Fare clic su Valore ed effettuare una delle seguenti operazioni, a seconda del tipo di annotazione selezionato:
 +
-** Se il tipo di annotazione è list, date o booleano, selezionare un valore dall'elenco.
+** Se il tipo di annotazione è elenco, data o booleano, selezionare un valore dall'elenco.
 ** Se il tipo di annotazione è testo, digitare un valore.
 
 
-. Fare clic su *Save* (Salva).
+. Fare clic su *Salva*.
 
 
-Se si desidera modificare il valore dell'annotazione dopo averlo assegnato, fare clic sul campo dell'annotazione e selezionare un valore diverso. Se l'annotazione è di tipo elenco per cui è selezionata l'opzione _Add new values on the fly_, è possibile digitare un nuovo valore oltre alla selezione di un valore esistente.
+Se si desidera modificare il valore dell'annotazione dopo averla assegnata, fare clic sul campo dell'annotazione e selezionare un valore diverso.  Se l'annotazione è di tipo elenco per cui è selezionata l'opzione _Aggiungi nuovi valori al volo_, è possibile digitare un nuovo valore oltre a selezionare un valore esistente.
 
 
 
 == Assegnazione di annotazioni utilizzando le regole di annotazione
 
-Per assegnare automaticamente le annotazioni alle risorse in base ai criteri definiti, configurare le regole di annotazione. Data Infrastructure Insights assegna le annotazioni agli asset in base a tali regole. Data Infrastructure Insights fornisce inoltre due regole di annotazione predefinite, che è possibile modificare per soddisfare le proprie esigenze o rimuoverle se non si desidera utilizzarle.
+Per assegnare automaticamente annotazioni alle risorse in base ai criteri definiti, è possibile configurare le regole di annotazione.  Data Infrastructure Insights assegna le annotazioni alle risorse in base a queste regole.  Data Infrastructure Insights fornisce anche due regole di annotazione predefinite, che puoi modificare in base alle tue esigenze o rimuovere se non desideri utilizzarle.
 
 
 
 === Creazione di regole di annotazione
 
-In alternativa all'applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le annotazioni impostate manualmente su una singola pagina di risorse hanno la precedenza sulle annotazioni basate su regole quando Insight valuta le regole di annotazione.
+In alternativa all'applicazione manuale delle annotazioni alle singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione.  Le annotazioni impostate manualmente sulle singole pagine delle risorse hanno la precedenza sulle annotazioni basate su regole quando Insight valuta le regole di annotazione.
 
 .Prima di iniziare
-È necessario aver creato una query per la regola di annotazione.
+Devi aver creato una query per la regola di annotazione.
 
-.A proposito di questa attività
-Sebbene sia possibile modificare i tipi di annotazione durante la creazione delle regole, i tipi dovrebbero essere stati definiti in anticipo.
+.Informazioni su questo compito
+Sebbene sia possibile modificare i tipi di annotazione durante la creazione delle regole, è opportuno definire i tipi in anticipo.
 
-.Fasi
-. Fare clic su *Gestisci > regole annotazione*
+.Passi
+. Fare clic su *Gestisci > Regole di annotazione*
 +
-La pagina Annotation Rules (regole di annotazione) visualizza l'elenco delle regole di annotazione esistenti.
+La pagina Regole di annotazione visualizza l'elenco delle regole di annotazione esistenti.
 
 . Fare clic su *+ Aggiungi*.
-. Effettuare le seguenti operazioni:
+. Procedi come segue:
 +
 .. Nella casella *Nome*, immettere un nome univoco che descriva la regola.
 +
-Questo nome viene visualizzato nella pagina Annotation Rules (regole di annotazione).
+Questo nome apparirà nella pagina Regole di annotazione.
 
 .. Fare clic su *Query* e selezionare la query utilizzata per applicare l'annotazione alle risorse.
-.. Fare clic su *Annotation* (Annotazione) e selezionare l'annotazione da applicare.
-.. Fare clic su *valore* e selezionare un valore per l'annotazione.
+.. Fare clic su *Annotazione* e selezionare l'annotazione che si desidera applicare.
+.. Fare clic su *Valore* e selezionare un valore per l'annotazione.
 +
-Ad esempio, se si sceglie compleanno come annotazione, si specifica una data per il valore.
+Ad esempio, se si sceglie Compleanno come annotazione, si specifica una data per il valore.
 
-.. Fare clic su *Save* (Salva)
-.. Fare clic su *Run All rules* (Esegui tutte le regole) se si desidera eseguire tutte le regole immediatamente; in caso contrario, le regole vengono eseguite a intervalli regolari pianificati.
+.. Fai clic su *Salva*
+.. Fare clic su *Esegui tutte le regole* se si desidera eseguire tutte le regole immediatamente; in caso contrario, le regole vengono eseguite a intervalli regolari pianificati.
 
 
 

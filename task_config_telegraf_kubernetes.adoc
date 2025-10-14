@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_kubernetes.html 
 keywords: telegraf 
-summary: Raccolta di dati per Kubernetes 
+summary: Raccoglitore di dati per Kubernetes 
 ---
-= Data Collector: Kubernetes
+= Raccolta dati: Kubernetes
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,33 +14,33 @@ summary: Raccolta di dati per Kubernetes
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche di Pod, nodo e container Kubernetes.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere le metriche di Kubernetes Pod, Node e Container.
 
 
 
 == Installazione
 
-Per le istruzioni di installazione di Kubernetes, consulta la link:task_config_telegraf_agent_k8s.html["Operatore di monitoring Kubernetes"]pagina.
+Per le istruzioni di installazione di Kubernetes, consultarelink:task_config_telegraf_agent_k8s.html["Operatore di monitoraggio Kubernetes"] pagina.
 
 
 
-== A proposito di Kube-state-metrics
+== Informazioni su Kube-state-metrics
 
-Il Kubernetes Monitoring Operator installa automaticamente le metriche dello stato di kube; non è necessaria alcuna interazione da parte dell'utente.
+Kubernetes Monitoring Operator installa automaticamente kube-state-metrics; non è richiesta alcuna interazione da parte dell'utente.
 
 
 
-=== Contatori Kube-state-metering
+=== Contatori Kube-state-metrics
 
-L'operatore di monitoraggio Kubernetes NetApp estrae i contatori delle metriche stato-kube elencati di seguito. Ulteriori dettagli su ciascun contatore sono disponibili all'indirizzo: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[].
+L'operatore di monitoraggio NetApp Kubernetes estrae i contatori kube-state-metrics elencati di seguito.  Maggiori dettagli su ogni contatore sono disponibili qui: https://github.com/kubernetes/kube-state-metrics/tree/main/docs#exposed-metrics[] .
 
-. Metriche DemonSet
-. Metriche di implementazione
+. Metriche DaemonSet
+. Metriche di distribuzione
 . Metriche dello spazio dei nomi
-. Metriche del nodo
-. Metriche di volume persistenti
+. Metriche dei nodi
+. Metriche del volume persistenti
 . Metriche di richiesta di volume persistente
-. Metriche pod
+. Metriche del pod
 . Metriche ReplicaSet
 . Metriche di servizio
 . Metriche StatefulSet

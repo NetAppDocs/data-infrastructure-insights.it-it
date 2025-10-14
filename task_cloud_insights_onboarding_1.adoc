@@ -4,7 +4,7 @@ permalink: task_cloud_insights_onboarding_1.html
 summary: Iscrizione a Data Infrastructure Insights e creazione del tenant. 
 keywords: onboarding, new user 
 ---
-= Insight dell'infrastruttura dati
+= Onboarding Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,50 +14,50 @@ keywords: onboarding, new user
 
 
 [role="lead"]
-Prima di poter iniziare a lavorare con Data Infrastructure Insights, è necessario registrarsi sul portale * NetApp Console*.  Se disponi già di un accesso alla console NetApp , puoi iniziare una prova gratuita di Data Infrastructure Insights con pochi rapidi passaggi.
+Prima di poter iniziare a lavorare con Data Infrastructure Insights, è necessario registrarsi sul portale * NetApp Console*.  Se disponi già di un accesso NetApp Console , puoi iniziare una prova gratuita di Data Infrastructure Insights con pochi rapidi passaggi.
 
 
 
 == Creazione dell'account NetApp Console
 
-Per iniziare a utilizzare i servizi cloud di NetApp, vai alink:https://console.netapp.com/["* Console NetApp *"^] e clicca su *Inizia*.
+Per iniziare a utilizzare i servizi cloud di NetApp, vai alink:https://console.netapp.com/["* NetApp Console*"^] e clicca su *Inizia*.
 
-* Se non hai ancora effettuato la registrazione, seleziona *Registrati*
-* Immettere un indirizzo e-mail aziendale valido e scegliere una password.
-* Immettere il nome della società e il nome completo.
-* Accettare i termini e le condizioni e selezionare *continua*.
+* Se non ti sei ancora registrato, seleziona *Registrati*
+* Inserisci un indirizzo email aziendale valido e scegli una password.
+* Inserisci il nome della tua azienda e il tuo nome completo.
+* Accetta i termini e le condizioni e seleziona *Continua*.
 * La console ti guiderà passo passo nelle fasi iniziali.
 
 
 
 
-=== Cosa succede se ho già un accesso alla console NetApp ?
+=== Cosa succede se ho già un accesso NetApp Console ?
 
-Una volta che hai un account NetApp Console, seleziona semplicemente *Accedi* sulink:https://console.netapp.com/["* Console NetApp *"^] pagina del portale.
+Una volta che hai un account NetApp Console , seleziona semplicemente *Accedi* sulink:https://console.netapp.com/["* NetApp Console*"^] pagina del portale.
 
-Inserire l'indirizzo e-mail e la password. Verrà visualizzata la pagina delle offerte cloud di NetApp.
+Inserisci il tuo indirizzo email e la password.  Verrai quindi indirizzato alla pagina delle offerte cloud di NetApp.
 
 Vai su *Analisi e controllo > Osservabilità* per saperne di più su Data Infrastructure Insights e/o richiedere una demo.
 
 
 
-== Avviare la prova gratuita di Data Infrastructure Insights
+== Inizio della prova gratuita Data Infrastructure Insights
 
-Se questa è la prima volta che accedi a Data Infrastructure Insights, sotto Data Infrastructure Insights fare clic su *Avvia prova gratuita*. Data Infrastructure Insights ti guiderà nella creazione del tenant della tua azienda, inclusa la selezione della regione in cui si desidera che il tenant risieda.
+Se è la prima volta che accedi a Data Infrastructure Insights, nell'offerta Data Infrastructure Insights , fai clic su *Avvia prova gratuita*.  Data Infrastructure Insights ti guiderà nella creazione del tenant della tua azienda, inclusa la selezione della regione in cui desideri che risieda il tenant.
 
-image:trial_region_selector.png["Selezione dell'area in cui ospitare il tenant di Data Infrastructure Insights"]
+image:trial_region_selector.png["Selezione della regione in cui ospitare il tenant Data Infrastructure Insights"]
 
 Una volta completata la creazione del tenant, utilizza le credenziali della console per accedere e iniziare la prova gratuita di 30 giorni di Data Infrastructure Insights.  Durante questa prova potrai esplorare le funzionalità offerte da Data Infrastructure Insights .
 
-Durante la prova gratuita, puoi link:concept_subscribing_to_cloud_insights.html["avvia l'abbonamento"] accedere a Data Infrastructure Insights in qualsiasi momento. Una volta effettuato l'abbonamento, puoi utilizzare le funzionalità di Data Infrastructure Insights in base all'abbonamento corrente.
+Durante la prova gratuita, puoilink:concept_subscribing_to_cloud_insights.html["inizia il tuo abbonamento"] a Data Infrastructure Insights in qualsiasi momento.  Una volta sottoscritto l'abbonamento, puoi utilizzare le funzionalità di Data Infrastructure Insights in base al tuo abbonamento attuale.
 
 
 
-== Accedi e vai
+== Sign in e vai
 
-Una volta creato il tenant, in qualsiasi momento puoi semplicemente accedere al portale della console NetApp e passare allalink:https://services.cloud.netapp.com["Servizi cloud"] pagina e seleziona *Vai a Data Infrastructure Insights*.
+Una volta creato il tenant, in qualsiasi momento puoi semplicemente accedere al portale NetApp Console e passare allalink:https://services.cloud.netapp.com["Servizi cloud"] pagina e seleziona *Vai a Data Infrastructure Insights*.
 
-Puoi anche aprire un browser direttamente all'URL del tenant di Data Infrastructure Insights, ad esempio:
+Puoi anche aprire un browser direttamente all'URL del tenant Data Infrastructure Insights , ad esempio:
 
  \https://<tenant-prefix>.c01.cloudinsights.netapp.com/
 L'URL verrà inoltre incluso nell'e-mail di invito di ciascun utente per facilitarne l'accesso e l'aggiunta ai preferiti.  Se l'utente non ha ancora effettuato l'accesso alla Console, gli verrà richiesto di effettuare l'accesso.
@@ -65,7 +65,7 @@ L'URL verrà inoltre incluso nell'e-mail di invito di ciascun utente per facilit
 
 NOTE: I nuovi utenti devono comunque registrarsi per accedere alla Console prima di poter accedere all'URL del loro tenant.
 
-La prima volta che si accede a un nuovo tenant, viene visualizzata la procedura guidata per impostare fino a link:task_getting_started_with_cloud_insights.html["*iniziare a raccogliere i dati*"].
+La prima volta che accedi a un nuovo tenant, verrai guidato attraverso la configurazione dilink:task_getting_started_with_cloud_insights.html["*inizia a raccogliere dati*"] .
 
 
 
@@ -74,7 +74,7 @@ La prima volta che si accede a un nuovo tenant, viene visualizzata la procedura 
 Per uscire da Data Infrastructure Insights, fai clic sul tuo *Nome utente* e seleziona *Disconnetti*.  Verrai reindirizzato alla schermata di accesso della Console.
 
 
-NOTE: La disconnessione da Data Infrastructure Insights comporta la disconnessione anche dalla Console.  Verrai disconnesso anche dagli altri servizi NetApp Cloud che utilizzano l'accesso alla Console.
+NOTE: La disconnessione da Data Infrastructure Insights comporta l'uscita dalla Console.  Verrai disconnesso anche dagli altri servizi NetApp Cloud che utilizzano l'accesso alla Console.
 
 
 

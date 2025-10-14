@@ -10,17 +10,17 @@ summary:
 
 
 [role="lead"]
-La schermata Fibre Channel Identify (identificazione Fibre Channel) visualizza il WWN e il WWPN dei dispositivi Fibre Channel i cui host non sono stati identificati dalla risoluzione automatica dei dispositivi. Lo schermo visualizza anche tutti i dispositivi che sono stati risolti con la risoluzione manuale del dispositivo.
+La schermata Identificazione Fibre Channel visualizza il WWN e il WWPN dei dispositivi Fibre Channel i cui host non sono stati identificati dalla risoluzione automatica dei dispositivi.  Nella schermata vengono inoltre visualizzati tutti i dispositivi che sono stati risolti manualmente.
 
-I dispositivi che sono stati risolti mediante risoluzione manuale contengono lo stato _OK_ e identificano la regola utilizzata per identificare il dispositivo. I dispositivi mancanti hanno uno stato di _Unidentified_. I dispositivi specificamente esclusi dall'identificazione hanno lo stato _excluded_. La copertura totale per l'identificazione dei dispositivi è riportata in questa pagina.
+I dispositivi che sono stati risolti tramite risoluzione manuale contengono lo stato _OK_ e identificano la regola utilizzata per identificare il dispositivo.  I dispositivi mancanti hanno lo stato _Non identificato_.  I dispositivi specificatamente esclusi dall'identificazione hanno lo stato _Escluso_.  La copertura totale per l'identificazione dei dispositivi è elencata in questa pagina.
 
-È possibile eseguire operazioni in blocco selezionando più periferiche sul lato sinistro della schermata Fibre Channel Identify (identificazione Fibre Channel). È possibile eseguire azioni su un singolo dispositivo passando il mouse su un dispositivo e selezionando i pulsanti _Identify_ o _UnIdentify_ all'estrema destra dell'elenco.
+È possibile eseguire azioni in blocco selezionando più dispositivi sul lato sinistro della schermata Identificazione Fibre Channel.  È possibile eseguire azioni su un singolo dispositivo passando il mouse sopra il dispositivo e selezionando i pulsanti _Identifica_ o _Annulla identificazione_ all'estrema destra dell'elenco.
 
-Il collegamento _Total Coverage_ visualizza un elenco del numero di dispositivi identificati/numero di dispositivi disponibili per la configurazione:
+Il collegamento _Copertura totale_ visualizza un elenco del numero di dispositivi identificati/numero di dispositivi disponibili per la configurazione:
 
 * Alias SRM
-* Alias storage
-* Cambiare alias
+* Alias di archiviazione
+* Cambia alias
 * Zone
 * Definito dall'utente
 
@@ -29,43 +29,43 @@ Il collegamento _Total Coverage_ visualizza un elenco del numero di dispositivi 
 
 == Aggiunta manuale di un dispositivo Fibre Channel
 
-È possibile aggiungere manualmente un dispositivo Fibre Channel a Data Infrastructure Insights utilizzando la funzione _Manual Add_ disponibile nella scheda Device resolution Fibre Channel Identify (identificazione Fibre Channel risoluzione dispositivo). Questo processo potrebbe essere utilizzato per la pre-identificazione di un dispositivo che si prevede venga scoperto in futuro.
+È possibile aggiungere manualmente un dispositivo Fibre Channel a Data Infrastructure Insights utilizzando la funzionalità _Aggiunta manuale_ disponibile nella scheda Identificazione Fibre Channel della risoluzione del dispositivo.  Questo processo potrebbe essere utilizzato per la pre-identificazione di un dispositivo che si prevede di scoprire in futuro.
 
 .Prima di iniziare
-Per aggiungere correttamente un identificativo del dispositivo al sistema, è necessario conoscere l'indirizzo WWN o IP e il nome del dispositivo.
+Per aggiungere correttamente l'identificazione di un dispositivo al sistema è necessario conoscere l'indirizzo WWN o IP e il nome del dispositivo.
 
-.A proposito di questa attività
-È possibile aggiungere manualmente un host, uno storage, un nastro o un dispositivo Fibre Channel sconosciuto.
+.Informazioni su questo compito
+È possibile aggiungere manualmente un dispositivo host, storage, tape o fibre channel sconosciuto.
 
 .Procedura
-. Accedere all'interfaccia utente Web di Data Infrastructure Insights
-. Fare clic su *Gestisci > risoluzione periferica*
-. Fare clic sulla scheda *Fibre Channel Identify*.
+. Accedi all'interfaccia utente web Data Infrastructure Insights
+. Fare clic su *Gestisci > Risoluzione dispositivo*
+. Fare clic sulla scheda *Identificazione Fibre Channel*.
 . Fare clic sul pulsante *Aggiungi*.
 +
-Viene visualizzata la finestra di dialogo *Add Device* (Aggiungi dispositivo)
+Viene visualizzata la finestra di dialogo *Aggiungi dispositivo*
 
-. Immettere il numero WWN o l'indirizzo IP, il nome della periferica e selezionare il tipo di periferica.
+. Inserisci l'indirizzo WWN o IP, il nome del dispositivo e seleziona il tipo di dispositivo.
 +
-Il dispositivo inserito viene aggiunto all'elenco dei dispositivi nella scheda Fibre Channel Identify (identificazione Fibre Channel). La regola è identificata come _Manuale_.
+Il dispositivo immesso viene aggiunto all'elenco dei dispositivi nella scheda Identificazione Fibre Channel.  La regola è identificata come _Manuale_.
 
 
 
 
 
-== Importazione dell'identificativo del dispositivo Fibre Channel da un file .CSV
+== Importazione dell'identificazione del dispositivo Fibre Channel da un file .CSV
 
-È possibile importare manualmente l'identificazione del dispositivo fibre channel nella risoluzione del dispositivo Data Infrastructure Insights utilizzando un elenco di dispositivi in un file .CSV.
+È possibile importare manualmente l'identificazione del dispositivo Fibre Channel nella risoluzione dei dispositivi Data Infrastructure Insights utilizzando un elenco di dispositivi in ​​un file .CSV.
 
 . Prima di iniziare
 
 
-È necessario disporre di un file .CSV formattato correttamente per importare gli identificatori dei dispositivi direttamente nella risoluzione dei dispositivi. Il file .CSV per le periferiche Fibre Channel richiede le seguenti informazioni:
+Per importare le identificazioni dei dispositivi direttamente nella risoluzione dei dispositivi, è necessario disporre di un file .CSV formattato correttamente.  Il file .CSV per i dispositivi Fibre Channel richiede le seguenti informazioni:
 
 |===
 
 
-| WWN | IP | Nome | Tipo 
+| WWN | Proprietà intellettuale | Nome | Tipo 
 |===
 I campi dati devono essere racchiusi tra virgolette, come mostrato nell'esempio seguente.
 
@@ -76,45 +76,45 @@ I campi dati devono essere racchiusi tra virgolette, come mostrato nell'esempio 
 "WWN:1860","ADDRESS1860|IP1860","NAME-1860","HOST"
 ....
 
-NOTE: Come procedura consigliata, si consiglia di esportare prima le informazioni di identificazione Fibre Channel in un file .CSV, apportare le modifiche desiderate in tale file e quindi importarlo nuovamente in Fibre Channel Identify. In questo modo, le colonne previste sono presenti e nell'ordine corretto.
+NOTE: Come buona pratica, si consiglia di esportare prima le informazioni di Fibre Channel Identify in un file .CSV, apportare le modifiche desiderate in tale file e quindi importare nuovamente il file in Fibre Channel Identify.  Ciò garantisce che le colonne previste siano presenti e nell'ordine corretto.
 
-Per importare le informazioni di identificazione Fibre Channel:
+Per importare le informazioni di identificazione del Fibre Channel:
 
-. Accedere all'interfaccia utente Web di Data Infrastructure Insights.
-. Fare clic su *Gestisci > risoluzione periferica*
-. Selezionare la scheda *Fibre Channel Identify*.
-. Fare clic sul pulsante *identifica > identifica dal file*.
-. Accedere alla cartella contenente i file .CSV da importare e selezionare il file desiderato.
+. Accedi all'interfaccia utente web Data Infrastructure Insights .
+. Fare clic su *Gestisci > Risoluzione dispositivo*
+. Selezionare la scheda *Identificazione Fibre Channel*.
+. Fare clic sul pulsante *Identifica > Identifica dal file*.
+. Vai alla cartella contenente i file .CSV da importare e seleziona il file desiderato.
 +
-I dispositivi immessi vengono aggiunti all'elenco dei dispositivi nella scheda Fibre Channel Identify (identificazione Fibre Channel). La "regola" è identificata come Manuale.
+I dispositivi immessi vengono aggiunti all'elenco dei dispositivi nella scheda Identificazione Fibre Channel.  La “Regola” è identificata come Manuale.
 
 
 
 
 
-== Esportazione degli identificatori dei dispositivi Fibre Channel in un file .CSV
+== Esportazione delle identificazioni dei dispositivi Fibre Channel in un file .CSV
 
-È possibile esportare gli identificativi dei dispositivi in fibra ottica esistenti in un file .CSV dalla funzione di risoluzione dei dispositivi Data Infrastructure Insights. È possibile esportare un'identificazione del dispositivo in modo da poterla modificare e quindi importarla nuovamente in Data Infrastructure Insights, dove viene utilizzata per identificare i dispositivi simili a quelli che corrispondono originariamente all'identificazione esportata.
+È possibile esportare le identificazioni dei dispositivi Fibre Channel esistenti in un file .CSV dalla funzionalità di risoluzione dei dispositivi Data Infrastructure Insights .  Potresti voler esportare l'identificazione di un dispositivo in modo da poterla modificare e poi importarla nuovamente in Data Infrastructure Insights, dove verrà utilizzata per identificare dispositivi simili a quelli che originariamente corrispondevano all'identificazione esportata.
 
-.A proposito di questa attività
-Questo scenario può essere utilizzato quando le periferiche hanno attributi simili che possono essere facilmente modificati nel file .CSV e quindi reimportati nel sistema.
+.Informazioni su questo compito
+Questo scenario potrebbe essere utilizzato quando i dispositivi hanno attributi simili che possono essere facilmente modificati nel file .CSV e quindi importati nuovamente nel sistema.
 
-Quando si esporta l'identificazione di un dispositivo Fibre Channel in un file .CSV, il file contiene le seguenti informazioni nell'ordine indicato:
+Quando si esporta l'identificazione di un dispositivo Fibre Channel in un file .CSV, il file contiene le seguenti informazioni nell'ordine mostrato:
 
 |===
 
 
-| WWN | IP | Nome | Tipo 
+| WWN | Proprietà intellettuale | Nome | Tipo 
 |===
 .Procedura
-. Accedere all'interfaccia utente Web di Data Infrastructure Insights.
-. Fare clic su *Gestisci > risoluzione periferica*
-. Selezionare la scheda *Fibre Channel Identify*.
-. Selezionare il dispositivo Fibre Channel o i dispositivi di cui si desidera esportare l'identificativo.
-. Fare clic sul pulsante *Esporta*image:ExportButton.png["Pulsante Export (Esporta)"].
+. Accedi all'interfaccia utente web Data Infrastructure Insights .
+. Fare clic su *Gestisci > Risoluzione dispositivo*
+. Selezionare la scheda *Identificazione Fibre Channel*.
+. Selezionare il dispositivo o i dispositivi Fibre Channel di cui si desidera esportare l'identificazione.
+. Fare clic su *Esporta*image:ExportButton.png["Pulsante Esporta"] pulsante.
 +
 Selezionare se aprire il file .CSV o salvarlo.
 
 
 
-Contenuti correlati: link:task_device_resolution_ip.html["Risoluzione del dispositivo IP"] link:task_device_resolution_rules.html["Creazione di regole di risoluzione dei dispositivi"] link:task_device_resolution_preferences.html["Impostazione delle preferenze di risoluzione del dispositivo"]
+Imparentato:link:task_device_resolution_ip.html["Risoluzione del dispositivo IP"] link:task_device_resolution_rules.html["Creazione di regole di risoluzione del dispositivo"] link:task_device_resolution_preferences.html["Impostazione delle preferenze di risoluzione del dispositivo"]

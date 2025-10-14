@@ -2,70 +2,70 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_hadoop.html 
 keywords: telegraf, installation, install, Hadoop 
-summary: Configurazione del data collector Hadoop 
+summary: Configurazione del raccoglitore dati Hadoop 
 ---
-= Data Collector Hadoop
+= Raccoglitore dati Hadoop
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da Hadoop.
+Data Infrastructure Insights utilizza questo strumento di raccolta dati per raccogliere metriche da Hadoop.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegli Hadoop.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Hadoop.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
 image:HadoopDCConfigLinux-1.png["Configurazione di Hadoop"] image:HadoopDCConfigLinux-2.png["Configurazione di Hadoop"]
 
 
 
-== Setup (Configurazione)
+== Impostare
 
-Un'implementazione Hadoop completa comprende i seguenti componenti:
+Una distribuzione completa di Hadoop prevede i seguenti componenti:
 
-* NameNode: Il sistema primario HDFS (Distributed file System) di Hadoop. Coordina una serie di DataNode.
-* Secondary NameNode (nodo secondario): Un failover a caldo per il nodo principale di NameNode. In Hadoop la promozione a NameNode non avviene automaticamente. Secondary NameNode raccoglie le informazioni da NameNode per essere pronto per essere promosso quando necessario.
+* NameNode: il sistema primario del file system distribuito Hadoop (HDFS).  Coordina una serie di DataNode.
+* NameNode secondario: un failover a caldo per il NameNode principale.  In Hadoop la promozione a NameNode non avviene automaticamente.  Il NameNode secondario raccoglie informazioni dal NameNode per essere pronto a essere promosso quando necessario.
 * DataNode: Proprietario effettivo dei dati.
-* ResourceManager: Il sistema primario di calcolo (yarn). Coordina una serie di NodeManager.
-* NodeManager: La risorsa per il calcolo. Posizione effettiva per l'esecuzione delle applicazioni.
-* JobHistoryServer: Responsabile della manutenzione di tutte le richieste relative alla cronologia del lavoro.
+* ResourceManager: il sistema di elaborazione primario (Yarn).  Coordina una serie di NodeManager.
+* NodeManager: la risorsa per il calcolo.  Posizione effettiva per l'esecuzione delle applicazioni.
+* JobHistoryServer: responsabile della gestione di tutte le richieste relative alla cronologia dei lavori.
 
 
-Il plugin Hadoop si basa sul plugin di telegraf, Jolokia. Come requisito per raccogliere informazioni da tutti i componenti Hadoop, JMX deve essere configurato ed esposto tramite Jolokia su tutti i componenti.
+Il plugin Hadoop è basato sul plugin Jolokia di Telegraf.  Poiché è un requisito per raccogliere informazioni da tutti i componenti Hadoop, JMX deve essere configurato ed esposto tramite Jolokia su tutti i componenti.
 
 
 
 === Compatibilità
 
-La configurazione è stata sviluppata rispetto alla versione 2.9 di Hadoop.
+La configurazione è stata sviluppata per Hadoop versione 2.9.2.
 
 
 
-=== Configurazione
+=== Impostazione
 
 
 
-==== Jolokia Agent Jar
+==== Barattolo dell'agente Jolokia
 
-Per tutti i singoli componenti, è necessario scaricare una versione del file Jar dell'agente di Jlokia. La versione testata era link:https://jolokia.org/download.html["Agente di Jookia 1.6.0"].
+Per tutti i singoli componenti è necessario scaricare una versione del file jar dell'agente Jolokia.  La versione testata eralink:https://jolokia.org/download.html["Agente Jolokia 1.6.0"] .
 
-Le istruzioni riportate di seguito presuppongono che il file jar scaricato (jookia-jvm-1.6.0-Agent.jar) sia posizionato nella posizione '/opt/hadoop/lib/'.
+Le istruzioni riportate di seguito presuppongono che il file jar scaricato (jolokia-jvm-1.6.0-agent.jar) sia posizionato nel percorso '/opt/hadoop/lib/'.
 
 
 
-==== NameNode
+==== NomeNodo
 
-Per configurare NameNode in modo da esporre l'API di Jookia, è possibile configurare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
+Per configurare NameNode in modo che esponga l'API Jolokia, puoi impostare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
 
 [listing]
 ----
@@ -74,9 +74,9 @@ You can choose a different port for JMX (8000 above) and Jolokia (7800). If you 
 ----
 
 
-==== Node secondario
+==== Nome secondarioNodo
 
-Per configurare il nodo del nome secondario in modo che esponga l'API di Jookia, è possibile configurare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
+Per configurare il Secondary NameNode in modo che esponga l'API Jolokia, puoi impostare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
 
 [listing]
 ----
@@ -85,9 +85,9 @@ You can choose a different port for JMX (8002 above) and Jolokia (7802). If you 
 ----
 
 
-==== DataNode
+==== Nodo dati
 
-Per configurare i DataNode in modo che espongano l'API di Jookia, è possibile configurare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
+Per configurare i DataNode in modo che espongano l'API Jolokia, puoi impostare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
 
 [listing]
 ----
@@ -98,7 +98,7 @@ You can choose a different port for JMX (8001 above) and Jolokia (7801). If you 
 
 ==== ResourceManager
 
-Per configurare ResourceManager in modo da esporre l'API di Jlokia, è possibile configurare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
+Per configurare ResourceManager in modo che esponga l'API Jolokia, puoi impostare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
 
 [listing]
 ----
@@ -107,9 +107,9 @@ You can choose a different port for JMX (8003 above) and Jolokia (7803). If you 
 ----
 
 
-==== NodeManager
+==== Gestore dei nodi
 
-Per configurare i NodeManager in modo che espongano l'API di Jookia, è possibile configurare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
+Per configurare i NodeManager in modo che espongano l'API Jolokia, puoi impostare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
 
 [listing]
 ----
@@ -118,9 +118,9 @@ You can choose a different port for JMX (8004 above) and Jolokia (7804). If you 
 ----
 
 
-==== Server JobHistory
+==== JobHistoryServer
 
-Per configurare il server di StoriaLavoro in modo che esponga l'API di Jookia, è possibile configurare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
+Per configurare JobHistoryServer in modo che esponga l'API Jolokia, è possibile impostare quanto segue in <HADOOP_HOME>/etc/hadoop/hadoop-env.sh:
 
 [listing]
 ----
@@ -138,19 +138,19 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: 
 
 
-| Node secondario Hadoop | Server dello spazio dei nomi del cluster | Nome nodo nodo IP Compile Info versione 
+| Nome secondario HadoopNode | Server dello spazio dei nomi del cluster | Nome nodo IP nodo Informazioni di compilazione Versione 
 
 
 | Hadoop NodeManager | Server dello spazio dei nomi del cluster | Nome nodo IP nodo 
 
 
-| ResourceManager di Hadoop | Server dello spazio dei nomi del cluster | Nome nodo IP nodo 
+| Hadoop Resource Manager | Server dello spazio dei nomi del cluster | Nome nodo IP nodo 
 
 
-| DataNode Hadoop | Server dello spazio dei nomi del cluster | Nome nodo IP nodo ID cluster versione 
+| Hadoop DataNode | Server dello spazio dei nomi del cluster | Nome nodo IP nodo ID cluster Versione 
 
 
-| Node di Hadoop | Server dello spazio dei nomi del cluster | Nome nodo IP nodo ID transazione ultimo tempo di scrittura dall'ultimo caricamento modifiche ha Stato file sistema Stato blocco ID pool ID cluster informazioni di compilazione versione distinta Conteggio versione 
+| Nome nodo Hadoop | Server dello spazio dei nomi del cluster | Nome nodo IP nodo ID transazione Ultima scrittura Ora dall'ultimo caricamento Modifiche Stato HA Stato del file system ID del pool di blocchi ID del cluster Informazioni sulla compilazione Conteggio distinta delle versioni Versione 
 
 
 | Hadoop JobHistoryServer | Server dello spazio dei nomi del cluster | Nome nodo IP nodo 
@@ -159,4 +159,4 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

@@ -14,7 +14,7 @@ keywords: features
 
 
 [role="lead"]
-NetApp continua a migliorare e migliorare i propri prodotti e servizi. Ecco alcune delle più recenti caratteristiche e funzionalità disponibili in Data Infrastructure Insights (in precedenza Cloud Insights).
+NetApp migliora e potenzia costantemente i suoi prodotti e servizi.  Ecco alcune delle ultime funzionalità e caratteristiche disponibili in Data Infrastructure Insights (in precedenza Cloud Insights).
 
 
 
@@ -24,19 +24,19 @@ NetApp continua a migliorare e migliorare i propri prodotti e servizi. Ecco alcu
 
 === L'entità aziendale può essere utilizzata nei filtri
 
-Le annotazioni dell'entità aziendale possono essere utilizzate nei filtri per query, widget, policy di performance e landing page.
+Le annotazioni delle entità aziendali possono essere utilizzate nei filtri per query, widget, criteri di prestazione e landing page.
 
 
 
-=== Drill-down disponibile per i widget Single-Value e Gauge e per tutti i widget inseriti da "All"
+=== Drill-down disponibile per i widget a valore singolo e indicatore e per tutti i widget selezionati tramite "Tutti"
 
-Facendo clic sul valore in un widget a valore singolo o gauge si apre una pagina di query che mostra i risultati della prima query utilizzata nel widget. Inoltre, facendo clic sulla legenda per qualsiasi widget i cui dati vengono arrotolati da "tutti", viene visualizzata anche una pagina di query che mostra i risultati della prima query utilizzata nel widget.
+Facendo clic sul valore in un widget a valore singolo o indicatore si apre una pagina di query che mostra i risultati della prima query utilizzata nel widget.  Inoltre, facendo clic sulla legenda di un widget i cui dati sono raggruppati per "Tutti", si aprirà anche una pagina di query che mostra i risultati della prima query utilizzata nel widget.
 
 
 
 === Periodo di prova esteso
 
-I nuovi utenti che si iscrivono per una versione di prova gratuita di Cloud Insights hanno ora 30 giorni per valutare il prodotto. Si tratta di un aumento rispetto al periodo di prova precedente di 14 giorni.
+I nuovi utenti che si iscrivono alla prova gratuita di Cloud Insights hanno ora 30 giorni per valutare il prodotto.  Si tratta di un aumento rispetto al precedente periodo di prova di 14 giorni.
 
 
 
@@ -48,7 +48,7 @@ Il calcolo delle unità gestite (MU) in Cloud Insights è stato modificato come 
 * 1 unità gestita = 4 TB di capacità non formattata di dischi fisici o virtuali
 
 
-Questa modifica raddoppia effettivamente la capacità dell'ambiente che è possibile monitorare utilizzando l'abbonamento Cloud Insights esistente.
+Questa modifica raddoppia di fatto la capacità dell'ambiente che puoi monitorare utilizzando il tuo abbonamento Cloud Insights esistente.
 
 '''
 
@@ -61,36 +61,36 @@ Questa modifica raddoppia effettivamente la capacità dell'ambiente che è possi
 
 
 
-=== Creazione di report
+=== Segnalazione
 
-link:reporting_overview.html["*Report Cloud Insights*"] è uno strumento di business intelligence che consente di visualizzare report predefiniti o di creare report personalizzati. Con Reporting è possibile eseguire le seguenti attività:
+link:reporting_overview.html["* Report di Cloud Insights *"]è uno strumento di business intelligence che consente di visualizzare report predefiniti o di creare report personalizzati.  Con Reporting puoi svolgere le seguenti attività:
 
-* Eseguire un report predefinito
-* Creare un report personalizzato
-* Personalizzare il formato del report e il metodo di consegna
-* Pianificare l'esecuzione automatica dei report
-* Invia report via email
+* Esegui un report predefinito
+* Crea un report personalizzato
+* Personalizza il formato del report e il metodo di consegna
+* Pianifica l'esecuzione automatica dei report
+* Rapporti via e-mail
 * Utilizzare i colori per rappresentare le soglie sui dati
 
 
-I report Cloud Insights possono generare report personalizzati per aree come chargeback, analisi dei consumi e previsioni e possono aiutare a rispondere a domande come:
+Cloud Insights Reporting può generare report personalizzati per aree quali chargeback, analisi dei consumi e previsioni e può aiutare a rispondere a domande come le seguenti:
 
-* Di quale inventario dispongo?
+* Che inventario ho?
 * Dov'è il mio inventario?
-* Chi utilizza le nostre risorse?
-* Qual è il chargeback per lo storage allocato per una business unit?
-* Per quanto tempo è necessario acquisire ulteriore capacità di storage?
-* Le business unit sono allineate lungo i livelli di storage appropriati?
-* Come cambia l'allocazione dello storage in un mese, un quarto o un anno?
+* Chi utilizza i nostri beni?
+* A cosa si riferisce il chargeback per lo spazio di archiviazione assegnato a un'unità aziendale?
+* Quanto tempo ci vorrà prima che io abbia bisogno di acquisire ulteriore capacità di archiviazione?
+* Le unità aziendali sono allineate lungo i livelli di archiviazione appropriati?
+* Come cambia l'allocazione dello spazio di archiviazione nel corso di un mese, un trimestre o un anno?
 
 
-I report sono disponibili con Cloud Insights *Premium Edition*.
+La creazione di report è disponibile con Cloud Insights *Premium Edition*.
 
 
 
-=== Miglioramenti di Active IQ
+=== Miglioramenti Active IQ
 
-link:concept_activeiq.html["Rischi Active IQ"] sono ora disponibili come oggetti che possono essere interrogati e utilizzati nei widget della tabella del dashboard. Sono inclusi i seguenti attributi degli oggetti rischi: * Categoria * Categoria di mitigazione * potenziale impatto * dettaglio del rischio * severità * origine * Storage * Storage Node * Categoria UI
+link:concept_activeiq.html["Rischi Active IQ"]sono ora disponibili come oggetti che possono essere interrogati e utilizzati nei widget della tabella della dashboard.  Sono inclusi i seguenti attributi dell'oggetto Rischi: * Categoria * Categoria di mitigazione * Impatto potenziale * Dettagli del rischio * Gravità * Origine * Archiviazione * Nodo di archiviazione * Categoria dell'interfaccia utente
 
 '''
 
@@ -99,31 +99,31 @@ link:concept_activeiq.html["Rischi Active IQ"] sono ora disponibili come oggetti
 
 
 
-=== Nuovi widget Gauge
+=== Nuovi widget di misura
 
-Sono disponibili due nuovi widget per visualizzare i dati a valore singolo sui dashboard in colori accattivanti in base alle soglie specificate. È possibile visualizzare i valori utilizzando un *indicatore solido* o *indicatore elenco*. I valori che rientrano nell'intervallo di avviso sono visualizzati in arancione. I valori nell'intervallo critico vengono visualizzati in rosso. I valori al di sotto della soglia di avviso vengono visualizzati in verde.
+Sono disponibili due nuovi widget per visualizzare dati a valore singolo sulle dashboard in colori accattivanti in base alle soglie specificate.  È possibile visualizzare i valori utilizzando un *indicatore solido* o un *indicatore a proiettile*.  I valori che rientrano nell'intervallo di avviso vengono visualizzati in arancione.  I valori nell'intervallo critico sono visualizzati in rosso.  I valori inferiori alla soglia di avviso vengono visualizzati in verde.
 
-image:Gauge-Solid.png["Indicatore continuo/tradizionale"] image:Gauge-Bullet.png["Indicatore a puntino"]
+image:Gauge-Solid.png["Calibro solido/tradizionale"] image:Gauge-Bullet.png["Calibro proiettile"]
 
 
 
-=== Formattazione del colore condizionale per il widget a valore singolo
+=== Formattazione condizionale del colore per il widget a valore singolo
 
-È ora possibile visualizzare il widget valore singolo con uno sfondo colorato in base alle soglie impostate.
+Ora puoi visualizzare il widget Valore singolo con uno sfondo colorato in base alle soglie impostate.
 
 image:Single-Value Widgets - Formatted.png["Widget a valore singolo con formattazione"]
 
 
 
-=== Invita utenti durante l'inserimento
+=== Invita gli utenti durante l'onboarding
 
-In qualsiasi momento durante il processo di assunzione, puoi fare clic su Amministrazione > Gestione utenti > +utente per invitare altri utenti nel tuo ambiente Cloud Insights. Tenere presente che gli utenti con ruoli _Guest_ o _User_ otterranno maggiori benefici una volta completata l'assunzione e raccolti i dati.
+In qualsiasi momento durante il processo di onboarding, puoi fare clic su Amministrazione > Gestione utenti > +Utente per invitare altri utenti al tuo ambiente Cloud Insights .  Tieni presente che gli utenti con ruoli _Ospite_ o _Utente_ trarranno maggiori vantaggi una volta completato l'onboarding e raccolti i dati.
 
 
 
-=== Miglioramento della pagina dei dettagli di Data Collector
+=== Miglioramento della pagina dei dettagli del Data Collector
 
-La pagina dei dettagli del data collector è stata migliorata per visualizzare gli errori in un formato più leggibile. Gli errori vengono ora visualizzati in una tabella separata della pagina, con ciascun errore visualizzato su una riga separata in caso di errori multipli per il data collector.
+La pagina dei dettagli del raccoglitore dati è stata migliorata per visualizzare gli errori in un formato più leggibile.  Gli errori vengono ora visualizzati in una tabella separata sulla pagina, con ogni errore visualizzato su una riga separata nel caso di più errori per il raccoglitore dati.
 
 '''
 
@@ -132,15 +132,15 @@ La pagina dei dettagli del data collector è stata migliorata per visualizzare g
 
 
 
-=== Tutti i Data Collector rispetto a quelli disponibili
+=== Tutti i collettori di dati disponibili vs.
 
-Quando si aggiungono dati di raccolta al proprio ambiente, è possibile impostare un filtro per visualizzare solo i dati di raccolta disponibili in base al livello di abbonamento o a tutti i dati di raccolta.
+Quando aggiungi raccoglitori di dati al tuo ambiente, puoi impostare un filtro per visualizzare solo i raccoglitori di dati disponibili in base al tuo livello di abbonamento oppure tutti i raccoglitori di dati.
 
 
 
 === Integrazione ActiveIQ
 
-Cloud Insights raccoglie i dati da NetApp ActiveIQ, che fornisce una serie di visualizzazioni, analytics e altri servizi correlati al supporto ai clienti NetApp e ai loro sistemi hardware/software. Cloud Insights si integra con i sistemi di gestione dei dati ONTAP. Per ulteriori informazioni, vedere link:concept_activeiq.html["Active IQ"] .
+Cloud Insights raccoglie dati da NetApp ActiveIQ, che fornisce una serie di visualizzazioni, analisi e altri servizi di supporto correlati ai clienti NetApp e ai loro sistemi hardware/software.  Cloud Insights si integra con i sistemi di gestione dei dati ONTAP . Vedere link:concept_activeiq.html["Active IQ"] per maggiori informazioni.
 
 '''
 
@@ -153,23 +153,23 @@ Cloud Insights raccoglie i dati da NetApp ActiveIQ, che fornisce una serie di vi
 
 Dashboard e widget sono stati migliorati con le seguenti modifiche:
 
-* Oltre a somma, min, Max e Avg, *Count* è ora un'opzione per il rolloup nei widget a valore singolo. Quando si esegue il rollup per "Conteggio", Cloud Insights verifica se un oggetto è attivo o meno e aggiunge solo quelli attivi al conteggio. Il numero risultante è soggetto a aggregazione e filtri.
-* Nel widget valore singolo, è possibile visualizzare il numero risultante con 0, 1, 2, 3 o 4 cifre decimali.
-* I grafici a linee mostrano un'etichetta e le unità dell'asse quando viene tracciato un singolo contatore.
-* L'opzione *Transform* è ora disponibile per i dati di integrazione dei servizi in tutti i widget Time-Series per tutte le metriche. Per qualsiasi contatore di integrazione dei servizi (Telegraf) o metrica nei widget di serie temporali (linea, Spline, Area, Area impilata), è possibile scegliere la modalità desideratalink:concept_telegraf_display_options.html["Trasformare i valori"]. Nessuno (valore visualizzato così com'è), somma, Delta, cumulativo, ecc.
+* Oltre a Somma, Min, Max e Media, *Conteggio* è ora un'opzione per il rollup nei widget a valore singolo.  Quando si esegue il rollup in base al "Conteggio", Cloud Insights verifica se un oggetto è attivo o meno e aggiunge solo quelli attivi al conteggio.  Il numero risultante è soggetto ad aggregazione e filtri.
+* Nel widget Valore singolo, ora puoi scegliere di visualizzare il numero risultante con 0, 1, 2, 3 o 4 cifre decimali.
+* I grafici a linee mostrano un'etichetta dell'asse e le unità quando viene tracciato un singolo contatore.
+* L'opzione *Trasforma* è ora disponibile per i dati di integrazione dei servizi in tutti i widget delle serie temporali per tutte le metriche.  Per qualsiasi contatore o metrica di integrazione dei servizi (Telegraf) nei widget delle serie temporali (linea, spline, area, area impilata), ti viene data la possibilità di scegliere come desiderilink:concept_telegraf_display_options.html["Trasformare i valori"] .  Nessuno (visualizza il valore così com'è), Somma, Delta, Cumulativo, ecc.
 
 
 
 
-=== Downgrade a Basic Edition
+=== Downgrade all'edizione base
 
-Il downgrade a Basic Edition non riesce e viene visualizzato un messaggio di errore se non è stato configurato alcun dispositivo NetApp disponibile che abbia completato correttamente un sondaggio negli ultimi 7 giorni.
+Il downgrade alla Basic Edition fallisce e viene visualizzato un messaggio di errore se non è disponibile alcun dispositivo NetApp configurato che abbia completato correttamente un polling negli ultimi 7 giorni.
 
 
 
-=== Raccolta delle metriche dello stato del Kube
+=== Raccolta di Kube-State-Metrics
 
-link:task_config_telegraf_kubernetes.html["Kubernetes Data Collector"]Attualmente raccoglie oggetti e contatori dal plugin kube-state-metrics, espandendo notevolmente il numero e l'ambito delle metriche disponibili per il monitoraggio in Cloud Insights.
+ILlink:task_config_telegraf_kubernetes.html["Raccoglitore dati Kubernetes"] ora raccoglie oggetti e contatori dal plugin kube-state-metrics, ampliando notevolmente il numero e l'ambito delle metriche disponibili per il monitoraggio in Cloud Insights.
 
 '''
 
@@ -178,18 +178,18 @@ link:task_config_telegraf_kubernetes.html["Kubernetes Data Collector"]Attualment
 
 
 
-=== Edizioni Cloud Insights
+=== Edizioni di Cloud Insights
 
-Cloud Insights è disponibile in diverse edizioni per soddisfare le tue esigenze di budget e di business. Gli attuali clienti NetApp con un account di supporto NetApp attivo possono usufruire di 7 giorni di conservazione dei dati e di accesso ai data collezioner NetApp con la * Basic Edition* gratuita, oppure ottenere una maggiore conservazione dei dati, l'accesso a tutti i data collezioner supportati, il supporto tecnico esperto e molto altro ancora con *Standard Edition*. Per ulteriori informazioni sulle funzioni disponibili, vedere il sito NetApplink:https://www.netapp.com/cloud-services/cloud-insights/["Cloud Insights"].
-
-
-
-=== Nuovo Data Collector per l'infrastruttura: NetApp HCI
-
-* link:task_dc_na_hci.html["Centro virtuale NetApp HCI"] È stato aggiunto come raccoglitore dati infrastruttura. Il data collector del centro virtuale HCI raccoglie le informazioni dell'host NetApp HCI e richiede privilegi di sola lettura per tutti gli oggetti all'interno del centro virtuale.
+Cloud Insights è disponibile in diverse edizioni per adattarsi al tuo budget e alle tue esigenze aziendali.  I clienti NetApp esistenti con un account di supporto NetApp attivo possono usufruire di 7 giorni di conservazione dei dati e accesso ai data collector NetApp con la versione gratuita *Basic Edition*, oppure ottenere una maggiore conservazione dei dati, accesso a tutti i data collector supportati, supporto tecnico esperto e altro ancora con la *Standard Edition*.  Per ulteriori informazioni sulle funzionalità disponibili, vedere NetApplink:https://www.netapp.com/cloud-services/cloud-insights/["Cloud Insights"] sito.
 
 
-Nota: Il data collector HCI acquisisce solo dal centro virtuale HCI. Per raccogliere i dati dal sistema di archiviazione, è necessario configurare anche il data collector NetApplink:task_dc_na_solidfire["SolidFire"].
+
+=== Nuovo raccoglitore di dati infrastrutturali: NetApp HCI
+
+* link:task_dc_na_hci.html["Centro virtuale NetApp HCI"]è stato aggiunto come raccoglitore di dati dell'infrastruttura.  Il raccoglitore dati HCI Virtual Center raccoglie informazioni sull'host NetApp HCI e richiede privilegi di sola lettura su tutti gli oggetti all'interno del Virtual Center.
+
+
+Si noti che il raccoglitore dati HCI acquisisce solo dall'HCI Virtual Center.  Per raccogliere dati dal sistema di archiviazione, è necessario configurare anche NetApplink:task_dc_na_solidfire["SolidFire"] raccoglitore di dati.
 
 '''
 
@@ -198,37 +198,37 @@ Nota: Il data collector HCI acquisisce solo dal centro virtuale HCI. Per raccogl
 
 
 
-=== Nuovo Service Data Collector: Kapacitor
+=== Nuovo servizio di raccolta dati: Kapacitor
 
-* link:task_config_telegraf_kapacitor.html["Kapacitor"] è stato aggiunto come data collector per i servizi.
-
-
-
-
-=== Integrazione con i servizi via Telegraf
-
-Oltre all'acquisizione dei dati dai dispositivi dell'infrastruttura, come switch e storage, Cloud Insights raccoglie ora i dati da una vasta gamma di sistemi operativi e servizi, utilizzando link:task_config_telegraf_agent.html["Telegraf come suo agente"] per la raccolta dei dati di integrazione. Telegraf è un agente basato su plug-in che può essere utilizzato per raccogliere e segnalare le metriche. I plug-in di input vengono utilizzati per raccogliere le informazioni desiderate nell'agente accedendo direttamente al sistema/sistema operativo, chiamando API di terze parti o ascoltando flussi configurati.
-
-La documentazione per le integrazioni attualmente supportate è disponibile nel menu a sinistra sotto *riferimento e supporto*.
-
-
-
-=== Risorse di macchine virtuali per lo storage
-
-* Le macchine virtuali per lo storage (SVM) sono disponibili come risorse in Cloud Insights. Le SVM dispongono di una propria pagina di destinazione delle risorse e possono essere visualizzate e utilizzate in ricerche, query e filtri. Le SVM possono essere utilizzate anche nei widget della dashboard e associate alle annotazioni.
+* link:task_config_telegraf_kapacitor.html["Condensatore"]è stato aggiunto come raccoglitore di dati per i servizi.
 
 
 
 
-=== Requisiti di sistema dell'unità di acquisizione ridotti
+=== Integrazione con i servizi tramite Telegraf
 
-* I requisiti di CPU e memoria del sistema per il software dell'unità di acquisizione (AU) sono stati ridotti. I nuovi requisiti sono:
+Oltre all'acquisizione di dati da dispositivi infrastrutturali quali switch e storage, Cloud Insights ora raccoglie dati da una varietà di sistemi operativi e servizi, utilizzandolink:task_config_telegraf_agent.html["Telegraf come suo agente"] per la raccolta di dati di integrazione.  Telegraf è un agente basato su plugin che può essere utilizzato per raccogliere e segnalare metriche.  I plugin di input vengono utilizzati per raccogliere le informazioni desiderate nell'agente accedendo direttamente al sistema/sistema operativo, chiamando API di terze parti o ascoltando flussi configurati.
+
+La documentazione per le integrazioni attualmente supportate è disponibile nel menu a sinistra, sotto *Riferimento e supporto*.
+
+
+
+=== Risorse di macchine virtuali di archiviazione
+
+* Le macchine virtuali di archiviazione (SVM) sono disponibili come risorse in Cloud Insights.  Le SVM hanno le proprie Asset Landing Page e possono essere visualizzate e utilizzate in ricerche, query e filtri.  Le SVM possono essere utilizzate anche nei widget della dashboard e associate alle annotazioni.
+
+
+
+
+=== Requisiti di sistema ridotti per l'unità di acquisizione
+
+* Sono stati ridotti i requisiti di CPU e memoria del sistema per il software Acquisition Unit (AU).  I nuovi requisiti sono:
 
 
 |===
 
 
-| *Componente* | *Requisito precedente* | *Nuovo requisito* 
+| *Componente* | *Vecchio requisito* | *Nuovo requisito* 
 
 
 | Core della CPU | 4 | 2 
@@ -240,16 +240,16 @@ La documentazione per le integrazioni attualmente supportate è disponibile nel 
 
 === Piattaforme aggiuntive supportate
 
-* Le seguenti piattaforme sono state aggiunte a quelle attualmente link:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["Supportato per Cloud Insights"]:
+* Le seguenti piattaforme sono state aggiunte a quelle attualmente disponibililink:https://docs.netapp.com/us-en/cloudinsights/concept_acquisition_unit_requirements.html["supportato per Cloud Insights"] :
 
 
 |===
 
 
-| Linux | Windows 
+| Linux | Finestre 
 
 
-| CentOS 7.3 64-bit CentOS 7.4 64-bit CentOS 7.6 64-bit Debian 9 64-bit Red Hat Enterprise Linux 7.3 64-bit Red Hat Enterprise Linux 7.4 64-bit Red Hat Enterprise Linux 7.6 64-bit Ubuntu Server 18.04 LTS | Microsoft Windows 10 64-bit Microsoft Windows Server 2008 R2 Microsoft Windows Server 2019 
+| CentOS 7.3 64 bit CentOS 7.4 64 bit CentOS 7.6 64 bit Debian 9 64 bit Red Hat Enterprise Linux 7.3 64 bit Red Hat Enterprise Linux 7.4 64 bit Red Hat Enterprise Linux 7.6 64 bit Ubuntu Server 18.04 LTS | Microsoft Windows 10 a 64 bit Microsoft Windows Server 2008 R2 Microsoft Windows Server 2019 
 |===
 '''
 
@@ -258,12 +258,12 @@ La documentazione per le integrazioni attualmente supportate è disponibile nel 
 
 
 
-=== Filtra macchine virtuali per tag
+=== Filtra le macchine virtuali per tag
 
-Quando si configurano i seguenti data collection, è possibile filtrare per includere o escludere macchine virtuali dalla raccolta dati in base ai tag o alle etichette.
+Quando si configurano i seguenti raccoglitori di dati, è possibile filtrare per includere o escludere le macchine virtuali dalla raccolta dati in base ai relativi tag o etichette.
 
 * link:task_dc_amazon_ec2.html#advanced-configuration["Amazon EC2"]
-* link:task_dc_ms_azure.html#advanced-configuration["Azure"]
+* link:task_dc_ms_azure.html#advanced-configuration["Azzurro"]
 * link:task_dc_google_cloud.html#advanced-configuration["Piattaforma Google Cloud"]
 
 
@@ -276,23 +276,23 @@ Quando si configurano i seguenti data collection, è possibile filtrare per incl
 
 === Notifiche e-mail per eventi correlati all'abbonamento
 
-* È possibile selezionare i destinatari per l'e-mail link:concept_notifications_email.html["notifiche"] quando si verificano eventi correlati all'abbonamento, come la prossima scadenza della prova o le modifiche all'account sottoscritto. È possibile scegliere tra i seguenti destinatari per queste notifiche:
+* Puoi selezionare i destinatari per l'e-maillink:concept_notifications_email.html["notifiche"] quando si verificano eventi correlati all'abbonamento, come l'imminente scadenza della prova o modifiche all'account sottoscritto.  Puoi scegliere i destinatari di queste notifiche tra i seguenti:
 +
-** Tutti i proprietari di account
+** Tutti i titolari di account
 ** Tutti gli amministratori
-** Indirizzi e-mail aggiuntivi specificati dall'utente
+** Indirizzi email aggiuntivi che specifichi
 
 
 
 
 
 
-=== Dashboard aggiuntivi
+=== Dashboard aggiuntive
 
-* Sono stati aggiunti alla galleria i seguenti nuovi prodotti per AWSlink:concept_import_from_dashboard_gallery.html["dashboard"], disponibili per l'importazione:
+* Le seguenti nuove funzionalità incentrate su AWSlink:concept_import_from_dashboard_gallery.html["cruscotti"] sono stati aggiunti alla galleria e sono disponibili per l'importazione:
 +
-** AWS Admin - quali EC2 sono in forte richiesta?
-** Performance istanza AWS EC2 per regione
+** AWS Admin - Quali EC2 sono molto richiesti?
+** Prestazioni delle istanze AWS EC2 per regione
 
 
 
@@ -304,23 +304,23 @@ Quando si configurano i seguenti data collection, è possibile filtrare per incl
 
 
 
-=== Raccolta da account secondari AWS
+=== Raccolta da account figlio AWS
 
-* Cloud Insights supporta l'link:task_dc_amazon_ec2.html#collecting-from-aws-child-accounts["Raccolta dagli account secondari AWS"]interno di un singolo data collector. L'ambiente AWS deve essere configurato in modo da consentire a Cloud Insights di eseguire la raccolta dagli account secondari.
-
-
+* Cloud Insights supportalink:task_dc_amazon_ec2.html#collecting-from-aws-child-accounts["raccolta dagli account figlio AWS"] all'interno di un singolo raccoglitore di dati.  L'ambiente AWS deve essere configurato per consentire a Cloud Insights di raccogliere dati dagli account figlio.
 
 
-=== Nome del Data Collector
 
-* I nomi dei Data Collector possono ora includere punti (.), trattini (-) e spazi ( ) oltre a lettere, numeri e caratteri di sottolineatura. I nomi non possono iniziare o terminare con uno spazio, un punto o un trattino.
+
+=== Denominazione del raccoglitore dati
+
+* I nomi dei Data Collector ora possono includere punti (.), trattini (-) e spazi ( ) oltre a lettere, numeri e caratteri di sottolineatura.  I nomi non possono iniziare o terminare con uno spazio, un punto o un trattino.
 
 
 
 
 === Unità di acquisizione per Windows
 
-* È possibile configurare un'unità di acquisizione Cloud Insights su un server/macchina virtuale Windows. Prima di installare il link:task_configure_acquisition_unit.html["Software dell'unità di acquisizione"], consultare la sezione di Windows link:concept_acquisition_unit_requirements.html["prerequisiti"].
+* È possibile configurare un'unità di acquisizione Cloud Insights su un server/VM Windows.  Rivedi le finestrelink:concept_acquisition_unit_requirements.html["prerequisiti"] prima di installare illink:task_configure_acquisition_unit.html["Software dell'unità di acquisizione"] .
 
 
 '''
@@ -330,16 +330,16 @@ Quando si configurano i seguenti data collection, è possibile filtrare per incl
 
 
 
-=== Il campo "Owner" è più leggibile
+=== Il campo "Proprietario" è più leggibile
 
-* Negli elenchi Dashboard e Query, i dati per il campo "Owner" (Proprietario) erano in precedenza una stringa di ID autorizzazione, invece di un nome utente intuitivo. Il campo "Owner" (Proprietario) ora mostra un nome proprietario più semplice e leggibile.
-
-
+* Negli elenchi Dashboard e Query, i dati per il campo "Proprietario" erano in precedenza una stringa ID di autorizzazione, anziché un nome proprietario di facile utilizzo.  Il campo "Proprietario" ora mostra un nome del proprietario più semplice e leggibile.
 
 
-=== Analisi delle unità gestite sulla pagina di abbonamento
 
-* Per ciascun data collector elencato nella pagina *Admin > Subscription*, è ora possibile visualizzare un'analisi dei conteggi delle unità gestite (MU) per host e storage, oltre al totale.
+
+=== Ripartizione delle unità gestite nella pagina di abbonamento
+
+* Per ogni raccoglitore di dati elencato nella pagina *Amministrazione > Abbonamento*, ora puoi visualizzare una ripartizione dei conteggi delle unità gestite (MU) per host e storage, nonché il totale.
 
 
 '''
@@ -351,24 +351,24 @@ Quando si configurano i seguenti data collection, è possibile filtrare per incl
 
 === Miglioramento del tempo di caricamento dell'interfaccia utente
 
-* Il tempo di caricamento iniziale per l'interfaccia utente (UI) di Cloud Insights è stato notevolmente migliorato. Il tempo di refresh per l'interfaccia utente beneficia anche di questo miglioramento nelle circostanze in cui vengono caricati i metadati.
+* Il tempo di caricamento iniziale dell'interfaccia utente (UI) Cloud Insights è stato notevolmente migliorato.  Anche il tempo di aggiornamento dell'interfaccia utente trae vantaggio da questo miglioramento nei casi in cui vengono caricati metadati.
 
 
 
 
-=== Raccolta di dati di modifica in blocco
+=== Modifica in blocco dei raccoglitori di dati
 
-* È possibile modificare le informazioni per più data collezionisti contemporaneamente. Nella pagina *osservabilità > Collector*, selezionare i data collector da modificare selezionando la casella a sinistra di ciascuno di essi e fare clic sul pulsante *azioni in blocco*. Scegliere *Modifica* e modificare i campi necessari.
+* È possibile modificare le informazioni di più raccoglitori di dati contemporaneamente.  Nella pagina *Osservabilità > Collettori*, seleziona i collettori di dati da modificare spuntando la casella a sinistra di ciascuno e fai clic sul pulsante *Azioni in blocco*.  Selezionare *Modifica* e modificare i campi necessari.
 +
-I data raccoglitori selezionati devono essere dello stesso fornitore e modello e risiedere nella stessa unità di acquisizione.
+I collettori di dati selezionati devono essere dello stesso fornitore e modello e risiedere nella stessa unità di acquisizione.
 
 
 
 
 
-=== Le pagine di supporto e abbonamento sono disponibili durante l'inserimento
+=== Le pagine di supporto e abbonamento sono disponibili durante l'onboarding
 
-* Durante il flusso di lavoro di assunzione, è possibile accedere alle pagine *Help > Support* (Guida > supporto) e *Admin > Subscription* (Amministratore > abbonamento). Tornando da queste pagine si torna al workflow di assunzione, a condizione che non sia stata chiusa la scheda del browser.
+* Durante il flusso di lavoro di onboarding, puoi accedere alle pagine *Aiuto > Supporto* e *Amministrazione > Abbonamento*.  Tornando da queste pagine si torna al flusso di lavoro di onboarding, a condizione che non si sia chiusa la scheda del browser.
 
 
 '''
@@ -380,40 +380,40 @@ I data raccoglitori selezionati devono essere dello stesso fornitore e modello e
 
 === Iscriviti tramite NetApp Sales o AWS Marketplace
 
-* L'abbonamento e la fatturazione a Cloud Insights sono ora disponibili direttamente tramite NetApp. Questo si aggiunge all'abbonamento self-service disponibile tramite AWS Marketplace. Nella pagina *Admin > Subscription* viene visualizzato un nuovo collegamento *Contact Sales*. Per i clienti i cui ambienti prevedono o prevedono di disporre di 1,000 o più unità gestite (MU), si consiglia di contattare NetApp Sales tramite il link Contact Sales.
+* L'abbonamento e la fatturazione Cloud Insights sono ora disponibili direttamente tramite NetApp.  Questa opzione si aggiunge all'abbonamento self-service disponibile tramite AWS Marketplace.  Un nuovo collegamento *Contatta il reparto vendite* è presente nella pagina *Amministrazione > Abbonamento*.  Per i clienti i cui ambienti hanno o si prevede che avranno 1.000 o più unità gestite (MU), si consiglia di contattare il reparto vendite NetApp tramite il collegamento Contatta il reparto vendite.
 
 
 
 
-=== Collegamenti ipertestuali per le annotazioni di testo
+=== Collegamenti ipertestuali di annotazione del testo
 
-* Le annotazioni di tipo testo possono ora includere collegamenti ipertestuali.
-
-
-
-
-=== Presentazione dell'assunzione
-
-* Cloud Insights offre ora una procedura dettagliata per il primo utente (amministratore o proprietario dell'account) a effettuare l'accesso a un nuovo ambiente. La procedura dettagliata consente di installare un'unità di acquisizione, configurare un data collector iniziale e selezionare una o più dashboard utili.
+* Le annotazioni di tipo testo ora possono includere collegamenti ipertestuali.
 
 
 
 
-=== Importa dashboard dalla Gallery
+=== Procedura dettagliata di onboarding
 
-* Oltre a selezionare le dashboard durante l'inserimento, puoi importare le dashboard tramite *Dashboard > Show All Dashboard* e facendo clic su *+da Gallery*.
-
-
+* Cloud Insights ora offre una procedura dettagliata di onboarding per il primo utente (amministratore o proprietario dell'account) che accede a un nuovo ambiente.  La procedura dettagliata ti guiderà attraverso l'installazione di un'unità di acquisizione, la configurazione di un raccoglitore di dati iniziale e la selezione di una o più dashboard utili.
 
 
-=== Duplicazione di dashboard
 
-* La possibilità di duplicare una dashboard è stata aggiunta alla pagina dell'elenco della dashboard come scelta nel menu delle opzioni per ogni dashboard e nella pagina principale di una dashboard stessa dal menu _Save_.
+
+=== Importa dashboard dalla Galleria
+
+* Oltre a selezionare le dashboard durante l'onboarding, puoi importarle tramite *Dashboard > Mostra tutte le dashboard* e cliccando su *+Da Galleria*.
+
+
+
+
+=== Duplicazione delle dashboard
+
+* La possibilità di duplicare una dashboard è stata aggiunta alla pagina dell'elenco delle dashboard come opzione nel menu delle opzioni per ciascuna dashboard e nella pagina principale della dashboard stessa dal menu _Salva_.
 
 
 
 
 === Menu dei prodotti Cloud Central
 
-* Il menu che consente di passare ad altri prodotti NetApp Cloud Central è stato spostato nell'angolo superiore destro dello schermo.
+* Il menu che consente di passare ad altri prodotti NetApp Cloud Central è stato spostato nell'angolo in alto a destra dello schermo.
 

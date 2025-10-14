@@ -10,49 +10,49 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-Le query consentono di monitorare e risolvere i problemi della rete ricercando le risorse e le metriche del tenant a livello granulare sulla base di criteri selezionati dall'utente (ad esempio, le annotazioni).
+Le query consentono di monitorare e risolvere i problemi della rete eseguendo ricerche granulari nelle risorse e nelle metriche del tenant in base a criteri selezionati dall'utente (ad esempio, annotazioni).
 
-Si noti che le regole di annotazione, che assegnano automaticamente le annotazioni alle risorse, _richiedono_ una query.
+Si noti che le regole di annotazione, che assegnano automaticamente annotazioni alle risorse, _richiedono_ una query.
 
-Puoi eseguire query sulle risorse dell'inventario fisico o virtuale (e sulle metriche associate) sul tenant o sulle metriche fornite con integrazione come Kubernetes o dati avanzati di ONTAP.
+È possibile interrogare le risorse di inventario fisiche o virtuali (e le relative metriche) sul tenant oppure le metriche fornite con l'integrazione, ad esempio Kubernetes o ONTAP Advanced Data.
 
 
 
-== Risorse di inventario
+== Attività di inventario
 
-I seguenti tipi di risorse possono essere utilizzati nelle query, nei widget della dashboard e nelle landing page personalizzate delle risorse. I campi e i contatori disponibili per i filtri, le espressioni e la visualizzazione variano in base al tipo di risorsa. Non tutte le risorse possono essere utilizzate in tutti i tipi di widget.
+I seguenti tipi di risorse possono essere utilizzati nelle query, nei widget della dashboard e nelle landing page delle risorse personalizzate.  I campi e i contatori disponibili per filtri, espressioni e visualizzazione variano a seconda del tipo di risorsa.  Non tutte le risorse possono essere utilizzate in tutti i tipi di widget.
 
 * Applicazione
-* Datastore
+* Archivio dati
 * Disco
-* Fabric
+* Tessuto
 * Dispositivo generico
-* Host
+* Ospite
 * Volume interno
 * Sessione iSCSI
 * Portale di rete iSCSI
-* Percorso
+* Sentiero
 * Porta
 * Qtree
 * Quota
 * Condividere
-* Storage
-* Nodo di storage
-* Pool di storage
-* SVM (Storage Virtual Machine)
-* Switch
+* Magazzinaggio
+* Nodo di archiviazione
+* Pool di archiviazione
+* Macchina virtuale di archiviazione (SVM)
+* Interruttore
 * Nastro
 * VMDK
 * Macchina virtuale
 * Volume
 * Zona
-* Membro di zona
+* Membro della zona
 
 
 
 
 == Metriche di integrazione
 
-Oltre a eseguire query per le risorse di inventario e le relative metriche di performance, è possibile eseguire query anche per le metriche *dati di integrazione*, come quelle generate da Kubernetes o Docker, o fornite con metriche avanzate di ONTAP.
+Oltre a eseguire query sulle risorse di inventario e sulle relative metriche di prestazioni, è possibile eseguire query anche sulle metriche dei *dati di integrazione*, come quelle generate da Kubernetes o Docker, o fornite con ONTAP Advanced Metrics.
 
-image:QueryPageFilter.png["Esempio di filtro query di integrazione"]
+image:QueryPageFilter.png["Esempio di filtro di query di integrazione"]

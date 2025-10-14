@@ -10,15 +10,15 @@ keywords: query, queries, viewing
 
 
 [role="lead"]
-È possibile visualizzare le query per monitorare le risorse e modificare il modo in cui le query visualizzano i dati relativi alle risorse.
+Puoi visualizzare le tue query per monitorare le tue risorse e modificare il modo in cui le query visualizzano i dati relativi alle tue risorse.
 
-.Fasi
-. Effettua l'accesso al tenant Data Infrastructure Insights.
-. Fare clic su *Query* e selezionare *Mostra tutte le query*. È possibile modificare la modalità di visualizzazione delle query effettuando una delle seguenti operazioni:
-. È possibile inserire del testo nella casella di filtro per cercare e visualizzare query specifiche.
+.Passi
+. Accedi al tuo tenant Data Infrastructure Insights .
+. Fare clic su *Query* e selezionare *Mostra tutte le query*.  È possibile modificare la modalità di visualizzazione delle query eseguendo una delle seguenti operazioni:
+. È possibile immettere del testo nella casella filtro per cercare di visualizzare query specifiche.
 . È possibile modificare l'ordinamento delle colonne nella tabella delle query in crescente (freccia su) o decrescente (freccia giù) facendo clic sulla freccia nell'intestazione della colonna.
-. Per ridimensionare una colonna, passare il mouse sull'intestazione della colonna fino a visualizzare una barra blu. Posizionare il mouse sulla barra e trascinarla verso destra o verso sinistra.
+. Per ridimensionare una colonna, passa il mouse sull'intestazione della colonna finché non appare una barra blu.  Posiziona il mouse sulla barra e trascinalo verso destra o verso sinistra.
 . Per spostare una colonna, fare clic sull'intestazione della colonna e trascinarla verso destra o verso sinistra.
 
 
-Quando si scorrono i risultati della query, tenere presente che i risultati possono cambiare in quanto Data Infrastructure Insights esegue automaticamente il polling dei dati di raccolta. Ciò potrebbe causare la mancanza di alcuni elementi o la mancata visualizzazione di alcuni elementi in base all'ordinamento.
+Quando scorri i risultati della query, tieni presente che potrebbero cambiare poiché Data Infrastructure Insights interroga automaticamente i tuoi raccoglitori di dati.  Ciò potrebbe comportare la mancanza di alcuni articoli o la loro visualizzazione fuori ordine, a seconda di come sono ordinati.

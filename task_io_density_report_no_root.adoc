@@ -1,91 +1,91 @@
 ---
 sidebar: sidebar 
 permalink: task_io_density_report_no_root.html 
-summary: 'Quando si esegue una query per ottenere un"elevata densità di i/o, si desidera escludere i volumi root.' 
+summary: 'Quando si esegue una query per un"elevata densità di I/O, è opportuno escludere i volumi root.' 
 keywords: NetApp, root volume, high I/O, 
 ---
-= Garantire che i report sulla densità io descrivano solo i volumi di dati interni
+= Garantire che i report sulla densità IO descrivano solo i volumi di dati interni
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il volume root di NetApp contiene directory e file di configurazione per la gestione del sistema storage. Quando si esegue una query per ottenere un'elevata densità di i/o, si desidera escludere questi volumi root.
+Il volume radice NetApp contiene directory e file di configurazione per la gestione del sistema di storage.  Quando si esegue una query per un'elevata densità di I/O, è opportuno escludere questi volumi radice.
 
-Durante il monitoraggio dell'ambiente, è più importante determinare quali volumi di dati interni producono numeri di densità i/o elevati. Per identificare con precisione solo i volumi di dati, è necessario isolare i volumi interni di NetApp dalle query utilizzate per monitorare la densità di i/O.
+Quando si monitora l'ambiente è più importante determinare quali volumi di dati interni producono numeri di densità I/O elevati.  Per identificare con precisione solo i volumi di dati, è necessario isolare i volumi interni NetApp dalle query utilizzate per monitorare la densità di I/O.
 
-Questa guida descrive come identificare facilmente gli aggregati root di NetApp, isolarli dai risultati delle query di volume interne e creare regole che escludono eventuali nuovi aggregati root di NetApp man mano che vengono aggiunti al sistema. Le seguenti funzionalità Insight vengono utilizzate per garantire che i report di densità i/o derivino da volumi di dati interni:
+Questa guida descrive come identificare facilmente gli aggregati radice NetApp , isolarli dai risultati delle query sui volumi interni e creare regole che escludano eventuali nuovi aggregati radice NetApp quando vengono aggiunti al sistema.  Le seguenti funzionalità di Insight vengono utilizzate per garantire che i report sulla densità di I/O siano derivati ​​da volumi di dati interni:
 
-* Viene creata una query per identificare tutti gli aggregati root NetApp monitorati da Insight.
-* A ciascuno degli aggregati root di NetApp viene assegnata un'annotazione.
-* Viene creata una regola di annotazione per applicare l'annotazione ai nuovi aggregati root NetApp.
-
-
-I passaggi descritti in questa guida possono essere applicati anche ai sistemi storage di altri vendor. Sarà necessario identificare i volumi che contengono directory e file di configurazione per la gestione del sistema di storage e utilizzare procedure simili per escludere questi volumi.
+* Viene creata una query per identificare tutti gli aggregati radice NetApp monitorati da Insight.
+* A ciascuno degli aggregati radice NetApp viene assegnata un'annotazione.
+* Viene creata una regola di annotazione per applicare l'annotazione ai nuovi aggregati radice NetApp .
 
 
+I passaggi descritti in questa guida possono essere applicati anche ai sistemi di archiviazione di altri fornitori.  Sarà necessario identificare i volumi che contengono directory e file di configurazione per la gestione del sistema di archiviazione e utilizzare passaggi simili per escludere tali volumi.
 
-== Creazione di una query per identificare gli aggregati root NetApp
 
-Le query forniscono ricerche a un livello granulare, in base ai criteri selezionati dall'utente. L'utilizzo di una query consente di cercare i volumi interni sul tenant che contengono l'aggregato root NetApp.
 
-.Fasi
-. Creare una query per identificare gli aggregati root NetApp sul tenant: Fare clic su *Query > Nuova query > Seleziona tipo di risorsa* (?)
-. Fare clic su *pool di storage*
-. Immettere il nome dell'aggregato root
+== Creazione di una query per identificare gli aggregati radice NetApp
+
+Le query consentono una ricerca a livello granulare, in base ai criteri selezionati dall'utente.  Utilizzando una query è possibile cercare volumi interni sul tenant che contengono l'aggregato radice NetApp .
+
+.Passi
+. Crea una query per identificare gli aggregati radice NetApp sul tuo tenant: fai clic su *Query > Nuova query > Seleziona tipo di risorsa* (?)
+. Fare clic su *pool di archiviazione*
+. Inserisci il nome per l'aggregato radice
 +
-In questo esempio viene utilizzato "aggr0" come nome. Quando si crea un aggregato, è necessario rispettare solo i seguenti requisiti per il nome:
+In questo esempio viene utilizzato "aggr0" come nome.  Quando si crea un aggregato, è necessario rispettare solo i seguenti requisiti per il nome:
 
 +
-.. Deve iniziare con una lettera o un carattere di sottolineatura (_).
+.. Deve iniziare con una lettera o con un trattino basso (_).
 .. Può contenere solo lettere, cifre e caratteri di sottolineatura.
-.. Può contenere fino a 250 caratteri. Nella maggior parte dei casi, l'aggregato è il nome aggr0, aggr_0 o qualcosa di simile. Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati root NetApp sul tenant.
+.. Può contenere fino a 250 caratteri.  Nella maggior parte dei casi, il nome dell'aggregato è aggr0, aggr_0 o qualcosa di simile.  Potrebbe essere necessario un processo iterativo per identificare tutti gli aggregati radice NetApp sul tenant.
 
 
-. Fare clic su *Save* (Salva) e immettere un nome per la nuova query.
+. Fare clic su *Salva* e immettere un nome per la nuova query.
 +
-Come accennato in precedenza, questo potrebbe essere un processo iterativo e richiedere più query per identificare tutti gli aggregati root di NetApp.
+Come accennato in precedenza, questo potrebbe essere un processo iterativo e richiedere più query per identificare tutti gli aggregati radice NetApp .
 
 
 
 
 
-== Creare un'annotazione per i volumi root restituiti dalle query
+== Crea un'annotazione per i volumi radice restituiti dalle tue query
 
-Le annotazioni sono note specializzate assegnate alle risorse, che consentono di filtrare le risorse in base alle annotazioni. L'annotazione creata verrà utilizzata per identificare gli aggregati root NetApp sul tenant e verificare che non siano inclusi in un report specifico.
+Le annotazioni sono note specializzate che assegni alle tue risorse, consentendoti di filtrare le risorse in base alle loro annotazioni.  L'annotazione creata verrà utilizzata per identificare gli aggregati radice NetApp sul tenant e garantire che non vengano inclusi in un report specifico.
 
 .Prima di iniziare
-È necessario aver identificato tutti gli aggregati root che si desidera escludere dal report "High i/o Density" (densità i/o elevata).
+È necessario aver identificato tutti gli aggregati radice che si desidera escludere dal report "Alta densità I/O".
 
-.Fasi
-. Nel menu Data Infrastructure Insights, fare clic su *Manage > Annotations* (Gestione > Annotazioni*)
-. Fare clic su *Aggiungi*
+.Passi
+. Nel menu Data Infrastructure Insights , fare clic su *Gestisci > Annotazioni*
+. Fai clic su *Aggiungi*
 +
-.. Inserire il nome dell'annotazione: *RootAgg*
-.. Inserire una descrizione dell'annotazione: *Rimuovere l'aggregato root dal report "High i/o Density"*
-.. Inserire il tipo di annotazione: *Booleano*
+.. Inserisci il nome per l'annotazione: *RootAggr*
+.. Inserisci una descrizione dell'annotazione: *Rimuovi l'aggregato radice dal report "Alta densità I/O"*
+.. Inserisci il tipo di annotazione: *Booleano*
 
 
-. Fare clic su *Save* (Salva)
+. Fai clic su *Salva*
 
 
 
 
-== Creare una regola di annotazione per automatizzare l'esclusione di aggregati specifici dal report di densità i/O.
+== Crea una regola di annotazione per automatizzare l'esclusione di aggregati specifici dal tuo report sulla densità di I/O
 
-In alternativa all'applicazione manuale delle annotazioni a singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione. Le regole di annotazione si basano sulle query create e, quando vengono eseguite sul sistema, aggiungono nuove risorse a set di risorse esistenti. Quando questi set di asset sono esclusi da un report, anche i nuovi asset vengono automaticamente esclusi.
+In alternativa all'applicazione manuale delle annotazioni alle singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione.  Le regole di annotazione si basano sulle query create e, quando vengono eseguite sul sistema, aggiungono nuove risorse ai set di risorse esistenti.  Quando questi insiemi di asset vengono esclusi da un report, anche i nuovi asset vengono automaticamente esclusi.
 
 .Prima di iniziare
-È necessario aver creato e salvato una query che identifichi gli aggregati root NetApp identificati nel tenant.
+Devi aver creato e salvato una query che identifica gli aggregati radice NetApp identificati sul tuo tenant.
 
-.Fasi
-. Nella barra degli strumenti di Data Infrastructure Insights, fare clic su *Manage > Annotation rules* (Gestisci > regole annotazione*).
+.Passi
+. Nella barra degli strumenti Data Infrastructure Insights , fare clic su *Gestisci > Regole di annotazione*.
 . Fare clic su *Aggiungi*. Viene visualizzata la finestra di dialogo Aggiungi regola.
 +
 .. Nella casella Nome, immettere un nome univoco che descriva la regola: *"RootAggrExclude"*
 .. Fare clic su Query e selezionare la query che Insight deve utilizzare per applicare la regola di annotazione a: *"Aggregate0"*
-.. Fare clic su Annotation (Annotazione) e selezionare: *"Root agg exclude"*
-.. Fare clic su *valore* e immettere *vero*
+.. Fare clic su Annotazione e selezionare: *"Escludi agg radice"*
+.. Fai clic su *Valore* e inserisci *Vero*
 
 
 

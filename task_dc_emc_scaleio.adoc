@@ -2,34 +2,34 @@
 sidebar: sidebar 
 permalink: task_dc_emc_scaleio.html 
 keywords: data collector, scaleIO, PowerFlex EMC, DELL 
-summary: Configurazione di DELL EMC ScaleIO/PowerFlex Data Collector. 
+summary: Configurazione del raccoglitore dati DELL EMC ScaleIO/PowerFlex. 
 ---
-= Raccolta dati DELL EMC ScaleIO / PowerFlex
+= Raccoglitore dati DELL EMC ScaleIO / PowerFlex
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Il data collector ScaleIO/PowerFlex raccoglie le informazioni di inventario dallo storage ScaleIO e PowerFlex. Per la configurazione, questo data collector richiede l'indirizzo del gateway ScaleIO/PowerFlex e un nome utente e una password amministratore.
+Il raccoglitore dati ScaleIO/PowerFlex raccoglie informazioni di inventario dallo storage ScaleIO e PowerFlex.  Per la configurazione, questo raccoglitore dati richiede l'indirizzo del gateway ScaleIO/PowerFlex e un nome utente e una password amministratore.
 
 
 
 == Terminologia
 
-Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal data collector ScaleIO/PowerFlex. Per ogni tipo di asset acquisito da Data Infrastructure Insights viene visualizzata la terminologia più comune utilizzata per questa risorsa. Durante la visualizzazione o la risoluzione dei problemi di questo data collector, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati ScaleIO/PowerFlex.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===
-| Vendor/modello | Termine di approfondimento sull'infrastruttura dati 
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
 
-| Cluster MDM (Meta Data Manager) | Storage 
+| Cluster MDM (Meta Data Manager) | Magazzinaggio 
 
 
-| SDS (server dati ScaleIO/PowerFlex) | Nodo di storage 
+| SDS (server dati ScaleIO/PowerFlex) | Nodo di archiviazione 
 
 
-| Pool di storage | Pool di storage 
+| Pool di archiviazione | Pool di archiviazione 
 
 
 | Volume | Volume 
@@ -37,14 +37,14 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 
 | Dispositivo | Disco 
 |===
-Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo data collector.
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
 
 
 == Requisiti
 
-* Accesso in sola lettura all'account utente Admin
-* Requisito della porta: Porta HTTPS 443
+* Accesso di sola lettura all'account utente amministratore
+* Requisito porta: Porta HTTPS 443
 
 
 
@@ -68,7 +68,7 @@ Nota: Si tratta solo di mappature terminologiche comuni e potrebbero non rappres
 
 == Configurazione avanzata
 
-Fare clic sulla casella di controllo Inventory (inventario) per attivare la raccolta dell'inventario.
+Fare clic sulla casella di controllo Inventario per abilitare la raccolta dell'inventario.
 
 [cols="2*"]
 |===
@@ -78,13 +78,13 @@ Fare clic sulla casella di controllo Inventory (inventario) per attivare la racc
 | Porta HTTPS | 443 
 
 
-| Intervallo di polling dell'inventario (min) | Il valore predefinito è 60. 
+| Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60. 
 
 
-| Timeout connessione (sec) | Il valore predefinito è 60. 
+| Timeout di connessione (sec) | Il valore predefinito è 60. 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"]pagina o nella link:reference_data_collector_support_matrix.html["Matrice di supporto Data Collector"].
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

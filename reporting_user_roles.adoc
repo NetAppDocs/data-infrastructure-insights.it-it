@@ -1,107 +1,107 @@
 ---
 sidebar: sidebar 
 permalink: reporting_user_roles.html 
-summary: 'Ciò che è possibile fare con la creazione di report di informazioni sull"infrastruttura dati dipende dal ruolo dell"utente.' 
+summary: Le operazioni che puoi eseguire con Data Infrastructure Insights Reporting dipendono dal tuo ruolo utente. 
 keywords: reporting, cognos, data warehouse, dwh, users, roles, user roles 
 ---
-= Ruoli utente di report di Data Infrastructure Insights
+= Ruoli utente dei report di Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Se si dispone di Data Infrastructure Insights Premium Edition con Reporting, ogni utente Data Infrastructure Insights del tenant dispone anche di un accesso Single Sign-on (SSO) all'applicazione Reporting (ad esempio Cognos). Basta fare clic sul collegamento *Report* nel menu per accedere automaticamente a Reporting.
+Se disponi di Data Infrastructure Insights Premium Edition con Reporting, ogni utente Data Infrastructure Insights nel tuo tenant avrà anche un accesso Single Sign-On (SSO) all'applicazione Reporting (ad esempio Cognos).  Basta cliccare sul link *Report* nel menu e si accederà automaticamente alla sezione Report.
 
-Il ruolo dell'utente in Data Infrastructure Insights determina il ruolo dell'utente Reporting:
-
-|===
-
-
-| Ruolo Data Infrastructure Insights | Ruolo di reporting | Autorizzazioni di reporting 
-
-
-| Ospite | Consumatore | Consente di visualizzare, pianificare ed eseguire report e di impostare preferenze personali, ad esempio per lingue e fusi orari. Gli utenti non possono creare report o eseguire attività amministrative. 
-
-
-| Utente | Autore | Può eseguire tutte le funzioni Consumer, nonché creare e gestire report e dashboard. 
-
-
-| Amministratore | Amministratore | Può eseguire tutte le funzioni di autore e tutte le attività amministrative, come la configurazione dei report e l'arresto e il riavvio delle attività di reporting. 
-|===
-La tabella seguente mostra le funzioni disponibili per ciascun ruolo di reporting.
+Il tuo ruolo utente in Data Infrastructure Insights determina il tuo ruolo utente di Reporting:
 
 |===
 
 
-| Funzione | Consumatore | Autore | Amministratore 
+| Ruolo Data Infrastructure Insights | Ruolo di segnalazione | Autorizzazioni di segnalazione 
 
 
-| Visualizzare i report nella scheda contenuto team | Sì | Sì | Sì 
+| Ospite | Consumatore | È possibile visualizzare, pianificare ed eseguire report e impostare preferenze personali, come quelle relative a lingue e fusi orari.  I consumatori non possono creare report o svolgere attività amministrative. 
 
 
-| Eseguire i report | Sì | Sì | Sì 
+| Utente | Autore | Può eseguire tutte le funzioni del consumatore, nonché creare e gestire report e dashboard. 
 
 
-| Pianifica i report | Sì | Sì | Sì 
+| Amministratore | Amministratore | Può eseguire tutte le funzioni dell'autore nonché tutte le attività amministrative, come la configurazione dei report e l'arresto e il riavvio delle attività di reporting. 
+|===
+Nella tabella seguente sono illustrate le funzioni disponibili per ciascun ruolo di reporting.
+
+|===
 
 
-| Caricare file esterni | No | Sì | Sì 
+| Caratteristica | Consumatore | Autore | Amministratore 
 
 
-| Creare lavori | No | Sì | Sì 
+| Visualizza i report nella scheda Contenuto del team | SÌ | SÌ | SÌ 
 
 
-| Crea storie | No | Sì | Sì 
+| Esegui report | SÌ | SÌ | SÌ 
 
 
-| Creare report | No | Sì | Sì 
+| Pianifica i report | SÌ | SÌ | SÌ 
 
 
-| Creare pacchetti e moduli dati | No | Sì | Sì 
+| Carica file esterni | NO | SÌ | SÌ 
 
 
-| Eseguire attività amministrative | No | No | Sì 
+| Crea posti di lavoro | NO | SÌ | SÌ 
 
 
-| Aggiungi/Modifica elemento HTML | No | No | Sì 
+| Crea storie | NO | SÌ | SÌ 
 
 
-| Esegui report con HTML Item | Sì | Sì | Sì 
+| Crea report | NO | SÌ | SÌ 
 
 
-| Aggiungi/Modifica SQL personalizzato | No | No | Sì 
+| Crea pacchetti e moduli dati | NO | SÌ | SÌ 
 
 
-| Esegui report con SQL personalizzato | Sì | Sì | Sì 
+| Svolgere compiti amministrativi | NO | NO | SÌ 
+
+
+| Aggiungi/modifica elemento HTML | NO | NO | SÌ 
+
+
+| Esegui report con elemento HTML | SÌ | SÌ | SÌ 
+
+
+| Aggiungi/modifica SQL personalizzato | NO | NO | SÌ 
+
+
+| Esegui report con SQL personalizzato | SÌ | SÌ | SÌ 
 |===
 
 
 == Impostazione delle preferenze e-mail di Reporting (Cognos)
 
 
-NOTE: Se si modificano le preferenze e-mail dell'utente in Data Infrastructure Insights Reporting (ovvero l'applicazione Cognos), tali preferenze sono attive _solo per la sessione corrente_. Disconnettendo da Cognos e tornando, verranno ripristinate le preferenze e-mail.
+NOTE: Se modifichi le preferenze e-mail dell'utente in Data Infrastructure Insights Reporting (ovvero l'applicazione Cognos), tali preferenze saranno attive _solo per la sessione corrente_.  Uscendo da Cognos e riaccedendo, le tue preferenze e-mail verranno reimpostate.
 
 
 
-=== Quali sono i passaggi da seguire per preparare l'ambiente esistente per l'abilitazione di SSO?
+=== Quali passaggi dovrei seguire per preparare il mio ambiente esistente all'abilitazione dell'SSO?
 
-Per garantire la conservazione dei report, migrare tutti i report da _My Content_ a _Team Content_ seguendo la procedura riportata di seguito. È necessario eseguire questa operazione prima di attivare SSO sul tenant:
+Per garantire che i tuoi report vengano conservati, migra tutti i report da _I miei contenuti_ a _Contenuti del team_ seguendo i passaggi seguenti.  Devi fare questo prima di abilitare SSO sul tuo tenant:
 
-. Selezionare *Menu > contenuto*
+. Vai a *Menu > Contenuto*
 
 
-image:Reporting_Menu.png["Menu Cognos in alto a sinistra"]
+image:Reporting_Menu.png["Menu in alto a sinistra di Cognos"]
 
-. Creare una nuova cartella in *_Team Content_*
+. Crea una nuova cartella in *_Team Content_*
 +
-.. Se sono stati creati più utenti, creare una cartella separata per ciascun utente per evitare di sovrascrivere i report con nomi duplicati
+.. Se sono stati creati più utenti, creare una cartella separata per ogni utente per evitare di sovrascrivere i report con nomi duplicati
 
 
-. Accedere a _My Content_
-. Selezionare tutti i report che si desidera conservare.
-. Nell'angolo superiore destro del menu, selezionare "Copia o Sposta"
-. Accedere alla cartella appena creata in _contenuto del team_
-. Incollare i report nella cartella appena creata utilizzando i pulsanti "Copia in" o "Sposta in"
-. Una volta abilitato SSO per Cognos, accedere a Data Infrastructure Insights con l'indirizzo e-mail utilizzato per creare l'account.
-. Accedere alla cartella _Team Content_ all'interno di Cognos e copiare o spostare i report precedentemente salvati in _My Content_.
+. Vai a _I miei contenuti_
+. Seleziona tutti i report che desideri conservare.
+. Nell'angolo in alto a destra del menu, seleziona "Copia o sposta"
+. Passare alla cartella appena creata in _Team Content_
+. Incolla i report nella cartella appena creata utilizzando i pulsanti "Copia in" o "Sposta in"
+. Una volta abilitato l'SSO per Cognos, accedi a Data Infrastructure Insights con l'indirizzo email utilizzato per creare il tuo account.
+. Passare alla cartella _Team Content_ in Cognos e copiare o spostare i report salvati in precedenza in _My Content_.
 

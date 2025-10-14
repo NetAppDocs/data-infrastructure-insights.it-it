@@ -14,7 +14,7 @@ summary: 'Monitora lo stato di salute dell"infrastruttura con un punteggio unifi
 
 
 [role="lead"]
-Data Infrastructure Insights fornisce un monitoraggio completo dello stato dell'infrastruttura che tiene traccia delle prestazioni, della capacità, della configurazione e dello stato dei componenti del tuo ambiente di archiviazione.  I punteggi di integrità vengono calcolati in base agli avvisi di monitoraggio in queste categorie, offrendo una visione unificata dello stato di integrità del sistema e consentendo una risoluzione proattiva dei problemi.
+Data Infrastructure Insights fornisce un monitoraggio completo dello stato dell'infrastruttura che tiene traccia delle prestazioni, della capacità, della configurazione e dello stato dei componenti del tuo ambiente di archiviazione. I punteggi di integrità vengono calcolati in base agli avvisi di monitoraggio in queste categorie, offrendo una visione unificata dello stato di integrità del sistema e consentendo una risoluzione proattiva dei problemi.
 
 
 
@@ -23,7 +23,7 @@ Data Infrastructure Insights fornisce un monitoraggio completo dello stato dell'
 
 NOTE: Il monitoraggio della salute delle infrastrutture è unlink:concept_preview_features.html["Anteprima"] funzionalità ed è soggetta a modifiche.
 
-Vai su *Osservabilità > Analizza* e seleziona *Stato dell'infrastruttura*.  La dashboard fornisce una panoramica dello stato di salute del sistema, in base alle categorie di avviso del monitor e ai punteggi, come spiegato di seguito.  Imposta i filtri in alto per restringere il campo della tua indagine.
+Vai su *Osservabilità > Analizza* e seleziona *Stato dell'infrastruttura*. La dashboard fornisce una panoramica dello stato di salute del sistema, in base alle categorie di avviso del monitor e ai punteggi, come spiegato di seguito. Imposta i filtri in alto per restringere il campo della tua indagine.
 
 image:infra_health_main_screen.png["panoramica sulla salute delle infrastrutture"]
 
@@ -35,7 +35,7 @@ Per impostazione predefinita, i punteggi di integrità sono raggruppati per data
 
 I punteggi di integrità sono determinati da avvisi configurati per l'inclusione nei calcoli di integrità del sistema.
 
-Quando si crea un monitor per un oggetto infrastrutturale, è possibile scegliere se includere gli avvisi del monitor nei calcoli.  Nella parte inferiore dello schermo, espandi Configurazione avanzata e seleziona _Includi nel calcolo dello stato dell'infrastruttura_.  Selezionare una categoria a cui applicare il calcolo per il monitor:
+Quando si crea un monitor per un oggetto infrastrutturale, è possibile scegliere se includere gli avvisi del monitor nei calcoli. Nella parte inferiore dello schermo, espandi Configurazione avanzata e seleziona _Includi nel calcolo dello stato dell'infrastruttura_. Selezionare una categoria a cui applicare il calcolo per il monitor:
 
 * *Stato dei componenti*: guasto della ventola, processore di servizio offline, ecc.
 * *Stato delle prestazioni*: elevato utilizzo dei nodi di archiviazione, picco anomalo nella latenza dei nodi, ecc.
@@ -49,7 +49,7 @@ image:infra_health_monitor_advanced_config.png["monitorare la configurazione ava
 
 == Spiegazione dei punteggi di salute
 
-I punteggi vengono presentati su una scala da 0 a 100, dove 100 corrisponde a piena salute.  Gli oggetti infrastrutturali monitorati che presentano problemi attuali o recenti abbasseranno questo punteggio in base alle seguenti medie ponderate:
+I punteggi vengono presentati su una scala da 0 a 100, dove 100 corrisponde a piena salute. Gli oggetti infrastrutturali monitorati che presentano problemi attuali o recenti abbasseranno questo punteggio in base alle seguenti medie ponderate:
 
 * Componenti, prestazioni o capacità: 30% ciascuno
 * Configurazione: 10%

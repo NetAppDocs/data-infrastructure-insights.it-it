@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: cs_automated_response_policies.html 
 keywords: alert, snapshot, ransomware, attack 
-summary: 'È possibile impostare policy di risposta automatiche per potenziali attacchi (come ransomware) e/o avvisi di attività' 
+summary: 'È possibile impostare criteri di risposta automatizzati per potenziali attacchi (come ransomware) e/o avvisi di attività' 
 ---
-= Policy di risposta automatizzate
+= Criteri di risposta automatizzati
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,24 +14,24 @@ summary: 'È possibile impostare policy di risposta automatiche per potenziali a
 
 
 [role="lead"]
-Le policy di risposta attivano azioni come l'esecuzione di uno snapshot o la limitazione dell'accesso dell'utente in caso di attacco o comportamento anomalo dell'utente.
+I criteri di risposta attivano azioni quali l'acquisizione di uno snapshot o la limitazione dell'accesso dell'utente in caso di attacco o comportamento anomalo dell'utente.
 
-È possibile impostare criteri su dispositivi specifici o su tutti i dispositivi. Per impostare un criterio di risposta, selezionare *Admin > Automated Response Policies* (Amministrazione > Criteri di risposta automatici) e fare clic sul pulsante *+Policy* appropriato. È possibile creare policy per gli attacchi o per gli avvisi.
+È possibile impostare criteri su dispositivi specifici o su tutti i dispositivi.  Per impostare un criterio di risposta, seleziona *Amministrazione > Criteri di risposta automatica* e fai clic sul pulsante *+Criterio* appropriato.  È possibile creare policy per gli attacchi o per gli avvisi.
 
-image:ws_add_attack_policy.png["Aggiungi una finestra di dialogo Criteri di attacco che mostra il menu a discesa webhook"]
+image:ws_add_attack_policy.png["Aggiungi una finestra di dialogo Criteri di attacco che mostra il menu a discesa dei webhook"]
 
-È necessario salvare il criterio con un nome univoco.
+È necessario salvare la policy con un nome univoco.
 
-Per disattivare un'azione di risposta automatica (ad esempio, Take Snapshot), è sufficiente deselezionare l'azione e salvare la policy.
+Per disattivare un'azione di risposta automatica (ad esempio, Acquisisci snapshot), è sufficiente deselezionare l'azione e salvare il criterio.
 
-Quando viene attivato un avviso relativo ai dispositivi specificati (o a tutti i dispositivi, se selezionati), la policy di risposta automatica esegue un'istantanea dei dati. È possibile visualizzare lo stato dell'istantanea sul link:cs_alert_data.html#the-alert-details-page["Pagina dei dettagli degli avvisi"].
+Quando viene attivato un avviso sui dispositivi specificati (o su tutti i dispositivi, se selezionati), il criterio di risposta automatica acquisisce un'istantanea dei dati.  È possibile visualizzare lo stato dell'istantanea sulink:cs_alert_data.html#the-alert-details-page["Pagina dei dettagli dell'avviso"] .
 
-Vedere la link:cs_restrict_user_access.html["Limitare l'accesso dell'utente"] pagina per ulteriori dettagli su come limitare l'accesso degli utenti tramite IP.
+Vedi illink:cs_restrict_user_access.html["Limita l'accesso degli utenti"] pagina per maggiori dettagli sulla limitazione dell'accesso degli utenti tramite IP.
 
-È possibile allegare uno o più webhook a un criterio per ricevere una notifica quando viene creato un avviso e viene intrapresa un'azione. Si consiglia di aggiungere non più di 10 webhook a un criterio.tenere presente che se un criterio viene messo in pausa, le notifiche webhook non verranno attivate.
+È possibile allegare uno o più webhook a un criterio per ricevere una notifica quando viene creato un avviso e viene intrapresa un'azione.  Si consiglia di aggiungere non più di 10 webhook a una policy. Tenere presente che se una policy viene sospesa, le notifiche webhook non verranno attivate.
 
-È possibile modificare o sospendere una policy di risposta automatica scegliendo l'opzione nel menu a discesa della policy.
+È possibile modificare o sospendere una policy di risposta automatica selezionando l'opzione nel menu a discesa della policy.
 
-Workload Security elimina automaticamente le snapshot una volta al giorno in base alle impostazioni di Snapshot Purge.
+Workload Security eliminerà automaticamente gli snapshot una volta al giorno in base alle impostazioni di Snapshot Purge.
 
-image:CloudSecure_SnapshotPurgeSettings.png["Impostazioni di eliminazione snapshot"]
+image:CloudSecure_SnapshotPurgeSettings.png["Impostazioni di eliminazione degli snapshot"]

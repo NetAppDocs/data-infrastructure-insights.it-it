@@ -4,32 +4,32 @@ permalink: cs_intro.html
 keywords: CloudSecure, Cloud Secure 
 summary: Panoramica 
 ---
-= Informazioni su Storage workload Security
+= Informazioni sulla sicurezza del carico di lavoro di archiviazione
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights Storage workload Security (in precedenza Cloud Secure) aiuta a proteggere i dati con informazioni pratiche su minacce interne. Offre visibilità e controllo centralizzati di tutti gli accessi ai dati aziendali negli ambienti di cloud ibrido per garantire il rispetto degli obiettivi di sicurezza e conformità.
+Data Infrastructure Insights Storage Workload Security (in precedenza Cloud Secure) aiuta a proteggere i tuoi dati con informazioni fruibili sulle minacce interne.  Fornisce visibilità e controllo centralizzati di tutti gli accessi ai dati aziendali negli ambienti cloud ibridi, per garantire il raggiungimento degli obiettivi di sicurezza e conformità.
 
 
 
 == Visibilità
 
-Ottieni visibilità e controllo centralizzati dell'accesso degli utenti ai tuoi dati aziendali critici memorizzati on-premise o nel cloud.
+Ottieni visibilità e controllo centralizzati dell'accesso degli utenti ai dati aziendali critici archiviati in sede o nel cloud.
 
-Sostituire strumenti e processi manuali che non forniscono una visibilità puntuale e precisa dell'accesso e del controllo dei dati. Workload Security funziona in modo esclusivo sia sul cloud che sui sistemi storage on-premise per fornire avvisi in tempo reale di comportamenti dannosi degli utenti.
+Sostituire gli strumenti e i processi manuali che non riescono a fornire una visibilità tempestiva e accurata dell'accesso e del controllo dei dati.  Workload Security funziona in modo esclusivo sia sui sistemi di archiviazione cloud che su quelli on-premise per fornirti avvisi in tempo reale sui comportamenti dannosi degli utenti.
 
 
 
 == Protezione
 
-Proteggi i dati dell'organizzazione da un utilizzo improprio da parte di utenti malintenzionati o compromessi attraverso l'apprendimento automatico avanzato e il rilevamento delle anomalie.
+Proteggi i dati aziendali dall'uso improprio da parte di utenti malintenzionati o compromessi tramite l'apprendimento automatico avanzato e il rilevamento delle anomalie.
 
-Avvisa l'utente in caso di accesso anomalo ai dati attraverso l'apprendimento automatico avanzato e il rilevamento delle anomalie del comportamento dell'utente.
+Ti avvisa di eventuali accessi anomali ai dati tramite apprendimento automatico avanzato e rilevamento di anomalie nel comportamento dell'utente.
 
 
 
 == Conformità
 
-Garantire la conformità aziendale verificando l'accesso dei dati degli utenti ai dati aziendali critici memorizzati on-premise o nel cloud.
+Garantisci la conformità aziendale verificando l'accesso dei dati utente ai dati aziendali critici archiviati in sede o nel cloud.

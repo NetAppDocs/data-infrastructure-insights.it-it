@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: insights_reclaim_ontap_cold_storage.html 
 keywords: insight, greedy, degraded, impacted, impacting, impactful, impact, resources, consuming, workload 
-summary: 'Le informazioni ti danno uno sguardo all"impatto delle risorse su altre risorse sul tenant.' 
+summary: Gli approfondimenti ti consentono di vedere in che modo le risorse influiscono sulle altre risorse del tuo tenant. 
 ---
-= Approfondimenti: Recuperare lo storage a freddo ONTAP
+= Approfondimenti: Reclaim ONTAP Cold Storage
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,44 +14,44 @@ summary: 'Le informazioni ti danno uno sguardo all"impatto delle risorse su altr
 
 
 [role="lead"]
-L'analisi di _recupero dello storage a freddo ONTAP_ fornisce dati sulla capacità a freddo, sui potenziali risparmi in termini di costi/energia e sulle azioni consigliate per i volumi sui sistemi ONTAP.
+_Reclaim ONTAP Cold Storage_ Insight fornisce dati sulla capacità di raffreddamento, sui potenziali risparmi in termini di costi/energia e sulle azioni consigliate per i volumi sui sistemi ONTAP .
 
-Per visualizzare queste informazioni, accedere a *Dashboard > informazioni* e dare un'occhiata alle _informazioni sullo storage a freddo ONTAP_. Tenere presente che questo Insight elencherà le memorie interessate solo se Data Infrastructure Insights ha rilevato un Cold Storage, altrimenti verrà visualizzato un messaggio chiaro.
+Per visualizzare queste informazioni, vai su *Dashboard > Informazioni* e dai un'occhiata all'Insight _Reclaim ONTAP Cold Storage_.  Tieni presente che questa Insight elencherà gli archivi interessati solo se Data Infrastructure Insights ha rilevato un archivio cold, altrimenti verrà visualizzato un messaggio di "tutto a posto".
 
-Tenere presente che i dati cold meno di 30 giorni non vengono visualizzati.
+Tieni presente che i dati inattivi risalenti a meno di 30 giorni fa non vengono visualizzati.
 
-image:Cold_Data_Insight_List.png["Elenco di Insight che mostra 3 storage con dati cold"]
+image:Cold_Data_Insight_List.png["Elenco di informazioni che mostra 3 archivi con dati inattivi"]
 
-La descrizione di Insight fornisce un'indicazione rapida della quantità di dati rilevati come "freddi" e dello storage su cui risiedono i dati. La tabella fornisce anche un numero di workload con dati cold.
+La descrizione di Insight fornisce una rapida indicazione della quantità di dati rilevati come "freddi" e su quale storage risiedono tali dati.  La tabella fornisce anche un conteggio dei carichi di lavoro con dati inattivi.
 
-Selezionando una Insight dall'elenco, si apre una pagina che mostra ulteriori dettagli, tra cui consigli per spostare i dati nel cloud o per eseguire il ciclo di inattività dei dischi unizzati, oltre a risparmi stimati di costi ed energia che potrebbero essere possibili implementando tali raccomandazioni. La pagina fornisce anche un comodo link a link:https://bluexp.netapp.com/cloud-tiering-service-tco["Calcolatore del TCO di NetApp"] in modo da poter sperimentare con i numeri.
+Selezionando un'Insight dall'elenco si apre una pagina che mostra maggiori dettagli, tra cui consigli per spostare i dati sul cloud o disattivare i dischi unificati, nonché una stima dei costi e dei risparmi energetici che potresti potenzialmente ottenere implementando tali consigli.  La pagina fornisce anche un comodo collegamento alink:https://bluexp.netapp.com/cloud-tiering-service-tco["Calcolatore TCO di NetApp"] così puoi sperimentare con i numeri.
 
-image:Cold_Data_Power_Info.png["Cold Data Power Info (Info Cold Data Power"]
+image:Cold_Data_Power_Info.png["Informazioni sulla potenza dei dati freddi"]
 
 
 
 === Raccomandazioni
 
-Nella pagina Insight, espandere *Recommendations* per esplorare le seguenti opzioni:
+Nella pagina Insight, espandi *Raccomandazioni* per esplorare le seguenti opzioni:
 
-* Spostare i carichi di lavoro inutilizzati (zombie) su un livello di storage (HDD) a basso costo
+* Spostare i carichi di lavoro inutilizzati (zombie) su un livello di archiviazione (HDD) a costo inferiore
 +
-Utilizzando la bandiera zombie, il cold storage e il numero di giorni, è possibile trovare la quantità di dati più fredda e più grande e spostare il carico di lavoro su un livello di storage a costo inferiore (ad esempio un pool di storage che utilizza lo storage su disco rigido). Un carico di lavoro è considerato uno "zombie" quando non riceve richieste di i/o significative per 30 giorni o più.
+Utilizzando il flag zombie, l'archiviazione a freddo e il numero di giorni, trova la quantità di dati più grande e più fredda e sposta il carico di lavoro su un livello di archiviazione a costo inferiore (ad esempio un pool di archiviazione che utilizza l'archiviazione su disco rigido).  Un carico di lavoro è considerato "zombie" quando non riceve richieste di I/O significative per 30 giorni o più.
 
-* Eliminare i carichi di lavoro inutilizzati
+* Elimina i carichi di lavoro non utilizzati
 +
-Verificare quali carichi di lavoro non sono in uso e prendere in considerazione la possibilità di archiviarli o rimuoverli dal sistema storage.
+Verificare quali carichi di lavoro non sono in uso e valutare la possibilità di archiviarli o rimuoverli dal sistema di archiviazione.
 
-* Prendiamo in considerazione la soluzione Fabric Pool di NetApp
+* Prendi in considerazione la soluzione Fabric Pool di NetApp
 +
-NetApp link:https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html#features["Soluzione Fabric Pool"]esegue automaticamente il tiering dei dati cold su cloud storage a basso costo, aumentando così l'efficienza del Tier di performance oltre a fornire protezione dei dati remota.
+NetApplink:https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html#features["Soluzione per piscina in tessuto"] suddivide automaticamente i dati inutilizzati in un archivio cloud a basso costo, aumentando così l'efficienza del livello di prestazioni e garantendo la protezione dei dati in remoto.
 
 
 
 
 
-=== Visualizzare ed esplorare
+=== Visualizza ed esplora
 
-I grafici e la tabella forniscono ulteriori informazioni sui trend e consentono di analizzare i singoli carichi di lavoro.
+I grafici e la tabella forniscono ulteriori informazioni sulle tendenze e consentono di analizzare nel dettaglio i singoli carichi di lavoro.
 
-image:Cold_Data_Storage_Trend.png["Grafici di riepilogo dei dati a freddo"] image:Cold_Data_Workload_Table.png["Cold Data Workload Table"]
+image:Cold_Data_Storage_Trend.png["Grafici riassuntivi dei dati freddi"] image:Cold_Data_Workload_Table.png["Tabella del carico di lavoro dei dati freddi"]

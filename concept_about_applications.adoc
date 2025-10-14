@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_about_applications.html 
 keywords: applications, asset, cost 
-summary: 'La comprensione delle applicazioni utilizzate nell"ambiente aziendale consente di tenere traccia dell"utilizzo e dei costi delle risorse.' 
+summary: 'Conoscere le applicazioni utilizzate nell"ambiente aziendale aiuta a tenere traccia dell"utilizzo delle risorse e dei costi.' 
 ---
 = Monitoraggio dell'utilizzo delle risorse per applicazione
 :hardbreaks:
@@ -14,35 +14,35 @@ summary: 'La comprensione delle applicazioni utilizzate nell"ambiente aziendale 
 
 
 [role="lead"]
-La comprensione delle applicazioni utilizzate nell'ambiente aziendale consente di tenere traccia dell'utilizzo e dei costi delle risorse.
+Conoscere le applicazioni utilizzate nell'ambiente aziendale aiuta a tenere traccia dell'utilizzo e dei costi delle risorse.
 
-Prima di poter tenere traccia dei dati associati alle applicazioni in esecuzione sul tenant, è necessario innanzitutto definire tali applicazioni e associarle alle risorse appropriate. È possibile associare le applicazioni alle seguenti risorse: Host, macchine virtuali, volumi, volumi interni, qtree, condivisioni e hypervisor.
+Prima di poter monitorare i dati associati alle applicazioni in esecuzione sul tenant, è necessario definire tali applicazioni e associarle alle risorse appropriate.  È possibile associare le applicazioni alle seguenti risorse: host, macchine virtuali, volumi, volumi interni, qtree, condivisioni e hypervisor.
 
-In questo argomento viene fornito un esempio di monitoraggio dell'utilizzo delle macchine virtuali che il team di marketing utilizza per la posta elettronica Exchange.
+Questo argomento fornisce un esempio di monitoraggio dell'utilizzo delle macchine virtuali utilizzate dal team di marketing per la posta elettronica di Exchange.
 
-È possibile creare una tabella simile a quella riportata di seguito per identificare le applicazioni utilizzate nel tenant e prendere nota del gruppo o della business unit utilizzando ciascuna applicazione.
+Potresti voler creare una tabella simile alla seguente per identificare le applicazioni utilizzate sul tuo tenant e annotare il gruppo o l'unità aziendale che utilizza ciascuna applicazione.
 
 [cols="5*"]
 |===
 
 
-| Tenant | Linea di business | Unità aziendale | Progetto | Applicazioni 
+| Inquilino | Linea di business | Unità aziendale | Progetto | Applicazioni 
 
 
-| NetApp | Storage dei dati | Legale | Brevetti | Oracle Identity Manager, Oracle on Demand, PatentWiz 
+| NetApp | Archiviazione dati | Legal | Brevetti | Oracle Identity Manager, Oracle On Demand, PatentWiz 
 
 
-| NetApp | Storage dei dati | Marketing | Eventi commerciali | Exchange, Oracle Shared Database, BlastOff Event Planner 
+| NetApp | Archiviazione dati | Marketing | Eventi di vendita | Exchange, Oracle Shared Database, BlastOff Event Planner 
 |===
-La tabella mostra che il team di marketing utilizza l'applicazione Exchange. Vogliamo tenere traccia dell'utilizzo delle macchine virtuali per Exchange, in modo da poter prevedere quando sarà necessario aggiungere ulteriore storage. Possiamo associare l'applicazione Exchange a tutte le macchine virtuali di Marketing:
+La tabella mostra che il team di marketing utilizza l'applicazione Exchange.  Vogliamo monitorare l'utilizzo delle loro macchine virtuali per Exchange, in modo da poter prevedere quando sarà necessario aggiungere altro spazio di archiviazione.  Possiamo associare l'applicazione Exchange a tutte le macchine virtuali di Marketing:
 
-. Creare un'applicazione denominata _Exchange_
-. Accedere a *Query > +Nuova query* per creare una nuova query per le macchine virtuali (oppure selezionare una query VM esistente, se applicabile).
+. Crea un'applicazione denominata _Exchange_
+. Vai su *Query > +Nuova query* per creare una nuova query per le macchine virtuali (oppure seleziona una query VM esistente, se applicabile).
 +
-Supponendo che tutte le macchine virtuali del team di marketing abbiano un nome contenente la stringa "*mkt*", creare la query per filtrare il nome della macchina virtuale per "mkt".
+Supponendo che tutte le VM del team di marketing abbiano un nome contenente la stringa "*mkt*", crea la tua query per filtrare il nome della VM per "mkt".
 
-. Selezionare le macchine virtuali.
-. Associare le macchine virtuali all'applicazione _Exchange_ utilizzando *azioni in blocco > Aggiungi applicazioni*.
-. Selezionare l'applicazione desiderata e fare clic su *Save* (Salva).
-. Al termine, *salvare* la query.
+. Selezionare le VM.
+. Associare le VM all'applicazione _Exchange_ utilizzando *Azioni in blocco > Aggiungi applicazioni*.
+. Selezionare l'applicazione desiderata e fare clic su *Salva*.
+. Al termine, *Salva* la query.
 

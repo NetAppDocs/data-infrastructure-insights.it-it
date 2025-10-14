@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: task_config_telegraf_mysql.html 
 keywords: telegraf, installation, install, mysql 
-summary: Configurazione del data collector MySQL 
+summary: Configurazione del raccoglitore dati MySQL 
 ---
-= MySQL Data Collector
+= Raccoglitore dati MySQL
 :hardbreaks:
 :allow-uri-read: 
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza questo data collector per raccogliere le metriche da MySQL.
+Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da MySQL.
 
 
 
 == Installazione
 
-. Da *osservabilità > Collector*, fare clic su *+Data Collector*. Scegli MySQL.
+. Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli MySQL.
 +
-Selezionare il sistema operativo o la piattaforma su cui è installato Telegraf Agent.
+Selezionare il sistema operativo o la piattaforma su cui è installato l'agente Telegraf.
 
-. Se non è già stato installato un Agent per il ritiro o se si desidera installare un Agent per un sistema operativo o una piattaforma diversi, fare clic su _Mostra istruzioni_ per espandere le link:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
-. Selezionare il tasto di accesso dell'agente da utilizzare con questo data collector. È possibile aggiungere un nuovo Agent Access Key facendo clic sul pulsante *+ Agent Access Key*. Best practice: Utilizzare un Agent Access Key diverso solo quando si desidera raggruppare i data raccoglitori, ad esempio per sistema operativo/piattaforma.
-. Seguire la procedura di configurazione per configurare il data collector. Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per la raccolta dei dati.
+. Se non hai ancora installato un agente per la raccolta o desideri installare un agente per un sistema operativo o una piattaforma diversi, fai clic su _Mostra istruzioni_ per espandere lalink:task_config_telegraf_agent.html["Installazione dell'agente"] istruzioni.
+. Selezionare la chiave di accesso dell'agente da utilizzare con questo raccoglitore dati.  È possibile aggiungere una nuova chiave di accesso agente facendo clic sul pulsante *+ Chiave di accesso agente*.  Procedura consigliata: utilizzare una chiave di accesso agente diversa solo quando si desidera raggruppare i raccoglitori di dati, ad esempio in base al sistema operativo/piattaforma.
+. Seguire i passaggi di configurazione per configurare il raccoglitore dati.  Le istruzioni variano a seconda del tipo di sistema operativo o piattaforma utilizzata per raccogliere i dati.
 
 
 image:MySQLDCConfigWindows.png["Configurazione MySQL"]
 
 
 
-== Setup (Configurazione)
+== Impostare
 
-Le informazioni sono disponibili nella link:https://dev.mysql.com/doc/["Documentazione MySQL"].
+Le informazioni possono essere trovate nellink:https://dev.mysql.com/doc/["Documentazione MySQL"] .
 
 
 
@@ -44,10 +44,10 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 | Oggetto: | Identificatori: | Attributi: | Punti dati: 
 
 
-| MySQL | Namespace server MySQL | Nome nodo IP | Client interrotti (per sec) connessioni interrotte (per sec) byte RX (per sec) byte TX (per sec) comandi Admin (per sec) Comandi Alter comandi evento Alter comandi funzione Alter comandi istanza Alter comandi procedura Alter comandi server comandi Alter comandi tabella Alter comandi tablespace Alter comandi utente Analyze comandi Assegna a Keycache comandi Begin comandi Binlog comandi procedura di chiamata comandi Cambia comandi DB Cambia comandi master Cambia comandi filtro Repl comandi di controllo Comandi checksum comandi commit Crea comandi DB Crea comandi evento Crea comandi funzione Crea comandi indice Crea comandi procedura Crea comandi server Crea comandi tabella Crea comandi trigger Crea comandi UDF Crea comandi utente Crea comandi Visualizza Dealloc SQL errori di connessione Accetta tabelle dischi tmp creati errori ritardati comandi Flush Handler Commit InnoDB buffer Pool byte Data Key Blocks Not Flushed Key Requests Key Write Key Write Max Execution Time Exceeded Max Connections Open Files Performance Schema Accounts Lost Prepared stmt Count Qcache Free Blocks Questions Select Full Join Select Full Range Join Select Range Check Selezionare Scan Table Locks immediate (blocco immediato tavolo di scansione) 
+| MySQL | Spazio dei nomi MySQL Server | IP del nodo Nome del nodo | Client interrotti (al secondo) Connessioni interrotte (al secondo) Byte RX (al secondo) Byte TX (al secondo) Comandi Admin (al secondo) Comandi Comandi Alter Event Comandi Alter Function Comandi Alter Instance Comandi Alter Procedure Comandi Alter Server Comandi Alter Table Comandi Alter Tablespace Comandi Alter User Comandi Analyze Comandi Assign To Keycache Comandi Begin Comandi Binlog Comandi Call Procedure Comandi Change DB Comandi Change Master Comandi Change Repl Filter Comandi Check Comandi Checksum Comandi Commit Comandi Create DB Comandi Create Event Comandi Create Function Comandi Create Index Comandi Create Procedure Comandi Create Server Comandi Create Table Comandi Create Trigger Comandi Create UDF Comandi Create User Comandi Create View Errori di connessione SQL Dealloc Accetta tabelle disco Tmp create Errori ritardati Comandi Flush Gestore Commit Byte del buffer pool Innodb Blocchi chiave dati non svuotati Richieste di lettura chiave Richieste di scrittura chiave Scritture chiave Tempo massimo di esecuzione Superato il numero massimo di connessioni utilizzate File aperti Prestazioni Schema Account persi Conteggio stmt preparati Qcache Blocchi liberi Query Domande Seleziona unione completa Seleziona unione intervallo completo Seleziona controllo intervallo Seleziona scansione Blocchi tabella Immediato 
 |===
 
 
 == Risoluzione dei problemi
 
-Ulteriori informazioni sono disponibili nella link:concept_requesting_support.html["Supporto"] pagina .
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

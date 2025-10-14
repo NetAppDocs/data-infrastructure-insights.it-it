@@ -10,18 +10,18 @@ summary: Opzioni di visualizzazione dei dati Telegraf
 
 
 [role="lead"]
-Data Infrastructure Insights fornisce diverse opzioni *Transform* per determinate metriche nei widget (in particolare, quelle metriche chiamate "personalizzate" o metriche di integrazione, come da Kubernetes, dati avanzati di ONTAP, plug-in Telegraf, ecc.), consentendo di visualizzare i dati in diversi modi. Quando si aggiungono metriche trasformabili a un widget, viene visualizzato un menu a discesa che offre le seguenti scelte di trasformazione:
+Data Infrastructure Insights fornisce diverse opzioni di *trasformazione* per determinate metriche nei widget (in particolare, quelle denominate "Personalizzate" o Metriche di integrazione, come quelle provenienti da Kubernetes, ONTAP Advanced Data, plugin Telegraf, ecc.), consentendo di visualizzare i dati in vari modi.  Quando si aggiungono metriche trasformabili a un widget, viene visualizzato un menu a discesa che offre le seguenti opzioni di trasformazione:
 
-Nessuno: I dati vengono visualizzati così come sono, senza alcuna manipolazione.
+Nessuno: i dati vengono visualizzati così come sono, senza alcuna manipolazione.
 
-Rate (velocità): Valore corrente diviso per l'intervallo di tempo dall'osservazione precedente.
+Tasso: valore corrente diviso per l'intervallo di tempo trascorso dall'osservazione precedente.
 
-Cumulative (cumulativo): L'accumulo della somma dei valori precedenti e del valore corrente.
+Cumulativo: l'accumulo della somma dei valori precedenti e del valore corrente.
 
-Delta: Differenza tra il valore di osservazione precedente e il valore corrente.
+Delta: la differenza tra il valore dell'osservazione precedente e il valore attuale.
 
-Delta rate: Valore delta diviso per l'intervallo temporale dall'osservazione precedente.
+Tasso delta: valore delta diviso per l'intervallo di tempo trascorso dall'osservazione precedente.
 
-Tasso cumulativo: Valore cumulativo diviso per l'intervallo di tempo dall'osservazione precedente.
+Tasso cumulativo: valore cumulativo diviso per l'intervallo di tempo trascorso dall'osservazione precedente.
 
-Si noti che la trasformazione delle metriche non modifica i dati sottostanti, ma solo il modo in cui vengono visualizzati.
+Si noti che la trasformazione delle metriche non modifica i dati sottostanti in sé, ma solo il modo in cui vengono visualizzati.
