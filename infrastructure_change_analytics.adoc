@@ -7,6 +7,10 @@ summary: 'Data Infrastructure Insights monitora i cambiamenti nell"infrastruttur
 = Analisi del cambiamento infrastrutturale
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -37,6 +41,12 @@ image:infraChange_filter_dropdown.png["Menu a discesa per il filtraggio delle mo
 Puoi anche andare direttamente agli avvisi o alle modifiche chiave dalla sezione di stato sotto le impostazioni del filtro, comprese le tre risorse principali con il maggior numero di avvisi.
 
 image:Change_Analysis_filters_and_status.png["stato e collegamenti rapidi ad avvisi e modifiche"]
+
+
+
+== Una nota sugli avvisi a lungo termine
+
+Tieni presente che gli avvisi che restano attivi per più di 24 ore saranno visibili nell'elenco Avvisi e modifiche una volta ogni 24 ore, quindi potresti notare lo stesso avviso elencato più volte. Ciascuno di questi avvisi avrà lo stesso ID avviso, la stessa ora di inizio, ecc. e avrà lo stato "In attesa" finché l'avviso non verrà risolto.
 
 
 

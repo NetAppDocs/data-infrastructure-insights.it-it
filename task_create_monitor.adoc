@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_create_monitor.html 
 keywords: monitors, alerts, log, metric, system-defined, system, metric, 
-summary: Crea monitor per ricevere avvisi sulle soglie di prestazioni o di inventario, nonché sulle condizioni di metriche o registri. 
+summary: 'Crea monitor di metriche e registri personalizzati per monitorare in modo proattivo le prestazioni dell"infrastruttura, le soglie di capacità e gli eventi critici con avvisi e notifiche automatizzati.' 
 ---
 = Avvisi con monitor
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Crea monitor per ricevere avvisi sulle soglie di prestazioni o di inven
 
 
 [role="lead"]
-Configura i monitor per monitorare le soglie di prestazione, registrare eventi e anomalie nelle risorse della tua infrastruttura. Crea avvisi personalizzati per parametri quali latenza di scrittura del nodo, capacità di archiviazione o prestazioni dell'applicazione e ricevi notifiche quando tali condizioni vengono soddisfatte.
+Configura i monitor per monitorare le soglie di prestazione, registrare eventi e anomalie nelle risorse della tua infrastruttura. Crea avvisi personalizzati per parametri quali latenza di scrittura del nodo, capacità di archiviazione o prestazioni dell'applicazione e ricevi notifiche quando queste condizioni vengono soddisfatte.
 
 I monitor consentono di impostare soglie sulle metriche generate da oggetti "infrastrutturali" quali storage, VM, EC2 e porte, nonché per dati di "integrazione" come quelli raccolti per Kubernetes, metriche avanzate ONTAP e plugin Telegraf.  Questi monitor _metrici_ ti avvisano quando vengono superate le soglie di livello di attenzione o di livello critico.
 
@@ -67,8 +67,19 @@ image:MonitorMetricFilter.png["Filtraggio delle metriche"]
 
 Quando si lavora con dati di integrazione (Kubernetes, ONTAP Advanced Data, ecc.), il filtraggio delle metriche rimuove i punti dati individuali/non corrispondenti dalla serie di dati tracciati, a differenza dei dati dell'infrastruttura (archiviazione, VM, porte, ecc.) in cui i filtri agiscono sul valore aggregato della serie di dati e potenzialmente rimuovono l'intero oggetto dal grafico.
 
+I monitor delle metriche si applicano agli oggetti di inventario quali storage, switch, host, VM, ecc., nonché alle metriche di integrazione quali dati ONTAP Advanced o Kubernetes. Quando si monitorano gli oggetti dell'inventario, tenere presente che non è possibile selezionare il metodo "Raggruppa per". Tuttavia, il raggruppamento è consentito durante il monitoraggio dei dati di integrazione.
 
-TIP: Per creare un monitor multi-condizione (ad esempio, IOPS > X e latenza > Y), definire la prima condizione come soglia e la seconda condizione come filtro.
+
+
+==== Monitor multi-condizione
+
+Puoi scegliere di perfezionare ulteriormente il monitoraggio delle metriche aggiungendo una seconda condizione. Basta espandere il prompt "+Aggiungi condizione metrica secondaria" e configurare la condizione aggiuntiva.
+
+image:multi-condition_monitor_second_condition.png["imposta la seconda condizione"]
+
+Il monitor emetterà un avviso se entrambe le condizioni sono soddisfatte.
+
+Tieni presente che puoi usare solo l'opzione "AND" per una seconda condizione; non puoi scegliere di ricevere un avviso per una condizione OPPURE per l'altra.
 
 
 
