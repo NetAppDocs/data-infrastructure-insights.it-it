@@ -247,6 +247,9 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_na_ontap_rest.html["Raccoglitore REST NetApp ONTAP"] | Infrastruttura 
 
 
+| link:task_dc_na_ontap_afx.html["NetApp ONTAP AFX"] | Infrastruttura 
+
+
 | link:task_dc_na_ontap_all_san_array.html["Raccoglitore NetApp ONTAP ASA r2 (All-SAN Array)"] | Infrastruttura 
 
 

@@ -12776,7 +12776,6 @@
   <block id="83e49813b50f1fc5e03ffde57c985102" category="paragraph">Tieni presente che gli avvisi che restano attivi per più di 24 ore saranno visibili nell'elenco Avvisi e modifiche una volta ogni 24 ore, quindi potresti notare lo stesso avviso elencato più volte. Ciascuno di questi avvisi avrà lo stesso ID avviso, la stessa ora di inizio, ecc. e avrà lo stato "In attesa" finché l'avviso non verrà risolto.</block>
   <block id="079090a1dc96bbd4e45426ceeedd592f" category="summary">Crea monitor di metriche e registri personalizzati per monitorare in modo proattivo le prestazioni dell'infrastruttura, le soglie di capacità e gli eventi critici con avvisi e notifiche automatizzati.</block>
   <block id="883d09869adb0b8fae6c4387af23b6d4" category="paragraph">Configura i monitor per monitorare le soglie di prestazione, registrare eventi e anomalie nelle risorse della tua infrastruttura. Crea avvisi personalizzati per parametri quali latenza di scrittura del nodo, capacità di archiviazione o prestazioni dell'applicazione e ricevi notifiche quando queste condizioni vengono soddisfatte.</block>
-  <block id="a7cd6a99f9ca0fccc58590218d395239" category="paragraph">I monitor delle metriche si applicano agli oggetti di inventario quali storage, switch, host, VM, ecc., nonché alle metriche di integrazione quali dati ONTAP Advanced o Kubernetes. Quando si monitorano gli oggetti dell'inventario, tenere presente che non è possibile selezionare il metodo "Raggruppa per". Tuttavia, il raggruppamento è consentito durante il monitoraggio dei dati di integrazione.</block>
   <block id="70b37ea4cf45e401178bb71faa1e50fe" category="section-title">Monitor multi-condizione</block>
   <block id="6e8d7620a4a0bc7614ae9936242cc79e" category="paragraph">Puoi scegliere di perfezionare ulteriormente il monitoraggio delle metriche aggiungendo una seconda condizione. Basta espandere il prompt "+Aggiungi condizione metrica secondaria" e configurare la condizione aggiuntiva.</block>
   <block id="c7c9e436435c4770e86c98098336f9a2" category="inline-image-macro">imposta la seconda condizione</block>
@@ -12786,4 +12785,16 @@
   <block id="f5efcf93de96054f67b29d58662ad5c6" category="list-text">Per l'intervallo di occorrenza, selezionare _Continuamente_ per un periodo di _15 minuti_.</block>
   <block id="95e94216ef8b85a76727809c3dfcbcc0" category="inline-link-macro">Gestione dei dati ONTAP</block>
   <block id="2520cfbb37bc8bbd2fc91278c73eb838" category="list-text">Si noti che le metriche Fpolicy non sono supportate nel raccoglitore REST ONTAP (i raccoglitori dati Workload Security utilizzano server FPolicy e le metriche FPolicy consentono di monitorare l'attività di raccolta dati Workload Security). Per supportare le metriche Fpolicy, utilizzare <block ref="5887f651a571af9233df120cb7d32347" category="inline-link-macro-rx"></block> collettore.</block>
+  <block id="b2422fa602be830d9f1a2469dd70ca20" category="inline-link-macro">NetApp ONTAP AFX</block>
+  <block id="83cd27100a931554f0e05219011edf39" category="cell"><block ref="83cd27100a931554f0e05219011edf39" category="inline-link-macro-rx"></block></block>
+  <block id="14ec544dd26342f2315dc51923b34e66" category="summary">Collettore ONTAP AFX</block>
+  <block id="aaab7580be4232835e9f12e5691f118f" category="doc">Raccoglitore dati AFX NetApp ONTAP</block>
+  <block id="e395c9addcba424f5bda562994dfecbe" category="cell">Volume/ FlexVol/ FlexGroup</block>
+  <block id="1574b47ca9477a3fc7635017b8f4ca0b" category="cell">Qtree/FlexTree</block>
+  <block id="16aac8a4d65f63c39da98362e32e250d" category="cell">Qtree (tipo: Esplixit/Default)</block>
+  <block id="84ace9fb8e132c96d1dfcd31447efedc" category="cell">Secchio S3</block>
+  <block id="1143dbaa613581e6f7e9245d88a5a30d" category="cell">Qtree (tipo: Bucket)</block>
+  <block id="26beb8e28a6498b161cc513e4d05c9f5" category="cell">StoragePod/StorageAvailabilityZone</block>
+  <block id="474d2ef9225b003245e9f5a40297e1e8" category="cell">SVM (macchina virtuale di archiviazione)</block>
+  <block id="07ab2cfb4a15dea7a3c4679e886966f3" category="sidebar">ONTAP AFX</block>
 </blocks>
