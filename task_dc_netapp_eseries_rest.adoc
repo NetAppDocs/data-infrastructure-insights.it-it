@@ -10,13 +10,13 @@ summary: Configurazione del raccoglitore dati REST NetApp E-Series.
 
 
 [role="lead"]
-Il raccoglitore di dati REST NetApp E-Series raccoglie dati di inventario e prestazioni.  Il collettore supporta il firmware 7.x+ utilizzando le stesse configurazioni e segnalando gli stessi dati.  Il collettore REST monitora lo stato di crittografia dei pool di archiviazione nonché lo stato di crittografia dei dischi e dei volumi correlati e fornisce l'utilizzo della CPU del nodo di archiviazione come contatori delle prestazioni, funzionalità non fornita nel collettore SANtricity E-Series legacy.
+Il raccoglitore di dati REST NetApp E-Series raccoglie dati di inventario, registri e prestazioni. Il collettore supporta il firmware 7.x+ utilizzando le stesse configurazioni e segnalando gli stessi dati.  Il collettore REST monitora lo stato di crittografia dei pool di archiviazione, dei dischi e dei volumi, l'utilizzo della CPU del nodo di archiviazione e le funzionalità di registro non fornite nel collettore SANtricity E-Series legacy.
 
 
 
 == Terminologia
 
-Cloud Insight acquisisce le seguenti informazioni di inventario da NetApp E-Series, utilizzando REST.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da NetApp E-Series, utilizzando REST. Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset. Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
 [cols="2*"]
 |===

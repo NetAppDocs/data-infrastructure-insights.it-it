@@ -67,6 +67,8 @@ image:MonitorMetricFilter.png["Filtraggio delle metriche"]
 
 Quando si lavora con dati di integrazione (Kubernetes, ONTAP Advanced Data, ecc.), il filtraggio delle metriche rimuove i punti dati individuali/non corrispondenti dalla serie di dati tracciati, a differenza dei dati dell'infrastruttura (archiviazione, VM, porte, ecc.) in cui i filtri agiscono sul valore aggregato della serie di dati e potenzialmente rimuovono l'intero oggetto dal grafico.
 
+I monitor delle metriche si applicano agli oggetti di inventario quali storage, switch, host, VM, ecc., nonché alle metriche di integrazione quali dati ONTAP Advanced o Kubernetes. Quando si monitorano gli oggetti dell'inventario, tenere presente che non è possibile selezionare il metodo "Raggruppa per". Tuttavia, il raggruppamento è consentito durante il monitoraggio dei dati di integrazione.
+
 
 
 ==== Monitor multi-condizione
