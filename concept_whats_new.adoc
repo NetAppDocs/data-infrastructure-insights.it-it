@@ -18,6 +18,27 @@ NetApp migliora e potenzia costantemente i suoi prodotti e servizi.  Ecco alcune
 
 
 
+== Novembre 2025
+
+
+
+=== Imposta la tua home page personalizzata
+
+Semplifica il tuo flusso di lavoro di monitoraggio giornaliero impostando _qualsiasi_ pagina Data Infrastructure Insights come home page personalizzata. Ogni utente può selezionare una home page diversa per concentrarsi su ciò che è importante per lui: una dashboard critica, avvisi, stato dell'infrastruttura, sicurezza del carico di lavoro o altro ancora.
+
+image:home_page_set.png["impostazione di una home page, larghezza=300"]
+
+
+
+=== Rimani organizzato con il raggruppamento automatico della dashboard
+
+Trasforma la tua esperienza con la dashboard con un raggruppamento intelligente che organizza automaticamente le dashboard della Galleria importate in categorie logiche. La nuova funzionalità di raggruppamento semplifica l'importazione dei dashboard e posiziona ciascun dashboard nel gruppo appropriato in base alla sua funzione e alla sua pertinenza per l'ambiente.
+
+image:dashboard_gallery_groups.png["gruppi di gallerie durante l'importazione, larghezza=500"]
+
+'''
+
+
 == Ottobre 2025
 
 
