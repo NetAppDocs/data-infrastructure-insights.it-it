@@ -7,6 +7,10 @@ summary: Un riassunto.
 = Gestione dei raccoglitori di dati configurati
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
