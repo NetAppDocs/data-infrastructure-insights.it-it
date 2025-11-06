@@ -216,48 +216,43 @@ image:ObjectsReturnedByFilters.png["Oggetti restituiti dai filtri"]
 
 
 
-== Raggruppamento e aggregazione
+== Raggruppamento, identificazione e aggregazione
 
 
 
 === Raggruppamento (arrotolamento)
 
-I dati visualizzati in un widget vengono raggruppati (talvolta chiamati "roll-up") a partire dai punti dati sottostanti raccolti durante l'acquisizione.  Ad esempio, se si dispone di un widget grafico a linee che mostra gli IOPS di archiviazione nel tempo, potrebbe essere opportuno visualizzare una linea separata per ciascuno dei data center, per un confronto rapido.  Puoi scegliere di raggruppare questi dati in uno dei seguenti modi:
+I dati visualizzati in un widget vengono raggruppati (talvolta chiamati "roll-up") a partire dai punti dati sottostanti raccolti durante l'acquisizione. Ad esempio, se si dispone di un widget grafico a linee che mostra gli IOPS di archiviazione nel tempo, potrebbe essere opportuno visualizzare una linea separata per ciascuno dei data center, per un confronto rapido. Nel campo "Raggruppa per", seleziona il tipo di oggetto stesso per visualizzare singole linee, aree, barre, colonne, ecc. (a seconda del tipo di widget) per ciascun oggetto.  È possibile scegliere di raggruppare in base a qualsiasi attributo disponibile nell'elenco per quell'oggetto.  Ad esempio, quando si visualizzano i dati per un volume interno, potrebbe essere opportuno raggruppare i dati in base al nome dell'archiviazione.
+
+Per visualizzare i dati consolidati, rimuovere qualsiasi attributo Raggruppa per, che per impostazione predefinita verrà impostato sul raggruppamento per "Tutti".
+
+Puoi scegliere di aggregare questi dati in uno dei seguenti modi:
 
 * *Media*: visualizza ogni riga come _media_ dei dati sottostanti.
 * *Massimo*: visualizza ogni riga come _massimo_ dei dati sottostanti.
 * *Minimo*: visualizza ogni riga come _minimo_ dei dati sottostanti.
 * *Somma*: visualizza ogni riga come _somma_ dei dati sottostanti.
-* *Conteggio*: visualizza un _conteggio_ di oggetti che hanno segnalato dati entro l'intervallo di tempo specificato.  È possibile scegliere l'_Intera finestra temporale_ in base all'intervallo di tempo della dashboard.
 
 
-.Passi
-Per impostare il metodo di raggruppamento, procedere come segue.
-
-. Nella query del widget, scegli un tipo di risorsa e una metrica (ad esempio, _Archiviazione_) e una metrica (ad esempio _Prestazioni IOPS totali_).
-. Per *Gruppo*, scegli un metodo di aggregazione (ad esempio _Media_) e seleziona gli attributi o le metriche in base ai quali raggruppare i dati (ad esempio, _Centro dati_).
-+
-Il widget si aggiorna automaticamente e mostra i dati per ciascuno dei tuoi data center.
-
-
-
-È anche possibile scegliere di raggruppare _tutti_ i dati sottostanti nel grafico o nella tabella.  In questo caso, otterrai una singola riga per ogni query nel widget, che mostrerà la media, il minimo, il massimo, la somma o il conteggio della metrica o delle metriche scelte per tutte le risorse sottostanti.
-
-Facendo clic sulla legenda di un widget i cui dati sono raggruppati per "Tutti", si apre una pagina di query che mostra i risultati della prima query utilizzata nel widget.
+Quando si visualizza la dashboard, selezionando la legenda per qualsiasi widget i cui dati sono raggruppati per "Tutti" si apre una pagina di query che mostra i risultati della prima query utilizzata nel widget.
 
 Se hai impostato un filtro per la query, i dati vengono raggruppati in base ai dati filtrati.
 
-Tieni presente che quando scegli di raggruppare un widget in base a un campo qualsiasi (ad esempio, _Modello_), dovrai comunque filtrare in base a quel campo per visualizzare correttamente i dati per quel campo nel grafico o nella tabella.
+
+
+=== Identificazione dei dati personalizzati
+
+Quando si crea o si modifica un widget basato sui propri dati personalizzati, è possibile che i dati non vengano rappresentati correttamente nel widget senza un attributo identificativo.  Se DII non riesce a identificare l'oggetto selezionato per il widget, visualizzerà un collegamento _Configurazione avanzata_ nell'area "Raggruppa per".  Espandi questa sezione per selezionare l'attributo con cui desideri identificare i tuoi dati.
+
+image:unmodeled_data_identify_by.png["identificare tramite menu a discesa per dati sconosciuti"]
 
 
 
 === Aggregazione dei dati
 
-È possibile allineare ulteriormente i grafici delle serie temporali (linee, aree, ecc.) aggregando i punti dati in intervalli di minuti, ore o giorni prima che i dati vengano successivamente raggruppati per attributo (se selezionato).  È possibile scegliere di aggregare i punti dati in base alla loro _Media_, Massimo, Minimo, Somma_ o _Conteggio_.
+È possibile allineare ulteriormente i grafici aggregando i punti dati in intervalli di minuti, ore o giorni prima che i dati vengano successivamente raggruppati per attributo (se selezionato). È possibile scegliere di aggregare i punti dati in base alla loro _Media_, Massimo, Minimo, Somma_ o _Conteggio_.
 
 Un intervallo piccolo combinato con un intervallo di tempo lungo potrebbe generare un avviso del tipo "L'intervallo di aggregazione ha prodotto troppi punti dati".  Potresti riscontrare questo problema se hai un intervallo breve e aumenti l'intervallo di tempo della dashboard a 7 giorni.  In questo caso, Insight aumenterà temporaneamente l'intervallo di aggregazione finché non si seleziona un intervallo di tempo più breve.
-
-È anche possibile aggregare i dati nel widget del grafico a barre e nel widget a valore singolo.
 
 Per impostazione predefinita, la maggior parte dei contatori di risorse aggregano in _Media_.  Per impostazione predefinita, alcuni contatori vengono aggregati in _Max, Min_ o _Sum_.  Ad esempio, per impostazione predefinita, gli errori delle porte vengono aggregati in _Somma_, mentre gli IOPS di archiviazione vengono aggregati in _Media_.
 

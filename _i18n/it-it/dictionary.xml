@@ -954,26 +954,14 @@
   <block id="33b013de46ebfe3f233e12e26bb762a4" category="paragraph">Gli oggetti restituiti dalle query e dai filtri sono simili a quelli mostrati nella seguente illustrazione.  Gli oggetti a cui sono assegnati dei "tag" sono annotazioni, mentre gli oggetti senza tag sono contatori delle prestazioni o attributi degli oggetti.</block>
   <block id="3424b9554ebd571fa4ee62bd540c81dd" category="inline-image-macro">Oggetti restituiti dai filtri</block>
   <block id="5ffcd444715146c4b8ef3c2e14e25859" category="paragraph"><block ref="5ffcd444715146c4b8ef3c2e14e25859" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d7eb8ab1e688454eec9d83c8277b00fe" category="section-title">Raggruppamento e aggregazione</block>
   <block id="3d0486264987eff198cb8489a591c919" category="section-title">Raggruppamento (arrotolamento)</block>
-  <block id="e251f9ae37a0914ac3ed0861aee9d003" category="paragraph">I dati visualizzati in un widget vengono raggruppati (talvolta chiamati "roll-up") a partire dai punti dati sottostanti raccolti durante l'acquisizione.  Ad esempio, se si dispone di un widget grafico a linee che mostra gli IOPS di archiviazione nel tempo, potrebbe essere opportuno visualizzare una linea separata per ciascuno dei data center, per un confronto rapido.  Puoi scegliere di raggruppare questi dati in uno dei seguenti modi:</block>
   <block id="fec05a93bc2859fa296e20fb09a6d339" category="list-text">*Media*: visualizza ogni riga come _media_ dei dati sottostanti.</block>
   <block id="c4006c924bdf8bc80ddcd09bd46d0666" category="list-text">*Massimo*: visualizza ogni riga come _massimo_ dei dati sottostanti.</block>
   <block id="fdf509d52d13201cead39e938712c689" category="list-text">*Minimo*: visualizza ogni riga come _minimo_ dei dati sottostanti.</block>
   <block id="1a284984e082a2cc2ceecd12b5c25e50" category="list-text">*Somma*: visualizza ogni riga come _somma_ dei dati sottostanti.</block>
-  <block id="fada1c7705d134b1361677f79eef7e6a" category="list-text">*Conteggio*: visualizza un _conteggio_ di oggetti che hanno segnalato dati entro l'intervallo di tempo specificato.  È possibile scegliere l'_Intera finestra temporale_ in base all'intervallo di tempo della dashboard.</block>
-  <block id="d186cba97a995601fc12d97defd879c7" category="paragraph">Per impostare il metodo di raggruppamento, procedere come segue.</block>
-  <block id="0886591e8bd637066947802b2c681da8" category="list-text">Nella query del widget, scegli un tipo di risorsa e una metrica (ad esempio, _Archiviazione_) e una metrica (ad esempio _Prestazioni IOPS totali_).</block>
-  <block id="843784684ad8439aa0ddfe813cac8e16" category="list-text">Per *Gruppo*, scegli un metodo di aggregazione (ad esempio _Media_) e seleziona gli attributi o le metriche in base ai quali raggruppare i dati (ad esempio, _Centro dati_).</block>
-  <block id="5545e86f2a092d7eeeeae79320003a7a" category="paragraph">Il widget si aggiorna automaticamente e mostra i dati per ciascuno dei tuoi data center.</block>
-  <block id="9b3328ae96bacd8c344b3f781d9113c0" category="paragraph">È anche possibile scegliere di raggruppare _tutti_ i dati sottostanti nel grafico o nella tabella.  In questo caso, otterrai una singola riga per ogni query nel widget, che mostrerà la media, il minimo, il massimo, la somma o il conteggio della metrica o delle metriche scelte per tutte le risorse sottostanti.</block>
-  <block id="28c428ed363d0e9575a830fcfb080fe3" category="paragraph">Facendo clic sulla legenda di un widget i cui dati sono raggruppati per "Tutti", si apre una pagina di query che mostra i risultati della prima query utilizzata nel widget.</block>
   <block id="12d9c21e855587068144e1be92c3bc96" category="paragraph">Se hai impostato un filtro per la query, i dati vengono raggruppati in base ai dati filtrati.</block>
-  <block id="4bb74590cbf2f4d72c628f06e53c55b9" category="paragraph">Tieni presente che quando scegli di raggruppare un widget in base a un campo qualsiasi (ad esempio, _Modello_), dovrai comunque filtrare in base a quel campo per visualizzare correttamente i dati per quel campo nel grafico o nella tabella.</block>
   <block id="d86c1c1f96efbca023a6312f2655cdd2" category="section-title">Aggregazione dei dati</block>
-  <block id="757a30a76f00d417fdea69085d4444a4" category="paragraph">È possibile allineare ulteriormente i grafici delle serie temporali (linee, aree, ecc.) aggregando i punti dati in intervalli di minuti, ore o giorni prima che i dati vengano successivamente raggruppati per attributo (se selezionato).  È possibile scegliere di aggregare i punti dati in base alla loro _Media_, Massimo, Minimo, Somma_ o _Conteggio_.</block>
   <block id="a10dce4cf3b20fcc81ffdd73fff68459" category="paragraph">Un intervallo piccolo combinato con un intervallo di tempo lungo potrebbe generare un avviso del tipo "L'intervallo di aggregazione ha prodotto troppi punti dati".  Potresti riscontrare questo problema se hai un intervallo breve e aumenti l'intervallo di tempo della dashboard a 7 giorni.  In questo caso, Insight aumenterà temporaneamente l'intervallo di aggregazione finché non si seleziona un intervallo di tempo più breve.</block>
-  <block id="6d984d3ac5f53bc70c9ce3bedb56f658" category="paragraph">È anche possibile aggregare i dati nel widget del grafico a barre e nel widget a valore singolo.</block>
   <block id="abbc6ae3194254cb0a6cd47c50a20631" category="paragraph">Per impostazione predefinita, la maggior parte dei contatori di risorse aggregano in _Media_.  Per impostazione predefinita, alcuni contatori vengono aggregati in _Max, Min_ o _Sum_.  Ad esempio, per impostazione predefinita, gli errori delle porte vengono aggregati in _Somma_, mentre gli IOPS di archiviazione vengono aggregati in _Media_.</block>
   <block id="806da624ec9d79eaa05cce82c4860377" category="section-title">Visualizzazione dei risultati migliori/migliori</block>
   <block id="30481770dde0dcefc7b5810b7184ac11" category="paragraph">In un widget grafico, è possibile visualizzare i risultati *In alto* o *In basso* per i dati raggruppati e scegliere il numero di risultati visualizzati dall'elenco a discesa fornito.  In un widget tabella è possibile ordinare in base a qualsiasi colonna.</block>
@@ -1526,9 +1514,7 @@
   <block id="d7ea4828749f5ad072aad31fed4a03a1" category="paragraph">*Nome host:* US-BV-M11</block>
   <block id="6d7440617347d4c460f065f3f403cc7e" category="paragraph">*RegExp:* SRV_USBV([A-Za-z0-9]+)_F[12]</block>
   <block id="bf3f7ef872246f009e37d0a4c0951049" category="paragraph">*Formato:* US-BV-\1</block>
-  <block id="08b3c5691f5c3cb584dc1a3ec5321962" category="summary">Data Infrastructure Insights contiene tutorial che mostrano come eseguire numerose attività.</block>
   <block id="5b425cd08035f29c3dad5d45f1d2ea6e" category="doc">Tutorial sulle funzionalità</block>
-  <block id="f96c0cb8e557b8c2286592a385c5fd6e" category="paragraph">Data Infrastructure Insights è ricco di utili funzionalità che consentono di risolvere rapidamente e facilmente i problemi e di ottenere informazioni dettagliate sull'ambiente aziendale.  Trova facilmente i dati con query potenti, visualizza i dati nelle dashboard e invia avvisi via e-mail per le soglie di dati che hai impostato.</block>
   <block id="7dc1d63676b307452b778906ec63a727" category="section-title">Lista di controllo e tutorial video</block>
   <block id="9a3ddb6d99b9ffb5f7473690abc9fb52" category="paragraph">L'*elenco di controllo di avvio* visualizzato nel tenant di Data Infrastructure Insights contiene un elenco di diverse attività e concetti utili.  Selezionando un elemento nella checklist si accede alla pagina Data Infrastructure Insights appropriata per quel concetto.  Ad esempio, cliccando sulla voce _Crea una dashboard_ si apre la pagina *Dashboard* Data Infrastructure Insights .</block>
   <block id="06bc4be9452f8162d26f7cb4b4d2e0b2" category="inline-image-macro">Avanzamento della checklist del tutorial</block>
@@ -8541,9 +8527,7 @@
   <block id="874db297b2254479eeb702a2d7fa8dab" category="list-text">Fare clic su *Elimina*.</block>
   <block id="e08b25c0c2d46e96d0ac5d6faca80bbf" category="paragraph">Il sistema visualizza la pagina *Elimina agente*.</block>
   <block id="bd69c8c7685e8cb8cbe42da9c5c9d5e0" category="list-text">Fare clic su *Elimina* per confermare l'eliminazione.</block>
-  <block id="3e68378ba1d3b7f2245578e342bed0be" category="summary">Pochi semplici passaggi ti aiuteranno a iniziare a utilizzare Workload Security</block>
   <block id="bba50a707846a3806736dc01f6354532" category="doc">Introduzione alla sicurezza del carico di lavoro</block>
-  <block id="0506b86e6f0cdfab05c9570568f031d8" category="paragraph">Prima di poter iniziare a utilizzare Workload Security per monitorare l'attività degli utenti, è necessario completare alcune attività di configurazione.</block>
   <block id="f827ca5aa861a4bddcbc872872858f88" category="paragraph">Il sistema Workload Security utilizza un agente per raccogliere i dati di accesso dai sistemi di archiviazione e le informazioni utente dai server Directory Services.</block>
   <block id="b69df43565e372517a8522587f62a492" category="paragraph">Prima di poter iniziare a raccogliere dati, è necessario configurare quanto segue:</block>
   <block id="eaeb30f9f18e0c50b178676f3eaef45f" category="cell">Compito</block>
@@ -8552,20 +8536,12 @@
   <block id="7db04bd496cdb9ab394c662c3f00f7ed" category="paragraph"><block ref="7db04bd496cdb9ab394c662c3f00f7ed" category="inline-link-macro-rx"></block></block>
   <block id="0e46a6bad3878362e846c7b92d82bf81" category="inline-link-macro">Aggiungi agente</block>
   <block id="8a48ba26234a2f9778b42b78c443e637" category="paragraph"><block ref="8a48ba26234a2f9778b42b78c443e637" category="inline-link-macro-rx"></block></block>
-  <block id="5b9de2c90171387a124d93a9f2da96f0" category="inline-link-macro">*Video*: Distribuzione dell'agente</block>
-  <block id="4e7bc63fc55f6e0ea38b5aaf46f782fa" category="paragraph"><block ref="4e7bc63fc55f6e0ea38b5aaf46f782fa" category="inline-link-macro-rx"></block></block>
   <block id="ea7a70b573d06d2b749ceca1ebd27807" category="cell">Configurare un connettore di directory utente</block>
   <block id="3989712b3613cd2576d0059b20b345ce" category="inline-link-macro">Aggiungi connettore directory utente</block>
-  <block id="938c31c8b36e8eb1b4defe3caa95717e" category="inline-link-macro">*Video*: Connessione ad Active Directory</block>
-  <block id="8946e54a232a494e5ad35eb956c130ee" category="cell"><block ref="d49a8da0de1eee7dc793284699bb0bab" category="inline-link-macro-rx"></block> <block ref="e2ee1872ae14f9b079a5e15b45b85992" category="inline-link-macro-rx"></block></block>
   <block id="6e043661fa5856f26501d44b41838596" category="cell">Configurare i raccoglitori di dati</block>
-  <block id="9a588e9b6b88f5c90c86bde96fc3f0c1" category="inline-link-macro">*Video*: Connessione ONTAP SVM</block>
-  <block id="b0bdf1289c168696fcf69f90ddc82ab2" category="cell">Fare clic su *Sicurezza del carico di lavoro &gt; Collettori*. Fare clic sul collettore dati che si desidera configurare.  Consultare la sezione Riferimento al fornitore del Data Collector della documentazione.<block ref="49902fc743c67e64ddcf4901ef2c69bf" category="inline-link-macro-rx"></block></block>
   <block id="a1d0a98f6922d21edbc391782fbb69e3" category="cell">Crea account utente</block>
   <block id="8e9fceaaf84bd1591dc11726965a5b35" category="inline-link-macro">Gestisci account utente</block>
   <block id="a6fe30cef6ad189dc3685c855c858b10" category="cell"><block ref="a6fe30cef6ad189dc3685c855c858b10" category="inline-link-macro-rx"></block></block>
-  <block id="82cb9bc9a2d4a2705c91af9df596adb3" category="inline-link-macro">*Video*: Risoluzione dei problemi</block>
-  <block id="23911ec6737c5f573a24c330a412e271" category="cell"><block ref="23911ec6737c5f573a24c330a412e271" category="inline-link-macro-rx"></block></block>
   <block id="100c37ccf9bdbedac2e35d90d41d3be9" category="inline-link-macro">vedi questa guida</block>
   <block id="2e51f9cf2f419fb083d896473cf49193" category="paragraph">Workload Security può essere integrato anche con altri strumenti.  Per esempio,<block ref="4ccd3ce9fc5ce8804b14aeb0860cf515" category="inline-link-macro-rx"></block> sull'integrazione con Splunk.</block>
   <block id="90fbffa9ff3e21a719cc9451531fc673" category="summary">Gli account utente di Workload Security sono gestiti tramite la gestione degli utenti Data Infrastructure Insights</block>
@@ -9788,13 +9764,7 @@
   <block id="ad99b83e7b10ea825777161cb8f5594b" category="cell">* Verificare le credenziali e l'indirizzo IP immessi.  * Provare a comunicare con l'array tramite la console di gestione Web \https://&lt;ip&gt;:8452/DS8000/Console.  Sostituisci &lt;ip&gt; con l'IP configurato dal raccoglitore dati.</block>
   <block id="b18a21f855b9b4e7ca0fae5355812eb5" category="cell">Errore: * Impossibile eseguire il programma * Errore durante l'esecuzione del comando</block>
   <block id="79766e839f35eb1cc1188445059bba75" category="cell">* Da Data Infrastructure Insights Acquisition Unit, aprire un CMD * Aprire il file CLI.CFG nella directory/lib home della CLI e controllare la proprietà JAVA_INSTALL, modificare il valore in modo che corrisponda al proprio ambiente * Visualizzare la versione Java installata su questa macchina, digitando: "java -version" * Eseguire il ping dell'indirizzo IP del dispositivo IBM Storage specificato nel comando CLI emesso.  * Se tutto quanto sopra ha funzionato correttamente, eseguire manualmente un comando CLI</block>
-  <block id="c5c601f0f7513cb66c54f7740aebd769" category="summary">Raccoglitore dati IBM TotalStorage DS4000</block>
-  <block id="bb368e45192fd41360b40a61c441bbf7" category="paragraph">Questo raccoglitore di dati acquisisce informazioni sull'inventario e sulle prestazioni dal sistema di archiviazione IBM DS4000.  Sono possibili due configurazioni (firmware 6.x e firmware 7.x+) ed entrambe hanno gli stessi valori.</block>
-  <block id="f8defa21a7abf462d74f023cc11be1db" category="paragraph">Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati IBM DS4000.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:</block>
   <block id="0951a6690e5dc87411346792c9f941c7" category="cell">Gruppo di volumi</block>
-  <block id="d9dc66c5dd0daf41b61af8de89a60066" category="list-text">Indirizzo IP di ogni array DS5 o FAStT</block>
-  <block id="90708586f8afae2670c5e389c5b3df37" category="list-text">Convalida dell'accesso tramite ping dell'indirizzo IP di entrambi i controller sull'array</block>
-  <block id="d0ad61d8d4e1d5d38bb6b0cb90a5d934" category="list-text">Requisiti della porta: 2463</block>
   <block id="86c00393c5a1dba7b670a90d957d105e" category="cell">Elenco separato da virgole degli IP del controller Array SANtricity</block>
   <block id="f9cba995b86ac6c96d9d30c9ced7c828" category="cell">Indirizzi IP e/o nomi di dominio completi per i controller di array</block>
   <block id="123823c1c5909eba4c00c4d8585c250f" category="cell">Il valore predefinito è 30 minuti</block>
@@ -12793,4 +12763,33 @@
   <block id="344e2ec56c6114e245d66d3978073950" category="paragraph">Trasforma la tua esperienza con la dashboard con un raggruppamento intelligente che organizza automaticamente le dashboard della Galleria importate in categorie logiche. La nuova funzionalità di raggruppamento semplifica l'importazione dei dashboard e posiziona ciascun dashboard nel gruppo appropriato in base alla sua funzione e alla sua pertinenza per l'ambiente.</block>
   <block id="251972b93cab79073298e6ad6678a0be" category="inline-image-macro">gruppi di gallerie durante l'importazione, larghezza=500</block>
   <block id="99d6cc3c987c34af31c72d3213e5e764" category="paragraph"><block ref="99d6cc3c987c34af31c72d3213e5e764" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5ec1b38643878459e136106056fc3081" category="section-title">Raggruppamento, identificazione e aggregazione</block>
+  <block id="dc185a282a5cd3225e8cc57b4b6b6aa1" category="paragraph">I dati visualizzati in un widget vengono raggruppati (talvolta chiamati "roll-up") a partire dai punti dati sottostanti raccolti durante l'acquisizione. Ad esempio, se si dispone di un widget grafico a linee che mostra gli IOPS di archiviazione nel tempo, potrebbe essere opportuno visualizzare una linea separata per ciascuno dei data center, per un confronto rapido. Nel campo "Raggruppa per", seleziona il tipo di oggetto stesso per visualizzare singole linee, aree, barre, colonne, ecc. (a seconda del tipo di widget) per ciascun oggetto.  È possibile scegliere di raggruppare in base a qualsiasi attributo disponibile nell'elenco per quell'oggetto.  Ad esempio, quando si visualizzano i dati per un volume interno, potrebbe essere opportuno raggruppare i dati in base al nome dell'archiviazione.</block>
+  <block id="fa0e168aa1b39e8090932eea11026412" category="paragraph">Per visualizzare i dati consolidati, rimuovere qualsiasi attributo Raggruppa per, che per impostazione predefinita verrà impostato sul raggruppamento per "Tutti".</block>
+  <block id="fbcd269f31c4ab263533f3645a1a728a" category="paragraph">Puoi scegliere di aggregare questi dati in uno dei seguenti modi:</block>
+  <block id="06156308540648c4641a0a9cb567eaed" category="paragraph">Quando si visualizza la dashboard, selezionando la legenda per qualsiasi widget i cui dati sono raggruppati per "Tutti" si apre una pagina di query che mostra i risultati della prima query utilizzata nel widget.</block>
+  <block id="6882d2460edb6d055bfb008888648c98" category="section-title">Identificazione dei dati personalizzati</block>
+  <block id="66cbbbe1e48b5652dacf30cdc0a8c109" category="paragraph">Quando si crea o si modifica un widget basato sui propri dati personalizzati, è possibile che i dati non vengano rappresentati correttamente nel widget senza un attributo identificativo.  Se DII non riesce a identificare l'oggetto selezionato per il widget, visualizzerà un collegamento _Configurazione avanzata_ nell'area "Raggruppa per".  Espandi questa sezione per selezionare l'attributo con cui desideri identificare i tuoi dati.</block>
+  <block id="d489c8cc0112182e1e9478e7c22dd3f8" category="inline-image-macro">identificare tramite menu a discesa per dati sconosciuti</block>
+  <block id="355bd56539964e29708b9c4df7942fc1" category="paragraph"><block ref="355bd56539964e29708b9c4df7942fc1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6aa8e407f2a6d45ee7e0e895bfb9b4c6" category="paragraph">È possibile allineare ulteriormente i grafici aggregando i punti dati in intervalli di minuti, ore o giorni prima che i dati vengano successivamente raggruppati per attributo (se selezionato). È possibile scegliere di aggregare i punti dati in base alla loro _Media_, Massimo, Minimo, Somma_ o _Conteggio_.</block>
+  <block id="64e6afd71183834ff1036fd74f3e716e" category="summary">I tutorial video passo passo ti aiutano a padroneggiare le funzionalità di Data Infrastructure Insights, come dashboard, query, monitoraggio e risoluzione dei problemi.</block>
+  <block id="2ad37fcdfb757474e55b13972a8ba843" category="doc">Introduzione ai tutorial video</block>
+  <block id="606714bccc97b2ecd8ce8598c5298ddd" category="paragraph">Apprendi in modo efficiente Data Infrastructure Insights con i nostri tutorial sulle funzionalità, dotati di guide video dettagliate e di una checklist di controllo dei progressi.  Acquisisci competenze essenziali come la creazione di dashboard, la creazione di query, l'impostazione del monitoraggio e la risoluzione dei problemi tramite tutorial pratici pensati per renderti produttivo in tempi rapidi.</block>
+  <block id="1ca1d3208fe70423d28d5346749bf725" category="section-title">Video tutorial</block>
+  <block id="f21521c513fcb8f1320750785f983ea4" category="paragraph">Guarda i seguenti video per saperne di più.</block>
+  <block id="efaefb91e104bcd35299c23da0236416" category="inline-link-macro">Trasforma i dati grezzi in informazioni fruibili</block>
+  <block id="ae64c1ecf9b0637af4d421aec17b6b0f" category="paragraph"><block ref="ae64c1ecf9b0637af4d421aec17b6b0f" category="inline-link-macro-rx"></block></block>
+  <block id="260eb4e78ceb606b62c775c5fb398a50" category="inline-link-macro">Crea dashboard potenti con NetApp</block>
+  <block id="765364e45c00e9c6747f8f72be907378" category="paragraph"><block ref="765364e45c00e9c6747f8f72be907378" category="inline-link-macro-rx"></block></block>
+  <block id="da2548febb74b05443083a5c4cb3bb98" category="inline-link-macro">Risoluzione dei problemi semplificata con VM Analyzer</block>
+  <block id="15235b29b13942ecccd882101e412b45" category="paragraph"><block ref="15235b29b13942ecccd882101e412b45" category="inline-link-macro-rx"></block></block>
+  <block id="b8563bbbe56bf52b001d27bc746ae8f7" category="inline-link-macro">Esplora e analizza con le query in Data Infrastructure Insights</block>
+  <block id="cd85347613a114ab9748f0f1a561065c" category="paragraph"><block ref="cd85347613a114ab9748f0f1a561065c" category="inline-link-macro-rx"></block></block>
+  <block id="77354ced7e95147c4c951948901aa87b" category="inline-link-macro">Monitoraggio proattivo dell'infrastruttura con avvisi e monitor</block>
+  <block id="08e9d4de145fab52e35be03578b2cb95" category="paragraph"><block ref="08e9d4de145fab52e35be03578b2cb95" category="inline-link-macro-rx"></block></block>
+  <block id="bc0e5d8878e85d65aed637113d5bef42" category="summary">Distribuisci agenti Workload Security e raccoglitori di dati per monitorare l'attività degli utenti e rilevare le minacce alla sicurezza.</block>
+  <block id="f6bd61a684c7e1301e78da3db50d1837" category="paragraph">Workload Security ti aiuta a monitorare l'attività degli utenti e a rilevare potenziali minacce alla sicurezza nel tuo ambiente di archiviazione.  Prima di poter iniziare il monitoraggio, è necessario configurare agenti, raccoglitori di dati e servizi di directory per gettare le basi per un monitoraggio completo della sicurezza.</block>
+  <block id="d49a8da0de1eee7dc793284699bb0bab" category="cell"><block ref="d49a8da0de1eee7dc793284699bb0bab" category="inline-link-macro-rx"></block></block>
+  <block id="adf5d1319b5bafa4d304b195ab11a3ac" category="cell">Fare clic su *Sicurezza del carico di lavoro &gt; Collettori*. Fare clic sul collettore dati che si desidera configurare. Per informazioni sul collettore, consultare la sezione Riferimento del fornitore del Data Collector della documentazione.</block>
 </blocks>
