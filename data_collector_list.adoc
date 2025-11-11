@@ -173,9 +173,6 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_ibm_cs.html["Serie IBM CS"] | Infrastruttura 
 
 
-| link:task_dc_ibm_powervm.html["IBM PowerVM"] | Infrastruttura 
-
-
 | link:task_dc_ibm_svc.html["Controller del volume IBM SAN (SVC)"] | Infrastruttura 
 
 
