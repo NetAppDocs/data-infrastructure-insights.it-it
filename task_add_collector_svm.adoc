@@ -17,9 +17,6 @@ summary: Aggiunta di raccoglitori di dati di sicurezza del carico di lavoro
 ONTAP SVM Data Collector consente a Workload Security di monitorare le attività di accesso ai file e agli utenti sulle macchine virtuali di storage (SVM) NetApp ONTAP . Questa guida illustra la configurazione e la gestione del raccoglitore dati SVM per garantire un monitoraggio completo della sicurezza del tuo ambiente ONTAP .
 
 
-NOTE: I cambiamenti globali potrebbero avere un impatto potenziale sui sistemi ONTAP . Si consiglia vivamente di apportare modifiche che interessano un gran numero di raccoglitori di dati durante le ore di minor traffico.
-
-
 
 == Prima di iniziare
 
