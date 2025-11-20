@@ -38,10 +38,10 @@ Prima di configurare l'agente Workload Security, tenere presente quanto segue.
 | Pausa e ripresa | Pausa: rimuove fpolicies da ONTAP. Solitamente utilizzato quando i clienti eseguono attività di manutenzione prolungate che potrebbero richiedere molto tempo, come riavvii di VM di agenti o sostituzioni di storage. Riprendi: aggiunge nuovamente fpolicies a ONTAP. 
 
 
-| Fissare e sbloccare | Unpin recupera immediatamente la versione più recente (se disponibile) e aggiorna l'agente e il collettore. Durante questo aggiornamento, fpolicies si disconnetterà e si riconnetterà. Questa funzionalità è pensata per i clienti che desiderano controllare la tempistica degli aggiornamenti automatici. 
+| Fissare e sbloccare | Unpin recupera immediatamente la versione più recente (se disponibile) e aggiorna l'agente e il collettore. Durante questo aggiornamento, fpolicies si disconnetterà e si riconnetterà. Questa funzionalità è pensata per i clienti che desiderano controllare la tempistica degli aggiornamenti automatici. Vedi sotto per<<pinning-an-agent-at-the-current-version,istruzioni per fissare/sganciare>> . 
 
 
-| Approccio consigliato | Per configurazioni di grandi dimensioni, è consigliabile utilizzare Pin e Unpin anziché mettere in pausa i collettori. Non è necessario mettere in pausa e riprendere mentre si utilizza "Unpin" e "Unpin". I clienti possono mantenere bloccati i propri agenti e collettori e, dopo aver ricevuto una notifica via e-mail relativa a una nuova versione, hanno una finestra di 30 giorni per aggiornare selettivamente gli agenti uno alla volta. Questo approccio riduce al minimo l'impatto della latenza sulle fpolicies e fornisce un maggiore controllo sul processo di aggiornamento. 
+| Approccio consigliato | Per configurazioni di grandi dimensioni, è consigliabile utilizzare Pin e Unpin anziché mettere in pausa i collettori. Non è necessario mettere in pausa e riprendere mentre si usa la funzione "blocca e sblocca". I clienti possono mantenere bloccati i propri agenti e collettori e, dopo aver ricevuto una notifica via e-mail relativa a una nuova versione, hanno una finestra di 30 giorni per aggiornare selettivamente gli agenti uno alla volta. Questo approccio riduce al minimo l'impatto della latenza sulle fpolicies e fornisce un maggiore controllo sul processo di aggiornamento. 
 |===
 
 
