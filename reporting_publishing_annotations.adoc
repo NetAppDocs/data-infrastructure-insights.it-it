@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: reporting_publishing_annotations.html 
+summary: Scopri come pubblicare e annullare la pubblicazione delle annotazioni da utilizzare nei report. 
+keywords: reporting, annotations, publish, unpublish, data warehouse, dwh 
+---
+= Pubblicazione e annullamento della pubblicazione di annotazioni per la segnalazione
+:allow-uri-read: 
+
+
+
+
+== Pubblicazione e annullamento della pubblicazione di annotazioni per la segnalazione
+
+[role="lead"]
+Scopri come pubblicare annotazioni da utilizzare nei report e nel Data Warehouse e come annullare correttamente la pubblicazione delle annotazioni quando non sono più necessarie.
+
+
+
+== Pubblicazione di annotazioni per la segnalazione
+
+Dopo aver creato annotazioni in Data Infrastructure Insights, puoi pubblicarle per utilizzarle in Reporting.
+
+
+
+=== Passaggi per pubblicare annotazioni
+
+. Vai alla pagina *Osservabilità > Arricchisci > Annotazioni e seleziona la scheda _Annotazioni per la creazione di report_.
+. Individua l'annotazione che desideri pubblicare.
+. Selezionare l'annotazione e selezionare _Pubblica nei report_.  È anche possibile scegliere di applicarlo ai dati storici, consentendo di utilizzare l'annotazione durante l'esecuzione di report cronologici.
+. Una volta pubblicata, l'annotazione diventa disponibile per l'uso in Reporting.
+. Le annotazioni vengono pubblicate per essere utilizzate nella creazione di report dopo la successiva esecuzione ETL.
+
+
+[NOTE]
+====
+Tutti i report che fanno riferimento all'annotazione utilizzeranno i valori pubblicati.  Se modifichi un'annotazione dopo la pubblicazione, potrebbe essere necessario ripubblicarla affinché le modifiche abbiano effetto nei report.
+
+====
+
+
+== Annullamento della pubblicazione delle annotazioni per la segnalazione
+
+Potrebbero esserci momenti in cui è necessario rimuovere o annullare la pubblicazione delle annotazioni, in modo che non vengano più utilizzate in Reporting.  Ad esempio, un'annotazione potrebbe non essere più necessaria oppure potrebbe contenere informazioni obsolete che non dovrebbero comparire nei report.
+
+
+
+=== Passaggi per annullare la pubblicazione delle annotazioni
+
+Prima di annullare la pubblicazione di un'annotazione, tieni presente che questa azione avrà un impatto su tutti i report esistenti che utilizzano l'annotazione.  I report potrebbero richiedere la modifica o l'assistenza di servizi professionali per rimuovere i riferimenti alle annotazioni.
+
+. Nell'interfaccia utente Data Infrastructure Insights , vai alla scheda _Annotazioni per la creazione di report_.
+. Individua l'annotazione di cui vuoi annullare la pubblicazione.
+. Per ogni oggetto in cui è pubblicata l'annotazione, deselezionare l'annotazione e selezionare _Salva_.
+. Rimuovere tutte le query o le regole che fanno ancora riferimento all'annotazione per assicurarsi che non venga contrassegnata come "in uso".
+. Le annotazioni non saranno pubblicate dopo la successiva esecuzione ETL.
+. Una volta completato l'ETL, l'annotazione può essere eliminata dall'elenco delle annotazioni, se non è più necessaria sul lato tenant.
+
+
+[IMPORTANT]
+====
+Le annotazioni continueranno ad apparire nel Data Warehouse finché non verranno opportunamente rimosse dalla pubblicazione.  La semplice eliminazione di un'annotazione dalla pagina Annotazioni senza prima annullarne la pubblicazione lascerà dati obsoleti che potrebbero apparire nei report esistenti.  Per garantire la rimozione completa, seguire i passaggi di annullamento della pubblicazione indicati sopra.
+
+====
+
+
+== Impatto sui report esistenti
+
+La rimozione o l'annullamento della pubblicazione delle annotazioni potrebbe richiedere modifiche ai report esistenti che fanno riferimento a tali annotazioni. Considera quanto segue:
+
+* I report che utilizzano l'annotazione come filtro o dimensione dovranno essere aggiornati.
+* Se un'annotazione viene rimossa senza aggiornare i report dipendenti, tali report potrebbero restituire errori o risultati imprevisti.
+* Potrebbe essere necessario ricorrere a servizi professionali per assistere nella correzione dei report in scenari complessi.
+
+
+Si consiglia di rivedere tutti i report che dipendono da un'annotazione prima di annullarne la pubblicazione.

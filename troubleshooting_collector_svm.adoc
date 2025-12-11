@@ -238,7 +238,7 @@ Una volta impostate le autorizzazioni, riavviare il raccoglitore.
 {vuoto}
 
 '''
-*Problema:* Il collettore è in stato di errore con il messaggio: Il connettore è in stato di errore.  Motivo dell'errore: impossibile configurare l'archivio persistente su SVM <Nome SVM>.  Motivo: impossibile trovare un aggregato adatto per il volume "<volumeName>" in SVM "<SVM Name>".  Motivo: le informazioni sulle prestazioni per l'aggregato "<aggregateName>" non sono attualmente disponibili.  Attendi qualche minuto e riprova il comando. Nome del servizio: audit. Motivo dell'errore: Impossibile configurare (policy su SVM svmname. Motivo: Impossibile trovare un aggregato adatto per il volume "<volumeName>" in SVM "<SVM Name>". Motivo: le informazioni sulle prestazioni per l'aggregato "<aggregateName>" non sono attualmente disponibili. Attendi qualche minuto e riprova a eseguire il comando.
+*Problema:* Il collettore è in stato di errore con il messaggio: Il connettore è in stato di errore.  Motivo dell'errore: impossibile configurare l'archivio persistente su SVM <Nome SVM>.  Motivo: impossibile trovare un aggregato adatto per il volume "<volumeName>" in SVM "<SVM Name>".  Motivo: le informazioni sulle prestazioni per l'aggregato "<aggregateName>" non sono attualmente disponibili.  Attendi qualche minuto e riprova il comando. Nome del servizio: audit. Motivo dell'errore: Impossibile configurare l'archivio persistente su SVM <SVM Name>. Motivo: Impossibile trovare un aggregato adatto per il volume "<volumeName>" in SVM "<SVM Name>". Motivo: le informazioni sulle prestazioni per l'aggregato "<aggregateName>" non sono attualmente disponibili. Attendi qualche minuto e riprova a eseguire il comando.
 
 *Prova questo:* attendi qualche minuto e poi riavvia il Collector.
 
