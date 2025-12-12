@@ -7,6 +7,10 @@ summary: Opzioni di visualizzazione dei dati Telegraf
 = Trasformazione delle metriche
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
