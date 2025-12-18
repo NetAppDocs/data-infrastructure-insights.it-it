@@ -18,6 +18,35 @@ NetApp migliora e potenzia costantemente i suoi prodotti e servizi.  Ecco alcune
 
 
 
+== Dicembre 2025
+
+
+
+=== Controllo dell'accesso alle query con query condivise
+
+Condividi le query che crei con controlli di autorizzazione dettagliati. Selezionare la modalità Visualizzatore di sola lettura per impedire modifiche o la modalità Modifica per consentirle. Le query private sono accessibili ai creatori, mentre le query condivise possono essere sfruttate nelle regole di annotazione o duplicate per casi d'uso specializzati, offrendoti il controllo completo su come le query vengono utilizzate e modificate all'interno della tua organizzazione.
+
+image:query_sharing_dialog.png["impostazione dei permessi su una query, larghezza=200"]
+
+Inoltre, gli utenti con ruolo _Ospite_ possono ora creare e gestire le proprie query private.
+
+
+
+=== Filtraggio migliore durante la gestione dei monitor
+
+Il filtraggio per gli elenchi e i gruppi di Monitor è stato migliorato per aggiungere il supporto dei caratteri jolly, filtri multipli, funzionalità di inclusione/esclusione e altro ancora.
+
+image:monitor_list_filters.png["Nuovo filtro monitor, larghezza=500"]
+
+
+
+=== Visualizzazioni della dashboard più pulite
+
+Il design migliorato della dashboard ti aiuta a vedere ciò che conta di più. Maggiore chiarezza visiva con bordi ombreggiati che separano i widget e linee di separazione rimosse per ridurre l'ingombro e consentirti di concentrarti sulle informazioni sui dati. Questi perfezionamenti creano un'esperienza di dashboard più pulita e intuitiva, che consente di individuare tendenze e anomalie in modo più rapido e semplice.
+
+'''
+
+
 == Novembre 2025
 
 

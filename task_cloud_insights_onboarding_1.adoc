@@ -47,7 +47,7 @@ Se è la prima volta che accedi a Data Infrastructure Insights, scopri tutto ci�
 
 Durante la configurazione del tenant di prova, dovrai scegliere la regione in cui ospitarlo e se preferisci che sia su AWS o Azure.
 
-Una volta completata la creazione del tenant, utilizza le credenziali della console per accedere e iniziare la prova gratuita di 30 giorni di Data Infrastructure Insights.  Durante questa prova potrai esplorare le funzionalità offerte da Data Infrastructure Insights .
+Una volta completata la creazione del tenant, utilizza le credenziali della console per accedere e iniziare la prova gratuita di 30 giorni di Data Infrastructure Insights. Durante questa prova potrai esplorare le funzionalità offerte da Data Infrastructure Insights .
 
 Durante la prova gratuita, puoilink:concept_subscribing_to_cloud_insights.html["inizia il tuo abbonamento"] a Data Infrastructure Insights in qualsiasi momento.  Una volta sottoscritto l'abbonamento, puoi utilizzare le funzionalità di Data Infrastructure Insights in base al tuo abbonamento attuale.
 
@@ -55,7 +55,7 @@ Durante la prova gratuita, puoilink:concept_subscribing_to_cloud_insights.html["
 
 == Sign in e vai
 
-Una volta creato il tenant, in qualsiasi momento puoi semplicemente accedere al portale NetApp Console e passare allalink:https://services.cloud.netapp.com["Servizi cloud"] pagina e seleziona *Vai a Data Infrastructure Insights*.
+Una volta creato il tenant, in qualsiasi momento puoi semplicemente accedere al portale NetApp BlueXP e passare alla link:https://services.cloud.netapp.com["Servizi cloud"] pagina e seleziona *Vai a Data Infrastructure Insights*.
 
 Puoi anche aprire un browser direttamente all'URL del tenant Data Infrastructure Insights , ad esempio:
 
