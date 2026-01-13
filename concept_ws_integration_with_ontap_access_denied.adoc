@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept_ws_integration_with_ontap_access_denied.html 
 summary: Workload Security si integra con ONTAP per ricevere eventi di accesso negato e fornire un ulteriore livello di analisi e risposte automatiche. 
-keywords: ransomware, ARP, Protection, Security, access 
+keywords: ransomware, ARP, Protection, Security, access, tampering 
 ---
 = Integrazione con ONTAP Accesso negato
 :hardbreaks:

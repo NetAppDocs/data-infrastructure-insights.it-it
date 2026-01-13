@@ -271,13 +271,13 @@ sidebar:
       url: "/cs_automated_response_policies.html"
     - title: Criteri sui tipi di file consentiti
       url: "/ws_allowed_file_types.html"
-    - title: Integrazione della protezione autonoma dal ransomware ONTAP
+    - title: Integrazione della protezione autonoma ONTAP
       url: "/concept_cs_integration_with_ontap_arp.html"
     - title: Integrazione ONTAP Access Denied
       url: "/concept_ws_integration_with_ontap_access_denied.html"
     - title: Blocco dell'accesso utente
       url: "/cs_restrict_user_access.html"
-    - title: Simulazione di un attacco ransomware
+    - title: Simulazione di un attacco
       url: "/concept_cs_attack_simulator.html"
     - title: Notifiche e-mail
       url: "/cs_notifications_email.html"

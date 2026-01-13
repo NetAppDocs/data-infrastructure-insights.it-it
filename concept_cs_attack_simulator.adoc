@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept_cs_attack_simulator.html 
 keywords: ransomware, simulation, simulator, restrict, attack 
-summary: Utilizzando uno script, è possibile simulare un attacco Ransomware per testare o dimostrare la sicurezza del carico di lavoro 
+summary: Testa e convalida le capacità di rilevamento della sicurezza del carico di lavoro simulando attacchi tramite lo script di simulazione incluso per verificare la generazione di avvisi e le policy di risposta. 
 ---
-= Sicurezza del carico di lavoro: simulazione di un attacco
+= Sicurezza del carico di lavoro: simulazione di manomissioni anomale dei file
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: Utilizzando uno script, è possibile simulare un attacco Ransomware per
 
 
 [role="lead"]
-È possibile utilizzare le istruzioni presenti in questa pagina per simulare un attacco a scopo di test o dimostrazione della sicurezza del carico di lavoro utilizzando lo script di simulazione ransomware incluso.
+È possibile utilizzare le istruzioni presenti in questa pagina per simulare la manomissione dei file a scopo di test o dimostrazione della sicurezza del carico di lavoro utilizzando lo script di simulazione della manomissione dei file incluso.
 
 
 
 == Cose da notare prima di iniziare
 
-* Lo script di simulazione del ransomware funziona solo su Linux.  Lo script di simulazione dovrebbe anche generare avvisi di elevata affidabilità nel caso in cui l'utente abbia integrato ONTAP ARP con Workload Security.
+* Lo script di simulazione della manomissione dei file funziona solo su Linux. Lo script di simulazione dovrebbe anche generare avvisi di elevata affidabilità nel caso in cui l'utente abbia integrato ONTAP ARP con Workload Security.
 * Workload Security rileverà gli eventi e gli avvisi generati con NFS 4.1 solo se la versione ONTAP è 9.15 o successiva.
 * Lo script è fornito con i file di installazione dell'agente Workload Security.  È disponibile su qualsiasi macchina su cui sia installato un agente Workload Security.
 * È possibile eseguire lo script direttamente sulla macchina dell'agente Workload Security; non è necessario preparare un'altra macchina Linux.  Tuttavia, se preferisci eseguire lo script su un altro sistema, ti basterà copiarlo ed eseguirlo lì.
@@ -158,7 +158,7 @@ Se hai messo in pausa il raccoglitore prima di seguire questi passaggi, assicura
 
 Prima di creare i file, è necessario prima arrestare olink:task_add_collector_svm.html#play-pause-data-collector["mettere in pausa il raccoglitore dati"] elaborazione.
 
-Per generare un avviso ransomware, è possibile eseguire lo script incluso che simulerà un avviso ransomware in Workload Security.
+Per generare un avviso di manomissione di file, è possibile eseguire lo script incluso che simulerà un avviso di manomissione di file in Workload Security.
 
 
 
@@ -196,7 +196,7 @@ Nota: nel caso in cui siano soddisfatte tutte le seguenti condizioni, verrà gen
 . Il raccoglitore di dati di sicurezza del carico di lavoro è stato aggiunto in modalità Cluster.
 
 
-Workload Security rileva i modelli di ransomware in base al comportamento dell'utente, mentre ONTAP ARP rileva l'attività di ransomware in base alle attività di crittografia nei file.
+Workload Security rileva i modelli di manomissione dei file in base al comportamento dell'utente, mentre ONTAP ARP rileva le attività di manomissione dei file in base alle attività di crittografia nei file.
 
 Se le condizioni sono soddisfatte, Workload Security contrassegna gli avvisi come avviso di elevata affidabilità.
 
@@ -212,6 +212,6 @@ image:ws_high_confidence_alert_detail.png["Esempio di avviso di alta confidenza,
 
 == Attivazione dell'avviso più volte
 
-Workload Security apprende il comportamento dell'utente e non genererà avvisi in caso di ripetuti attacchi ransomware per lo stesso utente entro 24 ore.
+Workload Security apprende il comportamento dell'utente e non genererà avvisi in caso di ripetuti attacchi di manomissione dei file entro 24 ore per lo stesso utente.
 
 Per generare un nuovo avviso con un utente diverso, ripetere gli stessi passaggi (creazione dei dati di prova e successiva crittografia dei dati di prova).

@@ -1,13 +1,12 @@
----
-sidebar: sidebar 
-permalink: concept_cs_event_rate_checker.html 
-summary: 'Questo script può essere eseguito per controllare la frequenza degli eventi nell"SVM prima di installare un ONTAP SVM DSC' 
-keywords: event, checker, rate, sizing, cloud secure 
----
 = SVM Event Rate Checker (Guida al dimensionamento degli agenti)
-:hardbreaks:
 :allow-uri-read: 
 
+
+r--- barra laterale: barra laterale permalink: concept_cs_event_rate_checker.html riepilogo: utilizzare SVM Event Rate Checker per misurare le frequenze degli eventi NFS/SMB e determinare il dimensionamento ottimale dell'agente prima di distribuire i data collector di Workload Security. parole chiave: evento, verificatore, frequenza, dimensionamento, cloud sicuro ---
+
+
+
+= SVM Event Rate Checker (Guida al dimensionamento degli agenti)
 
 [role="lead"]
 Event Rate Checker viene utilizzato per controllare la frequenza degli eventi combinata NFS/SMB nell'SVM prima di installare un raccoglitore dati ONTAP SVM, per vedere quanti SVM una macchina agente sarà in grado di monitorare.  Utilizza Event Rate Checker come guida alle dimensioni per pianificare il tuo ambiente di sicurezza.

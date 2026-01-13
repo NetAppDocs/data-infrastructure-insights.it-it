@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: cs_restrict_user_access.html 
 keywords: alert, snapshot,  attack 
-summary: 'Con Workload Security puoi limitare l"accesso degli utenti in caso di sospetto sabotaggio' 
+summary: 'Arresta immediatamente gli attacchi rilevati limitando automaticamente o manualmente l"accesso degli utenti compromessi, prevenendo così ulteriori danni ai file system su più volumi di archiviazione.' 
 ---
-= Blocco dell'accesso utente
+= Blocco dell'accesso degli utenti per fermare gli attacchi
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,7 @@ summary: 'Con Workload Security puoi limitare l"accesso degli utenti in caso di 
 
 
 [role="lead"]
-Una volta rilevato un attacco, Workload Security può fermarlo bloccando l'accesso dell'utente al file system.  L'accesso può essere bloccato automaticamente, utilizzando i criteri di risposta automatica, oppure manualmente dalle pagine degli avvisi o dei dettagli dell'utente.
-
-Quando si blocca l'accesso di un utente, è necessario definire un periodo di tempo di blocco.  Una volta trascorso il periodo di tempo selezionato, l'accesso dell'utente verrà ripristinato automaticamente.  Il blocco dell'accesso è supportato sia per i protocolli SMB che NFS.
+Interrompere immediatamente gli attacchi rilevati bloccando l'accesso degli utenti compromessi per impedire ulteriori danni ai dati o l'esfiltrazione. Workload Security consente sia il blocco automatico tramite criteri di risposta automatizzati sia l'intervento manuale dalle pagine di avviso o dei dettagli dell'utente, offrendoti un controllo flessibile sulla tua risposta di sicurezza. Le restrizioni di accesso si applicano automaticamente a tutti i volumi di archiviazione monitorati e sono limitate nel tempo per il ripristino automatico.
 
 L'utente viene bloccato direttamente per SMB e l'indirizzo IP delle macchine host che causano l'attacco verrà bloccato per NFS.  A tali indirizzi IP delle macchine verrà impedito l'accesso a qualsiasi Storage Virtual Machine (SVM) monitorata da Workload Security.
 

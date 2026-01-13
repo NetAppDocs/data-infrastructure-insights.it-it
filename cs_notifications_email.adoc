@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: cs_notifications_email.html 
-summary: Aggiunta di indirizzi e-mail per le notifiche degli avvisi di sicurezza del carico di lavoro. 
+summary: 'Configura le notifiche e-mail per ricevere avvisi su potenziali attacchi, avvisi di sicurezza e sullo stato di integrità dell"agente/raccoglitore dati in tempo reale.' 
 keywords: email, notifications, alerts, warnings, attacks 
 ---
 = Configurazione delle notifiche e-mail per avvisi, avvertenze e stato di integrità dell'agente/collettore dell'origine dati
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Per configurare i destinatari degli avvisi di Workload Security, fare clic su *Amministrazione > Notifiche* e immettere un indirizzo e-mail nelle sezioni appropriate per ciascun destinatario.
+Le notifiche e-mail ti consentono di rimanere informato su potenziali attacchi, avvisi di sicurezza e problemi di integrità dell'infrastruttura non appena si verificano. Configura gli indirizzi email dei destinatari nelle impostazioni Amministrazione > Notifiche per ricevere avvisi in tempo reale personalizzati in base alle responsabilità di ciascun destinatario.
 
 
 
@@ -33,7 +37,7 @@ Tieni presente quanto segue:
 * Gli avvisi sanitari verranno inviati solo dopo che l'agente/esattore avrà smesso di segnalare per almeno un'ora.
 * Viene inviata una sola notifica e-mail ai destinatari previsti in un dato periodo di 24 ore, anche se l'agente o il raccoglitore dati sono disconnessi per un periodo di tempo più lungo.
 * In caso di errore dell'agente, verrà inviato un avviso (non uno per ogni collettore).  L'e-mail conterrà un elenco di tutti gli SVM interessati.
-* L'errore di raccolta di Active Directory viene segnalato come avviso; non influisce sul rilevamento di ransomware.
+* L'errore di raccolta di Active Directory viene segnalato come avviso; non influisce sul rilevamento delle minacce.
 * L'elenco di configurazione introduttiva ora include una nuova fase _Configura notifiche e-mail_.
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_integration_with_ontap_arp.html 
-summary: Workload Security si integra con ONTAP Autonomous Ransomware Protection per migliorare il rilevamento dei ransomware. 
+summary: Migliora il rilevamento degli attacchi integrando Workload Security con ONTAP Autonomous Protection per analisi correlate, risposte automatizzate e funzionalità di indagine forense. 
 keywords: ransomware, ARP, Protection, Security 
 ---
 = Integrazione con la protezione autonoma dai ransomware ONTAP
@@ -10,7 +10,7 @@ keywords: ransomware, ARP, Protection, Security
 
 
 [role="lead"]
-La funzionalità ONTAP Autonomous Ransomware Protection (ARP) utilizza l'analisi del carico di lavoro negli ambienti NAS (NFS e SMB) per rilevare in modo proattivo e avvisare in caso di attività anomale nei file che potrebbero indicare un attacco ransomware.
+La funzionalità di protezione autonoma ONTAP utilizza l'analisi del carico di lavoro negli ambienti NAS (NFS e SMB) per rilevare in modo proattivo e segnalare attività anomale nei file che potrebbero indicare attacchi dannosi o modifiche non autorizzate dei dati.
 
 Ulteriori dettagli e requisiti di licenza su ARP possono essere trovatilink:https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Qui"] .
 
@@ -62,7 +62,7 @@ Di seguito è riportato un esempio di avviso generato a causa di un evento ARP:
 
 image:CS_Ransomware_Example_1.png["Sezione superiore dell'avviso ransomware"] image:CS_Ransomware_Example_2.png["Sezione superiore dell'avviso ransomware"] image:CS_Ransomware_Example_3.png["Sezione superiore dell'avviso ransomware"]
 
-Un banner di alta affidabilità indica che l'attacco ha mostrato un comportamento ransomware insieme ad attività di crittografia dei file.  Il grafico dei file crittografati indica il timestamp in cui l'attività di crittografia del volume è stata rilevata dalla soluzione ARP.
+Un banner di alta affidabilità indica che l'attacco ha mostrato un comportamento di manomissione dei file insieme ad attività di crittografia dei file. Il grafico dei file crittografati indica il timestamp in cui l'attività di crittografia del volume è stata rilevata dalla soluzione ARP.
 
 
 

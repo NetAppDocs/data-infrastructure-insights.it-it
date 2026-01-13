@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task_cs_add_agent.html 
 keywords: agent, Workload Security, installation, Cloud Secure 
-summary: 'Gli agenti Workload Security monitorano l"attività degli utenti e rilevano le minacce alla sicurezza nell"ambiente di archiviazione.' 
+summary: 'Distribuisci agenti Workload Security per monitorare l"attività degli utenti, rilevare minacce alla sicurezza e proteggere la tua infrastruttura di archiviazione.' 
 ---
 = Distribuisci agenti di sicurezza del carico di lavoro
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Gli agenti Workload Security monitorano l"attività degli utenti e ril
 
 
 [role="lead"]
-Gli agenti Workload Security sono essenziali per monitorare l'attività degli utenti e rilevare potenziali minacce alla sicurezza nell'intera infrastruttura di storage. Questa guida fornisce istruzioni dettagliate per distribuire gli agenti nel tuo ambiente. Prima di iniziare, assicurati che il tuo server agente soddisfi i requisiti link:concept_cs_agent_requirements.html["requisiti di sistema"].
+Gli agenti Workload Security sono essenziali per monitorare l'attività degli utenti e rilevare potenziali minacce alla sicurezza nell'intera infrastruttura di storage. Questa guida fornisce istruzioni di installazione dettagliate, best practice per la gestione degli agenti (incluse le funzionalità di pausa/ripresa e blocco/sblocco) e requisiti di configurazione post-distribuzione. Prima di iniziare, assicurati che il tuo server agente soddisfi i requisiti link:concept_cs_agent_requirements.html["requisiti di sistema"].
 
 
 

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: cs_automated_response_policies.html 
-keywords: alert, snapshot, ransomware, attack 
-summary: 'È possibile impostare criteri di risposta automatizzati per potenziali attacchi (come ransomware) e/o avvisi di attività' 
+keywords: alert, snapshot, ransomware, attack, tampering 
+summary: Configurare criteri di risposta automatizzati per intervenire immediatamente in caso di incidenti di sicurezza, tra cui snapshot, restrizioni di accesso utente e notifiche webhook per minacce e comportamenti sospetti. 
 ---
 = Criteri di risposta automatizzati
 :hardbreaks:

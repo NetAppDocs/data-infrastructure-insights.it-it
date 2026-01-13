@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: Il server o la VM che utilizzi come agente deve soddisfare i requisiti minimi 
+summary: 'Assicurati che l"ambiente di distribuzione del Workload Security Agent soddisfi i requisiti minimi di sistema operativo, CPU, memoria e spazio su disco per prestazioni e raccolta dati ottimali.' 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = Requisiti dell'agente di sicurezza del carico di lavoro

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: cs_intro.html 
 keywords: CloudSecure, Cloud Secure 
-summary: Panoramica 
+summary: 'Proteggi i tuoi dati con il rilevamento delle minacce interne, la visibilità centralizzata su ambienti ibridi e l"apprendimento automatico avanzato di Storage Workload Security per il rilevamento delle anomalie e la conformità.' 
 ---
 = Informazioni sulla sicurezza del carico di lavoro di archiviazione
 :hardbreaks:

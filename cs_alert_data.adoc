@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: cs_alert_data.html 
-keywords: alert, attack, ransomware, activity, security, abnormal 
+keywords: alert, attack, ransomware, activity, security, abnormal, tampering 
 summary: 'Workload Security crea avvisi in caso di attività anomale dell"utente o di potenziali attacchi.  Nella pagina Avvisi sono elencate queste attività per consentire un"indagine rapida e semplice.' 
 ---
 = Avvisi
@@ -14,7 +14,7 @@ summary: 'Workload Security crea avvisi in caso di attività anomale dell"utente
 
 
 [role="lead"]
-La pagina Avvisi sulla sicurezza del carico di lavoro mostra una cronologia degli attacchi e/o degli avvisi recenti e consente di visualizzare i dettagli per ciascun problema.
+La pagina Avvisi sulla sicurezza del carico di lavoro fornisce una cronologia completa delle minacce e degli avvisi rilevati, con strumenti di indagine dettagliati. Visualizza i dettagli degli avvisi, gestisci gli aggiornamenti di stato, filtra in base a criteri e monitora le attività degli utenti per indagare e rispondere in modo efficiente agli incidenti di sicurezza.
 
 image:CloudSecureAlertsListPage.png["Elenco degli avvisi"]
 
@@ -102,9 +102,9 @@ Puoi filtrare gli avvisi in base a quanto segue:
 
 Questa sezione mostra i dettagli sull'utente coinvolto nel potenziale attacco, incluso un grafico delle principali attività dell'utente.
 
-Pagina degli avvisi (questo esempio mostra un potenziale attacco ransomware):image:RansomwareAlertExample.png["Esempio di avviso ransomware"]
+Pagina degli avvisi (questo esempio mostra un potenziale attacco di manomissione dei file): image:RansomwareAlertExample.png["Esempio di avviso di manomissione del file"]
 
-Pagina dei dettagli (questo esempio mostra un potenziale attacco ransomware):image:RansomwareDetailPageExample.png["Esempio di pagina dei dettagli del ransomware"]
+Pagina dei dettagli (questo esempio mostra un potenziale attacco di manomissione dei file): image:RansomwareDetailPageExample.png["Esempio di pagina dei dettagli sulla manomissione dei file"]
 
 
 
@@ -112,7 +112,7 @@ Pagina dei dettagli (questo esempio mostra un potenziale attacco ransomware):ima
 
 Workload Security protegge i tuoi dati eseguendo automaticamente uno snapshot quando viene rilevata un'attività dannosa, garantendo così che i tuoi dati vengano sottoposti a backup in modo sicuro.
 
-Puoi definirelink:cs_automated_response_policies.html["politiche di risposta automatizzate"] che scattano un'istantanea quando viene rilevato un attacco ransomware o altre attività anomale dell'utente.  È anche possibile acquisire manualmente uno snapshot dalla pagina di avviso.
+Puoi definire link:cs_automated_response_policies.html["politiche di risposta automatizzate"] che scattano un'istantanea quando viene rilevato un attacco di manomissione dei file o altre attività anomale dell'utente. È anche possibile acquisire manualmente uno snapshot dalla pagina di avviso.
 
 Istantanea automatica scattata:image:AlertActionsAutomaticExample.png["Schermata di azione di avviso, 1000"]
 
