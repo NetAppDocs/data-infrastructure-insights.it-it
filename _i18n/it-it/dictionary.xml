@@ -3671,7 +3671,6 @@
   <block id="7397074a443dab350a0b46b445bd42b6" category="paragraph">L'elenco degli avvisi visualizza un grafico che mostra il numero totale di potenziali attacchi e/o avvisi emessi nell'intervallo di tempo selezionato, seguito da un elenco degli attacchi e/o avvisi verificatisi in tale intervallo di tempo.  È possibile modificare l'intervallo di tempo regolando i cursori dell'ora di inizio e dell'ora di fine nel grafico.</block>
   <block id="183537e26fed4b4329d37cb02da5ae53" category="paragraph">Per ogni avviso viene visualizzato quanto segue:</block>
   <block id="0a36ca304e21eb8063b7869dea7a355b" category="paragraph">*Potenziali attacchi:*</block>
-  <block id="8a684cc8084b02b93384f0bfc436d63c" category="list-text">Il tipo di _Potenziale attacco_ (ad esempio, Ransomware o Sabotaggio)</block>
   <block id="b81879140b6197b1eee86a1d325a0a81" category="list-text">Data e ora in cui è stato rilevato il potenziale attacco</block>
   <block id="5efe06a62d35c2fe7354ce05b69e8db6" category="list-text">Lo _Stato_ dell'avviso:</block>
   <block id="f0617472d6b597b6d93003c4c1003ad6" category="list-text">*Nuovo*: questa è l'impostazione predefinita per i nuovi avvisi.</block>
@@ -3697,9 +3696,7 @@
   <block id="95951a9f2b55d55d45a17decd61a620c" category="list-text">Il tipo di _Attacchi/Avvisi_</block>
   <block id="3cd43e4673aa76de346f402ec291bd4a" category="list-text">L'_Utente_ le cui azioni hanno attivato l'avviso/segnalazione</block>
   <block id="f5d13b5070432d74ba3be2fb78559747" category="section-title">La pagina Dettagli avviso</block>
-  <block id="acd90b04487305df2bc9ead72d1b4d5b" category="paragraph">È possibile fare clic sul collegamento di un avviso nella pagina dell'elenco degli avvisi per aprire una pagina dei dettagli dell'avviso.  I dettagli dell'avviso possono variare a seconda del tipo di attacco o di avviso.  Ad esempio, una pagina dei dettagli di un attacco ransomware potrebbe mostrare le seguenti informazioni:</block>
   <block id="328e24be37340d63de24fd6618cca8e1" category="section-title">Sezione riassuntiva:</block>
-  <block id="8771316aacd1c4b06854e0e9f30a545c" category="list-text">Tipo di attacco (ransomware, sabotaggio) e ID avviso (assegnato da Workload Security)</block>
   <block id="d5a18d6d3a7fe43fabf57a19bb702f39" category="list-text">Data e ora in cui è stato rilevato l'attacco</block>
   <block id="9edcf7f99dfc7a9e521c7ad085287595" category="list-text">Azione intrapresa (ad esempio, è stata scattata un'istantanea automatica).  L'ora dello snapshot è mostrata immediatamente sotto la sezione di riepilogo))</block>
   <block id="680ed5ca6ba49d9bc8a5ffda83850464" category="list-text">Stato (Nuovo, In corso, ecc.)</block>
@@ -12664,13 +12661,11 @@
   <block id="d19e16fd482ca29d2c0ef4fb8523357a" category="summary">Assicurati che l'ambiente di distribuzione del Workload Security Agent soddisfi i requisiti minimi di sistema operativo, CPU, memoria e spazio su disco per prestazioni e raccolta dati ottimali.</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">Accedi ai dati di Workload Security tramite un'API REST con autenticazione sicura basata su token per integrarti con CMDB, sistemi di ticketing e altre applicazioni aziendali.</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">Testa e convalida le capacità di rilevamento della sicurezza del carico di lavoro simulando attacchi tramite lo script di simulazione incluso per verificare la generazione di avvisi e le policy di risposta.</block>
-  <block id="c7ea3cec531081ee09f563d84422d157" category="doc">Sicurezza del carico di lavoro: simulazione di manomissioni anomale dei file</block>
   <block id="3e350b01c804205b973dbd44adc54728" category="paragraph">È possibile utilizzare le istruzioni presenti in questa pagina per simulare la manomissione dei file a scopo di test o dimostrazione della sicurezza del carico di lavoro utilizzando lo script di simulazione della manomissione dei file incluso.</block>
   <block id="67f556940660f0bafe2738969d389877" category="list-text">Lo script di simulazione della manomissione dei file funziona solo su Linux. Lo script di simulazione dovrebbe anche generare avvisi di elevata affidabilità nel caso in cui l'utente abbia integrato ONTAP ARP con Workload Security.</block>
   <block id="6465f8a9b5dccc316104b56b41de2db0" category="paragraph">Per generare un avviso di manomissione di file, è possibile eseguire lo script incluso che simulerà un avviso di manomissione di file in Workload Security.</block>
   <block id="2a9bccccecd980381e18178287c921b4" category="paragraph">Workload Security rileva i modelli di manomissione dei file in base al comportamento dell'utente, mentre ONTAP ARP rileva le attività di manomissione dei file in base alle attività di crittografia nei file.</block>
   <block id="a68622796ba5ea9694219b0cbfbae6b0" category="paragraph">Workload Security apprende il comportamento dell'utente e non genererà avvisi in caso di ripetuti attacchi di manomissione dei file entro 24 ore per lo stesso utente.</block>
-  <block id="d1de6a785681750f7fd87d382642893e" category="paragraph">r--- barra laterale: barra laterale permalink: concept_cs_event_rate_checker.html riepilogo: utilizzare SVM Event Rate Checker per misurare le frequenze degli eventi NFS/SMB e determinare il dimensionamento ottimale dell'agente prima di distribuire i data collector di Workload Security. parole chiave: evento, verificatore, frequenza, dimensionamento, cloud sicuro ---</block>
   <block id="8013d871b4070a5d3848e4faa21e67d9" category="summary">Migliora il rilevamento degli attacchi integrando Workload Security con ONTAP Autonomous Protection per analisi correlate, risposte automatizzate e funzionalità di indagine forense.</block>
   <block id="0ed52d2d20f5fbf80a330283d4aa9a72" category="paragraph">La funzionalità di protezione autonoma ONTAP utilizza l'analisi del carico di lavoro negli ambienti NAS (NFS e SMB) per rilevare in modo proattivo e segnalare attività anomale nei file che potrebbero indicare attacchi dannosi o modifiche non autorizzate dei dati.</block>
   <block id="8ec1d8886c9b4b48a45eb683d80b184e" category="paragraph">Un banner di alta affidabilità indica che l'attacco ha mostrato un comportamento di manomissione dei file insieme ad attività di crittografia dei file. Il grafico dei file crittografati indica il timestamp in cui l'attività di crittografia del volume è stata rilevata dalla soluzione ARP.</block>
@@ -12697,4 +12692,9 @@
   <block id="7af3f2f9c8eaa3a8ff61f839001e8ca0" category="paragraph">Ad esempio, se un file denominato _test.txt_ viene rinominato in _test.txt.abc_ e Workload Security rileva un attacco di manomissione del file a causa dell'estensione _.abc_, l'estensione _.abc_ può essere aggiunta all'elenco dei _tipi di file consentiti_. Dopo l'aggiunta all'elenco, gli attacchi di manomissione dei file non verranno più generati contro i file con estensione _.abc_.</block>
   <block id="374bdbda42629b3859daec6506078b36" category="sidebar">Integrazione della protezione autonoma ONTAP</block>
   <block id="5273cec606b6768f8394e2ae1566c7f6" category="sidebar">Simulazione di un attacco</block>
+  <block id="5da98f5c78418524ecf144084929f19e" category="doc">Sicurezza del carico di lavoro: simulazione della manomissione dei file</block>
+  <block id="e192cb4cca3f754a1b50fdf853ce74a4" category="summary">Utilizzare SVM Event Rate Checker per misurare le frequenze degli eventi NFS/SMB e determinare le dimensioni ottimali dell'agente prima di distribuire i data collector di Workload Security.</block>
+  <block id="ec054c68e1c4c037a34f69b34cbcf8ae" category="list-text">Il tipo di _Potenziale attacco_ (ad esempio, manomissione di file o sabotaggio)</block>
+  <block id="5d6d5d308daaaae7ed88d035f629ea81" category="paragraph">È possibile fare clic sul collegamento di un avviso nella pagina dell'elenco degli avvisi per aprire una pagina dei dettagli dell'avviso. I dettagli dell'avviso possono variare a seconda del tipo di attacco o di avviso. Ad esempio, una pagina con i dettagli di un attacco di manomissione di file potrebbe mostrare le seguenti informazioni:</block>
+  <block id="a93ee3ea015fa995d5cf6a3a088e6f7b" category="list-text">Tipo di attacco (manomissione di file, sabotaggio) e ID avviso (assegnato da Workload Security)</block>
 </blocks>

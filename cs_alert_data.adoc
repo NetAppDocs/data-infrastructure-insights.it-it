@@ -28,7 +28,7 @@ Per ogni avviso viene visualizzato quanto segue:
 
 *Potenziali attacchi:*
 
-* Il tipo di _Potenziale attacco_ (ad esempio, Ransomware o Sabotaggio)
+* Il tipo di _Potenziale attacco_ (ad esempio, manomissione di file o sabotaggio)
 * Data e ora in cui è stato rilevato il potenziale attacco
 * Lo _Stato_ dell'avviso:
 +
@@ -75,13 +75,13 @@ Puoi filtrare gli avvisi in base a quanto segue:
 
 == La pagina Dettagli avviso
 
-È possibile fare clic sul collegamento di un avviso nella pagina dell'elenco degli avvisi per aprire una pagina dei dettagli dell'avviso.  I dettagli dell'avviso possono variare a seconda del tipo di attacco o di avviso.  Ad esempio, una pagina dei dettagli di un attacco ransomware potrebbe mostrare le seguenti informazioni:
+È possibile fare clic sul collegamento di un avviso nella pagina dell'elenco degli avvisi per aprire una pagina dei dettagli dell'avviso. I dettagli dell'avviso possono variare a seconda del tipo di attacco o di avviso. Ad esempio, una pagina con i dettagli di un attacco di manomissione di file potrebbe mostrare le seguenti informazioni:
 
 
 
 === Sezione riassuntiva:
 
-* Tipo di attacco (ransomware, sabotaggio) e ID avviso (assegnato da Workload Security)
+* Tipo di attacco (manomissione di file, sabotaggio) e ID avviso (assegnato da Workload Security)
 * Data e ora in cui è stato rilevato l'attacco
 * Azione intrapresa (ad esempio, è stata scattata un'istantanea automatica).  L'ora dello snapshot è mostrata immediatamente sotto la sezione di riepilogo))
 * Stato (Nuovo, In corso, ecc.)
