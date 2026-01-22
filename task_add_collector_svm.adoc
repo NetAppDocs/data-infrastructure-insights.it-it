@@ -112,6 +112,23 @@ image:ws_test_connection_success_example.png["Messaggio di successo \"Test conne
 
 
 
+== Cose da notare per ONTAP Multi Admin Verify (MAV)
+
+Alcune funzionalità, come la creazione e l'eliminazione di snapshot o il blocco utente (SMB), potrebbero non funzionare in base ai comandi MAV aggiunti nella tua versione di ONTAP.
+
+Seguire i passaggi indicati di seguito per aggiungere esclusioni ai comandi MAV che consentono a Workload Security di creare o eliminare snapshot e bloccare gli utenti.
+
+Comandi per consentire la creazione e l'eliminazione di snapshot:
+
+....
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
+....
+Comando per consentire il blocco dell'utente:
+
+ multi-admin-verify rule delete -operation set
+
+
 == Prerequisiti per il blocco dell'accesso utente
 
 Tieni presente quanto segue perlink:cs_restrict_user_access.html["Blocco dell'accesso utente"] :
@@ -318,7 +335,7 @@ NOTE: Un collector non può essere messo in pausa se ha utenti limitati.  Ripris
 Tieni presente quanto segue:
 
 * L'eliminazione degli snapshot non avverrà secondo le impostazioni configurate su un collector in pausa.
-* Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un collector in pausa.  Ciò significa che se ONTAP identifica un attacco ransomware, Data Infrastructure Insights Workload Security non sarà in grado di acquisire tale evento.
+* Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un collector in pausa. Ciò significa che se ONTAP identifica un attacco di manomissione dei file, Data Infrastructure Insights Workload Security non sarà in grado di acquisire quell'evento.
 * Le email di notifica sullo stato di salute NON verranno inviate per un raccoglitore in pausa.
 * Le azioni manuali o automatiche (ad esempio Snapshot o Blocco utente) non saranno supportate su un collector in pausa.
 * Durante gli aggiornamenti dell'agente o del collettore, i riavvii/riavvii della VM dell'agente o il riavvio del servizio dell'agente, un collettore in pausa rimarrà nello stato _Paused_.

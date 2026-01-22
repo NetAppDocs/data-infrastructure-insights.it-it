@@ -4,7 +4,7 @@ permalink: concept_cs_event_rate_checker.html
 summary: 'Utilizzare SVM Event Rate Checker per misurare le frequenze degli eventi NFS/SMB e determinare le dimensioni ottimali dell"agente prima di distribuire i data collector di Workload Security.' 
 keywords: event, checker, rate, sizing, cloud secure 
 ---
-= SVM Event Rate Checker (Guida al dimensionamento degli agenti)
+= Event Rate Checker: Guida alle dimensioni degli agenti
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,7 @@ keywords: event, checker, rate, sizing, cloud secure
 
 
 [role="lead"]
-Event Rate Checker viene utilizzato per controllare la frequenza degli eventi combinata NFS/SMB nell'SVM prima di installare un raccoglitore dati ONTAP SVM, per vedere quanti SVM una macchina agente sarà in grado di monitorare.  Utilizza Event Rate Checker come guida alle dimensioni per pianificare il tuo ambiente di sicurezza.
-
-Un agente può supportare fino a un massimo di 50 raccoglitori di dati.
+Determina il dimensionamento ottimale delle macchine Agent misurando le frequenze degli eventi NFS e SMB generate dalle tue SVM prima di distribuire i data collector. Lo script Event Rate Checker ti aiuta a comprendere i limiti di capacità (massimo 50 data collector per Agent) e garantisce che la tua infrastruttura Agent possa gestire il volume di eventi previsto per un rilevamento affidabile delle minacce.
 
 
 
