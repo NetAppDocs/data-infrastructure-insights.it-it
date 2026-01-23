@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_cs_agent_requirements.html 
-summary: 'Assicurati che l"ambiente di distribuzione del Workload Security Agent soddisfi i requisiti minimi di sistema operativo, CPU, memoria e spazio su disco per prestazioni e raccolta dati ottimali.' 
+summary: 'Gli agenti Workload Security richiedono specifiche relative a sistema operativo, CPU, memoria e spazio su disco per monitorare efficacemente l"accesso ai file e rilevare le minacce alla sicurezza nell"infrastruttura di storage.' 
 keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cloud Secure 
 ---
 = Requisiti dell'agente di sicurezza del carico di lavoro
@@ -14,7 +14,7 @@ keywords: agent, Linux, requirements, docker, browsers, permissions, Network, Cl
 
 
 [role="lead"]
-Devilink:task_cs_add_agent.html["installare un agente di sicurezza del carico di lavoro"] per acquisire informazioni dai tuoi raccoglitori di dati. Prima di installare l'agente, assicurati che l'ambiente soddisfi i requisiti relativi al sistema operativo, alla CPU, alla memoria e allo spazio su disco.
+Distribuisci gli agenti Workload Security su server dedicati che soddisfano i requisiti minimi di sistema operativo, CPU, memoria e spazio su disco per garantire prestazioni ottimali di monitoraggio e rilevamento delle minacce. Questa guida specifica i requisiti hardware e di rete necessari prima di link:task_cs_add_agent.html["installazione del Workload Security Agent"], incluse le distribuzioni Linux supportate, le regole di connettività di rete e le indicazioni sul dimensionamento del sistema.
 
 [cols="36,60"]
 |===

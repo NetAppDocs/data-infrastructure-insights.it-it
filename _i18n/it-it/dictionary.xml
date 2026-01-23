@@ -574,8 +574,6 @@
   <block id="3e31734df6f02c9ad9cd0dc7c1f65a98" category="cell">Vedo messaggi di controllo che mi informano che un monitor è stato esportato.</block>
   <block id="256a0ce1cb9ac99794371e404aa7446e" category="cell">L'esportazione di una configurazione di monitor personalizzata viene solitamente utilizzata dagli ingegneri NetApp durante lo sviluppo e il test di nuove funzionalità.  Se non ti aspettavi di vedere questo messaggio, ti preghiamo di esaminare le azioni dell'utente indicato nell'azione verificata o di contattare l'assistenza.</block>
   <block id="a7ef8f0bed1d94220b7abd3877b10643" category="doc">Requisiti dell'agente di sicurezza del carico di lavoro</block>
-  <block id="bee347f35c7a237c1f2d5d7193252244" category="inline-link-macro">installare un agente di sicurezza del carico di lavoro</block>
-  <block id="1de0df19f89310a1407a7686c6dcad7c" category="paragraph">Devi<block ref="588188a9e8b5d243fbdbf4e2ce1c4421" category="inline-link-macro-rx"></block> per acquisire informazioni dai tuoi raccoglitori di dati. Prima di installare l'agente, assicurati che l'ambiente soddisfi i requisiti relativi al sistema operativo, alla CPU, alla memoria e allo spazio su disco.</block>
   <block id="0d9233050a9086b67df84f668963e42d" category="cell">Un computer che esegue una versione con licenza di uno dei seguenti: * AlmaLinux 9.4 (64 bit) fino a 9.5 (64 bit), 10 (64 bit), incluso SELinux * CentOS Stream 9 (64 bit) * Debian 11 (64 bit), 12 (64 bit), incluso SELinux * OpenSUSE Leap 15.3 (64 bit) fino a 15.6 (64 bit) * Oracle Linux 8.10 (64 bit), 9.1 (64 bit) fino a 9.6 (64 bit), incluso SELinux * Red Hat Enterprise Linux 8.10 (64 bit), 9.1 (64 bit) fino a 9.6 (64 bit), 10 (64 bit), incluso SELinux * Rocky 9.4 (64 bit) fino a 9.6 (64 bit), incluso SELinux * SUSE Linux Enterprise Server Da 15 SP4 (64 bit) a 15 SP6 (64 bit), incluso SELinux * Ubuntu 20.04 LTS (64 bit), 22.04 LTS (64 bit), 24.04 LTS (64 bit) Su questo computer non deve essere in esecuzione nessun altro software a livello di applicazione. Si consiglia un server dedicato.</block>
   <block id="c441ee50c88f6e5e3a7c69fc69dad8b8" category="cell">Comandi</block>
   <block id="92094f10227c0d6e4da9a65b1cc23700" category="cell">Per l'installazione è necessario 'unzip'.  Inoltre, per l'installazione, l'esecuzione degli script e la disinstallazione è necessario il comando 'sudo su –'.</block>
@@ -626,7 +624,6 @@
   <block id="b81e4f797b30e131d43ea14e3bc8322c" category="inline-link-macro">Verificatore del tasso di eventi</block>
   <block id="1a46e02a3754d0daf83001fffc7c7c46" category="paragraph">Vedi il<block ref="fd6f609b977fb641a06defa631019934" category="inline-link-macro-rx"></block> documentazione per informazioni sulle dimensioni.</block>
   <block id="0865b3ed9f5211e6fe35eddac5b1aaa3" category="doc">API di sicurezza del carico di lavoro</block>
-  <block id="1b1fb3360bd2eea985279f6fcc2ef45f" category="paragraph">L'API Workload Security consente ai clienti NetApp e ai fornitori di software indipendenti (ISV) di integrare Workload Security con altre applicazioni, come CMDB o altri sistemi di ticketing.</block>
   <block id="1a152a606ca16a6eef5f2e9ac9b4c824" category="paragraph">Requisiti per l'accesso all'API:</block>
   <block id="c32ef84ff5ca99a73e37c8f28fa25ae5" category="list-text">La gestione dei token API viene eseguita dagli utenti di Workload Security con il ruolo di amministratore.</block>
   <block id="1a996d988f997b5127990972bac65132" category="paragraph">Per reperire le informazioni API più recenti, accedere a Workload Security e andare su *Amministrazione &gt; Accesso API*.  Fare clic sul collegamento *Documentazione API*.  La documentazione API è basata su Swagger, che fornisce una breve descrizione e informazioni sull'utilizzo dell'API e consente di provarla sul proprio tenant.</block>
@@ -660,7 +657,6 @@
   <block id="6a2eb10d0f7d8e6c5942069b7aa730bf" category="section-title">Per montare l'esportazione NFS in Linux:</block>
   <block id="dd94533008fec4ee5889a56fd78e2a26" category="paragraph">Non montare NFS versione 4.1; non è supportato da Fpolicy.</block>
   <block id="edf63ae7e3cf0cd744884c156cab7abb" category="section-title">Per montare CIFS in Linux:</block>
-  <block id="d39b1e189739fcc0a92bdb5bb1b3e4d0" category="section-title">Abilita la protezione ransomware autonoma ONTAP (facoltativo):</block>
   <block id="ad3dd38cdf18de03b5ea7c975f541873" category="paragraph">Se la versione del cluster ONTAP è 9.11.1 o successiva, è possibile abilitare il servizio ONTAP Ransomware Protection eseguendo il seguente comando sulla console di comando ONTAP .</block>
   <block id="a22c6eb3597528c16b0d46880ae4b1ae" category="paragraph">Successivamente, configura un Data Collector:</block>
   <block id="5e7fe8c41f8a34a29dc01b5eced565e8" category="list-text">Configurare l'agente Workload Security se non è già stato fatto.</block>
@@ -1776,8 +1772,6 @@
   <block id="53a0194fe3f870afed16b77d60056dfb" category="paragraph"><block ref="53a0194fe3f870afed16b77d60056dfb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">Sicurezza</block>
   <block id="45d58050fc83f658d533966b07ead592" category="inline-link-macro">* Guida al rafforzamento della sicurezza NetApp per ONTAP 9*</block>
-  <block id="95d10eb69527c16122bd44ec553d0f7c" category="paragraph">La Security Dashboard offre una panoramica immediata della situazione attuale della sicurezza, mostrando grafici relativi alla crittografia dei volumi hardware e software, allo stato anti-ransomware e ai metodi di autenticazione del cluster.  I criteri di sicurezza vengono valutati in base alle raccomandazioni definite nel<block ref="a1c84b5f46cbbd9a263e3a5732ed7485" category="inline-link-macro-rx"></block> .</block>
-  <block id="c3ccbe813e27865c5c1154a78b3b9abd" category="paragraph">Seleziona uno qualsiasi dei livelli di crittografia o anti-ransomware per approfondire il tuo ambiente.</block>
   <block id="48709e503decae3f55aa524537948025" category="inline-image-macro">Pannello di controllo di sicurezza ONTAP Essentials</block>
   <block id="1c29918b357b596e616f50e0877d45de" category="paragraph"><block ref="1c29918b357b596e616f50e0877d45de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ac05d0fca214dab8244e52fd39ca3562" category="inline-link-macro">Categorie di conformità del cluster</block>
@@ -1855,16 +1849,9 @@
   <block id="b865b0f0f94674aa0d7878e2253f2c1b" category="doc">Anteprima delle caratteristiche e funzionalità</block>
   <block id="8a0d14c15291ab894b50ee0f241e5564" category="paragraph">Data Infrastructure Insights evidenzia le nuove caratteristiche e funzionalità in modalità _Anteprima_.  Le funzionalità di anteprima sono disponibili in ambienti limitati o con capacità limitata.</block>
   <block id="43680febd505de2083039d0fe7ca8947" category="paragraph">Se sei interessato a provare in anteprima una o più di queste funzionalità, contatta il team vendite NetApp per maggiori informazioni.</block>
-  <block id="5f06573aae905166447bf8d646c6bf89" category="summary">Panoramica delle query</block>
-  <block id="fadb076bccad39c075c50bfa7f81bc31" category="doc">Risorse utilizzate nelle query</block>
-  <block id="aa62093500fa6cc2a1aea70e53e331b8" category="paragraph">Le query consentono di monitorare e risolvere i problemi della rete eseguendo ricerche granulari nelle risorse e nelle metriche del tenant in base a criteri selezionati dall'utente (ad esempio, annotazioni).</block>
-  <block id="01baf5f78b2649e6a38c88d12944a3d9" category="paragraph">Si noti che le regole di annotazione, che assegnano automaticamente annotazioni alle risorse, _richiedono_ una query.</block>
   <block id="9d35c72b549fae1c4f5338d76241f908" category="paragraph">È possibile interrogare le risorse di inventario fisiche o virtuali (e le relative metriche) sul tenant oppure le metriche fornite con l'integrazione, ad esempio Kubernetes o ONTAP Advanced Data.</block>
   <block id="5d7a3696457a40dffd58bd71e9fde963" category="section-title">Attività di inventario</block>
-  <block id="a53ff308ba1fe0b1b1c8fad46fc5711f" category="paragraph">I seguenti tipi di risorse possono essere utilizzati nelle query, nei widget della dashboard e nelle landing page delle risorse personalizzate.  I campi e i contatori disponibili per filtri, espressioni e visualizzazione variano a seconda del tipo di risorsa.  Non tutte le risorse possono essere utilizzate in tutti i tipi di widget.</block>
-  <block id="1859b7335980eb552916a01fd55cb7e4" category="list-text">Dispositivo generico</block>
   <block id="9effcdd7159a9a08dcdb0202ae58c1a8" category="list-text">Sessione iSCSI</block>
-  <block id="9dd74c86de55dd54fcf3bc98e9bfa861" category="list-text">Portale di rete iSCSI</block>
   <block id="ac70412e939d72a9234cdebb1af5867b" category="list-text">Sentiero</block>
   <block id="d2d5c3e087f684e56b5b81d6212d7ccb" category="list-text">Quota</block>
   <block id="5a95a425f74314a96f13a2f136992178" category="list-text">Condividere</block>
@@ -4339,7 +4326,6 @@
   <block id="9ea8e80fba8d6edb71449d6ac523870d" category="list-text">Ottimizzare l'utilizzo delle risorse</block>
   <block id="f7c53246bda8892727562ecf03b2af88" category="list-text">Dashboard integrate o personalizzabili con filtri avanzati per ridurre al minimo il rumore di visualizzazione per rispondere alle domande</block>
   <block id="5f0e583e0b23c4014b3313af93160414" category="list-text">Scopri lo stato di salute delle tue operazioni di archiviazione ONTAP </block>
-  <block id="30b80265dc62edf963a3ac0e34dc03e5" category="list-text">Proteggi il tuo bene aziendale più prezioso, i dati, da attacchi ransomware o di distruzione dei dati</block>
   <block id="bf647454e36069fd16f1a7a35cf6a865" category="section-title">Iniziare</block>
   <block id="5abbdfc8c583cbf03ce02e46c06a6aa5" category="inline-link-macro">*iniziamo*</block>
   <block id="f4c2bc844e861dbf16d626ef6fe4fa50" category="list-text">Come faccio a<block ref="bdc33e916e289637bc8ce0319e314c7f" category="inline-link-macro-rx"></block> con Data Infrastructure Insights?</block>
@@ -12654,7 +12640,6 @@
   <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">Una volta completata la creazione del tenant, utilizza le credenziali della console per accedere e iniziare la prova gratuita di 30 giorni di Data Infrastructure Insights. Durante questa prova potrai esplorare le funzionalità offerte da Data Infrastructure Insights .</block>
   <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">Una volta creato il tenant, in qualsiasi momento puoi semplicemente accedere al portale NetApp BlueXP e passare alla <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> pagina e seleziona *Vai a Data Infrastructure Insights*.</block>
   <block id="ed35afa558b996b37265533db9af5399" category="sidebar">Pubblicazione di annotazioni nei report</block>
-  <block id="d19e16fd482ca29d2c0ef4fb8523357a" category="summary">Assicurati che l'ambiente di distribuzione del Workload Security Agent soddisfi i requisiti minimi di sistema operativo, CPU, memoria e spazio su disco per prestazioni e raccolta dati ottimali.</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">Accedi ai dati di Workload Security tramite un'API REST con autenticazione sicura basata su token per integrarti con CMDB, sistemi di ticketing e altre applicazioni aziendali.</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">Testa e convalida le capacità di rilevamento della sicurezza del carico di lavoro simulando attacchi tramite lo script di simulazione incluso per verificare la generazione di avvisi e le policy di risposta.</block>
   <block id="3e350b01c804205b973dbd44adc54728" category="paragraph">È possibile utilizzare le istruzioni presenti in questa pagina per simulare la manomissione dei file a scopo di test o dimostrazione della sicurezza del carico di lavoro utilizzando lo script di simulazione della manomissione dei file incluso.</block>
@@ -12701,4 +12686,23 @@
   <block id="87f1c49b01ac2f7b86716ee6218bc5f6" category="paragraph">Comandi per consentire la creazione e l'eliminazione di snapshot:</block>
   <block id="7842bb93d1b19afc39c751d0dddcf4ac" category="paragraph">Comando per consentire il blocco dell'utente:</block>
   <block id="6a1af23a5137b0b5dbe87d4b59b0deeb" category="list-text">Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un collector in pausa. Ciò significa che se ONTAP identifica un attacco di manomissione dei file, Data Infrastructure Insights Workload Security non sarà in grado di acquisire quell'evento.</block>
+  <block id="afcbb40976cebf8be35fcb3f20455f79" category="summary">Gli agenti Workload Security richiedono specifiche relative a sistema operativo, CPU, memoria e spazio su disco per monitorare efficacemente l'accesso ai file e rilevare le minacce alla sicurezza nell'infrastruttura di storage.</block>
+  <block id="97c248485e6832f3e4517d8b6d423060" category="inline-link-macro">installazione del Workload Security Agent</block>
+  <block id="6acb715af86a62a0077ac01d43f7b01c" category="paragraph">Distribuisci gli agenti Workload Security su server dedicati che soddisfano i requisiti minimi di sistema operativo, CPU, memoria e spazio su disco per garantire prestazioni ottimali di monitoraggio e rilevamento delle minacce. Questa guida specifica i requisiti hardware e di rete necessari prima di <block ref="4ce477e73552de4dc5af67c1b8fdac41" category="inline-link-macro-rx"></block>, incluse le distribuzioni Linux supportate, le regole di connettività di rete e le indicazioni sul dimensionamento del sistema.</block>
+  <block id="37e0d4c7df80d6e4c0423f121f2d93d8" category="paragraph">Integra Workload Security con il tuo ecosistema aziendale utilizzando un'API REST protetta da un'autenticazione sicura basata su token. Recupera dati di attività forensi, gestisci i token di accesso alle API e sviluppa integrazioni personalizzate con CMDB, sistemi di ticketing e altre applicazioni. La documentazione interattiva Swagger fornisce specifiche API complete e consente di testare direttamente gli endpoint.</block>
+  <block id="949cc8d1af819d8e6ec37390121bfa5f" category="section-title">Abilita ONTAP Autonomous Ransomware Protection (facoltativo):</block>
+  <block id="67a5e480424bf6f9914a3b18393465e6" category="paragraph">La Security Dashboard offre una panoramica immediata della situazione attuale della sicurezza, mostrando grafici relativi alla crittografia dei volumi hardware e software, allo stato di protezione contro la manomissione dei file e ai metodi di autenticazione dei cluster. I criteri di sicurezza vengono valutati in base alle raccomandazioni definite nel <block ref="a1c84b5f46cbbd9a263e3a5732ed7485" category="inline-link-macro-rx"></block>.</block>
+  <block id="7b46122c94da7a23999d34f71661a1c2" category="paragraph">Seleziona uno qualsiasi dei conteggi di crittografia o antimanomissione dei file per esplorare il tuo ambiente.</block>
+  <block id="07a15244af601ef7f53e10ad7cf2a65e" category="summary">Esegui query sulle risorse di inventario e sulle metriche di integrazione per monitorare, risolvere i problemi e analizzare le prestazioni dell'intera infrastruttura, inclusi storage, compute e risorse di rete.</block>
+  <block id="c1dac515d770b50607db68702d91b2dd" category="doc">Interrogazione di asset e metriche</block>
+  <block id="c154de8d96ee3aafd9f63d6d8b3821af" category="paragraph">Interroga le risorse fisiche e virtuali della tua infrastruttura per monitorare le prestazioni, risolvere i problemi ed eseguire ricerche granulari basate su criteri personalizzati come le annotazioni. Data Infrastructure Insights consente di eseguire query su diverse tipologie di risorse—dagli array di storage e host alle applicazioni e alle macchine virtuali—insieme a metriche di integrazione da Kubernetes, Docker e ONTAP Advanced Data per una visibilità completa.</block>
+  <block id="a4814d069f57e94e2edb62e919af014a" category="paragraph">Si noti che le regole di annotazione, che assegnano automaticamente annotazioni alle risorse, richiedono una query che è stata condivisa con tutti. Vedere di seguito per ulteriori informazioni sulla condivisione delle query.</block>
+  <block id="0ee1f19142dfe0c3765dfcf205abe414" category="paragraph">Tutti i tipi di asset di inventario (chiamati anche infrastruttura) (storage, switch, VM, Application, ecc.) possono essere utilizzati in query, widget della dashboard e pagine di destinazione degli asset personalizzate. I campi e i contatori disponibili per filtri, espressioni e visualizzazione varieranno tra i tipi di asset.</block>
+  <block id="b4ca152efced4e02c83a7d308fb6c8f9" category="section-title">Condivisione delle query</block>
+  <block id="272c613cf4f758ba99243b78ee690f84" category="paragraph">Controlla l'accesso alle tue query scegliendo chi può visualizzarle e modificarle. Per impostazione predefinita, le nuove query sono private e visibili solo a te e puoi scegliere di condividerle con utenti specifici o con l'intera organizzazione con livelli di autorizzazione flessibili (Sola lettura o Modifica).</block>
+  <block id="72d8dd50b70908191773606963bf3036" category="paragraph">Puoi scegliere di condividere la query con Everyone o con utenti selezionati, con autorizzazioni di modifica o di sola lettura.</block>
+  <block id="b01d373f18f5a51146c5d824cbfb409e" category="admonition">Gli utenti con autorizzazione Account Owner possono visualizzare tutte le query, indipendentemente dall'impostazione della privacy.</block>
+  <block id="7143e0c9aefa0103fd7fde4a2b1f1e3c" category="doc">Comprendere e indagare gli avvisi</block>
+  <block id="a760de6056552c07e9447d9e4aa8ddd8" category="list-text">Proteggi la tua risorsa aziendale più preziosa – i dati – da manomissioni di file o attacchi di distruzione di dati</block>
+  <block id="ad616b1714b32991576ec7cd2b8832a8" category="sidebar">Gestione dell'accesso alla dashboard</block>
 </blocks>

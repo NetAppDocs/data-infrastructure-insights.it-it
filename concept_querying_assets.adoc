@@ -1,18 +1,22 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: Panoramica delle query 
+summary: 'Esegui query sulle risorse di inventario e sulle metriche di integrazione per monitorare, risolvere i problemi e analizzare le prestazioni dell"intera infrastruttura, inclusi storage, compute e risorse di rete.' 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
-= Risorse utilizzate nelle query
+= Interrogazione di asset e metriche
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Le query consentono di monitorare e risolvere i problemi della rete eseguendo ricerche granulari nelle risorse e nelle metriche del tenant in base a criteri selezionati dall'utente (ad esempio, annotazioni).
+Interroga le risorse fisiche e virtuali della tua infrastruttura per monitorare le prestazioni, risolvere i problemi ed eseguire ricerche granulari basate su criteri personalizzati come le annotazioni. Data Infrastructure Insights consente di eseguire query su diverse tipologie di risorse—dagli array di storage e host alle applicazioni e alle macchine virtuali—insieme a metriche di integrazione da Kubernetes, Docker e ONTAP Advanced Data per una visibilità completa.
 
-Si noti che le regole di annotazione, che assegnano automaticamente annotazioni alle risorse, _richiedono_ una query.
+Si noti che le regole di annotazione, che assegnano automaticamente annotazioni alle risorse, richiedono una query che è stata condivisa con tutti. Vedere di seguito per ulteriori informazioni sulla condivisione delle query.
 
 È possibile interrogare le risorse di inventario fisiche o virtuali (e le relative metriche) sul tenant oppure le metriche fornite con l'integrazione, ad esempio Kubernetes o ONTAP Advanced Data.
 
@@ -20,34 +24,7 @@ Si noti che le regole di annotazione, che assegnano automaticamente annotazioni 
 
 == Attività di inventario
 
-I seguenti tipi di risorse possono essere utilizzati nelle query, nei widget della dashboard e nelle landing page delle risorse personalizzate.  I campi e i contatori disponibili per filtri, espressioni e visualizzazione variano a seconda del tipo di risorsa.  Non tutte le risorse possono essere utilizzate in tutti i tipi di widget.
-
-* Applicazione
-* Archivio dati
-* Disco
-* Tessuto
-* Dispositivo generico
-* Ospite
-* Volume interno
-* Sessione iSCSI
-* Portale di rete iSCSI
-* Sentiero
-* Porta
-* Qtree
-* Quota
-* Condividere
-* Magazzinaggio
-* Nodo di archiviazione
-* Pool di archiviazione
-* Macchina virtuale di archiviazione (SVM)
-* Interruttore
-* Nastro
-* VMDK
-* Macchina virtuale
-* Volume
-* Zona
-* Membro della zona
-
+Tutti i tipi di asset di inventario (chiamati anche infrastruttura) (storage, switch, VM, Application, ecc.) possono essere utilizzati in query, widget della dashboard e pagine di destinazione degli asset personalizzate. I campi e i contatori disponibili per filtri, espressioni e visualizzazione varieranno tra i tipi di asset.
 
 
 
@@ -56,3 +33,14 @@ I seguenti tipi di risorse possono essere utilizzati nelle query, nei widget del
 Oltre a eseguire query sulle risorse di inventario e sulle relative metriche di prestazioni, è possibile eseguire query anche sulle metriche dei *dati di integrazione*, come quelle generate da Kubernetes o Docker, o fornite con ONTAP Advanced Metrics.
 
 image:QueryPageFilter.png["Esempio di filtro di query di integrazione"]
+
+
+
+== Condivisione delle query
+
+Controlla l'accesso alle tue query scegliendo chi può visualizzarle e modificarle. Per impostazione predefinita, le nuove query sono private e visibili solo a te e puoi scegliere di condividerle con utenti specifici o con l'intera organizzazione con livelli di autorizzazione flessibili (Sola lettura o Modifica).
+
+Puoi scegliere di condividere la query con Everyone o con utenti selezionati, con autorizzazioni di modifica o di sola lettura.
+
+
+NOTE: Gli utenti con autorizzazione Account Owner possono visualizzare tutte le query, indipendentemente dall'impostazione della privacy.

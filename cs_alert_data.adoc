@@ -4,7 +4,7 @@ permalink: cs_alert_data.html
 keywords: alert, attack, ransomware, activity, security, abnormal, tampering 
 summary: 'Workload Security crea avvisi in caso di attività anomale dell"utente o di potenziali attacchi.  Nella pagina Avvisi sono elencate queste attività per consentire un"indagine rapida e semplice.' 
 ---
-= Avvisi
+= Comprendere e indagare gli avvisi
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
