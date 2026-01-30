@@ -6929,32 +6929,6 @@
   <block id="28bfcc900291ea8fe66d8be36f439a1b" category="summary">Iscrizione a Data Infrastructure Insights e creazione del tenant.</block>
   <block id="9be58f2fc8b11ec837406376ca6b3e2a" category="doc">Onboarding Data Infrastructure Insights</block>
   <block id="549ae8b6dea4926a2af206c5d7300fc5" category="paragraph">Prima di poter iniziare a lavorare con Data Infrastructure Insights, è necessario registrarsi sul portale * NetApp Console*.  Se disponi già di un accesso NetApp Console , puoi iniziare una prova gratuita di Data Infrastructure Insights con pochi rapidi passaggi.</block>
-  <block id="bb793de9cdfd6b52adc5dea5b6228679" category="section-title">Creazione dell'account NetApp Console</block>
-  <block id="b4e0df93660adc2e97f2f5484451c415" category="paragraph">Per iniziare a utilizzare i servizi cloud di NetApp, vai a<block ref="5b0deb840231d6f2646d7cf25956c35a" category="inline-link-macro-rx"></block> e clicca su *Inizia*.</block>
-  <block id="1e26781b207fa848ce81c7268cf016a7" category="list-text">Se non ti sei ancora registrato, seleziona *Registrati*</block>
-  <block id="05d2a837df7692f0d65e4466b2fb05bd" category="list-text">Inserisci un indirizzo email aziendale valido e scegli una password.</block>
-  <block id="ad66d403ef43ddd58a7b527874c51878" category="list-text">Inserisci il nome della tua azienda e il tuo nome completo.</block>
-  <block id="895a961645c5f6456e2cc43102e1de8a" category="list-text">Accetta i termini e le condizioni e seleziona *Continua*.</block>
-  <block id="d127182d44408d014798631913d1e97f" category="list-text">La console ti guiderà passo passo nelle fasi iniziali.</block>
-  <block id="f691976da142019af74f673d9e988d66" category="section-title">Cosa succede se ho già un accesso NetApp Console ?</block>
-  <block id="2a76d74bf06e79d6a8243138ab8d0572" category="paragraph">Una volta che hai un account NetApp Console , seleziona semplicemente *Accedi* su<block ref="5b0deb840231d6f2646d7cf25956c35a" category="inline-link-macro-rx"></block> pagina del portale.</block>
-  <block id="a46b8a484704b65f978247cb9b3901aa" category="paragraph">Inserisci il tuo indirizzo email e la password.  Verrai quindi indirizzato alla pagina delle offerte cloud di NetApp.</block>
-  <block id="4ec4e4954d48db50650c5ec49007cf27" category="paragraph">Vai su *Analisi e controllo &gt; Osservabilità* per saperne di più su Data Infrastructure Insights e/o richiedere una demo.</block>
-  <block id="eeecd13aa136e65aaedc64374c7415bc" category="section-title">Inizio della prova gratuita Data Infrastructure Insights</block>
-  <block id="3b1f676d06286548e11b332567f42bbd" category="inline-link-macro">inizia il tuo abbonamento</block>
-  <block id="b48d78927dd619cab2e6b7fde5ffb6b1" category="paragraph">Durante la prova gratuita, puoi<block ref="822a67eb96671d13fff372a75b259713" category="inline-link-macro-rx"></block> a Data Infrastructure Insights in qualsiasi momento.  Una volta sottoscritto l'abbonamento, puoi utilizzare le funzionalità di Data Infrastructure Insights in base al tuo abbonamento attuale.</block>
-  <block id="2c4bb88652ba26d23266d851053ba465" category="section-title">Sign in e vai</block>
-  <block id="27e0956311428740c19b40a7a971c7ef" category="inline-link-macro">Servizi cloud</block>
-  <block id="206cb1224c200bbbd73cfa4118ad7c1e" category="paragraph">Puoi anche aprire un browser direttamente all'URL del tenant Data Infrastructure Insights , ad esempio:</block>
-  <block id="9834a50024d1c9eb92d1d75e4f1fc3fa" category="paragraph">L'URL verrà inoltre incluso nell'e-mail di invito di ciascun utente per facilitarne l'accesso e l'aggiunta ai preferiti.  Se l'utente non ha ancora effettuato l'accesso alla Console, gli verrà richiesto di effettuare l'accesso.</block>
-  <block id="955402d5e1e7fb2ed3dc9cdbbcb35826" category="admonition">I nuovi utenti devono comunque registrarsi per accedere alla Console prima di poter accedere all'URL del loro tenant.</block>
-  <block id="da115c4fc9cae6fc87764395ef9ff331" category="inline-link-macro">*inizia a raccogliere dati*</block>
-  <block id="587f396a83dde1056c9bf606ffc535f7" category="paragraph">La prima volta che accedi a un nuovo tenant, verrai guidato attraverso la configurazione di<block ref="2949f1254245e371c2d697f481723a7e" category="inline-link-macro-rx"></block> .</block>
-  <block id="cc580c5eecd9c28053db6de1830561ee" category="section-title">Disconnessione</block>
-  <block id="21360340baae34a3a426d1ff1dbc116f" category="paragraph">Per uscire da Data Infrastructure Insights, fai clic sul tuo *Nome utente* e seleziona *Disconnetti*.  Verrai reindirizzato alla schermata di accesso della Console.</block>
-  <block id="c4207c205277b5cad1577163a6bae022" category="admonition">La disconnessione da Data Infrastructure Insights comporta l'uscita dalla Console.  Verrai disconnesso anche dagli altri servizi NetApp Cloud che utilizzano l'accesso alla Console.</block>
-  <block id="8463a61dd94ff5934036d4c8a8936e32" category="section-title">Timeout di inattività</block>
-  <block id="db8ff6a5dfcebcb4f9f3077c3acd8c0a" category="paragraph">Per impostazione predefinita, la console disconnetterà un utente se non vi è alcuna attività per sei ore (360 minuti).  Indipendentemente dall'attività, gli utenti verranno disconnessi dopo sette giorni.</block>
   <block id="fde8afa3fd65a9f38d9b11377453846e" category="doc">Configurazione di Cloud Volumes ONTAP e Amazon FSx for NetApp ONTAP</block>
   <block id="c45671a9389f697917f0b33d12822c51" category="section-title">Configurazione di archiviazione Cloud Volumes ONTAP</block>
   <block id="2ffc6472f9d6abaf761bbe2e6a0385ce" category="paragraph">Consultare la documentazione di OnCommand Cloud Volumes ONTAP per configurare un'istanza AWS a nodo singolo/HA per ospitare Workload Security Agent:<block ref="caca64b8e9927e0ea8e8b0158b9e47cd" category="inline-link-rx"></block></block>
@@ -12340,7 +12314,6 @@
   <block id="69f2e3246807adb3f4d29d9480ac71fd" category="inline-image-macro">Aggiungi finestra di dialogo della politica di attacco che mostra il webhook</block>
   <block id="149360851d3e95c4b6af6d5b468af365" category="paragraph"><block ref="149360851d3e95c4b6af6d5b468af365" category="inline-image-macro-rx" type="image"></block></block>
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Cosa c'è di nuovo</block>
-  <block id="ab5cb6794af58d6cd4132b44aa3d3d04" category="sidebar">Iscrizione a Data Infrastructure Insights</block>
   <block id="c3f4c9cd8970b25325783f3caeab9867" category="sidebar">Pratiche di sicurezza</block>
   <block id="87c6157f200d5f2c85eeda2dc68852f6" category="sidebar">Cosa conserviamo e dove</block>
   <block id="55b171ae91c4f30690df081e54631deb" category="sidebar">Raccolta dati</block>
@@ -12622,8 +12595,6 @@
   <block id="c77b295eb8d3480880ff044a7823cdd9" category="list-text">Se un'annotazione viene rimossa senza aggiornare i report dipendenti, tali report potrebbero restituire errori o risultati imprevisti.</block>
   <block id="3da85052d2ffffd1cb6352186fe0393a" category="list-text">Potrebbe essere necessario ricorrere a servizi professionali per assistere nella correzione dei report in scenari complessi.</block>
   <block id="4f9b9c5804f57ab98a1eb0bbdc93ee28" category="paragraph">Si consiglia di rivedere tutti i report che dipendono da un'annotazione prima di annullarne la pubblicazione.</block>
-  <block id="84782b0fddf642f36f6d0ca7585d8709" category="paragraph">Se è la prima volta che accedi a Data Infrastructure Insights, scopri tutto ciò che Data Infrastructure Insights ha da offrire e, quando sei _Pronto per iniziare_, fai clic su *Richiedi prova* e compila le tue informazioni.</block>
-  <block id="513dc3996a984c81efa261ee7da82ea7" category="paragraph">Durante la configurazione del tenant di prova, dovrai scegliere la regione in cui ospitarlo e se preferisci che sia su AWS o Azure.</block>
   <block id="29ecb4e96ebb9048c6e2055bd8edfec9" category="paragraph">Di seguito è riportato un esempio di file _AgentConfiguration_, con descrizioni per ciascuna opzione.</block>
   <block id="0a511b85d77f15f39fbbd23442b32001" category="section-title">Dicembre 2025</block>
   <block id="02c6c8e70973eaa6f06450fcaad33a5f" category="section-title">Controllo dell'accesso alle query con query condivise</block>
@@ -12637,8 +12608,6 @@
   <block id="7bf60aa4367d13bdf4be42c9055afecc" category="paragraph"><block ref="7bf60aa4367d13bdf4be42c9055afecc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f3dd02ae7c2c35817a35bc27eb8af50f" category="section-title">Visualizzazioni della dashboard più pulite</block>
   <block id="6838668755c364765b40cf38648de55f" category="paragraph">Il design migliorato della dashboard ti aiuta a vedere ciò che conta di più. Maggiore chiarezza visiva con bordi ombreggiati che separano i widget e linee di separazione rimosse per ridurre l'ingombro e consentirti di concentrarti sulle informazioni sui dati. Questi perfezionamenti creano un'esperienza di dashboard più pulita e intuitiva, che consente di individuare tendenze e anomalie in modo più rapido e semplice.</block>
-  <block id="d388ca982366ad7a8a7a165d21919f84" category="paragraph">Una volta completata la creazione del tenant, utilizza le credenziali della console per accedere e iniziare la prova gratuita di 30 giorni di Data Infrastructure Insights. Durante questa prova potrai esplorare le funzionalità offerte da Data Infrastructure Insights .</block>
-  <block id="a361d4c5b26cab224e5aad972ef9f92f" category="paragraph">Una volta creato il tenant, in qualsiasi momento puoi semplicemente accedere al portale NetApp BlueXP e passare alla <block ref="37a150e92f05332b5bc5a56046c3177c" category="inline-link-macro-rx"></block> pagina e seleziona *Vai a Data Infrastructure Insights*.</block>
   <block id="ed35afa558b996b37265533db9af5399" category="sidebar">Pubblicazione di annotazioni nei report</block>
   <block id="c4942feafc272d7da2ce90634dc0120d" category="summary">Accedi ai dati di Workload Security tramite un'API REST con autenticazione sicura basata su token per integrarti con CMDB, sistemi di ticketing e altre applicazioni aziendali.</block>
   <block id="3dec3952c02d73a04d326f3624f668f6" category="summary">Testa e convalida le capacità di rilevamento della sicurezza del carico di lavoro simulando attacchi tramite lo script di simulazione incluso per verificare la generazione di avvisi e le policy di risposta.</block>
@@ -12705,4 +12674,5 @@
   <block id="7143e0c9aefa0103fd7fde4a2b1f1e3c" category="doc">Comprendere e indagare gli avvisi</block>
   <block id="a760de6056552c07e9447d9e4aa8ddd8" category="list-text">Proteggi la tua risorsa aziendale più preziosa – i dati – da manomissioni di file o attacchi di distruzione di dati</block>
   <block id="ad616b1714b32991576ec7cd2b8832a8" category="sidebar">Gestione dell'accesso alla dashboard</block>
+  <block id="1a69a00931f550995a9d19745f714169" category="paragraph">Queste istruzioni sono in fase di aggiornamento. Controlla di nuovo più tardi.</block>
 </blocks>
