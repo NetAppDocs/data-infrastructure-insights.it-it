@@ -93,10 +93,10 @@ Se hai effettuato l'aggiornamento utilizzando la funzionalità di aggiornamento 
 
 === Aggiornamenti manuali
 
-Determinare se esiste un AgentConfiguration con l'operatore esistente (se lo spazio dei nomi non è quello predefinito _netapp-monitoring_, sostituirlo con lo spazio dei nomi appropriato):
+Determinare se esiste un _AgentConfiguration_ con l'operatore esistente (se il namespace non è il _netapp-monitoring_ predefinito, sostituire il namespace appropriato):
 
  kubectl -n netapp-monitoring get agentconfiguration netapp-ci-monitoring-configuration
-Se esiste un AgentConfiguration:
+Se esiste un _AgentConfiguration_:
 
 * <<installing-the-kubernetes-monitoring-operator,Installare>>l'ultimo Operatore rispetto all'Operatore esistente.
 +
@@ -105,7 +105,7 @@ Se esiste un AgentConfiguration:
 
 
 
-Se AgentConfiguration non esiste:
+Se _AgentConfiguration_ non esiste:
 
 * Prendi nota del nome del tuo cluster riconosciuto da Data Infrastructure Insights (se il tuo namespace non è quello predefinito netapp-monitoring, sostituiscilo con il namespace appropriato):
 +
@@ -117,7 +117,7 @@ Se AgentConfiguration non esiste:
 * <<installing-the-kubernetes-monitoring-operator,Installare>>l'ultimo Operatore.
 +
 ** Utilizzare lo stesso nome del cluster.
-** Dopo aver scaricato gli ultimi file YAML dell'operatore, trasferire tutte le personalizzazioni presenti in agent_backup.yaml al file operator-config.yaml scaricato prima della distribuzione.
+** Dopo aver scaricato gli ultimi file YAML dell'Operator, trasferisci tutte le personalizzazioni trovate in _agent_backup.yaml_ nel _operator-config.yaml_ scaricato prima della distribuzione.
 ** Assicurati di essere<<using-a-custom-or-private-docker-repository,estrazione delle ultime immagini del contenitore>> se si utilizza un repository personalizzato.
 
 
@@ -191,7 +191,7 @@ Le impostazioni modificate più comunemente possono essere configurate nella ris
 È anche possibile modificare questa risorsa dopo aver distribuito l'operatore utilizzando il seguente comando:
 
  kubectl -n netapp-monitoring edit AgentConfiguration
-Per determinare se la versione distribuita dell'operatore supporta AgentConfiguration, eseguire il seguente comando:
+Per determinare se la versione distribuita dell'operatore supporta _AgentConfiguration_, eseguire il seguente comando:
 
  kubectl get crd agentconfigurations.monitoring.netapp.com
 Se viene visualizzato il messaggio "Errore dal server (NotFound)", è necessario aggiornare l'operatore prima di poter utilizzare AgentConfiguration.
@@ -226,7 +226,7 @@ Per impostare le variabili, esegui i seguenti passaggi sul tuo sistema *prima* d
 
 Per far sì che il proxy utilizzato per il cluster Kubernetes comunichi con l'ambiente Data Infrastructure Insights , installare Kubernetes Monitoring Operator dopo aver letto tutte queste istruzioni.
 
-Configurare la sezione proxy di AgentConfiguration in operator-config.yaml prima di distribuire Kubernetes Monitoring Operator.
+Configura la sezione proxy di _AgentConfiguration_ in _operator-config.yaml_ prima di distribuire Kubernetes Monitoring Operator.
 
 [listing]
 ----
@@ -286,7 +286,7 @@ Modifica la distribuzione monitoring-operator in operator-deployment.yaml e modi
 image: <docker repo of the enterprise/corp docker repo>/ci-kube-rbac-proxy:<ci-kube-rbac-proxy version>
 image: <docker repo of the enterprise/corp docker repo>/netapp-monitoring:<version>
 ....
-Modifica AgentConfiguration in operator-config.yaml per riflettere la nuova posizione del repository Docker.  Crea un nuovo imagePullSecret per il tuo repository privato, per maggiori dettagli consulta _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_
+Modifica _AgentConfiguration_ in _operator-config.yaml_ per riflettere la nuova posizione del docker repo. Crea un nuovo imagePullSecret per il tuo repository privato, per maggiori dettagli vedi _https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/_
 
 [listing]
 ----
@@ -300,9 +300,25 @@ agent:
 ----
 
 
+==== Token di accesso API per password a lungo termine
+
+Alcuni ambienti (ad esempio repository proxy) richiedono password a lungo termine per il Data Infrastructure Insights docker repository. La password fornita nell'interfaccia utente al momento dell'installazione è valida solo per 24 ore. Invece di utilizzare quella, si può usare un API Access Token come password del docker repository. Questa password sarà valida finché l'API Access Token sarà valido. Si può generare un nuovo API Access Token per questo scopo specifico o utilizzarne uno esistente.
+
+link:task_config_telegraf_agent.html#manually-create-an-api-access-token["Leggi qui"] per istruzioni su come creare un nuovo token di accesso API.
+
+Per estrarre un API Access Token esistente da un file _operator-secrets.yaml_ scaricato, gli utenti possono eseguire quanto segue:
+
+`grep '\.dockerconfigjson' operator-secrets.yaml |sed 's/.*\.dockerconfigjson: //g' |base64 -d |jq`
+
+Per estrarre un API Access Token esistente da un'installazione dell'operatore in esecuzione, gli utenti possono eseguire quanto segue:
+
+`kubectl -n netapp-monitoring get secret netapp-ci-docker -o jsonpath='{.data.\.dockerconfigjson}' |base64 -d |jq`
+
+
+
 === Istruzioni OpenShift
 
-Se utilizzi OpenShift 4.6 o versione successiva, devi modificare AgentConfiguration in _operator-config.yaml_ per abilitare l'impostazione _runPrivileged_:
+Se si utilizza OpenShift 4.6 o versioni successive, è necessario modificare _AgentConfiguration_ in _operator-config.yaml_ per abilitare l'impostazione _runPrivileged_:
 
 ....
 # Set runPrivileged to true SELinux is enabled on your kubernetes nodes
@@ -437,7 +453,7 @@ Acquisire o annotare in altro modo l'output dei seguenti comandi e contattare il
 | Non vedo alcuna metrica raccolta per i CronJob di Kubernetes presenti nel mio cluster. | Verifica la tua versione di Kubernetes (ad esempio `kubectl version` ).  Se la versione è v1.20.x o precedente, si tratta di una limitazione prevista.  La versione kube-state-metrics distribuita con Kubernetes Monitoring Operator supporta solo v1.CronJob.  Con Kubernetes 1.20.x e versioni precedenti, la risorsa CronJob si trova in v1beta.CronJob.  Di conseguenza, kube-state-metrics non riesce a trovare la risorsa CronJob. 
 
 
-| Dopo aver installato l'operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i log dei pod indicano "su: Authentication failure". | Modificare la sezione telegraf in _AgentConfiguration_ e impostare _dockerMetricCollectionEnabled_ su false.  Per maggiori dettagli fare riferimento al manuale dell'operatorelink:telegraf_agent_k8s_config_options.html["opzioni di configurazione"] .  ... spec: ... telegraf: ...            - nome: docker modalità di esecuzione: - sostituzioni DaemonSet: - chiave: DOCKER_UNIX_SOCK_PLACEHOLDER valore: unix:///run/docker.sock ...  ... 
+| Dopo aver installato l'operatore, i pod telegraf-ds entrano in CrashLoopBackOff e i log dei pod indicano "su: Authentication failure". | Modifica la sezione telegraf in _AgentConfiguration_ e imposta _dockerMetricCollectionEnabled_ su false. Per maggiori dettagli, fai riferimento a link:telegraf_agent_k8s_config_options.html["opzioni di configurazione"] dell'operatore. ... spec: ... telegraf: ... - name: docker run-mode: - DaemonSet substitutions: - key: DOCKER_UNIX_SOCK_PLACEHOLDER value: unix:///run/docker.sock ... ... 
 
 
 | Nei miei registri di Telegraf vedo messaggi di errore ricorrenti simili ai seguenti: E!  [agente] Errore durante la scrittura su output.http: Post "\https://<tenant_url>/rest/v1/lake/ingest/influxdb": scadenza del contesto superata (Client.Timeout superato durante l'attesa delle intestazioni) | Modificare la sezione telegraf in _AgentConfiguration_ e aumentare _outputTimeout_ a 10 s.  Per maggiori dettagli fare riferimento al manuale dell'operatorelink:telegraf_agent_k8s_config_options.html["opzioni di configurazione"] . 
@@ -484,7 +500,7 @@ In alternativa, si può anche<<uninstalling,disinstallare>> E<<installing-the-ku
 | Telegraf avvisa o si blocca a causa di una memoria bloccabile insufficiente. | Prova ad aumentare il limite di memoria bloccabile per Telegraf nel sistema operativo/nodo sottostante.  Se aumentare il limite non è un'opzione, modificare la configurazione dell'agente NKMO e impostare _unprotected_ su _true_.  Ciò indicherà a Telegraf di non tentare di riservare pagine di memoria bloccate.  Sebbene ciò possa rappresentare un rischio per la sicurezza, in quanto i segreti decrittati potrebbero essere trasferiti su disco, consente l'esecuzione in ambienti in cui non è possibile riservare memoria bloccata.  Per maggiori dettagli sulle opzioni di configurazione _non protette_, fare riferimento alink:telegraf_agent_k8s_config_options.html["opzioni di configurazione"] pagina. 
 
 
-| Vedo messaggi di avviso da Telegraf simili ai seguenti: _W!  [inputs.diskio] Impossibile raccogliere il nome del disco per "vdc": errore durante la lettura di /dev/vdc: nessun file o directory del genere_ | Per l'operatore di monitoraggio di Kubernetes, questi messaggi di avviso sono innocui e possono essere tranquillamente ignorati.   In alternativa, modificare la sezione telegraf in AgentConfiguration e impostare _runDsPrivileged_ su true.  Per maggiori dettagli fare riferimento allink:telegraf_agent_k8s_config_options.html["opzioni di configurazione dell'operatore"] . 
+| Vedo messaggi di avviso da Telegraf simili ai seguenti: _W!  [inputs.diskio] Impossibile raccogliere il nome del disco per "vdc": errore durante la lettura di /dev/vdc: nessun file o directory del genere_ | Per il Kubernetes Monitoring Operator, questi messaggi di avviso sono benigni e possono essere ignorati senza problemi. In alternativa, modifica la sezione telegraf in AgentConfiguration e imposta _runDsPrivileged_ su true. Per maggiori dettagli, consulta il link:telegraf_agent_k8s_config_options.html["opzioni di configurazione dell'operatore"]. 
 
 
 | Il mio pod fluent-bit non funziona con i seguenti errori: [2024/10/16 14:16:23] [errore] [/src/fluent-bit/plugins/in_tail/tail_fs_inotify.c:360 errno=24] Troppi file aperti [2024/10/16 14:16:23] [errore] inizializzazione input tail.0 non riuscita [2024/10/16 14:16:23] [errore] [motore] inizializzazione input non riuscita  a| 
@@ -512,5 +528,8 @@ Nota: per rendere queste impostazioni persistenti tra i riavvii del nodo, è nec
 
 
 | I pod DS di Telegraf segnalano errori relativi al plugin di input Kubernetes che non riesce a effettuare richieste HTTP a causa dell'impossibilità di convalidare il certificato TLS.  Ad esempio: E!  [inputs.kubernetes] Errore nel plugin: errore durante la richiesta HTTP a"https://<kubelet_IP>:10250/stats/summary":[] Ottenere"https://<kubelet_IP>:10250/stats/summary":[] tls: impossibile verificare il certificato: x509: impossibile convalidare il certificato per <kubelet_IP> perché non contiene alcun IP SAN | Ciò si verifica se il kubelet utilizza certificati autofirmati e/o il certificato specificato non include <kubelet_IP> nell'elenco _Subject Alternative Name_ dei certificati.  Per risolvere questo problema, l'utente può modificare illink:telegraf_agent_k8s_config_options.html["configurazione dell'agente"] e impostare _telegraf:insecureK8sSkipVerify_ su _true_.  In questo modo il plugin di input Telegraf verrà configurato per saltare la verifica.  In alternativa, l'utente può configurare il kubelet perlink:https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/["serverTLSBootstrap"] , che attiverà una richiesta di certificato dall'API 'certificates.k8s.io'. 
+
+
+| Ricevo il seguente errore nei pod Fluent-bit e il pod non può essere avviato: 026/01/12 20:20:32] [error] [sqldb] error=unable to open database file [2026/01/12 20:20:32] [error] [input:tail:tail.0] db: could not create 'in_tail_files' table [2026/01/12 20:20:32] [error] [input:tail:tail.0] could not open/create database [2026/01/12 20:20:32] [error] failed initialize input tail.0 [2026/01/12 20:20:32] [error] [engine] input initialization failed | Assicurarsi che la directory host in cui risiede il file DB disponga dei permessi di lettura/scrittura appropriati. Più specificamente, la directory host dovrebbe concedere permessi di lettura/scrittura agli utenti non root. Il percorso predefinito del file DB è /var/log/ a meno che non venga sovrascritto dall'opzione fluent-bit-dbFile _agentconfiguration_. Se SELinux è abilitato, provare a impostare l'opzione fluent-bit-seLinuxOptionsType agentconfiguration su 'spc_t' 
 |===
 Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

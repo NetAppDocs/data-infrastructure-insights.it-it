@@ -46,6 +46,100 @@ image:ws_webhook_teams_example.png["Esempio di webhook dei team di sicurezza del
 
 
 
+=== Passaggi per creare notifiche Teams con il modello Adaptive Card
+
+. Sostituisci il corpo del messaggio con il seguente template:
++
+....
+  {
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.2",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "%%severity%% Alert: %%synopsis%%",
+            "wrap": true,
+            "weight": "Bolder",
+            "size": "Large"
+          },
+          {
+            "type": "TextBlock",
+            "text": "%%detected%%",
+            "wrap": true,
+            "isSubtle": true,
+            "spacing": "Small"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "User",
+                "value": "%%userName%%"
+              },
+              {
+                "title": "Attack/Abnormal Behavior",
+                "value": "%%type%%"
+              },
+              {
+                "title": "Action taken",
+                "value": "%%actionTaken%%"
+              },
+              {
+                "title": "Files encrypted",
+                "value": "%%filesEncrypted%%"
+              },
+              {
+                "title": "Encrypted files suffix",
+                "value": "%%encryptedFilesSuffix%%"
+              },
+              {
+                "title": "Files deleted",
+                "value": "%%filesDeleted%%"
+              },
+              {
+                "title": "Activity Change Rate",
+                "value": "%%changePercentage%%"
+              },
+              {
+                "title": "Severity",
+                "value": "%%severity%%"
+              },
+              {
+                "title": "Status",
+                "value": "%%status%%"
+              },
+              {
+                "title": "Notes",
+                "value": "%%note%%"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "View Details",
+            "url": "https://%%cloudInsightsHostname%%/%%alertDetailsPageUrl%%"
+          }
+        ]
+      }
+    }
+  ]
+}
+....
+. Se si utilizzano i flussi di Power Automate, i parametri di query nell'URL sono in formato codificato. È necessario decodificare l'URL prima di inserirlo.
+. Fare clic su "Test Webhook" per assicurarsi che non vi siano errori.
+. Salva il webhook.
+
+
+
+
 == Notifiche tramite Webhook
 
 Per ricevere notifiche sugli eventi tramite webhook, vai su _Sicurezza del carico di lavoro > Criteri_.  Selezionare _+Criterio di attacco_ o _+Criterio di avviso_.
