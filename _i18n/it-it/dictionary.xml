@@ -13878,4 +13878,5 @@
   <block id="7a1fe47a1aa444b45e1475e2c2b156bc" category="cell">Indirizzo IP di gestione di StorageGRID (Grid Manager)</block>
   <block id="0eb50b790bd551aaef2bbefbd077cd1b" category="cell">Nome utilizzato per accedere a StorageGRID (Grid Manager)</block>
   <block id="9730a2702facd53c375d1f62e4d662a2" category="cell">Password utilizzata per accedere a StorageGRID (Grid Manager)</block>
+  <block id="749045de0e520f5ad8cff4d4635dd0d8" category="admonition">Il sito DII verrà associato alla Console Organization selezionata. Se si dispone di più Organizations, assicurarsi di selezionare quella corretta da associare al tenant DII.</block>
 </blocks>
