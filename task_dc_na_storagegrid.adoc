@@ -67,13 +67,13 @@ Di seguito sono riportati i requisiti per la configurazione di questa origine da
 | Campo | Descrizione 
 
 
-| Indirizzo IP host StorageGRID | Indirizzo IP virtuale di gestione dell'appliance StorageGRID 
+| Indirizzo IP host StorageGRID | Indirizzo IP di gestione di StorageGRID (Grid Manager) 
 
 
-| Nome utente | Nome utilizzato per accedere all'appliance StorageGRID 
+| Nome utente | Nome utilizzato per accedere a StorageGRID (Grid Manager) 
 
 
-| Password | Password utilizzata per accedere all'appliance StorageGRID 
+| Password | Password utilizzata per accedere a StorageGRID (Grid Manager) 
 |===
 
 

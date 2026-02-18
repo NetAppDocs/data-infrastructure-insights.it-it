@@ -44,7 +44,7 @@ Poiché numerose dashboard ONTAP di Data Infrastructure Insights si basano su co
 Per creare un account locale per Data Infrastructure Insights a livello di cluster, accedere a ONTAP con il nome utente/password dell'amministratore di gestione del cluster ed eseguire i seguenti comandi sul server ONTAP :
 
 . Prima di iniziare, è necessario aver effettuato l'accesso a ONTAP con un account _Amministratore_ e i _comandi a livello diagnostico_ devono essere abilitati.
-. Recupera il nome del vserver di tipo _admin_.  Utilizzerai questo nome nei comandi successivi.
+. Recupera il nome della vserver che è di tipo _admin_. Utilizzerai questo nome nei comandi successivi.
 +
  vserver show -type admin
 . Crea un ruolo utilizzando i seguenti comandi:
@@ -104,7 +104,7 @@ Per migrare da un precedente raccoglitore dati ONTAP (ontapi) al più recente ra
 . Aggiungere il REST Collector.  Si consiglia di immettere le informazioni per un utente diverso da quello configurato per il raccoglitore precedente.  Ad esempio, utilizzare l'utente indicato nella sezione Autorizzazioni sopra.
 . Mette in pausa il raccoglitore precedente, in modo che non continui a raccogliere dati.
 . Lasciare che il nuovo collettore REST acquisisca i dati per almeno 30 minuti.  Ignorare tutti i dati che durante questo periodo non sembrano "normali".
-. Dopo il periodo di riposo, dovresti vedere i tuoi dati stabilizzarsi mentre il collettore REST continua ad acquisire.
+. Dopo il periodo di riposo, dovresti vedere i tuoi dati stabilizzarsi mentre il REST collector continua ad acquisire.
 
 
 Se lo desideri, puoi usare lo stesso procedimento per tornare al collettore precedente.
@@ -113,7 +113,7 @@ Se lo desideri, puoi usare lo stesso procedimento per tornare al collettore prec
 
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -130,7 +130,7 @@ Se lo desideri, puoi usare lo stesso procedimento per tornare al collettore prec
 
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -155,7 +155,7 @@ Se lo desideri, puoi usare lo stesso procedimento per tornare al collettore prec
 
 Data Infrastructure Insights acquisisce dati di inventario, registri e prestazioni dal raccoglitore dati ONTAP .  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per l'asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -200,7 +200,8 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 * Versione del microcodice – firmware.
 * Capacità grezza: somma di base 2 di tutti i dischi fisici nel sistema, indipendentemente dal loro ruolo.
 * Latenza: rappresentazione di ciò che sta sperimentando l'host sottoposto a carichi di lavoro, sia in lettura che in scrittura.  Idealmente, Data Infrastructure Insights reperirebbe questo valore direttamente, ma spesso non è così.  Invece dell'array che offre questa funzionalità, Data Infrastructure Insights esegue in genere un calcolo ponderato in base agli IOPS derivato dalle statistiche dei singoli volumi interni.
-* Capacità di elaborazione: aggregata dai volumi interni.  Gestione: può contenere un collegamento ipertestuale all'interfaccia di gestione del dispositivo.  Creato a livello di programmazione dalla fonte dati Data Infrastructure Insights come parte della reportistica di inventario.
+* Throughput – aggregata dai volumi interni.
+* Gestione: può contenere un hyperlink per l'interfaccia di gestione del dispositivo. Creato a livello di programmazione dalla fonte dati Data Infrastructure Insights come parte del reporting di inventario.
 
 
 
@@ -262,7 +263,7 @@ Ecco alcune cose da provare se riscontri problemi con questo strumento di raccol
 | Problema: | Prova questo: 
 
 
-| Quando si tenta di creare un raccoglitore di dati REST ONTAP , viene visualizzato un errore simile al seguente: Configurazione: 10.193.70.14: l'API REST ONTAP su 10.193.70.14 non è disponibile: 10.193.70.14 non è riuscito a GET /api/cluster: 400 Richiesta non valida | Ciò è probabilmente dovuto a un array ONTAP più vecchio (ad esempio ONTAP 9.6) che non ha funzionalità API REST.  ONTAP 9.14.1 è la versione minima ONTAP supportata dal collettore REST ONTAP .  Nelle versioni precedenti a REST ONTAP ci si dovrebbe aspettare risposte "400 Bad Request".  Per le versioni ONTAP che supportano REST ma non sono 9.14.1 o successive, potrebbe essere visualizzato il seguente messaggio simile: Configurazione: 10.193.98.84: l'API REST ONTAP su 10.193.98.84 non è disponibile: 10.193.98.84: l'API REST ONTAP su 10.193.98.84 è disponibile: cheryl5-cluster-2 9.10.1 a3cb3247-3d3c-11ee-8ff3-005056b364a7 ma non è della versione minima 9.14.1. 
+| Quando si tenta di creare un raccoglitore di dati REST ONTAP , viene visualizzato un errore simile al seguente: Configurazione: 10.193.70.14: l'API REST ONTAP su 10.193.70.14 non è disponibile: 10.193.70.14 non è riuscito a GET /api/cluster: 400 Richiesta non valida | Ciò è probabilmente dovuto a un array ONTAP più vecchio (ad esempio, ONTAP 9.6) che non ha funzionalità REST API. ONTAP 9.14.1 è la versione minima di ONTAP supportata dal collector REST di ONTAP. Le risposte "400 Bad Request" sono da aspettarsi nelle release di ONTAP precedenti a REST. Per le versioni di ONTAP che supportano REST ma non sono 9.14.1 o successive, potresti vedere il seguente messaggio simile: Configuration: 10.193.98.84: ONTAP rest API at 10.193.98.84 is not available: 10.193.98.84: ONTAP rest API at 10.193.98.84 is available: cheryl5-cluster-2 9.10.1 a3cb3247-3d3c-11ee-8ff3-005056b364a7 ma non è della versione minima 9.14.1. 
 
 
 | Vedo metriche vuote o "0" dove il collettore ONTAP ontapi mostra i dati. | ONTAP REST non segnala metriche utilizzate internamente solo sul sistema ONTAP .  Ad esempio, gli aggregati di sistema non verranno raccolti da ONTAP REST, ma solo gli SVM di tipo "dati".  Altri esempi di metriche ONTAP REST che potrebbero segnalare dati pari a zero o vuoti: InternalVolumes: REST non segnala più vol0.  Aggregati: REST non segnala più aggr0.  Archiviazione: la maggior parte delle metriche è un riepilogo delle metriche del volume interno e sarà influenzata da quanto sopra.  Macchine virtuali di archiviazione: REST non segnala più SVM di tipo diverso da "dati" (ad esempio "cluster", "mgmt", "nodo").  Potresti anche notare un cambiamento nell'aspetto dei grafici che contengono dati, dovuto alla modifica del periodo di polling delle prestazioni predefinito da 15 a 5 minuti.  Sondaggi più frequenti significano più punti dati da tracciare. 

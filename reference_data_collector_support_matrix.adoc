@@ -26,7 +26,72 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| HPE Alletra 9080 HPE_3PAR 20450 HPE_3PAR 20800 HPE_3PAR 20850 HPE_3PAR 7200 HPE_3PAR 7200c HPE_3PAR 7400 HPE_3PAR 7400c HPE_3PAR 7440c HPE_3PAR 7450c HPE_3PAR 8200 HPE_3PAR 8400 HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR 9450 HPE_3PAR A630 HPE_3PAR A650 HPE_3PAR A670 HP_3PAR 20800 HP_3PAR 7200 HP_3PAR 7200c HP_3PAR 7400 HP_3PAR 7400c HP_3PAR 7440c HP_3PAR 7450c HP_3PAR 8200 HP_3PAR 8400 HP_3PAR 8440 InServ F200 InServ F400 InServ T400 InServ T800 InServ V400 InServ V800 | 3.1.1 (MU1) 3.1.2 (MU3) 3.1.3 (MU1) 3.1.3 (MU2) 3.2.1 (MU2) 3.2.1 (MU3) 3.2.1 (MU5) 3.2.2 (MU4) 3.2.2 (MU6) 3.3.1 3.3.1 (MU1) 3.3.1 (MU2) 3.3.1 (MU3) 3.3.1 (MU5) 3.3.2 (MU1) 4.3.1 4.3.3 4.4.1 Tipo di rilascio: rilascio di supporto standard 4.5.15 Tipo di rilascio: rilascio di supporto esteso 4.5.18 Tipo di rilascio: rilascio di supporto esteso 4.5.21 Tipo di rilascio: rilascio di supporto esteso 4.5.24 Tipo di rilascio: rilascio di supporto esteso 4.5.7 Tipo di rilascio: rilascio di supporto esteso 4.6.1 Tipo di rilascio: Rilascio con supporto esteso 9.5.15 Tipo di rilascio: Rilascio con supporto esteso 9.5.8 Tipo di rilascio: Rilascio con supporto esteso 9.6.1 Tipo di rilascio: Rilascio con supporto esteso 
+ a| 
+* HPE Alletra 9080
+* HPE_3PAR 20450
+* HPE 3PAR 20800
+* HPE 3PAR 20850
+* HPE 3PAR 7200
+* HPE 3PAR 7200c
+* HPE 3PAR 7400
+* HPE 3PAR 7400c
+* HPE 3PAR 7440c
+* HPE 3PAR 7450c
+* HPE 3PAR 8200
+* HPE 3PAR 8400
+* HPE 3PAR 8440
+* HPE 3PAR 8450
+* HPE 3PAR 9450
+* HPE 3PAR A630
+* HPE 3PAR A650
+* HPE 3PAR A670
+* HP_3PAR 20800
+* HP_3PAR 7200
+* HP_3PAR 7200c
+* HP_3PAR 7400
+* HP_3PAR 7400c
+* HP_3PAR 7440c
+* HP_3PAR 7450c
+* HP_3PAR 8200
+* HP_3PAR 8400
+* HP_3PAR 8440
+* InServ F200
+* InServ F400
+* InServ T400
+* InServ T800
+* InServ V400
+* InServ V800
+
+ a| 
+* 3.1.1 (MU1)
+* 3.1.2 (MU3)
+* 3.1.3 (MU1)
+* 3.1.3 (MU2)
+* 3.2.1 (MU2)
+* 3.2.1 (MU3)
+* 3.2.1 (MU5)
+* 3.2.2 (MU4)
+* 3.2.2 (MU6)
+* 3.3.1
+* 3.3.1 (MU1)
+* 3.3.1 (MU2)
+* 3.3.1 (MU3)
+* 3.3.1 (MU5)
+* 3.3.2 (MU1)
+* 4.3.1
+* 4.3.3
+* 4.4.1 Tipo di rilascio: Standard Support Release
+* 4.5.15 Tipo di rilascio: Extended Support Release
+* 4.5.18 Tipo di rilascio: Extended Support Release
+* 4.5.21 Tipo di rilascio: Extended Support Release
+* 4.5.24 Tipo di rilascio: Extended Support Release
+* 4.5.7 Tipo di rilascio: Extended Support Release
+* 4.6.1 Tipo di rilascio: Extended Support Release
+* 9.5.15 Tipo di rilascio: Extended Support Release
+* 9.5.8 Tipo di rilascio: Extended Support Release
+* 9.6.1 Tipo di rilascio: Extended Support Release
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -142,7 +207,7 @@ Prodotti supportati da questo raccoglitore dati:
 .5+| Informazioni | Nome API | Implementato | SSH |  
 
 
-| Versione API | Implementato | SSH | Google 
+| Versione API | Implementato | SSH |  
 
 
 | Nome dell'origine dati | Implementato | SSH | Informazioni 
@@ -1530,7 +1595,152 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 176,51 183,0 Brocade 200E Brocade 300E Brocade 4024 Embedded Brocade 5000 Brocade 5100 Brocade 5300 Brocade 5480 Embedded Brocade 6505 Brocade 6510 Brocade 6520 Brocade 6546 Brocade 6547 Embedded Brocade 6548 Brocade 6558 Brocade 7800 Brocade 7810 Extension Switch Brocade 7840 Brocade DCX Brocade DCX-4S Backbone Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade M5424 Embedded Brocade VA-40FC Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v6.2.2b v6.2.2f v6.2.2g v6.4.1b v6.4.2a v6.4.3 v6.4.3d v6.4.3f3 v7.0.1 v7.0.1b v7.0.2 v7.0.2b1 v7.0.2c v7.0.2e v7.0.2e1 v7.1.0a v7.1.0b v7.2.0a v7.2.0d v7.2.1 v7.2.1c v7.2.1c1 v7.2.1d v7.3.0a v7.3.0c v7.3.1 v7.3.1c v7.3.1d v7.3.2a v7.4.0a v7.4.1 v7.4.1d v7.4.1e v7.4.2 v7.4.2a v7.4.2a4 v7.4.2c v7.4.2d v7.4.2e v7.4.2f v7.4.2g v7.4.2g_cvr_824494_01 v7.4.2h v7.4.2j1 v8.0.2c v8.0.2d v8.0.2f v8.1.0b v8.1.1a v8.1.2a v8.1.2d v8.1.2f v8.1.2g v8.1.2h v8.1.2j v8.1.2k v8.2.0 v8.2.0a v8.2.0a1 v8.2.0b v8.2.1 v8.2.1a v8.2.1c v8.2.1d v8.2.2a v8.2.2b v8.2.2c v8.2.2d v8.2.2d4 v8.2.3 v8.2.3a v8.2.3a1 v8.2.3a_cvr_855776_01 v8.2.3b v8.2.3c v8.2.3c1 v8.2.3d v8.2.3e v8.2.3e1 v8.2.3e2 v9.0.0a v9.0.1a v9.0.1b v9.0.1b4 v9.0.1c v9.0.1d v9.0.1e v9.0.1e1 v9.1.0b v9.1.1 v9.1.1a v9.1.1b v9.1.1b_lw v9.1.1c v9.1.1d v9.1.1d1 v9.1.1d2 v9.1.1d2_lw v9.1.1d5 v9.2.0a v9.2.0b v9.2.0b1_lw v9.2.0c v9.2.0c1 v9.2.1a v9.2.1a1 v9.2.2 
+ a| 
+* 176,51
+* 183,0
+* Brocade 200E
+* Brocade 300E
+* Brocade 4024 Embedded
+* Brocade 5000
+* Brocade 5100
+* Brocade 5300
+* Brocade 5480 Embedded
+* Brocade 6505
+* Brocade 6510
+* Brocade 6520
+* Brocade 6546
+* Brocade 6547 Embedded
+* Brocade 6548
+* Brocade 6558
+* Brocade 7800
+* Switch di estensione Brocade 7810
+* Brocade 7840
+* Brocade DCX
+* Brocade DCX-4S Backbone
+* Brocade DCX8510-4
+* Brocade DCX8510-8
+* Brocade G610
+* Brocade G620
+* Brocade G630
+* Brocade G720
+* Brocade G730
+* Brocade M5424 Embedded
+* Brocade VA-40FC
+* Brocade X6-4
+* Brocade X6-8
+* Brocade X7-4
+* Brocade X7-8
+
+ a| 
+* v6.2.2b
+* v6.2.2f
+* v6.2.2g
+* v6.4.1b
+* v6.4.2a
+* v6.4.3
+* v6.4.3d
+* v6.4.3f3
+* v7.0.1
+* v7.0.1b
+* v7.0.2
+* v7.0.2b1
+* v7.0.2c
+* v7.0.2e
+* v7.0.2e1
+* v7.1.0a
+* v7.1.0b
+* v7.2.0a
+* v7.2.0d
+* v7.2.1
+* v7.2.1c
+* v7.2.1c1
+* v7.2.1d
+* v7.3.0a
+* v7.3.0c
+* v7.3.1
+* v7.3.1c
+* v7.3.1d
+* v7.3.2a
+* v7.4.0a
+* v7.4.1
+* v7.4.1d
+* v7.4.1e
+* v7.4.2
+* v7.4.2a
+* v7.4.2a4
+* v7.4.2c
+* v7.4.2d
+* v7.4.2e
+* v7.4.2f
+* v7.4.2g
+* v7.4.2g_cvr_824494_01
+* v7.4.2h
+* v7.4.2j1
+* v8.0.2c
+* v8.0.2d
+* v8.0.2f
+* v8.1.0b
+* v8.1.1a
+* v8.1.2a
+* v8.1.2d
+* v8.1.2f
+* v8.1.2g
+* v8.1.2h
+* v8.1.2j
+* v8.1.2k
+* v8.2.0
+* v8.2.0a
+* v8.2.0a1
+* v8.2.0b
+* v8.2.1
+* v8.2.1a
+* v8.2.1c
+* v8.2.1d
+* v8.2.2a
+* v8.2.2b
+* v8.2.2c
+* v8.2.2d
+* v8.2.2d4
+* v8.2.3
+* v8.2.3a
+* v8.2.3a1
+* v8.2.3a_cvr_855776_01
+* v8.2.3b
+* v8.2.3c
+* v8.2.3c1
+* v8.2.3d
+* v8.2.3e
+* v8.2.3e1
+* v8.2.3e2
+* v9.0.0a
+* v9.0.1a
+* v9.0.1b
+* v9.0.1b4
+* v9.0.1c
+* v9.0.1d
+* v9.0.1e
+* v9.0.1e1
+* v9.1.0b
+* v9.1.1
+* v9.1.1a
+* v9.1.1b
+* v9.1.1b_lw
+* v9.1.1c
+* v9.1.1d
+* v9.1.1d1
+* v9.1.1d2
+* v9.1.1d2_lw
+* v9.1.1d5
+* v9.2.0a
+* v9.2.0b
+* v9.2.0b1_lw
+* v9.2.0c
+* v9.2.0c1
+* v9.2.1a
+* v9.2.1a1
+* v9.2.2
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -2216,7 +2426,69 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 183.0 184.0 190.0 Brocade 6505 Brocade 6510 Brocade 6520 Brocade 7810 Switch di estensione Brocade 7840 Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v8.2.2a v8.2.2d v8.2.2d4 v8.2.3 v8.2.3a v8.2.3b v8.2.3c v8.2.3c1 v8.2.3d v8.2.3e v8.2.3e1 v9.0.0b v9.0.1a v9.0.1b v9.0.1b4 v9.0.1c v9.0.1d v9.0.1e v9.0.1e1 v9.1.0b v9.1.1a v9.1.1b v9.1.1c v9.1.1c3 v9.1.1d v9.1.1d1 v9.1.1d1_lw v9.1.1d2 v9.1.1d3_cvr_861742_01 v9.2.0a v9.2.0b v9.2.0b1 v9.2.0b_cvr_857687_01 v9.2.0c v9.2.0c3 v9.2.1 v9.2.1a v9.2.1b v9.2.2 
+ a| 
+* 183,0
+* 184,0
+* 190,0
+* Brocade 6505
+* Brocade 6510
+* Brocade 6520
+* Switch di estensione Brocade 7810
+* Brocade 7840
+* Brocade DCX8510-4
+* Brocade DCX8510-8
+* Brocade G610
+* Brocade G620
+* Brocade G630
+* Brocade G720
+* Brocade G730
+* Brocade X6-4
+* Brocade X6-8
+* Brocade X7-4
+* Brocade X7-8
+
+ a| 
+* v8.2.2a
+* v8.2.2d
+* v8.2.2d4
+* v8.2.3
+* v8.2.3a
+* v8.2.3b
+* v8.2.3c
+* v8.2.3c1
+* v8.2.3d
+* v8.2.3e
+* v8.2.3e1
+* v9.0.0b
+* v9.0.1a
+* v9.0.1b
+* v9.0.1b4
+* v9.0.1c
+* v9.0.1d
+* v9.0.1e
+* v9.0.1e1
+* v9.1.0b
+* v9.1.1a
+* v9.1.1b
+* v9.1.1c
+* v9.1.1c3
+* v9.1.1d
+* v9.1.1d1
+* v9.1.1d1_lw
+* v9.1.1d2
+* v9.1.1d3_cvr_861742_01
+* v9.2.0a
+* v9.2.0b
+* v9.2.0b1
+* v9.2.0b_cvr_857687_01
+* v9.2.0c
+* v9.2.0c3
+* v9.2.1
+* v9.2.1a
+* v9.2.1b
+* v9.2.2
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -2634,7 +2906,127 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| DS-C9124-2-K9 DS-C9124-K9 DS-C9132T-K9 DS-C9148-16P-K9 DS-C9148-32P-K9 DS-C9148-48P-K9 DS-C9148S-K9 DS-C9148T-K9 DS-C9148V-K9 DS-C9220I-K9 DS-C9222I-K9 DS-C9250I-K9 DS-C9396S-K9 DS-C9396T-K9 DS-C9396V-K9 DS-C9506 DS-C9509 DS-C9513 DS-C9706 DS-C9710 DS-C9718 DS-HP-8GFC-K9 DS-HP-FC-K9 N5K-C5548UP N5K-C5596UP N5K-C5696Q UCS-FI-6248UP UCS-FI-6296UP UCS-FI-6332 UCS-FI-6332-16UP UCS-FI-64108 UCS-FI-6454 | 3.3(1c) 4.1(3a) 4.2(1a) 5.0(1a) 5.0(3)N2(3.11e) 5.0(3)N2(4.01d) 5.0(3)N2(4.13i) 5.0(3)N2(4.21e) 5.0(3)N2(4.21j) 5.0(3)N2(4.21k) 5.0(3)N2(4.22c) 5.0(3)N2(4.23f) 5.0(3)N2(4.23g) 5.0(3)N2(4.34a) 5.0(8) 5.2(2d) 5.2(8) 5.2(8a) 5.2(8b) 5.2(8c) 5.2(8d) 5.2(8f) 5.2(8g) 5.2(8h) 5.2(8i) 6.2(11) 6.2(11b) 6.2(11c) 6.2(13) 6.2(13a) 6.2(15) 6.2(17) 6.2(19) 6.2(21) 6.2(23) 6.2(25) 6.2(27) 6.2(29) 6.2(31) 6.2(33) 6.2(5a) 6.2(7) 6.2(9) 6.2(9a) 6.2(9b) 7.0(3)N2(4.04e) 7.0(3)N2(4.13b) 7.0(3)N2(4.13g) 7.3(0)D1(1) 7.3(1)DY(1) 7.3(13)N1(1) 7.3(8)N1(1) 8.1(1) 8.1(1a) 8.2(1) 8.2(2) 8.3(1) 8.3(2) 8.4(1) 8.4(1a) 8.4(2) 8.4(2a) 8.4(2b) 8.4(2c) 8.4(2d) 8.4(2e) 8.4(2f) 8.5(1) 9.2(1a) 9.2(2) 9.3(1) 9.3(2) 9.3(2a) 9.3(5)I42(1b) 9.3(5)I42(1g) 9.3(5)I42(1j) 9.3(5)I42(1k) 9.3(5)I42(3f) 9.3(5)I43(4b) 9.4(1) 9.4(1a) 9.4(2) 9.4(2a) 9.4(3) 
+ a| 
+* DS-C9124-2-K9
+* DS-C9124-K9
+* DS-C9132T-K9
+* DS-C9148-16P-K9
+* DS-C9148-32P-K9
+* DS-C9148-48P-K9
+* DS-C9148S-K9
+* DS-C9148T-K9
+* DS-C9148V-K9
+* DS-C9220I-K9
+* DS-C9222I-K9
+* DS-C9250I-K9
+* DS-C9396S-K9
+* DS-C9396T-K9
+* DS-C9396V-K9
+* DS-C9506
+* DS-C9509
+* DS-C9513
+* DS-C9706
+* DS-C9710
+* DS-C9718
+* DS-HP-8GFC-K9
+* DS-HP-FC-K9
+* N5K-C5548UP
+* N5K-C5596UP
+* N5K-C5696Q
+* UCS-FI-6248UP
+* UCS-FI-6296UP
+* UCS-FI-6332
+* UCS-FI-6332-16UP
+* UCS-FI-64108
+* UCS-FI-6454
+
+ a| 
+* 3.3(1c)
+* 4.1(3a)
+* 4.2(1a)
+* 5.0(1a)
+* 5.0(3)N2(3.11e)
+* 5.0(3)N2(4.01d)
+* 5.0(3)N2(4.13i)
+* 5.0(3)N2(4.21e)
+* 5.0(3)N2(4.21j)
+* 5.0(3)N2(4.21k)
+* 5.0(3)N2(4.22c)
+* 5.0(3)N2(4.23f)
+* 5.0(3)N2(4.23g)
+* 5.0(3)N2(4.34a)
+* 5.0(8)
+* 5.2(2d)
+* 5.2(8)
+* 5.2(8a)
+* 5.2(8b)
+* 5.2(8c)
+* 5.2(8d)
+* 5.2(8f)
+* 5.2(8g)
+* 5.2(8h)
+* 5.2(8i)
+* 6.2(11)
+* 6.2(11b)
+* 6.2(11c)
+* 6.2(13)
+* 6.2(13a)
+* 6.2(15)
+* 6.2(17)
+* 6.2(19)
+* 6.2(21)
+* 6.2(23)
+* 6.2(25)
+* 6.2(27)
+* 6.2(29)
+* 6.2(31)
+* 6.2(33)
+* 6.2(5a)
+* 6.2(7)
+* 6.2(9)
+* 6.2(9a)
+* 6.2(9b)
+* 7.0(3)N2(4.04e)
+* 7.0(3)N2(4.13b)
+* 7.0(3)N2(4.13g)
+* 7.3(0)D1(1)
+* 7.3(1)DY(1)
+* 7.3(13)N1(1)
+* 7.3(8)N1(1)
+* 8.1(1)
+* 8.1(1a)
+* 8.2(1)
+* 8.2(2)
+* 8.3(1)
+* 8.3(2)
+* 8.4(1)
+* 8.4(1a)
+* 8.4(2)
+* 8.4(2a)
+* 8.4(2b)
+* 8.4(2c)
+* 8.4(2d)
+* 8.4(2e)
+* 8.4(2f)
+* 8.5(1)
+* 9.2(1a)
+* 9.2(2)
+* 9.3(1)
+* 9.3(2)
+* 9.3(2a)
+* 9.3(5)I42(1b)
+* 9.3(5)I42(1g)
+* 9.3(5)I42(1j)
+* 9.3(5)I42(1k)
+* 9.3(5)I42(3f)
+* 9.3(5)I43(4b)
+* 9.4(1)
+* 9.4(1a)
+* 9.4(2)
+* 9.4(2a)
+* 9.4(3)
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -3579,7 +3971,46 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| 6.26 6.28 7.32 7.33 | CX3-40f CX4-480 VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX5800 VNX7600 | 04.28.000.5.710 05.32.000.5.206 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.000.5.074 05.33.008.5.119 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.009.5.238 05.33.021.5.256 05.33.021.5.266 05.33.021.5.322 3.26.40.5.029 
+ a| 
+* 6,26
+* 6,28
+* 7,32
+* 7,33
+
+ a| 
+* CX3-40f
+* CX4-480
+* VNX5100
+* VNX5200
+* VNX5300
+* VNX5400
+* VNX5500
+* VNX5600
+* VNX5700
+* VNX5800
+* VNX7600
+
+ a| 
+* 04.28.000.5.710
+* 05.32.000.5.206
+* 05.32.000.5.218
+* 05.32.000.5.219
+* 05.32.000.5.221
+* 05.32.000.5.225
+* 05.32.000.5.249
+* 05.33.000.5.074
+* 05.33.008.5.119
+* 05.33.009.5.155
+* 05.33.009.5.184
+* 05.33.009.5.186
+* 05.33.009.5.231
+* 05.33.009.5.238
+* 05.33.021.5.256
+* 05.33.021.5.266
+* 05.33.021.5.322
+* 3.26.40.5.029
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -4153,7 +4584,56 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| DD VE DD2500 DD3300 DD4200 DD6300 DD6400 DD6800 DD6900 DD7200 DD9300 DD9400 DD9410 DD9500 DD9800 DD990 DD9900 DD9910 | 6.0.2.30-606339 6.1.2.051-633576 6.1.2.20-606786 6.2.1.30-663869 6.2.1.40-671977 6.2.1.60-686365 7.10.0.20-1023227 7.10.1.0-1042928 7.10.1.1-1049892 7.10.1.10-1068159 7.10.1.15-1078832 7.10.1.20-1090468 7.10.1.30-1105324 7.10.1.40-1126469 7.10.1.50-1146826 7.11.0.0-1035502 7.13.0.20-1082704 7.2.0.20-658029 7.2.0.60-682124 7.2.0.70-686759 7.2.0.90-692270 7.7.4.0-1017976 7.7.5.1-1040473 7.7.5.11-1046187 7.7.5.25-1078970 7.7.5.30-1091295 8.0.0.10-1097914 8.1.0.10-1127744 
+ a| 
+* DD VE
+* DD2500
+* DD3300
+* DD4200
+* DD6300
+* DD6400
+* DD6800
+* DD6900
+* DD7200
+* DD9300
+* DD9400
+* DD9410
+* DD9500
+* DD9800
+* DD990
+* DD9900
+* DD9910
+
+ a| 
+* 6.0.2.30-606339
+* 6.1.2.051-633576
+* 6.1.2.20-606786
+* 6.2.1.30-663869
+* 6.2.1.40-671977
+* 6.2.1.60-686365
+* 7.10.0.20-1023227
+* 7.10.1.0-1042928
+* 7.10.1.1-1049892
+* 7.10.1.10-1068159
+* 7.10.1.15-1078832
+* 7.10.1.20-1090468
+* 7.10.1.30-1105324
+* 7.10.1.40-1126469
+* 7.10.1.50-1146826
+* 7.11.0.0-1035502
+* 7.13.0.20-1082704
+* 7.2.0.20-658029
+* 7.2.0.60-682124
+* 7.2.0.70-686759
+* 7.2.0.90-692270
+* 7.7.4.0-1017976
+* 7.7.5.1-1040473
+* 7.7.5.11-1046187
+* 7.7.5.25-1078970
+* 7.7.5.30-1091295
+* 8.0.0.10-1097914
+* 8.1.0.10-1127744
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -4788,7 +5268,65 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| A100 A200 A2000 A300 A3000 F200 F600 F800 F900 H400 H500 H5600 H600 H700 NL410 S210 X210 X410 | 9.1.0.10 9.1.0.6 9.1.0.9 9.2.1.10 9.2.1.11 9.2.1.12 9.2.1.13 9.2.1.19 9.2.1.4 9.2.1.9 9.4.0.11 9.4.0.13 9.4.0.14 9.4.0.15 9.4.0.16 9.4.0.17 9.4.0.18 9.5.0.3 9.5.0.5 9.5.0.6 9.5.0.7 9.5.0.8 9.5.1.0 9.5.1.1 9.5.1.2 9.7.1.0 9.7.1.2 9.7.1.3 9.7.1.4 9.7.1.5 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.1.0.4 v8.1.2.0 v9.0.0.0 
+ a| 
+* A100
+* A200
+* A2000
+* A300
+* A3000
+* F200
+* F600
+* F800
+* F900
+* H400
+* H500
+* H5600
+* H600
+* H700
+* NL410
+* S210
+* X210
+* X410
+
+ a| 
+* 9.1.0.10
+* 9.1.0.6
+* 9.1.0.9
+* 9.2.1.10
+* 9.2.1.11
+* 9.2.1.12
+* 9.2.1.13
+* 9.2.1.19
+* 9.2.1.4
+* 9.2.1.9
+* 9.4.0.11
+* 9.4.0.13
+* 9.4.0.14
+* 9.4.0.15
+* 9.4.0.16
+* 9.4.0.17
+* 9.4.0.18
+* 9.5.0.3
+* 9.5.0.5
+* 9.5.0.6
+* 9.5.0.7
+* 9.5.0.8
+* 9.5.1.0
+* 9.5.1.1
+* 9.5.1.2
+* 9.7.1.0
+* 9.7.1.2
+* 9.7.1.3
+* 9.7.1.4
+* 9.7.1.5
+* v8.0.0.4
+* v8.0.0.6
+* v8.0.0.7
+* v8.1.0.4
+* v8.1.2.0
+* v9.0.0.0
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -5452,7 +5990,39 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| A200 H400 H500 NL400 NL410 S210 Traceback (ultima chiamata): X200 X400 X410 | 9.1.0.18 9.1.0.19 9.2.1.12 9.2.1.13 9.2.1.15 9.4.0.17 9.5.0.3 9.5.0.6 9.5.0.8 9.7.1.2 9.8.0.2 v7.2.0.5 v7.2.1.3 v7.2.1.6 v8.0.0.4 v8.0.0.6 v8.0.0.7 v8.0.1.1 v8.1.2.0 
+ a| 
+* A200
+* H400
+* H500
+* NL400
+* NL410
+* S210
+* X200
+* X400
+* X410
+
+ a| 
+* 9.1.0.18
+* 9.1.0.19
+* 9.2.1.12
+* 9.2.1.13
+* 9.2.1.15
+* 9.4.0.17
+* 9.5.0.3
+* 9.5.0.6
+* 9.5.0.8
+* 9.7.1.2
+* 9.8.0.2
+* v7.2.0.5
+* v7.2.1.3
+* v7.2.1.6
+* v8.0.0.4
+* v8.0.0.6
+* v8.0.0.7
+* v8.0.1.1
+* v8.1.2.0
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -5987,7 +6557,35 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 5200T PowerStore 9000T PowerStore 9200T | 2.1.0.1 2.1.1.0 3.2.0.1 3.2.1.0 3.2.1.1 3.5.0.1 3.5.0.2 3.6.0.0 3.6.1.0 3.6.1.1 3.6.1.2 3.6.1.3 3.6.1.4 4.0.0.1 4.0.0.2 4.0.1.0 
+ a| 
+* PowerStore 1000T
+* PowerStore 1200T
+* PowerStore 3000T
+* PowerStore 3200T
+* PowerStore 5000T
+* PowerStore 5200T
+* PowerStore 9000T
+* PowerStore 9200T
+
+ a| 
+* 2.1.0.1
+* 2.1.1.0
+* 3.2.0.1
+* 3.2.1.0
+* 3.2.1.1
+* 3.5.0.1
+* 3.5.0.2
+* 3.6.0.0
+* 3.6.1.0
+* 3.6.1.1
+* 3.6.1.2
+* 3.6.1.3
+* 3.6.1.4
+* 4.0.0.1
+* 4.0.0.2
+* 4.0.1.0
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -6935,7 +7533,77 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| V10.0.0.0 V10.0.1.1 V10.1.0.0 V10.1.0.1 V10.1.0.3 V10.1.0.5 V10.2.0.0 V8.3.0.6 V8.4.0.7 V8.4.0.9 V9.1.0.5 V9.1.0.6 V9.2.1.0 V9.2.2.0 V9.2.3.0 V9.2.3.1 V9.2.3.4 V9.2.3.6 V9.2.4.1 V9.2.4.2 V9.2.4.3 V9.2.4.6 V9.2.4.7 V9.2.4.8 | PMax8000 PowerMax_2000 PowerMax_8000 VMAX-1 VMAX100K VMAX10K VMAX200K VMAX250F VMAX400K VMAX40K VMAX450F VMAX850F VMAX950F | 5876.286.194(16F40000) build 115 5876.309.196(16F40000) build 153 5876.309.196(16F40000) build 162 5876.309.196(16F40000) build 94 5977.1151.1151(17590000) build 45 5977.1151.1151(17590000) build 60 5977.1151.1151(17590000) build 9 5978.711.711(175A0000) build 320 5978.711.711(175A0000) build 335 5978.711.711(175A0000) build 365 5978.711.711(175A0000) build 416 5978.711.711(175A0000) build 436 5978.711.711(175A0000) build 438 5978.711.711(175A0000) build 448 5978.711.711(175A0000) build 484 5978.711.711(175A0000) build 542 5978.711.711(175A0000) build 581 5978.714.714(175A0000) build 1 5978.714.714(175A0000) build 101 5978.714.714(175A0000) build 108 5978.714.714(175A0000) build 117 5978.714.714(175A0000) build 137 5978.714.714(175A0000) build 145 5978.714.714(175A0000) build 34 5978.714.714(175A0000) build 49 5978.714.714(175A0000) versione 53 5978.714.714(175A0000) versione 79 
+ a| 
+* V10.0.0.0
+* V10.0.1.1
+* V10.1.0.0
+* V10.1.0.1
+* V10.1.0.3
+* V10.1.0.5
+* V10.2.0.0
+* V8.3.0.6
+* V8.4.0.7
+* V8.4.0.9
+* V9.1.0.5
+* V9.1.0.6
+* V9.2.1.0
+* V9.2.2.0
+* V9.2.3.0
+* V9.2.3.1
+* V9.2.3.4
+* V9.2.3.6
+* V9.2.4.1
+* V9.2.4.2
+* V9.2.4.3
+* V9.2.4.6
+* V9.2.4.7
+* V9.2.4.8
+
+ a| 
+* PMax8000
+* PowerMax_2000
+* PowerMax_8000
+* VMAX-1
+* VMAX100K
+* VMAX10K
+* VMAX200K
+* VMAX250F
+* VMAX400K
+* VMAX40K
+* VMAX450F
+* VMAX850F
+* VMAX950F
+
+ a| 
+* 5876.286.194(16F40000) build 115
+* 5876.309.196(16F40000) build 153
+* 5876.309.196(16F40000) build 162
+* 5876.309.196(16F40000) build 94
+* 5977.1151.1151(17590000) build 45
+* 5977.1151.1151(17590000) build 60
+* 5977.1151.1151(17590000) build 9
+* 5978.711.711(175A0000) build 320
+* 5978.711.711(175A0000) build 335
+* 5978.711.711(175A0000) build 365
+* 5978.711.711(175A0000) build 416
+* 5978.711.711(175A0000) build 436
+* 5978.711.711(175A0000) build 438
+* 5978.711.711(175A0000) build 448
+* 5978.711.711(175A0000) build 484
+* 5978.711.711(175A0000) build 542
+* 5978.711.711(175A0000) build 581
+* 5978.714.714(175A0000) build 1
+* 5978.714.714(175A0000) build 101
+* 5978.714.714(175A0000) build 108
+* 5978.714.714(175A0000) build 117
+* 5978.714.714(175A0000) build 137
+* 5978.714.714(175A0000) build 145
+* 5978.714.714(175A0000) build 34
+* 5978.714.714(175A0000) build 49
+* 5978.714.714(175A0000) build 53
+* 5978.714.714(175A0000) build 79
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -7728,7 +8396,84 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| V10.0.0.5 V10.0.1.5 V10.1.0.1 V10.1.0.5 V10.1.0.6 V10.1.0.8 V10.2.0.1 V10.2.0.2 V9.2.3.15 V9.2.3.20 V9.2.3.22 V9.2.3.4 V9.2.4.1 V9.2.4.10 V9.2.4.11 V9.2.4.12 V9.2.4.3 V9.2.4.6 V9.2.4.7 V9.2.4.9 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX200K VMAX250F VMAX400K VMAX450F VMAX950F | 5977.1131.1131 build 615 5977.1151.1151 build 60 build 60 5978.711.711 build 205 5978.711.711 build 335 build 335 5978.711.711 build 365 5978.711.711 build 416 5978.711.711 build 436 build 436 5978.711.711 build 438 5978.711.711 build 448 5978.711.711 build 471 5978.711.711 build 484 5978.711.711 build 484 build 484 5978.711.711 build 542 5978.711.711 build 542 build 542 5978.711.711 build 581 5978.711.711 build 75 5978.711.711 build 8 build 8 5978.714.711 build 49 5978.714.714 build 1 build 1 5978.714.714 build 101 build 101 5978.714.714 build 108 5978.714.714 build 117 5978.714.714 build 117 build 117 5978.714.714 build 131 build 131 5978.714.714 build 137 5978.714.714 build 137 build 137 5978.714.714 build 145 5978.714.714 build 149 build 149 5978.714.714 build 34 5978.714.714 build 49 5978.714.714 build 49 build 49 5978.714.714 build 79 5978.714.714 build 79 build 79 6079.175.0 build 161 build 161 6079.175.0 build 259 build 259 6079.225.0 build 127 build 127 6079.225.0 build 216 build 216 6079.225.0 build 218 build 218 6079.225.0 build 291 build 291 6079.225.0 build 331 build 331 6079.225.0 build 86 build 86 6079.275.0 build 221 build 221 
+ a| 
+* V10.0.0.5
+* V10.0.1.5
+* V10.1.0.1
+* V10.1.0.5
+* V10.1.0.6
+* V10.1.0.8
+* V10.2.0.1
+* V10.2.0.2
+* V9.2.3.15
+* V9.2.3.20
+* V9.2.3.22
+* V9.2.3.4
+* V9.2.4.1
+* V9.2.4.10
+* V9.2.4.11
+* V9.2.4.12
+* V9.2.4.3
+* V9.2.4.6
+* V9.2.4.7
+* V9.2.4.9
+
+ a| 
+* PowerMax_2000
+* PowerMax_2500
+* PowerMax_8000
+* PowerMax_8500
+* VMAX200K
+* VMAX250F
+* VMAX400K
+* VMAX450F
+* VMAX950F
+
+ a| 
+* 5977.1131.1131 build 615
+* 5977.1151.1151 build 60 build 60
+* 5978.711.711 build 205
+* 5978.711.711 build 335 build 335
+* 5978.711.711 build 365
+* 5978.711.711 build 416
+* 5978.711.711 build 436 build 436
+* 5978.711.711 build 438
+* 5978.711.711 build 448
+* 5978.711.711 build 471
+* 5978.711.711 build 484
+* 5978.711.711 build 484 build 484
+* 5978.711.711 build 542
+* 5978.711.711 build 542 build 542
+* 5978.711.711 build 581
+* 5978.711.711 build 75
+* 5978.711.711 build 8 build 8
+* 5978.714.711 build 49
+* 5978.714.714 build 1 build 1
+* 5978.714.714 build 101 build 101
+* 5978.714.714 build 108
+* 5978.714.714 build 117
+* 5978.714.714 build 117 build 117
+* 5978.714.714 build 131 build 131
+* 5978.714.714 build 137
+* 5978.714.714 build 137 build 137
+* 5978.714.714 build 145
+* 5978.714.714 build 149 build 149
+* 5978.714.714 build 34
+* 5978.714.714 build 49
+* 5978.714.714 build 49 build 49
+* 5978.714.714 build 79
+* 5978.714.714 build 79 build 79
+* 6079.175.0 build 161 build 161
+* 6079.175.0 build 259 build 259
+* 6079.225.0 build 127 build 127
+* 6079.225.0 build 216 build 216
+* 6079.225.0 build 218 build 218
+* 6079.225.0 build 291 build 291
+* 6079.225.0 build 331 build 331
+* 6079.225.0 build 86 build 86
+* 6079.275.0 build 221 build 221
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -7736,10 +8481,10 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.86+| fondazione .9+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
+.86+| fondazione .9+| Disco | Capacità (GB) | Implementato | HTTPS |  
 
 
-| ID disco | Implementato | HTTPS | Identifica in modo univoco questo disco nell'array 
+| ID disco | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
@@ -7748,16 +8493,16 @@ Prodotti supportati da questo raccoglitore dati:
 | Ruolo | Implementato | HTTPS |  
 
 
-| Enumerazione dei ruoli | Implementato | HTTPS | enum per il ruolo del disco 
+| Enumerazione dei ruoli | Implementato | HTTPS |  
 
 
 | Stato | Implementato | HTTPS |  
 
 
-| Enumerazione dello stato | Implementato | HTTPS | enum per lo stato del disco 
+| Enumerazione dello stato | Implementato | HTTPS |  
 
 
-| Tipo Enum | Implementato | HTTPS | enum per tipo di disco 
+| Tipo Enum | Implementato | HTTPS |  
 
 
 | Venditore | Implementato | HTTPS |  
@@ -7781,7 +8526,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Versione API client | Implementato | HTTPS |  
 
 
-| Nome dell'origine dati | Implementato | HTTPS | Informazioni 
+| Nome dell'origine dati | Implementato | HTTPS |  
 
 
 | Data | Implementato | HTTPS |  
@@ -7796,10 +8541,10 @@ Prodotti supportati da questo raccoglitore dati:
 .13+| Magazzinaggio | Visualizza IP | Implementato | HTTPS |  
 
 
-| Capacità grezza non riuscita | Implementato | HTTPS | Capacità grezza dei dischi guasti (somma di tutti i dischi guasti) 
+| Capacità grezza non riuscita | Implementato | HTTPS |  
 
 
-| Famiglia | Implementato | HTTPS | La famiglia di storage potrebbe essere Clariion, Symmetrix, et al 
+| Famiglia | Implementato | HTTPS |  
 
 
 | Proprietà intellettuale | Implementato | HTTPS |  
@@ -7820,16 +8565,16 @@ Prodotti supportati da questo raccoglitore dati:
 | Nome | Implementato | HTTPS |  
 
 
-| Capacità grezza totale | Implementato | HTTPS | Capacità grezza totale (somma di tutti i dischi nell'array) 
+| Capacità grezza totale | Implementato | HTTPS |  
 
 
 | Numero di serie | Implementato | HTTPS |  
 
 
-| Capacità grezza di riserva | Implementato | HTTPS | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
+| Capacità grezza di riserva | Implementato | HTTPS |  
 
 
-| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato | HTTPS |  
 
 
 .2+| Nodo di archiviazione | Nome | Implementato | HTTPS |  
@@ -7838,40 +8583,40 @@ Prodotti supportati da questo raccoglitore dati:
 | UUID | Implementato | HTTPS |  
 
 
-.13+| Pool di archiviazione | Includi nella capacità DWH | Implementato | HTTPS | Un modo da ACQ per controllare quali pool di archiviazione sono interessanti in DWH Capacity 
+.13+| Pool di archiviazione | Includi nella capacità DWH | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
 
 
-| Capacità del disco fisico (MB) | Implementato | HTTPS | utilizzato come capacità grezza per il pool di archiviazione 
+| Capacità del disco fisico (MB) | Implementato | HTTPS |  
 
 
-| Gruppo di incursione | Implementato | HTTPS | indica se questo storagePool è un gruppo raid 
+| Gruppo di incursione | Implementato | HTTPS |  
 
 
-| Rapporto grezzo/utilizzabile | Implementato | HTTPS | rapporto per convertire dalla capacità utilizzabile alla capacità grezza 
+| Rapporto grezzo/utilizzabile | Implementato | HTTPS |  
 
 
-| Ridondanza | Implementato | HTTPS | Livello di ridondanza 
+| Ridondanza | Implementato | HTTPS |  
 
 
 | ID pool di archiviazione | Implementato | HTTPS |  
 
 
-| Thin Provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il provisioning sottile per il livello del volume sopra di esso 
+| Thin Provisioning supportato | Implementato | HTTPS |  
 
 
 | Capacità totale assegnata | Implementato | HTTPS |  
 
 
-| Capacità totale utilizzata | Implementato | HTTPS | Capacità totale in MB 
+| Capacità totale utilizzata | Implementato | HTTPS |  
 
 
 | Tipo | Spacco | HTTPS |  
 
 
-| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato | HTTPS |  
 
 
 | Percentuale di capacità effettiva utilizzata | Implementato | HTTPS |  
@@ -7889,7 +8634,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Volume sorgente | Implementato | HTTPS |  
 
 
-| Stato | Implementato | HTTPS | testo libero che descrive lo stato del dispositivo 
+| Stato | Implementato | HTTPS |  
 
 
 | Enum di Stato | Implementato | HTTPS |  
@@ -7901,16 +8646,16 @@ Prodotti supportati da questo raccoglitore dati:
 | Volume obiettivo | Implementato | HTTPS |  
 
 
-| Tecnologia | Implementato | HTTPS | tecnologia che causa l'efficienza di archiviazione cambiata 
+| Tecnologia | Implementato | HTTPS |  
 
 
-.18+| Volume | Identificatore di policy AutoTier | Implementato | HTTPS | Identificatore di policy di livello dinamico 
+.18+| Volume | Identificatore di policy AutoTier | Implementato | HTTPS |  
 
 
-| Livelli automatici | Implementato | HTTPS | indica se questo pool di archiviazione partecipa al tiering automatico con altri pool 
+| Livelli automatici | Implementato | HTTPS |  
 
 
-| Capacità | Implementato | HTTPS | Snapshot Capacità utilizzata in MB 
+| Capacità | Implementato | HTTPS |  
 
 
 | Tipo di disco | Non disponibile | HTTPS |  
@@ -7922,10 +8667,10 @@ Prodotti supportati da questo raccoglitore dati:
 | Nome | Implementato | HTTPS |  
 
 
-| Capacità grezza totale | Implementato | HTTPS | Capacità grezza totale (somma di tutti i dischi nell'array) 
+| Capacità grezza totale | Implementato | HTTPS |  
 
 
-| Ridondanza | Implementato | HTTPS | Livello di ridondanza 
+| Ridondanza | Implementato | HTTPS |  
 
 
 | ID pool di archiviazione | Implementato | HTTPS |  
@@ -7943,10 +8688,10 @@ Prodotti supportati da questo raccoglitore dati:
 | Capacità utilizzata | Implementato | HTTPS |  
 
 
-| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato | HTTPS |  
 
 
-| Capacità scritta | Implementato | HTTPS | Capacità totale scritta su questo volume da un host in MB 
+| Capacità scritta | Implementato | HTTPS |  
 
 
 | Percentuale di capacità effettiva utilizzata | Implementato | HTTPS |  
@@ -7958,7 +8703,7 @@ Prodotti supportati da questo raccoglitore dati:
 | gruppi di archiviazione | Implementato | HTTPS |  
 
 
-.4+| Mappa del volume | LUN | Implementato | HTTPS | Nome del lun backend 
+.4+| Mappa del volume | LUN | Implementato | HTTPS |  
 
 
 | Controllore di protocollo | Implementato | HTTPS |  
@@ -9059,7 +9804,42 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| Unità 300 Unità 300F Unità 350F Unità 380 Unità 380F Unità 400 Unità 400F Unità 450F Unità 480 Unità 480F Unità 500 Unità 550F Unità 600F Unità 650F Unità 680F Unità 880 Unity 880F UnityVSA VNXe3200 | 3.1.17.10229825 4.1.2.9257522 5.0.6.0.5.008 5.0.8.0.5.007 5.1.2.0.5.007 5.2.1.0.5.013 5.2.2.0.5.004 5.3.0.0.5.120 5.3.1.0.5.008 5.3.1.0.6.028 5.4.0.0.5.094 5.4.1.0.5.006 
+ a| 
+* Unity 300
+* Unity 300F
+* Unity 350F
+* Unity 380
+* Unity 380F
+* Unity 400
+* Unity 400F
+* Unity 450F
+* Unity 480
+* Unity 480F
+* Unity 500
+* Unity 550F
+* Unity 600F
+* Unity 650F
+* Unity 680F
+* Unity 880
+* Unity 880F
+* UnityVSA
+* VNXe3200
+
+ a| 
+* 3.1.17,10229825
+* 4.1.2,9257522
+* 5.0.6.0.5.008
+* 5.0.8.0.5.007
+* 5.1.2.0.5.007
+* 5.2.1.0.5.013
+* 5.2.2.0.5.004
+* 5.3.0.0.5.120
+* 5.3.1.0.5.008
+* 5.3.1.0.6.028
+* 5.4.0.0.5.094
+* 5.4.1.0.5.006
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -9612,13 +10392,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 
 == EMC VPLEX
 
-Modelli e versioni supportati da questo raccoglitore dati:
-
 |===
-| Modelli | Versioni del firmware 
-
-
-| VPLEX | 6.2.0.04.00.07 6.2.0.07.00.02 6.2.1.0.0.519 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -9626,7 +10400,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.51+| fondazione .4+| Informazioni | Nome dell'origine dati | Implementato | HTTP/S | Informazioni 
+.4+| fondazione .4+| Informazioni | Nome dell'origine dati | Implementato | HTTP/S | Informazioni 
 
 
 | Data | Implementato | HTTP/S |  
@@ -9638,289 +10412,16 @@ Prodotti supportati da questo raccoglitore dati:
 | Chiave di origine | Implementato | HTTP/S |  
 
 
-.13+| Magazzinaggio | Visualizza IP | Implementato | HTTP/S |  
-
-
-| Capacità grezza non riuscita | Implementato | HTTP/S | Capacità grezza dei dischi guasti (somma di tutti i dischi guasti) 
-
-
-| Famiglia | Implementato | HTTP/S | La famiglia di storage potrebbe essere Clariion, Symmetrix, et al 
-
-
-| Proprietà intellettuale | Implementato | HTTP/S |  
-
-
-| Gestisci URL | Implementato | HTTP/S |  
-
-
-| Produttore | Implementato | HTTP/S |  
-
-
-| Versione del microcodice | Implementato | HTTP/S |  
-
-
-| Modello | Implementato | HTTP/S |  
-
-
-| Nome | Implementato | HTTP/S |  
-
-
-| Capacità grezza totale | Implementato | HTTP/S | Capacità grezza totale (somma di tutti i dischi nell'array) 
-
-
-| Numero di serie | Implementato | HTTP/S |  
-
-
-| Capacità grezza di riserva | Implementato | HTTP/S | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
-
-
-| Virtuale | Implementato | HTTP/S | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
-
-
-.4+| Nodo di archiviazione | Nome | Implementato | HTTP/S |  
-
-
-| Numero di serie | Implementato | HTTP/S |  
-
-
-| Stato | Implementato | HTTP/S | testo libero che descrive lo stato del dispositivo 
-
-
-| UUID | Implementato | HTTP/S |  
-
-
-.14+| Pool di archiviazione | Deduplicazione abilitata | Implementato | HTTP/S | La deduplicazione è abilitata sul pool di archiviazione? 
-
-
-| Nome | Implementato | HTTP/S |  
-
-
-| Altra capacità assegnata | Spacco | HTTP/S | Capacità assegnata per altro (non dati e non snapshot) 
-
-
-| Altro Capacità utilizzata (MB) | Implementato | HTTP/S | Qualsiasi capacità diversa da dati e snapshot 
-
-
-| Gruppo di incursione | Implementato | HTTP/S | indica se questo storagePool è un gruppo raid 
-
-
-| Rapporto grezzo/utilizzabile | Implementato | HTTP/S | rapporto per convertire dalla capacità utilizzabile alla capacità grezza 
-
-
-| Ridondanza | Implementato | HTTP/S | Livello di ridondanza 
-
-
-| Stato | Implementato | HTTP/S |  
-
-
-| ID pool di archiviazione | Implementato | HTTP/S |  
-
-
-| Thin Provisioning supportato | Implementato | HTTP/S | Se questo volume interno supporta il provisioning sottile per il livello del volume sopra di esso 
-
-
-| Capacità totale assegnata | Implementato | HTTP/S |  
-
-
-| Capacità totale utilizzata | Implementato | HTTP/S | Capacità totale in MB 
-
-
-| Tipo | Spacco | HTTP/S |  
-
-
-| Virtuale | Implementato | HTTP/S | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
-
-
-.8+| Volume | Capacità | Implementato | HTTP/S | Snapshot Capacità utilizzata in MB 
-
-
-| Nome | Implementato | HTTP/S |  
-
-
-| Capacità grezza totale | Implementato | HTTP/S | Capacità grezza totale (somma di tutti i dischi nell'array) 
-
-
-| Ridondanza | Implementato | HTTP/S | Livello di ridondanza 
-
-
-| ID pool di archiviazione | Implementato | HTTP/S |  
-
-
-| Fornito in modo sottile | Implementato | HTTP/S |  
-
-
-| UUID | Implementato | HTTP/S |  
-
-
-| Virtuale | Implementato | HTTP/S | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
-
-
-.4+| Mappa del volume | LUN | Implementato | HTTP/S | Nome del lun backend 
-
-
-| Controllore di protocollo | Implementato | HTTP/S |  
-
-
-| Porto di archiviazione | Implementato | HTTP/S |  
-
-
-| Tipo | Spacco | HTTP/S |  
-
-
-.4+| Maschera del volume | Iniziatore | Implementato | HTTP/S |  
-
-
-| Controllore di protocollo | Implementato | HTTP/S |  
-
-
-| Porto di archiviazione | Implementato | HTTP/S |  
-
-
-| Tipo | Spacco | HTTP/S |  
-
-
-.59+| prestazione .13+| Magazzinaggio | Capacità grezza non riuscita | Implementato | SSH |  
-
-
-| Capacità grezza | Implementato | SSH |  
-
-
-| Capacità grezza di riserva | Implementato | SSH | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
-
-
-| Capacità di StoragePools | Implementato | SSH |  
-
-
-| IOP totali | Implementato | SSH |  
+.15+| prestazione .4+| Dati del nodo di archiviazione | Rapporto di hit della cache totale | Implementato | SSH |  
 
 
 | Chiave | Implementato | SSH |  
 
 
-| Latenza di lettura | Implementato | SSH |  
-
-
-| Latenza totale | Implementato | SSH |  
-
-
-| Latenza di scrittura | Implementato | SSH |  
-
-
 | ID del server | Implementato | SSH |  
-
-
-| Lettura di throughput | Implementato | SSH |  
-
-
-| Portata totale | Implementato | SSH | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s 
-
-
-| Scrittura di throughput | Implementato | SSH |  
-
-
-.13+| Nodo di archiviazione | Rapporto di hit della cache totale | Implementato | SSH |  
-
-
-| IOP letti | Implementato | SSH | Numero di IOPS di lettura sul disco 
-
-
-| IOP totali | Implementato | SSH |  
-
-
-| Scrittura IOP | Implementato | SSH |  
-
-
-| Chiave | Implementato | SSH |  
-
-
-| Latenza di lettura | Implementato | SSH |  
-
-
-| Latenza totale | Implementato | SSH |  
-
-
-| Latenza di scrittura | Implementato | SSH |  
-
-
-| ID del server | Implementato | SSH |  
-
-
-| Lettura di throughput | Implementato | SSH |  
-
-
-| Portata totale | Implementato | SSH | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s 
-
-
-| Scrittura di throughput | Implementato | SSH |  
 
 
 | Utilizzo totale | Implementato | SSH |  
-
-
-.4+| Dati del nodo di archiviazione | Chiave | Implementato | SSH |  
-
-
-| ID del server | Implementato | SSH |  
-
-
-| Rapporto di hit della cache totale | Implementato | SSH |  
-
-
-| Utilizzo totale | Implementato | SSH |  
-
-
-.7+| Disco StoragePool | Capacità fornita | Implementato | SSH |  
-
-
-| Capacità totale | Implementato | SSH |  
-
-
-| Capacità utilizzata | Implementato | SSH |  
-
-
-| Rapporto di capacità di impegno eccessivo | Implementato | SSH | Segnalato come serie temporale 
-
-
-| Rapporto di capacità utilizzata | Implementato | SSH |  
-
-
-| Altra capacità totale | Implementato | SSH |  
-
-
-| Altra capacità utilizzata | Implementato | SSH |  
-
-
-.11+| Volume | Capacità grezza | Implementato | SSH |  
-
-
-| Capacità totale | Implementato | SSH |  
-
-
-| IOP totali | Implementato | SSH |  
-
-
-| Chiave | Implementato | SSH |  
-
-
-| Latenza di lettura | Implementato | SSH |  
-
-
-| Latenza totale | Implementato | SSH |  
-
-
-| Latenza di scrittura | Implementato | SSH |  
-
-
-| ID del server | Implementato | SSH |  
-
-
-| Lettura di throughput | Implementato | SSH |  
-
-
-| Portata totale | Implementato | SSH | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s 
-
-
-| Scrittura di throughput | Implementato | SSH |  
 
 
 .11+| Volume | Capacità grezza | Implementato | SSH |  
@@ -9976,7 +10477,38 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| 6.2.1 6.3.2 6.3.3 6.4.0 6.4.1 6.4.2 | 1 Brick e 125 TB 1 Brick e 24 TB 1 Brick e 31 TB 1 Brick e 8 TB 1X10 TB 1X20 TB 1X40 TB 2 Brick e 83 TB 3 Brick e 146 TB 3 Brick e 251 TB 3 Brick e 283 TB 4 Brick e 628 TB 4 Brick e 754 TB 4X20 TB 6X40 TB | 4.0.27-1 4.0.31-11 6.3.3-8_X2 6.4.0-36_hotfix_2_X2 
+ a| 
+* 6.2.1
+* 6.3.2
+* 6.3.3
+* 6.4.0
+* 6.4.1
+* 6.4.2
+
+ a| 
+* 1 Bricks e 125TB
+* 1 Bricks e 24TB
+* 1 Bricks e 31TB
+* 1 Bricks e 8TB
+* 1X10TB
+* 1X20TB
+* 1X40TB
+* 2 Bricks e 83TB
+* 3 Bricks e 146TB
+* 3 Bricks e 251TB
+* 3 mattoni e 283TB
+* 4 mattoni & 628TB
+* 4 Brick e 754TB
+* 4X20TB
+* 6X40TB
+
+ a| 
+* 4.0.27-1
+* 4.0.31-11
+* 6.3.3-8_X2
+* 6.4.0-36_hotfix_2_X2
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -10502,7 +11034,76 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 2660 2680 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5504 5564 5600 5700 5700B 6000 7999 | 08.40.60.01 08.80.00.00 7.84.46.0 8.20.16.0 8.20.27.0 8.20.30.0 8.20.8.0 8.25.14.0 8.25.6.0 8.40.0.1 8.40.20.0 8.40.30.4 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.40.60.3 8.42.30.5 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.1 8.53.0.4 8.62.0.0 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.73.0.0 8.74.0.0 8.74.1.0 8.74.2.0 8.74.3.0 8.75.0.0 8.75.0.1 8.75.1.0 8.80.0.0 8.80.1.0 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.90.0.0 
+ a| 
+* 2660
+* 2680
+* 2702
+* 2704
+* 2800B
+* 2804
+* 2806
+* 3000
+* 4000
+* 5486
+* 5488
+* 5504
+* 5564
+* 5600
+* 5700
+* 5700B
+* 6000
+* 7999
+
+ a| 
+* 08.40.60.01
+* 08.80.00.00
+* 7.84.46.0
+* 8.20.16.0
+* 8.20.27.0
+* 8.20.30.0
+* 8.20.8.0
+* 8.25.14.0
+* 8.25.6.0
+* 8.40.0.1
+* 8.40.20.0
+* 8.40.30.4
+* 8.40.40.0
+* 8.40.50.0
+* 8.40.60.1
+* 8.40.60.2
+* 8.40.60.3
+* 8.42.30.5
+* 8.50.0.4
+* 8.51.0.0
+* 8.52.0.0
+* 8.52.0.1
+* 8.53.0.1
+* 8.53.0.4
+* 8.62.0.0
+* 8.62.0.2
+* 8.63.0.2
+* 8.70.0.2
+* 8.70.0.3
+* 8.71.2.0
+* 8.71.3.0
+* 8.72.0.0
+* 8.73.0.0
+* 8.74.0.0
+* 8.74.1.0
+* 8.74.2.0
+* 8.74.3.0
+* 8.75.0.0
+* 8.75.0.1
+* 8.75.1.0
+* 8.80.0.0
+* 8.80.1.0
+* 8.81.0.3
+* 8.81.1.0
+* 8.81.2.0
+* 8.81.3.0
+* 8.90.0.0
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -11676,392 +12277,6 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
-== Google Cloud Netapp Volumi
-
-Prodotti supportati da questo raccoglitore dati:
-
-|===
-| Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
-
-
-.71+| fondazione .7+| Condivisione file | Nome | Implementato | HTTPS |  
-
-
-| Sentiero | Implementato | HTTPS | Percorso del fileShare 
-
-
-| ID Qtree | Implementato | HTTPS | ID univoco del qtree 
-
-
-| È InternalVolume | Implementato | HTTPS | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
-
-
-| È condiviso | Implementato | HTTPS | se questo fileShare ha delle condivisioni associate 
-
-
-| Stato | Implementato | HTTPS |  
-
-
-| Tipo di sicurezza | Implementato | HTTPS |  
-
-
-.3+| Informazioni | Nome dell'origine dati | Implementato | HTTPS | Informazioni 
-
-
-| ID dell'originatore | Implementato | HTTPS |  
-
-
-| Data | Implementato | HTTPS |  
-
-
-.24+| Volume interno | ID volume interno | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| ID pool di archiviazione | Implementato | HTTPS |  
-
-
-| Tipo | Spacco | HTTPS |  
-
-
-| Fornito in modo sottile | Implementato | HTTPS |  
-
-
-| Thin Provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il provisioning sottile per il livello del volume sopra di esso 
-
-
-| Deduplicazione abilitata | Implementato | HTTPS | La deduplicazione è abilitata sul pool di archiviazione? 
-
-
-| Compressione abilitata | Implementato | HTTPS | La compressione è abilitata sul pool di archiviazione 
-
-
-| Ora dell'ultima istantanea | Implementato | HTTPS | ora dell'ultima istantanea 
-
-
-| Conteggio snapshot | Implementato | HTTPS | Numero di snapshot sui volumi interni 
-
-
-| Stato | Implementato | HTTPS |  
-
-
-| Tipo di protezione | Implementato | HTTPS |  
-
-
-| Capacità utilizzata istantanea | Implementato | HTTPS |  
-
-
-| Capacità allocata snapshot | Spacco | HTTPS | Capacità allocata degli snapshot in MB 
-
-
-| Capacità dati utilizzata | Implementato | HTTPS |  
-
-
-| Capacità dati allocata | Spacco | HTTPS | capacità assegnata per i dati 
-
-
-| Capacità totale utilizzata | Implementato | HTTPS | Capacità totale in MB 
-
-
-| Capacità totale assegnata | Implementato | HTTPS |  
-
-
-| Rapporto grezzo/utilizzabile | Implementato | HTTPS | rapporto per convertire dalla capacità utilizzabile alla capacità grezza 
-
-
-| Livelli minimi di giorni di raffreddamento | Implementato | HTTPS |  
-
-
-| QoS - Politica | Implementato | HTTPS |  
-
-
-|  | Implementato | HTTPS |  
-
-
-| Commento | Spacco | HTTPS | stato: commento di testo libero che descrive l'svm 
-
-
-| Limite Qos grezzo | Implementato | HTTPS |  
-
-
-.5+| QTree | ID Qtree | Implementato | HTTPS | ID univoco del qtree 
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| Stile di sicurezza | Implementato | HTTPS | Stile di sicurezza della directory: unix, ntfs o misto 
-
-
-| Stato | Implementato | HTTPS |  
-
-
-| Tipo | Spacco | HTTPS |  
-
-
-.3+| Condividere | Nome | Implementato | HTTPS |  
-
-
-| Protocollo | Implementato | HTTPS | enum per il protocollo di condivisione 
-
-
-| Interfacce IP | Implementato | HTTPS | elenco separato da virgole di indirizzi IP su cui è esposta questa condivisione 
-
-
-.2+| Condividi Iniziatore | Iniziatore | Implementato | HTTPS |  
-
-
-| Permesso | Implementato | HTTPS | Autorizzazioni per questa particolare condivisione 
-
-
-.10+| Magazzinaggio | Proprietà intellettuale | Implementato | HTTPS |  
-
-
-| Visualizza IP | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| Produttore | Implementato | HTTPS |  
-
-
-| Famiglia | Implementato | HTTPS | La famiglia di storage potrebbe essere Clariion, Symmetrix, et al 
-
-
-| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
-
-
-| Gestisci URL | Implementato | HTTPS |  
-
-
-| Capacità grezza totale | Implementato | HTTPS | Capacità grezza totale (somma di tutti i dischi nell'array) 
-
-
-| Capacità grezza di riserva | Implementato | HTTPS | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
-
-
-| Capacità grezza non riuscita | Implementato | HTTPS | Capacità grezza dei dischi guasti (somma di tutti i dischi guasti) 
-
-
-.17+| Pool di archiviazione | ID pool di archiviazione | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| Tipo | Spacco | HTTPS |  
-
-
-| Stato | Implementato | HTTPS |  
-
-
-| Thin Provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il provisioning sottile per il livello del volume sopra di esso 
-
-
-| Includi nella capacità DWH | Implementato | HTTPS | Un modo da ACQ per controllare quali pool di archiviazione sono interessanti in DWH Capacity 
-
-
-| Livello del fornitore | Implementato | HTTPS | Nome del livello specifico del fornitore 
-
-
-| Deduplicazione abilitata | Implementato | HTTPS | La deduplicazione è abilitata sul pool di archiviazione? 
-
-
-| Compressione abilitata | Implementato | HTTPS | La compressione è abilitata sul pool di archiviazione 
-
-
-| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
-
-
-| Gruppo di incursione | Implementato | HTTPS | indica se questo storagePool è un gruppo raid 
-
-
-| Capacità dati utilizzata | Implementato | HTTPS |  
-
-
-| Capacità dati allocata | Spacco | HTTPS | capacità assegnata per i dati 
-
-
-| Capacità totale assegnata | Implementato | HTTPS |  
-
-
-| Capacità del disco fisico (MB) | Implementato | HTTPS | utilizzato come capacità grezza per il pool di archiviazione 
-
-
-| Rapporto grezzo/utilizzabile | Implementato | HTTPS | rapporto per convertire dalla capacità utilizzabile alla capacità grezza 
-
-
-|  | Implementato | HTTPS |  
-
-
-.52+| prestazione .21+| Volume interno | Latenza totale | Implementato | HTTPS |  
-
-
-| Spazio di archiviazione degli oggetti utilizzato | Implementato | HTTPS |  
-
-
-| Capacità totale | Implementato | HTTPS |  
-
-
-| Latenza di lettura | Implementato | HTTPS |  
-
-
-| Altri IOP | Implementato | HTTPS |  
-
-
-| Scrittura IOP | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-| Lettura di throughput | Implementato | HTTPS |  
-
-
-| ID del server | Implementato | HTTPS |  
-
-
-| IOP totali | Implementato | HTTPS |  
-
-
-| Rapporto di capacità utilizzata istantanea | Implementato | HTTPS | Segnalato come serie temporale 
-
-
-| Latenza di scrittura | Implementato | HTTPS |  
-
-
-| IOP letti | Implementato | HTTPS | Numero di IOPS di lettura sul disco 
-
-
-| Rapporto di capacità utilizzata | Implementato | HTTPS |  
-
-
-| Capacità totale dei dati | Implementato | HTTPS |  
-
-
-| Capacità dati utilizzata | Implementato | HTTPS |  
-
-
-| Scrittura di throughput | Implementato | HTTPS |  
-
-
-| Portata totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s 
-
-
-| Capacità utilizzata istantanea | Implementato | HTTPS |  
-
-
-| Chiave | Implementato | HTTPS |  
-
-
-| Capacità riservata snapshot | Implementato | HTTPS |  
-
-
-.16+| Magazzinaggio | Latenza totale | Implementato | HTTPS |  
-
-
-| Capacità grezza non riuscita | Implementato | HTTPS |  
-
-
-| Capacità grezza di riserva | Implementato | HTTPS | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
-
-
-| Latenza di lettura | Implementato | HTTPS |  
-
-
-| Altri IOP | Implementato | HTTPS |  
-
-
-| Scrittura IOP | Implementato | HTTPS |  
-
-
-| Capacità grezza | Implementato | HTTPS |  
-
-
-| Lettura di throughput | Implementato | HTTPS |  
-
-
-| ID del server | Implementato | HTTPS |  
-
-
-| IOP totali | Implementato | HTTPS |  
-
-
-| Latenza di scrittura | Implementato | HTTPS |  
-
-
-| IOP letti | Implementato | HTTPS | Numero di IOPS di lettura sul disco 
-
-
-| Capacità di StoragePools | Implementato | HTTPS |  
-
-
-| Scrittura di throughput | Implementato | HTTPS |  
-
-
-| Portata totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s 
-
-
-| Chiave | Implementato | HTTPS |  
-
-
-.15+| Disco StoragePool | Spazio di archiviazione degli oggetti utilizzato | Implementato | HTTPS |  
-
-
-| Capacità totale | Implementato | HTTPS |  
-
-
-| Scrittura IOP | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-| Capacità grezza | Implementato | HTTPS |  
-
-
-| Lettura di throughput | Implementato | HTTPS |  
-
-
-| IOP totali | Implementato | HTTPS |  
-
-
-| IOP letti | Implementato | HTTPS | Numero di IOPS di lettura sul disco 
-
-
-| Rapporto di capacità utilizzata | Implementato | HTTPS |  
-
-
-| Capacità totale dei dati | Implementato | HTTPS |  
-
-
-| Capacità fornita | Implementato | HTTPS |  
-
-
-| Capacità dati utilizzata | Implementato | HTTPS |  
-
-
-| Scrittura di throughput | Implementato | HTTPS |  
-
-
-| Portata totale | Implementato | HTTPS | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s 
-
-
-| Rapporto di capacità di impegno eccessivo | Implementato | HTTPS | Segnalato come serie temporale 
-|===
-API di gestione utilizzate da questo raccoglitore dati:
-
-|===
-| API | Protocollo utilizzato | Protocollo di livello di trasporto utilizzato | Porte in entrata utilizzate | Porte in uscita utilizzate | Supporta l'autenticazione | Richiede solo credenziali di "sola lettura" | Supporta la crittografia | Compatibile con firewall (porte statiche) 
-
-
-| API REST di Google Compute Platform | HTTPS |  | 443 |  | VERO | VERO | VERO | VERO 
-|===
-
-
 == HDS HCP (HTTPS)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -12254,7 +12469,71 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| 7.6.1 8.0 8.7.1 8.7.3 8.7.6 8.8.3 | DF850MH DF850S HM800 HM850 P9500 RAID800 VSP5000 XP24000 XP8 | 0983/AH 0984/BH 0985/BS 0986/AH 0988/HS DKC:60-08-22 DKC:60-08-65 DKC:70-06-43 DKC:80-06-80-00/02 DKC:80-06-91-00/00 DKC:80-06-96-00/00 DKC:83-05-46-60/00 DKC:83-05-50-60/00 DKC:83-05-53-60/00 DKC:88-08-08-60/00 DKC:88-08-10-60/00 DKC:88-08-12-60/00 DKC:88-08-13-60/00 DKC:88-08-13-60/01 DKC:90-08-81-00/00 DKC:90-09-21-00/00 DKC:90-09-23-00/00 DKC:90-09-24-00/00 DKC:90-09-24-00/01 DKC:90-09-25 SVP:60-08-21/00 SVP:60-08-54/00 SVP:70-06-30/00 SVP:80-06-76/02 SVP:80-06-86/00 SVP:80-06-91/00 SVP:83-05-50-60/00 SVP:83-05-54-60/00 SVP:83-05-57-60/00 SVP:88-08-10-60/00 SVP:88-08-12-60/00 SVP:88-08-14-60/00 SVP:88-08-15-60/00 SVP:90-08-81/00 SVP:90-09-21/00 SVP:90-09-23/00 SVP:90-09-24/00 SVP:90-09-25/00 
+ a| 
+* 7.6.1
+* 8,0
+* 8.7.1
+* 8.7.3
+* 8.7.6
+* 8.8.3
+
+ a| 
+* DF850MH
+* DF850S
+* HM800
+* HM850
+* P9500
+* RAID800
+* VSP5000
+* XP24000
+* XP8
+
+ a| 
+* 0983/A-H
+* 0984/B-H
+* 0985/B-S
+* 0986/A-H
+* 0988/H-S
+* DKC:60-08-22
+* DKC:60-08-65
+* DKC:70-06-43
+* DKC:80-06-80-00/02
+* DKC:80-06-91-00/00
+* DKC:80-06-96-00/00
+* DKC:83-05-46-60/00
+* DKC:83-05-50-60/00
+* DKC:83-05-53-60/00
+* DKC:88-08-08-60/00
+* DKC:88-08-10-60/00
+* DKC:88-08-12-60/00
+* DKC:88-08-13-60/00
+* DKC:88-08-13-60/01
+* DKC:90-08-81-00/00
+* DKC:90-09-21-00/00
+* DKC:90-09-23-00/00
+* DKC:90-09-24-00/00
+* DKC:90-09-24-00/01
+* DKC:90-09-25
+* SVP:60-08-21/00
+* SVP:60-08-54/00
+* SVP:70-06-30/00
+* SVP:80-06-76/02
+* SVP:80-06-86/00
+* SVP:80-06-91/00
+* SVP:83-05-50-60/00
+* SVP:83-05-54-60/00
+* SVP:83-05-57-60/00
+* SVP:88-08-10-60/00
+* SVP:88-08-12-60/00
+* SVP:88-08-14-60/00
+* SVP:88-08-15-60/00
+* SVP:90-08-81/00
+* SVP:90-09-21/00
+* SVP:90-09-23/00
+* SVP:90-09-24/00
+* SVP:90-09-25/00
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -12864,7 +13143,72 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| VSP 5100 VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E590 VSP E790 VSP E790H VSP F1500 VSP F400 VSP F900 VSP G1000 VSP G1500 VSP G600 VSP G800 VSP G900 XP8 | 80-06-91-00/00:01-71-03/02 80-06-94-00/00:01-70-03/04 80-06-96-00/00:01-71-03/02 80-06-96-00/00:01-76-03/03 83-05-49-40/01:01-69-03/02 83-05-49-60/01:01-65-03/05 83-05-49-60/01:01-69-03/02 83-05-51-40/00:01-70-03/04 83-05-51-40/00:01-71-03/02 83-05-51-40/00:01-76-03/03 88-08-08-60/00:01-65-03/05 88-08-08-60/00:01-70-03/04 88-08-11-60/00:01-65-03/05 88-08-11-60/00:01-70-03/04 88-08-13-60/00:01-65-03/05 88-08-13-60/01:01-65-03/05 88-08-13-60/01:01-70-03/04 88-08-13-60/01:01-71-03/02 88-08-13-60/01:01-76-03/03 90-08-82-00/00:01-65-03/05 90-08-82:01.70.04 90-09-01-00/01:01-65-03/05 90-09-22-00/00:01-65-03/05 90-09-22-00/00:01-70-03/04 90-09-22-00/00:01-71-03/02 90-09-24-00/01:01-65-03/05 90-09-24-00/01:01-71-03/02 90-09-24-00/01:01-76-03/03 90-09-24:01.65.05 90-09-25-00/00:01-76-03/03 90-09-25:01.70.04 90-09-26-00/00:01-65-03/05 90-09-26-00/00:01-71-03/02 90-09-26-00/00:01-76-03/03 93-07-01-80/00:01-70-03/04 93-07-22-40/00:01-65-03/05 93-07-22-40/00:01-69-03/02 93-07-22-80/00:01-70-03/04 93-07-22-80/00:01-71-03/02 93-07-23-80/00:01-71-03/02 93-07-23-80/01:01-71-03/02 93-07-24-40/00:01-76-03/03 93-07-24-80/00:01-70-03/04 null:null 
+ a| 
+* VSP 5100
+* VSP 5500
+* VSP 5600
+* VSP 5600H
+* VSP E1090
+* VSP E590
+* VSP E790
+* VSP E790H
+* VSP F1500
+* VSP F400
+* VSP F900
+* VSP G1000
+* VSP G1500
+* VSP G600
+* VSP G800
+* VSP G900
+* XP8
+
+ a| 
+* 80-06-91-00/00:01-71-03/02
+* 80-06-94-00/00:01-70-03/04
+* 80-06-96-00/00:01-71-03/02
+* 80-06-96-00/00:01-76-03/03
+* 83-05-49-40/01:01-69-03/02
+* 83-05-49-60/01:01-65-03/05
+* 83-05-49-60/01:01-69-03/02
+* 83-05-51-40/00:01-70-03/04
+* 83-05-51-40/00:01-71-03/02
+* 83-05-51-40/00:01-76-03/03
+* 88-08-08-60/00:01-65-03/05
+* 88-08-08-60/00:01-70-03/04
+* 88-08-11-60/00:01-65-03/05
+* 88-08-11-60/00:01-70-03/04
+* 88-08-13-60/00:01-65-03/05
+* 88-08-13-60/01:01-65-03/05
+* 88-08-13-60/01:01-70-03/04
+* 88-08-13-60/01:01-71-03/02
+* 88-08-13-60/01:01-76-03/03
+* 90-08-82-00/00:01-65-03/05
+* 90-08-82:01.70.04
+* 90-09-01-00/01:01-65-03/05
+* 90-09-22-00/00:01-65-03/05
+* 90-09-22-00/00:01-70-03/04
+* 90-09-22-00/00:01-71-03/02
+* 90-09-24-00/01:01-65-03/05
+* 90-09-24-00/01:01-71-03/02
+* 90-09-24-00/01:01-76-03/03
+* 90-09-24:01.65.05
+* 90-09-25-00/00:01-76-03/03
+* 90-09-25:01.70.04
+* 90-09-26-00/00:01-65-03/05
+* 90-09-26-00/00:01-71-03/02
+* 90-09-26-00/00:01-76-03/03
+* 93-07-01-80/00:01-70-03/04
+* 93-07-22-40/00:01-65-03/05
+* 93-07-22-40/00:01-69-03/02
+* 93-07-22-80/00:01-70-03/04
+* 93-07-22-80/00:01-71-03/02
+* 93-07-23-80/00:01-71-03/02
+* 93-07-23-80/01:01-71-03/02
+* 93-07-24-40/00:01-76-03/03
+* 93-07-24-80/00:01-70-03/04
+* null:null
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -12872,16 +13216,16 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.110+| fondazione .15+| Disco | Capacità (GB) | Implementato |  | Capacità utilizzata 
+.110+| fondazione .15+| Disco | Capacità (GB) | Implementato |  |  
 
 
-| ID disco | Implementato |  | Identifica in modo univoco questo disco nell'array 
+| ID disco | Implementato |  |  
 
 
 | Gruppo | Implementato |  |  
 
 
-| Posizione | Spacco |  | Dove si trova fisicamente questo disco nell'array 
+| Posizione | Spacco |  |  
 
 
 | Modello | Implementato |  |  
@@ -12896,7 +13240,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Ruolo | Implementato |  |  
 
 
-| Enumerazione dei ruoli | Implementato |  | enum per il ruolo del disco 
+| Enumerazione dei ruoli | Implementato |  |  
 
 
 | Tempo di ricerca | Implementato |  |  
@@ -12905,22 +13249,22 @@ Prodotti supportati da questo raccoglitore dati:
 | Numero di serie | Implementato |  |  
 
 
-| Velocità | Implementato |  | Velocità del disco (RPM) 
+| Velocità | Implementato |  |  
 
 
-| Enumerazione dello stato | Implementato |  | enum per lo stato del disco 
+| Enumerazione dello stato | Implementato |  |  
 
 
-| Tipo Enum | Implementato |  | enum per tipo di disco 
+| Tipo Enum | Implementato |  |  
 
 
 | Venditore | Implementato |  |  
 
 
-.10+| Gruppo di dischi | Capacità | Implementato |  | Snapshot Capacità utilizzata in MB 
+.10+| Gruppo di dischi | Capacità | Implementato |  |  
 
 
-| ID gruppo disco | Implementato |  | ID univoco del gruppo di dischi 
+| ID gruppo disco | Implementato |  |  
 
 
 | Tipo di disco | Non disponibile |  |  
@@ -12929,10 +13273,10 @@ Prodotti supportati da questo raccoglitore dati:
 | Nome | Implementato |  |  
 
 
-| Capacità del disco fisico (MB) | Implementato |  | utilizzato come capacità grezza per il pool di archiviazione 
+| Capacità del disco fisico (MB) | Implementato |  |  
 
 
-| Ridondanza | Implementato |  | Livello di ridondanza 
+| Ridondanza | Implementato |  |  
 
 
 | Stato | Implementato |  |  
@@ -12941,10 +13285,10 @@ Prodotti supportati da questo raccoglitore dati:
 | Capacità utilizzata | Implementato |  |  
 
 
-| Tipo di DiskGroup del fornitore | Implementato |  | designazione del tipo di gruppo di dischi da parte del fornitore 
+| Tipo di DiskGroup del fornitore | Implementato |  |  
 
 
-| Virtuale | Implementato |  | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato |  |  
 
 
 .4+| Portale di rete ISCSI | Proprietà intellettuale | Implementato |  |  
@@ -13004,7 +13348,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Sicurezza | Implementato |  |  
 
 
-.4+| Informazioni | Nome dell'origine dati | Implementato |  | Informazioni 
+.4+| Informazioni | Nome dell'origine dati | Implementato |  |  
 
 
 | Data | Implementato |  |  
@@ -13019,10 +13363,10 @@ Prodotti supportati da questo raccoglitore dati:
 .14+| Magazzinaggio | Visualizza IP | Implementato |  |  
 
 
-| Capacità grezza non riuscita | Implementato |  | Capacità grezza dei dischi guasti (somma di tutti i dischi guasti) 
+| Capacità grezza non riuscita | Implementato |  |  
 
 
-| Famiglia | Implementato |  | La famiglia di storage potrebbe essere Clariion, Symmetrix, et al 
+| Famiglia | Implementato |  |  
 
 
 | Proprietà intellettuale | Implementato |  |  
@@ -13043,19 +13387,19 @@ Prodotti supportati da questo raccoglitore dati:
 | Nome | Implementato |  |  
 
 
-| Capacità grezza totale | Implementato |  | Capacità grezza totale (somma di tutti i dischi nell'array) 
+| Capacità grezza totale | Implementato |  |  
 
 
 | Numero di serie | Implementato |  |  
 
 
-| Capacità grezza di riserva | Implementato |  | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
+| Capacità grezza di riserva | Implementato |  |  
 
 
-| SupportoAttivo Attivo | Implementato |  | Specificato se l'archiviazione supporta configurazioni attive-attive 
+| SupportoAttivo Attivo | Implementato |  |  
 
 
-| Virtuale | Implementato |  | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato |  |  
 
 
 .2+| Nodo di archiviazione | Nome | Implementato |  |  
@@ -13064,34 +13408,34 @@ Prodotti supportati da questo raccoglitore dati:
 | UUID | Implementato |  |  
 
 
-.18+| Pool di archiviazione | Compressione abilitata | Implementato |  | La compressione è abilitata sul pool di archiviazione 
+.18+| Pool di archiviazione | Compressione abilitata | Implementato |  |  
 
 
-| Risparmio di compressione | Implementato |  | rapporto di risparmio di compressione in percentuale 
+| Risparmio di compressione | Implementato |  |  
 
 
-| Deduplicazione abilitata | Implementato |  | La deduplicazione è abilitata sul pool di archiviazione? 
+| Deduplicazione abilitata | Implementato |  |  
 
 
-| Includi nella capacità DWH | Implementato |  | Un modo da ACQ per controllare quali pool di archiviazione sono interessanti in DWH Capacity 
+| Includi nella capacità DWH | Implementato |  |  
 
 
 | Nome | Implementato |  |  
 
 
-| Capacità del disco fisico (MB) | Implementato |  | utilizzato come capacità grezza per il pool di archiviazione 
+| Capacità del disco fisico (MB) | Implementato |  |  
 
 
-| Gruppo di incursione | Implementato |  | indica se questo storagePool è un gruppo raid 
+| Gruppo di incursione | Implementato |  |  
 
 
-| Rapporto grezzo/utilizzabile | Implementato |  | rapporto per convertire dalla capacità utilizzabile alla capacità grezza 
+| Rapporto grezzo/utilizzabile | Implementato |  |  
 
 
-| Ridondanza | Implementato |  | Livello di ridondanza 
+| Ridondanza | Implementato |  |  
 
 
-| Limite morbido (MB) | Implementato |  | dimensione del volume logico definita durante le operazioni di creazione o ridimensionamento del volume 
+| Limite morbido (MB) | Implementato |  |  
 
 
 | Stato | Implementato |  |  
@@ -13100,19 +13444,19 @@ Prodotti supportati da questo raccoglitore dati:
 | ID pool di archiviazione | Implementato |  |  
 
 
-| Thin Provisioning supportato | Implementato |  | Se questo volume interno supporta il provisioning sottile per il livello del volume sopra di esso 
+| Thin Provisioning supportato | Implementato |  |  
 
 
 | Capacità totale assegnata | Implementato |  |  
 
 
-| Capacità totale utilizzata | Implementato |  | Capacità totale in MB 
+| Capacità totale utilizzata | Implementato |  |  
 
 
 | Tipo | Spacco |  |  
 
 
-| Virtuale | Implementato |  | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato |  |  
 
 
 | Criptato | Implementato |  |  
@@ -13130,7 +13474,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Volume sorgente | Implementato |  |  
 
 
-| Stato | Implementato |  | testo libero che descrive lo stato del dispositivo 
+| Stato | Implementato |  |  
 
 
 | Enum di Stato | Implementato |  |  
@@ -13142,10 +13486,10 @@ Prodotti supportati da questo raccoglitore dati:
 | Volume obiettivo | Implementato |  |  
 
 
-| Tecnologia | Implementato |  | tecnologia che causa l'efficienza di archiviazione cambiata 
+| Tecnologia | Implementato |  |  
 
 
-.10+| Volume | Capacità | Implementato |  | Snapshot Capacità utilizzata in MB 
+.10+| Volume | Capacità | Implementato |  |  
 
 
 | Percorso di giunzione | Implementato |  |  
@@ -13157,7 +13501,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Tipo di protezione | Implementato |  |  
 
 
-| Capacità grezza totale | Implementato |  | Capacità grezza totale (somma di tutti i dischi nell'array) 
+| Capacità grezza totale | Implementato |  |  
 
 
 | ID pool di archiviazione | Implementato |  |  
@@ -13175,7 +13519,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Compressione abilitata | Implementato |  |  
 
 
-.5+| Mappa del volume | LUN | Implementato |  | Nome del lun backend 
+.5+| Mappa del volume | LUN | Implementato |  |  
 
 
 | Mascheratura obbligatoria | Implementato |  |  
@@ -15176,7 +15520,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | - 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.132 7.9.33.95 7.9.40.251 7.9.41.65 
+| 2107-951 2107-961 2107-993 2107-994 2107-996 2107-A05 | 7.10.1.8 7.6.31.4250 7.7.51.1400 7.9.32.101 7.9.33.132 7.9.33.95 7.9.40.251 7.9.41.65 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -15856,7 +16200,123 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 2072-12F 2072-12G 2072-224 2072-24C 2072-24E 2072-24F 2072-24G 2072-2N4 2072-324 2072-3H4 2072-3N2 2072-3N4 2072-92F 2072-92G 2076-124 2076-12F 2076-224 2076-24F 2076-24G 2076-524 2076-624 2076-724 2076-824 2076-AF6 2076- AFF 2077-24F 2077-24G 2077-424 2077-4H4 2078-12F 2078-12G 2078-224 2078-24C 2078-24F 2078-24G 2078-324 2078-424 2078-4H4 2078-92G 2078-AF3 4657-24G 4657-924 4662-12G 4662-24G 4662-6H2 4666-AH8 4666-UH8 4680-24H 4680-2P4 4680-3P4 4680-92H 4983-AH8 9843-AE2 9843-AE3 9846-AG8 9848-AF7 9848-AF8 9848-AG8 9848-UG8 Servizio | 1.5.2.7 1.6.1.2 1.6.1.4 1.6.1.5 7.7.1.8 7.8.1.11 7.8.1.12 7.8.1.13 7.8.1.14 7.8.1.16 7.8.1.5 7.8.1.6 7.8.1.7 7.8.1.8 8.2.1.10 8.2.1.8 8.2.1.9 8.3.1.10 8.3.1.2 8.3.1.5 8.3.1.6 8.3.1.7 8.3.1.8 8.3.1.9 8.4.0.10 8.4.0.11 8.4.0.13 8.4.0.15 8.4.0.2 8.4.0.5 8.4.0.6 8.4.0.9 8.4.2.0 8.5.0.10 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.14 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.0 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.7.0.0 8.7.0.1 8.7.0.2 8.7.0.3 
+ a| 
+* 2072-12F
+* 2072-12G
+* 2072-224
+* 2072-24C
+* 2072-24E
+* 2072-24F
+* 2072-24G
+* 2072-2N4
+* 2072-324
+* 2072-3H4
+* 2072-3N2
+* 2072-3N4
+* 2072-92F
+* 2072-92G
+* 2076-124
+* 2076-12F
+* 2076-224
+* 2076-24F
+* 2076-24G
+* 2076-524
+* 2076-624
+* 2076-724
+* 2076-824
+* 2076-AF6
+* 2076-AFF
+* 2077-24F
+* 2077-24G
+* 2077-424
+* 2077-4H4
+* 2078-12F
+* 2078-12G
+* 2078-224
+* 2078-24C
+* 2078-24F
+* 2078-24G
+* 2078-324
+* 2078-424
+* 2078-4H4
+* 2078-92G
+* 2078-AF3
+* 4657-24G
+* 4657-924
+* 4662-12G
+* 4662-24G
+* 4662-6H2
+* 4666-AH8
+* 4666-UH8
+* 4680-24H
+* 4680-2P4
+* 4680-3P4
+* 4680-92H
+* 4983-AH8
+* 9843-AE2
+* 9843-AE3
+* 9846-AG8
+* 9848-AF7
+* 9848-AF8
+* 9848-AG8
+* 9848-UG8
+* SVC
+
+ a| 
+* 1.5.2.7
+* 1.6.1.2
+* 1.6.1.4
+* 1.6.1.5
+* 7.7.1.8
+* 7.8.1.11
+* 7.8.1.12
+* 7.8.1.13
+* 7.8.1.14
+* 7.8.1.16
+* 7.8.1.5
+* 7.8.1.6
+* 7.8.1.7
+* 7.8.1.8
+* 8.2.1.10
+* 8.2.1.8
+* 8.2.1.9
+* 8.3.1.10
+* 8.3.1.2
+* 8.3.1.5
+* 8.3.1.6
+* 8.3.1.7
+* 8.3.1.8
+* 8.3.1.9
+* 8.4.0.10
+* 8.4.0.11
+* 8.4.0.13
+* 8.4.0.15
+* 8.4.0.2
+* 8.4.0.5
+* 8.4.0.6
+* 8.4.0.9
+* 8.4.2.0
+* 8.5.0.10
+* 8.5.0.11
+* 8.5.0.12
+* 8.5.0.13
+* 8.5.0.14
+* 8.5.0.5
+* 8.5.0.6
+* 8.5.0.7
+* 8.5.0.8
+* 8.5.0.9
+* 8.6.0.0
+* 8.6.0.2
+* 8.6.0.3
+* 8.6.0.4
+* 8.6.0.5
+* 8.7.0.0
+* 8.7.0.1
+* 8.7.0.2
+* 8.7.0.3
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -19177,40 +19637,40 @@ Prodotti supportati da questo raccoglitore dati:
 | Usato | Implementato | HTTPS |  
 
 
-.6+| Gruppo di dischi | Capacità | Implementato | HTTPS | Snapshot Capacità utilizzata in MB 
+.6+| Gruppo di dischi | Capacità | Implementato | HTTPS |  
 
 
-| ID gruppo disco | Implementato | HTTPS | ID univoco del gruppo di dischi 
+| ID gruppo disco | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
 
 
-| Capacità del disco fisico (MB) | Implementato | HTTPS | utilizzato come capacità grezza per il pool di archiviazione 
+| Capacità del disco fisico (MB) | Implementato | HTTPS |  
 
 
 | Capacità utilizzata | Implementato | HTTPS |  
 
 
-| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato | HTTPS |  
 
 
-.8+| Condivisione file | È InternalVolume | Implementato | HTTPS | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
+.8+| Condivisione file | È InternalVolume | Implementato | HTTPS |  
 
 
-| Gli oplock sono abilitati? | Implementato | HTTPS | se i blocchi opportunistici sono abilitati su FileShare 
+| Gli oplock sono abilitati? | Implementato | HTTPS |  
 
 
-| È condiviso | Implementato | HTTPS | se questo fileShare ha delle condivisioni associate 
+| È condiviso | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
 
 
-| Sentiero | Implementato | HTTPS | Percorso del fileShare 
+| Sentiero | Implementato | HTTPS |  
 
 
-| ID Qtree | Implementato | HTTPS | ID univoco del qtree 
+| ID Qtree | Implementato | HTTPS |  
 
 
 | Tipo di sicurezza | Implementato | HTTPS |  
@@ -19309,7 +19769,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Versione API | Implementato | HTTPS |  
 
 
-| Nome dell'origine dati | Implementato | HTTPS | Informazioni 
+| Nome dell'origine dati | Implementato | HTTPS |  
 
 
 | Data | Implementato | HTTPS |  
@@ -19321,34 +19781,34 @@ Prodotti supportati da questo raccoglitore dati:
 | Chiave di origine | Implementato | HTTPS |  
 
 
-.41+| Volume interno | Compressione abilitata | Implementato | HTTPS | La compressione è abilitata sul pool di archiviazione 
+.41+| Volume interno | Compressione abilitata | Implementato | HTTPS |  
 
 
-| Risparmio di compressione | Implementato | HTTPS | rapporto di risparmio di compressione in percentuale 
+| Risparmio di compressione | Implementato | HTTPS |  
 
 
-| Capacità dati allocata | Spacco | HTTPS | capacità assegnata per i dati 
+| Capacità dati allocata | Spacco | HTTPS |  
 
 
 | Capacità dati utilizzata | Implementato | HTTPS |  
 
 
-| Deduplicazione abilitata | Implementato | HTTPS | La deduplicazione è abilitata sul pool di archiviazione? 
+| Deduplicazione abilitata | Implementato | HTTPS |  
 
 
-| Risparmio Dedupe | Implementato | HTTPS | rapporto di risparmio di deduplicazione in percentuale 
+| Risparmio Dedupe | Implementato | HTTPS |  
 
 
-| Chiave guida 1 | Implementato | HTTPS | GuidKey1 è implicito per tutti gli oggetti la cui chiave GUID non è cambiata dalla versione OCI 7.3.5. 
+| Chiave guida 1 | Implementato | HTTPS |  
 
 
-| Guida chiave 2 | Implementato | HTTPS | GuidKey2 è implicito per tutti gli oggetti la cui chiave GUID non è cambiata dalla versione 7.3.5 di OCI. 
+| Guida chiave 2 | Implementato | HTTPS |  
 
 
 | ID volume interno | Implementato | HTTPS |  
 
 
-| Ultimo orario di accesso noto | Implementato | HTTPS | Ultimo accesso noto al volume 
+| Ultimo orario di accesso noto | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
@@ -19357,19 +19817,19 @@ Prodotti supportati da questo raccoglitore dati:
 | Tipo di protezione | Implementato | HTTPS |  
 
 
-| Rapporto grezzo/utilizzabile | Implementato | HTTPS | rapporto per convertire dalla capacità utilizzabile alla capacità grezza 
+| Rapporto grezzo/utilizzabile | Implementato | HTTPS |  
 
 
-| Capacità allocata snapshot | Spacco | HTTPS | Capacità allocata degli snapshot in MB 
+| Capacità allocata snapshot | Spacco | HTTPS |  
 
 
-| Conteggio snapshot | Implementato | HTTPS | Numero di snapshot sui volumi interni 
+| Conteggio snapshot | Implementato | HTTPS |  
 
 
 | Capacità utilizzata istantanea | Implementato | HTTPS |  
 
 
-| Garanzia di spazio | Implementato | HTTPS | Politica di garanzia dello spazio (file, volume o nessuno) 
+| Garanzia di spazio | Implementato | HTTPS |  
 
 
 | Stato | Implementato | HTTPS |  
@@ -19381,7 +19841,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Fornito in modo sottile | Implementato | HTTPS |  
 
 
-| Thin Provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il provisioning sottile per il livello del volume sopra di esso 
+| Thin Provisioning supportato | Implementato | HTTPS |  
 
 
 | Capacità totale assegnata | Implementato | HTTPS |  
@@ -19390,10 +19850,10 @@ Prodotti supportati da questo raccoglitore dati:
 | Capacità totale di clonazione salvata in MB | Implementato | HTTPS |  
 
 
-| Capacità totale utilizzata | Implementato | HTTPS | Capacità totale in MB 
+| Capacità totale utilizzata | Implementato | HTTPS |  
 
 
-| Capacità totale utilizzata (MB) | Implementato | HTTPS | segnaposto per la capacità utilizzata come letta dal dispositivo 
+| Capacità totale utilizzata (MB) | Implementato | HTTPS |  
 
 
 | Tipo | Spacco | HTTPS |  
@@ -19402,13 +19862,13 @@ Prodotti supportati da questo raccoglitore dati:
 | UUID | Implementato | HTTPS |  
 
 
-| Archiviazione virtuale | Implementato | HTTPS | Possedere uno storage virtuale (vfiler) 
+| Archiviazione virtuale | Implementato | HTTPS |  
 
 
 | Politica QoS adattiva | Implementato | HTTPS |  
 
 
-| Commento | Spacco | HTTPS | stato: commento di testo libero che descrive l'svm 
+| Commento | Spacco | HTTPS |  
 
 
 | ID gruppo | Implementato | HTTPS |  
@@ -19450,37 +19910,37 @@ Prodotti supportati da questo raccoglitore dati:
 | Volume interno di destinazione | Implementato | HTTPS |  
 
 
-| Tecnologia | Implementato | HTTPS | tecnologia che causa l'efficienza di archiviazione cambiata 
+| Tecnologia | Implementato | HTTPS |  
 
 
-.12+| QTree | Chiave guida 1 | Implementato | HTTPS | GuidKey1 è implicito per tutti gli oggetti la cui chiave GUID non è cambiata dalla versione OCI 7.3.5. 
+.12+| QTree | Chiave guida 1 | Implementato | HTTPS |  
 
 
-| Guida chiave 2 | Implementato | HTTPS | GuidKey2 è implicito per tutti gli oggetti la cui chiave GUID non è cambiata dalla versione 7.3.5 di OCI. 
+| Guida chiave 2 | Implementato | HTTPS |  
 
 
-| Guida chiave 3 | Implementato | HTTPS | GuidKey3 è implicito per tutti gli oggetti la cui chiave GUID non è cambiata dalla versione OCI 7.3.5. 
+| Guida chiave 3 | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
 
 
-| Oplock | Implementato | HTTPS | Indica se i blocchi opportunistici sono abilitati sul Qtree 
+| Oplock | Implementato | HTTPS |  
 
 
-| ID Qtree | Implementato | HTTPS | ID univoco del qtree 
+| ID Qtree | Implementato | HTTPS |  
 
 
-| Limite di capacità rigida della quota (MB) | Implementato | HTTPS | Quantità massima di spazio su disco consentita per l'obiettivo di quota 
+| Limite di capacità rigida della quota (MB) | Implementato | HTTPS |  
 
 
-| Limite di capacità morbida della quota (MB) | Implementato | HTTPS | Quantità massima di spazio su disco consentita per l'obiettivo di quota 
+| Limite di capacità morbida della quota (MB) | Implementato | HTTPS |  
 
 
-| Quota utilizzataCapacità | Implementato | HTTPS | Spazio in MB attualmente utilizzato 
+| Quota utilizzataCapacità | Implementato | HTTPS |  
 
 
-| Stile di sicurezza | Implementato | HTTPS | Stile di sicurezza della directory: unix, ntfs o misto 
+| Stile di sicurezza | Implementato | HTTPS |  
 
 
 | Stato | Implementato | HTTPS |  
@@ -19489,37 +19949,37 @@ Prodotti supportati da questo raccoglitore dati:
 | Tipo | Spacco | HTTPS |  
 
 
-.15+| Quota | Chiave guida 1 | Implementato | HTTPS | GuidKey1 è implicito per tutti gli oggetti la cui chiave GUID non è cambiata dalla versione OCI 7.3.5. 
+.15+| Quota | Chiave guida 1 | Implementato | HTTPS |  
 
 
-| Guida chiave 2 | Implementato | HTTPS | GuidKey2 è implicito per tutti gli oggetti la cui chiave GUID non è cambiata dalla versione 7.3.5 di OCI. 
+| Guida chiave 2 | Implementato | HTTPS |  
 
 
-| Guida chiave 3 | Implementato | HTTPS | GuidKey3 è implicito per tutti gli oggetti la cui chiave GUID non è cambiata dalla versione OCI 7.3.5. 
+| Guida chiave 3 | Implementato | HTTPS |  
 
 
-| Limite di capacità rigido (MB) | Implementato | HTTPS | quantità massima di spazio su disco consentita per l'obiettivo della quota (limite rigido) 
+| Limite di capacità rigido (MB) | Implementato | HTTPS |  
 
 
-| Limite massimo di file | Implementato | HTTPS | numero massimo di file consentiti per l'obiettivo di quota 
+| Limite massimo di file | Implementato | HTTPS |  
 
 
 | ID volume interno | Implementato | HTTPS |  
 
 
-| ID Qtree | Implementato | HTTPS | ID univoco del qtree 
+| ID Qtree | Implementato | HTTPS |  
 
 
-| ID quota | Implementato | HTTPS | ID univoco della quota 
+| ID quota | Implementato | HTTPS |  
 
 
-| Limite di capacità software (MB) | Implementato | HTTPS | Quantità massima di spazio su disco consentita per l'obiettivo di quota 
+| Limite di capacità software (MB) | Implementato | HTTPS |  
 
 
-| Limite file soft | Implementato | HTTPS | Numero massimo di file consentiti per l'obiettivo di quota 
+| Limite file soft | Implementato | HTTPS |  
 
 
-| Soglia (MB) | Implementato | HTTPS | Soglia di spazio su disco, per l'obiettivo della quota 
+| Soglia (MB) | Implementato | HTTPS |  
 
 
 | Tipo | Spacco | HTTPS |  
@@ -19528,43 +19988,43 @@ Prodotti supportati da questo raccoglitore dati:
 | Capacità utilizzata | Implementato | HTTPS |  
 
 
-| File utilizzati | Implementato | HTTPS | Numero di file attualmente utilizzati 
+| File utilizzati | Implementato | HTTPS |  
 
 
-| Target utente/gruppo | Implementato | HTTPS | target utente/gruppo a cui si riferisce questa quota 
+| Target utente/gruppo | Implementato | HTTPS |  
 
 
 .4+| Condividere | Descrizione | Implementato | HTTPS |  
 
 
-| Interfacce IP | Implementato | HTTPS | elenco separato da virgole di indirizzi IP su cui è esposta questa condivisione 
+| Interfacce IP | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
 
 
-| Protocollo | Implementato | HTTPS | enum per il protocollo di condivisione 
+| Protocollo | Implementato | HTTPS |  
 
 
 .2+| Condividi Iniziatore | Iniziatore | Implementato | HTTPS |  
 
 
-| Permesso | Implementato | HTTPS | Autorizzazioni per questa particolare condivisione 
+| Permesso | Implementato | HTTPS |  
 
 
-.18+| Magazzinaggio | Grappolo | Non disponibile | HTTPS | Se questo storage è un cluster 
+.18+| Magazzinaggio | Grappolo | Non disponibile | HTTPS |  
 
 
-| Numero di CPU | Implementato | HTTPS | Numero di CPU dell'archiviazione 
+| Numero di CPU | Implementato | HTTPS |  
 
 
 | Visualizza IP | Implementato | HTTPS |  
 
 
-| Capacità grezza non riuscita | Implementato | HTTPS | Capacità grezza dei dischi guasti (somma di tutti i dischi guasti) 
+| Capacità grezza non riuscita | Implementato | HTTPS |  
 
 
-| Famiglia | Implementato | HTTPS | La famiglia di storage potrebbe essere Clariion, Symmetrix, et al 
+| Famiglia | Implementato | HTTPS |  
 
 
 | Proprietà intellettuale | Implementato | HTTPS |  
@@ -19588,25 +20048,25 @@ Prodotti supportati da questo raccoglitore dati:
 | Nome | Implementato | HTTPS |  
 
 
-| Capacità grezza totale | Implementato | HTTPS | Capacità grezza totale (somma di tutti i dischi nell'array) 
+| Capacità grezza totale | Implementato | HTTPS |  
 
 
 | Numero di serie | Implementato | HTTPS |  
 
 
-| Capacità grezza di riserva | Implementato | HTTPS | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
+| Capacità grezza di riserva | Implementato | HTTPS |  
 
 
-| SupportoAttivo Attivo | Implementato | HTTPS | Specificato se l'archiviazione supporta configurazioni attive-attive 
+| SupportoAttivo Attivo | Implementato | HTTPS |  
 
 
-| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato | HTTPS |  
 
 
 | UUID | Implementato | HTTPS |  
 
 
-.7+| Nodo di archiviazione | Dimensione della cache | Implementato | HTTPS | dimensione della cache del dispositivo in MB 
+.7+| Nodo di archiviazione | Dimensione della cache | Implementato | HTTPS |  
 
 
 | Modello | Implementato | HTTPS |  
@@ -19615,58 +20075,58 @@ Prodotti supportati da questo raccoglitore dati:
 | Nome | Implementato | HTTPS |  
 
 
-| Stato | Implementato | HTTPS | testo libero che descrive lo stato del dispositivo 
+| Stato | Implementato | HTTPS |  
 
 
 | UUID | Implementato | HTTPS |  
 
 
-| Versione | Implementato | HTTPS | versione del software 
+| Versione | Implementato | HTTPS |  
 
 
 | Indirizzi IP di gestione | Implementato | HTTPS |  
 
 
-.29+| Pool di archiviazione | Compressione abilitata | Implementato | HTTPS | La compressione è abilitata sul pool di archiviazione 
+.29+| Pool di archiviazione | Compressione abilitata | Implementato | HTTPS |  
 
 
-| Risparmio di compressione | Implementato | HTTPS | rapporto di risparmio di compressione in percentuale 
+| Risparmio di compressione | Implementato | HTTPS |  
 
 
-| Capacità dati allocata | Spacco | HTTPS | capacità assegnata per i dati 
+| Capacità dati allocata | Spacco | HTTPS |  
 
 
 | Capacità dati utilizzata | Implementato | HTTPS |  
 
 
-| Deduplicazione abilitata | Implementato | HTTPS | La deduplicazione è abilitata sul pool di archiviazione? 
+| Deduplicazione abilitata | Implementato | HTTPS |  
 
 
-| Risparmio Dedupe | Implementato | HTTPS | rapporto di risparmio di deduplicazione in percentuale 
+| Risparmio Dedupe | Implementato | HTTPS |  
 
 
-| Includi nella capacità DWH | Implementato | HTTPS | Un modo da ACQ per controllare quali pool di archiviazione sono interessanti in DWH Capacity 
+| Includi nella capacità DWH | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
 
 
-| Capacità del disco fisico (MB) | Implementato | HTTPS | utilizzato come capacità grezza per il pool di archiviazione 
+| Capacità del disco fisico (MB) | Implementato | HTTPS |  
 
 
-| Gruppo di incursione | Implementato | HTTPS | indica se questo storagePool è un gruppo raid 
+| Gruppo di incursione | Implementato | HTTPS |  
 
 
-| Rapporto grezzo/utilizzabile | Implementato | HTTPS | rapporto per convertire dalla capacità utilizzabile alla capacità grezza 
+| Rapporto grezzo/utilizzabile | Implementato | HTTPS |  
 
 
-| Ridondanza | Implementato | HTTPS | Livello di ridondanza 
+| Ridondanza | Implementato | HTTPS |  
 
 
-| Capacità riservata | Implementato | HTTPS | Capacità riservata in MB 
+| Capacità riservata | Implementato | HTTPS |  
 
 
-| Capacità allocata snapshot | Spacco | HTTPS | Capacità allocata degli snapshot in MB 
+| Capacità allocata snapshot | Spacco | HTTPS |  
 
 
 | Capacità utilizzata istantanea | Implementato | HTTPS |  
@@ -19678,22 +20138,22 @@ Prodotti supportati da questo raccoglitore dati:
 | ID pool di archiviazione | Implementato | HTTPS |  
 
 
-| Thin Provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il provisioning sottile per il livello del volume sopra di esso 
+| Thin Provisioning supportato | Implementato | HTTPS |  
 
 
 | Capacità totale assegnata | Implementato | HTTPS |  
 
 
-| Capacità totale utilizzata | Implementato | HTTPS | Capacità totale in MB 
+| Capacità totale utilizzata | Implementato | HTTPS |  
 
 
 | Tipo | Spacco | HTTPS |  
 
 
-| Utilizza FlashPools | Implementato | HTTPS | indica se questo storagepool utilizza Flash Pool (specifici di NetApp ) 
+| Utilizza FlashPools | Implementato | HTTPS |  
 
 
-| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+| Virtuale | Implementato | HTTPS |  
 
 
 |  | Implementato | HTTPS |  
@@ -19714,19 +20174,19 @@ Prodotti supportati da questo raccoglitore dati:
 | UUID | Implementato | HTTPS |  
 
 
-.13+| Macchina virtuale di archiviazione | Capacità allocata (MB) | Implementato | HTTPS | Capacità allocata degli snapshot 
+.13+| Macchina virtuale di archiviazione | Capacità allocata (MB) | Implementato | HTTPS |  
 
 
 | Commento | Implementato | HTTPS |  
 
 
-| Risparmio di compressione | Implementato | HTTPS | rapporto di risparmio di compressione in percentuale 
+| Risparmio di compressione | Implementato | HTTPS |  
 
 
-| Risparmio Dedupe | Implementato | HTTPS | rapporto di risparmio di deduplicazione in percentuale 
+| Risparmio Dedupe | Implementato | HTTPS |  
 
 
-| Chiave guida | Implementato | HTTPS | Chiave univoca globale della macchina virtuale di archiviazione 
+| Chiave guida | Implementato | HTTPS |  
 
 
 | Spazio IP | Implementato | HTTPS |  
@@ -19738,10 +20198,10 @@ Prodotti supportati da questo raccoglitore dati:
 | Nome | Implementato | HTTPS |  
 
 
-| Protocolli | Implementato | HTTPS | csv dei protocolli abilitati SVM (fcp, iscsi, nfs, cifs...) 
+| Protocolli | Implementato | HTTPS |  
 
 
-| Stato | Implementato | HTTPS | testo libero che descrive lo stato del dispositivo 
+| Stato | Implementato | HTTPS |  
 
 
 | Tipo | Spacco | HTTPS |  
@@ -19762,25 +20222,25 @@ Prodotti supportati da questo raccoglitore dati:
 | Riferimento volume macchina virtuale | Nome del volume | Implementato | HTTPS |  
 
 
-.13+| Volume | Capacità | Implementato | HTTPS | Snapshot Capacità utilizzata in MB 
+.13+| Volume | Capacità | Implementato | HTTPS |  
 
 
-| Gruppo di dischi | Implementato | HTTPS | Tipo di gruppo di dischi 
+| Gruppo di dischi | Implementato | HTTPS |  
 
 
 | Percorso di giunzione | Implementato | HTTPS |  
 
 
-| Ultimo orario di accesso noto | Implementato | HTTPS | Ultimo accesso noto al volume 
+| Ultimo orario di accesso noto | Implementato | HTTPS |  
 
 
 | Nome | Implementato | HTTPS |  
 
 
-| ID Qtree | Implementato | HTTPS | ID univoco del qtree 
+| ID Qtree | Implementato | HTTPS |  
 
 
-| Capacità grezza totale | Implementato | HTTPS | Capacità grezza totale (somma di tutti i dischi nell'array) 
+| Capacità grezza totale | Implementato | HTTPS |  
 
 
 | ID pool di archiviazione | Implementato | HTTPS |  
@@ -19801,7 +20261,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Criptato | Implementato | HTTPS |  
 
 
-.4+| Mappa del volume | LUN | Implementato | HTTPS | Nome del lun backend 
+.4+| Mappa del volume | LUN | Implementato | HTTPS |  
 
 
 | Controllore di protocollo | Implementato | HTTPS |  
@@ -20082,7 +20542,71 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| AFF-A150 AFF-A1K AFF-A20 AFF-A200 AFF-A220 AFF-A300 AFF-A320 AFF-A400 AFF-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C60 AFF-C80 AFF-C800 AFF AFF8040 AFF8060 AFF8080 ASA-A250 ASA-A400 ASA-A800 ASA-A900 ASA-C250 ASA-C400 ASA-C800 CDvM100 CDvM200 DM5000H DM7100F FAS2240-2 FAS2520 FAS2552 FAS2554 FAS2620 FAS2650 FAS2720 FAS2750 FAS2820 FAS3220 FAS3250 FAS3270 FAS500f FAS6210 FAS8020 FAS8040 FAS8060 FAS8080 FAS8200 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
+ a| 
+* AFF-A150
+* AFF-A1K
+* AFF-A20
+* AFF-A200
+* AFF-A220
+* AFF-A250
+* AFF-A300
+* AFF-A320
+* AFF-A400
+* AFF-A70
+* AFF-A700
+* AFF-A700s
+* AFF-A800
+* AFF-A90
+* AFF-A900
+* AFF-C190
+* AFF-C250
+* AFF-C400
+* AFF-C60
+* AFF-C80
+* AFF-C800
+* AFF8020
+* AFF8040
+* AFF8060
+* AFF8080
+* ASA-A250
+* ASA-A400
+* ASA-A800
+* ASA-A900
+* ASA-C250
+* ASA-C400
+* ASA-C800
+* CDvM100
+* CDvM200
+* DM5000H
+* DM7100F
+* FAS2240-2
+* FAS2520
+* FAS2552
+* FAS2554
+* FAS2620
+* FAS2650
+* FAS2720
+* FAS2750
+* FAS2820
+* FAS3220
+* FAS3250
+* FAS3270
+* FAS500f
+* FAS6210
+* FAS8020
+* FAS8040
+* FAS8060
+* FAS8080
+* FAS8200
+* FAS8300
+* FAS8700
+* FAS90
+* FAS9000
+* FAS9500
+* FASDvM300
+* SIMBOX
+
+ a| 
 * 8.2.3P4
 * 8.2.3P5
 * 8.3.1P2
@@ -20286,8 +20810,8 @@ Modelli e versioni supportati da questo raccoglitore dati:
 * 9.8.0P7
 * 9.8.0P8
 * 9.8.0P9
-* 9,0
-* 9,1
+* 9.9.0
+* 9.9.1
 * 9.9.1P10
 * 9.9.1P11
 * 9.9.1P12
@@ -22401,7 +22925,40 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| AFF-A150 AFF-A220 AFF-A250 AFF-A300 AFF -A400 AFF-A70 AFF-A700 AFF-A700s AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C400 AFF-C800 AFF-A250 ASA-A400 ASA-A800 ASA-C250 ASA-C800 ASA FAS2720 FAS2750 FAS2820 FAS8200 FAS8300 FAS8700 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
+ a| 
+* AFF-A150
+* AFF-A220
+* AFF-A250
+* AFF-A300
+* AFF-A400
+* AFF-A70
+* AFF-A700
+* AFF-A700s
+* AFF-A800
+* AFF-A90
+* AFF-A900
+* AFF-C190
+* AFF-C250
+* AFF-C400
+* AFF-C800
+* ASA-A250
+* ASA-A400
+* ASA-A800
+* ASA-C250
+* ASA-C800
+* CDvM200
+* FAS2720
+* FAS2750
+* FAS2820
+* FAS8200
+* FAS8300
+* FAS8700
+* FAS9000
+* FAS9500
+* FASDvM300
+* SIMBOX
+
+ a| 
 * NetApp Release 9.14.1P10: giovedì 28 novembre 12:32:16 UTC 2024
 * NetApp Release 9.14.1P11: mercoledì 22 gennaio 11:55:28 UTC 2025
 * NetApp Release 9.14.1P1: giovedì 15 febbraio 00:45:21 UTC 2024
@@ -23226,7 +23783,34 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| H410S-2 H610S-2 H610S-4 SF19210 SF2405 SF4805 SF9605 SF9608 H410S-0 H410S-1 H410S-2 H500S H610S-1 H610S-2 H610S-4 SF19210 SF38410 SF4805 SF9605 SF9608 | 11.1.0.72 11.7.0.76 12.0.0.333 12.2.0.777 12.3.0.958 12.3.1.103 12.3.1.165 12.3.2.3 12.5.0.897 12.7.0.380 
+ a| 
+* H410S-0
+* H410S-1
+* H410S-2
+* H500S
+* H610S-1
+* H610S-2
+* H610S-4
+* SF19210
+* SF2405
+* SF38410
+* SF4805
+* SF9605
+* SF9608
+
+ a| 
+* 11.1.0.72
+* 11.7.0.76
+* 12.0.0,333
+* 12.2.0,777
+* 12.3.0,958
+* 12.3.1.103
+* 12.3.1.165
+* 12.3.2.3
+* 12.5.0,897
+* 12.7.0,380
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -23944,7 +24528,62 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| 3.2 3.3 3.4 3.5 4.0 4.1 | Scala Web | 11.4.0 11.5.0.11 11.5.0.6 11.5.0.7 11.5.0.9 11.6.0 11.6.0.10 11.6.0.11 11.6.0.12 11.6.0.13 11.6.0.14 11.6.0.15 11.6.0.16 11.6.0.4 11.6.0.5 11.6.0.7 11.6.0.8 11.6.0.9 11.7.0 11.7.0.11 11.7.0.12 11.7.0.13 11.7.0.3 11.7.0.4 11.7.0.5 11.7.0.6 11.7.0.8 11.7.0.9 11.8.0 11.8.0.1 11.8.0.2 11.8.0.3 11.8.0.5 11.8.0.6 11.8.0.7 11.8.0.8 11.8.0.9 11.9.0 11.9.0.1 11.9.0.2 11.9.0.3 11.9.0.4 
+ a| 
+* 3,2
+* 3,3
+* 3,4
+* 3,5
+* 4,0
+* 4,1
+
+ a| 
+* Scala Web
+
+ a| 
+* 11.4.0
+* 11.5.0.11
+* 11.5.0.6
+* 11.5.0.7
+* 11.5.0.9
+* 11.6.0
+* 11.6.0.10
+* 11.6.0.11
+* 11.6.0.12
+* 11.6.0.13
+* 11.6.0.14
+* 11.6.0.15
+* 11.6.0.16
+* 11.6.0.4
+* 11.6.0.5
+* 11.6.0.7
+* 11.6.0.8
+* 11.6.0.9
+* 11.7.0
+* 11.7.0.11
+* 11.7.0.12
+* 11.7.0.13
+* 11.7.0.3
+* 11.7.0.4
+* 11.7.0.5
+* 11.7.0.6
+* 11.7.0.8
+* 11.7.0.9
+* 11.8.0
+* 11.8.0.1
+* 11.8.0.2
+* 11.8.0.3
+* 11.8.0.5
+* 11.8.0.6
+* 11.8.0.7
+* 11.8.0.8
+* 11.8.0.9
+* 11.9.0
+* 11.9.0.1
+* 11.9.0.2
+* 11.9.0.3
+* 11.9.0.4
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -24775,268 +25414,6 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
-== OpenStack (API REST / SSH)
-
-|===
-|===
-Prodotti supportati da questo raccoglitore dati:
-
-|===
-| Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
-
-
-.76+| fondazione .7+| Archivio dati | Capacità | Implementato | HTTPS | Snapshot Capacità utilizzata in MB 
-
-
-| MOID | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Capacità fornita | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-| IP del centro virtuale | Implementato | HTTPS |  
-
-
-.3+| NasShare DataStore | OID dell'archivio dati | Implementato | HTTPS |  
-
-
-| Nas Share OID | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-.4+| Host NasShare | Nas Share OID | Implementato | HTTPS |  
-
-
-| OID host | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Solo lettura | Implementato | HTTPS |  
-
-
-.6+| LUN | OID | Implementato | HTTPS |  
-
-
-| Numero | Implementato | HTTPS |  
-
-
-| OID dell'archivio dati | Implementato | HTTPS |  
-
-
-| OID host | Implementato | HTTPS |  
-
-
-| Nome del disco | Implementato | HTTPS |  
-
-
-| TID | Implementato | HTTPS |  
-
-
-.6+| Condivisione NAS | Capacità | Implementato | HTTPS | Capacità assegnata in MB 
-
-
-| Filer IP | Implementato | HTTPS |  
-
-
-| Nome del filer | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Condividi percorso | Implementato | HTTPS | Per far corrispondere un HvNasShare a una Share 
-
-
-| Tipo | Spacco | HTTPS |  
-
-
-.6+| Sentiero | OID | Implementato | HTTPS |  
-
-
-| Lun OID | Implementato | HTTPS |  
-
-
-| Porta host WWPN | Implementato | HTTPS |  
-
-
-| Porto di stoccaggio WWPN | Implementato | HTTPS |  
-
-
-| Attivo | Implementato | HTTPS |  
-
-
-| Tipo | Spacco | HTTPS |  
-
-
-.6+| Server | Grappolo | Implementato | HTTPS | Nome del cluster 
-
-
-| Nome del Data Center | Implementato | HTTPS |  
-
-
-| OID host | Implementato | HTTPS |  
-
-
-| MOID | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| IP del centro virtuale | Implementato | HTTPS |  
-
-
-.7+| Disco virtuale | Capacità | Implementato | HTTPS | Snapshot Capacità utilizzata in MB 
-
-
-| OID dell'archivio dati | Implementato | HTTPS |  
-
-
-| Lun OID | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Tipo | Spacco | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-.13+| Macchina Virtuale | Stato ospite | Implementato | HTTPS |  
-
-
-| OID dell'archivio dati | Implementato | HTTPS |  
-
-
-| OID host | Implementato | HTTPS |  
-
-
-| IP | Implementato | HTTPS |  
-
-
-| MOID | Implementato | HTTPS |  
-
-
-| Memoria | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Stato di potenza | Implementato | HTTPS |  
-
-
-| Ora di cambio di stato | Implementato | HTTPS |  
-
-
-| Processori | Implementato | HTTPS |  
-
-
-| Capacità fornita | Implementato | HTTPS |  
-
-
-| Capacità utilizzata | Implementato | HTTPS |  
-
-
-.3+| Disco VirtualMachine | OID | Implementato | HTTPS |  
-
-
-| OID del disco virtuale | Implementato | HTTPS |  
-
-
-| OID della macchina virtuale | Implementato | HTTPS |  
-
-
-.7+| Ospite | Conteggio CPU host | Implementato | HTTPS |  
-
-
-| Dominio host | Implementato | HTTPS |  
-
-
-| Memoria installata dall'host | Implementato | HTTPS |  
-
-
-| Sistema operativo host | Implementato | HTTPS |  
-
-
-| IP | Implementato | HTTPS |  
-
-
-| Nome | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-.4+| Nodo ISCSI | Alias host | Implementato | HTTPS |  
-
-
-| Nome del nodo | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
-
-
-| Tipo | Spacco | HTTPS |  
-
-
-.4+| Informazioni | Nome dell'origine dati | Implementato | HTTPS | Informazioni 
-
-
-| Data | Implementato | HTTPS |  
-
-
-| ID dell'originatore | Implementato | HTTPS |  
-
-
-| Chiave di origine | Implementato | HTTPS |  
-
-
-.4+| prestazione .4+| Ospite | Utilizzo totale della CPU | Implementato |  |  
-
-
-| Chiave | Implementato |  |  
-
-
-| Utilizzo totale della memoria | Implementato |  |  
-
-
-| ID del server | Implementato |  |  
-|===
-API di gestione utilizzate da questo raccoglitore dati:
-
-|===
-| API | Protocollo utilizzato | Protocollo di livello di trasporto utilizzato | Porte in entrata utilizzate | Porte in uscita utilizzate | Supporta l'autenticazione | Richiede solo credenziali di "sola lettura" | Supporta la crittografia | Compatibile con firewall (porte statiche) 
-
-
-| API REST di OpenStack | HTTPS | HTTPS | 443 |  | VERO | falso | VERO | VERO 
-
-
-| OpenStack SSH | SSH | SSH | 22 |  | VERO | falso | VERO | VERO 
-|===
-
-
 == Oracle ZFS (HTTPS)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -25045,7 +25422,46 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| Archiviazione Sun ZFS 7120 Archiviazione Sun ZFS 7320 Archiviazione Sun ZFS 7330 Archiviazione Sun ZFS 7335 Archiviazione Sun ZFS 7350 Archiviazione Sun ZFS 7370 Archiviazione Sun ZFS 7390 Archiviazione Sun ZFS 7420 | 1-1.1 1-1.2 1-1.3 1-1.34 1-1.4 2013.06.05.6.12 2013.06.05.6.15 2013.06.05.7.21 2013.06.05.7.24 2013.06.05.7.25 2013.06.05.7.26 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.26 2013.06.05.8.29 2013.06.05.8.37 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.53 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.61 2013.06.05.8.65 2013.06.05.8.7 2013.06.05.8.72 2013.06.05.8.74 2013.06.05.8.76 
+ a| 
+* Sun ZFS Storage 7120
+* Sun ZFS Storage 7320
+* Sun ZFS Storage 7330
+* Sun ZFS Storage 7335
+* Sun ZFS Storage 7350
+* Sun ZFS Storage 7370
+* Sun ZFS Storage 7390
+* Sun ZFS Storage 7420
+
+ a| 
+* 1-1,1
+* 1-1,2
+* 1-1,3
+* 1-1,34
+* 1-1,4
+* 2013.06.05.6.12
+* 2013.06.05.6.15
+* 2013.06.05.7.21
+* 2013.06.05.7.24
+* 2013.06.05.7.25
+* 2013.06.05.7.26
+* 2013.06.05.7.29
+* 2013.06.05.8.0
+* 2013.06.05.8.26
+* 2013.06.05.8.29
+* 2013.06.05.8.37
+* 2013.06.05.8.44
+* 2013.06.05.8.50
+* 2013.06.05.8.53
+* 2013.06.05.8.56
+* 2013.06.05.8.6
+* 2013.06.05.8.61
+* 2013.06.05.8.65
+* 2013.06.05.8.7
+* 2013.06.05.8.72
+* 2013.06.05.8.74
+* 2013.06.05.8.76
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -25556,7 +25972,90 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| DFSC1 FA-450 FA-C40R3 FA-C50R4 FA-C60 FA-C60R3 FA-C70R4 FA-C90R4 FA-X10R2 FA-X10R3 FA-X20R2 FA-X20R3 FA-X20R4 FA-X50R2 FA-X50R3 FA-X50R4 FA-X70R2 FA-X70R3 FA-X70R4 FA-X90R2 FA-X90R3 FA-X90R4 FA-XL130 FA-XL170 FA-m20 FA-m20r2 FA-m50 FA-m70 FA-m70r2 OSSIGENO | 5.3.14 5.3.20 6.1.10 6.1.14 6.1.18 6.1.19 6.1.21 6.1.22 6.1.23 6.2.10 6.3.10 6.3.11 6.3.12 6.3.13 6.3.14 6.3.15 6.3.16 6.3.17 6.3.18 6.3.3 6.3.6 6.3.7 6.3.9 6.4.10 6.4.2 6.4.3 6.4.7 6.4.8 6.4.9 6.5.0 6.5.1 6.5.2 6.5.3 6.5.4 6.5.5 6.5.6 6.5.7 6.5.8 6.5.9 6.6.10 6.6.11 6.6.5 6.6.6 6.6.7 6.7.0 6.7.1 6.8.1 6.8.2 6.8.3 
+ a| 
+* DFSC1
+* FA-450
+* FA-C40R3
+* FA-C50R4
+* FA-C60
+* FA-C60R3
+* FA-C70R4
+* FA-C90R4
+* FA-X10R2
+* FA-X10R3
+* FA-X20R2
+* FA-X20R3
+* FA-X20R4
+* FA-X50R2
+* FA-X50R3
+* FA-X50R4
+* FA-X70R2
+* FA-X70R3
+* FA-X70R4
+* FA-X90R2
+* FA-X90R3
+* FA-X90R4
+* FA-XL130
+* FA-XL170
+* FA-m20
+* FA-m20r2
+* FA-m50
+* FA-m70
+* FA-m70r2
+* OSSIGENO
+
+ a| 
+* 5.3.14
+* 5.3.20
+* 6.1.10
+* 6.1.14
+* 6.1.18
+* 6.1.19
+* 6.1.21
+* 6.1.22
+* 6.1.23
+* 6.2.10
+* 6.3.10
+* 6.3.11
+* 6.3.12
+* 6.3.13
+* 6.3.14
+* 6.3.15
+* 6.3.16
+* 6.3.17
+* 6.3.18
+* 6.3.3
+* 6.3.6
+* 6.3.7
+* 6.3.9
+* 6.4.10
+* 6.4.2
+* 6.4.3
+* 6.4.7
+* 6.4.8
+* 6.4.9
+* 6.5.0
+* 6.5.1
+* 6.5.2
+* 6.5.3
+* 6.5.4
+* 6.5.5
+* 6.5.6
+* 6.5.7
+* 6.5.8
+* 6.5.9
+* 6.6.10
+* 6.6.11
+* 6.6.5
+* 6.6.6
+* 6.6.7
+* 6.7.0
+* 6.7.1
+* 6.8.1
+* 6.8.2
+* 6.8.3
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
