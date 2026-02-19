@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: ai_for_dii_overview.html 
+keywords: ai, 
+summary: 'Puoi utilizzare l"assistente AI di DII per riepilogare i tuoi dati, esplorare insight, risolvere problemi e pianificare le tue risorse.' 
+---
+= Data Infrastructure Insights Assistente AI
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'*Assistente AI di Data Infrastructure Insights* è progettato per aiutarti a lavorare in modo più efficiente con i dati della tua infrastruttura. Può aiutarti ad analizzare le informazioni, scoprire insight, risolvere le sfide operative e prendere decisioni informate sulle tue risorse.
+
+[NOTE]
+====
+DII AI Assistant è disponibile come Anteprima Limitata. link:/concept_preview_features.html["Saperne di più"] sulle funzionalità di anteprima di Data Infrastructure Insights.
+
+L'Assistente AI è disponibile solo per i tenant DII distribuiti su AWS.
+
+====
+image:ai_assistant_sample_question.png["Domanda di esempio sull'assistente AI"]
+
+
+
+== Scopri il nuovo partner intelligente della tua infrastruttura
+
+L'Assistente AI trasforma il modo in cui interagisci con i tuoi dati, trasformando query complesse in conversazioni semplici. Scopri all'istante schemi nascosti, accelera la risoluzione dei problemi e prendi decisioni basate sui dati con sicurezza. Ottieni risposte immediate a domande come:
+
+* Come posso configurare un monitor per ricevere un avviso in caso di latenza persistentemente inaccettabile?
+* Quali sono i principali pool di archiviazione con il maggiore utilizzo nell'ambiente?
+* Quanti avvisi sono stati generati nell'ultima ora?
+* Quali sono i tipi più comuni di log che vengono raccolti?
+* Quali host stanno riscontrando il più alto utilizzo della CPU?
+* Quali tipi di asset sono disponibili per il monitoraggio nell'ambiente?
+* Ci sono avvisi critici attualmente attivi?
+* Qual è lo stato di salute generale dei sistemi di archiviazione?
+* Quali macchine virtuali stanno consumando più memoria?
+* Quanti monitor sono configurati nel sistema?
+
+
+
+
+== Prima di utilizzare l'AI Assistant
+
+* L'Assistente AI è progettato per assisterti. Sebbene si impegni a garantire la massima accuratezza, si consiglia vivamente di verificarne i risultati con la supervisione umana per ottenere risultati ottimali.
+* Per la sicurezza e la privacy tua e dei tuoi colleghi, non inserire informazioni personali identificabili (PII).
+* Per aiutare a mantenere i tuoi dati sicuri, non inserire informazioni sensibili o riservate.
+* Leggi il link:https://www.netapp.com/pdf.html?item=/media/71584-netapp-data-processing-addendum.pdf["Addendum NetApp Data Processing"] e il link:https://www.netapp.com/company/legal/privacy-policy/["Informativa sulla privacy di NetApp"].
+
+
+
+
+== L'assistente AI lavora con te
+
+L'Assistente AI DII può aiutarti a rispondere a domande sui dati della tua infrastruttura IT. Per farlo in modo efficace, deve comprendere la tua richiesta così come quali dati specifici sono necessari per rispondere alla tua richiesta.
+
+Il sistema DII contiene vari tipi di dati, tra cui:
+
+* Telemetria delle risorse (host, storage, VMs, ecc.)
+* Metriche del datalake (Kubernetes, NetApp Storage, VMware)
+* Registri da sistemi diversi
+* Avvisi che potrebbero indicare anomalie
+
+
+Per la migliore esperienza, fornisci all'Assistant informazioni specifiche su:
+
+* Il tipo di dati che si desidera analizzare (ad esempio, asset specifici, metriche o sistemi),
+* Il lasso di tempo a cui sei interessato, e
+* Qualsiasi tipo di problema specifico che ti preoccupa (problemi di prestazioni, problemi di capacità, errori, ecc.)
+
+
+
+
+== Accesso all'Assistente
+
+Per chiamare l'Assistente AI DII, è sufficiente selezionare l'icona del gufo nell'angolo inferiore dello schermo. Un utente con ruolo di "Owner" deve accettare i termini e le condizioni prima che qualsiasi utente possa utilizzare l'Assistente AI sul tuo tenant.
+
+image:ai_assistant_icon.png["dii_ai_assistant_icon"]
