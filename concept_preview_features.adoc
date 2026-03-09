@@ -17,3 +17,10 @@ keywords: coming soon, preview,
 Data Infrastructure Insights evidenzia le nuove caratteristiche e funzionalità in modalità _Anteprima_.  Le funzionalità di anteprima sono disponibili in ambienti limitati o con capacità limitata.
 
 Se sei interessato a provare in anteprima una o più di queste funzionalità, contatta il team vendite NetApp per maggiori informazioni.
+
+
+
+== Anteprime attuali:
+
+* link:ai_for_dii_overview.html["Data Infrastructure Insights Assistente AI"] anteprima.
+
