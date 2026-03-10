@@ -284,6 +284,9 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_config_telegraf_redis.html["Redis"] | Servizio 
 
 
+| link:task_dc_redhat_openshift virtualization.html[Red Hat OpenShift Virtualizzazione] | Infrastruttura 
+
+
 | link:task_config_telegraf_rethinkdb.html["Ripensare DB"] | Servizio 
 
 
