@@ -14542,4 +14542,9 @@
   <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">Indirizzo IP del server Red Hat OpenShift Virtualization sulla porta 443 tramite REST API</block>
   <block id="07bc27033bbe069dd4fcfa7e7287df66" category="cell">Porta utilizzata per la comunicazione HTTPS con RHOV</block>
   <block id="db2f9342403e0e147464a85b899ec12c" category="sidebar">Red Hat OpenShift Virtualizzazione</block>
+  <block id="cc7e5505fa4bc50f5457fa8f8b55f94f" category="section-title">Marzo 2026</block>
+  <block id="c62d7b96ff17fd52f5c5b5957d12ce47" category="section-title">L'AI Assistant di DII è disponibile per tutti!</block>
+  <block id="dd0f9294fa313d494966ae16cbe89435" category="paragraph">L'assistente AI di Data Infrastructure Insights è disponibile in anteprima e ora include i seguenti miglioramenti:</block>
+  <block id="e609c64ff8e8c15f1ce845903ca2db7e" category="list-text">Disponibilità della regione Azure: per i clienti il cui sito DII è ospitato su Azure, il DII Assistant è ora pronto ad aiutarti.</block>
+  <block id="056a97d89a4b6d30acf8e9b86d3ed172" category="list-text">Fino a 7 giorni di dati: l'Assistente può ora accedere fino a 7 giorni di metriche ad alta risoluzione, consentendo analisi e approfondimenti dei dati di portata più ampia.</block>
 </blocks>
