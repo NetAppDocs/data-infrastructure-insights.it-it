@@ -7,6 +7,10 @@ summary: 'L"API Data Infrastructure Insights consente l"integrazione con altre a
 = API Data Infrastructure Insights
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -77,7 +81,7 @@ Consulta le pagine Swagger per esempi specifici per l'API che desideri utilizzar
 
 L'API Data Infrastructure Insights è basata su categorie e attualmente contiene i seguenti tipi:
 
-* Il tipo ASSETS contiene API per asset, query e ricerca.
+* Il tipo ASSETS contiene asset, query e API di ricerca. Gli attributi e le metriche degli asset DII sono talvolta denominati “odata”. Le API per questi sono in genere accessibili tramite /rest/v1/asset o /rest/v1/query. Vedere il <<api-documentation-swagger,Documentazione API Swagger>> per ulteriori informazioni.
 +
 ** Risorse: enumera gli oggetti di livello superiore e recupera un oggetto specifico o una gerarchia di oggetti.
 ** Query: recupera e gestisci le query di Data Infrastructure Insights .
@@ -86,13 +90,13 @@ L'API Data Infrastructure Insights è basata su categorie e attualmente contiene
 
 
 * Il tipo RACCOLTA DATI viene utilizzato per recuperare e gestire i raccoglitori di dati.
-* Il tipo DATA INGESTION viene utilizzato per recuperare e gestire i dati di ingestione e le metriche personalizzate, ad esempio dagli agenti Telegraf
+* Il tipo DATA INGESTION viene utilizzato per recuperare e gestire dati di ingestione e metriche personalizzate, ad esempio dagli agenti Telegraf. Queste sono talvolta denominate metriche “datalake” o “lake”. Le API per queste sono in genere accessibili tramite /rest/v1/lake. Vedere il <<api-documentation-swagger,Documentazione API Swagger>> per ulteriori informazioni.
 * LOG INGESTION viene utilizzato per recuperare e gestire i dati di registro
 
 
 Nel tempo potrebbero diventare disponibili altri tipi e/o API.  Puoi trovare le informazioni API più recenti inlink:#api-documentation-swagger["Documentazione API Swagger"] .
 
-Si noti che i tipi di API a cui un utente ha accesso dipendono anche dalink:concept_user_roles.html["Ruolo utente"] dispongono in ogni set di funzionalità Data Infrastructure Insights (monitoraggio, sicurezza del carico di lavoro, reporting).
+Si noti che i tipi di API a cui un utente ha accesso dipendono anche dal link:concept_user_roles.html["Ruolo utente"] che possiede in ciascun set di funzionalità di Data Infrastructure Insights (Observability, Workload Security, Reporting).
 
 
 
