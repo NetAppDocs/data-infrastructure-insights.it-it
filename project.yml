@@ -93,16 +93,6 @@ sidebar:
         url: "/concept_log_explorer.html"
       - title: Identificazione dei dispositivi inattivi
         url: "/task_identify_inactive_devices.html"
-    - title: Approfondimenti
-      entries:
-      - title: Panoramica
-        url: "/insights_overview.html"
-      - title: Risorse condivise sotto stress
-        url: "/insights_shared_resources_under_stress.html"
-      - title: Gli spazi dei nomi di Kubernetes stanno esaurendo lo spazio
-        url: "/insights_k8s_namespaces_running_out_of_space.html"
-      - title: Reclaim ONTAP Cold Storage
-        url: "/insights_reclaim_ontap_cold_storage.html"
     - title: Monitor e avvisi
       entries:
       - title: Creazione di monitor
