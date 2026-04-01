@@ -7,10 +7,17 @@ summary: Configurazione del raccoglitore dati MongoDB
 = Raccoglitore dati MongoDB
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da MongoDB.
+
+
+NOTE: Questo collector è obsoleto. Non sarà più disponibile a partire da gennaio 2027.
 
 
 

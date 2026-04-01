@@ -7,10 +7,14 @@ summary: Configurazione del raccoglitore dati DELL EMC Data Domain.
 = Raccoglitore dati DELL EMC Data Domain
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Questo raccoglitore di dati raccoglie informazioni sull'inventario e sulle prestazioni dai sistemi di storage di deduplicazione DELL EMC Data Domain.  Per configurare questo raccoglitore di dati, è necessario seguire specifiche istruzioni di configurazione e raccomandazioni d'uso.
+Questo raccoglitore di dati acquisisce informazioni di inventario dai sistemi di storage con deduplicazione DELL EMC Data Domain. Per configurare questo raccoglitore di dati, è necessario seguire specifiche istruzioni di configurazione e raccomandazioni d'uso.
 
 
 

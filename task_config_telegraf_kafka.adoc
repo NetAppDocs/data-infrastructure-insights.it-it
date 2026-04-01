@@ -7,10 +7,17 @@ summary: Configurazione del raccoglitore dati Kafka
 = Raccoglitore di dati Kafka
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights utilizza questo strumento di raccolta dati per raccogliere metriche da Kafka.
+
+
+NOTE: Questo collector è obsoleto. Non sarà più disponibile a partire da gennaio 2027.
 
 
 

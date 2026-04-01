@@ -233,9 +233,6 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_na_ontap_rest.html["Raccoglitore REST NetApp ONTAP"] | Infrastruttura 
 
 
-| link:task_dc_na_ontap_afx.html["NetApp ONTAP AFX"] | Infrastruttura 
-
-
 | link:task_dc_na_ontap_all_san_array.html["Raccoglitore NetApp ONTAP ASA r2 (All-SAN Array)"] | Infrastruttura 
 
 
@@ -272,13 +269,16 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_config_telegraf_puppetagent.html["Agente burattino"] | Servizio 
 
 
-| link:task_dc_pure_flashblade.html["Pure FlashBlade"] | Infrastruttura 
-
-
 | link:task_dc_pure_flasharray.html["Pure Storage FlashArray"] | Infrastruttura 
 
 
+| link:task_dc_pure_flashblade.html["Pure Storage FlashBlade"] | Infrastruttura 
+
+
 | link:task_dc_redhat_virtualization.html["Virtualizzazione Red Hat"] | Infrastruttura 
+
+
+| link:task_dc_redhat_openshift_virtualization.html["Red Hat OpenShift Virtualizzazione"] | Infrastruttura 
 
 
 | link:task_config_telegraf_redis.html["Redis"] | Servizio 

@@ -7,10 +7,17 @@ summary: Configurazione del raccoglitore dati Elasticsearch
 = Raccoglitore dati Elasticsearch
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da Elasticsearch.
+
+
+NOTE: Questo collector è obsoleto. Non sarà più disponibile a partire da gennaio 2027.
 
 . Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli Elasticsearch.
 +

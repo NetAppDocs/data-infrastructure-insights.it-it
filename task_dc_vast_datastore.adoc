@@ -7,6 +7,10 @@ summary: Configurazione del raccoglitore dati di archiviazione VAST Data DataSto
 = Raccoglitore dati VAST DataStore
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

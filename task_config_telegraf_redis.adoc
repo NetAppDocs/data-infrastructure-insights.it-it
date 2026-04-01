@@ -7,10 +7,17 @@ summary: Configurazione del raccoglitore dati Redis
 = Redis Data Collector
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights utilizza questo raccoglitore di dati per raccogliere metriche da Redis.  Redis è un archivio di strutture dati in memoria open source utilizzato come database, cache e broker di messaggi, che supporta le seguenti strutture dati: stringhe, hash, elenchi, set e altro ancora.
+
+
+NOTE: Questo collector è obsoleto. Non sarà più disponibile a partire da gennaio 2027.
 
 
 

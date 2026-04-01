@@ -7,6 +7,10 @@ summary: Configurazione del raccoglitore dati VMware.
 = Configurazione del raccoglitore dati VMware VSphere
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

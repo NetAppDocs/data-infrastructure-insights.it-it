@@ -7,10 +7,17 @@ summary: Configurazione del raccoglitore dati CouchDB
 = CouchDB Data Collector
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights utilizza questo strumento di raccolta dati per raccogliere metriche da CouchDB.
+
+
+NOTE: Questo collector è obsoleto. Non sarà più disponibile a partire da gennaio 2027.
 
 
 

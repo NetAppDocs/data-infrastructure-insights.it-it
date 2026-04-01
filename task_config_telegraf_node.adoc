@@ -7,10 +7,17 @@ summary: Configurazione del raccoglitore dati Flink
 = Raccolta dati nodo
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Data Infrastructure Insights raccoglie le metriche dal nodo su cui installi un agente.
+
+
+NOTE: Questo collector è obsoleto. Non sarà più disponibile a partire da gennaio 2027.
 
 
 

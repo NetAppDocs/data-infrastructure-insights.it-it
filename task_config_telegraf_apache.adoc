@@ -7,10 +7,17 @@ summary: Configurazione del raccoglitore dati Apache
 = Apache Data Collector
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
 Questo raccoglitore di dati consente la raccolta di dati dai server Apache sul tuo tenant.
+
+
+NOTE: Questo collector è obsoleto. Non sarà più disponibile a partire da gennaio 2027.
 
 .Prerequisiti
 * Devi avere il tuo server Apache HTTP configurato e funzionante correttamente
