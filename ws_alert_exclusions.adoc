@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: ws_alert_exclusions.html 
+keywords: workload security, cloud secure, include list, allowed, file types, ransomware, tampering, exclusion, alerts 
+summary: Aggiungi le estensioni dei file a un elenco di esclusione degli avvisi per ridurre le segnalazioni. 
+---
+= Esclusioni degli avvisi
+:allow-uri-read: 
+
+
+[role="lead"]
+Se viene rilevato un tentativo di manomissione di un file per una determinata estensione e vengono generati avvisi nella schermata Avvisi, tale estensione può essere aggiunta a un elenco di _esclusioni di avviso_ per evitare la generazione di avvisi non necessari. Questo può anche essere considerato come un elenco di _tipi di file consentiti_, poiché Workload Security permetterà a tali file di bypassare gli avvisi di manomissione.
+
+Accedere a *Workload Security > Policies* e selezionare la scheda _Alert Exclusions_.
+
+image:ws_alert_exclusions_list.png["Tipi di file consentiti da escludere dagli avvisi"]
+
+Una volta aggiunto all'elenco dei tipi di file consentiti, non verrà generato alcun avviso di manomissione per quel tipo di file. Si noti che il criterio di esclusione degli avvisi si applica solo al rilevamento della manomissione dei file.
+
+Ad esempio, se un file denominato _test.txt_ viene rinominato in _test.txt.abc_ e Workload Security rileva un tentativo di manomissione del file a causa dell'estensione _.abc_, quest'ultima può essere aggiunta all'elenco dei tipi di file consentiti. Dopo l'aggiunta all'elenco, non verranno più generati tentativi di manomissione dei file con estensione _.abc_.
+
+I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, "*.type", ".type*", o ".*type*"). Le espressioni di tipo ".a*c", ".p*f" non sono supportate.
+
+Sono stati introdotti attributi aggiuntivi di 'Set By' e 'Set Date' a scopo di audit. I tipi di file esistenti verranno migrati al nuovo formato con i valori di entrambi questi attributi impostati su 'migrated'.

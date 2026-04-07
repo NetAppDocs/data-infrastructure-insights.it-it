@@ -261,9 +261,9 @@ sidebar:
         url: "/forensic_user_overview.html"
     - title: Criteri di risposta automatizzati
       url: "/cs_automated_response_policies.html"
-    - title: Criteri sui tipi di file consentiti
-      url: "/ws_allowed_file_types.html"
-    - title: Integrazione della protezione autonoma ONTAP
+    - title: Esclusioni degli avvisi
+      url: "/ws_alert_exclusions.html"
+    - title: Integrazione di ONTAP Autonomous Ransomware Protection
       url: "/concept_cs_integration_with_ontap_arp.html"
     - title: Integrazione ONTAP Access Denied
       url: "/concept_ws_integration_with_ontap_access_denied.html"
