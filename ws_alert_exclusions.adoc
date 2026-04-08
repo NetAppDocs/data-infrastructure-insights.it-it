@@ -9,16 +9,31 @@ summary: Aggiungi le estensioni dei file a un elenco di esclusione degli avvisi 
 
 
 [role="lead"]
-Se viene rilevato un tentativo di manomissione di un file per una determinata estensione e vengono generati avvisi nella schermata Avvisi, tale estensione può essere aggiunta a un elenco di _esclusioni di avviso_ per evitare la generazione di avvisi non necessari. Questo può anche essere considerato come un elenco di _tipi di file consentiti_, poiché Workload Security permetterà a tali file di bypassare gli avvisi di manomissione.
+L'esclusione degli avvisi consente di sopprimere la generazione di avvisi per specifici tipi di file, utenti e percorsi di directory. Utilizza questa funzione per ridurre i falsi positivi escludendo attività note e previste che potrebbero altrimenti corrispondere ai modelli di avviso.
 
-Accedere a *Workload Security > Policies* e selezionare la scheda _Alert Exclusions_.
+L'esclusione degli avvisi è configurata per tenant e include quanto segue:
 
-image:ws_alert_exclusions_list.png["Tipi di file consentiti da escludere dagli avvisi"]
+. Tipi di file: sopprimi gli avvisi di manomissione dei file su specifici link:ws_allowed_file_types.html["estensioni di file"]
+. Utenti: disattiva gli avvisi attivati da utenti selezionati.
+. Percorsi: sopprimi gli avvisi relativi all'attività sui percorsi di directory selezionati (fino a quattro livelli di directory, a partire dal percorso di giunzione).
 
-Una volta aggiunto all'elenco dei tipi di file consentiti, non verrà generato alcun avviso di manomissione per quel tipo di file. Si noti che il criterio di esclusione degli avvisi si applica solo al rilevamento della manomissione dei file.
 
-Ad esempio, se un file denominato _test.txt_ viene rinominato in _test.txt.abc_ e Workload Security rileva un tentativo di manomissione del file a causa dell'estensione _.abc_, quest'ultima può essere aggiunta all'elenco dei tipi di file consentiti. Dopo l'aggiunta all'elenco, non verranno più generati tentativi di manomissione dei file con estensione _.abc_.
+L'esclusione dei tipi di file (nota anche come "Criteri relativi ai tipi di file consentiti") è stata aggiornata e descritta in link:ws_allowed_file_types.html["Tipi di file consentiti"].
 
-I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, "*.type", ".type*", o ".*type*"). Le espressioni di tipo ".a*c", ".p*f" non sono supportate.
+La lista di esclusione degli utenti è supportata dalla funzione di completamento automatico, che consente agli amministratori di selezionare gli utenti da escludere dagli avvisi.
 
-Sono stati introdotti attributi aggiuntivi di 'Set By' e 'Set Date' a scopo di audit. I tipi di file esistenti verranno migrati al nuovo formato con i valori di entrambi questi attributi impostati su 'migrated'.
+L'esclusione delle directory supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione.
+
+È possibile aggiungere o rimuovere singoli utenti e percorsi di directory dai rispettivi elenchi di esclusione. Ogni voce in ciascun elenco conterrà informazioni su quando e da chi è stata aggiunta all'elenco, e queste informazioni saranno utilizzate a fini di auditing.
+
+
+
+== Gestisci esclusioni e auditing
+
+* Gli amministratori possono aggiungere o rimuovere estensioni di file, singoli utenti o percorsi in qualsiasi momento.
+* Ogni voce di esclusione registra il nome dell'amministratore che l'ha impostata e la data in cui è stata impostata. Queste informazioni vengono conservate a fini di auditing.
+
+
+image:ws_alert_exclusions_users.png[""]
+
+image:ws_alert_exclusions_paths.png[""]
