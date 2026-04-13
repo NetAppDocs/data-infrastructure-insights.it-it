@@ -11,14 +11,14 @@ summary: Aggiungi le estensioni dei file a un elenco di esclusione degli avvisi 
 [role="lead"]
 L'esclusione degli avvisi consente di sopprimere la generazione di avvisi per specifici tipi di file, utenti e percorsi di directory. Utilizza questa funzione per ridurre i falsi positivi escludendo attività note e previste che potrebbero altrimenti corrispondere ai modelli di avviso.
 
+Accedere a *Workload Security > Policies* e selezionare la scheda *Alert Exclusions*.
+
 L'esclusione degli avvisi è configurata per tenant e include quanto segue:
 
-. Tipi di file: sopprimi gli avvisi di manomissione dei file su specifici link:ws_allowed_file_types.html["estensioni di file"]
+. Tipi di file: sopprimi gli avvisi di manomissione dei file su specifici <<allowed-file-types,Tipi di file consentiti>>
 . Utenti: disattiva gli avvisi attivati da utenti selezionati.
 . Percorsi: sopprimi gli avvisi relativi all'attività sui percorsi di directory selezionati (fino a quattro livelli di directory, a partire dal percorso di giunzione).
 
-
-L'esclusione dei tipi di file (nota anche come "Criteri relativi ai tipi di file consentiti") è stata aggiornata e descritta in link:ws_allowed_file_types.html["Tipi di file consentiti"].
 
 La lista di esclusione degli utenti è supportata dalla funzione di completamento automatico, che consente agli amministratori di selezionare gli utenti da escludere dagli avvisi.
 
@@ -37,3 +37,19 @@ L'esclusione delle directory supporta fino a quattro livelli di percorsi di dire
 image:ws_alert_exclusions_users.png[""]
 
 image:ws_alert_exclusions_paths.png[""]
+
+
+
+== Tipi di file consentiti
+
+È possibile aggiungere le estensioni dei file a un elenco di _tipi di file consentiti_ per evitare avvisi non necessari.
+
+Seleziona *+Tipo di file* per aggiungere tipi di file all'elenco dei tipi di file consentiti per l'alert.
+
+image:ws_allowed_file_types.png["Aggiungi i tipi di file consentiti"]
+
+Una volta aggiunto all'elenco dei _tipi di file consentiti_, non verrà generato alcun avviso di attacco di manomissione dei file per quel tipo di file consentito. Si noti che la politica _Tipi di file consentiti_ è applicabile solo per il rilevamento di manomissioni di file.
+
+Ad esempio, se un file denominato _test.txt_ viene rinominato in _test.txt.abc_ e Workload Security rileva un attacco ransomware a causa dell'estensione _.abc_, l'estensione _.abc_ può essere aggiunta all'elenco dei _tipi di file consentiti_. Dopo essere stata aggiunta all'elenco, gli attacchi ransomware non verranno più generati contro i file con estensione _.abc_.
+
+I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, ++.*type++, ++.type*++ o ++.*type*++). Le espressioni di tipo .a*c e .p*f non sono supportate.
