@@ -38,9 +38,6 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_na_amazon_fsx.html["Amazon FSx for NetApp ONTAP"] | Infrastruttura 
 
 
-| link:task_config_telegraf_apache.html["Apache"] | Servizio 
-
-
 | link:task_dc_ms_anf.html["Azure NetApp Files"] | Infrastruttura 
 
 
@@ -54,15 +51,6 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 
 
 | link:task_dc_cisco_fc_switch.html["Switch Cisco MDS Fabric"] | Infrastruttura 
-
-
-| link:task_config_telegraf_consul.html["Console"] | Servizio 
-
-
-| link:task_config_telegraf_couchbase.html["Couchbase"] | Servizio 
-
-
-| link:task_config_telegraf_couchdb.html["CouchDB"] | Servizio 
 
 
 | link:task_dc_cohesity_smartfiles.html["Cohesity SmartFiles"] | Infrastruttura 
@@ -116,25 +104,10 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_dell_xc_series.html["Serie Dell XC"] | Infrastruttura 
 
 
-| link:task_config_telegraf_docker.html["Docker"] | Servizio 
-
-
-| link:task_config_telegraf_elasticsearch.html["Elasticsearch"] | Servizio 
-
-
-| link:task_config_telegraf_flink.html["Flink"] | Servizio 
-
-
 | link:task_dc_google_cloud.html["Google Compute e Storage"] | Infrastruttura 
 
 
 | link:task_dc_google_cloud_netapp_volumes.html["Google Cloud NetApp Volumes"] | Infrastruttura 
-
-
-| link:task_config_telegraf_hadoop.html["Hadoop"] | Servizio 
-
-
-| link:task_config_telegraf_haproxy.html["HAProxy"] | Servizio 
 
 
 | link:task_dc_hds_hcp.html["Piattaforma di contenuti Hitachi (HCP)"] | Infrastruttura 
@@ -179,37 +152,16 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_infinidat_infinibox.html["Infinidat InfiniBox"] | Infrastruttura 
 
 
-| link:task_config_telegraf_jvm.html["Giava"] | Servizio 
-
-
-| link:task_config_telegraf_kafka.html["Kafka"] | Servizio 
-
-
-| link:task_config_telegraf_kapacitor.html["Condensatore"] | Servizio 
-
-
-| link:task_config_telegraf_kibana.html["Kibana"] | Servizio 
-
-
 | link:task_config_telegraf_agent_k8s.html["Kubernetes"] | Servizio 
 
 
 | link:task_dc_lenovo.html["Serie Lenovo HX"] | Infrastruttura 
 
 
-| link:task_config_telegraf_memcached.html["Memcached"] | Servizio 
-
-
 | link:task_dc_ms_anf.html["Azure NetApp Files"] | Infrastruttura 
 
 
 | link:task_dc_ms_hyperv.html["Microsoft Hyper-V"] | Infrastruttura 
-
-
-| link:task_config_telegraf_mongodb.html["MongoDB"] | Servizio 
-
-
-| link:task_config_telegraf_mysql.html["MySQL"] | Servizio 
 
 
 | link:task_dc_na_cloud_volumes_ontap.html["NetApp Cloud Volumes ONTAP"] | Infrastruttura 
@@ -245,28 +197,10 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_na_storagegrid.html["NetApp StorageGRID"] | Infrastruttura 
 
 
-| link:task_config_telegraf_netstat.html["Netstat"] | Servizio 
-
-
-| link:task_config_telegraf_nginx.html["Nginx"] | Servizio 
-
-
-| link:task_config_telegraf_node.html["Nodo"] | Servizio 
-
-
 | link:task_dc_nutanix.html["Serie Nutanix NX"] | Infrastruttura 
 
 
-| link:task_config_telegraf_openzfs.html["OpenZFS"] | Servizio 
-
-
 | link:task_dc_oracle_zfs.html["Dispositivo di archiviazione Oracle ZFS"] | Infrastruttura 
-
-
-| link:task_config_telegraf_postgresql.html["PostgreSQL"] | Servizio 
-
-
-| link:task_config_telegraf_puppetagent.html["Agente burattino"] | Servizio 
 
 
 | link:task_dc_pure_flasharray.html["Pure Storage FlashArray"] | Infrastruttura 
@@ -279,12 +213,6 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 
 
 | link:task_dc_redhat_openshift_virtualization.html["Red Hat OpenShift Virtualizzazione"] | Infrastruttura 
-
-
-| link:task_config_telegraf_redis.html["Redis"] | Servizio 
-
-
-| link:task_config_telegraf_rethinkdb.html["Ripensare DB"] | Servizio 
 
 
 | link:task_config_telegraf_agent.html#rhel-and-centos["RHEL e CentOS"] | Servizio 
@@ -303,7 +231,4 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 
 
 | link:task_config_telegraf_agent.html#windows["Finestre"] | Servizio 
-
-
-| link:task_config_telegraf_zookeeper.html["Guardiano dello Zoo"] | Servizio 
 |===
