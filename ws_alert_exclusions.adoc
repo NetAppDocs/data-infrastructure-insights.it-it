@@ -11,6 +11,8 @@ summary: Aggiungi le estensioni dei file a un elenco di esclusione degli avvisi 
 [role="lead"]
 L'esclusione degli avvisi consente di sopprimere la generazione di avvisi per specifici tipi di file, utenti e percorsi di directory. Utilizza questa funzione per ridurre i falsi positivi escludendo attività note e previste che potrebbero altrimenti corrispondere ai modelli di avviso.
 
+Si noti che viene soppresso solo l'avviso relativo all'evento; gli eventi stessi vengono comunque registrati e possono essere esaminati.
+
 Accedere a *Workload Security > Policies* e selezionare la scheda *Alert Exclusions*.
 
 L'esclusione degli avvisi è configurata per tenant e include quanto segue:
@@ -20,36 +22,38 @@ L'esclusione degli avvisi è configurata per tenant e include quanto segue:
 . Percorsi: sopprimi gli avvisi relativi all'attività sui percorsi di directory selezionati (fino a quattro livelli di directory, a partire dal percorso di giunzione).
 
 
-La lista di esclusione degli utenti è supportata dalla funzione di completamento automatico, che consente agli amministratori di selezionare gli utenti da escludere dagli avvisi.
-
-L'esclusione delle directory supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione.
-
-È possibile aggiungere o rimuovere singoli utenti e percorsi di directory dai rispettivi elenchi di esclusione. Ogni voce in ciascun elenco conterrà informazioni su quando e da chi è stata aggiunta all'elenco, e queste informazioni saranno utilizzate a fini di auditing.
-
 
 
 == Gestisci esclusioni e auditing
 
 * Gli amministratori possono aggiungere o rimuovere estensioni di file, singoli utenti o percorsi in qualsiasi momento.
-* Ogni voce di esclusione registra il nome dell'amministratore che l'ha impostata e la data in cui è stata impostata. Queste informazioni vengono conservate a fini di auditing.
+* Ogni voce di esclusione registra il nome dell'amministratore che l'ha impostata e la data in cui è stata impostata. Queste informazioni vengono conservate a fini di verifica.
+
+
+
+
+== Utenti e percorsi
+
+* Elenco di esclusione degli utenti: aggiungi gli utenti da escludere per gli avvisi.
+* Elenco di esclusione delle directory: supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione.
 
 
 image:ws_alert_exclusions_users.png[""]
 
 image:ws_alert_exclusions_paths.png[""]
 
+È possibile aggiungere o rimuovere singoli utenti e percorsi di directory dai rispettivi elenchi di esclusione. Ogni voce in ciascun elenco conterrà informazioni su quando e da chi è stata aggiunta all'elenco, e queste informazioni saranno utilizzate a fini di auditing.
 
 
-== Tipi di file consentiti
 
-È possibile aggiungere le estensioni dei file a un elenco di _tipi di file consentiti_ per evitare avvisi non necessari.
+== Tipi di file
 
-Seleziona *+Tipo di file* per aggiungere tipi di file all'elenco dei tipi di file consentiti per l'alert.
+Una volta aggiunto all'elenco dei tipi di file, non verrà generato alcun avviso di attacco di manomissione per quel tipo di file consentito. Si noti che la policy relativa ai tipi di file si applica solo al rilevamento della manomissione dei file.
 
-image:ws_allowed_file_types.png["Aggiungi i tipi di file consentiti"]
-
-Una volta aggiunto all'elenco dei _tipi di file consentiti_, non verrà generato alcun avviso di attacco di manomissione dei file per quel tipo di file consentito. Si noti che la politica _Tipi di file consentiti_ è applicabile solo per il rilevamento di manomissioni di file.
+image:ws_file_types_list.png["Elenco dei tipi di file"]
 
 Ad esempio, se un file denominato _test.txt_ viene rinominato in _test.txt.abc_ e Workload Security rileva un attacco ransomware a causa dell'estensione _.abc_, l'estensione _.abc_ può essere aggiunta all'elenco dei _tipi di file consentiti_. Dopo essere stata aggiunta all'elenco, gli attacchi ransomware non verranno più generati contro i file con estensione _.abc_.
 
 I tipi di file consentiti possono essere corrispondenze esatte (ad esempio, ".abc") o espressioni (ad esempio, ++.*type++, ++.type*++ o ++.*type*++). Le espressioni di tipo .a*c e .p*f non sono supportate.
+
+Sono stati introdotti attributi aggiuntivi di 'Set By' e 'Set Date' a scopo di audit. I tipi di file esistenti verranno migrati al nuovo formato con i valori di entrambi questi attributi impostati su 'migrated'.
