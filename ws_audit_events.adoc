@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: ws_audit_events.html 
+summary: Eventi di audit in Workload Security 
+keywords: workload security, audit, events 
+---
+= Eventi di sicurezza del workload di audit
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Identifica le modifiche, sia quelle previste (per il monitoraggio) che quelle impreviste (per la risoluzione dei problemi). Visualizza un registro degli eventi del sistema Workload Security e delle attività degli utenti.
+
+
+
+== Visualizzazione degli eventi verificati
+
+Per visualizzare la pagina Audit, fare clic su Admin > Audit nel menu. Verrà visualizzata la pagina Audit, che fornisce i seguenti dettagli per ogni voce di audit:
+
+* Ora - Data e ora dell'evento o dell'attività
+* Utente - L'utente che ha avviato l'attività
+* Ruolo - Il ruolo dell'utente in Workload Security (ospite, utente, amministratore)
+* IP - L'indirizzo IP associato all'evento
+* Azione - Tipo di attività, ad esempio Login, Crea, Aggiorna
+* Categoria - La categoria di attività.
+* Dettagli - Dettagli dell'attività
+* Tipo di applicazione - Tipo di applicazione sottoposta ad audit: Osservabilità OPPURE Sicurezza del carico di lavoro. Utilizzare questo parametro per filtrare solo gli audit di Sicurezza del carico di lavoro.
+
+
+Gli eventi di Workload Security sottoposti a verifica includono, a titolo esemplificativo ma non esaustivo, i seguenti:
+
+* Modifiche delle policy di Workload Security.
+* Creazione di nuovi Data Source Collectors (DSCs).
+* Modifica dei DSC.
+* Creazione di agenti.
+* Attività di gestione degli utenti.
+* Attività relative ai token API.
+
+
+
+
+== Visualizzazione delle voci di controllo
+
+Esistono diversi modi per visualizzare le voci di controllo:
+
+* È possibile visualizzare le voci di controllo scegliendo un periodo di tempo specifico (1 ora, 24 ore, 3 giorni, ecc.).
+* È possibile modificare l'ordinamento delle voci in crescente (freccia verso l'alto) o decrescente (freccia verso il basso) facendo clic sulla freccia nell'intestazione di colonna. Per impostazione predefinita, la tabella visualizza le voci in ordine cronologico decrescente.
+* È possibile utilizzare i campi filtro per visualizzare nella tabella solo le voci desiderate.  Fare clic sul pulsante [+] per aggiungere ulteriori filtri.
+
+
+
+
+== Ulteriori informazioni sul filtraggio
+
+Per affinare il filtro puoi utilizzare uno qualsiasi dei seguenti metodi:
+
+|===
+
+
+| Filtro | Cosa fa | Esempio | Risultato 
+
+
+| * (Asterisco) | ti permette di cercare tutto | vol*rhel | restituisce tutte le risorse che iniziano con "vol" e finiscono con "rhel" 
+
+
+| ?  (punto interrogativo) | consente di cercare un numero specifico di caratteri | BOS-PRD??-S12 | restituisce BOS-PRD12-S12, BOS-PRD23-S12 e così via 
+
+
+| O | consente di specificare più entità | FAS2240 O CX600 O FAS3270 | restituisce uno qualsiasi tra FAS2440, CX600 o FAS3270 
+
+
+| NON | consente di escludere il testo dai risultati della ricerca | NON EMC* | restituisce tutto ciò che non inizia con "EMC" 
+
+
+| Nessuno | cerca vuoto/NULL/Nessuno in qualsiasi campo in cui è selezionato | Nessuno | restituisce risultati in cui il campo di destinazione non è vuoto 
+
+
+| Non * | Come per None sopra, ma puoi anche usare questo modulo per cercare valori NULL nei campi di solo testo | Non * | restituisce risultati in cui il campo di destinazione non è vuoto. 
+
+
+| "" | cerca una corrispondenza esatta | "NetApp*" | restituisce risultati contenenti l'esatta stringa letterale NetApp* 
+|===
+Se si racchiude una stringa di filtro tra virgolette doppie, Insight considera tutto ciò che si trova tra la prima e l'ultima virgoletta come una corrispondenza esatta.  Tutti i caratteri speciali o gli operatori all'interno delle virgolette verranno trattati come valori letterali.  Ad esempio, filtrando per "*" si otterranno risultati che sono un asterisco letterale; in questo caso l'asterisco non verrà trattato come un carattere jolly.  Anche gli operatori OR e NOT verranno trattati come stringhe letterali se racchiusi tra virgolette doppie.
+
+
+
+== Eventi e azioni verificati
+
+Gli eventi e le azioni monitorati da Workload Security possono essere suddivisi nelle seguenti categorie principali:
+
+* Account utente: accesso, disconnessione, cambio di ruolo, ecc.
+* Agente: crea, elimina, aggiorna, blocca, sblocca ecc.
++
+Esempi: _L'agente Agent-Boston-1 è stato eliminato._ _Aggiornamento dell'agente alla versione 1.760.0 avviato tramite operazione in blocco_
+
+* Data/User directory Collector: aggiungi, rimuovi, modifica, aggiorna, posticipa/riprendi, cambia agente, riavvia, ecc.
++
+Esempi: _Data collector Collector-Boston1 rimosso, tipo ONTAP SVM_ _Agent: Agent-Boston-1, Cluster IP 10.193.88.36, SVM demoGroupShares2_ _Collector ONTAP SVM upgrade to version 1.417.0 avviato tramite operazione in blocco_
+
+* Criteri di risposta automatizzati: aggiungi, aggiorna, rimuovi, abilita, disabilita, ecc.
++
+Esempio: _Policy di attacco automatizzato Policy-Boston1 aggiornata. Proprietà Dispositivi aggiornate, vecchio valore: [Device(name=svm_boston1, dataSourceId=39fb3b9c-9dd4-4961-bc27-23eb0b6f9ab7)], nuovo valore: [Device(name=demoGroupShares2, dataSourceId=5b9f5b74-4533-4852-909d-8886582a4359)]_
+
+* Blocco/sblocco utenti: blocco e sblocco utenti automatico o manuale.
++
+Esempio: _Blocco avviato per l'utente Safwan Langley come parte della Automated Response per un periodo di 2 ore_
+
+* Apikey: aggiungi, rimuovi, ecc.
++
+Esempio: _È stato creato il token di accesso all'API Workload Security JPick-SWS_
+
+* Notifica: modifica dell'indirizzo email, ecc.
++
+Esempio: _Destinatario ci-alerts-notifications-dl creato_
+
+
+
+
+
+== Esportazione di eventi di audit
+
+È possibile esportare i risultati della visualizzazione Audit in un file .CSV, che consentirà di analizzare i dati o importarli in un'altra applicazione. Passaggi 1. Nella pagina Audit, impostare l'intervallo di tempo desiderato e gli eventuali filtri. Workload Security esporterà solo le voci di Audit che corrispondono ai filtri e all'intervallo di tempo impostati. 2. Fare clic sul pulsante Esporta nell'angolo in alto a destra della tabella. Gli eventi di Audit visualizzati verranno esportati in un file .CSV, fino a un massimo di 10.000 righe.
+
+
+
+== Conservazione dei dati di audit
+
+Il periodo di tempo per cui Workload Security conserva i dati di audit dipende dal tuo abbonamento:
+
+* Ambienti di prova: i dati di audit vengono conservati per 30 giorni
+* Ambienti sottoscritti: i dati di audit vengono conservati per 1 anno più 1 giorno
+
+
+Le voci di controllo più vecchie del periodo di conservazione vengono eliminate automaticamente.  Non è richiesta alcuna interazione da parte dell'utente.

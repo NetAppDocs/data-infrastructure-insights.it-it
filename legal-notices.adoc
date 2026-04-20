@@ -41,10 +41,6 @@ link:https://www.netapp.com/pdf.html?item=/media/11887-patentspage.pdf["https://
 
 link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.com/company/legal/privacy-policy/"^]
 
-
-
-== Open source
-
-I file di avviso forniscono informazioni sui diritti d'autore e sulle licenze di terze parti utilizzati nel software NetApp .
+42f8acba84cdae8f80e8f42b553af5a4
 
 link:media/DII_Notice_Feb_2026.pdf["Avviso per Data Infrastructure Insights (incluso Workload Security), window=_blank"]
