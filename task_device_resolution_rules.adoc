@@ -7,6 +7,10 @@ summary: 'Device Resolution ti aiuta a monitorare con precisione le prestazioni 
 = Regole di risoluzione del dispositivo
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -33,7 +37,7 @@ Quando si creano regole, si inizia identificando la fonte delle informazioni su 
 È possibile creare regole nella scheda Regole di risoluzione automatica.  I passaggi seguenti descrivono il processo di creazione delle regole.
 
 .Procedura
-. Fare clic su *Gestisci > Risoluzione dispositivo*
+. Fai clic su *Osservabilità > Arricchisci > Risoluzione del dispositivo*
 . Nella scheda *Regole di risoluzione automatica*, fare clic su *+ Regola host* o *+ Regola nastro*.
 +
 Viene visualizzata la schermata *Regola di risoluzione*.
@@ -94,7 +98,7 @@ Per le regole che utilizzano i delimitatori, la stringa di input viene tokenizza
 *** hba3
 
 
-** Le regole che utilizzano espressioni regolari richiedono un'espressione regolare, il formato e la selezione della distinzione tra maiuscole e minuscole.
+** Le regole che utilizzano le espressioni regolari richiedono un'espressione regolare, il formato e la selezione della distinzione tra maiuscole e minuscole.
 
 
 . Fare clic su *Esegui AR* per eseguire tutte le regole oppure fare clic sulla freccia rivolta verso il basso nel pulsante per eseguire la regola creata (e tutte le altre regole create dall'ultima esecuzione completa di AR).
@@ -105,13 +109,19 @@ I risultati dell'esecuzione della regola vengono visualizzati nella scheda *Iden
 
 
 
+=== Regole di pausa e ripresa
+
+Per impedire l'esecuzione di una regola, seleziona "Pausa" dal menu a destra della regola oppure seleziona più regole e scegli "Pausa" dal menu a discesa "Azioni di gruppo". Puoi riprendere l'esecuzione della regola allo stesso modo.
+
+
+
 == Avvio di un aggiornamento automatico della risoluzione del dispositivo
 
 Un aggiornamento della risoluzione del dispositivo conferma le modifiche manuali aggiunte dall'ultima esecuzione completa della risoluzione automatica del dispositivo.  L'esecuzione di un aggiornamento può essere utilizzata per confermare ed eseguire solo le nuove voci manuali apportate alla configurazione della risoluzione del dispositivo.  Non viene eseguita alcuna risoluzione completa del dispositivo.
 
 .Procedura
 . Accedi all'interfaccia utente web Data Infrastructure Insights .
-. Fare clic su *Gestisci > Risoluzione dispositivo*
+. Fai clic su *Osservabilità > Arricchisci > Risoluzione del dispositivo*
 . Nella schermata *Risoluzione dispositivo*, fare clic sulla freccia rivolta verso il basso nel pulsante *Esegui AR*.
 . Fare clic su *Aggiorna* per avviare l'aggiornamento.
 
@@ -130,7 +140,7 @@ NOTE: Se la sorgente contiene solo una parte del nome di un host o di un disposi
 
 .Procedura
 . Accedi all'interfaccia utente web Data Infrastructure Insights .
-. Fare clic su *Gestisci > Risoluzione dispositivo*
+. Fai clic su *Osservabilità > Arricchisci > Risoluzione del dispositivo*
 . Fare clic sulla scheda *Identificazione Fibre Channel*.
 +
 Il sistema visualizza i dispositivi insieme al loro stato di risoluzione.

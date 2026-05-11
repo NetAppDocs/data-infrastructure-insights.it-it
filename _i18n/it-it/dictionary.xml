@@ -9962,7 +9962,6 @@
   <block id="250a0e817001d5aadc297d9943b4611a" category="list-text">12ep0</block>
   <block id="7fbc2da9d2e5b20105696da7ea4ce3dd" category="list-text">emc3</block>
   <block id="cb0dda161e32cb6fdfcbd71707929167" category="list-text">hba3</block>
-  <block id="ea72e8c9dc8f8b845a6ad19e15b5867a" category="list-text">Le regole che utilizzano espressioni regolari richiedono un'espressione regolare, il formato e la selezione della distinzione tra maiuscole e minuscole.</block>
   <block id="669613ed670b6c6c42c39acf0bfee7b0" category="list-text">Fare clic su *Esegui AR* per eseguire tutte le regole oppure fare clic sulla freccia rivolta verso il basso nel pulsante per eseguire la regola creata (e tutte le altre regole create dall'ultima esecuzione completa di AR).</block>
   <block id="f5d37dace9a539d56f93b2e2c32704d5" category="paragraph">I risultati dell'esecuzione della regola vengono visualizzati nella scheda *Identificazione FC*.</block>
   <block id="c2c94fa68f8065fa325aff6c260bebfb" category="section-title">Avvio di un aggiornamento automatico della risoluzione del dispositivo</block>
@@ -14091,4 +14090,8 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sui diritti d'autore e sulle licenze di terze parti utilizzati nel software NetApp.</block>
   <block id="30e34a68b374f1718d077f39f1e4b558" category="admonition">Gli aggiornamenti tramite pulsante non sono disponibili per le versioni dell'operatore precedenti alla 1.2057.0. Segui le istruzioni di aggiornamento manuale riportate di seguito per aggiornare alla versione più recente. Successivamente, gli aggiornamenti futuri potranno essere eseguiti utilizzando la funzione di aggiornamento tramite pulsante.</block>
+  <block id="d0c7c0947ebc2f58067c90be172b88e0" category="list-text">Fai clic su *Osservabilità &gt; Arricchisci &gt; Risoluzione del dispositivo*</block>
+  <block id="7ecd430509607d1a2c2f3ffad808df91" category="list-text">Le regole che utilizzano le espressioni regolari richiedono un'espressione regolare, il formato e la selezione della distinzione tra maiuscole e minuscole.</block>
+  <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">Regole di pausa e ripresa</block>
+  <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">Per impedire l'esecuzione di una regola, seleziona "Pausa" dal menu a destra della regola oppure seleziona più regole e scegli "Pausa" dal menu a discesa "Azioni di gruppo". Puoi riprendere l'esecuzione della regola allo stesso modo.</block>
 </blocks>
