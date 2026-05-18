@@ -14028,7 +14028,6 @@
   <block id="d01a003326568eee4579a0b14096808a" category="list-text">Ogni voce di esclusione registra il nome dell'amministratore che l'ha impostata e la data in cui è stata impostata. Queste informazioni vengono conservate a fini di verifica.</block>
   <block id="502a3077dba0d1ad6f92723157947eb2" category="section-title">Utenti e percorsi</block>
   <block id="fbe64a9bdbefe7d8e246dbe4db973fd6" category="list-text">Elenco di esclusione degli utenti: aggiungi gli utenti da escludere per gli avvisi.</block>
-  <block id="7f21f675f8b42bfe63a9f7bf4d897cb0" category="list-text">Elenco di esclusione delle directory: supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione.</block>
   <block id="f12b42eece54a56ffab836a42eb37488" category="section-title">Tipi di file</block>
   <block id="137e136f6b4d96d6452fec8d0ed99197" category="paragraph">Una volta aggiunto all'elenco dei tipi di file, non verrà generato alcun avviso di attacco di manomissione per quel tipo di file consentito. Si noti che la policy relativa ai tipi di file si applica solo al rilevamento della manomissione dei file.</block>
   <block id="b3e41e2fae7745b697dbed9b6f854aa1" category="inline-image-macro">Elenco dei tipi di file</block>
@@ -14094,4 +14093,5 @@
   <block id="7ecd430509607d1a2c2f3ffad808df91" category="list-text">Le regole che utilizzano le espressioni regolari richiedono un'espressione regolare, il formato e la selezione della distinzione tra maiuscole e minuscole.</block>
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">Regole di pausa e ripresa</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">Per impedire l'esecuzione di una regola, seleziona "Pausa" dal menu a destra della regola oppure seleziona più regole e scegli "Pausa" dal menu a discesa "Azioni di gruppo". Puoi riprendere l'esecuzione della regola allo stesso modo.</block>
+  <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">Elenco di esclusione delle directory: supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione. Tutte le sottodirectory e i file presenti in questo percorso saranno esclusi dalla generazione degli avvisi. I caratteri jolly nei percorsi di directory non sono supportati.</block>
 </blocks>

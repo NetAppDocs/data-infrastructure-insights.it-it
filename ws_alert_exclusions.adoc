@@ -35,7 +35,7 @@ L'esclusione degli avvisi è configurata per tenant e include quanto segue:
 == Utenti e percorsi
 
 * Elenco di esclusione degli utenti: aggiungi gli utenti da escludere per gli avvisi.
-* Elenco di esclusione delle directory: supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione.
+* Elenco di esclusione delle directory: supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione. Tutte le sottodirectory e i file presenti in questo percorso saranno esclusi dalla generazione degli avvisi. I caratteri jolly nei percorsi di directory non sono supportati.
 
 
 image:ws_alert_exclusions_users.png[""]
