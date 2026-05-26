@@ -18,7 +18,7 @@ I criteri di risposta attivano azioni quali l'acquisizione di uno snapshot o la 
 
 È possibile impostare criteri su dispositivi specifici o su tutti i dispositivi.  Per impostare un criterio di risposta, seleziona *Amministrazione > Criteri di risposta automatica* e fai clic sul pulsante *+Criterio* appropriato.  È possibile creare policy per gli attacchi o per gli avvisi.
 
-image:ws_add_attack_policy.png["Aggiungi una finestra di dialogo Criteri di attacco che mostra il menu a discesa dei webhook"]
+image:ws_add_attack_policy.png["Aggiungi una finestra di dialogo Criteri di attacco che mostri il menu a tendina webhook, larghezza=300"]
 
 È necessario salvare la policy con un nome univoco.
 

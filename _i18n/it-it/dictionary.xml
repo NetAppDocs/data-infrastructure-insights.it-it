@@ -3706,8 +3706,6 @@
   <block id="df6a21f670066b82b5409a049dec0efe" category="doc">Criteri di risposta automatizzati</block>
   <block id="e5da02c738b911c42fb0a45a5b76c8d9" category="paragraph">I criteri di risposta attivano azioni quali l'acquisizione di uno snapshot o la limitazione dell'accesso dell'utente in caso di attacco o comportamento anomalo dell'utente.</block>
   <block id="8816114441548a7f4d390de764f25ad9" category="paragraph">È possibile impostare criteri su dispositivi specifici o su tutti i dispositivi.  Per impostare un criterio di risposta, seleziona *Amministrazione &gt; Criteri di risposta automatica* e fai clic sul pulsante *+Criterio* appropriato.  È possibile creare policy per gli attacchi o per gli avvisi.</block>
-  <block id="29d142bb0759eaeb3b47bf1809087cc7" category="inline-image-macro">Aggiungi una finestra di dialogo Criteri di attacco che mostra il menu a discesa dei webhook</block>
-  <block id="9c3cfe368d37e834800103686eba11c1" category="paragraph"><block ref="9c3cfe368d37e834800103686eba11c1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10519a96ebde07deba902eb606bf97ff" category="paragraph">È necessario salvare la policy con un nome univoco.</block>
   <block id="168e31fead9fc72274b5723b0c86d27f" category="paragraph">Per disattivare un'azione di risposta automatica (ad esempio, Acquisisci snapshot), è sufficiente deselezionare l'azione e salvare il criterio.</block>
   <block id="3218ac0e5f26253bd8724ab98d8f5e02" category="inline-link-macro">Pagina dei dettagli dell'avviso</block>
@@ -14094,4 +14092,6 @@
   <block id="9372fa792b7b3d019662b44dd2963355" category="section-title">Regole di pausa e ripresa</block>
   <block id="716da8f41fd22d5cd56ad74991f757ba" category="paragraph">Per impedire l'esecuzione di una regola, seleziona "Pausa" dal menu a destra della regola oppure seleziona più regole e scegli "Pausa" dal menu a discesa "Azioni di gruppo". Puoi riprendere l'esecuzione della regola allo stesso modo.</block>
   <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">Elenco di esclusione delle directory: supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione. Tutte le sottodirectory e i file presenti in questo percorso saranno esclusi dalla generazione degli avvisi. I caratteri jolly nei percorsi di directory non sono supportati.</block>
+  <block id="fc6be75876bcdad138173b62e9ab5c17" category="inline-image-macro">Aggiungi una finestra di dialogo Criteri di attacco che mostri il menu a tendina webhook, larghezza=300</block>
+  <block id="7cb01fa627551da61643f2eab2af39fb" category="paragraph"><block ref="7cb01fa627551da61643f2eab2af39fb" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
