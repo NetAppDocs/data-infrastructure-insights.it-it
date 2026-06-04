@@ -13289,7 +13289,6 @@
   <block id="d55e67726729808ea6f67b165600c105" category="summary">Puoi utilizzare l'assistente AI di DII per riepilogare i tuoi dati, esplorare insight, risolvere problemi e pianificare le tue risorse.</block>
   <block id="accab30482cee85eb4e017db64428cad" category="doc">Data Infrastructure Insights Assistente AI</block>
   <block id="6804300f32b2dfd7358cbef13acc4c27" category="paragraph">L'*Assistente AI di Data Infrastructure Insights* è progettato per aiutarti a lavorare in modo più efficiente con i dati della tua infrastruttura. Può aiutarti ad analizzare le informazioni, scoprire insight, risolvere le sfide operative e prendere decisioni informate sulle tue risorse.</block>
-  <block id="b6ed013ce4b16673bae45126733837ff" category="paragraph">L'Assistente AI è disponibile solo per i tenant DII distribuiti su AWS.</block>
   <block id="01a593a05ec8086d16c6d465263a2f9f" category="inline-image-macro">Domanda di esempio sull'assistente AI</block>
   <block id="18aabc8cd51ce3494b256e8195526a85" category="paragraph"><block ref="18aabc8cd51ce3494b256e8195526a85" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f58b0ee974430595788a16d0bcde2c33" category="section-title">Scopri il nuovo partner intelligente della tua infrastruttura</block>
@@ -13323,7 +13322,6 @@
   <block id="81bba36ecc862e80fc8fba5830993041" category="list-text">Il lasso di tempo a cui sei interessato, e</block>
   <block id="747f32611560f7ea60cbda274f04ef16" category="list-text">Qualsiasi tipo di problema specifico che ti preoccupa (problemi di prestazioni, problemi di capacità, errori, ecc.)</block>
   <block id="45610fa97924ab075b8ebed42722b019" category="section-title">Accesso all'Assistente</block>
-  <block id="629c55deaa1b75250df975fe5485d218" category="paragraph">Per chiamare l'Assistente AI DII, è sufficiente selezionare l'icona del gufo nell'angolo inferiore dello schermo. Un utente con ruolo di "Owner" deve accettare i termini e le condizioni prima che qualsiasi utente possa utilizzare l'Assistente AI sul tuo tenant.</block>
   <block id="f67a424fefeb5e523fcbb4c9247bc6d9" category="inline-image-macro">dii_ai_assistant_icon</block>
   <block id="a48b93c62e0c2ec4c09405cadd96b7da" category="paragraph"><block ref="a48b93c62e0c2ec4c09405cadd96b7da" category="inline-image-macro-rx" type="image"></block></block>
   <block id="be90349da04be71a620e68314d810f7f" category="section-title">Febbraio 2026</block>
@@ -13353,7 +13351,6 @@
   <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">Assistente AI</block>
   <block id="f7836ca926de84b06b0b4bcbe4b8b756" category="inline-link-macro">Avviso per Data Infrastructure Insights (incluso Workload Security), window=_blank</block>
   <block id="135e17e82c7d3d3d83bd8b0737be432e" category="paragraph"><block ref="135e17e82c7d3d3d83bd8b0737be432e" category="inline-link-macro-rx"></block></block>
-  <block id="58e3397ecaf63f320f4993fc5844d736" category="paragraph">DII AI Assistant è disponibile come Anteprima Limitata. <block ref="b77b95325de7e3e625a811db4f47869c" category="inline-link-macro-rx"></block> sulle funzionalità di anteprima di Data Infrastructure Insights.</block>
   <block id="b6b93d34f92b439117e54d9343c7efda" category="section-title">Anteprime attuali:</block>
   <block id="559de301b9b7af9f5b932d860f605701" category="list-text"><block ref="7a32ab5261b86b8c9a5d88b540c79f2d" category="inline-link-macro-rx"></block> anteprima.</block>
   <block id="ca39a60f24fda5dbbda8809fbd3fe717" category="inline-link-macro">*Data Infrastructure Insights Assistente AI*</block>
@@ -14094,4 +14091,18 @@
   <block id="baac891fc4329aa8b558fa7560c83369" category="list-text">Elenco di esclusione delle directory: supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione. Tutte le sottodirectory e i file presenti in questo percorso saranno esclusi dalla generazione degli avvisi. I caratteri jolly nei percorsi di directory non sono supportati.</block>
   <block id="fc6be75876bcdad138173b62e9ab5c17" category="inline-image-macro">Aggiungi una finestra di dialogo Criteri di attacco che mostri il menu a tendina webhook, larghezza=300</block>
   <block id="7cb01fa627551da61643f2eab2af39fb" category="paragraph"><block ref="7cb01fa627551da61643f2eab2af39fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="512346de0e4492551e58519f2ff8f02f" category="section-title">Chatta in modo naturale</block>
+  <block id="606eca1dc0574688efcace9e5442ec65" category="paragraph">L'Assistente AI ora supporta più di una dozzina di lingue, consentendo al tuo team di interagire in modo naturale nella lingua preferita. Consulta l'elenco completo <block ref="7bcc2d9bce066141171b475332938f67" category="inline-link-macro-rx"></block>.</block>
+  <block id="f66b0e86f32ecd67a023b86cf46bdc84" category="paragraph">Per richiamare l'Assistente AI di DII, è sufficiente selezionare l'icona del gufo nell'angolo inferiore dello schermo. Un utente con ruolo "Proprietario" o "Amministratore" deve accettare i termini e le condizioni prima che qualsiasi utente possa utilizzare l'Assistente AI sul tuo tenant.</block>
+  <block id="c21446b3ecfb30ed6c2760d686bd4578" category="section-title">Giugno 2026</block>
+  <block id="c42129b932facb2cf7437f8dda2d1024" category="section-title">Un assistente AI più intelligente per i team globali</block>
+  <block id="2cf12b65895eb4c6ea2aa563a3a928c2" category="paragraph">L'Assistente AI ora supporta più di una dozzina di lingue, consentendo al tuo team di interagire in modo naturale nella lingua preferita. Consulta l'elenco completo <block ref="76aebc4f8810ba81b56db38cff83be8e" category="inline-link-macro-rx"></block>.</block>
+  <block id="f4651ef2bf0573c7c2ed9812ec1e1a9c" category="section-title">Nuovi monitor per le modifiche agli attributi dell'infrastruttura</block>
+  <block id="a8d07c89b5ad1be0c9666289c7c31f2e" category="paragraph">Ora sono disponibili i Monitor degli attributi per avvisare automaticamente il team quando le risorse vengono spostate tra data center, un pool di storage non è crittografato o si verificano modifiche agli attributi. Questo aiuta a mantenere le configurazioni di base e a garantire che nulla sfugga al controllo durante nuove implementazioni o modifiche.</block>
+  <block id="1077e7a3935b3725c8350a2c88a1253f" category="inline-image-macro">I monitor degli attributi vengono aggiunti ai tipi di monitor</block>
+  <block id="2a7170fd3e143b93657f08d8a1c590f9" category="paragraph"><block ref="2a7170fd3e143b93657f08d8a1c590f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3fb1bd69332231cdc75d8db242aaf294" category="section-title">Crea avvisi e webhook più intelligenti con messaggi dinamici e ricchi di contesto</block>
+  <block id="ca168714d12ff6410e26984f67b83474" category="paragraph">Quando crei un monitor o un webhook, è sufficiente digitare "%" nella descrizione dell'avviso o nell'URL del webhook, nell'intestazione o nel corpo per selezionare da un elenco popolato dinamicamente di attributi e annotazioni disponibili. Fornisci ai tuoi avvisi il contesto corretto per migliorare la chiarezza, ottimizzare l'integrazione con i webhook e velocizzare i tempi di risposta.</block>
+  <block id="42bb2765b945bf3e0e9843ba7c1b0426" category="inline-image-macro">elenco attributi nella descrizione di un monitor, larghezza=400</block>
+  <block id="5c686c3f80c47e575d3c5b2f79e6da4b" category="paragraph"><block ref="5c686c3f80c47e575d3c5b2f79e6da4b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
