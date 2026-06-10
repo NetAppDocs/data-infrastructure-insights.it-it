@@ -22,6 +22,18 @@ NetApp migliora e potenzia costantemente i suoi prodotti e servizi.  Ecco alcune
 
 
 
+=== Più spazio di lavoro, meno disordine
+
+Il menu di navigazione di DII ha un aspetto completamente rinnovato, ora in linea con i colori e il comportamento della Console per un'esperienza più uniforme. Il menu principale, precedentemente statico, sarà compresso per impostazione predefinita, offrendo un'area di lavoro più focalizzata e un utilizzo più efficiente dello spazio sullo schermo. Per accedervi, basta cliccare sull'icona del menu (☰) nell'angolo in alto a sinistra.
+
+
+
+=== Amplia la visibilità del dispositivo con l'assistenza intelligente dell'AI
+
+Accelera l'integrazione di nuovi dispositivi con l'identificazione basata sull'intelligenza artificiale. Data Infrastructure Insights analizza il tuo ambiente e suggerisce regole di risoluzione automatica dei dispositivi, aiutandoti a identificare e gestire rapidamente un maggior numero di dispositivi. Ti basterà rivedere e approvare le regole generate dall'IA e DII si occuperà del resto, migliorando la visibilità e la gestione dei dispositivi in tutta la tua infrastruttura.
+
+
+
 === Un assistente AI più intelligente per i team globali
 
 L'Assistente AI ora supporta più di una dozzina di lingue, consentendo al tuo team di interagire in modo naturale nella lingua preferita. Consulta l'elenco completo link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["Qui"^].
