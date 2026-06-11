@@ -7,6 +7,10 @@ summary: Configurazione del raccoglitore dati REST Dell EMC Isilon/PowerScale.
 = Raccoglitore dati REST Dell EMC Isilon / PowerScale
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

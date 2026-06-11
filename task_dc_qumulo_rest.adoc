@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task_dc_qumulo_rest.html 
+keywords: data collector, qumulo, rest 
+summary: Configurazione del raccoglitore di dati REST di Qumulo. 
+---
+= Raccoglitore di dati REST di Qumulo
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Data Infrastructure Insights utilizza questo collector per acquisire dati di inventario e prestazioni dallo storage Qumulo.
+
+
+
+== Terminologia
+
+Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore di dati.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
+
+[cols="2*"]
+|===
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
+
+
+| Guidare | Disco 
+
+
+| Grappolo | Magazzinaggio 
+
+
+| Nodo | Nodo di archiviazione 
+
+
+| File system OneFS | Volume interno 
+
+
+| File system OneFS | Pool di archiviazione 
+
+
+| Qtree | Qtree 
+|===
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
+
+
+
+== Requisiti
+
+Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
+
+* Un account utente e una password.  Questo account NON deve essere necessariamente admin/root, ma DEVI concedere un numero sostanziale di privilegi di sola lettura al tuo account di servizio: vedi tabella qui sotto
+* Indirizzo IP / Fully Qualified Domain Name del cluster Qumulo
+* Accesso HTTPS alla porta 8080
+
+
+
+
+== Configurazione
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP di Qumulo | L'indirizzo IP o domain name completo dell'archivio Qumulo 
+
+
+| Nome utente | Nome utente per il Qumulo 
+
+
+| Password | Password utilizzata per il Qumulo 
+|===
+
+
+== Configurazione avanzata
+
+[cols="2*"]
+|===
+| Campo | Descrizione 
+
+
+| Porta HTTPS | Il valore predefinito è 8080. 
+
+
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra le rilevazioni di inventario. Il valore predefinito è 30. 
+
+
+| Intervallo di sondaggio sulle prestazioni (min) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 5. 
+|===
+
+
+== Risoluzione dei problemi
+
+Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

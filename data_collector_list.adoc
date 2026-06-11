@@ -209,6 +209,9 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_pure_flashblade.html["Pure Storage FlashBlade"] | Infrastruttura 
 
 
+| link:task_dc_qumulo_rest.html["Qumulo REST"] | Infrastruttura 
+
+
 | link:task_dc_redhat_virtualization.html["Virtualizzazione Red Hat"] | Infrastruttura 
 
 
