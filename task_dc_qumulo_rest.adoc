@@ -43,7 +43,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
 
-* Un account utente e una password.  Questo account NON deve essere necessariamente admin/root, ma DEVI concedere un numero sostanziale di privilegi di sola lettura al tuo account di servizio: vedi tabella qui sotto
+* Un account utente e una password con almeno i permessi di lettura.
 * Indirizzo IP / Fully Qualified Domain Name del cluster Qumulo
 * Accesso HTTPS alla porta 8000
 
