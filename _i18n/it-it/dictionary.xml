@@ -14121,4 +14121,6 @@
   <block id="10c51e7fed3d0622297f012b6ed375ff" category="cell">Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 5.</block>
   <block id="d08016e5c5be3fa70d21f77cdf152be2" category="paragraph">Al termine dei comandi, esegui:</block>
   <block id="6d0f6de7ebc4523de6bfdcd599b62bf1" category="paragraph">Questo creerà un token associato al tuo utente. Nota: si consiglia di impostare la durata del token. Tieni presente che la raccolta dati non andrà a buon fine con un errore "Impossibile connettersi" dopo la scadenza del token.</block>
+  <block id="90e0071503be9324e2266cfd3368d18a" category="list-text">Accesso HTTPS alla porta 8000</block>
+  <block id="bdda6785fe5c26b462fa0a87d4327560" category="cell">Il valore predefinito è 8000.</block>
 </blocks>

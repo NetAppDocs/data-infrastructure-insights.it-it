@@ -34,15 +34,6 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 
 
 | Nodo | Nodo di archiviazione 
-
-
-| File system OneFS | Volume interno 
-
-
-| File system OneFS | Pool di archiviazione 
-
-
-| Qtree | Qtree 
 |===
 Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
 
@@ -54,7 +45,7 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 
 * Un account utente e una password.  Questo account NON deve essere necessariamente admin/root, ma DEVI concedere un numero sostanziale di privilegi di sola lettura al tuo account di servizio: vedi tabella qui sotto
 * Indirizzo IP / Fully Qualified Domain Name del cluster Qumulo
-* Accesso HTTPS alla porta 8080
+* Accesso HTTPS alla porta 8000
 
 
 
@@ -83,7 +74,7 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 | Campo | Descrizione 
 
 
-| Porta HTTPS | Il valore predefinito è 8080. 
+| Porta HTTPS | Il valore predefinito è 8000. 
 
 
 | Intervallo di sondaggio dell'inventario (min) | Intervallo tra le rilevazioni di inventario. Il valore predefinito è 30. 
