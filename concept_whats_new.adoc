@@ -22,6 +22,12 @@ NetApp migliora e potenzia costantemente i suoi prodotti e servizi.  Ecco alcune
 
 
 
+=== Condividi aggiornamenti importanti con i messaggi di accesso
+
+Mantieni il tuo team informato e allineato con messaggi di accesso personalizzabili. Comunica annunci importanti, programmi di manutenzione o aggiornamenti delle policy direttamente agli utenti quando effettuano l'accesso. Con il supporto Markdown, puoi formattare i messaggi per chiarezza e assicurarti che le informazioni critiche raggiungano ogni utente DII. Gli account con privilegi di amministratore possono trovare la configurazione nel menu Admin sotto Notifiche.
+
+
+
 === Più spazio di lavoro, meno disordine
 
 Il menu di navigazione di DII ha un aspetto completamente rinnovato, ora in linea con i colori e il comportamento della Console per un'esperienza più uniforme. Il menu principale, precedentemente statico, sarà compresso per impostazione predefinita, offrendo un'area di lavoro più focalizzata e un utilizzo più efficiente dello spazio sullo schermo. Per accedervi, basta cliccare sull'icona del menu (☰) nell'angolo in alto a sinistra.

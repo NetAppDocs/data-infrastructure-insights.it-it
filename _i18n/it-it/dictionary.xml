@@ -14124,4 +14124,6 @@
   <block id="90e0071503be9324e2266cfd3368d18a" category="list-text">Accesso HTTPS alla porta 8000</block>
   <block id="bdda6785fe5c26b462fa0a87d4327560" category="cell">Il valore predefinito è 8000.</block>
   <block id="606930ccd6550cc24fe845f69572c586" category="list-text">Un account utente e una password con almeno i permessi di lettura.</block>
+  <block id="38fbce916138020848ac3b594a6648d0" category="section-title">Condividi aggiornamenti importanti con i messaggi di accesso</block>
+  <block id="7260908f665e8b3c02f0fce13c7ea541" category="paragraph">Mantieni il tuo team informato e allineato con messaggi di accesso personalizzabili. Comunica annunci importanti, programmi di manutenzione o aggiornamenti delle policy direttamente agli utenti quando effettuano l'accesso. Con il supporto Markdown, puoi formattare i messaggi per chiarezza e assicurarti che le informazioni critiche raggiungano ogni utente DII. Gli account con privilegi di amministratore possono trovare la configurazione nel menu Admin sotto Notifiche.</block>
 </blocks>
