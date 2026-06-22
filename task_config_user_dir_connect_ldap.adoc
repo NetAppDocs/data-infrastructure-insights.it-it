@@ -7,6 +7,10 @@ summary: Configurazione del raccoglitore directory utente LDAP per la sicurezza 
 = Configurazione di un server di raccolta directory LDAP
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -126,7 +130,7 @@ Fare clic su Includi attributi facoltativi per aggiungere uno qualsiasi dei segu
  ldapsearch -D "uid=john ,cn=users,cn=accounts,dc=dorp,dc=company,dc=com" -W -x -LLL -o ldif-wrap=no -b "cn=accounts,dc=dorp,dc=company,dc=com" -H ldap://vmwipaapp08.dorp.company.com
 * Utilizzare LDAP Explorer per navigare in un database LDAP, visualizzare le proprietà e gli attributi degli oggetti, visualizzare le autorizzazioni, visualizzare lo schema di un oggetto, eseguire ricerche sofisticate che è possibile salvare e rieseguire.
 +
-** Installa LDAP Explorer(http://ldaptool.sourceforge.net/[] ) o Java LDAP Explorer(http://jxplorer.org/[] ) su qualsiasi macchina Windows in grado di connettersi al server LDAP.
+** Installa link:http://ldaptool.sourceforge.net/["LDAP Explorer"] o link:http://jxplorer.org/["Java LDAP Explorer"] su qualsiasi macchina Windows che può connettersi al server LDAP.
 ** Connettersi al server LDAP utilizzando il nome utente/password del server di directory LDAP.
 
 

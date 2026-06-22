@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: login_message_popup.html 
+summary: Imposta un messaggio pop-up del giorno per tutti gli utenti. 
+keywords: notifications, pop-up, banner, motd, message, login 
+---
+= Configurare un messaggio di accesso
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puoi configurare un messaggio da visualizzare come pop-up per tutti gli utenti quando effettuano l'accesso. Puoi scegliere di mostrarlo solo al prossimo accesso o a tutti gli accessi successivi.
+
+Un amministratore può impostare il messaggio in Admin > Notifiche, nella scheda "Login Banner".
+
+Il messaggio supporta il Markdown di base, quindi puoi applicare formattazioni come grassetto, corsivo, tabelle, ecc.
+
+Scegli se l'utente vede il messaggio solo al prossimo accesso o a ogni accesso successivo.
+
+image:login_banner_settings.png["Impostazioni banner di accesso"]
+
+Tieni presente che l'utente DEVE confermare il messaggio di accesso per poterlo chiudere. Una volta chiuso, verranno visualizzati tutti i pop-up successivi (aggiornamenti sulle novità, aggiornamenti dei Termini di servizio, ecc.).

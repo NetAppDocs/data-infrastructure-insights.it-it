@@ -771,7 +771,7 @@ Si noti che il raccoglitore dati HCI acquisisce solo dall'HCI Virtual Center.  P
 
 === Nuovo servizio di raccolta dati: Kapacitor
 
-* link:task_config_telegraf_kapacitor.html["Condensatore"]è stato aggiunto come raccoglitore di dati per i servizi.
+* Kapacitor è stato aggiunto come data collector per i servizi.
 
 
 

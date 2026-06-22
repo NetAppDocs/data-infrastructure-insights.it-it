@@ -17,7 +17,7 @@ Accedere a *Workload Security > Policies* e selezionare la scheda *Alert Exclusi
 
 L'esclusione degli avvisi è configurata per tenant e include quanto segue:
 
-. Tipi di file: sopprimi gli avvisi di manomissione dei file su specifici <<allowed-file-types,Tipi di file consentiti>>
+. Tipi di file: sopprimi gli avvisi di manomissione dei file su specifici <<file-types,Tipi di file consentiti>>
 . Utenti: disattiva gli avvisi attivati da utenti selezionati.
 . Percorsi: sopprimi gli avvisi relativi all'attività sui percorsi di directory selezionati (fino a quattro livelli di directory, a partire dal percorso di giunzione).
 
@@ -38,9 +38,9 @@ L'esclusione degli avvisi è configurata per tenant e include quanto segue:
 * Elenco di esclusione delle directory: supporta fino a quattro livelli di percorsi di directory, a partire dal percorso di giunzione. Tutte le sottodirectory e i file presenti in questo percorso saranno esclusi dalla generazione degli avvisi. I caratteri jolly nei percorsi di directory non sono supportati.
 
 
-image:ws_alert_exclusions_users.png[""]
+image:ws_alert_exclusions_users.png["Utenti esclusi dagli avvisi"]
 
-image:ws_alert_exclusions_paths.png[""]
+image:ws_alert_exclusions_paths.png["Percorsi di esclusione degli alert"]
 
 È possibile aggiungere o rimuovere singoli utenti e percorsi di directory dai rispettivi elenchi di esclusione. Ogni voce in ciascun elenco conterrà informazioni su quando e da chi è stata aggiunta all'elenco, e queste informazioni saranno utilizzate a fini di auditing.
 

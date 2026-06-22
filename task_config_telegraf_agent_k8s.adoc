@@ -296,7 +296,7 @@ Modifica _AgentConfiguration_ in _operator-config.yaml_ per riflettere la nuova 
 agent:
   ...
   # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
-  # Please see documentation link here: link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository
+  # Please see documentation link here: link:task_config_telegraf_agent_k8s.html#using-a-custom-or-private-docker-repository[Using a custom or private docker repository]
   dockerRepo: your.docker.repo/long/path/to/test
   # Optional: A docker image pull secret that maybe needed for your private docker registry
   dockerImagePullSecret: docker-secret-name
@@ -426,7 +426,7 @@ Ecco alcune cose da provare se riscontri problemi durante la configurazione dell
 | Ho riscontrato problemi nel tentativo di distribuire l'Operatore e sto utilizzando PSP/PSA. | 1. Modificare l'agente utilizzando il seguente comando: kubectl -n <name-space> edit agent 2.  Contrassegna 'security-policy-enabled' come 'false'.  In questo modo verranno disattivati i criteri di sicurezza del Pod e l'ammissione di sicurezza del Pod e sarà consentito all'operatore di effettuare la distribuzione.  Confermare utilizzando i seguenti comandi: kubectl get psp (dovrebbe mostrare che la politica di sicurezza del pod è stata rimossa) kubectl get all -n <namespace> | grep -i psp (dovrebbe mostrare che non è stato trovato nulla) 
 
 
-| Errori "ImagePullBackoff" rilevati | Questi errori potrebbero verificarsi se si dispone di un repository Docker personalizzato o privato e non è ancora stato configurato Kubernetes Monitoring Operator per riconoscerlo correttamente. <<using-a-custom-or-private-docker-repository,Per saperne di più>> sulla configurazione per repository personalizzati/privati. 
+| Errori "ImagePullBackoff" rilevati | Questi errori possono verificarsi se hai un repository docker personalizzato o privato e non hai ancora configurato il Kubernetes Monitoring Operator per riconoscerlo correttamente. <<Utilizzo di un repository Docker personalizzato o privato,Per saperne di più>> informazioni sulla configurazione per repo personalizzati/privati. 
 
 
 | Ho un problema con la distribuzione del mio operatore di monitoraggio e la documentazione attuale non mi aiuta a risolverlo.  a| 
