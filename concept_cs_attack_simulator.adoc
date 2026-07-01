@@ -154,9 +154,7 @@ Se hai messo in pausa il raccoglitore prima di seguire questi passaggi, assicura
 
 
 
-== Generare i file di esempio a livello di programmazione:
-
-Prima di creare i file, è necessario prima arrestare olink:task_add_collector_svm.html#play-pause-data-collector["mettere in pausa il raccoglitore dati"] elaborazione.
+== Genera un avviso di manomissione dei file
 
 Per generare un avviso di manomissione di file, è possibile eseguire lo script incluso che simulerà un avviso di manomissione di file in Workload Security.
 
