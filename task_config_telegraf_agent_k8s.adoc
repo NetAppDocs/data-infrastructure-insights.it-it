@@ -281,6 +281,11 @@ Prestazioni e mappa della rete
 * ci-net-observer
 
 
+Analisi delle modifiche
+
+* ci-k8s-change-observer
+
+
 Invia l'immagine Docker dell'operatore al tuo repository Docker privato/locale/aziendale in base alle policy aziendali.  Assicurati che i tag delle immagini e i percorsi delle directory di queste immagini nel tuo repository siano coerenti con quelli nel repository Data Infrastructure Insights .
 
 Modifica la distribuzione monitoring-operator in operator-deployment.yaml e modifica tutti i riferimenti alle immagini per utilizzare il tuo repository Docker privato.
@@ -534,5 +539,8 @@ Nota: per rendere queste impostazioni persistenti tra i riavvii del nodo, è nec
 
 
 | Ricevo il seguente errore nei pod Fluent-bit e il pod non può essere avviato: 026/01/12 20:20:32] [error] [sqldb] error=unable to open database file [2026/01/12 20:20:32] [error] [input:tail:tail.0] db: could not create 'in_tail_files' table [2026/01/12 20:20:32] [error] [input:tail:tail.0] could not open/create database [2026/01/12 20:20:32] [error] failed initialize input tail.0 [2026/01/12 20:20:32] [error] [engine] input initialization failed | Assicurarsi che la directory host in cui risiede il file DB disponga dei permessi di lettura/scrittura appropriati. Più specificamente, la directory host dovrebbe concedere permessi di lettura/scrittura agli utenti non root. Il percorso predefinito del file DB è /var/log/ a meno che non venga sovrascritto dall'opzione fluent-bit-dbFile _agentconfiguration_. Se SELinux è abilitato, provare a impostare l'opzione fluent-bit-seLinuxOptionsType agentconfiguration su 'spc_t' 
+
+
+| Vedo messaggi di errore da Telegraf simili al seguente, ma Telegraf si avvia e funziona: E! [inputs.kubernetes] Errore nel plugin: https://<IP>>:<port>>/pods[] stato HTTP restituito 403 Forbidden | Questi messaggi potrebbero comparire se stai utilizzando una versione di Kubernetes inferiore alla 1.33. La risorsa RBAC "nodes/pods" utilizzata da telegraf non esiste in queste versioni. Consulta la sezione "For Kubernetes versions < 1.33" di operator-additional-permissions.yaml per le risorse RBAC richieste nelle versioni precedenti. 
 |===
 Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .
