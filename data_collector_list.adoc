@@ -203,6 +203,9 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_oracle_zfs.html["Dispositivo di archiviazione Oracle ZFS"] | Infrastruttura 
 
 
+| link:task_dc_promox_ve.html["Promox Virtual Environment"] | Infrastruttura 
+
+
 | link:task_dc_pure_flasharray.html["Pure Storage FlashArray"] | Infrastruttura 
 
 

@@ -8643,26 +8643,6 @@
   <block id="992a67d3dca96bca02f3f0f78e2a1cfd" category="cell">Password per il server di gestione XtremIO</block>
   <block id="a93bcb5a82072c389a3b8a73489512f7" category="cell">porta TCP</block>
   <block id="0787e82546099bff5ac87c0c5d9ce7a3" category="cell">Porta TCP utilizzata per connettersi al server di gestione XTremIO.  Il valore predefinito è 443.</block>
-  <block id="9fa4e650cd8691fa4e931e43145e4dfd" category="summary">Configurazione del raccoglitore dati Fujitsu Eternus.</block>
-  <block id="76bbf6e63b5bbafbef5f94b1231bc156" category="doc">Raccoglitore dati Fujitsu Eternus</block>
-  <block id="27baee321a480862e914c0713eed63ca" category="paragraph">Il raccoglitore dati Fujitsu Eternus acquisisce i dati di inventario utilizzando l'accesso a livello di amministrazione al sistema di archiviazione.</block>
-  <block id="356a176551e40cab7b2346474eb8414b" category="paragraph">Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dallo storage Fujitsu Eternus.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:</block>
-  <block id="9f66700a9e61cc8f9d73ebf3758934dc" category="cell">Pool sottile, pool di livelli flessibile, gruppo raid</block>
-  <block id="9a2dd0553643575c114f67eb5af46be9" category="cell">Volume standard, volume dati Snap (SDV), volume pool dati Snap (SDPV), volume thin provisioning (TPV), volume livello flessibile (FTV), volume wide striping (WSV)</block>
-  <block id="7d023b2b798bae1346a6818191492724" category="cell">Adattatore di canale</block>
-  <block id="895e3cd28422f162dfb0a18d997e89c7" category="paragraph">Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.</block>
-  <block id="9d597b15876cd2c5bb9b786f0f4e5ef4" category="list-text">Un indirizzo IP dello storage Eternus, che non può essere delimitato da virgole</block>
-  <block id="46614f5e8cdddc2a44a95b7ec777cc30" category="list-text">Nome utente e password di livello di amministrazione SSH</block>
-  <block id="ab557c35881f71a55e4fafded4111238" category="list-text">Porta 22</block>
-  <block id="3cfd8b82a08186322b61ebdaff18da99" category="list-text">Assicurarsi che lo scorrimento della pagina sia disabilitato (clienv-show-more-scroll disable)</block>
-  <block id="3073eb22ff046851d2773f6b9b9cccd5" category="cell">Indirizzo IP di Eternus Storage</block>
-  <block id="4fa315e5b29dfdb8f82f1868c0a1de5f" category="cell">Indirizzo IP dello storage Eternus</block>
-  <block id="e071ed8c236cffb19cf488375af0496c" category="cell">Nome utente per l'archiviazione Eternus</block>
-  <block id="1dc2d051123dfeb19bf13ffe4f1c7781" category="cell">Password per l'archiviazione Eternus</block>
-  <block id="883febd6f18d92fba02f341c896a50d2" category="cell">"Errore durante il recupero dei dati" con messaggi di errore "Errore durante la ricerca del prompt CLI" o "Errore durante la ricerca del prompt alla fine dei risultati della shell"</block>
-  <block id="1e1dcdf0229ed6e4040c2ded250c7477" category="cell">Probabilmente causato da: il sistema di archiviazione ha lo scorrimento delle pagine abilitato.  Possibile soluzione: * Provare a disabilitare lo scorrimento della pagina eseguendo il seguente comando: set clienv-show-more -scroll disable</block>
-  <block id="bdaf6ab402ed62b6993826e531f83a19" category="cell">"Errore di connessione" con messaggi di errore "Impossibile creare un'istanza di una connessione SSH allo storage" o "Impossibile creare un'istanza di una connessione a VirtualCenter"</block>
-  <block id="f5e86717b7f98bd7a5fa01557cb08665" category="cell">Probabili cause: * Credenziali errate.  * Indirizzo IP errato.  * Problema di rete.  * Lo storage potrebbe essere inattivo o non rispondere.  Possibili soluzioni: * Verificare le credenziali e l'indirizzo IP immessi.  * Prova a comunicare con l'archiviazione utilizzando il client SSH.</block>
   <block id="2af1bc57f00c07afe945f9aa64a9712f" category="summary">Configurare il raccoglitore dati di Google Compute</block>
   <block id="ed3cd63dd0baae2764478daf8451ac08" category="doc">Raccoglitore dati NetApp Google Compute</block>
   <block id="962baa7c5b677a19767f3eb25401b9a3" category="paragraph">Questo raccoglitore di dati supporta la raccolta di inventario e prestazioni dalle configurazioni della piattaforma cloud di Google Compute.  Questo raccoglitore cercherà di scoprire tutte le risorse di calcolo all'interno di tutti i progetti all'interno di un'organizzazione Google.  Se desideri scoprire più organizzazioni Google con Data Infrastructure Insights, dovrai distribuire un raccoglitore Data Infrastructure Insights per organizzazione.</block>
@@ -11756,7 +11736,6 @@
   <block id="305d795c0691186d2df68b4fc20ac11c" category="sidebar">File VNX (Celerra)</block>
   <block id="0d72e0c9bde5708a77d39a52ce138dbe" category="sidebar">VNX Unificato</block>
   <block id="0f299b4c65ffefdf8b00e0b3345bf685" category="sidebar">XtremIO</block>
-  <block id="053f42c6bae3432cae270ea978f7e638" category="sidebar">Fujitsu</block>
   <block id="8b36e9207c24c76e6719268e49201d94" category="sidebar">Google</block>
   <block id="44cf206eca8a23c81576d1e81a632654" category="sidebar">HP Enterprise</block>
   <block id="dc20128ad51d4736f32ce4774255be05" category="sidebar">HP Alletra 9000 e Primera</block>
@@ -14162,4 +14141,16 @@
   <block id="25a317566de430ddfd2c6f4b3fdea612" category="list-text">ci-k8s-change-observer</block>
   <block id="9da5aa79f5375ccea3c84723b5759557" category="cell">Vedo messaggi di errore da Telegraf simili al seguente, ma Telegraf si avvia e funziona: E! [inputs.kubernetes] Errore nel plugin:<block ref="6d1752bb8ee46f6164f07ea885d5c072" category="inline-link-rx"></block> stato HTTP restituito 403 Forbidden</block>
   <block id="51635ff11969666db6bdeaf0c68d58b0" category="cell">Questi messaggi potrebbero comparire se stai utilizzando una versione di Kubernetes inferiore alla 1.33. La risorsa RBAC "nodes/pods" utilizzata da telegraf non esiste in queste versioni. Consulta la sezione "For Kubernetes versions &lt; 1.33" di operator-additional-permissions.yaml per le risorse RBAC richieste nelle versioni precedenti.</block>
+  <block id="55c55b1241c0ea96ea6cef65b10a23e4" category="inline-link-macro">Promox Virtual Environment</block>
+  <block id="9ddb2ce85d3b0c6085884776fe61a596" category="cell"><block ref="9ddb2ce85d3b0c6085884776fe61a596" category="inline-link-macro-rx"></block></block>
+  <block id="66036899193ada3425c77162bf9d742c" category="summary">Configurare il raccoglitore di dati di Promox Virtual Environment.</block>
+  <block id="dc8f767a3f6e8f9b98077b7e9a688c5d" category="paragraph">Il collector DII Promox Virtual Environment raccoglierà i dati di inventario. Questo è un collector basato su API REST HTTPS.</block>
+  <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">Nome host o indirizzo IP</block>
+  <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">Nome host Indirizzo IP del sistema storage</block>
+  <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">ID token API</block>
+  <block id="1a07b6dc4baf1e102f15f62b2aa13efc" category="cell">Token API necessario per l'accesso</block>
+  <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">Segreto del token API</block>
+  <block id="923e5171366e1120624f5ea15d195544" category="cell">Segreto per il token sopra</block>
+  <block id="07d3835e20364558e54bb222fac4e80c" category="cell">Porta utilizzata per la comunicazione HTTPS (predefinita 8006)</block>
+  <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Promox VE</block>
 </blocks>
