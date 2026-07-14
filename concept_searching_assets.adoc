@@ -66,6 +66,7 @@ La ricerca non distingue tra maiuscole e minuscole.
 
 
 
+[[search-using-indexed-terms]]
 == Ricerca tramite termini indicizzati
 
 Le ricerche che corrispondono a un numero maggiore di termini indicizzati generano punteggi più alti.

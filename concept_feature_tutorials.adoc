@@ -18,6 +18,7 @@ Apprendi in modo efficiente Data Infrastructure Insights con i nostri tutorial s
 
 
 
+[[checklist-and-video-tutorials]]
 == Lista di controllo e tutorial video
 
 L'*elenco di controllo di avvio* visualizzato nel tenant di Data Infrastructure Insights contiene un elenco di diverse attività e concetti utili.  Selezionando un elemento nella checklist si accede alla pagina Data Infrastructure Insights appropriata per quel concetto.  Ad esempio, cliccando sulla voce _Crea una dashboard_ si apre la pagina *Dashboard* Data Infrastructure Insights .
@@ -35,12 +36,14 @@ NOTE: Puoi visualizzare i tutorial nell'ordine che preferisci, tutte le volte ch
 
 
 
+[[dismissing-the-checklist]]
 === Ignorare la checklist
 
 L'elenco di controllo di avvio viene visualizzato finché non si fa clic sul collegamento _Non mostrare più_ nella parte inferiore dell'elenco di controllo.  Anche dopo aver eliminato la checklist, i tutorial restano disponibili in ogni pagina appropriata Data Infrastructure Insights finché non li elimini tutti dalla barra dell'intestazione del messaggio.
 
 
 
+[[video-tutorials]]
 == Video tutorial
 
 Guarda i seguenti video per saperne di più.

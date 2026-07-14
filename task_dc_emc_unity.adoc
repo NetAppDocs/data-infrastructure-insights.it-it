@@ -14,6 +14,7 @@ Il raccoglitore dati DELL EMC Unity (in precedenza VNXe) fornisce supporto di in
 
 
 
+[[requirements]]
 == Requisiti
 
 * Il data collector Unity è basato sulla CLI; è necessario installare Unisphere per Unity CLI (uemcli.exe) sull'unità di acquisizione in cui risiede il data collector VNXe.
@@ -26,11 +27,12 @@ Il raccoglitore dati DELL EMC Unity (in precedenza VNXe) fornisce supporto di in
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati Unity.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -62,9 +64,10 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -82,9 +85,10 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -99,15 +103,17 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

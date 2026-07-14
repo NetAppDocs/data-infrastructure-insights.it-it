@@ -200,6 +200,9 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_nutanix.html["Serie Nutanix NX"] | Infrastruttura 
 
 
+| link:task_dc_nutanix_ahv.html["Nutanix AHV Series"] | Infrastruttura 
+
+
 | link:task_dc_oracle_zfs.html["Dispositivo di archiviazione Oracle ZFS"] | Infrastruttura 
 
 

@@ -14,6 +14,7 @@ Facendo clic sulla sinossi di un avviso si apre la pagina che fornisce informazi
 
 
 
+[[alert-details-page-displays-user]]
 == La pagina Dettagli avviso mostra l'utente
 
 Dettagli avviso fornisce informazioni sull'avviso selezionato nella pagina Avvisi.
@@ -55,6 +56,7 @@ Dettagli avviso fornisce informazioni sull'avviso selezionato nella pagina Avvis
 
 
 
+[[related-user]]
 === Utente correlato
 
 * Nome utente e titolo
@@ -67,6 +69,7 @@ Dettagli avviso fornisce informazioni sull'avviso selezionato nella pagina Avvis
 
 
 
+[[activity]]
 === Attività
 
 Mostra l'attività dell'utente negli ultimi 7 giorni e l'ultima posizione da cui l'utente ha effettuato l'accesso.

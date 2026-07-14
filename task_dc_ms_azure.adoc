@@ -14,6 +14,7 @@ Data Infrastructure Insights utilizza il raccoglitore dati di calcolo di Azure p
 
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni.
@@ -32,11 +33,12 @@ Una volta configurato correttamente l'account e registrata l'applicazione in Azu
 
 
 
+[[configuration]]
 == Configurazione
 
 Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -54,9 +56,10 @@ Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -74,6 +77,7 @@ Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

@@ -18,6 +18,7 @@ Crea e gestisci entità aziendali per il tuo ambiente aziendale utilizzando il t
 
 
 
+[[creating-a-business-entity]]
 == Creazione di un'entità aziendale
 
 Per creare un'entità aziendale, procedere come segue:
@@ -39,6 +40,7 @@ NOTE: I valori selezionati devono comporre un'entità aziendale totale univoca. 
 
 
 
+[[applying-a-business-entity-to-an-object]]
 == Applicazione di un'entità aziendale a un oggetto
 
 Il modo più semplice per applicare un'entità aziendale a uno o più oggetti è tramite una query.
@@ -59,6 +61,7 @@ NOTE: A un oggetto può essere associata una sola entità aziendale.
 
 
 
+[[removing-a-business-entity-from-an-object]]
 == Rimozione di un'entità aziendale da un oggetto
 
 Per rimuovere un'entità aziendale da uno o più oggetti, eseguire una query e selezionare l'oggetto/gli oggetti, fare clic su *Azioni in blocco* e selezionare _Rimuovi annotazione_.  Selezionare l'annotazione Entità aziendale e fare clic su *Elimina*.

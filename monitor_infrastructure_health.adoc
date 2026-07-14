@@ -18,6 +18,7 @@ Data Infrastructure Insights fornisce un monitoraggio completo dello stato dell'
 
 
 
+[[the-infrastructure-health-dashboard]]
 == Il dashboard sulla salute delle infrastrutture
 
 
@@ -31,6 +32,7 @@ Per impostazione predefinita, i punteggi di integrità sono raggruppati per data
 
 
 
+[[configure-monitors-to-use-for-infrastructure-health]]
 == Configurare i monitor da utilizzare per lo stato dell'infrastruttura
 
 I punteggi di integrità sono determinati da avvisi configurati per l'inclusione nei calcoli di integrità del sistema.
@@ -47,6 +49,7 @@ image:infra_health_monitor_advanced_config.png["monitorare la configurazione ava
 
 
 
+[[health-scores-explained]]
 == Spiegazione dei punteggi di salute
 
 I punteggi vengono presentati su una scala da 0 a 100, dove 100 corrisponde a piena salute. Gli oggetti infrastrutturali monitorati che presentano problemi attuali o recenti abbasseranno questo punteggio in base alle seguenti medie ponderate:

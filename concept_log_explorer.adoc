@@ -32,10 +32,12 @@ image:LogExplorer_QueryForFailed.png["Esempio di query che mostra il filtro"]
 
 
 
+[[filtering]]
 == Filtraggio
 
 
 
+[[include-exclude]]
 === Includi / Escludi
 
 Quando si filtrano i log, è possibile scegliere di *includere* (ad esempio "Filtra per") o *escludere* le stringhe digitate.  Le stringhe escluse vengono visualizzate nel filtro completato come "NOT <stringa>".
@@ -49,6 +51,7 @@ NOTE: In qualsiasi momento puoi cliccare su _Crea un Log Monitor_ per creare un 
 
 
 
+[[advanced-filtering]]
 === Filtraggio avanzato
 
 Quando si filtrano valori di testo o di elenco in query o widget della dashboard, quando si inizia a digitare viene presentata l'opzione per creare un *filtro con caratteri jolly* in base al testo corrente.  Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione jolly.  È anche possibile creare espressioni utilizzando NOT, AND o OR, oppure selezionare l'opzione "Nessuno" per filtrare i valori nulli.
@@ -112,6 +115,7 @@ Se si racchiude una stringa di filtro tra virgolette doppie, Insight considera t
 
 
 
+[[the-chart-legend]]
 === La legenda del grafico
 
 Anche la _Legend_ sotto il grafico riserva qualche sorpresa.  Per ogni risultato (in base al filtro corrente) mostrato nella Legenda, hai la possibilità di visualizzare solo i risultati per quella riga (Aggiungi filtro) oppure di visualizzare tutti i risultati NON per quella riga (Aggiungi filtro di esclusione).  Il grafico e l'elenco delle voci di registro vengono aggiornati per mostrare i risultati in base alla selezione effettuata.  Per rimuovere questo filtro, aprire nuovamente la Legenda e selezionare la [X] per cancellare il filtro basato sulla Legenda.
@@ -120,6 +124,7 @@ image:Log_Advanced_Query_Legend.png["Legenda query avanzata che mostra \"Aggiung
 
 
 
+[[log-details]]
 == Dettagli del registro
 
 Facendo clic in un punto qualsiasi di una voce del registro nell'elenco, si aprirà un riquadro dei dettagli per quella voce.  Qui puoi trovare maggiori informazioni sull'evento.
@@ -132,6 +137,7 @@ image:LogExplorer_DetailPane.png["Riquadro dei dettagli delle voci di registro"]
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Qui troverete suggerimenti per la risoluzione dei problemi relativi alle query di registro.

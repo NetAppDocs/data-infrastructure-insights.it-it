@@ -18,6 +18,7 @@ Le notifiche e-mail ti consentono di rimanere informato su potenziali attacchi, 
 
 
 
+[[potential-attack-alerts-and-warnings]]
 == Avvisi e avvisi di potenziali attacchi
 
 Per inviare notifiche di avviso di _Potenziale attacco_, inserisci gli indirizzi email dei destinatari nella sezione _Invia avvisi di potenziale attacco_.  Per ogni azione sull'avviso vengono inviate notifiche e-mail all'elenco dei destinatari dell'avviso.
@@ -26,6 +27,7 @@ Per inviare notifiche di _Avviso_, inserisci gli indirizzi email dei destinatari
 
 
 
+[[agent-and-data-collector-health-monitoring]]
 == Monitoraggio dello stato di salute dell'agente e del raccoglitore dati
 
 È possibile monitorare lo stato di salute degli agenti e delle origini dati tramite notifiche.
@@ -43,6 +45,7 @@ Tieni presente quanto segue:
 
 
 
+[[receiving-agent-and-data-collector-upgrade-notifications]]
 == Ricezione di notifiche di aggiornamento dell'agente e del raccoglitore dati
 
 * Inserire l'ID e-mail in "Avvisi sanitari sulla raccolta dati".
@@ -52,6 +55,7 @@ Tieni presente quanto segue:
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 |===

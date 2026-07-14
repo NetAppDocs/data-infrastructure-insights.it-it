@@ -20,6 +20,7 @@ Data Infrastructure Insights Workload Security si integra con ONTAP per ricevere
 
 
 
+[[prerequisites]]
 == Prerequisiti
 
 * Versione minima ONTAP : 9.13.0.
@@ -30,6 +31,7 @@ image:WS_Access_Denied_Enable_in_Collector.png["Abilitare l'accesso negato nella
 
 
 
+[[user-permissions-required]]
 == Autorizzazioni utente richieste
 
 Se il Data Collector viene aggiunto utilizzando le credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
@@ -46,6 +48,7 @@ Per saperne di più sulla configurazione di altrilink:task_add_collector_svm.htm
 
 
 
+[[access-denied-events]]
 == Eventi di accesso negato
 
 Una volta acquisiti gli eventi dal sistema ONTAP , la pagina Workload Security Forensics mostrerà gli eventi di accesso negato.  Oltre alle informazioni visualizzate, è possibile visualizzare le autorizzazioni utente mancanti per una particolare operazione aggiungendo la colonna _Attività desiderata_ alla tabella tramite l'icona a forma di ingranaggio.

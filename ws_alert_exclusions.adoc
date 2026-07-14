@@ -24,6 +24,7 @@ L'esclusione degli avvisi è configurata per tenant e include quanto segue:
 
 
 
+[[manage-exclusions-and-auditing]]
 == Gestisci esclusioni e auditing
 
 * Gli amministratori possono aggiungere o rimuovere estensioni di file, singoli utenti o percorsi in qualsiasi momento.
@@ -32,6 +33,7 @@ L'esclusione degli avvisi è configurata per tenant e include quanto segue:
 
 
 
+[[users-and-paths]]
 == Utenti e percorsi
 
 * Elenco di esclusione degli utenti: aggiungi gli utenti da escludere per gli avvisi.
@@ -46,6 +48,7 @@ image:ws_alert_exclusions_paths.png["Percorsi di esclusione degli alert"]
 
 
 
+[[file-types]]
 == Tipi di file
 
 Una volta aggiunto all'elenco dei tipi di file, non verrà generato alcun avviso di attacco di manomissione per quel tipo di file consentito. Si noti che la policy relativa ai tipi di file si applica solo al rilevamento della manomissione dei file.

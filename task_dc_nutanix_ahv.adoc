@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: task_dc_nutanix_ahv.html 
+keywords: data collector, Nutanix, AHV Series 
+summary: Configurare il raccoglitore di dati Nutanix AHV. 
+---
+= Data collector Nutanix AHV
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il collector Nutanix AHV acquisisce l'inventario e le prestazioni di virtualizzazione di Nutanix Acropolis Hypervisor (AHV) da Nutanix Prism Central utilizzando le API REST di Prism Central v4 (Cluster Management e Virtual Machine Management namespaces). Riporta i dati nel modello OData di virtualizzazione (VirtualizationRoot e relative entità: host, macchine virtuali, datastore, dischi virtuali e relazioni).
+
+
+
+[[terminology]]
+== Terminologia
+
+[cols="50,50"]
+|===
+| Termine del fornitore/modello | Termine Data Infrastructure Insights 
+
+
+| Nodo AHV (Host) | Ospite 
+
+
+| Cluster Prism Central | Hypervisor (server virtuale) 
+
+
+| Acropolis VM | Macchina virtuale 
+
+
+| Container di storage | Archivio dati 
+
+
+| Gruppo di volumi ADSF | LUN 
+
+
+| Disco VM | Disco virtuale 
+|===
+Nota: queste sono solo mappature terminologiche comuni e potrebbero non rappresentare tutti i casi per questo raccoglitore di dati.
+
+
+
+[[requirements]]
+== Requisiti
+
+* Indirizzo IP di Prism Central o Fully Qualified Domain Name
+* Nome utente e password locali o LDAP di Prism Central (per inventario e prestazioni è sufficiente un account di sola lettura; Admin non è richiesto)
+* Requisito porta: HTTPS 9440
+* Prism Central versione pc.2023.x o successiva (API v3); pc.7.x o successiva consigliata (API v4)
+* Le metriche sulle prestazioni richiedono Prism Central con API v4.0.b1 o successiva (pc.7.3+). Nelle versioni precedenti, l'inventario viene comunque raccolto ma non vengono riportati dati sulle prestazioni.
+
+
+
+
+[[configuration]]
+== Configurazione
+
+[cols="50,50"]
+|===
+| Campo | Descrizione 
+
+
+| Indirizzo IP di Prism Central | Indirizzo IP o FQDN dell'istanza di Prism Central 
+
+
+| Nome utente | Nome utente Prism Central 
+
+
+| Password | Password di Prism Central 
+|===
+
+
+[[advanced-configuration]]
+== Configurazione avanzata
+
+[cols="50,50"]
+|===
+| Campo | Descrizione 
+
+
+| porta TCP | Porta TCP utilizzata per connettersi a Prism Central. Il valore predefinito è 9440. 
+
+
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 60 minuti. 
+
+
+| Intervallo di sondaggio delle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
+
+
+| Timeout HTTP (sec) | Timeout della richiesta HTTP. Il valore predefinito è 60 secondi. 
+
+
+| Conteggio dei tentativi HTTP | Numero di tentativi HTTP in caso di errori temporanei. Il valore predefinito è 3. 
+|===
+
+
+[[troubleshooting]]
+== Risoluzione dei problemi
+
+Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

@@ -16,11 +16,12 @@ Il raccoglitore dati SolidFire utilizza la SolidFire REST API.  L'unità di acqu
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati NetApp SolidFire All-Flash Array.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -49,6 +50,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[requirements]]
 == Requisiti
 
 Di seguito sono riportati i requisiti per la configurazione di questo raccoglitore dati:
@@ -60,9 +62,10 @@ Di seguito sono riportati i requisiti per la configurazione di questo raccoglito
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -77,9 +80,10 @@ Di seguito sono riportati i requisiti per la configurazione di questo raccoglito
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -97,6 +101,7 @@ Di seguito sono riportati i requisiti per la configurazione di questo raccoglito
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Quando SolidFire segnala un errore, questo viene visualizzato in Data Infrastructure Insights come segue:

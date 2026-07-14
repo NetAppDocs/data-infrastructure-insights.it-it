@@ -20,6 +20,7 @@ IMPORTANT: Prima di apportare modifiche alle autorizzazioni di reporting o alla 
 
 
 
+[[customizing-a-reports-output-format-and-delivery]]
 == Personalizzazione del formato di output e della consegna di un report
 
 È possibile personalizzare il formato e il metodo di consegna dei report.
@@ -41,6 +42,7 @@ image:Reporting_Output_and_Delivery.png["Output e consegna del report"]
 
 
 
+[[copying-a-report-to-the-clipboard]]
 == Copia di un report negli appunti
 
 Utilizzare questa procedura per copiare un report negli appunti.
@@ -59,6 +61,7 @@ image:Reporting_Copy_To_Clipboard.png["Copia di un report negli appunti"]
 
 
 
+[[opening-reports-from-the-clipboard]]
 == Apertura dei report dagli appunti
 
 È possibile aprire una specifica del report precedentemente copiata negli appunti.
@@ -80,12 +83,14 @@ image:Reporting_Open_From_Clipboard.png["Apertura di un report dagli appunti"]
 
 
 
+[[editing-an-existing-report]]
 == Modifica di un report esistente
 
 Tieni presente che la modifica dei file nella loro posizione predefinita comporta il rischio che i report vengano sovrascritti al successivo aggiornamento del catalogo dei report.  Si consiglia di salvare il report modificato con un nuovo nome o di memorizzarlo in una posizione diversa da quella predefinita.
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Qui troverete suggerimenti per la risoluzione dei problemi relativi alla segnalazione.

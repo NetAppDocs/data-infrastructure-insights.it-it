@@ -18,6 +18,7 @@ keywords: AU, acquisition unit, requirements, sizing
 
 
 
+[[requirements]]
 == Requisiti
 
 |===
@@ -92,6 +93,7 @@ Il file system potrebbe utilizzare dello spazio per le sue operazioni generali. 
 |===
 
 
+[[additional-recommendations]]
 == Ulteriori raccomandazioni
 
 * Per un audit e una rendicontazione dei dati accurati, si consiglia vivamente di sincronizzare l'ora sulla macchina dell'unità di acquisizione utilizzando *Network Time Protocol (NTP)* o *Simple Network Time Protocol (SNTP)*.
@@ -99,6 +101,7 @@ Il file system potrebbe utilizzare dello spazio per le sue operazioni generali. 
 
 
 
+[[regarding-sizing]]
 == Per quanto riguarda le dimensioni
 
 È possibile iniziare con una Data Infrastructure Insights Acquisition Unit con soli 8 GB di memoria e 50 GB di spazio su disco; tuttavia, per ambienti più grandi, è opportuno porsi le seguenti domande:

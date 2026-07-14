@@ -17,11 +17,12 @@ NOTE: Questo raccoglitore di Data Infrastructure Insights richiede un utente ONT
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce dati di inventario e prestazioni dal raccoglitore dati FSx- NetApp .  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per l'asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -36,12 +37,14 @@ Data Infrastructure Insights acquisisce dati di inventario e prestazioni dal rac
 |===
 
 
+[[fsx-netapp-terminology]]
 == Terminologia FSx- NetApp
 
 I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trovare nelle pagine di destinazione delle risorse di storage FSx- NetApp .  Molti di questi termini si applicano anche ad altri raccoglitori di dati.
 
 
 
+[[storage]]
 === Magazzinaggio
 
 * Modello: elenco delimitato da virgole dei nomi di modelli univoci e discreti all'interno di questo cluster.
@@ -55,6 +58,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[storage-pool]]
 === Pool di archiviazione
 
 * Archiviazione: su quale array di archiviazione risiede questo pool.  Obbligatorio.
@@ -66,6 +70,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[requirements]]
 == Requisiti
 
 Di seguito sono riportati i requisiti per configurare e utilizzare questo raccoglitore dati:
@@ -77,9 +82,10 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo raccog
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -94,6 +100,7 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo raccog
 |===
 
 
+[[advanced-metrics]]
 == Metriche avanzate
 
 Questo raccoglitore di dati raccoglie le seguenti metriche avanzate dall'archiviazione FSx per NetApp ONTAP :
@@ -115,15 +122,17 @@ Si noti che i comandi API e CLI di FSx recuperano alcuni valori di capacità che
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

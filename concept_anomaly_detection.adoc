@@ -19,12 +19,14 @@ image:anomaly_detection_expert_view.png["grafico che mostra l'anomalia rilevata"
 
 
 
+[[what-is-anomaly-detection]]
 == Che cos'è il rilevamento delle anomalie?
 
 Si verifica un'anomalia quando il valore medio di una metrica si discosta di un certo numero di deviazioni standard dalla media ponderata di tale metrica per le settimane precedenti, con le settimane recenti che hanno un peso maggiore rispetto alle settimane precedenti.  Data Infrastructure Insights offre la possibilità di monitorare i dati e di inviare avvisi quando vengono rilevate anomalie.  È possibile impostare i livelli di "sensibilità" del rilevamento.  Ad esempio, una sensibilità maggiore si avrebbe quando il valore medio si discosta dalla media con meno deviazioni standard, determinando così la generazione di più avvisi.  Al contrario, minore sensibilità = più deviazioni standard dalla media = meno avvisi.
 
 
 
+[[anomaly-detection-monitoring-differs-from-threshold-monitoring]]
 === Il monitoraggio del rilevamento delle anomalie è diverso dal monitoraggio delle soglie.
 
 * Il *monitoraggio basato su soglie* funziona quando si hanno soglie predefinite per metriche specifiche.  In altre parole, quando si ha una chiara comprensione di cosa ci si aspetta (ovvero entro un intervallo normale).
@@ -39,6 +41,7 @@ image:ADMonitor_blurb.png["I monitor di rilevamento delle anomalie sono utili qu
 
 
 
+[[when-would-i-need-anomaly-detection]]
 == Quando avrei bisogno del rilevamento delle anomalie?
 
 Il monitoraggio del rilevamento delle anomalie può fornire avvisi utili in molte situazioni, tra cui:
@@ -50,6 +53,7 @@ Il monitoraggio del rilevamento delle anomalie può fornire avvisi utili in molt
 
 
 
+[[creating-an-anomaly-detection-monitor]]
 == Creazione di un monitor di rilevamento delle anomalie
 
 Per ricevere avvisi sulle anomalie, creare un monitor andando su *Osservabilità > Avvisi > +Monitor*.  Selezionare _Anomaly Detection Monitor_ come tipo di monitor.
@@ -79,6 +83,7 @@ NOTE: Quando viene creato un monitor, DII esamina tutti i dati esistenti della s
 
 
 
+[[viewing-the-anomalies]]
 == Visualizzazione delle anomalie
 
 Nella landing page di un avviso, gli avvisi attivati quando vengono rilevate anomalie mostreranno una banda evidenziata nel grafico, dal momento in cui la metrica ha raggiunto un picco al di fuori dei limiti previsti fino a quando è tornata all'interno di tali limiti.

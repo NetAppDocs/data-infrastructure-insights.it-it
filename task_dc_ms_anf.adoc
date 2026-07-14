@@ -14,6 +14,7 @@ Data Infrastructure Insights utilizza il raccoglitore dati Azure NetApp Files pe
 
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni.
@@ -32,11 +33,12 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-ser
 
 
 
+[[configuration]]
 == Configurazione
 
 Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -54,9 +56,10 @@ Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -65,6 +68,7 @@ Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 * Le credenziali utilizzate dal raccoglitore dati ANF devono avere accesso a tutte le sottoscrizioni di Azure che contengono volumi ANF.

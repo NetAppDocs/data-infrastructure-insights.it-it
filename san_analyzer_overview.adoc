@@ -20,6 +20,7 @@ image:san_analyzer_example_with_panel.png["Mappa topologica SAN Analyzer di un s
 
 
 
+[[explore-connections-among-your-assets]]
 == Esplora le connessioni tra le tue risorse
 
 Selezionare *Osservabilità > Analizza > Analizzatore SAN* per visualizzare l'analizzatore SAN.  Imposta un filtro per Applicazione, Host, Fabric e/o Storage.  Viene visualizzata la mappa degli oggetti, che mostra gli oggetti collegati.  Passa il mouse su un oggetto per visualizzare le metriche del traffico per quelle connessioni.
@@ -45,6 +46,7 @@ image:san_analyzer_iscsi_traffic.png["Traffico iSCSI evidenziato"]
 
 
 
+[[troubleshooting-tips]]
 == Suggerimenti per la risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi:

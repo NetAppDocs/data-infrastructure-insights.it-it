@@ -14,6 +14,7 @@ keywords: query, queries, modify, edit, delete, remove
 
 
 
+[[modifying-a-query]]
 == Modifica di una query
 
 .Passi
@@ -35,6 +36,7 @@ Dopo aver apportato tutte le modifiche necessarie, procedere in uno dei seguenti
 
 
 
+[[deleting-a-query]]
 == Eliminazione di una query
 
 Per eliminare una query, fare clic su *Query* e selezionare *Mostra tutte le query*, quindi eseguire una delle seguenti operazioni:

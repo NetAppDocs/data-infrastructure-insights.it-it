@@ -20,6 +20,7 @@ Le tue Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsig
 
 
 
+[[requirements-for-api-access]]
 == Requisiti per l'accesso all'API
 
 * Per concedere l'accesso viene utilizzato un modello di token di accesso API.
@@ -28,6 +29,7 @@ Le tue Data Infrastructure Insightslink:https://docs.netapp.com/us-en/cloudinsig
 
 
 
+[[api-documentation-swagger]]
 == Documentazione API (Swagger)
 
 Le informazioni API più recenti sono reperibili accedendo a Data Infrastructure Insights e andando su *Amministrazione > Accesso API*.  Fare clic sul collegamento *Documentazione API*.
@@ -40,6 +42,7 @@ image:API_Swagger_Example.png["Esempio di API Swagger"]
 
 
 
+[[api-access-tokens]]
 == Token di accesso API
 
 Prima di utilizzare l'API Data Infrastructure Insights , è necessario creare uno o più *token di accesso API*.  I token di accesso vengono utilizzati per tipi di API specifici e possono concedere autorizzazioni di lettura e/o scrittura.  È anche possibile impostare la scadenza per ciascun token di accesso.  Tutte le API dei tipi specificati sono valide per il token di accesso.  Ogni token è privo di nome utente o password.
@@ -77,6 +80,7 @@ Consulta le pagine Swagger per esempi specifici per l'API che desideri utilizzar
 
 
 
+[[api-type]]
 == Tipo di API
 
 L'API Data Infrastructure Insights è basata su categorie e attualmente contiene i seguenti tipi:
@@ -100,12 +104,14 @@ Si noti che i tipi di API a cui un utente ha accesso dipendono anche dal link:co
 
 
 
+[[inventory-traversal]]
 == Attraversamento dell'inventario
 
 Questa sezione descrive come attraversare una gerarchia di oggetti Data Infrastructure Insights .
 
 
 
+[[top-level-objects]]
 === Oggetti di primo livello
 
 I singoli oggetti vengono identificati nelle richieste tramite un URL univoco (chiamato "self" in JSON) e richiedono la conoscenza del tipo di oggetto e dell'ID interno. Per alcuni degli oggetti di livello superiore (host, storage e così via), l'API REST fornisce l'accesso alla raccolta completa.
@@ -118,6 +124,7 @@ Ad esempio, per recuperare tutti gli archivi da un tenant denominato _mysite.c01
  https://mysite.c01.cloudinsights.netapp.com/rest/v1/assets/storages
 
 
+[[children-and-related-objects]]
 === Bambini e oggetti correlati
 
 Gli oggetti di livello superiore, come Storage, possono essere utilizzati per passare ad altri oggetti figlio e correlati.  Ad esempio, per recuperare tutti i dischi per uno storage specifico, concatenare l'URL "self" dello storage con "/disks", ad esempio:
@@ -125,6 +132,7 @@ Gli oggetti di livello superiore, come Storage, possono essere utilizzati per pa
  https://<tenant>/rest/v1/assets/storages/4537/disks
 
 
+[[expands]]
 == Si espande
 
 Molti comandi API supportano il parametro *expand*, che fornisce dettagli aggiuntivi sull'oggetto o sugli URL per gli oggetti correlati.
@@ -147,6 +155,7 @@ Per scoraggiare questo fenomeno, le richieste di raccolte di livello superiore n
 
 
 
+[[performance-data]]
 == Dati sulle prestazioni
 
 I dati sulle prestazioni vengono raccolti su più dispositivi come campioni separati.  Ogni ora (impostazione predefinita), Data Infrastructure Insights aggrega e riepiloga i campioni di prestazioni.
@@ -188,6 +197,7 @@ Sono disponibili riepiloghi delle prestazioni per questi tipi di contatori:
 
 
 
+[[object-performance-metrics]]
 == Metriche delle prestazioni degli oggetti
 
 L'API può restituire metriche dettagliate per gli oggetti nel tuo tenant, ad esempio:
@@ -200,6 +210,7 @@ Vedi illink:#api-documentation-swagger["Documentazione API Swagger"] per informa
 
 
 
+[[performance-history-data]]
 == Dati storici delle prestazioni
 
 I dati storici vengono presentati nei dati sulle prestazioni come un elenco di coppie di mappe di timestamp e contatori.
@@ -215,12 +226,14 @@ image:DiskPerformanceExample.png["Prestazioni del disco JSON"]
 
 
 
+[[objects-with-capacity-attributes]]
 == Oggetti con attributi di capacità
 
 Gli oggetti con attributi di capacità utilizzano tipi di dati di base e CapacityItem per la rappresentazione.
 
 
 
+[[capacityitem]]
 === CapacitàArticolo
 
 CapacityItem è una singola unità logica di capacità.  Ha "value" e "highThreshold" in unità definite dal suo oggetto padre.  Supporta anche una mappa di ripartizione opzionale che spiega come viene costruito il valore della capacità.  Ad esempio, la capacità totale di uno storagePool da 100 TB sarebbe un CapacityItem con un valore pari a 100.  La ripartizione potrebbe mostrare 60 TB allocati per i "dati" e 40 TB per gli "snapshot".
@@ -233,6 +246,7 @@ image:StoragePoolCapacity.png["Esempio di capacità del pool di archiviazione"]
 
 
 
+[[using-search-to-look-up-objects]]
 == Utilizzo della ricerca per cercare oggetti
 
 L'API di ricerca è un semplice punto di accesso al sistema.  L'unico parametro di input per l'API è una stringa in formato libero e il JSON risultante contiene un elenco categorizzato di risultati.  I tipi sono tipi di asset diversi dall'inventario, come storage, host, dataStore e così via.  Ogni tipo conterrebbe un elenco di oggetti del tipo che corrispondono ai criteri di ricerca.
@@ -243,6 +257,7 @@ L'API RESTful di Cloud Insight è un punto di integrazione primario che consente
 
 
 
+[[disabling-or-revoking-an-api-token]]
 == Disabilitazione o revoca di un token API
 
 Per disabilitare temporaneamente un token API, nella pagina dell'elenco dei token API, fare clic sul menu "tre punti" per l'API e selezionare _Disabilita_.  È possibile riattivare il token in qualsiasi momento utilizzando lo stesso menu e selezionando _Abilita_.
@@ -253,6 +268,7 @@ image:API_Disable_Token.png["Disabilita o revoca un token API"]
 
 
 
+[[rotating-expired-api-access-tokens]]
 == Rotazione dei token di accesso API scaduti
 
 I token di accesso API hanno una data di scadenza.  Quando un token di accesso API scade, gli utenti devono generare un nuovo token (di tipo _Data Ingestion_ con autorizzazioni di lettura/scrittura) e riconfigurare Telegraf per utilizzare il token appena generato anziché quello scaduto.  Di seguito sono riportati i passaggi dettagliati per procedere.

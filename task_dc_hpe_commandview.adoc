@@ -14,11 +14,12 @@ Il raccoglitore dati HP Enterprise Command View Advanced Edition supporta l'indi
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati HP Enterprise Command View.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -44,6 +45,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[inventory-requirements]]
 == Requisiti di inventario
 
 Per raccogliere i dati di inventario è necessario disporre di quanto segue:
@@ -55,6 +57,7 @@ Per raccogliere i dati di inventario è necessario disporre di quanto segue:
 
 
 
+[[performance-requirements]]
 == Requisiti di prestazione
 
 Per raccogliere dati sulle prestazioni è necessario soddisfare i seguenti requisiti:
@@ -82,9 +85,10 @@ Per raccogliere dati sulle prestazioni è necessario soddisfare i seguenti requi
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -122,6 +126,7 @@ Nota: in HDS USP, USP V e VSP, qualsiasi disco può appartenere a più di un gru
 
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
 |===
@@ -152,15 +157,17 @@ Nota: in HDS USP, USP V e VSP, qualsiasi disco può appartenere a più di un gru
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 
@@ -175,9 +182,10 @@ Ecco alcune cose da provare se riscontri problemi con questo strumento di raccol
 |===
 
 
+[[performance]]
 === Prestazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

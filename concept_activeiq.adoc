@@ -27,6 +27,7 @@ image:AIQ_Summary_Example.png["Riepilogo pagina di archiviazione"]
 
 
 
+[[opening-the-digital-advisor-page]]
 == Apertura della pagina Digital Advisor
 
 Quando si fa clic sul collegamento a una pagina Digital Advisor , se non si è effettuato l'accesso al proprio account Digital Advisor , è necessario eseguire i seguenti passaggi per visualizzare la pagina Digital Advisor per il nodo di archiviazione.
@@ -37,12 +38,14 @@ Quando si fa clic sul collegamento a una pagina Digital Advisor , se non si è e
 
 
 
+[[querying-for-risks]]
 == Ricerca dei rischi
 
 In Data Infrastructure Insights, è possibile aggiungere la colonna *monitoring.count* a una query di archiviazione o di nodo di archiviazione.  Se il risultato restituito include Digital Advisor- Sistemi di archiviazione monitorati, la colonna monitoring.count visualizzerà il numero di rischi per il sistema di archiviazione o il nodo.
 
 
 
+[[dashboards]]
 == Dashboard
 
 È possibile creare widget (ad esempio grafici a torta, widget tabella, widget barra, widget colonna, widget grafico a dispersione e widget valore singolo) per visualizzare i rischi degli oggetti per l'archiviazione e i nodi di archiviazione per i sistemi NetApp Clustered Data ONTAP monitorati da Digital Advisor.  È possibile selezionare "Rischi oggetto" come colonna o metrica in questi widget in cui l'oggetto di interesse è Storage o Storage Node.

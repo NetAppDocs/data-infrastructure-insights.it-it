@@ -18,6 +18,7 @@ summary: 'Device Resolution ti aiuta a monitorare con precisione le prestazioni 
 
 
 
+[[creating-device-resolution-rules]]
 == Creazione di regole di risoluzione del dispositivo
 
 Quando si creano regole, si inizia identificando la fonte delle informazioni su cui viene eseguita la regola, il metodo utilizzato per estrarre le informazioni e se la ricerca DNS viene applicata ai risultati della regola.
@@ -109,12 +110,14 @@ I risultati dell'esecuzione della regola vengono visualizzati nella scheda *Iden
 
 
 
+[[pausing-and-resuming-rules]]
 === Regole di pausa e ripresa
 
 Per impedire l'esecuzione di una regola, seleziona "Pausa" dal menu a destra della regola oppure seleziona più regole e scegli "Pausa" dal menu a discesa "Azioni di gruppo". Puoi riprendere l'esecuzione della regola allo stesso modo.
 
 
 
+[[starting-an-automatic-device-resolution-update]]
 == Avvio di un aggiornamento automatico della risoluzione del dispositivo
 
 Un aggiornamento della risoluzione del dispositivo conferma le modifiche manuali aggiunte dall'ultima esecuzione completa della risoluzione automatica del dispositivo.  L'esecuzione di un aggiornamento può essere utilizzata per confermare ed eseguire solo le nuove voci manuali apportate alla configurazione della risoluzione del dispositivo.  Non viene eseguita alcuna risoluzione completa del dispositivo.
@@ -128,6 +131,7 @@ Un aggiornamento della risoluzione del dispositivo conferma le modifiche manuali
 
 
 
+[[rule-assisted-manual-identification]]
 == Identificazione manuale assistita da regole
 
 Questa funzionalità viene utilizzata in casi speciali in cui si desidera eseguire una regola specifica o un elenco di regole (con o senza un riordino una tantum) per risolvere host, dispositivi di archiviazione e dispositivi a nastro sconosciuti.
@@ -163,12 +167,14 @@ Quando vengono rilevate delle regole applicabili, i nomi delle regole vengono vi
 
 
 
+[[ai-assisted-rule-generation]]
 == Generazione di regole assistita dall'intelligenza artificiale
 
 In alternativa, puoi eliminare le congetture grazie all'identificazione dei dispositivi basata sull'intelligenza artificiale, che ti permette di creare regole in modo semplice e veloce. Esegui semplicemente il Generatore di regole assistito dall'IA per analizzare il tuo ambiente e suggerire regole di Device Resolution, aiutandoti a identificare e gestire rapidamente più dispositivi.
 
 
 
+[[get-started]]
 === Inizia subito
 
 Per iniziare a usare l'IA per generare regole di risoluzione, un amministratore deve prima abilitare le regole generate dall'IA.
@@ -183,6 +189,7 @@ Prima di abilitare le regole generate dall'IA, ti verrà richiesto di confermare
 
 
 
+[[check-progress]]
 === Controlla i progressi
 
 Periodicamente, DII creerà una notifica quando saranno disponibili altri dispositivi per una possibile identificazione. Se vedi un punto verde sull'icona della campana in alto a destra della pagina, selezionala per visualizzare la notifica.
@@ -197,12 +204,14 @@ image:ahr_ai_badge.png["Badge della regola generato dall'IA, larghezza=400"]
 
 
 
+[[resume-and-go]]
 === Riprendi e vai
 
 Le regole generate dall'AI sono in stato _Paused_ per impostazione predefinita. Devi rivedere ogni regola e _Resume_ prima che possa identificare i dispositivi.
 
 
 
+[[related]]
 == Correlato:
 
 link:task_device_resolution_fibre_channel.html["Risoluzione del dispositivo Fibre Channel"] link:task_device_resolution_ip.html["Risoluzione del dispositivo IP"] link:task_device_resolution_preferences.html["Impostazione delle preferenze di risoluzione del dispositivo"]

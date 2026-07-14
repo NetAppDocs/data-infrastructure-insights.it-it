@@ -18,6 +18,7 @@ Determina il dimensionamento ottimale delle macchine Agent misurando le frequenz
 
 
 
+[[requirements]]
 == Requisiti:
 
 * IP del cluster
@@ -80,6 +81,7 @@ Vedi illink:concept_cs_agent_requirements.html["Requisiti dell'agente"] pagina p
 
 
 
+[[example]]
 == Esempio
 
 Supponiamo di avere tre SVMS che generano frequenze di eventi rispettivamente di 100, 200 e 300 eventi al secondo.
@@ -141,6 +143,7 @@ Overall svm audit_svm is generating 300 events/sec
  [root@ci-cs-data agent]#
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 |===

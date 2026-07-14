@@ -14,6 +14,7 @@ Data Infrastructure Insights conserva i dati per periodi che vanno da 7 giorni a
 
 
 
+[[data-retention]]
 == Conservazione dei dati
 
 Data Infrastructure Insights conserva i dati per un periodo di tempo determinato dal tipo di abbonamento.
@@ -31,12 +32,14 @@ Per informazioni dettagliate sulle funzionalità e le opzioni di prezzo Data Inf
 
 
 
+[[downsampling-of-data]]
 == Sottocampionamento dei dati
 
 Il *downsampling* fornisce un'approssimazione statistica dei dati nei grafici, offrendo una panoramica efficiente dei dati senza dover visualizzare ogni punto dati, mantenendo al contempo una visione accurata dei dati raccolti.
 
 
 
+[[why-is-downsampling-needed]]
 === Perché è necessario il downsampling?
 
 Poiché è necessaria una grande quantità di elaborazione per preparare i dati da visualizzare in grafici e diagrammi, per consentire una visualizzazione rapida ed efficiente dei grafici, i dati possono essere sottocampionati in modo da mantenere la forma complessiva di un grafico senza dover elaborare ogni singolo punto dati per quel grafico.
@@ -45,6 +48,7 @@ Nota: durante il downsampling non vengono persi dati effettivi.  È possibile sc
 
 
 
+[[how-downsampling-works]]
 === Come funziona il downsampling
 
 I dati vengono sottocampionati nelle seguenti condizioni:
@@ -76,6 +80,7 @@ NOTE: A causa del modo in cui i dati vengono approssimati per il downsampling, l
 
 
 
+[[violations-on-downsampled-charts]]
 === Violazioni sui grafici sottocampionati
 
 Quando si visualizzano grafici sottocampionati, tenere presente che le violazioni non vengono visualizzate.  Per visualizzare le violazioni, puoi procedere in due modi:

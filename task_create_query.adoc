@@ -37,16 +37,19 @@ image:QuerySelectColumns.png["Seleziona colonne"]
 
 
 
+[[see-it-in-action]]
 == Guardalo in azione
 
 link:https://media.netapp.com/video-detail/d0530e0b-a222-52e7-92b1-dbeeee41b712/explore-and-analyze-with-queries-in-data-infrastructure-insights["Esplora e analizza con le query in Data Infrastructure Insights (video)"]
 
 
 
+[[choosing-aggregation-units-conditional-formatting]]
 == Scelta di aggregazione, unità, formattazione condizionale
 
 
 
+[[aggregation-and-units]]
 === Aggregazione e unità
 
 Per le colonne "valore", è possibile perfezionare ulteriormente i risultati della query scegliendo il modo in cui vengono aggregati i valori visualizzati e selezionando le unità in cui tali valori vengono visualizzati.  Per accedere a queste opzioni, selezionare il menu "tre punti" nell'angolo superiore di una colonna.
@@ -87,16 +90,19 @@ Rinominando una colonna si modifica il nome visualizzato nell'elenco dei risulta
 
 
 
+[[save]]
 === Salva
 
 Dopo aver configurato la query in modo da visualizzare i risultati desiderati, puoi fare clic sul pulsante *Salva* per salvare la query per un utilizzo futuro.  Dategli un nome significativo e unico.
 
 
 
+[[more-on-filtering]]
 == Ulteriori informazioni sul filtraggio
 
 
 
+[[wildcards-and-expressions]]
 === Caratteri jolly ed espressioni
 
 Quando si filtrano valori di testo o di elenco in query o widget della dashboard, quando si inizia a digitare viene presentata l'opzione per creare un *filtro con caratteri jolly* in base al testo corrente.  Selezionando questa opzione verranno restituiti tutti i risultati che corrispondono all'espressione jolly.  È anche possibile creare *espressioni* utilizzando NOT o OR, oppure selezionare l'opzione "Nessuno" per filtrare i valori nulli nel campo.
@@ -111,6 +117,7 @@ Si noti che il filtro con caratteri jolly ed espressioni funziona con testo o el
 
 
 
+[[refining-filters]]
 === Filtri di affinamento
 
 Per affinare il filtro puoi usare quanto segue:
@@ -142,6 +149,7 @@ Se si racchiude una stringa di filtro tra virgolette doppie, Insight considera t
 
 
 
+[[filtering-for-boolean-values]]
 === Filtraggio per valori booleani
 
 Quando si filtra un valore booleano, potrebbero essere presentate le seguenti opzioni di filtraggio:
@@ -154,6 +162,7 @@ Quando si filtra un valore booleano, potrebbero essere presentate le seguenti op
 
 
 
+[[what-do-i-do-now-that-i-have-query-results]]
 == Cosa devo fare ora che ho i risultati della query?
 
 Le query rappresentano un modo semplice per aggiungere annotazioni o assegnare applicazioni alle risorse.  Tieni presente che puoi assegnare applicazioni o annotazioni solo alle risorse del tuo inventario (disco, archiviazione, ecc.).  Le metriche di integrazione non possono accettare assegnazioni di annotazioni o applicazioni.
@@ -164,6 +173,7 @@ image:QueryVolumeBulkActions.png["Esempio di azioni di query in blocco"]
 
 
 
+[[annotation-rules-require-query]]
 == Le regole di annotazione richiedono una query
 
 Se stai configurandolink:task_create_annotation_rules.html["Regole di annotazione"] , ogni regola deve avere una query sottostante con cui lavorare.  Ma come hai visto sopra, le query possono essere ampie o ristrette, a seconda delle tue esigenze.

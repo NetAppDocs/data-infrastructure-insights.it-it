@@ -18,18 +18,21 @@ Icone degli oggetti utilizzate in Data Infrastructure Insights.
 
 
 
+[[infrastructure-icons]]
 == Icone dell'infrastruttura:
 
 image:Icon_Glossary.png["Riferimento alle icone dell'infrastruttura"]
 
 
 
+[[kubernetes-icons]]
 == Icone di Kubernetes:
 
 image:K8sIconsWithLabels.png["Riferimento all'icona di Kubernetes, larghezza=180"]
 
 
 
+[[kubernetes-network-performance-monitoring-and-map-icons]]
 == Icone di monitoraggio delle prestazioni di rete e mappa di Kubernetes:
 
 image:ServiceMap_Icons.png["Monitoraggio e mappa delle prestazioni della rete Kubernetes, larghezza=640"]

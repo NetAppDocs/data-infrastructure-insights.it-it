@@ -14,11 +14,12 @@ Data Infrastructure Insights utilizza il raccoglitore dati Rubrik per acquisire 
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati Rubrik.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -35,6 +36,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare questo raccoglitore dati sono necessari i seguenti elementi:
@@ -49,9 +51,10 @@ Per configurare questo raccoglitore dati sono necessari i seguenti elementi:
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -69,9 +72,10 @@ Per configurare questo raccoglitore dati sono necessari i seguenti elementi:
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 60 
 
@@ -80,15 +84,17 @@ Per configurare questo raccoglitore dati sono necessari i seguenti elementi:
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

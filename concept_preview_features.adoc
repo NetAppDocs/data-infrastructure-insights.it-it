@@ -20,6 +20,7 @@ Se sei interessato a provare in anteprima una o più di queste funzionalità, co
 
 
 
+[[current-previews]]
 == Anteprime attuali:
 
 * link:ai_for_dii_overview.html["Data Infrastructure Insights Assistente AI"] anteprima.

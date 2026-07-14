@@ -18,6 +18,7 @@ Gli agenti Workload Security sono essenziali per monitorare l'attività degli ut
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 * Il privilegio sudo è necessario per l'installazione, l'esecuzione di script e la disinstallazione.
@@ -27,6 +28,7 @@ Gli agenti Workload Security sono essenziali per monitorare l'attività degli ut
 
 
 
+[[best-practices]]
 == Migliori pratiche
 
 Prima di configurare l'agente Workload Security, tenere presente quanto segue.
@@ -45,6 +47,7 @@ Prima di configurare l'agente Workload Security, tenere presente quanto segue.
 |===
 
 
+[[steps-to-install-agent]]
 == Passaggi per installare l'agente
 
 . Accedi come amministratore o proprietario dell'account al tuo ambiente Workload Security.
@@ -76,6 +79,7 @@ image::new-agent-detect.png[Messaggio per l'installazione corretta dell'agente]
 
 
 
+[[network-configuration]]
 == Configurazione di rete
 
 Eseguire i seguenti comandi sul sistema locale per aprire le porte che verranno utilizzate da Workload Security.  Se l'intervallo di porte presenta problemi di sicurezza, è possibile utilizzare un intervallo di porte inferiore, ad esempio _35000:35100_.  Ogni SVM utilizza due porte.
@@ -105,6 +109,7 @@ Esempio di output:
  35000-55000/tcp
 
 
+[[pinning-an-agent-at-the-current-version]]
 == "Fissare" un agente alla versione corrente
 
 Per impostazione predefinita, Data Infrastructure Insights Workload Security aggiorna automaticamente gli agenti.  Alcuni clienti potrebbero voler sospendere l'aggiornamento automatico, lasciando un agente alla sua versione corrente finché non si verifica una delle seguenti situazioni:
@@ -127,6 +132,7 @@ image:ws_agent_version.png["Versioni dell'agente WS mostrate nella tabella degli
 
 
 
+[[troubleshooting-agent-errors]]
 == Risoluzione dei problemi degli errori dell'agente
 
 Nella tabella seguente sono descritti i problemi noti e le relative soluzioni.

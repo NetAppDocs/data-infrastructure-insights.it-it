@@ -34,6 +34,7 @@ Prima di progettare i report, completa le seguenti attività:
 
 
 
+[[report-creation-process]]
 == Processo di creazione del report
 
 Il processo di creazione di report personalizzati (chiamati anche "ad hoc") prevede diverse attività:
@@ -47,6 +48,7 @@ Il processo di creazione di report personalizzati (chiamati anche "ad hoc") prev
 
 
 
+[[planning-the-results-of-your-custom-report]]
 === Pianificazione dei risultati del report personalizzato
 
 Prima di aprire gli strumenti di creazione del report, potrebbe essere opportuno pianificare i risultati che si desidera ottenere dal report.  Con gli strumenti di creazione di report, è possibile creare report facilmente e potrebbe non essere necessaria una grande pianificazione; tuttavia, è una buona idea chiedere al richiedente del report quali siano i requisiti del report.
@@ -72,6 +74,7 @@ Prima di aprire gli strumenti di creazione del report, potrebbe essere opportuno
 
 
 
+[[tips-for-designing-reports]]
 === Suggerimenti per la progettazione di report
 
 Quando si progettano report, potrebbero essere utili alcuni suggerimenti.
@@ -89,6 +92,7 @@ Per segmentare le informazioni per diversi utenti, è possibile creare report e 
 
 
 
+[[reporting-data-models]]
 == Modelli di dati di reporting
 
 Data Infrastructure Insights include diversi modelli di dati dai quali è possibile selezionare report predefiniti o creare report personalizzati.
@@ -101,6 +105,7 @@ Ogni modello di dati contiene un data mart semplice e un data mart avanzato:
 
 
 
+[[capacity-data-models]]
 === Modelli di dati di capacità
 
 Consente di rispondere a domande sulla capacità di archiviazione, sull'utilizzo del file system, sulla capacità del volume interno, sulla capacità delle porte, sulla capacità di qtree e sulla capacità della macchina virtuale (VM).  Il modello di dati di capacità è un contenitore per diversi modelli di dati di capacità.  Utilizzando questo modello di dati è possibile creare report che rispondano a vari tipi di domande:
@@ -199,6 +204,7 @@ Con questo modello di dati puoi rispondere a domande simili alle seguenti:
 
 
 
+[[chargeback-data-model]]
 === Modello di dati di addebito
 
 Consente di rispondere a domande sulla capacità utilizzata e sulla capacità allocata sulle risorse di archiviazione (volumi, volumi interni e qtree).  Questo modello di dati fornisce informazioni sulla capacità di storage e sulla responsabilità per host, applicazioni ed entità aziendali e include sia dati attuali che storici.  I dati del report possono essere classificati in base al livello di servizio e al livello di archiviazione.
@@ -226,6 +232,7 @@ I report che utilizzano il modello dati Chargeback potrebbero visualizzare valor
 
 
 
+[[inventory-data-model]]
 === Modello di dati di inventario
 
 Consente di rispondere a domande sulle risorse di inventario, tra cui host, sistemi di archiviazione, switch, dischi, nastri, qtree, quote, macchine virtuali e server e dispositivi generici.  Il modello di dati Inventory include diversi sottomart che consentono di visualizzare informazioni su repliche, percorsi FC, percorsi iSCSI, percorsi NFS e violazioni.  Il modello di dati di inventario non include dati storici.  Domande a cui puoi rispondere con questi dati
@@ -247,6 +254,7 @@ Consente di rispondere a domande sulle risorse di inventario, tra cui host, sist
 
 
 
+[[performance-data-model]]
 === Modello di dati sulle prestazioni
 
 Consente di rispondere a domande sulle prestazioni di volumi, volumi applicativi, volumi interni, switch, applicazioni, VM, VMDK, ESX rispetto a VM, host e nodi applicativi.  Molti di questi riportano dati _orari_, dati _giornalieri_ o entrambi.  Utilizzando questo modello di dati, è possibile creare report che rispondono a diversi tipi di domande sulla gestione delle prestazioni:
@@ -291,6 +299,7 @@ Il modello di dati Performance include informazioni che aiutano a determinare l'
 
 
 
+[[storage-efficiency-data-model]]
 === Modello di dati di efficienza di archiviazione
 
 Consente di monitorare il punteggio e il potenziale di efficienza dello storage nel tempo.  Questo modello di dati memorizza le misurazioni non solo della capacità fornita, ma anche della quantità utilizzata o consumata (la misurazione fisica).  Ad esempio, quando è abilitato il thin provisioning, Data Infrastructure Insights indica quanta capacità viene utilizzata dal dispositivo.  È possibile utilizzare questo modello anche per determinare l'efficienza quando la deduplicazione è abilitata.  Utilizzando il data mart Storage Efficiency è possibile rispondere a diverse domande:
@@ -304,6 +313,7 @@ Consente di monitorare il punteggio e il potenziale di efficienza dello storage 
 
 
 
+[[data-model-fact-and-dimension-tables]]
 === Tabelle dei fatti e delle dimensioni del modello di dati
 
 Ogni modello di dati include sia tabelle dei fatti che tabelle delle dimensioni.
@@ -316,6 +326,7 @@ Utilizzando attributi di dimensione diversi o multipli (visualizzati come colonn
 
 
 
+[[colors-used-in-data-model-elements]]
 === Colori utilizzati negli elementi del modello dati
 
 I colori sugli elementi del modello dati hanno indicazioni diverse.
@@ -326,6 +337,7 @@ I colori sugli elementi del modello dati hanno indicazioni diverse.
 
 
 
+[[using-multiple-data-models-in-one-report]]
 === Utilizzo di più modelli di dati in un unico report
 
 In genere, si utilizza un modello di dati per report.  Tuttavia, è possibile scrivere un report che combini dati provenienti da più modelli di dati.

@@ -14,9 +14,10 @@ Questo raccoglitore dati supporta la raccolta di inventario dalle configurazioni
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -31,9 +32,10 @@ Questo raccoglitore dati supporta la raccolta di inventario dalle configurazioni
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -75,6 +77,7 @@ Questo raccoglitore dati supporta la raccolta di inventario dalle configurazioni
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

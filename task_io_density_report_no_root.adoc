@@ -29,6 +29,7 @@ I passaggi descritti in questa guida possono essere applicati anche ai sistemi d
 
 
 
+[[creating-a-query-to-identify-netapp-root-aggregates]]
 == Creazione di una query per identificare gli aggregati radice NetApp
 
 Le query consentono una ricerca a livello granulare, in base ai criteri selezionati dall'utente.  Utilizzando una query è possibile cercare volumi interni sul tenant che contengono l'aggregato radice NetApp .
@@ -54,6 +55,7 @@ Come accennato in precedenza, questo potrebbe essere un processo iterativo e ric
 
 
 
+[[create-an-annotation-for-the-root-volumes-returned-by-your-queries]]
 == Crea un'annotazione per i volumi radice restituiti dalle tue query
 
 Le annotazioni sono note specializzate che assegni alle tue risorse, consentendoti di filtrare le risorse in base alle loro annotazioni.  L'annotazione creata verrà utilizzata per identificare gli aggregati radice NetApp sul tenant e garantire che non vengano inclusi in un report specifico.
@@ -75,6 +77,7 @@ Le annotazioni sono note specializzate che assegni alle tue risorse, consentendo
 
 
 
+[[create-an-annotation-rule-to-automate-excluding-specific-aggregates-from-your-io-density-report]]
 == Crea una regola di annotazione per automatizzare l'esclusione di aggregati specifici dal tuo report sulla densità di I/O
 
 In alternativa all'applicazione manuale delle annotazioni alle singole risorse, è possibile applicare automaticamente le annotazioni a più risorse utilizzando le regole di annotazione.  Le regole di annotazione si basano sulle query create e, quando vengono eseguite sul sistema, aggiungono nuove risorse ai set di risorse esistenti.  Quando questi insiemi di asset vengono esclusi da un report, anche i nuovi asset vengono automaticamente esclusi.

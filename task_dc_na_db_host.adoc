@@ -14,15 +14,17 @@ Questo raccoglitore di dati acquisisce l'inventario
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce l'inventario da questo raccoglitore.
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -43,9 +45,10 @@ Data Infrastructure Insights acquisisce l'inventario da questo raccoglitore.
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 

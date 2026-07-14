@@ -14,6 +14,7 @@ Data Infrastructure Insights rileva gli array di storage EMC VMAX e PowerMax uti
 
 
 
+[[requirements]]
 == Requisiti
 
 Prima di configurare questo raccoglitore dati, è necessario assicurarsi che Data Infrastructure Insights disponga di connettività TCP sulla porta 2707 sul server Solutions Enabler esistente.  Data Infrastructure Insights rileva tutti gli array Symmetrix che sono "locali" per questo server, come mostrato nell'output "symcfg list" da quel server.
@@ -47,11 +48,12 @@ cisys storapid <all>
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dalla fonte dati EMC VMAX/PowerMax.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -77,11 +79,12 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[configuration]]
 == Configurazione
 
 *Nota:* se l'autenticazione utente SMI-S non è abilitata, i valori predefiniti nel raccoglitore Data Infrastructure Insights vengono ignorati.
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -96,9 +99,10 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -137,11 +141,12 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

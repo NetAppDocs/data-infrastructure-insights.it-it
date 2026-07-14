@@ -14,6 +14,7 @@ Data Infrastructure Insights utilizza questo raccoglitore di dati per raccoglier
 
 
 
+[[installation]]
 == Installazione
 
 . Da *Osservabilità > Collettori*, fare clic su *+Collettore dati*.  Scegli ActiveMQ.
@@ -29,12 +30,14 @@ image:ActiveMQDCConfigWindows.png["Configurazione ActiveMQ"]
 
 
 
+[[setup]]
 == Impostare
 
 Le informazioni possono essere trovate nel http://activemq.apache.org/getting-started.html["Documentazione ActiveMQ"]
 
 
 
+[[objects-and-counters]]
 == Oggetti e contatori
 
 Vengono raccolti i seguenti oggetti e i relativi contatori:
@@ -54,6 +57,7 @@ Vengono raccolti i seguenti oggetti e i relativi contatori:
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni possono essere trovate pressolink:concept_requesting_support.html["Supporto"] pagina.

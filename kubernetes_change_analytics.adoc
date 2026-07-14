@@ -25,6 +25,7 @@ La pagina si aggiorna automaticamente in base all'intervallo di tempo Data Infra
 
 
 
+[[filtering]]
 == Filtraggio
 
 Come per tutte le funzionalità di Data Infrastructure Insights, filtrare l'elenco delle modifiche è intuitivo: nella parte superiore della pagina, inserisci o seleziona i valori per il tuo cluster Kubernetes, namespace o workload, oppure aggiungi i tuoi filtri selezionando il pulsante {+].
@@ -35,6 +36,7 @@ image:ChangeAnalytitcs_Filtered_Timeline.png["Esempio di cronologia del carico d
 
 
 
+[[quick-status]]
 == Stato rapido
 
 Al di sotto dell'area di filtraggio si trovano una serie di indicatori di alto livello.  Sulla sinistra è riportato il numero di avvisi (Avviso e Critico).  Questo numero include sia gli avvisi _Attivi_ che quelli _Risolti_.  Per visualizzare solo gli avvisi _Attivi_, imposta un filtro per "Stato" e scegli "Attivo".
@@ -51,6 +53,7 @@ image:ChangeAnalytitcs_ExploreWorkloadAlerts.png["Opzioni di esplorazione del ca
 
 
 
+[[detail-panel]]
 == Pannello di dettaglio
 
 Selezionando una modifica nell'elenco si apre un pannello che descrive la modifica in modo più dettagliato.  Ad esempio, selezionando una distribuzione non riuscita viene visualizzato un riepilogo della distribuzione, con orari di inizio e fine, durata e punto in cui è stata attivata la distribuzione, con collegamenti per esplorare tali risorse.  Visualizza inoltre il motivo dell'errore, eventuali modifiche correlate ed eventuali eventi associati.

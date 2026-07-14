@@ -121,6 +121,7 @@ Fare clic su Includi attributi facoltativi per aggiungere uno qualsiasi dei segu
 |===
 
 
+[[testing-your-user-directory-collector-configuration]]
 == Test della configurazione del raccoglitore di directory utente
 
 È possibile convalidare le autorizzazioni utente e le definizioni degli attributi LDAP utilizzando le seguenti procedure:
@@ -140,6 +141,7 @@ image:CloudSecure_LDAPDialog.png["Connessione LDAP"]
 
 
 
+[[troubleshooting-ldap-directory-collector-configuration-errors]]
 == Risoluzione dei problemi di configurazione del raccoglitore directory LDAP
 
 Nella tabella seguente vengono descritti i problemi noti e le relative soluzioni che possono verificarsi durante la configurazione del collettore:

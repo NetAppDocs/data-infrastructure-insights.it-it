@@ -14,6 +14,7 @@ Il raccoglitore dati Lenovo HX acquisisce informazioni sull'inventario e sulle p
 
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
@@ -25,11 +26,12 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni sull'inventario e sulle prestazioni dal raccoglitore dati Lenovo HX.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -53,9 +55,10 @@ Data Infrastructure Insights acquisisce le seguenti informazioni sull'inventario
 |===
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -70,9 +73,10 @@ Data Infrastructure Insights acquisisce le seguenti informazioni sull'inventario
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 

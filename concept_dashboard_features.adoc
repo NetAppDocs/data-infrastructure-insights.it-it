@@ -20,6 +20,7 @@ indice:[]
 
 
 
+[[widget-naming]]
 == Denominazione dei widget
 
 I widget vengono denominati automaticamente in base all'oggetto, alla metrica o all'attributo selezionato per la prima query del widget.  Se si sceglie anche un raggruppamento per il widget, gli attributi "Raggruppa per" vengono inclusi nella denominazione automatica (metodo di aggregazione e metrica).
@@ -32,18 +33,21 @@ Se non si desidera utilizzare il nome automatico del widget, è sufficiente digi
 
 
 
+[[widget-placement-and-size]]
 == Posizionamento e dimensione del widget
 
 Tutti i widget della dashboard possono essere posizionati e dimensionati in base alle esigenze specifiche di ogni dashboard.
 
 
 
+[[duplicating-a-widget]]
 == Duplicazione di un widget
 
 Nella modalità di modifica della dashboard, fare clic sul menu sul widget e selezionare *Duplica*.  Viene avviato l'editor dei widget, precompilato con la configurazione del widget originale e con un suffisso "copia" nel nome del widget.  Puoi apportare facilmente tutte le modifiche necessarie e salvare il nuovo widget.  Il widget verrà posizionato nella parte inferiore della dashboard e potrai posizionarlo come preferisci.  Ricordati di salvare la dashboard una volta completate tutte le modifiche.
 
 
 
+[[displaying-widget-legends]]
 == Visualizzazione delle legende dei widget
 
 La maggior parte dei widget sui dashboard può essere visualizzata con o senza legenda.  Le legende nei widget possono essere attivate o disattivate su una dashboard tramite uno dei seguenti metodi:
@@ -57,6 +61,7 @@ Quando vengono visualizzate le legende, se è possibile raggiungere la pagina di
 
 
 
+[[transforming-metrics]]
 == Trasformazione delle metriche
 
 Data Infrastructure Insights fornisce diverse opzioni di *trasformazione* per determinate metriche nei widget (in particolare, quelle denominate "Personalizzate" o Metriche di integrazione, come quelle provenienti da Kubernetes, ONTAP Advanced Data, plugin Telegraf, ecc.), consentendo di visualizzare i dati in vari modi.  Quando si aggiungono metriche trasformabili a un widget, viene visualizzato un menu a discesa che offre le seguenti opzioni di trasformazione:
@@ -77,10 +82,12 @@ Si noti che la trasformazione delle metriche non modifica i dati sottostanti in 
 
 
 
+[[dashboard-widget-queries-and-filters]]
 == Query e filtri del widget della dashboard
 
 
 
+[[queries]]
 === Query
 
 La query in un widget della dashboard è uno strumento potente per gestire la visualizzazione dei dati.  Ecco alcune cose da tenere a mente sulle query dei widget.
@@ -108,6 +115,7 @@ I restanti tipi di widget possono avere una sola query:
 
 
 
+[[filtering-in-dashboard-widget-queries]]
 === Filtraggio nelle query del widget della dashboard
 
 Ecco alcune cose che puoi fare per sfruttare al meglio i tuoi filtri.
@@ -208,6 +216,7 @@ per visualizzare i campi che non contengono alcun valore.
 
 
 
+[[identifying-objects-returned-by-queries-and-filters]]
 === Identificazione degli oggetti restituiti da query e filtri
 
 Gli oggetti restituiti dalle query e dai filtri sono simili a quelli mostrati nella seguente illustrazione.  Gli oggetti a cui sono assegnati dei "tag" sono annotazioni, mentre gli oggetti senza tag sono contatori delle prestazioni o attributi degli oggetti.
@@ -216,10 +225,12 @@ image:ObjectsReturnedByFilters.png["Oggetti restituiti dai filtri"]
 
 
 
+[[grouping-identifying-and-aggregating]]
 == Raggruppamento, identificazione e aggregazione
 
 
 
+[[grouping-rolling-up]]
 === Raggruppamento (arrotolamento)
 
 I dati visualizzati in un widget vengono raggruppati (talvolta chiamati "roll-up") a partire dai punti dati sottostanti raccolti durante l'acquisizione. Ad esempio, se si dispone di un widget grafico a linee che mostra gli IOPS di archiviazione nel tempo, potrebbe essere opportuno visualizzare una linea separata per ciascuno dei data center, per un confronto rapido. Nel campo "Raggruppa per", seleziona il tipo di oggetto stesso per visualizzare singole linee, aree, barre, colonne, ecc. (a seconda del tipo di widget) per ciascun oggetto.  È possibile scegliere di raggruppare in base a qualsiasi attributo disponibile nell'elenco per quell'oggetto.  Ad esempio, quando si visualizzano i dati per un volume interno, potrebbe essere opportuno raggruppare i dati in base al nome dell'archiviazione.
@@ -240,6 +251,7 @@ Se hai impostato un filtro per la query, i dati vengono raggruppati in base ai d
 
 
 
+[[identifying-custom-data]]
 === Identificazione dei dati personalizzati
 
 Quando si crea o si modifica un widget basato sui propri dati personalizzati, è possibile che i dati non vengano rappresentati correttamente nel widget senza un attributo identificativo.  Se DII non riesce a identificare l'oggetto selezionato per il widget, visualizzerà un collegamento _Configurazione avanzata_ nell'area "Raggruppa per".  Espandi questa sezione per selezionare l'attributo con cui desideri identificare i tuoi dati.
@@ -248,6 +260,7 @@ image:unmodeled_data_identify_by.png["identificare tramite menu a discesa per da
 
 
 
+[[aggregating-data]]
 === Aggregazione dei dati
 
 È possibile allineare ulteriormente i grafici aggregando i punti dati in intervalli di minuti, ore o giorni prima che i dati vengano successivamente raggruppati per attributo (se selezionato). È possibile scegliere di aggregare i punti dati in base alla loro _Media_, Massimo, Minimo, Somma_ o _Conteggio_.
@@ -258,12 +271,14 @@ Per impostazione predefinita, la maggior parte dei contatori di risorse aggregan
 
 
 
+[[showing-topbottom-results]]
 == Visualizzazione dei risultati migliori/migliori
 
 In un widget grafico, è possibile visualizzare i risultati *In alto* o *In basso* per i dati raggruppati e scegliere il numero di risultati visualizzati dall'elenco a discesa fornito.  In un widget tabella è possibile ordinare in base a qualsiasi colonna.
 
 
 
+[[chart-widget-topbottom]]
 === Widget grafico in alto/in basso
 
 In un widget grafico, quando si sceglie di raggruppare i dati in base a un attributo specifico, è possibile visualizzare i primi N risultati o gli ultimi N risultati.  Tieni presente che non puoi scegliere i risultati migliori o peggiori quando scegli di raggruppare per _tutti_ gli attributi.
@@ -272,6 +287,7 @@ In un widget grafico, quando si sceglie di raggruppare i dati in base a un attri
 
 
 
+[[table-widget-show-entries]]
 === Il widget della tabella mostra le voci
 
 In un widget tabella, puoi selezionare il numero di risultati visualizzati nei risultati della tabella.  Non ti viene data la possibilità di scegliere i risultati migliori o peggiori perché la tabella ti consente di ordinare in ordine crescente o decrescente in base a qualsiasi colonna a richiesta.
@@ -280,6 +296,7 @@ In un widget tabella, puoi selezionare il numero di risultati visualizzati nei r
 
 
 
+[[grouping-in-table-widget]]
 == Widget di raggruppamento nella tabella
 
 I dati in un widget tabella possono essere raggruppati in base a qualsiasi attributo disponibile, consentendo di visualizzare una panoramica dei dati e di approfondirli per ottenere maggiori dettagli.  Le metriche nella tabella sono raggruppate in modo da facilitarne la visualizzazione in ogni riga compressa.
@@ -290,6 +307,7 @@ Il raggruppamento è disponibile solo nel tipo di widget Tabella.
 
 
 
+[[grouping-example-with-rollup-explained]]
 === Esempio di raggruppamento (con spiegazione del rollup)
 
 I widget tabella consentono di raggruppare i dati per una visualizzazione più semplice.
@@ -327,12 +345,14 @@ L'elenco delle VM è ora raggruppato per Hypervisor.  È possibile espandere cia
 
 
 
+[[performance-data-roll-up]]
 === Riepilogo dei dati sulle prestazioni
 
 Se si include una colonna per i dati sulle prestazioni (ad esempio, _IOPS - Totale_) in un widget tabella, quando si sceglie di raggruppare i dati è possibile scegliere un metodo di rollup per quella colonna.  Il metodo di rollup predefinito consiste nel visualizzare la media (_avg_) dei dati sottostanti nella riga del gruppo.  È anche possibile scegliere di visualizzare la somma, il minimo o il massimo dei dati.
 
 
 
+[[dashboard-time-range-selector]]
 == Selettore intervallo di tempo della dashboard
 
 Puoi selezionare l'intervallo di tempo per i dati della dashboard.  Nei widget della dashboard verranno visualizzati solo i dati rilevanti per l'intervallo di tempo selezionato.  È possibile selezionare tra i seguenti intervalli di tempo:
@@ -357,12 +377,14 @@ L'intervallo di tempo personalizzato consente di selezionare fino a 31 giorni co
 
 
 
+[[zooming-in-to-a-time-range]]
 === Zoom su un intervallo di tempo
 
 Durante la visualizzazione di un widget di serie temporali (linea, spline, area, area sovrapposta) o di un grafico su una landing page, è possibile trascinare il mouse sul grafico per ingrandire. Nell'angolo in alto a destra dello schermo è quindi possibile bloccare l'intervallo di tempo in modo che i grafici su altre pagine riflettano i dati per quell'intervallo di tempo bloccato.  Per sbloccare, seleziona un intervallo di tempo diverso dall'elenco.
 
 
 
+[[overriding-dashboard-time-in-individual-widgets]]
 == Sovrascrivere il tempo della dashboard nei singoli widget
 
 È possibile ignorare l'impostazione dell'intervallo di tempo della dashboard principale nei singoli widget.  Questi widget visualizzeranno i dati in base all'intervallo di tempo impostato, non all'intervallo di tempo della dashboard.
@@ -377,6 +399,7 @@ image:OverrideTimeOnWidget.png["sovrascrivere l'intervallo di tempo della dashbo
 
 
 
+[[primary-and-secondary-axis]]
 == Asse primario e secondario
 
 Metriche diverse utilizzano unità di misura diverse per i dati riportati in un grafico.  Ad esempio, quando si considerano gli IOPS, l'unità di misura è il numero di operazioni I/O al secondo (IO/s), mentre la latenza è puramente una misura del tempo (millisecondi, microsecondi, secondi, ecc.).  Quando si rappresentano entrambe le metriche su un grafico a linea singola utilizzando un singolo set di valori per l'asse Y, i numeri di latenza (in genere una manciata di millisecondi) vengono rappresentati sulla stessa scala degli IOPS (in genere espressi in migliaia) e la linea di latenza si perde in quella scala.
@@ -405,6 +428,7 @@ image:SecondaryAxisExplained.png["Esempio di asse secondario"]
 
 
 
+[[expressions-in-widgets]]
 == Espressioni nei widget
 
 In una dashboard, qualsiasi widget di serie temporali (linee, spline, aree, aree impilate), grafico a barre, istogramma, grafico a torta o widget di tabella consente di creare espressioni dalle metriche scelte e di mostrare il risultato di tali espressioni in un singolo grafico (o colonna nel caso di<<expressions-in-a-table-widget,widget di tabella>> ).  Gli esempi seguenti utilizzano espressioni per risolvere problemi specifici.  Nel primo esempio, vogliamo mostrare gli IOPS di lettura come percentuale degli IOPS totali per tutte le risorse di archiviazione nel tenant.  Il secondo esempio fornisce visibilità sugli IOPS di "sistema" o "overhead" che si verificano sul tenant, ovvero quegli IOPS che non derivano direttamente dalla lettura o dalla scrittura dei dati.
@@ -413,6 +437,7 @@ In una dashboard, qualsiasi widget di serie temporali (linee, spline, aree, aree
 
 
 
+[[expressions-example-read-iops-percentage]]
 === Esempio di espressioni: Leggi la percentuale IOPS
 
 In questo esempio, vogliamo mostrare gli IOPS di lettura come percentuale degli IOPS totali.  Si può pensare a questo come alla seguente formula:
@@ -450,6 +475,7 @@ Il grafico mostra la percentuale di lettura IOPS nel tempo per i dispositivi di 
 
 
 
+[[expressions-example-system-io]]
 === Esempio di espressioni: I/O "Sistema"
 
 Esempio 2: Tra le metriche raccolte dalle fonti dati ci sono lettura, scrittura e IOPS totali.  Tuttavia, il numero totale di IOPS riportato da una fonte dati a volte include gli IOPS "di sistema", ovvero quelle operazioni di I/O che non fanno parte direttamente della lettura o della scrittura dei dati.  Questo I/O di sistema può anche essere considerato un I/O "overhead", necessario per il corretto funzionamento del sistema ma non direttamente correlato alle operazioni sui dati.
@@ -499,6 +525,7 @@ Per utilizzare una variabile in un'espressione, è sufficiente digitare il nome 
 
 
 
+[[expressions-in-a-table-widget]]
 === Espressioni in un widget tabella
 
 I widget tabella gestiscono le espressioni in modo leggermente diverso.  È possibile avere fino a cinque espressioni in un singolo widget tabella, ciascuna delle quali viene aggiunta come nuova colonna alla tabella.  Ogni espressione può includere fino a cinque valori su cui eseguire il calcolo.  Puoi facilmente dare alla colonna un nome significativo.
@@ -507,12 +534,14 @@ image:ExpressionExample.png["Espressione in un widget di tabella"]
 
 
 
+[[variables]]
 == Variabili
 
 Le variabili consentono di modificare contemporaneamente i dati visualizzati in alcuni o in tutti i widget di una dashboard.  Impostando uno o più widget in modo che utilizzino una variabile comune, le modifiche apportate in un punto determinano l'aggiornamento automatico dei dati visualizzati in ciascun widget.
 
 
 
+[[variable-types]]
 === Tipi di variabili
 
 Una variabile può essere di uno dei seguenti tipi:
@@ -604,6 +633,7 @@ Nomi delle variabili:
 
 
 
+[[formatting-gauge-widgets]]
 == Formattazione dei widget degli indicatori
 
 I widget Solid e Bullet Gauge consentono di impostare soglie per i livelli _Avviso_ e/o _Critico_, fornendo una rappresentazione chiara dei dati specificati.
@@ -623,6 +653,7 @@ image:Gauge-Solid.png["Calibro solido/tradizionale, larghezza=374"] image:Gauge-
 
 
 
+[[formatting-single-value-widget]]
 == Formattazione del widget a valore singolo
 
 Nel widget Valore singolo, oltre a impostare le soglie di Avviso (arancione) e Critico (rosso), puoi scegliere di visualizzare i valori "Nell'intervallo" (quelli al di sotto del livello di Avviso) con sfondo verde o bianco.
@@ -633,6 +664,7 @@ Facendo clic sul collegamento in un widget a valore singolo o in un widget indic
 
 
 
+[[formatting-table-widgets]]
 == Widget della tabella di formattazione
 
 Analogamente ai widget a valore singolo e a indicatore, è possibile impostare la formattazione condizionale nei widget tabella, consentendo di evidenziare i dati con colori e/o icone speciali.
@@ -651,6 +683,7 @@ image:ConditionalFormatting_GiB.png["Formattazione condizionale - GiB"] image:Co
 
 
 
+[[choosing-the-unit-for-displaying-data]]
 == Scelta dell'unità per la visualizzazione dei dati
 
 La maggior parte dei widget su una dashboard consente di specificare le unità in cui visualizzare i valori, ad esempio _Megabyte_, _Migliaia_, _Percentuale_, _Millisecondi (ms)_, ecc. In molti casi, Data Infrastructure Insights conosce il formato migliore per i dati acquisiti.  Nei casi in cui non si conosce il formato migliore, è possibile impostare il formato desiderato.
@@ -671,6 +704,7 @@ Per cancellare le impostazioni e ricominciare, clicca su *Ripristina impostazion
 
 
 
+[[a-word-about-auto-format]]
 === Una parola sulla formattazione automatica
 
 La maggior parte delle metriche viene segnalata dai raccoglitori di dati nell'unità più piccola, ad esempio come numero intero, ad esempio 1.234.567.890 byte.  Per impostazione predefinita, Data Infrastructure Insights formatterà automaticamente il valore per la visualizzazione più leggibile.  Ad esempio, un valore di dati pari a 1.234.567.890 byte verrebbe formattato automaticamente in 1,23 _Gibibyte_.  Puoi scegliere di visualizzarlo in un altro formato, ad esempio _Mebibytes_.  Il valore verrà visualizzato di conseguenza.
@@ -680,6 +714,7 @@ NOTE: Data Infrastructure Insights utilizza gli standard di denominazione dei nu
 
 
 
+[[widgets-with-multiple-queries]]
 === Widget con più query
 
 Se si dispone di un widget di serie temporali (ad esempio linea, spline, area, area impilata) che ha due query in cui entrambe sono tracciate sull'asse Y primario, l'unità di base non viene visualizzata nella parte superiore dell'asse Y.  Tuttavia, se il widget ha una query sull'asse Y primario e una query sull'asse Y secondario, vengono visualizzate le unità di base per ciascuna.
@@ -690,6 +725,7 @@ Se il widget ha tre o più query, le unità di base non vengono visualizzate sul
 
 
 
+[[available-units]]
 === Unità disponibili
 
 Nella tabella seguente sono riportate tutte le unità disponibili per categoria.
@@ -740,6 +776,7 @@ Nella tabella seguente sono riportate tutte le unità disponibili per categoria.
 |===
 
 
+[[tv-mode-and-auto-refresh]]
 == Modalità TV e aggiornamento automatico
 
 I dati nei widget sulle dashboard e nelle landing page delle risorse si aggiornano automaticamente in base a un intervallo di aggiornamento determinato dall'intervallo di tempo selezionato per la dashboard.  L'intervallo di aggiornamento dipende dal fatto che il widget sia una serie temporale (grafico a linee, spline, ad area, ad area impilata) o non una serie temporale (tutti gli altri grafici).
@@ -804,6 +841,7 @@ image:AutoRefreshPaused.png["Aggiornamento automatico in pausa"]
 
 
 
+[[dashboard-groups]]
 == Gruppi della dashboard
 
 Il raggruppamento consente di visualizzare e gestire dashboard correlate.  Ad esempio, puoi avere un gruppo dashboard dedicato allo storage del tuo tenant.  I gruppi di dashboard vengono gestiti nella pagina *Dashboard > Mostra tutte le dashboard*.
@@ -833,6 +871,7 @@ NOTE: La rimozione di una dashboard da un gruppo non elimina la dashboard da Dat
 
 
 
+[[pin-your-favorite-dashboards]]
 == Aggiungi ai preferiti i tuoi dashboard
 
 Puoi gestire ulteriormente le tue dashboard aggiungendo quelle preferite in cima all'elenco delle dashboard.  Per aggiungere una dashboard, è sufficiente fare clic sul pulsante a forma di puntina da disegno visualizzato quando si passa il mouse su una dashboard in qualsiasi elenco.
@@ -843,6 +882,7 @@ image:DashboardPin.png["Dashboard bloccate"]
 
 
 
+[[dark-theme]]
 == Tema scuro
 
 È possibile scegliere di visualizzare Data Infrastructure Insights utilizzando un tema chiaro (predefinito), che visualizza la maggior parte delle schermate con uno sfondo chiaro e testo scuro, oppure un tema scuro, che visualizza la maggior parte delle schermate con uno sfondo scuro e testo chiaro.
@@ -860,6 +900,7 @@ NOTE: Alcune aree dello schermo, come alcuni grafici dei widget, mostrano comunq
 
 
 
+[[line-chart-interpolation]]
 == Interpolazione del grafico lineare
 
 Spesso i diversi raccoglitori di dati interrogano i propri dati a intervalli diversi.  Ad esempio, il raccoglitore di dati A può effettuare il polling ogni 15 minuti, mentre il raccoglitore di dati B può effettuarlo ogni cinque minuti.  Quando un widget grafico a linee (anche grafici spline, ad area e ad area impilata) aggrega questi dati da più collettori di dati in un'unica riga (ad esempio, quando il widget raggruppa per "tutto") e aggiorna la riga ogni cinque minuti, i dati del collettore B potrebbero essere visualizzati in modo accurato, mentre i dati del collettore A potrebbero presentare delle lacune, influenzando così l'aggregazione finché il collettore A non esegue nuovamente il polling.
@@ -868,6 +909,7 @@ Per ovviare a questo problema, Data Infrastructure Insights interpola i dati dur
 
 
 
+[[interpolation-methods]]
 === Metodi di interpolazione
 
 Quando si crea o si modifica un grafico a linee (oppure un grafico spline, ad area o ad area impilata), è possibile impostare il metodo di interpolazione su uno dei tre tipi.  Nella sezione "Raggruppa per", seleziona l'interpolazione desiderata.
@@ -891,6 +933,7 @@ image:Interpolation_Linear.png["Linea retta semplice che mostra l'interpolazione
 
 
 
+[[anomaly-bounds-in-line-widgets]]
 === Limiti di anomalia nei widget di linea
 
 Quando si include un widget grafico a linee o spline in una dashboard o in una landing page, è possibile scegliere di visualizzare il grafico nel contesto dei *limiti previsti* per i dati.  Si può pensare a questo come alla ricerca di anomalie nei modelli dei dati.

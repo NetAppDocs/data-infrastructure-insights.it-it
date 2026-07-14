@@ -18,6 +18,7 @@ Per identificare le modifiche previste (per il monitoraggio) o impreviste (per l
 
 
 
+[[viewing-audited-events]]
 == Visualizzazione degli eventi verificati
 
 Per visualizzare la pagina Audit, fare clic su *Amministrazione > Audit* nel menu.  Viene visualizzata la pagina Audit, che fornisce i seguenti dettagli per ogni voce di audit:
@@ -33,6 +34,7 @@ Per visualizzare la pagina Audit, fare clic su *Amministrazione > Audit* nel men
 
 
 
+[[displaying-audit-entries]]
 == Visualizzazione delle voci di controllo
 
 Esistono diversi modi per visualizzare le voci di controllo:
@@ -50,6 +52,7 @@ image:Audit_Filters.png["Filtri di controllo"]
 
 
 
+[[more-on-filtering]]
 === Ulteriori informazioni sul filtraggio
 
 Per affinare il filtro puoi utilizzare uno qualsiasi dei seguenti metodi:
@@ -84,6 +87,7 @@ Se si racchiude una stringa di filtro tra virgolette doppie, Insight considera t
 
 
 
+[[audited-events-and-actions]]
 == Eventi e azioni verificati
 
 Gli eventi e le azioni controllati da Data Infrastructure Insights possono essere classificati nelle seguenti aree generali:
@@ -121,6 +125,7 @@ Esempio: Destinatario _ci-alerts-notifications-dl_ creato
 
 
 
+[[exporting-audit-events]]
 == Esportazione di eventi di audit
 
 È possibile esportare i risultati della visualizzazione Audit in un file .CSV, che consentirà di analizzare i dati o di importarli in un'altra applicazione.
@@ -134,6 +139,7 @@ Gli eventi di Audit visualizzati verranno esportati in un file .CSV, fino a un m
 
 
 
+[[retention-of-audit-data]]
 == Conservazione dei dati di audit
 
 La quantità di tempo in cui Data Infrastructure Insights conserva i dati di audit dipende dall'abbonamento:
@@ -148,6 +154,7 @@ Le voci di controllo più vecchie del periodo di conservazione vengono eliminate
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Qui troverete suggerimenti per la risoluzione dei problemi con Audit.

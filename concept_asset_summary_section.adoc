@@ -29,6 +29,7 @@ Se applicabile, è possibile fare clic su un collegamento di avviso per visualiz
 
 
 
+[[topology]]
 == Topologia
 
 In alcune pagine delle risorse, la sezione di riepilogo contiene un collegamento per visualizzare la topologia della risorsa e le sue connessioni.

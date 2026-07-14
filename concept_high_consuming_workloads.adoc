@@ -14,6 +14,7 @@ I carichi di lavoro ad alto impatto possono ridurre le prestazioni di altri cari
 
 
 
+[[terminology]]
 === Terminologia
 
 Quando si parla di carico di lavoro o di impatto sulle risorse, le seguenti definizioni sono utili.
@@ -32,6 +33,7 @@ Si verifica una *contesa* quando si determina che gli IOPS stanno influenzando a
 
 
 
+[[high-consuming-workloads]]
 === Carichi di lavoro ad alto consumo
 
 Tutti i carichi di lavoro ad alto consumo rilevati da Data Infrastructure Insights vengono mostrati nell'Insight _Risorse condivise sotto stress_.  Per visualizzare queste informazioni, vai su *Osservabilità > Approfondimenti sull'infrastruttura*.
@@ -48,6 +50,7 @@ image:Insights_Demanding_Workload_Chart.png["Grafico del carico di lavoro impegn
 
 
 
+[[what-do-i-do-to-resolve-saturation]]
 === Cosa posso fare per risolvere il problema della saturazione?
 
 Esistono diversi accorgimenti che puoi adottare per ridurre o eliminare il rischio di saturazione del tuo inquilino.  Ecco alcune cose che puoi provare.

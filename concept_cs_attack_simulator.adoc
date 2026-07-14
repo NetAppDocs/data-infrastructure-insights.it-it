@@ -18,6 +18,7 @@ summary: Testa e convalida le capacità di rilevamento della sicurezza del caric
 
 
 
+[[things-to-note-before-you-begin]]
 == Cose da notare prima di iniziare
 
 * Lo script di simulazione della manomissione dei file funziona solo su Linux. Lo script di simulazione dovrebbe anche generare avvisi di elevata affidabilità nel caso in cui l'utente abbia integrato ONTAP ARP con Workload Security.
@@ -30,6 +31,7 @@ summary: Testa e convalida le capacità di rilevamento della sicurezza del caric
 
 
 
+[[guidelines]]
 == Linee guida:
 
 Questo script dovrebbe essere eseguito su una SVM contenente una cartella con un numero considerevole di file da crittografare, idealmente 100 o più, inclusi i file nelle sottocartelle.  Assicurarsi che i file non siano vuoti.
@@ -38,10 +40,12 @@ Per generare l'avviso, mettere temporaneamente in pausa il raccoglitore prima di
 
 
 
+[[steps]]
 == Passaggi:
 
 
 
+[[prepare-the-system]]
 === Preparare il sistema:
 
 Per prima cosa, montare il volume di destinazione sulla macchina.  È possibile montare un'esportazione NFS o CIFS.
@@ -81,6 +85,7 @@ Successivamente, configura un Data Collector:
 
 
 
+[[generate-the-sample-files-programmatically]]
 == Generare i file di esempio a livello di programmazione:
 
 Prima di creare i file, è necessario prima arrestare olink:task_add_collector_svm.html#play-pause-data-collector["mettere in pausa il raccoglitore dati"] elaborazione.
@@ -91,6 +96,7 @@ Se si sceglie di creare i file a livello di programmazione, è possibile utilizz
 
 
 
+[[shell]]
 === Conchiglia:
 
 . Accedi alla casella Agente.
@@ -104,6 +110,7 @@ Se si sceglie di creare i file a livello di programmazione, è possibile utilizz
 
 
 
+[[python]]
 === Pitone:
 
 
@@ -148,18 +155,21 @@ Se si sceglie di creare i file a livello di programmazione, è possibile utilizz
 
 
 
+[[resume-the-collector]]
 == Riprendi il collezionista
 
 Se hai messo in pausa il raccoglitore prima di seguire questi passaggi, assicurati di riavviarlo una volta creati i file di esempio.
 
 
 
+[[generate-file-tampering-alert]]
 == Genera un avviso di manomissione dei file
 
 Per generare un avviso di manomissione di file, è possibile eseguire lo script incluso che simulerà un avviso di manomissione di file in Workload Security.
 
 
 
+[[shell]]
 === Conchiglia:
 
 . Copiare lo script dalla directory di installazione dell'agente (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/shell/simulate_attack.sh) nella posizione di montaggio di destinazione.
@@ -171,6 +181,7 @@ Per generare un avviso di manomissione di file, è possibile eseguire lo script 
 
 
 
+[[python]]
 === Pitone:
 
 . Copiare lo script dalla directory di installazione dell'agente (%AGENT_INSTALL_DIR/agent/install/ransomware_simulation/python/simulate_attack.py) nella posizione di montaggio di destinazione.
@@ -183,6 +194,7 @@ Per generare un avviso di manomissione di file, è possibile eseguire lo script 
 
 
 
+[[generate-an-alert-in-workload-security]]
 == Genera un avviso in Workload Security
 
 Una volta terminata l'esecuzione dello script del simulatore, entro pochi minuti verrà visualizzato un avviso sull'interfaccia utente Web.
@@ -208,6 +220,7 @@ image:ws_high_confidence_alert_detail.png["Esempio di avviso di alta confidenza,
 
 
 
+[[triggering-alert-multiple-times]]
 == Attivazione dell'avviso più volte
 
 Workload Security apprende il comportamento dell'utente e non genererà avvisi in caso di ripetuti attacchi di manomissione dei file entro 24 ore per lo stesso utente.

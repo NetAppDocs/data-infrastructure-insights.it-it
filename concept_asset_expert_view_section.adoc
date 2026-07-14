@@ -18,6 +18,7 @@ La sezione Prestazioni di una pagina di risorse o di un pannello scorrevole cons
 
 
 
+[[using-the-performance-section]]
 == Utilizzo della sezione Prestazioni
 
 Di seguito è riportato un esempio della sezione Prestazioni in una pagina di risorse di archiviazione:
@@ -46,6 +47,7 @@ Mostra le risorse che hanno un impatto o sono influenzate da altre risorse condi
 
 
 
+[[alerts-in-performance-section]]
 == Avvisi nella sezione Prestazioni
 
 Gli avvisi vengono visualizzati anche nella sezione Prestazioni della landing page di una risorsa, mostrando l'ora e la durata dell'avviso, nonché la condizione del monitor che lo ha attivato.  Passa il mouse sopra un indicatore di avviso per visualizzare i dettagli sull'avviso.
@@ -54,6 +56,7 @@ image:asset_page_alert_section.png["Avvisi nella sezione prestazioni"]
 
 
 
+[[performance-metric-definitions]]
 == Definizioni delle metriche di prestazione
 
 La sezione Prestazioni di una pagina di risorsa visualizza diverse metriche in base al periodo di tempo selezionato per la risorsa.  Ogni metrica viene visualizzata nel proprio grafico delle prestazioni.  È possibile aggiungere o rimuovere metriche e risorse correlate dai grafici a seconda dei dati che si desidera visualizzare.  Le metriche che puoi scegliere variano a seconda del tipo di risorsa.
@@ -164,6 +167,7 @@ La sezione Prestazioni di una pagina di risorsa visualizza diverse metriche in b
 |===
 
 
+[[using-the-performance-section]]
 == Utilizzo della sezione Prestazioni
 
 La sezione Prestazioni consente di visualizzare grafici delle prestazioni per una risorsa in base a un numero qualsiasi di parametri applicabili durante un periodo di tempo scelto e di aggiungere risorse correlate per confrontare e contrapporre le prestazioni della risorsa e delle risorse correlate in diversi periodi di tempo.

@@ -37,11 +37,12 @@ Questo restituirà il nome host/indirizzo IP per la gestione. Ogni collector DII
 
 
 
+[[terminology]]
 == Terminologia
 
 Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per la risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -64,18 +65,20 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[requirements]]
 == Requisiti
 
-* Indirizzo IP del server Red Hat OpenShift Virtualization sulla porta 443 tramite REST API
+* Indirizzo IP del server Red Hat OpenShift Virtualization sulla porta 6443 tramite REST API
 * Nome utente e password di sola lettura
 * RHEV versione 3.0+
 
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -90,20 +93,22 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
 
-| Porta di comunicazione HTTPS | Porta utilizzata per la comunicazione HTTPS con RHOV 
+| Porta di comunicazione HTTPS | Porta utilizzata per la comunicazione HTTPS con RHOV. Predefinito: 6443. 
 
 
 | Intervallo di sondaggio dell'inventario (min) | Il valore predefinito è 20 minuti. 
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

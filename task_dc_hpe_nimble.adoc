@@ -14,11 +14,12 @@ Il raccoglitore dati HP Enterprise Alletra 6000 (in precedenza Nimble) supporta 
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -47,6 +48,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[requirements]]
 == Requisiti
 
 Per raccogliere dati di inventario e configurazione dall'array di archiviazione, è necessario disporre di quanto segue:
@@ -65,9 +67,10 @@ Per raccogliere dati sulle prestazioni dall'array di archiviazione è necessario
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -82,6 +85,7 @@ Per raccogliere dati sulle prestazioni dall'array di archiviazione è necessario
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
 |===

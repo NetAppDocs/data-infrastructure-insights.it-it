@@ -20,6 +20,7 @@ image:ai_assistant_sample_question.png["Domanda di esempio sull'assistente AI"]
 
 
 
+[[meet-your-infrastructures-new-intelligent-partner]]
 == Scopri il nuovo partner intelligente della tua infrastruttura
 
 L'Assistente AI trasforma il modo in cui interagisci con i tuoi dati, trasformando query complesse in conversazioni semplici. Scopri all'istante schemi nascosti, accelera la risoluzione dei problemi e prendi decisioni basate sui dati con sicurezza. Ottieni risposte immediate a domande come:
@@ -38,6 +39,7 @@ L'Assistente AI trasforma il modo in cui interagisci con i tuoi dati, trasforman
 
 
 
+[[before-using-the-ai-assistant]]
 == Prima di utilizzare l'AI Assistant
 
 * L'Assistente AI è progettato per assisterti. Sebbene si impegni a garantire la massima accuratezza, si consiglia vivamente di verificarne i risultati con la supervisione umana per ottenere risultati ottimali.
@@ -48,6 +50,7 @@ L'Assistente AI trasforma il modo in cui interagisci con i tuoi dati, trasforman
 
 
 
+[[the-ai-assistant-works-with-you]]
 == L'assistente AI lavora con te
 
 L'Assistente AI DII può aiutarti a rispondere a domande sui dati della tua infrastruttura IT. Per farlo in modo efficace, deve comprendere la tua richiesta così come quali dati specifici sono necessari per rispondere alla tua richiesta.
@@ -69,12 +72,14 @@ Per la migliore esperienza, fornisci all'Assistant informazioni specifiche su:
 
 
 
+[[chat-naturally]]
 == Chatta in modo naturale
 
 L'Assistente AI ora supporta più di una dozzina di lingue, consentendo al tuo team di interagire in modo naturale nella lingua preferita. Consulta l'elenco completo link:https://platform.claude.com/docs/en/build-with-claude/multilingual-support["Qui"].
 
 
 
+[[accessing-the-assistant]]
 == Accesso all'Assistente
 
 Per richiamare l'Assistente AI di DII, è sufficiente selezionare l'icona del gufo nell'angolo inferiore dello schermo. Un utente con ruolo "Proprietario" o "Amministratore" deve accettare i termini e le condizioni prima che qualsiasi utente possa utilizzare l'Assistente AI sul tuo tenant.

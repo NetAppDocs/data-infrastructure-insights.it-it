@@ -18,11 +18,12 @@ Il data collector per VMware vSphere raccoglie informazioni sulle prestazioni e 
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati VMware vSphere.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per l'asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -48,6 +49,7 @@ Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare
 
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
@@ -67,9 +69,10 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 
 
 
+[[setup-and-connection]]
 == Installazione e connessione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -81,9 +84,10 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 |===
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -98,14 +102,13 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
 Nella schermata di configurazione avanzata, seleziona la casella *Prestazioni VM* per raccogliere i dati sulle prestazioni.  La raccolta dell'inventario è abilitata per impostazione predefinita.  È possibile configurare i seguenti campi:
 
-[cols="2*"]
+[cols="50,50"]
 |===
-
-
 | Campo | Descrizione 
 
 
@@ -131,6 +134,7 @@ Nella schermata di configurazione avanzata, seleziona la casella *Prestazioni VM
 |===
 
 
+[[mapping-vmware-tags-to-data-infrastructure-insights-annotations]]
 == Mappatura dei tag VMware alle annotazioni Data Infrastructure Insights
 
 Il raccoglitore dati VMware consente di popolare le annotazioni di Data Infrastructure Insights con tag configurati su VMware.  Il nome dell'annotazione DII deve essere identico al nome della *categoria* VMware; il tag viene quindi applicato come valore di annotazione di un'annotazione DII con lo stesso nome della categoria.  Data Infrastructure Insights popolerà sempre le annotazioni di tipo testo con lo stesso nome e farà un "miglior tentativo" per popolare le annotazioni di altri tipi (numero, valore booleano, ecc.).  Se l'annotazione è di un tipo diverso e il raccoglitore dati non riesce a popolarla, potrebbe essere necessario rimuovere l'annotazione e ricrearla come tipo di testo.
@@ -146,15 +150,17 @@ Tieni presente quanto segue:
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

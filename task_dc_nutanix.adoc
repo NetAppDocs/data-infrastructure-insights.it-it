@@ -2,23 +2,28 @@
 sidebar: sidebar 
 permalink: task_dc_nutanix.html 
 keywords: data collector, Nutanix, NX Series 
-summary: Configurazione del raccoglitore dati Nutanix. 
+summary: Configurazione del data collector Nutanix NX. 
 ---
 = Raccoglitore dati Nutanix NX
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights utilizza il raccoglitore dati Nutanix per scoprire dati di inventario e prestazioni per i sistemi di archiviazione Nutanix NX.
+Data Infrastructure Insights utilizza il raccoglitore di dati Nutanix NX per individuare dati di inventario e di prestazioni dei sistemi di storage Nutanix NX.
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati Nutanix.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -38,6 +43,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[requirements]]
 == Requisiti
 
 * L'indirizzo IP dei servizi dati esterni per il cluster
@@ -47,9 +53,10 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -64,9 +71,10 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -81,6 +89,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

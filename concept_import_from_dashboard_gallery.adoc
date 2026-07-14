@@ -18,6 +18,7 @@ Data Infrastructure Insights fornisce una serie di dashboard consigliate per ott
 
 
 
+[[importing-from-the-dashboard-gallery]]
 == Importazione dalla Galleria della Dashboard
 
 Per importare una dashboard dalla galleria, procedere come segue:
@@ -36,6 +37,7 @@ L'importazione dalla galleria della dashboard è disponibile per gli utenti con 
 
 
 
+[[importing-an-exported-dashboard]]
 == Importazione di una dashboard esportata
 
 Per *esportare* una dashboard, nella pagina *Osservabilità > Esplora > Tutte le dashboard*, fare clic sul menu a destra della dashboard e scegliere _Esporta_. È anche possibile selezionare più dashboard e scegliere _Esporta_ dal menu a discesa _Azioni in blocco_. I dashboard vengono salvati in un file .ZIP sul sistema locale.

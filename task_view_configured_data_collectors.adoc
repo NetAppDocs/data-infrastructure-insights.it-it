@@ -35,6 +35,7 @@ Viene visualizzato un elenco di tutti i Data Collector installati.  L'elenco for
 
 
 
+[[controlling-data-collector-polling]]
 == Controllo del polling del Data Collector
 
 Dopo aver apportato una modifica a un raccoglitore dati, potresti voler eseguire immediatamente un polling per verificare le modifiche oppure potresti voler posticipare la raccolta dati su un raccoglitore dati per uno, tre o cinque giorni mentre lavori su un problema.
@@ -51,6 +52,7 @@ Dopo aver apportato una modifica a un raccoglitore dati, potresti voler eseguire
 
 
 
+[[editing-data-collector-information]]
 == Modifica delle informazioni del raccoglitore dati
 
 È possibile modificare le informazioni di configurazione del raccoglitore dati esistente.
@@ -83,6 +85,7 @@ Quando si modificano più raccoglitori di dati, il pulsante *Configurazione di p
 
 
 
+[[cloning-data-collectors]]
 == Clonazione di collettori di dati
 
 Utilizzando la funzione di clonazione, è possibile aggiungere rapidamente un'origine dati che abbia le stesse credenziali e gli stessi attributi di un'altra origine dati.  La clonazione consente di configurare facilmente più istanze dello stesso tipo di dispositivo.
@@ -104,6 +107,7 @@ L'operazione di clonazione copia tutti gli altri attributi e impostazioni per cr
 
 
 
+[[performing-bulk-actions-on-data-collectors]]
 == Esecuzione di azioni in blocco sui collettori di dati
 
 È possibile modificare contemporaneamente alcune informazioni per più raccoglitori di dati.  Questa funzione consente di avviare un sondaggio, posticiparlo e riprenderlo su più raccoglitori di dati.  Inoltre, è possibile eliminare più raccoglitori di dati.

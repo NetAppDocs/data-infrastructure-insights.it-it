@@ -20,6 +20,7 @@ image:CloudSecureAlertsListPage.png["Elenco degli avvisi"]
 
 
 
+[[alert]]
 == Attenzione
 
 L'elenco degli avvisi visualizza un grafico che mostra il numero totale di potenziali attacchi e/o avvisi emessi nell'intervallo di tempo selezionato, seguito da un elenco degli attacchi e/o avvisi verificatisi in tale intervallo di tempo.  È possibile modificare l'intervallo di tempo regolando i cursori dell'ora di inizio e dell'ora di fine nel grafico.
@@ -61,6 +62,7 @@ image:CloudSecureChangeAlertStatus.png["Cambia stato di avviso"]
 
 
 
+[[filter-options]]
 == Opzioni filtro
 
 Puoi filtrare gli avvisi in base a quanto segue:
@@ -73,12 +75,14 @@ Puoi filtrare gli avvisi in base a quanto segue:
 
 
 
+[[the-alert-details-page]]
 == La pagina Dettagli avviso
 
 È possibile fare clic sul collegamento di un avviso nella pagina dell'elenco degli avvisi per aprire una pagina dei dettagli dell'avviso. I dettagli dell'avviso possono variare a seconda del tipo di attacco o di avviso. Ad esempio, una pagina con i dettagli di un attacco di manomissione di file potrebbe mostrare le seguenti informazioni:
 
 
 
+[[summary-section]]
 === Sezione riassuntiva:
 
 * Tipo di attacco (manomissione di file, sabotaggio) e ID avviso (assegnato da Workload Security)
@@ -89,6 +93,7 @@ Puoi filtrare gli avvisi in base a quanto segue:
 
 
 
+[[attack-results-section]]
 === Sezione Risultati dell'attacco:
 
 * Conteggio dei volumi e dei file interessati
@@ -98,6 +103,7 @@ Puoi filtrare gli avvisi in base a quanto segue:
 
 
 
+[[related-users-section]]
 === Sezione Utenti correlati:
 
 Questa sezione mostra i dettagli sull'utente coinvolto nel potenziale attacco, incluso un grafico delle principali attività dell'utente.
@@ -108,6 +114,7 @@ Pagina dei dettagli (questo esempio mostra un potenziale attacco di manomissione
 
 
 
+[[take-a-snapshot-action]]
 == _Scatta un'istantanea_ Azione
 
 Workload Security protegge i tuoi dati eseguendo automaticamente uno snapshot quando viene rilevata un'attività dannosa, garantendo così che i tuoi dati vengano sottoposti a backup in modo sicuro.
@@ -120,18 +127,21 @@ Istantanea manuale:image:AlertActionsExample.png["Schermata di azione di avviso,
 
 
 
+[[alert-notifications]]
 == Notifiche di avviso
 
 Le notifiche e-mail degli avvisi vengono inviate a un elenco di destinatari degli avvisi per ogni azione sull'avviso.  Per configurare i destinatari degli avvisi, fare clic su *Amministrazione > Notifiche* e immettere un indirizzo e-mail per ciascun destinatario.
 
 
 
+[[retention-policy]]
 == Politica di conservazione
 
 Gli avvisi e le segnalazioni vengono conservati per 13 mesi.  Gli avvisi e le segnalazioni più vecchi di 13 mesi verranno eliminati.  Se l'ambiente Workload Security viene eliminato, vengono eliminati anche tutti i dati associati all'ambiente.
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 |===

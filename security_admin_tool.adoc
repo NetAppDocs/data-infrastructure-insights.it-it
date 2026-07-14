@@ -18,18 +18,21 @@ Le password crittografate dell'origine dati vengono archiviate in Data Infrastru
 
 
 
+[[upgrade-and-installation-considerations]]
 == Considerazioni sull'aggiornamento e l'installazione
 
 Se il sistema Insight contiene configurazioni di sicurezza non predefinite (ad esempio se sono state modificate le password), è necessario eseguire il backup delle configurazioni di sicurezza.  L'installazione di un nuovo software o, in alcuni casi, l'aggiornamento del software, ripristina la configurazione di sicurezza predefinita del sistema.  Quando il sistema torna alla configurazione predefinita, è necessario ripristinare la configurazione non predefinita affinché il sistema funzioni correttamente.
 
 
 
+[[managing-security-on-the-acquisition-unit]]
 == Gestione della sicurezza sull'unità di acquisizione
 
 Lo strumento SecurityAdmin consente di gestire le opzioni di sicurezza per Data Infrastructure Insights e viene eseguito sul sistema dell'unità di acquisizione.  La gestione della sicurezza include la gestione di chiavi e password, il salvataggio e il ripristino delle configurazioni di sicurezza create o il ripristino delle configurazioni alle impostazioni predefinite.
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 * Per installare il software Acquisition Unit (che include lo strumento SecurityAdmin), è necessario disporre dei privilegi di amministratore sul sistema AU.
@@ -44,6 +47,7 @@ Linux - /bin/oci-securityadmin.sh
 ....
 
 
+[[using-the-securityadmin-tool]]
 == Utilizzo dello strumento SecurityAdmin
 
 Avviare lo strumento SecurityAdmin in modalità interattiva (-i).
@@ -126,6 +130,7 @@ Scegli l'opzione che vuoi configurare e segui le istruzioni.
 
 
 
+[[specifying-a-user-to-run-the-tool]]
 == Specificare un utente per eseguire lo strumento
 
 Se ti trovi in un ambiente controllato e attento alla sicurezza, potresti non disporre del gruppo _cisys_ ma potresti comunque voler consentire a utenti specifici di eseguire lo strumento SecurityAdmin.
@@ -148,6 +153,7 @@ Se l'utente e/o il gruppo specificato non esistono, verranno creati.  L'utente a
 
 
 
+[[updating-or-removing-proxy]]
 == Aggiornamento o rimozione del proxy
 
 Lo strumento SecurityAdmin può essere utilizzato per impostare o rimuovere le informazioni proxy per l'unità di acquisizione eseguendo lo strumento con il parametro _-pr_:
@@ -194,6 +200,7 @@ Per aggiornare un proxy, il comando è
  ./securityadmin -pr -upr <arg>
 
 
+[[external-key-retrieval]]
 == Recupero della chiave esterna
 
 Se si fornisce uno script shell UNIX, questo può essere eseguito dall'unità di acquisizione per recuperare la *chiave privata* e la *chiave pubblica* dal sistema di gestione delle chiavi.
@@ -226,6 +233,7 @@ Lo script deve essere registrato con l'unità di acquisizione tramite lo strumen
 |===
 
 
+[[encrypting-a-password-for-use-in-api]]
 == Crittografia di una password per l'uso nell'API
 
 L'opzione 8 consente di crittografare una password, che può poi essere passata a un raccoglitore di dati tramite API.

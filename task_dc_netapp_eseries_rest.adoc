@@ -14,11 +14,12 @@ Il raccoglitore di dati REST NetApp E-Series raccoglie dati di inventario, regis
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da NetApp E-Series, utilizzando REST. Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset. Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -44,6 +45,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[requirements]]
 == Requisiti
 
 * L'indirizzo IP di ciascun controller sull'array
@@ -54,9 +56,10 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -65,9 +68,10 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -79,12 +83,14 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 |===
 
 
+[[e-series-terminology-landing-page]]
 == Terminologia della serie E (pagina di destinazione)
 
 I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trovare nelle landing page delle risorse NetApp E-Series.  Molti di questi termini si applicano anche ad altri raccoglitori di dati.
 
 
 
+[[storage]]
 === Magazzinaggio
 
 * Modello: nome del modello del dispositivo.
@@ -100,6 +106,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[storage-pool]]
 === Pool di archiviazione
 
 * Archiviazione: su quale array di archiviazione risiede questo pool. Obbligatorio
@@ -117,6 +124,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[storage-node]]
 === Nodo di archiviazione
 
 * Archiviazione: di quale array di archiviazione fa parte questo nodo. Obbligatorio
@@ -135,6 +143,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo raccoglitore di dati possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

@@ -16,6 +16,7 @@ Vedi anchelink:task_troubleshooting_linux_acquisition_unit_problems.html["Risolu
 
 
 
+[[login-issues]]
 == Problemi di accesso
 
 |===
@@ -44,6 +45,7 @@ Vedi anchelink:task_troubleshooting_linux_acquisition_unit_problems.html["Risolu
 |===
 
 
+[[other-issues]]
 == Altri problemi
 
 |===
@@ -62,6 +64,7 @@ Vedi anchelink:task_troubleshooting_linux_acquisition_unit_problems.html["Risolu
 |===
 
 
+[[resources]]
 == Risorse
 
 Ulteriori suggerimenti per la risoluzione dei problemi possono essere trovati nellink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs["Base di conoscenza NetApp"] (è richiesto l'accesso al supporto).

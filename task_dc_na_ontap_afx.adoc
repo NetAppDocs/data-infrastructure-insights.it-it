@@ -18,6 +18,7 @@ Questo raccoglitore di dati acquisisce dati di inventario, registri EMS e dati s
 
 
 
+[[requirements]]
 == Requisiti
 
 Di seguito sono riportati i requisiti per configurare e utilizzare questo raccoglitore dati:
@@ -33,6 +34,7 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo raccog
 
 
 
+[[a-note-about-permissions]]
 == Una nota sui permessi
 
 Poiché numerose dashboard ONTAP di Data Infrastructure Insights si basano su contatori ONTAP avanzati, è consigliabile mantenere abilitata l'opzione *Abilita raccolta dati contatore avanzata* nella sezione Configurazione avanzata del raccoglitore dati.
@@ -83,6 +85,7 @@ restUser       http        password      restRole         no     none
 ----
 
 
+[[migration]]
 == Migrazione
 
 Per migrare da un precedente raccoglitore dati ONTAP (ontapi) al più recente raccoglitore REST ONTAP , procedere come segue:
@@ -97,9 +100,10 @@ Se lo desideri, puoi usare lo stesso procedimento per tornare al collettore prec
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -114,9 +118,10 @@ Se lo desideri, puoi usare lo stesso procedimento per tornare al collettore prec
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -137,11 +142,12 @@ Se lo desideri, puoi usare lo stesso procedimento per tornare al collettore prec
 |===
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce dati di inventario, registri e prestazioni dal raccoglitore dati ONTAP .  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per l'asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -174,12 +180,14 @@ Data Infrastructure Insights acquisisce dati di inventario, registri e prestazio
 |===
 
 
+[[ontap-data-management-terminology]]
 == Terminologia di gestione dei dati ONTAP
 
 I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trovare nelle pagine di destinazione delle risorse di archiviazione ONTAP Data Management.  Molti di questi termini si applicano anche ad altri raccoglitori di dati.
 
 
 
+[[storage]]
 === Magazzinaggio
 
 * Modello: elenco delimitato da virgole dei nomi univoci e discreti dei modelli di nodi all'interno di questo cluster.  Se tutti i nodi nei cluster sono dello stesso tipo di modello, verrà visualizzato un solo nome di modello.
@@ -194,6 +202,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[storage-pool]]
 === Pool di archiviazione
 
 * Archiviazione: su quale array di archiviazione risiede questo pool.  Obbligatorio.
@@ -210,6 +219,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[storage-node]]
 === Nodo di archiviazione
 
 * Archiviazione: di quale array di archiviazione fa parte questo nodo.  Obbligatorio.
@@ -228,6 +238,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[ontap-power-metrics]]
 == Metriche di potenza ONTAP
 
 Diversi modelli ONTAP forniscono metriche di potenza per Data Infrastructure Insights che possono essere utilizzate per il monitoraggio o l'invio di avvisi.  Gli elenchi dei modelli supportati e non supportati riportati di seguito non sono esaustivi, ma dovrebbero fornire alcune indicazioni; in generale, se un modello appartiene alla stessa famiglia di uno presente nell'elenco, il supporto dovrebbe essere lo stesso.
@@ -242,11 +253,12 @@ FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 806
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

@@ -22,6 +22,7 @@ image:lp_new_design.png["nuovo design LP"]
 
 
 
+[[summary-section]]
 == Sezione Riepilogo
 
 Nella parte superiore di una landing page si trova la sezione espandibile Riepilogo, che include diversi grafici sparkline che mostrano le tendenze recenti dei dati per elementi quali la produttività o la latenza, nonché informazioni e attributi dell'oggetto e qualsiasi monitor che potrebbe emettere avvisi per l'oggetto.
@@ -30,6 +31,7 @@ La sezione Riepilogo visualizza e consente anche di modificare le annotazioni as
 
 
 
+[[performance-section]]
 == Sezione Performance
 
 La sezione Prestazioni visualizza i dati sulle prestazioni dell'oggetto.  Selezionare _Impostazioni_ per aggiungere grafici aggiuntivi alla visualizzazione, come Throughput o Capacità, oppure selezionare risorse correlate o contribuenti per rappresentare graficamente i loro dati insieme a quelli dell'oggetto.  Nella sezione Prestazioni verranno elencati anche i dispositivi che potrebbero potenzialmente causare conflitti.  I dati nei grafici vengono aggiornati automaticamente man mano che i raccoglitori di dati interrogano e acquisiscono i dati aggiornati.
@@ -62,12 +64,14 @@ Mostra le risorse che hanno un impatto o sono influenzate da altre risorse condi
 
 
 
+[[additional-resources-section]]
 == Sezione Risorse aggiuntive
 
 La sezione Risorse aggiuntive visualizza tabelle di dati per le risorse correlate al tipo di oggetto corrente.  È possibile espandere e comprimere queste tabelle per concentrarsi su risorse specifiche.  Seleziona l'icona dell'ingranaggio per visualizzare temporaneamente metriche o attributi aggiuntivi in una tabella.
 
 
 
+[[add-custom-widgets]]
 == Aggiungi widget personalizzati
 
 Puoi aggiungere i tuoi widget a qualsiasi pagina di risorse.  I widget aggiunti appariranno nelle pagine delle risorse per tutti gli oggetti di quel tipo.  Ad esempio, aggiungendo un widget personalizzato a una pagina di risorse di archiviazione, tale widget verrà visualizzato nelle pagine delle risorse di tutte le risorse di archiviazione.
@@ -76,6 +80,7 @@ I widget personalizzati vengono posizionati nella parte inferiore della landing 
 
 
 
+[[types-of-asset-pages]]
 == Tipi di pagine di risorse
 
 Data Infrastructure Insights fornisce pagine di risorse per le seguenti risorse:
@@ -102,6 +107,7 @@ Data Infrastructure Insights fornisce pagine di risorse per le seguenti risorse:
 
 
 
+[[changing-the-time-range-of-displayed-data]]
 == Modifica dell'intervallo di tempo dei dati visualizzati
 
 Per impostazione predefinita, una pagina di risorse visualizza le ultime 3 ore di dati; tuttavia, è possibile modificare il segmento temporale dei dati visualizzati utilizzando un'opzione presente in ogni pagina di risorse, indipendentemente dal tipo di risorsa.  Per modificare l'intervallo di tempo, fare clic sull'intervallo di tempo visualizzato nella barra in alto e scegliere tra i seguenti segmenti di tempo:
@@ -128,6 +134,7 @@ Le informazioni sulla pagina si aggiornano automaticamente in base all'intervall
 
 
 
+[[performance-metric-definitions]]
 == Definizioni delle metriche di prestazione
 
 La sezione Prestazioni può visualizzare diverse metriche in base al periodo di tempo selezionato per la risorsa.  Ogni metrica viene visualizzata nel proprio grafico delle prestazioni.  È possibile aggiungere o rimuovere metriche e risorse correlate dai grafici a seconda dei dati che si desidera visualizzare; le metriche tra cui è possibile scegliere variano a seconda del tipo di risorsa.

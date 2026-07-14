@@ -16,12 +16,14 @@ image:Kubernetes_Detail_Page_new.png["Pagina dei dettagli del cluster"]
 
 
 
+[[namespace-node-and-pod-counts]]
 == Conteggio di spazi dei nomi, nodi e pod
 
 I conteggi nella parte superiore della pagina mostrano il numero totale di namespace, nodi e pod nel cluster, nonché il numero di popd attualmente in stato di avviso e in sospeso.
 
 
 
+[[shared-resources-and-saturation]]
 == Risorse condivise e saturazione
 
 In alto a destra della pagina dei dettagli è visualizzata la saturazione del cluster in percentuale, nonché un grafico che mostra l'andamento recente nel tempo.  La saturazione del cluster è il livello più alto di saturazione della CPU, della memoria o dello storage in ogni momento.
@@ -32,6 +34,7 @@ I dispositivi con il maggiore utilizzo sono mostrati in una tabella in basso.  C
 
 
 
+[[namespaces]]
 == Spazi dei nomi
 
 La scheda Namespace visualizza un elenco di tutti i namespace presenti nell'ambiente Kubernetes, mostrando l'utilizzo di CPU e memoria, nonché il conteggio dei carichi di lavoro in ciascun namespace.  Fare clic sui collegamenti Nome per esplorare ogni spazio dei nomi.
@@ -40,6 +43,7 @@ image:Kubernetes_Namespace_tab_new.png["elenco degli spazi dei nomi correnti nel
 
 
 
+[[workloads]]
 == Carichi di lavoro
 
 Allo stesso modo, la scheda Carichi di lavoro visualizza un elenco dei carichi di lavoro in ogni namespace, mostrando ancora una volta l'utilizzo di CPU e memoria.  Facendo clic sui collegamenti Namespace si accede a ciascuno di essi.
@@ -48,6 +52,7 @@ image:Kubernetes_Workloads_tab_new.png["elenco degli spazi dei nomi correnti nel
 
 
 
+[[the-cluster-wheel]]
 == La "Ruota" del Cluster
 
 image:Kubernetes_Wheel_Section.png["Ruota a grappolo"]
@@ -74,6 +79,7 @@ image:Kubernetes_Capacity_Info.png["Capacità e allocazione dei nodi"]
 
 
 
+[[a-note-about-the-gauges]]
 == Una nota sugli indicatori
 
 Gli indicatori di memoria e CPU mostrano tre colori, poiché mostrano la capacità _utilizzata_ in relazione sia alla capacità _allocabile_ che alla capacità _totale_.

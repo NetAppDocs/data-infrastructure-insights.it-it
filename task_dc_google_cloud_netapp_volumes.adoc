@@ -18,6 +18,7 @@ Questo raccoglitore di dati supporta la raccolta di inventario e prestazioni dal
 
 
 
+[[service-account-requirements]]
 == Requisiti dell'account di servizio
 
 * È necessario creare un account di servizio seguendo le istruzioni inlink:https://cloud.google.com/iam/docs/creating-managing-service-accounts["Creazione/gestione di account di servizio"] .  Questo account di servizio è identificato da un ID univoco, noto come _clientId_, che verrà utilizzato come nome utente.
@@ -27,6 +28,7 @@ Questo raccoglitore di dati supporta la raccolta di inventario e prestazioni dal
 
 
 
+[[configuration]]
 == Configurazione
 
 [cols="50,50"]
@@ -53,6 +55,7 @@ Questo raccoglitore di dati supporta la raccolta di inventario e prestazioni dal
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
 [cols="50,50"]
@@ -73,6 +76,7 @@ Questo raccoglitore di dati supporta la raccolta di inventario e prestazioni dal
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

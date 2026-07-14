@@ -14,11 +14,12 @@ Data Infrastructure Insights utilizza il raccoglitore dati Oracle ZFS Storage Ap
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce informazioni di inventario con il raccoglitore dati Oracle ZFS.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -47,6 +48,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[requirements]]
 == Requisiti
 
 * Nomi host per ZFS Controller-1 e ZFS Controller-2
@@ -56,6 +58,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[required-performance-metrics]]
 == Metriche di prestazione richieste
 
 Gli appliance Oracle ZFS offrono agli amministratori di storage un'ampia flessibilità nell'acquisizione di statistiche sulle prestazioni.  Data Infrastructure Insights prevede che ogni controller in una coppia ad alta disponibilità sia configurato per acquisire le seguenti metriche:
@@ -70,9 +73,10 @@ Se il controller non acquisisce uno o tutti questi dati, probabilmente Data Infr
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -90,9 +94,10 @@ Se il controller non acquisisce uno o tutti questi dati, probabilmente Data Infr
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -110,12 +115,14 @@ Se il controller non acquisisce uno o tutti questi dati, probabilmente Data Infr
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
 [cols="2a, 2a"]

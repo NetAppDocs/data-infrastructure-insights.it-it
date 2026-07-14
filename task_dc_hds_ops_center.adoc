@@ -14,11 +14,12 @@ Questo raccoglitore di dati utilizza la suite integrata di applicazioni di Hitac
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore di dati.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -53,6 +54,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[inventory-requirements]]
 == Requisiti di inventario
 
 Per raccogliere i dati di inventario è necessario disporre di quanto segue:
@@ -63,6 +65,7 @@ Per raccogliere i dati di inventario è necessario disporre di quanto segue:
 
 
 
+[[performance-requirements]]
 == Requisiti di prestazione
 
 Per raccogliere dati sulle prestazioni è necessario soddisfare i seguenti requisiti:
@@ -71,9 +74,10 @@ Il modulo "Analyzer" di HDS Ops Center deve essere installato. Gli array di stor
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -88,6 +92,7 @@ Il modulo "Analyzer" di HDS Ops Center deve essere installato. Gli array di stor
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
 |===

@@ -29,6 +29,7 @@ Dopo aver definito un'applicazione, è possibile assegnarla alle risorse.
 
 
 
+[[assigning-applications-to-assets]]
 == Assegnazione delle applicazioni alle risorse
 
 Questa procedura assegna l'applicazione a un host come esempio.  È possibile assegnare host, macchine virtuali, volumi o volumi interni a un'applicazione.

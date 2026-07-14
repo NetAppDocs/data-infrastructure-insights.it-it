@@ -76,6 +76,7 @@ Nella tabella seguente sono illustrate le funzioni disponibili per ciascun ruolo
 |===
 
 
+[[setting-reporting-cognos-email-preferences]]
 == Impostazione delle preferenze e-mail di Reporting (Cognos)
 
 
@@ -83,6 +84,7 @@ NOTE: Se modifichi le preferenze e-mail dell'utente in Data Infrastructure Insig
 
 
 
+[[what-steps-should-i-take-to-prepare-my-existing-environment-for-enabling-sso]]
 === Quali passaggi dovrei seguire per preparare il mio ambiente esistente all'abilitazione dell'SSO?
 
 Per garantire che i tuoi report vengano conservati, migra tutti i report da _I miei contenuti_ a _Contenuti del team_ seguendo i passaggi seguenti.  Devi fare questo prima di abilitare SSO sul tuo tenant:

@@ -27,6 +27,7 @@ NOTE: L'esportazione in formato .CSV è disponibile anche nel menu "tre punti" n
 
 
 
+[[asynchronous-export]]
 == Esportazione asincrona
 
 L'esportazione dei dati in formato .CSV può richiedere da pochi secondi a diverse ore, a seconda della quantità di dati da esportare.  Data Infrastructure Insights esporta tali dati in modo asincrono, così puoi continuare a lavorare mentre il file .CSV viene compilato.
@@ -39,12 +40,14 @@ I dati esportati rifletteranno il filtro corrente, le colonne e i nomi delle col
 
 
 
+[[commas-in-asset-names]]
 == Virgole nei nomi delle risorse
 
 Nota: quando nel nome di una risorsa è presente una virgola, l'esportazione racchiude il nome tra virgolette, preservando il nome della risorsa e il formato .csv corretto.
 
 
 
+[[time-format-or-not-time-format]]
 == Formato dell'ora o non formato dell'ora?
 
 Quando si apre un file .CSV esportato con Excel, se si ha un nome di oggetto o un altro campo nel formato NN:NN (due cifre seguite da due punti seguiti da altre due cifre), Excel a volte interpreterà quel nome come un formato Ora, anziché come un formato Testo.  Ciò può comportare la visualizzazione di valori errati in tali colonne da parte di Excel.  Ad esempio, un oggetto denominato "81:45" verrebbe visualizzato in Excel come "81:45:00".

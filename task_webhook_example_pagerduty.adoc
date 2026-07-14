@@ -21,6 +21,7 @@ NOTE: Questa pagina fa riferimento a istruzioni di terze parti, che potrebbero e
 
 
 
+[[pagerduty-setup]]
 == Configurazione PagerDuty:
 
 . In PagerDuty, vai su *Servizi > Directory dei servizi* e clicca sul pulsante *+Nuovo servizio*
@@ -48,6 +49,7 @@ Nella schermata di configurazione dell'integrazione, prendi nota della *Integrat
 
 
 
+[[create-data-infrastructure-insights-webhook]]
 == Crea un webhook Data Infrastructure Insights :
 
 . In Data Infrastructure Insights, vai su *Amministrazione > Notifiche* e seleziona la scheda *Webhook*.  Fare clic su *+Webhook* per creare un nuovo webhook.
@@ -63,6 +65,7 @@ Ripetere questi passaggi per creare un webhook "PagerDuty Resolve" per gli event
 
 
 
+[[pagerduty-to-data-infrastructure-insights-field-mapping]]
 == Mappatura dei campi di PagerDuty per Data Infrastructure Insights
 
 La tabella e l'immagine seguenti mostrano la mappatura dei campi tra PagerDuty e Data Infrastructure Insights:
@@ -90,6 +93,7 @@ image:Webhooks-PagerDuty_Fields.png["Campi PagerDuty in CI"]
 
 
 
+[[notifications-via-webhook]]
 == Notifiche tramite Webhook
 
 Per notificare gli eventi tramite webhook, in Data Infrastructure Insights vai su *Avvisi > Monitor* e fai clic su *+Monitor* per creare un nuovolink:task_create_monitor.html["monitorare"] .

@@ -21,6 +21,7 @@ IMPORTANT: Gli esempi riportati in queste sezioni hanno solo scopo esplicativo e
 
 
 
+[[creating-a-dashboard]]
 == Creazione di una dashboard
 
 Puoi creare una nuova dashboard in uno dei due posti seguenti:
@@ -31,12 +32,14 @@ Puoi creare una nuova dashboard in uno dei due posti seguenti:
 
 
 
+[[see-it-in-action]]
 == Guardalo in azione
 
 link:https://media.netapp.com/video-detail/5a293f3c-c655-5879-9133-1a32aaa140e8["Crea dashboard potenti con NetApp (video),window=read-later"]
 
 
 
+[[dashboard-controls]]
 == Controlli del cruscotto
 
 La schermata Dashboard presenta diversi controlli:
@@ -55,6 +58,7 @@ I widget possono essere ridimensionati e riposizionati in diverse posizioni all'
 
 
 
+[[widget-types]]
 == Tipi di widget
 
 Puoi scegliere tra i seguenti tipi di widget:
@@ -107,6 +111,7 @@ Per spiegazioni più dettagliate su queste e altre funzionalità della Dashboard
 
 
 
+[[setting-a-dashboard-as-your-home-page]]
 == Impostazione di una dashboard come home page
 
 Puoi scegliere quale dashboard impostare come *home page* del tuo tenant utilizzando uno dei seguenti metodi:

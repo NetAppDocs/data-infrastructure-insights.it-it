@@ -20,6 +20,7 @@ image:SupportPageExample.png["Pagina di supporto, larghezza=600"]
 
 
 
+[[activating-support-entitlement]]
 == Attivazione del diritto al supporto
 
 Data Infrastructure Insights offre supporto self-service e via e-mail durante l'esecuzione in modalità di prova.  Una volta sottoscritto il servizio, si consiglia vivamente di attivare il diritto al supporto.  L'attivazione del diritto di supporto consente di accedere al supporto tecnico tramite il sistema di ticketing web e telefono.  La modalità di supporto predefinita è self-service fino al completamento della registrazione.  Vedere<<obtaining-support-information,dettagli>> sotto.
@@ -32,6 +33,7 @@ Durante il processo di sottoscrizione iniziale, l'istanza di Data Infrastructure
 
 
 
+[[option-1-steps-for-a-user-with-a-pre-existing-netapp-support-site-nss-sso-account]]
 === Opzione 1: Passaggi per un utente con un account SSO NetApp Support Site (NSS) preesistente
 
 .Passi
@@ -50,6 +52,7 @@ image:ExistingCustomerRegExample.png["modulo cliente esistente"]
 
 
 
+[[option-2-steps-for-a-new-netapp-customer-with-no-pre-existing-netapp-support-site-nss-sso-account]]
 === Opzione 2: Passaggi per un nuovo cliente NetApp senza un account SSO NetApp Support Site (NSS) preesistente
 
 .Passi
@@ -70,12 +73,14 @@ image:SupportPage_SN_Section-NA.png["SN_Schermo"]
 
 
 
+[[obtaining-support-information]]
 == Ottenere informazioni di supporto
 
 NetApp fornisce supporto per Data Infrastructure Insights in vari modi. Sono disponibili ampie opzioni di auto-assistenza gratuite 24 ore su 24, 7 giorni su 7, come gli articoli della knowledge base (KB) o la community NetApp . Per gli utenti abbonati a Data Infrastructure Insights, il supporto tecnico è disponibile tramite telefono o ticketing web. Per i ticket Web e la gestione dei casi è necessario un account SSO NetApp Support Site (NSS).
 
 
 
+[[self-service-support]]
 === Supporto self-service:
 
 Queste opzioni di supporto sono disponibili in modalità di prova e sono disponibili gratuitamente 24 ore su 24, 7 giorni su 7:
@@ -98,6 +103,7 @@ C'è anche un collegamento per fornirelink:mailto:ng-cloudinsights-customerfeedb
 
 
 
+[[subscription-support]]
 === Supporto per l'abbonamento
 
 Oltre alle opzioni di supporto autonomo sopra descritte, se disponi di un abbonamento a Data Infrastructure Insights o di supporto a pagamento per prodotti o servizi NetApp monitorati, puoi collaborare con un tecnico del supporto NetApp per risolvere il tuo problema.
@@ -127,12 +133,14 @@ image:Support_View_SN.png["Visualizza supporto SN"]
 
 
 
+[[data-infrastructure-insights-data-collector-support-matrix]]
 == Matrice di supporto del collettore dati Data Infrastructure Insights
 
 È possibile visualizzare o scaricare informazioni e dettagli sui Data Collector supportati inlink:reference_data_collector_support_matrix.html["* Matrice di supporto del raccoglitore dati Data Infrastructure Insights *, ruolo="esterno""] .
 
 
 
+[[learning-center]]
 === Centro di apprendimento
 
 Indipendentemente dal tipo di abbonamento, *Aiuto > Supporto* contiene collegamenti a numerosi corsi offerti da NetApp University per aiutarti a sfruttare al meglio Data Infrastructure Insights.  Date un'occhiata!

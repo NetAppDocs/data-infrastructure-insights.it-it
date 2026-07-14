@@ -18,6 +18,7 @@ La pagina Tutte le attività consente di comprendere le azioni eseguite sulle en
 
 
 
+[[examining-all-activity-data]]
 == Esame di tutti i dati di attività
 
 Fare clic su *Forensics > Activity Forensics* e quindi sulla scheda *Tutte le attività* per accedere alla pagina Tutte le attività.  Questa pagina fornisce una panoramica delle attività svolte sul tuo inquilino, evidenziando le seguenti informazioni:
@@ -78,6 +79,7 @@ Il metodo _Raggruppa per_ predefinito è _Attività forense_.  Se si seleziona u
 
 
 
+[[filtering-forensic-activity-history-data]]
 == Filtraggio dei dati della cronologia delle attività forensi
 
 Esistono due metodi per filtrare i dati.
@@ -140,6 +142,7 @@ Si prega di notare che tutti i campi filtro sono di ricerca senza distinzione tr
 
 
 
+[[activity-forensics-filter-examples]]
 == Esempi di filtri forensi per l'attività:
 
 |===
@@ -183,22 +186,26 @@ NOTA:
 
 
 
+[[sorting-forensic-activity-history-data]]
 == Ordinamento dei dati della cronologia delle attività forensi
 
 È possibile ordinare i dati della cronologia delle attività in base a _Ora, Utente, IP sorgente, Attività,_, _Tipo di entità_, Cartella di 1° livello (radice), Cartella di 2° livello, Cartella di 3° livello e Cartella di 4° livello.  Per impostazione predefinita, la tabella è ordinata in base all'ordine decrescente _Time_, ovvero i dati più recenti verranno visualizzati per primi.  L'ordinamento è disabilitato per i campi _Dispositivo_ e _Protocollo_.
 
 
 
+[[user-guide-for-asynchronous-exports]]
 == Guida utente per le esportazioni asincrone
 
 
 
+[[overview]]
 === Panoramica
 
 La funzionalità Esportazioni asincrone di Storage Workload Security è progettata per gestire esportazioni di dati di grandi dimensioni.
 
 
 
+[[step-by-step-guide-exporting-data-with-asynchronous-exports]]
 === Guida passo passo: esportazione di dati con esportazioni asincrone
 
 . *Avvia esportazione*: seleziona la durata e i filtri desiderati per l'esportazione e fai clic sul pulsante Esporta.
@@ -216,6 +223,7 @@ Uno script di esempio per estrarre dati forensi tramite API è presente in _/opt
 
 
 
+[[column-selection-for-all-activity]]
 == Selezione della colonna per tutte le attività
 
 Per impostazione predefinita, la tabella _Tutte le attività_ mostra colonne selezionate.  Per aggiungere, rimuovere o modificare le colonne, fare clic sull'icona dell'ingranaggio a destra della tabella e selezionare dall'elenco delle colonne disponibili.
@@ -224,12 +232,14 @@ image:CloudSecure_ActivitySelection.png["Selettore attività, larghezza=30%"]
 
 
 
+[[activity-history-retention]]
 == Conservazione della cronologia delle attività
 
 La cronologia delle attività viene conservata per 13 mesi per gli ambienti Workload Security attivi.
 
 
 
+[[applicability-of-filters-in-forensics-page]]
 == Applicabilità dei filtri nella pagina forense
 
 |===
@@ -252,6 +262,7 @@ La cronologia delle attività viene conservata per 13 mesi per gli ambienti Work
 |===
 
 
+[[path-search]]
 == Ricerca percorso
 
 I risultati della ricerca con e senza / saranno diversi
@@ -284,6 +295,7 @@ I risultati della ricerca con e senza / saranno diversi
 |===
 
 
+[[local-root-svm-user-activity-changes]]
 == Modifiche all'attività dell'utente SVM radice locale
 
 Se un utente root SVM locale sta eseguendo un'attività, l'IP del client su cui è montata la condivisione NFS viene ora considerato nel nome utente, che verrà visualizzato come root@<indirizzo-ip-del-client> sia nelle pagine delle attività forensi che in quelle delle attività utente.
@@ -298,6 +310,7 @@ Per esempio:
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 |===

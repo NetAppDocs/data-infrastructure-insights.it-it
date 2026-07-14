@@ -22,12 +22,14 @@ Si noti che le regole di annotazione, che assegnano automaticamente annotazioni 
 
 
 
+[[inventory-assets]]
 == Attività di inventario
 
 Tutti i tipi di asset di inventario (chiamati anche infrastruttura) (storage, switch, VM, Application, ecc.) possono essere utilizzati in query, widget della dashboard e pagine di destinazione degli asset personalizzate. I campi e i contatori disponibili per filtri, espressioni e visualizzazione varieranno tra i tipi di asset.
 
 
 
+[[integration-metrics]]
 == Metriche di integrazione
 
 Oltre a eseguire query sulle risorse di inventario e sulle relative metriche di prestazioni, è possibile eseguire query anche sulle metriche dei *dati di integrazione*, come quelle generate da Kubernetes o Docker, o fornite con ONTAP Advanced Metrics.
@@ -36,6 +38,7 @@ image:QueryPageFilter.png["Esempio di filtro di query di integrazione"]
 
 
 
+[[sharing-queries]]
 == Condivisione delle query
 
 Controlla l'accesso alle tue query scegliendo chi può visualizzarle e modificarle. Per impostazione predefinita, le nuove query sono private e visibili solo a te e puoi scegliere di condividerle con utenti specifici o con l'intera organizzazione con livelli di autorizzazione flessibili (Sola lettura o Modifica).

@@ -10,6 +10,7 @@ keywords: reporting, annotations, publish, unpublish, data warehouse, dwh
 
 
 
+[[publishing-and-unpublishing-annotations-for-reporting]]
 == Pubblicazione e annullamento della pubblicazione di annotazioni per la segnalazione
 
 [role="lead"]
@@ -17,12 +18,14 @@ Scopri come pubblicare annotazioni da utilizzare nei report e nel Data Warehouse
 
 
 
+[[publishing-annotations-for-reporting]]
 == Pubblicazione di annotazioni per la segnalazione
 
 Dopo aver creato annotazioni in Data Infrastructure Insights, puoi pubblicarle per utilizzarle in Reporting.
 
 
 
+[[steps-to-publish-annotations]]
 === Passaggi per pubblicare annotazioni
 
 . Vai alla pagina *Osservabilità > Arricchisci > Annotazioni e seleziona la scheda _Annotazioni per la creazione di report_.
@@ -39,12 +42,14 @@ Tutti i report che fanno riferimento all'annotazione utilizzeranno i valori pubb
 ====
 
 
+[[unpublishing-annotations-for-reporting]]
 == Annullamento della pubblicazione delle annotazioni per la segnalazione
 
 Potrebbero esserci momenti in cui è necessario rimuovere o annullare la pubblicazione delle annotazioni, in modo che non vengano più utilizzate in Reporting.  Ad esempio, un'annotazione potrebbe non essere più necessaria oppure potrebbe contenere informazioni obsolete che non dovrebbero comparire nei report.
 
 
 
+[[steps-to-unpublish-annotations]]
 === Passaggi per annullare la pubblicazione delle annotazioni
 
 Prima di annullare la pubblicazione di un'annotazione, tieni presente che questa azione avrà un impatto su tutti i report esistenti che utilizzano l'annotazione.  I report potrebbero richiedere la modifica o l'assistenza di servizi professionali per rimuovere i riferimenti alle annotazioni.
@@ -64,6 +69,7 @@ Le annotazioni continueranno ad apparire nel Data Warehouse finché non verranno
 ====
 
 
+[[impact-on-existing-reports]]
 == Impatto sui report esistenti
 
 La rimozione o l'annullamento della pubblicazione delle annotazioni potrebbe richiedere modifiche ai report esistenti che fanno riferimento a tali annotazioni. Considera quanto segue:

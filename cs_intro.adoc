@@ -14,6 +14,7 @@ Data Infrastructure Insights Storage Workload Security (in precedenza Cloud Secu
 
 
 
+[[visibility]]
 == Visibilità
 
 Ottieni visibilità e controllo centralizzati dell'accesso degli utenti ai dati aziendali critici archiviati in sede o nel cloud.
@@ -22,6 +23,7 @@ Sostituire gli strumenti e i processi manuali che non riescono a fornire una vis
 
 
 
+[[protection]]
 == Protezione
 
 Proteggi i dati aziendali dall'uso improprio da parte di utenti malintenzionati o compromessi tramite l'apprendimento automatico avanzato e il rilevamento delle anomalie.
@@ -30,6 +32,7 @@ Ti avvisa di eventuali accessi anomali ai dati tramite apprendimento automatico 
 
 
 
+[[compliance]]
 == Conformità
 
 Garantisci la conformità aziendale verificando l'accesso dei dati utente ai dati aziendali critici archiviati in sede o nel cloud.

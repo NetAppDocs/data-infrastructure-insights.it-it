@@ -19,6 +19,7 @@ image:Notifications_email_list.png["Notifiche e-mail"]
 
 
 
+[[subscription-notification-recipients]]
 == Destinatari della notifica di abbonamento
 
 Per configurare i destinatari delle notifiche degli eventi relativi all'abbonamento, vai alla sezione "Destinatari delle notifiche di abbonamento".  Puoi scegliere di inviare notifiche e-mail per gli eventi relativi all'abbonamento a uno o a tutti i seguenti destinatari:
@@ -58,6 +59,7 @@ Per assicurarti che i tuoi destinatari ricevano notifiche da Data Infrastructure
 ====
 
 
+[[global-recipient-list-for-alerts]]
 == Elenco globale dei destinatari per gli avvisi
 
 Le notifiche e-mail degli avvisi vengono inviate all'elenco dei destinatari degli avvisi per ogni azione sull'avviso.  È possibile scegliere di inviare notifiche di avviso a un elenco di destinatari globale.
@@ -71,6 +73,7 @@ NOTE: Le notifiche di ONTAP Data Collector hanno la precedenza su qualsiasi noti
 
 
 
+[[editing-notifications-for-ontap]]
 == Modifica delle notifiche per ONTAP
 
 È possibile modificare le notifiche per i cluster ONTAP selezionando _Modifica notifiche_ dal menu a discesa in alto a destra nella landing page di Storage.

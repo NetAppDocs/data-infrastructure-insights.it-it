@@ -21,6 +21,7 @@ NOTE: Questa pagina fa riferimento a istruzioni di terze parti, soggette a modif
 
 
 
+[[teams-setup]]
 == Configurazione delle squadre:
 
 . In Teams, seleziona il kebab e cerca Webhook in arrivo.
@@ -33,6 +34,7 @@ image:Webhooks_Teams_Create_Webhook.png["Webhook in arrivo in Teams"]
 
 
 
+[[create-workload-security-teams-webhook]]
 == Crea webhook per i team di sicurezza del carico di lavoro:
 
 . Vai su Amministrazione > Notifiche e seleziona la scheda "Webhook di sicurezza del carico di lavoro".  Selezionare _+ Webhook_ per creare un nuovo webhook.
@@ -46,6 +48,7 @@ image:ws_webhook_teams_example.png["Esempio di webhook dei team di sicurezza del
 
 
 
+[[steps-for-creating-teams-notification-with-adaptive-card-template]]
 === Passaggi per creare notifiche Teams con il modello Adaptive Card
 
 . Sostituisci il corpo del messaggio con il seguente template:
@@ -140,6 +143,7 @@ image:ws_webhook_teams_example.png["Esempio di webhook dei team di sicurezza del
 
 
 
+[[notifications-via-webhook]]
 == Notifiche tramite Webhook
 
 Per ricevere notifiche sugli eventi tramite webhook, vai su _Sicurezza del carico di lavoro > Criteri_.  Selezionare _+Criterio di attacco_ o _+Criterio di avviso_.

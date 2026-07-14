@@ -14,6 +14,7 @@ La scheda delle preferenze di risoluzione del dispositivo consente di creare una
 
 
 
+[[auto-resolution-schedule]]
 == Pianificazione della risoluzione automatica
 
 Una pianificazione di risoluzione automatica può specificare quando eseguire la risoluzione automatica del dispositivo:
@@ -39,6 +40,7 @@ Se si specifica _Manualmente_, la risoluzione automatica notturna del dispositiv
 
 
 
+[[dns-processing-options]]
 == Opzioni di elaborazione DNS
 
 Le opzioni di elaborazione DNS consentono di selezionare le seguenti funzionalità:
@@ -50,6 +52,7 @@ Le opzioni di elaborazione DNS consentono di selezionare le seguenti funzionalit
 
 
 
+[[including-or-excluding-specific-storage-and-tape-vendors]]
 === Inclusione o esclusione di specifici fornitori di storage e nastri
 
 È possibile includere o escludere specifici fornitori di storage e nastri per la risoluzione automatica.  Potresti voler escludere fornitori specifici se sai, ad esempio, che un host specifico diventerà un host legacy e dovrà essere escluso dal tuo nuovo ambiente.  Puoi anche aggiungere nuovamente i fornitori che hai escluso in precedenza ma che non desideri più escludere.

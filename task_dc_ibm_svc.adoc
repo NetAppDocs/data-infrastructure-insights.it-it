@@ -16,11 +16,12 @@ L'elenco dei dispositivi supportati include modelli quali SVC, v7000, v5000 e v3
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati IBM SVC.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -46,6 +47,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[inventory-requirements]]
 === Requisiti di inventario
 
 * Indirizzo IP di ciascun cluster SVC
@@ -55,6 +57,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[performance-requirements]]
 === Requisiti di prestazione
 
 * Console SVC, obbligatoria per qualsiasi cluster SVC e richiesta per il pacchetto SVC Discovery Foundation.
@@ -67,9 +70,10 @@ Nota: in alternativa, abilitare la raccolta dati tramite l'interfaccia utente di
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -84,9 +88,10 @@ Nota: in alternativa, abilitare la raccolta dati tramite l'interfaccia utente di
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -101,11 +106,12 @@ Nota: in alternativa, abilitare la raccolta dati tramite l'interfaccia utente di
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 
@@ -114,7 +120,7 @@ Ecco alcune cose da provare se riscontri problemi con questo strumento di raccol
 |===
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

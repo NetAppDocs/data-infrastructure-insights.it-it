@@ -16,6 +16,7 @@ image:Device_Resolution_IP.png["Risoluzione del dispositivo IP"]
 
 
 
+[[adding-ip-devices-manually]]
 == Aggiunta manuale di dispositivi IP
 
 È possibile aggiungere manualmente un dispositivo IP a Data Infrastructure Insights utilizzando la funzionalità di aggiunta manuale disponibile nella schermata Identificazione IP.
@@ -36,6 +37,7 @@ Il dispositivo immesso viene aggiunto all'elenco dei dispositivi nella scheda Id
 
 
 
+[[importing-ip-device-identification-from-a-csv-file]]
 == Importazione dell'identificazione del dispositivo IP da un file .CSV
 
 È possibile importare manualmente le identificazioni dei dispositivi IP nella funzionalità Risoluzione dispositivi utilizzando un elenco di identificazioni dei dispositivi in un file .CSV.
@@ -63,6 +65,7 @@ NOTE: Come buona pratica, si consiglia di esportare prima le informazioni di ide
 
 
 
+[[exporting-ip-device-identification-to-a-csv-file]]
 == Esportazione dell'identificazione del dispositivo IP in un file .CSV
 
 È possibile esportare le identificazioni dei dispositivi IP esistenti in un file .CSV dalla funzionalità di risoluzione dei dispositivi Data Infrastructure Insights .  Potresti voler esportare l'identificazione di un dispositivo in modo da poterla modificare e poi importarla nuovamente in Data Infrastructure Insights, dove verrà utilizzata per identificare dispositivi simili a quelli che originariamente corrispondevano all'identificazione esportata.

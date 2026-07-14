@@ -24,12 +24,14 @@ Data Infrastructure Insights fornisce una serie dilink:task_system_monitors.html
 
 
 
+[[security-best-practice]]
 == Migliori pratiche di sicurezza
 
 Gli avvisi di Data Infrastructure Insights sono progettati per evidenziare punti dati e tendenze sul tenant e Data Infrastructure Insights consente di immettere qualsiasi indirizzo e-mail valido come destinatario dell'avviso.  Se lavori in un ambiente sicuro, fai particolare attenzione a chi riceve la notifica o ha accesso all'avviso.
 
 
 
+[[metric-or-log-monitor]]
 == Monitoraggio metrico o log?
 
 . Dal menu Data Infrastructure Insights , fare clic su *Avvisi > Gestisci monitoraggi*
@@ -56,6 +58,7 @@ Dopo aver scelto il tipo di monitor, viene visualizzata la finestra di dialogo C
 
 
 
+[[metric-monitor]]
 === Monitor metrico
 
 . Nel menu a discesa, cerca e scegli un tipo di oggetto e una metrica da monitorare.
@@ -112,6 +115,7 @@ image:Monitor_metric_conditions.png["Definire le condizioni del monitor"]
 
 
 
+[[log-monitor]]
 === Monitoraggio dei registri
 
 Quando si crea un *monitor dei log*, scegliere innanzitutto quale log monitorare dall'elenco dei log disponibili.  È quindi possibile filtrare in base agli attributi disponibili come sopra.  È anche possibile scegliere uno o più attributi "Raggruppa per".
@@ -142,6 +146,7 @@ image:Monitor_log_monitor_resolution.png["Risoluzione degli avvisi"]
 
 
 
+[[anomaly-detection-monitor]]
 === Monitoraggio del rilevamento delle anomalie
 
 . Nel menu a discesa, cerca e scegli un tipo di oggetto e una metrica da monitorare.
@@ -169,6 +174,7 @@ image:AnomalyDetectionMonitorDefineConditions.png["Definizione delle condizioni 
 
 
 
+[[select-notification-type-and-recipients]]
 === Seleziona il tipo di notifica e i destinatari
 
 Nella sezione _Imposta notifiche al team_ puoi scegliere se avvisare il tuo team tramite e-mail o Webhook.
@@ -192,6 +198,7 @@ NOTE: Le notifiche di ONTAP Data Collector hanno la precedenza su qualsiasi noti
 
 
 
+[[setting-corrective-actions-or-additional-information]]
 === Impostazione di azioni correttive o informazioni aggiuntive
 
 È possibile aggiungere una descrizione facoltativa, nonché ulteriori approfondimenti e/o azioni correttive compilando la sezione *Aggiungi una descrizione dell'avviso*.  La descrizione può contenere fino a 1024 caratteri e verrà inviata insieme all'avviso.  Il campo approfondimenti/azioni correttive può contenere fino a 67.000 caratteri e verrà visualizzato nella sezione di riepilogo della landing page dell'avviso.
@@ -204,6 +211,7 @@ image:Monitors_Alert_Description.png["Azioni correttive e descrizione dell'avvis
 
 
 
+[[save-your-monitor]]
 === Salva il tuo monitor
 
 . Se lo si desidera, è possibile aggiungere una descrizione del monitor.
@@ -215,6 +223,7 @@ Il nuovo monitor viene aggiunto all'elenco dei monitor attivi.
 
 
 
+[[monitor-list]]
 == Elenco monitor
 
 La pagina Monitor elenca i monitor attualmente configurati, mostrando quanto segue:
@@ -233,6 +242,7 @@ Se un monitor non è più necessario, è possibile eliminarlo selezionando *Elim
 
 
 
+[[monitor-groups]]
 == Gruppi di monitoraggio
 
 Il raggruppamento consente di visualizzare e gestire i monitor correlati.  Ad esempio, è possibile avere un gruppo di monitoraggio dedicato all'archiviazione sul tenant oppure monitor rilevanti per un determinato elenco di destinatari.
@@ -252,12 +262,14 @@ NOTE: I monitor personalizzati possono essere messi in pausa, ripresi, eliminati
 
 
 
+[[suspended-monitors]]
 === Monitor sospesi
 
 Questo gruppo verrà visualizzato solo se Data Infrastructure Insights ha sospeso uno o più monitor.  Un monitor può essere sospeso se genera avvisi eccessivi o continui.  Se il monitor è personalizzato, modificare le condizioni per impedire l'avviso continuo, quindi riprendere il monitor.  Il monitor verrà rimosso dal gruppo Monitor sospesi quando il problema che causa la sospensione sarà risolto.
 
 
 
+[[system-defined-monitors]]
 === Monitor definiti dal sistema
 
 Questi gruppi mostreranno i monitor forniti da Data Infrastructure Insights, a condizione che l'ambiente contenga i dispositivi e/o la disponibilità dei registri richiesti dai monitor.
@@ -268,6 +280,7 @@ I monitor di sistema possono includere monitor per l'infrastruttura ONTAP (archi
 
 
 
+[[custom-monitor-groups]]
 === Gruppi di monitor personalizzati
 
 È possibile creare gruppi personalizzati in cui inserire i monitor in base alle proprie esigenze.  Ad esempio, potresti voler creare un gruppo per tutti i monitor correlati all'archiviazione.
@@ -298,6 +311,7 @@ image:Monitors_PauseGroup.png["Mettere in pausa un gruppo"]
 
 
 
+[[system-defined-monitors]]
 == Monitor definiti dal sistema
 
 Data Infrastructure Insights include una serie di monitor definiti dal sistema sia per le metriche che per i log.  I monitor di sistema disponibili dipendono dai collettori di dati presenti sul tenant.  Per questo motivo, i monitor disponibili in Data Infrastructure Insights potrebbero cambiare man mano che vengono aggiunti raccoglitori di dati o ne vengono modificate le configurazioni.
@@ -306,6 +320,7 @@ Visualizza illink:task_system_monitors.html["Monitor definiti dal sistema"] pagi
 
 
 
+[[more-information]]
 === Ulteriori informazioni
 
 * link:task_view_and_manage_alerts.html["Visualizzazione e chiusura degli avvisi"]

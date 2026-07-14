@@ -18,6 +18,7 @@ Le informazioni per ciascun utente sono fornite nella Panoramica utente.  Utiliz
 
 
 
+[[user-profile]]
 == Profilo utente
 
 Le informazioni del profilo utente includono le informazioni di contatto e la posizione dell'utente.  Il profilo fornisce le seguenti informazioni:
@@ -31,6 +32,7 @@ Le informazioni del profilo utente includono le informazioni di contatto e la po
 
 
 
+[[user-behavior]]
 == Comportamento dell'utente
 
 Le informazioni sul comportamento dell'utente identificano le attività e le operazioni recenti eseguite dall'utente.  Queste informazioni includono:
@@ -53,12 +55,14 @@ Le informazioni sul comportamento dell'utente identificano le attività e le ope
 
 
 
+[[refresh-interval]]
 == Intervallo di aggiornamento
 
 L'elenco degli utenti viene aggiornato ogni 12 ore.
 
 
 
+[[retention-policy]]
 == Politica di conservazione
 
 Se non viene aggiornato nuovamente, l'elenco degli utenti viene conservato per 13 mesi.  Dopo 13 mesi i dati verranno cancellati.  Se l'ambiente Workload Security viene eliminato, tutti i dati associati all'ambiente vengono eliminati.

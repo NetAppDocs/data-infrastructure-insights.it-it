@@ -18,6 +18,7 @@ Identifica le modifiche, sia quelle previste (per il monitoraggio) che quelle im
 
 
 
+[[viewing-audited-events]]
 == Visualizzazione degli eventi verificati
 
 Per visualizzare la pagina Audit, fare clic su Admin > Audit nel menu. Verrà visualizzata la pagina Audit, che fornisce i seguenti dettagli per ogni voce di audit:
@@ -44,6 +45,7 @@ Gli eventi di Workload Security sottoposti a verifica includono, a titolo esempl
 
 
 
+[[displaying-audit-entries]]
 == Visualizzazione delle voci di controllo
 
 Esistono diversi modi per visualizzare le voci di controllo:
@@ -55,6 +57,7 @@ Esistono diversi modi per visualizzare le voci di controllo:
 
 
 
+[[more-on-filtering]]
 == Ulteriori informazioni sul filtraggio
 
 Per affinare il filtro puoi utilizzare uno qualsiasi dei seguenti metodi:
@@ -89,6 +92,7 @@ Se si racchiude una stringa di filtro tra virgolette doppie, Insight considera t
 
 
 
+[[audited-events-and-actions]]
 == Eventi e azioni verificati
 
 Gli eventi e le azioni monitorati da Workload Security possono essere suddivisi nelle seguenti categorie principali:
@@ -122,12 +126,14 @@ Esempio: _Destinatario ci-alerts-notifications-dl creato_
 
 
 
+[[exporting-audit-events]]
 == Esportazione di eventi di audit
 
 È possibile esportare i risultati della visualizzazione Audit in un file .CSV, che consentirà di analizzare i dati o importarli in un'altra applicazione. Passaggi 1. Nella pagina Audit, impostare l'intervallo di tempo desiderato e gli eventuali filtri. Workload Security esporterà solo le voci di Audit che corrispondono ai filtri e all'intervallo di tempo impostati. 2. Fare clic sul pulsante Esporta nell'angolo in alto a destra della tabella. Gli eventi di Audit visualizzati verranno esportati in un file .CSV, fino a un massimo di 10.000 righe.
 
 
 
+[[retention-of-audit-data]]
 == Conservazione dei dati di audit
 
 Il periodo di tempo per cui Workload Security conserva i dati di audit dipende dal tuo abbonamento:

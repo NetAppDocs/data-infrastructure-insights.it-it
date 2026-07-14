@@ -45,6 +45,7 @@ Leggere queste informazioni prima di installare o aggiornare illink:task_config_
 |===
 
 
+[[important-things-to-note-before-you-start]]
 == Cose importanti da notare prima di iniziare
 
 Se stai correndo con un<<configuring-proxy-support,procuratore>> , avere un<<using-a-custom-or-private-docker-repository,repository personalizzato>> , o stanno usando<<openshift-instructions,OpenShift>> , leggere attentamente le seguenti sezioni.
@@ -53,6 +54,7 @@ Leggi anche su<<permessi,Permessi>> .
 
 
 
+[[configuring-proxy-support]]
 === Configurazione del supporto proxy
 
 Esistono due posizioni in cui è possibile utilizzare un proxy sul tenant per installare NetApp Kubernetes Monitoring Operator.  Possono essere gli stessi sistemi proxy o sistemi proxy separati:
@@ -107,6 +109,7 @@ agent:
 ----
 
 
+[[using-a-custom-or-private-docker-repository]]
 === Utilizzo di un repository Docker personalizzato o privato
 
 Per impostazione predefinita, NetApp Kubernetes Monitoring Operator estrarrà le immagini dei container dal repository Data Infrastructure Insights .  Se si utilizza un cluster Kubernetes come destinazione per il monitoraggio e tale cluster è configurato per estrarre immagini di container solo da un repository Docker personalizzato o privato o da un registro di container, è necessario configurare l'accesso ai container necessari all'operatore di monitoraggio NetApp Kubernetes.
@@ -155,6 +158,7 @@ agent:
 ----
 
 
+[[openshift-instructions]]
 === Istruzioni OpenShift
 
 Se utilizzi OpenShift 4.6 o versione successiva, devi modificare AgentConfiguration in _operator-config.yaml_ per abilitare l'impostazione _runPrivileged_:
@@ -167,6 +171,7 @@ Openshift potrebbe implementare un livello di sicurezza aggiuntivo che potrebbe 
 
 
 
+[[permissions]]
 === Permessi
 
 Se il cluster che stai monitorando contiene risorse personalizzate che non hanno un ClusterRole chelink:https://kubernetes.io/docs/reference/access-authn-authz/rbac/#aggregated-clusterroles["aggregati da visualizzare"] , sarà necessario concedere manualmente all'operatore l'accesso a queste risorse per monitorarle con i registri eventi.

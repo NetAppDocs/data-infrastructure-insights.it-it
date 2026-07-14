@@ -44,6 +44,7 @@ La funzionalità di risoluzione del dispositivo (Gestisci > Risoluzione del disp
 
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 Prima di definire le regole per l'identificazione dei dispositivi, è necessario sapere come è configurato il proprio ambiente.  Quanto più conosci l'ambiente circostante, tanto più facile sarà identificare i dispositivi.
@@ -66,6 +67,7 @@ In questo esempio il maggior numero di dispositivi è rappresentato in modo affi
 
 
 
+[[steps-to-identifying-devices]]
 == Passaggi per l'identificazione dei dispositivi
 
 In genere, per identificare i dispositivi nel tenant si utilizza un flusso di lavoro simile al seguente.  L'identificazione è un processo iterativo e potrebbe richiedere più fasi di pianificazione e perfezionamento delle regole.

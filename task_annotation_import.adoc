@@ -21,6 +21,7 @@ NOTE: L'API Data Infrastructure Insights è disponibile nella * Data Infrastruct
 
 
 
+[[importing]]
 == Importazione
 
 I link *Amministrazione > Accesso API* contengonolink:API_Overview.html["documentazione"] per l'API *Risorse/Importazione*.  Questa documentazione contiene informazioni sul formato file .CSV.
@@ -29,6 +30,7 @@ image:api_assets_import.png["API di importazione"]
 
 
 
+[[csv-file-format]]
 == Formato file .CSV
 
 Il formato generale del file CSV è il seguente.  La prima riga del file definisce i campi di importazione e specifica l'ordine dei campi.  Seguono righe separate per ogni annotazione o applicazione.  Non è necessario definire ogni campo.  Tuttavia, le righe di annotazione successive devono seguire lo stesso ordine della riga di definizione.
@@ -42,6 +44,7 @@ image:api_assets_import_assign.png["Importa e assegna"]
 
 
 
+[[import-behavior]]
 == Comportamento di importazione
 
 Durante l'operazione di importazione, i dati vengono aggiunti, uniti o sostituiti, a seconda degli oggetti e dei tipi di oggetti che vengono importati.  Durante l'importazione, tenere presente i seguenti comportamenti.

@@ -111,6 +111,7 @@ Fare clic su Includi attributi facoltativi per aggiungere uno qualsiasi dei segu
 |===
 
 
+[[testing-your-user-directory-collector-configuration]]
 == Test della configurazione del raccoglitore di directory utente
 
 È possibile convalidare le autorizzazioni utente e le definizioni degli attributi LDAP utilizzando le seguenti procedure:
@@ -131,6 +132,7 @@ image:cs_ADExample.png["Connessione AD"]
 
 
 
+[[troubleshooting-user-directory-collector-configuration-errors]]
 == Risoluzione dei problemi relativi agli errori di configurazione del raccoglitore directory utente
 
 Nella tabella seguente vengono descritti i problemi noti e le relative soluzioni che possono verificarsi durante la configurazione del collettore:

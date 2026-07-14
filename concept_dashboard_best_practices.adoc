@@ -18,6 +18,7 @@ Suggerimenti e trucchi per aiutarti a sfruttare al meglio le potenti funzionalit
 
 
 
+[[finding-the-right-metric]]
 == Trovare la metrica giusta
 
 Data Infrastructure Insights acquisisce contatori e metriche utilizzando nomi che a volte variano da un raccoglitore di dati all'altro.
@@ -64,6 +65,7 @@ Questo non è un elenco esaustivo.  Questi sono solo esempi di possibili termini
 
 
 
+[[finding-the-right-assets]]
 == Trovare le risorse giuste
 
 Le risorse a cui è possibile fare riferimento nei filtri e nelle ricerche dei widget variano a seconda del tipo di risorsa.
@@ -96,6 +98,7 @@ Questo non è un elenco esaustivo.
 
 
 
+[[scatter-plot-example-knowing-your-axis]]
 == Esempio di diagramma di dispersione: conoscere il proprio asse
 
 La modifica dell'ordine dei contatori in un widget del grafico a dispersione modifica gli assi su cui vengono visualizzati i dati.

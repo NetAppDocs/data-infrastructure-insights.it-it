@@ -18,6 +18,7 @@ La matrice di supporto del Data Collector fornisce un riferimento per i Data Col
 
 
 
+[[hp-enterprise-3par-alletra-9000-primera-storeserv-storage]]
 == Archiviazione HP Enterprise 3PAR / Alletra 9000 / Primera StoreServ
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -828,6 +829,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[amazon-aws-ec2]]
 == Amazon AWS EC2
 
 Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
@@ -1102,6 +1104,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[amazon-aws-s3]]
 == Amazon AWS S3
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -1265,6 +1268,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[microsoft-azure-netapp-files]]
 == Azure NetApp Files
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -1587,6 +1591,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[brocade-fibre-channel-switches]]
 == Switch Fibre Channel Brocade
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -2162,6 +2167,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[brocade-network-advisor-http]]
 == Consulente di rete Brocade HTTP
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -2418,6 +2424,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[brocade-fos-rest]]
 == Brocade FOS REST
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -2898,6 +2905,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[cisco-mds-nexus-fabric-switches]]
 == Switch Cisco MDS e Nexus Fabric
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -3412,6 +3420,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[cohesity]]
 == Coesità
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -3683,6 +3692,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-celerra-ssh]]
 == EMC Celerra (SSH)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -3963,6 +3973,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-clariion-navicli]]
 == EMC CLARiiON (NaviCLI)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -4576,6 +4587,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-data-domain-ssh]]
 == Dominio dati EMC (SSH)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -4929,6 +4941,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-ecs]]
 == EMC ECS
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -5260,6 +5273,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[dell-emc-isilon-powerscale-rest]]
 == Dell EMC Isilon e PowerScale Rest
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -5982,6 +5996,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[dell-emc-isilon-powerscale-cli]]
 == Dell EMC Isilon / PowerScale (CLI)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -6549,6 +6564,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-powerstore-rest]]
 == EMC PowerStore REST
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -7184,6 +7200,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-recoverpoint-http]]
 == EMC RecoverPoint (HTTP)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -7311,6 +7328,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-scaleio-powerflex-rest]]
 == EMC ScaleIO e PowerFlex REST
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -7525,6 +7543,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-symmetrix-cli]]
 == Interfaccia a riga di comando EMC Symmetrix
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -8388,6 +8407,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[dell-unisphere-rest]]
 == Dell Unisphere REST
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -9111,6 +9131,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-vnx-ssh]]
 == EMC VNX (SSH)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -9796,6 +9817,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-vnxe-unity-unisphere-cli]]
 == EMC VNXe e Unity Unisphere (CLI)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -10390,6 +10412,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-vplex]]
 == EMC VPLEX
 
 |===
@@ -10469,6 +10492,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-xtremio-http]]
 == EMC XtremIO (HTTP)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -11026,6 +11050,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[netapp-e-series]]
 == NetApp E-Series
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -11672,6 +11697,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[pure-storage-flashblade-rest]]
 == Pure Storage FlashBlade REST
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -12045,6 +12071,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[google-cloud-compute]]
 == Google Cloud Compute
 
 Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
@@ -12277,6 +12304,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[hds-hcp-https]]
 == HDS HCP (HTTPS)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -12461,6 +12489,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[hicommand-device-manager]]
 == Gestione dispositivi HiCommand
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -13135,6 +13164,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[hitachi-ops-center]]
 == Centro operativo Hitachi
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -13822,6 +13852,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[hds-hnas-cli]]
 == HDS HNAS (CLI)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -14108,6 +14139,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[hpe-nimble-alletra-6000-storage]]
 == Storage HPE Nimble/Alletra 6000
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -14598,6 +14630,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[huawei-oceanstor-resthttps]]
 == Huawei OceanStor (REST/HTTPS)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -15322,6 +15355,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[ibm-cleversafe]]
 == IBM Cleversafe
 
 |===
@@ -15512,6 +15546,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[ibm-ds-8k-dscli]]
 == IBM DS 8K (DSCLI)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -16011,6 +16046,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[ibm-powervm-ssh]]
 == IBM PowerVM (SSH)
 
 |===
@@ -16192,6 +16228,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[ibm-svc-cli]]
 == IBM SVC (CLI)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -16939,6 +16976,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[ibm-xiv-a9000-xivcli]]
 == IBM XIV e A9000 (XIVCLI)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -17171,6 +17209,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[infinidat-infinibox-http]]
 == Infinidat Infinibox (HTTP)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -17520,6 +17559,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[microsoft-azure-compute]]
 == Microsoft Azure Compute
 
 Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
@@ -17776,6 +17816,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[microsoft-hyper-v]]
 == Microsoft Hyper-V
 
 |===
@@ -18257,6 +18298,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[netapp-7-mode]]
 == Modalità NetApp 7
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -19239,6 +19281,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[netapp-e-series-rest]]
 == NetApp E-Series REST
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -19609,6 +19652,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[amazon-fsx-for-netapp-ontap]]
 == Amazon FSx for NetApp ONTAP
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -20534,6 +20578,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[netapp-clustered-data-ontap-8-1-1]]
 == NetApp Clustered Data ONTAP 8.1.1+
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -22289,6 +22334,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[asa]]
 == ASA
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -22917,6 +22963,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[netapp-ontap-rest]]
 == NetApp ONTAP REST
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -23775,6 +23822,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[netapp-solidfire-8-1]]
 == NetApp SolidFire 8.1+
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -24520,6 +24568,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[netapp-storagegrid-https]]
 == NetApp StorageGRID (HTTPS)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -24903,6 +24952,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[nutanix-storage-rest]]
 == Archiviazione Nutanix (REST)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -25414,6 +25464,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[oracle-zfs-https]]
 == Oracle ZFS (HTTPS)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -25964,6 +26015,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[pure-storage-flasharray-http]]
 == Pure Storage FlashArray (HTTP)
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -26573,6 +26625,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[red-hat-rhv-rest]]
 == Red Hat RHV (REST)
 
 |===
@@ -26817,6 +26870,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[rubrik-storage]]
 == Rubrik Storage
 
 Modelli e versioni supportati da questo raccoglitore dati: Versioni firmware:
@@ -27159,6 +27213,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[vast-datastore]]
 == VAST DataStore
 
 Modelli e versioni supportati da questo raccoglitore dati:
@@ -27571,6 +27626,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[netapp-hci-virtual-center]]
 == Centro virtuale NetApp HCI
 
 Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
@@ -28119,6 +28175,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[vmware-cloud-on-aws]]
 == VMware Cloud su AWS
 
 Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
@@ -28461,6 +28518,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[vmware-vsphere-web-services]]
 == VMware vSphere (servizi Web)
 
 Modelli e versioni supportati da questo raccoglitore dati: Versioni API:

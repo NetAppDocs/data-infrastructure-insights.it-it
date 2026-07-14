@@ -14,6 +14,7 @@ Per i sistemi di storage che utilizzano il software Data ONTAP che opera in moda
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati NetApp a 7 modalità.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per tale asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
@@ -21,7 +22,7 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 
 NOTE: Questo raccoglitore di dati èlink:task_getting_started_with_cloud_insights.html#useful-definitions["deprecato"] .
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -50,6 +51,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare e utilizzare questo raccoglitore dati è necessario quanto segue:
@@ -71,9 +73,10 @@ Per configurare e utilizzare questo raccoglitore dati è necessario quanto segue
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -97,9 +100,10 @@ Per configurare e utilizzare questo raccoglitore dati è necessario quanto segue
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -117,6 +121,7 @@ Per configurare e utilizzare questo raccoglitore dati è necessario quanto segue
 |===
 
 
+[[storage-systems-connection]]
 == Collegamento dei sistemi di stoccaggio
 
 In alternativa all'utilizzo dell'utente amministrativo predefinito per questo raccoglitore dati, è possibile configurare un utente con diritti amministrativi direttamente sui sistemi di archiviazione NetApp , in modo che questo raccoglitore dati possa acquisire dati dai sistemi di archiviazione NetApp .
@@ -156,15 +161,17 @@ Per acquisire correttamente una sorgente dati 7-Mode e non generare avvisi sul s
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

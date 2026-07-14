@@ -18,6 +18,7 @@ La pagina Entità forensi fornisce informazioni dettagliate sulle attività dell
 
 
 
+[[examining-entity-information]]
 == Esame delle informazioni sull'entità
 
 Fare clic su *Forensics > Activity Forensics* e fare clic sulla scheda _Entità_ per accedere alla pagina Entità.

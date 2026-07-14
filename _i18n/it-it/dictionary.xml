@@ -7010,10 +7010,6 @@
   <block id="9680829f0eb82d9736ac7fe477135a87" category="paragraph">Scopri di più su Kubernetes<block ref="2a69bcb19ea6a4db3f5d1b466ff78e77" category="inline-link-macro-rx"></block> .</block>
   <block id="fbc05142fc5476cd7c2dd603607412ee" category="inline-link-macro">* Pagina di installazione dell'operatore di monitoraggio NetApp Kubernetes*</block>
   <block id="c425b824281c7958c5622dd1dc041533" category="paragraph">Ritorno al<block ref="6f93c3205a564eadff1f05e34704d40c" category="inline-link-macro-rx"></block></block>
-  <block id="d8c9294ea12d1c7d12e34008f3ecee39" category="section-title">Una nota sui segreti</block>
-  <block id="bd0f62d92c7b0e5d6e74b4447418c58b" category="paragraph">Per rimuovere l'autorizzazione per l'operatore di monitoraggio Kubernetes a visualizzare i segreti a livello di cluster, eliminare le seguenti risorse dal file _operator-setup.yaml_ prima dell'installazione:</block>
-  <block id="1790cdbccc4ddd4389eb90d73e043f4b" category="paragraph">Se si tratta di un aggiornamento, elimina anche le risorse dal tuo cluster:</block>
-  <block id="a66e68a20b3b94a700f3a3b9baa06764" category="paragraph">Se l'analisi delle modifiche è abilitata, modificare _AgentConfiguration_ o _operator-config.yaml_ per rimuovere il commento dalla sezione change-management e includere _kindsToIgnoreFromWatch: '"secrets"'_ nella sezione change-management.  Notare la presenza e la posizione delle virgolette singole e doppie in questa riga.</block>
   <block id="435f137980b3b041bbc191c90260bf28" category="section-title">Verifica delle firme delle immagini degli operatori di monitoraggio di Kubernetes</block>
   <block id="d9348d075dc7b3c91cff99d56dfc327b" category="inline-link-macro">Documentazione di Kubernetes</block>
   <block id="d4f8460ff8f7a6b9a2f0fa99bf9124dd" category="paragraph">L'immagine per l'operatore e tutte le immagini correlate che distribuisce sono firmate da NetApp.  È possibile verificare manualmente le immagini prima dell'installazione utilizzando lo strumento di co-firma oppure configurare un controller di ammissione Kubernetes.  Per maggiori dettagli si prega di consultare il<block ref="1aa503106da392b948a493e0ecf5782d" category="inline-link-macro-rx"></block> .</block>
@@ -9564,9 +9560,7 @@
   <block id="483afc2b0c89bbcbc08179996afd1bd3" category="list-text">Porta HTTPS: l'impostazione predefinita è 8443.</block>
   <block id="9ae1165f709f672a335b55af672fcede" category="cell">Indirizzi IP del controller serie E</block>
   <block id="0e8766b280f750325a542b5489199d1e" category="cell">indirizzi IP separati da virgole e/o nomi di dominio completi per i controller di array</block>
-  <block id="986117227f9af0228b4c8df932185184" category="summary">Configurazione del raccoglitore dati Nutanix.</block>
   <block id="addafe1dd8efeb72ac99a72ca1ce3052" category="doc">Raccoglitore dati Nutanix NX</block>
-  <block id="0defc2652f6834277735cb3046565bfa" category="paragraph">Data Infrastructure Insights utilizza il raccoglitore dati Nutanix per scoprire dati di inventario e prestazioni per i sistemi di archiviazione Nutanix NX.</block>
   <block id="1f166cbe19b0fb7c22477b8db8a26668" category="paragraph">Data Infrastructure Insights acquisisce le seguenti informazioni di inventario dal raccoglitore dati Nutanix.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:</block>
   <block id="6590f621515d064417bb91bd8f6cb526" category="cell">Contenitore Nutanix</block>
   <block id="5b02fb8f86f33e62862c6886dbbe655e" category="list-text">Nome utente e password di sola lettura, a meno che non siano in uso volumi_groups, nel qual caso sono richiesti nome utente e password amministratore</block>
@@ -13939,8 +13933,6 @@
   <block id="f2c430952fd20f76b24810e2e6f8dace" category="paragraph">Esegui questi 3 comandi e verifica la presenza di eventuali errori.</block>
   <block id="0cf40b0b5f29b2928f214370b73c4fac" category="paragraph">Infine, potresti anche voler far eseguire al tuo amministratore OSV:</block>
   <block id="7af44018c8c76e698e986a0c0db08e5f" category="paragraph">Questo restituirà il nome host/indirizzo IP per la gestione. Ogni collector DII OSV deve essere indirizzato all'IP/nome host per la gestione OSV.</block>
-  <block id="e62768229563f11ca5fd49a1482ae7a8" category="list-text">Indirizzo IP del server Red Hat OpenShift Virtualization sulla porta 443 tramite REST API</block>
-  <block id="07bc27033bbe069dd4fcfa7e7287df66" category="cell">Porta utilizzata per la comunicazione HTTPS con RHOV</block>
   <block id="6b4e228e21f03e0f137a5d82c17defab" category="paragraph">Il raccoglitore di dati DII per Red Hat Virtualization supporta anche il progetto open source oVirt, e Oracle Linux Virtualization Manager. Questo raccoglitore di dati comunica tramite REST API con l'interfaccia HTTPS sulla stazione di gestione.</block>
   <block id="154535c2753f4d1eedc433e63b2e796f" category="list-text">Indirizzo IP/nome host del server RHV/oVirt/OLVM sulla porta 443 tramite API REST</block>
   <block id="aee702f6738b473d9ebf07b43255af32" category="list-text">RHV Version 3.0+/Ovirt 4.0+/OLVM 4.0+</block>
@@ -14148,9 +14140,40 @@
   <block id="b720c5170acbb344b34398a9ed4fec4b" category="cell">Nome host o indirizzo IP</block>
   <block id="32d285f157ad1acefe9dbe844cee7acf" category="cell">Nome host Indirizzo IP del sistema storage</block>
   <block id="606bae1c220a7cd73cdc71a447b328fd" category="cell">ID token API</block>
-  <block id="1a07b6dc4baf1e102f15f62b2aa13efc" category="cell">Token API necessario per l'accesso</block>
   <block id="9ae9995c158c8b32609b8fd098fa5ff5" category="cell">Segreto del token API</block>
   <block id="923e5171366e1120624f5ea15d195544" category="cell">Segreto per il token sopra</block>
   <block id="07d3835e20364558e54bb222fac4e80c" category="cell">Porta utilizzata per la comunicazione HTTPS (predefinita 8006)</block>
   <block id="c0dcddaaad9648f13d2e54741430ea94" category="sidebar">Promox VE</block>
+  <block id="f45a9049372d3cb48c0a5f07d2274d8a" category="inline-link-macro">Nutanix AHV Series</block>
+  <block id="ad9c1c290afb17645c1abe42082fd356" category="cell"><block ref="ad9c1c290afb17645c1abe42082fd356" category="inline-link-macro-rx"></block></block>
+  <block id="dfc304efa37c8d1373249ddd368bc0be" category="summary">Configurazione del data collector Nutanix NX.</block>
+  <block id="bf674ae2075eb251d7351d4572cb6146" category="paragraph">Data Infrastructure Insights utilizza il raccoglitore di dati Nutanix NX per individuare dati di inventario e di prestazioni dei sistemi di storage Nutanix NX.</block>
+  <block id="82344ea41e58ba30a6cc73da67f70a0d" category="summary">Configurare il raccoglitore di dati Nutanix AHV.</block>
+  <block id="409fc16cbc3ffe45ff2652a20b5026af" category="doc">Data collector Nutanix AHV</block>
+  <block id="c97ef72e065229daeaf079d3a28102bc" category="paragraph">Il collector Nutanix AHV acquisisce l'inventario e le prestazioni di virtualizzazione di Nutanix Acropolis Hypervisor (AHV) da Nutanix Prism Central utilizzando le API REST di Prism Central v4 (Cluster Management e Virtual Machine Management namespaces). Riporta i dati nel modello OData di virtualizzazione (VirtualizationRoot e relative entità: host, macchine virtuali, datastore, dischi virtuali e relazioni).</block>
+  <block id="f32ed95de6aa2e535b7b91d8c3117993" category="cell">Nodo AHV (Host)</block>
+  <block id="11278cec4d8ea990fd15f6a5c6a67440" category="cell">Cluster Prism Central</block>
+  <block id="4f1cb6638a3cc4b959042237e8410602" category="cell">Hypervisor (server virtuale)</block>
+  <block id="2198c50a7eb3774599bba516640050f4" category="cell">Acropolis VM</block>
+  <block id="ab4257e4905356d8c38178fb81298672" category="cell">Container di storage</block>
+  <block id="93aad9faf21d772e6638b83df990a5f5" category="cell">Gruppo di volumi ADSF</block>
+  <block id="5ccc8ca7259b2e94529827201b7eb255" category="cell">Disco VM</block>
+  <block id="59713d7f655f9c892a64a8cfb1bce50f" category="list-text">Indirizzo IP di Prism Central o Fully Qualified Domain Name</block>
+  <block id="b4cdc83adeeea6f91bf95fe532871bdd" category="list-text">Nome utente e password locali o LDAP di Prism Central (per inventario e prestazioni è sufficiente un account di sola lettura; Admin non è richiesto)</block>
+  <block id="305bb684f75dc043415486c2063d46c4" category="list-text">Requisito porta: HTTPS 9440</block>
+  <block id="539110e77db7f1ce573940c3147dbe68" category="list-text">Prism Central versione pc.2023.x o successiva (API v3); pc.7.x o successiva consigliata (API v4)</block>
+  <block id="74c15fa6625bc3241b81c66466e0ce42" category="list-text">Le metriche sulle prestazioni richiedono Prism Central con API v4.0.b1 o successiva (pc.7.3+). Nelle versioni precedenti, l'inventario viene comunque raccolto ma non vengono riportati dati sulle prestazioni.</block>
+  <block id="fb7d6f6db43d1bb1043df17e264de78a" category="cell">Indirizzo IP di Prism Central</block>
+  <block id="b46321a9cb6ebc3023c7b6ae1f3d8b4f" category="cell">Indirizzo IP o FQDN dell'istanza di Prism Central</block>
+  <block id="893b253db3bdc1ebfb515f1f1cc09f50" category="cell">Nome utente Prism Central</block>
+  <block id="0fc00a87efdbecf33bb1448c3eaa5a73" category="cell">Password di Prism Central</block>
+  <block id="ac2fad2f282b0e32c75912e363cfb735" category="cell">Porta TCP utilizzata per connettersi a Prism Central. Il valore predefinito è 9440.</block>
+  <block id="834593f1f41ad9180f7c06531584872b" category="cell">Timeout HTTP (sec)</block>
+  <block id="b8c5ed136238b59bf386d65bf0787acf" category="cell">Timeout della richiesta HTTP. Il valore predefinito è 60 secondi.</block>
+  <block id="625b6c43e9f8c94b5aa84173a04fa961" category="cell">Conteggio dei tentativi HTTP</block>
+  <block id="c8f99bb6092a052b29e43263274e103f" category="cell">Numero di tentativi HTTP in caso di errori temporanei. Il valore predefinito è 3.</block>
+  <block id="4a2e4ff5e220e83407c567779aaf9ba1" category="cell">Token API necessario per l'accesso</block>
+  <block id="4f23d2244ea630f361d554b54b77bf03" category="list-text">Indirizzo IP del server Red Hat OpenShift Virtualization sulla porta 6443 tramite REST API</block>
+  <block id="427f91a8692cb3d3ee52ca20ff3b659c" category="cell">Porta utilizzata per la comunicazione HTTPS con RHOV. Predefinito: 6443.</block>
+  <block id="635a6e63b01914992d3584137f9e6ba6" category="sidebar">Nutanix AHV</block>
 </blocks>

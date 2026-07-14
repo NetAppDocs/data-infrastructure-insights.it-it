@@ -14,6 +14,7 @@ La sezione Dati utente di una pagina di risorse visualizza e consente di modific
 
 
 
+[[using-the-user-data-section-to-assign-or-modify-applications]]
 == Utilizzo della sezione Dati utente per assegnare o modificare le applicazioni
 
 È possibile assegnare le applicazioni in esecuzione sul tenant a determinate risorse (host, macchine virtuali, volumi, volumi interni, qtree e hypervisor).  La sezione Dati utente consente di aggiungere, modificare o rimuovere le applicazioni assegnate a una risorsa.  Per tutti questi tipi di asset, ad eccezione dei volumi, è possibile assegnare più di un'applicazione.
@@ -37,6 +38,7 @@ Per rimuovere un'applicazione, apri l'elenco delle applicazioni e deseleziona l'
 
 
 
+[[using-the-user-data-section-to-assign-or-modify-annotations]]
 == Utilizzo della sezione Dati utente per assegnare o modificare annotazioni
 
 Quando si personalizza Data Infrastructure Insights per monitorare i dati in base alle esigenze aziendali, è possibile definire note specializzate chiamate annotazioni e assegnarle alle risorse.  La sezione Dati utente di una pagina di risorse visualizza le annotazioni assegnate a una risorsa e consente inoltre di modificare le annotazioni assegnate a tale risorsa.

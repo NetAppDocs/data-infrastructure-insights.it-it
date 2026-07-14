@@ -14,6 +14,7 @@ Data Infrastructure Insights utilizza AWS S3 come raccoglitore di dati di archiv
 
 
 
+[[requirements]]
 == Requisiti
 
 Per raccogliere dati da AWS S3 come dispositivi di archiviazione, è necessario disporre delle seguenti informazioni:
@@ -33,11 +34,12 @@ Le chiavi di accesso sono costituite da un ID chiave di accesso (ad esempio, AKI
 
 
 
+[[configuration]]
 == Configurazione
 
 Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -58,9 +60,10 @@ Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -78,6 +81,7 @@ Inserire i dati nei campi del raccoglitore dati secondo la tabella seguente:
 |===
 
 
+[[iam-access-key]]
 == Chiave di accesso IAM
 
 Le chiavi di accesso sono credenziali a lungo termine per un utente IAM o per l'utente root dell'account AWS.  Le chiavi di accesso vengono utilizzate per firmare richieste programmatiche all'AWS CLI o all'AWS API (direttamente o tramite l'AWS SDK).
@@ -86,6 +90,7 @@ Le chiavi di accesso sono composte da due parti: un ID della chiave di accesso e
 
 
 
+[[iam-role]]
 == Ruolo IAM
 
 Quando si utilizza l'autenticazione _IAM Role_ (anziché l'autenticazione IAM Access Key), è necessario assicurarsi che il ruolo creato o specificato disponga delle autorizzazioni appropriate necessarie per accedere alle risorse.
@@ -102,6 +107,7 @@ Nota: il ruolo IAM può essere utilizzato solo quando l'unità di acquisizione �
 
 
 
+[[mapping-amazon-tags-to-data-infrastructure-insights-annotations]]
 == Mappatura dei tag Amazon alle annotazioni Data Infrastructure Insights
 
 Il raccoglitore dati AWS S3 as Storage include un'opzione che consente di popolare le annotazioni di Data Infrastructure Insights con tag configurati su S3.  Le annotazioni devono essere denominate esattamente come i tag AWS.  Data Infrastructure Insights popolerà sempre le annotazioni di tipo testo con lo stesso nome e farà un "miglior tentativo" per popolare le annotazioni di altri tipi (numero, valore booleano, ecc.).  Se l'annotazione è di un tipo diverso e il raccoglitore dati non riesce a popolarla, potrebbe essere necessario rimuovere l'annotazione e ricrearla come tipo di testo.
@@ -110,6 +116,7 @@ Si noti che AWS distingue tra maiuscole e minuscole, mentre Data Infrastructure 
 
 
 
+[[collecting-from-aws-child-accounts]]
 == Raccolta da account figlio AWS
 
 Data Infrastructure Insights supporta la raccolta di account figlio per AWS all'interno di un singolo raccoglitore dati AWS.  La configurazione per questa raccolta viene eseguita nell'ambiente AWS:
@@ -132,6 +139,7 @@ link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.h
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

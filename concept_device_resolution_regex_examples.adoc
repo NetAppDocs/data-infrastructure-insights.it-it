@@ -14,6 +14,7 @@ Se hai selezionato l'approccio basato sulle espressioni regolari come strategia 
 
 
 
+[[formatting-regular-expressions]]
 == Formattazione delle espressioni regolari
 
 Quando si creano espressioni regolari per la risoluzione automatica Data Infrastructure Insights , è possibile configurare il formato di output immettendo valori in un campo denominato _FORMAT_.
@@ -52,10 +53,12 @@ I trattini tra le variabili forniscono un esempio di testo costante inserito nel
 
 
 
+[[examples]]
 == Esempi
 
 
 
+[[example-1-showing-zone-names]]
 === Esempio 1 che mostra i nomi delle zone
 
 In questo esempio, si utilizza l'espressione regolare per estrarre un nome host dal nome della zona.  È possibile creare un'espressione regolare se si dispone di qualcosa di simile ai seguenti nomi di zona:
@@ -86,6 +89,7 @@ L'espressione regolare può essere scomposta nei suoi componenti:
 
 
 
+[[example-2]]
 === Esempio 2
 
 In questo esempio, salta fino al primo trattino basso "_", poi abbina E e tutto ciò che segue fino al secondo "_", quindi salta tutto ciò che segue.
@@ -98,6 +102,7 @@ In questo esempio, salta fino al primo trattino basso "_", poi abbina E e tutto 
 
 
 
+[[example-3]]
 === Esempio 3
 
 Le parentesi "( )" attorno all'ultima sezione nell'espressione regolare (sotto) identificano quale parte è il nome host.  Se si desidera che VSAN3 sia il nome host, sarebbe: [a-zA-Z0-9]+_([a-zA-Z0-9]+).*
@@ -110,6 +115,7 @@ Le parentesi "( )" attorno all'ultima sezione nell'espressione regolare (sotto) 
 
 
 
+[[example-4-showing-a-more-complicated-naming-pattern]]
 === Esempio 4 che mostra un modello di denominazione più complicato
 
 È possibile creare un'espressione regolare se si dispone di qualcosa di simile ai seguenti nomi di zona:
@@ -139,6 +145,7 @@ In altre parole, la combinazione .* indica qualsiasi carattere, un numero qualsi
 
 
 
+[[example-5-showing-zone-names-without-a-pattern]]
 === Esempio 5 che mostra i nomi delle zone senza un modello
 
 È possibile creare un'espressione regolare se si dispone di qualcosa di simile ai seguenti nomi di zona:
@@ -163,6 +170,7 @@ L'espressione regolare può essere scomposta nei suoi componenti:
 
 
 
+[[example-6-showing-computer-names-with-a-pattern]]
 === Esempio 6 che mostra i nomi dei computer con un modello
 
 È possibile creare un'espressione regolare se si dispone di qualcosa di simile ai seguenti nomi di zona:
@@ -201,6 +209,7 @@ Il risultato di ciò farebbe sì che la variabile \1 contenga una qualsiasi stri
 
 
 
+[[example-7]]
 === Esempio 7
 
 *Zona:* NomeComputer123_HBA1_Symm1_FA1
@@ -211,6 +220,7 @@ Il risultato di ciò farebbe sì che la variabile \1 contenga una qualsiasi stri
 
 
 
+[[example-8]]
 === Esempio 8
 
 Questo esempio trova tutto ciò che precede il primo _.
@@ -225,6 +235,7 @@ Espressione regolare: (.*?)_.*
 
 
 
+[[example-9]]
 === Esempio 9
 
 Questo esempio trova tutto ciò che si trova dopo il primo _ e fino al secondo _.
@@ -237,6 +248,7 @@ Questo esempio trova tutto ciò che si trova dopo il primo _ e fino al secondo _
 
 
 
+[[example-10]]
 === Esempio 10
 
 Questo esempio estrae "MyComputerName123" dagli esempi di zona.
@@ -253,6 +265,7 @@ Storage3_Switch3_MyComputerName123T_A3_FC3
 
 
 
+[[example-11]]
 === Esempio 11
 
 *Zona:* Storage1_Switch1_NomeComputer123A_A1_FC1
@@ -263,6 +276,7 @@ Storage3_Switch3_MyComputerName123T_A3_FC3
 
 
 
+[[example-12]]
 === Esempio 12
 
 Il simbolo ^ (accento circonflesso o accento circonflesso) *tra parentesi quadre* nega l'espressione, ad esempio, [^Ff] significa tutto tranne la F maiuscola o minuscola, e [^az] significa tutto tranne le lettere minuscole dalla a alla z, e nel caso precedente, tutto tranne _.  L'istruzione format aggiunge "-" al nome host di output.
@@ -275,6 +289,7 @@ Il simbolo ^ (accento circonflesso o accento circonflesso) *tra parentesi quadre
 
 
 
+[[example-13]]
 === Esempio 13
 
 In questo esempio, l'alias di archiviazione è delimitato da "\" e l'espressione deve utilizzare "\\" per definire che nella stringa vengono effettivamente utilizzati dei "\" e che questi non fanno parte dell'espressione stessa.
@@ -287,6 +302,7 @@ In questo esempio, l'alias di archiviazione è delimitato da "\" e l'espressione
 
 
 
+[[example-14]]
 === Esempio 14
 
 Questo esempio estrae "PD-RV-W-AD-2" dagli esempi di zona.
@@ -299,6 +315,7 @@ Questo esempio estrae "PD-RV-W-AD-2" dagli esempi di zona.
 
 
 
+[[example-15]]
 === Esempio 15
 
 In questo caso l'impostazione del formato aggiunge "US-BV-" al nome host.

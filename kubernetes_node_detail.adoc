@@ -16,6 +16,7 @@ image:KubernetesNodeFiltering.png["Pagina dei dettagli del nodo Kubernetes che m
 
 
 
+[[exploring-the-nodes-pods-and-persistent-volumes]]
 == Esplorazione dei pod e dei volumi persistenti del nodo
 
 Data Infrastructure Insights fornisce visibilità sullo storage back-end per i tuoi ambienti Kubernetes, fornendoti informazioni dettagliate sui tuoi Kubernetes Pod e Persistent Volumes (PV).  È possibile monitorare i contatori PV, come IOPS, latenza e throughput, dall'utilizzo di un singolo Pod tramite un contatore PV a un PV e fino al dispositivo di archiviazione back-end.
@@ -33,6 +34,7 @@ Tieni presente che per sfruttare queste nuove tabelle, è consigliabile disinsta
 
 
 
+[[kubernetes-node-to-vm-links]]
 == Collegamenti tra nodi Kubernetes e VM
 
 Nella pagina di un nodo Kubernetes, puoi fare clic per aprire la pagina della VM del nodo.  La pagina VM include anche un collegamento al Nodo stesso.

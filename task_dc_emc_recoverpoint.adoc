@@ -18,6 +18,7 @@ Il raccoglitore dati EMC RecoverPoint raccoglie le relazioni di replica da volum
 
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
@@ -29,9 +30,10 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -46,9 +48,10 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -63,6 +66,7 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

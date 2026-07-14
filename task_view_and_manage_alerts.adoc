@@ -17,6 +17,7 @@ TIP: Monitor e avvisi sono disponibili in Data Infrastructure Insights Standard 
 
 
 
+[[viewing-and-managing-alerts]]
 == Visualizzazione e gestione degli avvisi
 
 Per visualizzare e gestire gli avvisi, procedere come segue.
@@ -52,6 +53,7 @@ Facendo clic su un ID avviso si apre la pagina dei dettagli dell'avviso.
 
 
 
+[[alert-detail-panel]]
 == Pannello dettagli avviso
 
 Selezionare una riga di avviso per aprire il pannello dei dettagli dell'avviso.  Il pannello dei dettagli dell'avviso fornisce ulteriori dettagli sull'avviso, tra cui un _Riepilogo_, una sezione _Prestazioni_ che mostra grafici relativi ai dati dell'oggetto, eventuali _Risorse correlate_ e _Commenti_ inseriti dagli investigatori dell'avviso.
@@ -60,6 +62,7 @@ image:metric_alert_detail_pane.png["pannello dei dettagli degli avvisi metrici"]
 
 
 
+[[alerts-when-data-is-missing]]
 == Avvisi quando mancano dati
 
 In un sistema in tempo reale come Data Infrastructure Insights, per avviare l'analisi di un Monitor e decidere se generare un Alert, ci affidiamo a uno di questi due fattori:
@@ -74,6 +77,7 @@ Se si dispone di un Monitor con una finestra di 30 minuti che rileva che una con
 
 
 
+[[permanently-active-alerts]]
 == Avvisi "Permanentemente attivi"
 
 È possibile configurare un monitor in modo che la condizione sia *sempre* presente sull'oggetto monitorato, ad esempio IOPS > 1 o latenza > 0.  Spesso vengono creati come monitor "di prova" e poi dimenticati.  Tali monitor creano avvisi che rimangono costantemente aperti sugli oggetti costituenti, il che può causare stress al sistema e problemi di stabilità nel tempo.

@@ -14,6 +14,7 @@ NetApp prende molto seriamente la sicurezza delle informazioni dei clienti.  Ecc
 
 
 
+[[what-information-does-data-infrastructure-insights-store]]
 == Quali informazioni memorizza Data Infrastructure Insights ?
 
 Data Infrastructure Insights memorizza le seguenti informazioni:
@@ -59,6 +60,7 @@ Inoltre, vengono conservati i registri di accesso a Data Infrastructure Insights
 
 
 
+[[where-is-my-information-stored]]
 == Dove vengono archiviate le mie informazioni?
 
 Data Infrastructure Insights archivia le informazioni in base alla regione in cui è stato creato l'ambiente.
@@ -82,6 +84,7 @@ Le seguenti informazioni risiedono negli Stati Uniti, indipendentemente dalla re
 
 
 
+[[host-regions]]
 === Regioni ospitanti
 
 Le regioni ospitanti includono:
@@ -93,6 +96,7 @@ Le regioni ospitanti includono:
 
 
 
+[[more-information]]
 == Ulteriori informazioni
 
 Per maggiori informazioni sulla privacy e la sicurezza di NetApp, consulta i seguenti link:

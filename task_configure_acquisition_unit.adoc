@@ -21,6 +21,7 @@ Scopri di più sulla sicurezza Data Infrastructure Insightslink:security_overvie
 
 
 
+[[adding-a-linux-acquisition-unit]]
 == Aggiunta di un'unità di acquisizione Linux
 
 .Prima di iniziare
@@ -61,6 +62,7 @@ image:NewLinuxAUInstall.png["Istruzioni per Linux AU"]
 
 
 
+[[setting-proxy-environment-variables]]
 === Impostazione delle variabili di ambiente proxy
 
 Per gli ambienti che utilizzano un proxy, è necessario impostare le variabili di ambiente del proxy prima di aggiungere l'unità di acquisizione.  Le istruzioni per la configurazione del proxy sono fornite nella finestra di dialogo _Aggiungi unità di acquisizione_.
@@ -76,6 +78,7 @@ Nota: tieni presente le restrizioni sui caratteri speciali nei campi nome utente
 
 
 
+[[proxy-configuration]]
 === Configurazione proxy
 
 L'unità di acquisizione utilizza l'autenticazione reciproca/bidirezionale per connettersi al server Data Infrastructure Insights .  Per l'autenticazione, il certificato client deve essere trasmesso al server Data Infrastructure Insights .  Per raggiungere questo obiettivo, il proxy deve essere configurato per inoltrare la richiesta https al server Data Infrastructure Insights senza decrittografare i dati.
@@ -100,6 +103,7 @@ Se sul tenant è presente Workload Security, in questo elenco verranno visualizz
 
 
 
+[[adding-a-windows-acquisition-unit]]
 == Aggiunta di un'unità di acquisizione Windows
 
 .Passaggi per l'installazione dell'unità di acquisizione Windows
@@ -133,6 +137,7 @@ image:NewWindowsAUInstall.png["Installazione di Windows AU"]
 
 
 
+[[proxy-configuration]]
 === Configurazione proxy
 
 L'unità di acquisizione utilizza l'autenticazione reciproca/bidirezionale per connettersi al server Data Infrastructure Insights .  Per l'autenticazione, il certificato client deve essere trasmesso al server Data Infrastructure Insights .  Per raggiungere questo obiettivo, il proxy deve essere configurato per inoltrare la richiesta https al server Data Infrastructure Insights senza decrittografare i dati.
@@ -157,6 +162,7 @@ Se sul tenant è presente Workload Security, in questo elenco verranno visualizz
 
 
 
+[[uninstalling-an-acquisition-unit]]
 == Disinstallazione di un'unità di acquisizione
 
 Per disinstallare il software Acquisition Unit, procedere come segue:
@@ -201,6 +207,7 @@ image:AU_for_Device_Resolution.png["AU utilizzato per la risoluzione del disposi
 
 
 
+[[reinstalling-an-acquisition-unit]]
 == Reinstallazione di un'unità di acquisizione
 
 Per reinstallare un'unità di acquisizione sullo stesso server/VM, è necessario seguire questi passaggi:
@@ -223,6 +230,7 @@ Prima di reinstallare un'unità di acquisizione, è necessario configurare un'un
 
 
 
+[[viewing-au-details]]
 == Visualizzazione dei dettagli AU
 
 La pagina dei dettagli dell'Unità di acquisizione (AU) fornisce informazioni utili su un'AU, nonché informazioni utili per la risoluzione dei problemi.  La pagina dei dettagli dell'AU contiene le seguenti sezioni:

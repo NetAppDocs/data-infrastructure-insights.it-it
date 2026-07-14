@@ -16,11 +16,12 @@ Questo raccoglitore di dati acquisisce solo dal *server di gestione NetApp HCI *
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore di dati.  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per l'asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -46,6 +47,7 @@ Si tratta solo di mappature terminologiche comuni e potrebbero non rappresentare
 
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare questo raccoglitore dati sono necessarie le seguenti informazioni:
@@ -65,9 +67,10 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 
 
 
+[[setup-and-connection]]
 == Installazione e connessione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -79,9 +82,10 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 |===
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -105,14 +109,13 @@ Per configurare questo raccoglitore dati sono necessarie le seguenti informazion
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
 Nella schermata di configurazione avanzata, seleziona la casella *Prestazioni VM* per raccogliere i dati sulle prestazioni.  La raccolta dell'inventario è abilitata per impostazione predefinita.  È possibile configurare i seguenti campi:
 
-[cols="2*"]
+[cols="50,50"]
 |===
-
-
 | Campo | Descrizione 
 
 
@@ -132,15 +135,17 @@ Nella schermata di configurazione avanzata, seleziona la casella *Prestazioni VM
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

@@ -14,11 +14,12 @@ Questo raccoglitore di dati acquisisce dati di inventario e prestazioni dai sist
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce dati di inventario e prestazioni dal raccoglitore dati ONTAP .  Per ogni tipologia di asset acquisito viene mostrata la terminologia più comune utilizzata per l'asset.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -45,12 +46,14 @@ Data Infrastructure Insights acquisisce dati di inventario e prestazioni dal rac
 |===
 
 
+[[ontap-data-management-terminology]]
 == Terminologia di gestione dei dati ONTAP
 
 I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trovare nelle pagine di destinazione delle risorse di archiviazione ONTAP Data Management.  Molti di questi termini si applicano anche ad altri raccoglitori di dati.
 
 
 
+[[storage]]
 === Magazzinaggio
 
 * Modello: elenco delimitato da virgole dei nomi univoci e discreti dei modelli di nodi all'interno di questo cluster.  Se tutti i nodi nei cluster sono dello stesso tipo di modello, verrà visualizzato un solo nome di modello.
@@ -65,6 +68,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[storage-pool]]
 === Pool di archiviazione
 
 * Archiviazione: su quale array di archiviazione risiede questo pool.  Obbligatorio.
@@ -81,6 +85,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[storage-node]]
 === Nodo di archiviazione
 
 * Archiviazione: di quale array di archiviazione fa parte questo nodo.  Obbligatorio.
@@ -99,6 +104,7 @@ I seguenti termini si applicano agli oggetti o ai riferimenti che potresti trova
 
 
 
+[[requirements]]
 == Requisiti
 
 Di seguito sono riportati i requisiti per configurare e utilizzare questo raccoglitore dati:
@@ -121,15 +127,17 @@ Di seguito sono riportati i requisiti per configurare e utilizzare questo raccog
 
 
 
+[[permission-requirements-for-collecting-ontap-switch-metrics]]
 === Requisiti di autorizzazione per la raccolta delle metriche dello switch ONTAP
 
 Data Infrastructure Insights ha la capacità di raccogliere dati sullo switch del cluster ONTAP come opzione nel collettore<<advanced-configuration,Configurazione avanzata>> impostazioni.  Oltre ad abilitare questa funzionalità sul raccoglitore Data Infrastructure Insights , è necessario anche *configurare il sistema ONTAP * stesso per fornirelink:https://docs.netapp.com/us-en/ontap-cli-98/system-switch-ethernet-create.html["informazioni sullo switch"] e garantire la corretta<<a-note-about-permissions,permessi>> sono impostati per consentire l'invio dei dati dello switch a Data Infrastructure Insights.
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -144,9 +152,10 @@ Data Infrastructure Insights ha la capacità di raccogliere dati sullo switch de
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -185,6 +194,7 @@ Data Infrastructure Insights ha la capacità di raccogliere dati sullo switch de
 |===
 
 
+[[ontap-power-metrics]]
 == Metriche di potenza ONTAP
 
 Diversi modelli ONTAP forniscono metriche di potenza per Data Infrastructure Insights che possono essere utilizzate per il monitoraggio o l'invio di avvisi.
@@ -202,6 +212,7 @@ FAS2620 FAS3250 FAS3270 FAS500f FAS6280 FAS/ AFF 8020 FAS/ AFF 8040 FAS/ AFF 806
 
 
 
+[[a-note-about-permissions]]
 == Una nota sui permessi
 
 Poiché numerose dashboard ONTAP di Data Infrastructure Insights si basano su contatori ONTAP avanzati, è necessario abilitare la *Raccolta dati contatore avanzata* nella sezione Configurazione avanzata del raccoglitore dati.
@@ -254,15 +265,17 @@ NOTE: Se il controllo di accesso ONTAP non è impostato correttamente, le chiama
 
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 
@@ -292,9 +305,10 @@ Ecco alcune cose da provare se riscontri problemi con questo strumento di raccol
 |===
 
 
+[[performance]]
 === Prestazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

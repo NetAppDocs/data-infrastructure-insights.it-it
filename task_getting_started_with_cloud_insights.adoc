@@ -25,6 +25,7 @@ Seleziona il tuo primo raccoglitore dati tra i fornitori supportati e i modelli 
 
 
 
+[[install-an-acquisition-unit]]
 == Installare un'unità di acquisizione
 
 Se hai selezionato un raccoglitore di dati _Infrastruttura_, è necessaria un'unità di acquisizione per immettere i dati in Data Infrastructure Insights.  Sarà necessario scaricare e installare il software Acquisition Unit su un server o una macchina virtuale nel data center da cui si effettuerà la raccolta.  Una singola unità di acquisizione può essere utilizzata per più raccoglitori di dati.
@@ -40,6 +41,7 @@ Se necessario, è possibile configurare ulteriori unità di acquisizione in un s
 
 
 
+[[configure-the-data-collector-infrastructure]]
 == Configurare il Data Collector - Infrastruttura
 
 Per i raccoglitori di dati _Infrastruttura_, ti verrà chiesto di compilare i campi del raccoglitore di dati presentati:
@@ -54,10 +56,12 @@ Sarà possibile configurare ulteriori raccoglitori di dati in un secondo momento
 
 
 
+[[configure-the-data-collector-operating-systems-and-services]]
 == Configurare il Data Collector - Sistemi operativi e servizi
 
 
 
+[[operating-system]]
 === Sistema operativo:
 
 Per i raccoglitori di dati del _Sistema operativo_, scegliere una piattaforma (Linux, Windows) su cui installare un agente Data Infrastructure Insights .  È necessario disporre di almeno un agente per raccogliere i dati dai Servizi.  L'agente raccoglie anche dati dall'host stesso, per utilizzarli in Data Infrastructure Insights.  Questi dati sono classificati come dati "Nodo" nei widget, ecc.
@@ -68,6 +72,7 @@ Per i raccoglitori di dati del _Sistema operativo_, scegliere una piattaforma (L
 
 
 
+[[services]]
 === Servizi:
 
 Per i raccoglitori di dati _Servizio_, fare clic su un riquadro per aprire la pagina delle istruzioni per quel servizio.
@@ -81,6 +86,7 @@ Per i raccoglitori di dati _Servizio_, fare clic su un riquadro per aprire la pa
 
 
 
+[[add-dashboards]]
 == Aggiungi dashboard
 
 A seconda del tipo di raccoglitore dati iniziale selezionato per la configurazione (archiviazione, switch, ecc.), verranno importate una o più dashboard pertinenti.  Ad esempio, se hai configurato un raccoglitore di dati di archiviazione, verrà importato un set di dashboard relative all'archiviazione e una verrà impostata come home page di Data Infrastructure Insights .  È possibile modificare la home page dall'elenco *Dashboard > Mostra tutte le dashboard*.
@@ -89,6 +95,7 @@ A seconda del tipo di raccoglitore dati iniziale selezionato per la configurazio
 
 
 
+[[thats-all-there-is-to-it]]
 == Questo è tutto ciò che c'è da fare
 
 Dopo aver completato il processo di configurazione iniziale, l'ambiente inizierà a raccogliere dati.
@@ -102,6 +109,7 @@ Se il processo di configurazione iniziale viene interrotto (ad esempio, se si ch
 
 
 
+[[useful-definitions]]
 == Definizioni utili
 
 Le seguenti definizioni possono essere utili quando si parla di collettori di dati o funzionalità Data Infrastructure Insights :

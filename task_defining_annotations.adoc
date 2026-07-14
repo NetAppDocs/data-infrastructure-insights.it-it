@@ -31,6 +31,7 @@ Ad esempio, se un bene è in leasing e il leasing scade entro due mesi, potrebbe
 
 
 
+[[default-annotation-types]]
 == Tipi di annotazione predefiniti
 
 Data Infrastructure Insights fornisce alcuni tipi di annotazione predefiniti.  Queste annotazioni possono essere utilizzate per filtrare o raggruppare i dati.
@@ -86,6 +87,7 @@ NOTE: Alias, Data Center, Hot, Service Level, Sunset, Switch Level, Tier e Viola
 
 
 
+[[creating-custom-annotations]]
 == Creazione di annotazioni personalizzate
 
 Utilizzando le annotazioni, puoi aggiungere alle risorse dati aziendali personalizzati e specifici che corrispondono alle tue esigenze aziendali.  Sebbene Data Infrastructure Insights fornisca un set di annotazioni predefinite, potresti voler visualizzare i dati in altri modi.  I dati nelle annotazioni personalizzate integrano i dati del dispositivo già raccolti, come il produttore dell'archiviazione, i volumi numerici e le statistiche sulle prestazioni.  I dati aggiunti tramite annotazioni non vengono rilevati da Data Infrastructure Insights.

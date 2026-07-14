@@ -14,11 +14,12 @@ Per la configurazione, il data collector Dell EMC VNX Unified (SSH) richiede l'i
 
 
 
+[[terminology]]
 == Terminologia
 
 Data Infrastructure Insights acquisisce le seguenti informazioni di inventario da questo raccoglitore di dati.  Per ogni tipo di risorsa acquisita da Data Infrastructure Insights, viene mostrata la terminologia più comune utilizzata per tale risorsa.  Quando si visualizza o si risolve un problema con questo strumento di raccolta dati, tenere presente la seguente terminologia:
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Termine del fornitore/modello | Termine Data Infrastructure Insights 
 
@@ -57,6 +58,7 @@ Data Infrastructure Insights acquisisce le seguenti informazioni di inventario d
 |===
 
 
+[[requirements]]
 == Requisiti
 
 Per configurare il raccoglitore dati VNX (SSH) è necessario quanto segue:
@@ -68,9 +70,10 @@ Per configurare il raccoglitore dati VNX (SSH) è necessario quanto segue:
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -85,9 +88,10 @@ Per configurare il raccoglitore dati VNX (SSH) è necessario quanto segue:
 |===
 
 
+[[advanced-configiration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -99,6 +103,7 @@ Per configurare il raccoglitore dati VNX (SSH) è necessario quanto segue:
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ulteriori informazioni su questo Data Collector possono essere trovate dalink:concept_requesting_support.html["Supporto"] pagina o nellalink:reference_data_collector_support_matrix.html["Matrice di supporto del raccoglitore dati"] .

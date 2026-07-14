@@ -20,6 +20,7 @@ Per la configurazione, il raccoglitore dati richiede un indirizzo IP/FQDN del se
 
 
 
+[[requirements]]
 == Requisiti
 
 * Un indirizzo IP/nome di dominio completo del server Unisphere
@@ -29,9 +30,10 @@ Per la configurazione, il raccoglitore dati richiede un indirizzo IP/FQDN del se
 
 
 
+[[configuration]]
 == Configurazione
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -49,9 +51,10 @@ Per la configurazione, il raccoglitore dati richiede un indirizzo IP/FQDN del se
 |===
 
 
+[[advanced-configuration]]
 == Configurazione avanzata
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Campo | Descrizione 
 
@@ -72,15 +75,17 @@ Per la configurazione, il raccoglitore dati richiede un indirizzo IP/FQDN del se
 |===
 
 
+[[troubleshooting]]
 == Risoluzione dei problemi
 
 Ecco alcune cose da provare se riscontri problemi con questo strumento di raccolta dati:
 
 
 
+[[inventory]]
 === Inventario
 
-[cols="2*"]
+[cols="50,50"]
 |===
 | Problema: | Prova questo: 
 

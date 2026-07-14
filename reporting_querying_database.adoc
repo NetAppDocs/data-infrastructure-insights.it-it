@@ -21,6 +21,7 @@ NOTE: Questa documentazione fa riferimento alla funzionalità di reporting di Da
 
 
 
+[[odata]]
 == Odata
 
 L'API di reporting di Data Infrastructure Insights seguelink:https://www.odata.org/["OData v4"] (Open Data Protocol) standard per l'interrogazione del database di reporting.  Per maggiori informazioni o per saperne di più, consultalink:https://www.odata.org/getting-started/basic-tutorial/["questo tutorial"] su OData.
@@ -29,6 +30,7 @@ Tutte le richieste inizieranno con l'URL _\https://< URL Data Infrastructure Ins
 
 
 
+[[generating-an-apikey]]
 == Generazione di una APIKey
 
 Per saperne di piùlink:API_Overview.html["API Data Infrastructure Insights"] .
@@ -48,6 +50,7 @@ Le chiavi API sono utili per<<synchronous-or-asynchronous,_Sincronizzazione_ o _
 
 
 
+[[direct-query-of-tables]]
 == Interrogazione diretta delle tabelle
 
 Con la chiave API in atto, ora è possibile effettuare query dirette al database di reporting.  Gli URL lunghi possono essere semplificati in \https://.../odata/ per scopi di visualizzazione anziché nel formato completo \https://< URL Data Infrastructure Insights >/rest/v1/dwh-management/odata/
@@ -63,6 +66,7 @@ Prova semplici query come
 
 
 
+[[rest-api-examples]]
 == Esempi di API REST
 
 L'URL per tutte le chiamate è _\https://< URL Data Infrastructure Insights >/rest/v1/dwh-management/odata_.
@@ -107,6 +111,7 @@ Risultato:
 ....
 
 
+[[helpful-hints]]
 == Suggerimenti utili
 
 Quando si utilizzano le query dell'API di reporting, tenere presente quanto segue.
@@ -133,6 +138,7 @@ La tua chiave API sarà specifica per il tuo ambiente Data Infrastructure Insigh
 
 
 
+[[synchronous-or-asynchronous]]
 == Sincrono o asincrono?
 
 Per impostazione predefinita, un comando API funziona in modalità _sincrona_, ovvero quando si invia la richiesta, la risposta viene restituita immediatamente.  Tuttavia, a volte l'esecuzione di una query potrebbe richiedere molto tempo, il che potrebbe causare il timeout della richiesta.  Per aggirare questo problema, è possibile eseguire una richiesta in modo _asincrono_.  In modalità asincrona, la richiesta restituirà un URL tramite il quale è possibile monitorare l'esecuzione.  L'URL restituirà il risultato quando sarà pronto.
