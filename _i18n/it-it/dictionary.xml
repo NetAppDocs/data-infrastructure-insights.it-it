@@ -14072,8 +14072,6 @@
   <block id="810bac3bcbfe61628b10fe3df2e0ea96" category="paragraph">Un amministratore può impostare il messaggio in Admin &gt; Notifiche, nella scheda "Login Banner".</block>
   <block id="22f60aff39394bad553a00e2940bdf11" category="paragraph">Il messaggio supporta il Markdown di base, quindi puoi applicare formattazioni come grassetto, corsivo, tabelle, ecc.</block>
   <block id="6a46079dd2d659655fc832470519e71a" category="paragraph">Scegli se l'utente vede il messaggio solo al prossimo accesso o a ogni accesso successivo.</block>
-  <block id="6a5f1dd41e7d3fa22fbd71d29b46cea4" category="inline-image-macro">Impostazioni banner di accesso</block>
-  <block id="bd6c3bd0a46b9e6da4828acea4a9e315" category="paragraph"><block ref="bd6c3bd0a46b9e6da4828acea4a9e315" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ef61a1b7e25b910ec7beca0741bd208" category="paragraph">Tieni presente che l'utente DEVE confermare il messaggio di accesso per poterlo chiudere. Una volta chiuso, verranno visualizzati tutti i pop-up successivi (aggiornamenti sulle novità, aggiornamenti dei Termini di servizio, ecc.).</block>
   <block id="38f64824b0d19083b9c439a8b4af41e4" category="admonition">Una volta installato un agente su un server/VM, Data Infrastructure Insights raccoglie metriche da quel sistema, oltre a raccoglierle da qualsiasi data collector che configuri. Queste metriche vengono raccolte come metriche "Node".</block>
   <block id="7fa36585f976625a51b4f3be0f46f0b5" category="cell">Questi errori possono verificarsi se hai un repository docker personalizzato o privato e non hai ancora configurato il Kubernetes Monitoring Operator per riconoscerlo correttamente. <block ref="2d47cbc88497421e2fe69677ce7d4cef" category="inline-xref-macro-rx"></block> informazioni sulla configurazione per repo personalizzati/privati.</block>
@@ -14176,4 +14174,29 @@
   <block id="4f23d2244ea630f361d554b54b77bf03" category="list-text">Indirizzo IP del server Red Hat OpenShift Virtualization sulla porta 6443 tramite REST API</block>
   <block id="427f91a8692cb3d3ee52ca20ff3b659c" category="cell">Porta utilizzata per la comunicazione HTTPS con RHOV. Predefinito: 6443.</block>
   <block id="635a6e63b01914992d3584137f9e6ba6" category="sidebar">Nutanix AHV</block>
+  <block id="a257f7f4b2f6e07845ce567df142ad00" category="section-title">Luglio 2026</block>
+  <block id="8014692a31dc15996a299cb6c0683d99" category="section-title">Nuova pagina iniziale dell'assistente AI</block>
+  <block id="217f492cb52cc14d717c54a81afbacfe" category="paragraph">L'Assistente AI di DII ora include una pagina iniziale dedicata, che mette in primo piano l'analisi intelligente dell'infrastruttura. Avvia nuove conversazioni all'istante, riprendi la tua ultima sessione con un solo clic o inizia rapidamente con i prompt suggeriti.</block>
+  <block id="dac1263103d1a0aa0f29eb002af291af" category="inline-image-macro">Dashboard AI predefinita, larghezza=800</block>
+  <block id="6c78ab210f62dbc85fe22910374ff62b" category="paragraph"><block ref="6c78ab210f62dbc85fe22910374ff62b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7bd22707614b54a5cb3a8b8f12117bb9" category="paragraph">Accedi alla pagina iniziale da *AI Assistant* nel menu di navigazione oppure apri l'AI Assistant da qualsiasi posizione utilizzando l'icona "stars" in alto a sinistra.</block>
+  <block id="8946b454436a3b11aac461eaa734adfe" category="inline-image-macro">Menu di navigazione dell'assistente AI, larghezza=600</block>
+  <block id="2c8265bfd753072f003bc24b1df77111" category="inline-image-macro">Accesso all'assistente AI da qualsiasi luogo, larghezza=300</block>
+  <block id="9f6f73922ecce265167332ab3cf87f92" category="paragraph"><block ref="f633ce7b4fef8820f87a799ad31a7cb5" category="inline-image-macro-rx" type="image"></block> <block ref="fefcd3a065be75939d8d47b234d9d0c0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="94187d26105df3824bea268e9ae25535" category="inline-image-macro">Impostazioni banner di login, larghezza=400</block>
+  <block id="d1e27aaece77e53fc070c0b0ce490e10" category="paragraph"><block ref="d1e27aaece77e53fc070c0b0ce490e10" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58b6e1ec0b6ec5b4a454251805124640" category="section-title">Finestre di manutenzione</block>
+  <block id="3f3ec1c35b7249f193c068e0a8c036d3" category="paragraph">Con le finestre di manutenzione, puoi pianificare periodi di manutenzione specifici durante i quali le notifiche di avviso vengono soppresse, per gli oggetti e le metriche che scegli. Ad esempio, puoi sopprimere le notifiche di avviso attivate da specifici sistemi di storage, quando questi sistemi di storage sono in un periodo di aggiornamento pianificato.</block>
+  <block id="df24d8acd06534f618230d46637d6d1b" category="paragraph">Puoi scegliere se sopprimere sia gli avvisi che le notifiche durante la finestra, oppure sopprimere solo le notifiche ma continuare a rilevare gli avvisi.</block>
+  <block id="1aed277c750cbbf8c2859dca8664dada" category="inline-image-macro">Esempio di finestra di manutenzione, larghezza=400</block>
+  <block id="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="paragraph"><block ref="8f42f88b31e1b4f22f40e0ae5ecd38fb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="82bc146aadfdab0e3c7443c79b7f4c8b" category="section-title">Creazione di una finestra di manutenzione</block>
+  <block id="4def5c59958a122e22c3d06a018c9ef0" category="paragraph">Per creare una finestra di manutenzione:</block>
+  <block id="2b2323dddeb141b098fbcd705e90e359" category="list-text">Vai su *Osservabilità &gt; Avvisi &gt; Finestre di manutenzione* e clicca su *+ Finestra di manutenzione*.</block>
+  <block id="610844a278d3d0601b4bc4c27665563e" category="list-text">Inserisci un *Nome* per la finestra di manutenzione. Per ottenere risultati ottimali, scegli un nome significativo e specifico.</block>
+  <block id="c74ae4bc562a9f2edcf63aa39e8fac31" category="list-text">Seleziona il *dispositivo di storage* o l'*attributo dell'oggetto*.</block>
+  <block id="5760cc9b0c4d4910c5b80c7479b3f2a3" category="list-text">Filtra per *monitor o monitor*. Sono accettati i caratteri jolly.</block>
+  <block id="ea10176408e9b54a867b0e298e4b4bc2" category="list-text">Seleziona l'ora di inizio e l'ora di fine per il periodo di manutenzione.</block>
+  <block id="de3fd64c52ab8fa6a72c862f6f638fb0" category="list-text">Scegli se sopprimere *avvisi e notifiche* oppure *solo le notifiche* (gli avvisi vengono comunque rilevati durante la finestra).</block>
+  <block id="35d71e914a221fd7fa5e2e2d8c813a2a" category="list-text">Fai clic su *Salva* per creare la finestra di manutenzione.</block>
 </blocks>

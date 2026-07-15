@@ -22,6 +22,6 @@ Il messaggio supporta il Markdown di base, quindi puoi applicare formattazioni c
 
 Scegli se l'utente vede il messaggio solo al prossimo accesso o a ogni accesso successivo.
 
-image:login_banner_settings.png["Impostazioni banner di accesso"]
+image:login_banner_settings.png["Impostazioni banner di login, larghezza=400"]
 
 Tieni presente che l'utente DEVE confermare il messaggio di accesso per poterlo chiudere. Una volta chiuso, verranno visualizzati tutti i pop-up successivi (aggiornamenti sulle novità, aggiornamenti dei Termini di servizio, ecc.).

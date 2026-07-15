@@ -83,3 +83,32 @@ Se si dispone di un Monitor con una finestra di 30 minuti che rileva che una con
 È possibile configurare un monitor in modo che la condizione sia *sempre* presente sull'oggetto monitorato, ad esempio IOPS > 1 o latenza > 0.  Spesso vengono creati come monitor "di prova" e poi dimenticati.  Tali monitor creano avvisi che rimangono costantemente aperti sugli oggetti costituenti, il che può causare stress al sistema e problemi di stabilità nel tempo.
 
 Per evitare ciò, Data Infrastructure Insights chiuderà automaticamente tutti gli avvisi "permanentemente attivi" dopo 7 giorni.  Si noti che le condizioni di monitoraggio sottostanti potrebbero (probabilmente) continuare a sussistere, causando l'emissione quasi immediata di un nuovo avviso, ma questa chiusura degli avvisi "sempre attivi" allevia parte dello stress del sistema che potrebbe altrimenti verificarsi.
+
+
+
+[[maintenance-windows]]
+== Finestre di manutenzione
+
+Le finestre di manutenzione consentono di sopprimere le notifiche di avviso durante i periodi di manutenzione programmata, aiutandoti a evitare interruzioni non necessarie.
+
+Con le finestre di manutenzione, puoi pianificare periodi di manutenzione specifici durante i quali le notifiche di avviso vengono soppresse, per gli oggetti e le metriche che scegli. Ad esempio, puoi sopprimere le notifiche di avviso attivate da specifici sistemi di storage, quando questi sistemi di storage sono in un periodo di aggiornamento pianificato.
+
+Puoi scegliere se sopprimere sia gli avvisi che le notifiche durante la finestra, oppure sopprimere solo le notifiche ma continuare a rilevare gli avvisi.
+
+image:Maintenance_Windows_example.png["Esempio di finestra di manutenzione, larghezza=400"]
+
+
+
+[[creating-a-maintenance-window]]
+=== Creazione di una finestra di manutenzione
+
+Per creare una finestra di manutenzione:
+
+. Vai su *Osservabilità > Avvisi > Finestre di manutenzione* e clicca su *+ Finestra di manutenzione*.
+. Inserisci un *Nome* per la finestra di manutenzione. Per ottenere risultati ottimali, scegli un nome significativo e specifico.
+. Seleziona il *dispositivo di storage* o l'*attributo dell'oggetto*.
+. Filtra per *monitor o monitor*. Sono accettati i caratteri jolly.
+. Seleziona l'ora di inizio e l'ora di fine per il periodo di manutenzione.
+. Scegli se sopprimere *avvisi e notifiche* oppure *solo le notifiche* (gli avvisi vengono comunque rilevati durante la finestra).
+. Fai clic su *Salva* per creare la finestra di manutenzione.
+
