@@ -245,4 +245,21 @@ Una volta impostate le autorizzazioni, riavviare il raccoglitore.
 {vuoto}
 
 '''
+*Problema:* Dopo aver aggiunto o aggiornato un ONTAP SVM Data Collector (Workload Security), il tenant visualizza un avviso di overprovisioning o di violazione dell'abbonamento. La capacità di storage raw è aumentata anche se non è stato aggiunto nuovo hardware.
+
+*Prova questo:* Lo stesso storage può essere conteggiato due volte: una volta da un collector Observability ONTAP cluster e un'altra volta da un collector Workload Security SVM sullo stesso cluster.
+
+Confronta la capacità di storage raw riportata dai collector Observability ONTAP e dai collector Workload Security SVM. Per ogni collector SVM, verifica se il suo cluster padre è già monitorato da un collector Observability ONTAP. Se lo è, solo la capacità del cluster deve essere conteggiata ai fini dell'utilizzo dell'abbonamento.
+
+Conferma se si è verificata di recente una migrazione di SVM tra cluster. Dopo che un SVM è stato migrato, le metriche di capacità potrebbero rimanere associate al cluster precedente finché Workload Security non riceve informazioni aggiornate dal collector.
+
+Assicurati che l'ONTAP SVM Data Collector per l'SVM migrato sia nello stato RUNNING. Se serve, riavvia il collector così Workload Security può raccogliere le metriche di cluster e capacità corrette dopo la migrazione.
+
+Se nel totale compaiono sia la capacità del cluster che quella dell'SVM, è probabile che la capacità venga conteggiata due volte. Questo succede spesso poco dopo aver aggiunto, aggiornato o riavviato un collector SVM, oppure dopo aver migrato un SVM tra cluster.
+
+Se l'utilizzo continua a superare il limite del tuo abbonamento, apri una richiesta di assistenza NetApp indicando l'utilizzo dell'abbonamento prima e dopo l'avviso, e un elenco dei collettori di Observability e SVM con la loro capacità di storage raw segnalata.
+
+{vuoto}
+
+'''
 Se riscontri ancora problemi, contatta l'assistenza tramite i link indicati nella pagina *Aiuto > Assistenza*.
