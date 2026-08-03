@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task_dc_nutanix_ahv.html 
-keywords: data collector, Nutanix, AHV Series 
+keywords: data collector, Nutanix, AHV Series , Acropolis, hypervisor 
 summary: Configurare il raccoglitore di dati Nutanix AHV. 
 ---
 = Data collector Nutanix AHV
@@ -51,10 +51,10 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 == Requisiti
 
 * Indirizzo IP di Prism Central o Fully Qualified Domain Name
-* Nome utente e password locali o LDAP di Prism Central (per inventario e prestazioni è sufficiente un account di sola lettura; Admin non è richiesto)
+* Nome utente e password Prism Central locali o LDAP (è sufficiente un account di sola lettura)
 * Requisito porta: HTTPS 9440
 * Prism Central versione pc.2023.x o successiva (API v3); pc.7.x o successiva consigliata (API v4)
-* Le metriche sulle prestazioni richiedono Prism Central con API v4.0.b1 o successiva (pc.7.3+). Nelle versioni precedenti, l'inventario viene comunque raccolto ma non vengono riportati dati sulle prestazioni.
+* Le metriche sulle prestazioni richiedono Prism Central con API v4.0.b1 o successiva (pc.7.3+). Nelle versioni precedenti, l'inventario viene raccolto ma non vengono riportati dati sulle prestazioni.
 
 
 
@@ -67,7 +67,7 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 | Campo | Descrizione 
 
 
-| Indirizzo IP di Prism Central | Indirizzo IP o FQDN dell'istanza di Prism Central 
+| Indirizzo IP / Nome host di Prism Central | Indirizzo IP o FQDN dell'istanza di Prism Central 
 
 
 | Nome utente | Nome utente Prism Central 
@@ -85,16 +85,16 @@ Nota: queste sono solo mappature terminologiche comuni e potrebbero non rapprese
 | Campo | Descrizione 
 
 
-| porta TCP | Porta TCP utilizzata per connettersi a Prism Central. Il valore predefinito è 9440. 
+| porta TCP | Porta TCP utilizzata per connettersi a Prism Central. Predefinito: 9440. 
 
 
-| Intervallo di sondaggio dell'inventario (min) | Intervallo tra i sondaggi di inventario. Il valore predefinito è 60 minuti. 
+| Intervallo di sondaggio dell'inventario (min) | Intervallo tra le rilevazioni di inventario. Il valore predefinito è 60 minuti. 
 
 
-| Intervallo di sondaggio delle prestazioni (sec) | Intervallo tra i sondaggi sulle prestazioni. Il valore predefinito è 300 secondi. 
+| Intervallo di sondaggio delle prestazioni (sec) | Intervallo tra le rilevazioni delle prestazioni. Il valore predefinito è 300 secondi. 
 
 
-| Timeout HTTP (sec) | Timeout della richiesta HTTP. Il valore predefinito è 60 secondi. 
+| Timeout HTTP (sec) | Timeout della richiesta HTTP. Predefinito: 60. 
 
 
 | Conteggio dei tentativi HTTP | Numero di tentativi HTTP in caso di errori temporanei. Il valore predefinito è 3. 
