@@ -52,4 +52,4 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 I file di avviso forniscono informazioni sui diritti d'autore e sulle licenze di terze parti utilizzati nel software NetApp.
 
-link:media/DII_Notice_Feb_2026.pdf["Avviso per Data Infrastructure Insights (incluso Workload Security), window=_blank"]
+link:media/DII_Notice_Jun_2026.pdf["Avviso per Data Infrastructure Insights (incluso Workload Security), window=_blank"^]

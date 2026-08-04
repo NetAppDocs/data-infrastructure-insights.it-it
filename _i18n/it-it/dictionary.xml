@@ -13296,7 +13296,6 @@
   <block id="ecf8fabbb23da2c68f49fe920a05137b" category="list-text">SELinux sulle piattaforme sopra</block>
   <block id="3542743c69e8fceb06c77e5e17299c89" category="sidebar">Assistente AI</block>
   <block id="f7836ca926de84b06b0b4bcbe4b8b756" category="inline-link-macro">Avviso per Data Infrastructure Insights (incluso Workload Security), window=_blank</block>
-  <block id="135e17e82c7d3d3d83bd8b0737be432e" category="paragraph"><block ref="135e17e82c7d3d3d83bd8b0737be432e" category="inline-link-macro-rx"></block></block>
   <block id="b6b93d34f92b439117e54d9343c7efda" category="section-title">Anteprime attuali:</block>
   <block id="559de301b9b7af9f5b932d860f605701" category="list-text"><block ref="7a32ab5261b86b8c9a5d88b540c79f2d" category="inline-link-macro-rx"></block> anteprima.</block>
   <block id="ca39a60f24fda5dbbda8809fbd3fe717" category="inline-link-macro">*Data Infrastructure Insights Assistente AI*</block>
@@ -14210,4 +14209,5 @@
   <block id="91a0d06a30de7119cf7ba6773ce38416" category="paragraph">Il collector DII Proxmox Virtual Environment raccoglierà dati di inventario e prestazioni per macchine virtuali basate su PVE (non container LXC) e host/hypervisor. Questo è un collector basato su API REST HTTPS che deve comunicare con la REST API di Proxmox fornita dal servizio/demone pveproxy che ascolta sulla porta TCP 8006.</block>
   <block id="7bd4738e9b2442fc6fa7415e88a3298d" category="paragraph">Questo data collector utilizza l'autenticazione tramite utente + token. Dovrai creare un account di servizio su ciascun cluster Proxmox, assegnare le autorizzazioni appropriate all'utente e poi generare un token API con gli stessi diritti. Tieni presente che il token di un determinato utente Proxmox NON ha necessariamente gli stessi diritti/autorizzazioni dell'utente. DII avrà generalmente bisogno di diritti globali di livello Audit/Monitor: se stai creando un account di servizio tramite l'interfaccia utente di Proxmox, per PathPermision inizia da "/" , imposta Propagate su "Yes" e sblocca almeno Datastore Audit, Mapping Audit, Pool Audit, SDN Audit, Sys Audit, VM Audit, VM Monitor. Con l'utente creato, puoi poi creare un token di accesso per esso. Ti consigliamo vivamente di creare il token con una scadenza di 0 per assicurarti che non scada mai.</block>
   <block id="57e13573114577b3af8a0a24aa24d576" category="sidebar">Proxmox VE</block>
+  <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
 </blocks>
