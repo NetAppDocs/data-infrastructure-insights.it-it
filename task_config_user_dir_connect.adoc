@@ -46,7 +46,7 @@ Configurare User Directory Collector inserendo i dati richiesti nelle seguenti t
 | Nome della foresta | Livello foresta della struttura delle directory.  Il nome della foresta consente entrambi i seguenti formati: _x.y.z_ => nome di dominio diretto così come è presente sulla SVM.  [Esempio: hq.companyname.com] _DC=x,DC=y,DC=z_ => Nomi distinti relativi [Esempio: DC=hq,DC= companyname,DC=com] Oppure puoi specificare come segue: _OU=engineering,DC=hq,DC= companyname,DC=com_ [per filtrare in base a OU engineering specifica] _CN=username,OU=engineering,DC=companyname, DC=netapp, DC=com_ [per ottenere solo un utente specifico con <username> da OU <engineering>] _CN=Acrobat Users,CN=Users,DC=hq,DC=companyname,DC=com,O= companyname,L=Boston,S=MA,C=US_ [per ottenere tutti gli utenti Acrobat all'interno degli utenti di quell'organizzazione] Sono supportati anche i domini Active Directory attendibili. 
 
 
-| Associa DN | Utente autorizzato a effettuare ricerche nella directory.  Ad esempio: _username@companyname.com_ oppure _username@domainname.com_ Inoltre, è richiesta l'autorizzazione di sola lettura del dominio.  L'utente deve essere membro del gruppo di sicurezza _Controller di dominio di sola lettura_. 
+| Associa DN | L'utente è autorizzato a effettuare ricerche nella directory. Ad esempio: _username@companyname.com_ o _username@domainname.com_ 
 
 
 | Password BIND | Password del server di directory (ovvero password per il nome utente utilizzato in Bind DN) 
