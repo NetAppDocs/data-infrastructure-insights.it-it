@@ -262,4 +262,24 @@ Se l'utilizzo continua a superare il limite del tuo abbonamento, apri una richie
 {vuoto}
 
 '''
+*Problema*: Uno o più Data Collector risultano in stato Degradato anziché In esecuzione, anche se il servizio del collector è attivo.
+
+*Prova questo*: SWS segnala "Degradato" quando una o più connessioni FPolicy su un nodo vengono disconnesse. Non è un'interruzione: il collector è ancora in esecuzione, ma gli eventi di audit da quei nodi potrebbero andare persi finché la connettività non viene ripristinata.
+
+ONTAP stabilisce una connessione del canale di controllo FPolicy da ciascun nodo che dispone di un LIF dati operativo per l'SVM. Un nodo senza un LIF dati locale non può connettersi. Vedi:
+
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/node-fpolicy-server-communication-process-concept.html["Processo di comunicazione tra nodo e server ONTAP FPolicy esterno"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/fpolicy-external-fpolicy-servers-concept.html["Come funziona ONTAP FPolicy con i server FPolicy esterni"^]
+* link:https://docs.netapp.com/us-en/ontap/nas-audit/requirements-best-practices-fpolicy-concept.html["Requisiti, considerazioni e best practice per configurare ONTAP FPolicy"^]
+
+
+Nell'interfaccia utente, individua il/i nodo/i disconnesso/i, quindi verifica se tali nodi dispongono di un LIF dati per l'SVM.
+
+* Nessun LIF di dati sul/sui nodo/i elencato/i: ignora lo stato Degradato. ONTAP può mostrare FPolicy disconnesso con il motivo "Nessun LIF locale presente per connettersi al server FPolicy" quando non è presente alcun LIF di dati locale; questo è previsto. Vedi link:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/Fpolicy_server_not_connected_due_to_no_local_lif_present_on_one_or_more_nodes["KB: Il server Fpolicy non è connesso a causa di "no local lif present""^]. Una futura versione di SWS smetterà di contrassegnare il collector come Degradato in questo caso.
+* Data LIF presente sul/sui nodo/i elencato/i: Indaga sul motivo per cui FPolicy è disconnesso (LIF non disponibile / manca data-fpolicy-client, problemi di rete/firewall o riavvio/failover temporaneo).
+
+
+{vuoto}
+
+'''
 Se riscontri ancora problemi, contatta l'assistenza tramite i link indicati nella pagina *Aiuto > Assistenza*.

@@ -413,6 +413,7 @@ Verrà inviata una notifica via e-mail quando sarà disponibile una nuova versio
 . Scarica l'ultimo programma di installazione dell'agente.
 +
 .. I passaggi per scaricare l'ultimo programma di installazione sono simili a quelli descritti in "Installazione di un nuovo agente".  In Swagger, seleziona “cloudsecure_installers.agent” > API “/v1/cloudsecure/agents/installers/{platform}/latest”, inserisci la piattaforma come “linux” e scarica il file zip dell'installer.  In alternativa, è possibile utilizzare anche il comando curl.  Decomprimere il file di installazione.
+.. Nota: il programma di installazione dell'agente deve essere scaricato in una cartella diversa da quella in cui è in esecuzione l'agente.
 
 
 . Imposta l'autorizzazione di esecuzione per il file "cloudsecure-agent-upgrade.sh".
@@ -437,9 +438,16 @@ total 153344
 -rw------- 1 root root    16574 Apr 26  2024 cloudsecure-agent-install.sh
 -rwx------ 1 root root     8586 Apr 26  2024 cloudsecure-agent-upgrade.sh
 -rw------- 1 root root 77834660 Apr 26 17:35 cloudsecure-linux-agent-installer-1.618.0.zip
-
 ----
 . Eseguire lo script “cloudsecure-agent-upgrade.sh”.  Se lo script è stato eseguito correttamente, nell'output verrà visualizzato il messaggio "L'agente Cloudsecure è stato aggiornato correttamente".
+. Esegui il seguente comando:
++
+ sudo chown -R cssys:cssys {agent-install-path}/cloudsecure
++
+Ad esempio, se l'agente è in esecuzione in "/test_user/apps", il comando sarebbe:
+
++
+ sudo chown -R cssys:cssys /test_user/apps/cloudsecure
 . Eseguire il seguente comando 'systemctl daemon-reload'
 +
 [listing]
