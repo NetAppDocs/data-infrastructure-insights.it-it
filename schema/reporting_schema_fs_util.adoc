@@ -1,0 +1,571 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_fs_util.html 
+summary: Tabelle schema per il data warehouse File System Utilization 
+keywords: dwh, data warehouse, schema, reporting, file system, fs util 
+---
+= Schema di utilizzo del file system
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Fonte: endpoint OData *dwh_fs_util* — Data Infrastructure Insights
+
+Tabelle trovate: *8* | Associazioni: *7*
+
+
+
+[[key-relationships-between-tables]]
+== Relazioni chiave tra le tabelle
+
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-compute_resource_dimension["dimensione_risorsa_di_calcolo"] | computeResourceTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-file_system_dimension["dimensione del file system"] | fsTk | tk 
+
+
+| link:#entity-host_dimension["host_dimension"] | hostTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[tables-fields]]
+== Tabelle e campi
+
+PKChiave primariaFKChiave esternaNOT NULLCampo obbligatorio
+
+
+
+[[computeresourcedimension]]
+=== dimensione_risorsa_di_calcolo
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: compute_resource_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di risorsa di calcolo. 
+
+
+| identificatore | Stringa | SÌ | Identificatore naturale della risorsa di calcolo. 
+
+
+| nome | Stringa | SÌ | nome della risorsa di calcolo. 
+
+
+| tipo | Stringa | SÌ | tipo di risorsa. 
+
+
+| dominio | Stringa | SÌ | dominio della risorsa di calcolo. 
+
+
+| ip | Stringa | SÌ | Elenco separato da virgole di indirizzi IP della risorsa di calcolo. 
+
+
+| sistema operativo | Stringa | SÌ | Sistema operativo in esecuzione sulla risorsa di calcolo. 
+
+
+| id | Int64 | SÌ | GUID della risorsa di calcolo in dwh_inventory.compute_resource 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questa risorsa di calcolo. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga di risorsa di calcolo. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | molti 
+|===
+
+
+[[datedimension]]
+=== date_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: date_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK dell'oggetto data. 
+
+
+| fullDate | DateTimeOffset | SÌ | Data dell'oggetto data. 
+
+
+| dayInMonth | Byte | SÌ | Giorno del mese per l'oggetto data. Il primo giorno del mese ha valore 1. 
+
+
+| dayInYear | Int32 | SÌ | Giorno dell'anno dell'oggetto data. Il primo giorno dell'anno ha valore 1. 
+
+
+| dateYear | Int32 | SÌ | Anno dell'oggetto data. 
+
+
+| yearLabel | Stringa | SÌ | Anno formattato come stringa 
+
+
+| monthNum | Byte | SÌ | Mese dell'oggetto data. Gennaio ha valore 1. 
+
+
+| monthLabel | Stringa | SÌ | Mese formattato come stringa 
+
+
+| dayInWeekNum | Byte | SÌ | Giorno della settimana per l'oggetto data. La domenica ha valore 1. 
+
+
+| trimestre | Byte | SÌ | Trimestre dell'oggetto data. Il primo trimestre ha valore 1. 
+
+
+| quarterLabel | Stringa | SÌ | Trimestre formattato come stringa 
+
+
+| dayInQuarter | Int32 | SÌ | Giorno del trimestre dell'oggetto data. Il primo giorno del trimestre ha valore 1. 
+
+
+| repQuarter | Byte | SÌ | Indica se questa data è la prima data disponibile per il trimestre. 
+
+
+| repMonth | Byte | SÌ | Indica se questa data è la prima data disponibile per il suo mese. 
+
+
+| repWeek | Byte | SÌ | Indica se questa data è la prima data disponibile per la sua settimana. 
+
+
+| repDay | Byte | SÌ | Indica se questa data è la prima data disponibile per il suo giorno. 
+
+
+| repMonthOrLatest | Byte | SÌ | Indica se questa data è il repmonth o l'ultima. Questo flag viene utilizzato da Datamarts che lavora su rep mensili. L'unica differenza è che per il mese corrente è l'ultima 
+
+
+| sspFlag | Byte | SÌ | Indica se questa data viene utilizzata nel Datamart di Storage e Storage Pool. È vero per i rappresentanti del mese e per gli ultimi giorni come definito nella configurazione. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa data è l'ultima data disponibile nella tabella. 
+
+
+| futuro | Stringa | SÌ | Indica se questa data è una data futura (proiezione) o una data normale. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | molti 
+|===
+
+
+[[filesystemdimension]]
+=== dimensione del file system
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: file_system_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK della dimensione. 
+
+
+| computeResourceIdentifier | Stringa | SÌ | Identificatore della risorsa di calcolo. Parte della chiave naturale. 
+
+
+| nome | Stringa | SÌ | Punto di montaggio o lettera dell'unità. Parte della chiave naturale. 
+
+
+| posizione | Stringa | SÌ | Indica dove vengono conservati i dati e come vi si accede. Ad esempio: locale, SAN, NAS. Verrà impostato su null se la posizione è sconosciuta. 
+
+
+| hardwareId | Stringa | SÌ | Identificatore specifico dell'host. Verrà impostato su null se sconosciuto. 
+
+
+| tipo | Stringa | SÌ | Tipo di file system. Ad esempio: NTFS, FAT, UFS, UDF, ZFS, ISO 9660, VXFS ecc. Verrà impostato su null se sconosciuto. 
+
+
+| id | Int64 | SÌ | GUID del file system in dwh_inventory.file_system. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo file system. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del file system. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | molti 
+|===
+
+
+[[fsutilfact]]
+=== fs_util_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: fs_util_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della data. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["host_dimension"].tk | Int32 | SÌ | TK dell'host. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | SÌ | TK della vm. 
+
+
+| computeResourceTk *[FK]* →link:#entity-compute_resource_dimension["dimensione_risorsa_di_calcolo"].tk | Int32 | SÌ | TK del computeResource. 
+
+
+| fsTk *[FK]* →link:#entity-file_system_dimension["dimensione del file system"].tk | Int32 | SÌ | TK del file system. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| sizeMB | Int64 | SÌ | Dimensione del file system in MB. 
+
+
+| MB usati | Int64 | SÌ | Quantità di capacità del file system utilizzata e non disponibile. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| dimensione del file system | link:#entity-file_system_dimension["dimensione del file system"] | un JOIN:fsTk=link:#entity-file_system_dimension["dimensione del file system"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| dimensione_risorsa_di_calcolo | link:#entity-compute_resource_dimension["dimensione_risorsa_di_calcolo"] | un JOIN:computeResourceTk=link:#entity-compute_resource_dimension["dimensione_risorsa_di_calcolo"].tk 
+
+
+| host_dimension | link:#entity-host_dimension["host_dimension"] | un JOIN:hostTk=link:#entity-host_dimension["host_dimension"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | un JOIN:vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[hostdimension]]
+=== host_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insiemi di entità: host_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga host. 
+
+
+| nome | Stringa | SÌ | Nome dell'host. 
+
+
+| identificatore | Stringa | SÌ | Identificativo del dispositivo. 
+
+
+| ip | Stringa | SÌ | Elenco separato da virgole degli indirizzi IP dell'host. 
+
+
+| sistema operativo | Stringa | SÌ | Sistema operativo in esecuzione sull'host. 
+
+
+| modello | Stringa | SÌ | Numero di modello. 
+
+
+| produttore | Stringa | SÌ | Produttore dell'host. 
+
+
+| url | Stringa | SÌ | URL di questo host in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID dell'host in dwh_inventory.host. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo host. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga host. 
+
+
+| dataCenter | Stringa | SÌ | dataCenter valore di annotazione assegnato a dwh_dimensions.host_dimension 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | molti 
+|===
+
+
+[[storagedimension]]
+=== storage_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga dello storage array. 
+
+
+| nome | Stringa | SÌ | Nome dello storage array. 
+
+
+| identificatore | Stringa | SÌ | Identificativo del dispositivo. 
+
+
+| ip | Stringa | SÌ | Indirizzo IP dello storage array. 
+
+
+| modello | Stringa | SÌ | Modello dell'array di storage. 
+
+
+| produttore | Stringa | SÌ | Produttore dello storage array. 
+
+
+| serialNumber | Stringa | SÌ | Numero di serie dell'array di storage. 
+
+
+| microcodeVersion | Stringa | SÌ | Versione del firmware in esecuzione sull'array di storage. 
+
+
+| famiglia | Stringa | SÌ | Nome della famiglia del sistema di archiviazione (ad esempio Clariion, Symmetrix ecc). 
+
+
+| url | Stringa | SÌ | URL di questo archivio in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID dell'array di storage in dwh_inventory.storage. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo storage. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga dello storage array. 
+
+
+| dataCenter | Stringa | SÌ | dataCenter valore di annotazione assegnato a dwh_dimensions.storage_dimension 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | molti 
+|===
+
+
+[[tierdimension]]
+=== tier_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: tier_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di tier. 
+
+
+| nome | Stringa | SÌ | Nome identificativo per il tier. 
+
+
+| sequenza | Int32 | SÌ | Numero sequenziale del livello come definito in dwh_inventory.annotation_value. 
+
+
+| costo | Raddoppia | SÌ | Costo associato a questo livello. 
+
+
+| id | Int64 | SÌ | GUID del livello in dwh_inventory.annotation_value. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo tier. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga di tier. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | molti 
+|===
+
+
+[[vmdimension]]
+=== vm_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: vm_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di macchina virtuale. 
+
+
+| nome | Stringa | SÌ | Nome della macchina virtuale. 
+
+
+| naturalKey | Stringa | SÌ | Identificatore naturale della macchina virtuale. 
+
+
+| sistema operativo | Stringa | SÌ | Sistema operativo guest. 
+
+
+| virtualCenterIp | Stringa | SÌ | Indirizzo IP del virtual center della macchina virtuale. 
+
+
+| ips | Stringa | SÌ | Elenco separato da virgole di indirizzi IP della macchina virtuale. 
+
+
+| url | Stringa | SÌ | URL di questa macchina virtuale in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID della macchina virtuale in dwh_inventory.hv_virtual_machine 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questa macchina virtuale. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga della macchina virtuale. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| fs_util_fact | link:#entity-fs_util_fact["fs_util_fact"] | molti 
+|===

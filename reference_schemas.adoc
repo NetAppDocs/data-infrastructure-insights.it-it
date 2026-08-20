@@ -19,4 +19,4 @@ Queste tabelle di schema sono fornite qui come riferimento per Data Infrastructu
 
 NOTE: La funzionalità di reporting è disponibile in Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Edizione Premium"] .
 
-link:schema/reporting_schema_capacity.html["Tabelle dello schema - Capacity"^] link:schema/reporting_schema_capacity_efficiency.html["Tabelle dello schema - Efficienza della capacità"^] link:schema/reporting_schema_fs_util.html["Tabelle schema - Utilizzo del file system"^] link:schema/reporting_schema_inventory.html["Tabelle schema - Inventory"^] link:schema/reporting_schema_performance.html["Tabelle schema - Performance"^] link:schema/reporting_schema_ports.html["Tabelle Schema - Porte"^]
+link:reporting_schema_capacity.html["Tabelle dello schema - Capacity"] link:reporting_schema_capacity_efficiency.html["Tabelle dello schema - Efficienza della capacità"] link:reporting_schema_fs_util.html["Tabelle schema - Utilizzo del file system"] link:reporting_schema_inventory.html["Tabelle schema - Inventory"] link:reporting_schema_performance.html["Tabelle schema - Performance"] link:reporting_schema_ports.html["Tabelle Schema - Porte"]

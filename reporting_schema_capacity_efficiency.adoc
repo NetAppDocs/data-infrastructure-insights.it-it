@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_capacity_efficiency.html 
+summary: Tabelle schema per il data warehouse Capacity Efficiency 
+keywords: dwh, data warehouse, schema, reporting, capacity efficiency 
+---
+= Schema di efficienza della capacità
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Fonte: endpoint OData *dwh_capacity_efficiency* — Data Infrastructure Insights
+
+Tabelle trovate: *3* | Associazioni: *2*
+
+
+
+[[key-relationships-between-tables]]
+== Relazioni chiave tra le tabelle
+
+
+
+[[efficiencyfact]]
+=== efficiency_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+|===
+
+
+[[tables-fields]]
+== Tabelle e campi
+
+PKChiave primariaFKChiave esternaNOT NULLCampo obbligatorio
+
+
+
+[[datedimension]]
+=== date_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: date_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK dell'oggetto data. 
+
+
+| fullDate | DateTimeOffset | SÌ | Data dell'oggetto data. 
+
+
+| dayInMonth | Byte | SÌ | Giorno del mese per l'oggetto data. Il primo giorno del mese ha valore 1. 
+
+
+| dayInYear | Int32 | SÌ | Giorno dell'anno dell'oggetto data. Il primo giorno dell'anno ha valore 1. 
+
+
+| dateYear | Int32 | SÌ | Anno dell'oggetto data. 
+
+
+| yearLabel | Stringa | SÌ | Anno formattato come stringa 
+
+
+| monthNum | Byte | SÌ | Mese dell'oggetto data. Gennaio ha valore 1. 
+
+
+| monthLabel | Stringa | SÌ | Mese formattato come stringa 
+
+
+| dayInWeekNum | Byte | SÌ | Giorno della settimana per l'oggetto data. La domenica ha valore 1. 
+
+
+| trimestre | Byte | SÌ | Trimestre dell'oggetto data. Il primo trimestre ha valore 1. 
+
+
+| quarterLabel | Stringa | SÌ | Trimestre formattato come stringa 
+
+
+| dayInQuarter | Int32 | SÌ | Giorno del trimestre dell'oggetto data. Il primo giorno del trimestre ha valore 1. 
+
+
+| repQuarter | Byte | SÌ | Indica se questa data è la prima data disponibile per il trimestre. 
+
+
+| repMonth | Byte | SÌ | Indica se questa data è la prima data disponibile per il suo mese. 
+
+
+| repWeek | Byte | SÌ | Indica se questa data è la prima data disponibile per la sua settimana. 
+
+
+| repDay | Byte | SÌ | Indica se questa data è la prima data disponibile per il suo giorno. 
+
+
+| repMonthOrLatest | Byte | SÌ | Indica se questa data è il repmonth o l'ultima. Questo flag viene utilizzato da Datamarts che lavora su rep mensili. L'unica differenza è che per il mese corrente è l'ultima 
+
+
+| sspFlag | Byte | SÌ | Indica se questa data viene utilizzata nel Datamart di Storage e Storage Pool. È vero per i rappresentanti del mese e per gli ultimi giorni come definito nella configurazione. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa data è l'ultima data disponibile nella tabella. 
+
+
+| futuro | Stringa | SÌ | Indica se questa data è una data futura (proiezione) o una data normale. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| efficiency_fact | link:#entity-efficiency_fact["efficiency_fact"] | molti 
+|===
+
+
+[[efficiencyfact]]
+=== efficiency_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: efficiency_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della data. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede la capacità. 
+
+
+| rawCapacityMB | Int64 | SÌ | Capacità di storage raw in MB. 0 quando la tecnologia è specificata (non NULL). 
+
+
+| backendCapacityMB | Int64 | SÌ | Capacità totale dei LUN di backend in un array virtuale, in MB. 0 quando viene specificata la tecnologia (non NULL). 
+
+
+| storageTechnology | Stringa | SÌ | Tecnologia di efficienza e protezione dello storage come Dedupe, Thin Provisioning, Snapshot e RAID. NULL quando rappresenta raw e la capacità di backend dello storage (una riga per storage). 
+
+
+| gainMB | Int64 | SÌ | Capacità acquisita grazie all'utilizzo della tecnologia. 0 quando la tecnologia non è specificata (NULL). 
+
+
+| lossMB | Int64 | SÌ | Capacità persa a causa dell'utilizzo della tecnologia. 0 quando la tecnologia non è specificata (NULL). 
+
+
+| potentialGainMB | Int64 | SÌ | Potenziale capacità di guadagno derivante dall'utilizzo completo della tecnologia. 0 quando la tecnologia non è specificata (NULL). 
+
+
+| potenzialePerditaMB | Int64 | SÌ | Capacità potenziale di perdita derivante dall'utilizzo completo della tecnologia. 0 quando la tecnologia non è specificata (NULL). 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[storagedimension]]
+=== storage_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga dello storage array. 
+
+
+| nome | Stringa | SÌ | Nome dello storage array. 
+
+
+| identificatore | Stringa | SÌ | Identificativo del dispositivo. 
+
+
+| ip | Stringa | SÌ | Indirizzo IP dello storage array. 
+
+
+| modello | Stringa | SÌ | Modello dell'array di storage. 
+
+
+| produttore | Stringa | SÌ | Produttore dello storage array. 
+
+
+| serialNumber | Stringa | SÌ | Numero di serie dell'array di storage. 
+
+
+| microcodeVersion | Stringa | SÌ | Versione del firmware in esecuzione sull'array di storage. 
+
+
+| famiglia | Stringa | SÌ | Nome della famiglia del sistema di archiviazione (ad esempio Clariion, Symmetrix ecc). 
+
+
+| url | Stringa | SÌ | URL di questo archivio in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID dell'array di storage in dwh_inventory.storage. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo storage. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga dello storage array. 
+
+
+| dataCenter | Stringa | SÌ | dataCenter valore di annotazione assegnato a dwh_dimensions.storage_dimension 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| efficiency_fact | link:#entity-efficiency_fact["efficiency_fact"] | molti 
+|===

@@ -1,0 +1,3521 @@
+---
+sidebar: sidebar 
+permalink: reporting_schema_capacity.html 
+summary: Tabelle dello schema per il data warehouse Capacity 
+keywords: dwh, data warehouse, schema, reporting, capacity 
+---
+= Schema di capacità
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+Fonte: endpoint OData *dwh_capacity* — Data Infrastructure Insights
+
+Tabelle trovate: *44* | Associazioni: *92*
+
+
+
+[[key-relationships-between-tables]]
+== Relazioni chiave tra le tabelle
+
+
+
+[[chargebackfact]]
+=== chargeback_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-application_dimension["dimensione_applicazione"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["host_dimension"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["host_group_dimension"] | hostGroupTk | tk 
+
+
+| link:#entity-internal_volume_dimension["dimensione_volume_interno"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_dimension"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+|===
+
+
+[[diskgroupcapacityfact]]
+=== capacità_gruppo_di_dischi_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-disk_group_dimension["dimensione_gruppo_disci"] | diskGroupTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | storagePoolTk | tk 
+|===
+
+
+[[diskgroupcapacityfuturefact]]
+=== capacità_gruppo_dischi_fatto_futuro
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-disk_group_dimension["dimensione_gruppo_disci"] | diskGroupTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | storagePoolTk | tk 
+|===
+
+
+[[internalvolumecapacityfact]]
+=== capacità del volume interno
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-application_dimension["dimensione_applicazione"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-internal_volume_dimension["dimensione_volume_interno"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+|===
+
+
+[[k8spvccapacityfact]]
+=== k8s_pvc_capacity_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-k8s_cluster_dimension["k8s_cluster_dimension"] | clusterTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | namespaceTk | tk 
+
+
+| link:#entity-k8s_pv_dimension["k8s_pv_dimension"] | pvTk | tk 
+
+
+| link:#entity-k8s_pvc_dimension["k8s_pvc_dimension"] | pvcTk | tk 
+|===
+
+
+[[qtreecapacityfact]]
+=== qtree_capacity_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-application_dimension["dimensione_applicazione"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-internal_volume_dimension["dimensione_volume_interno"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | k8sNamespaceTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_dimension"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+|===
+
+
+[[sptimetofill]]
+=== sp_time_to_fill
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"] | saspFactTk | tk 
+|===
+
+
+[[storageandstoragepoolcapacityfact]]
+=== storage_and_storage_pool_capacity_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+|===
+
+
+[[storageandstoragepoolcapacityfuturefact]]
+=== capacità_futura_di_storage_e_pool_di_storage
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+|===
+
+
+[[storagenodecapacityfact]]
+=== storage_node_capacity_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_node_dimension["storage_node_dimension"] | storageNodeTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+|===
+
+
+[[vmcapacityfact]]
+=== vm_capacity_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-application_dimension["dimensione_applicazione"] | applicationTk | tk 
+
+
+| link:#entity-application_group_dimension["application_group_dimension"] | applicationGroupTk | tk 
+
+
+| link:#entity-business_entity_dimension["business_entity_dimension"] | businessEntityTk | tk 
+
+
+| link:#entity-capacity_type["capacity_type"] | capacityType | tipo 
+
+
+| link:#entity-datastore_dimension["datastore_dimension"] | dataStoreTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["host_dimension"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["host_group_dimension"] | hostGroupTk | tk 
+
+
+| link:#entity-internal_volume_dimension["dimensione_volume_interno"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_node_dimension["k8s_node_dimension"] | k8sNodeTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_dimension"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+
+
+| link:#entity-vm_dimension["vm_dimension"] | vmTk | tk 
+|===
+
+
+[[volumefactcurrent]]
+=== volume_fact_current
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-chargeback_fact["chargeback_fact"] | chargebackFactTk | tk 
+|===
+
+
+[[volumehistorycapacityfact]]
+=== volume_history_capacity_fact
+
+[cols="1,1,1"]
+|===
+| Tabella di riferimento (parent) | colonna FK | PK principale 
+
+
+| link:#entity-chargeback_fact["chargeback_fact"] | chargebackFactTk | tk 
+
+
+| link:#entity-date_dimension["date_dimension"] | dateTk | tk 
+
+
+| link:#entity-host_dimension["host_dimension"] | hostTk | tk 
+
+
+| link:#entity-host_group_dimension["host_group_dimension"] | hostGroupTk | tk 
+
+
+| link:#entity-internal_volume_dimension["dimensione_volume_interno"] | internalVolumeTk | tk 
+
+
+| link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | k8sNamespaceGroupTk | tk 
+
+
+| link:#entity-qtree_dimension["qtree_dimension"] | qtreeTk | tk 
+
+
+| link:#entity-service_level_dimension["service_level_dimension"] | serviceLevelTk | tk 
+
+
+| link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"] | storageAndSpFactTk | tk 
+
+
+| link:#entity-storage_dimension["storage_dimension"] | storageTk | tk 
+
+
+| link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | storagePoolTk | tk 
+
+
+| link:#entity-tier_dimension["tier_dimension"] | tierTk | tk 
+
+
+| link:#entity-volume_dimension["volume_dimension"] | volumeTk | tk 
+|===
+
+
+[[tables-fields]]
+== Tabelle e campi
+
+PKChiave primariaFKChiave esternaNOT NULLCampo obbligatorio
+
+
+
+[[applicationdimension]]
+=== dimensione_applicazione
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: application_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di applicazione. 
+
+
+| nome | Stringa | SÌ | Nome dell'applicazione. 
+
+
+| descrizione | Stringa | SÌ | Descrizione dell'applicazione. 
+
+
+| priorità | Stringa | SÌ | Priorità dell'applicazione. 
+
+
+| url | Stringa | SÌ | URL di questa applicazione in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID dell'applicazione in dwh_inventory.application. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questa applicazione. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga dell'applicazione. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+|===
+
+
+[[applicationgroupbridge]]
+=== application_group_bridge
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: application_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| appGroupTk | Int32 | SÌ | TK del gruppo applicativo. 
+
+
+| appTk | Int32 | SÌ | TK dell'applicazione. 
+
+
+| isRep | Stringa | SÌ | Indica se questa applicazione rappresenta il suo gruppo di applicazioni. 
+|===
+
+
+[[applicationgroupdimension]]
+=== application_group_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: application_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK del gruppo applicativo. 
+
+
+| repApp | Stringa | SÌ | Nome dell'applicazione che rappresenta il gruppo di applicazioni. 
+
+
+| repAppTk | Int32 | SÌ | TK dell'applicazione che rappresenta il gruppo di applicazioni. 
+
+
+| cardinalità | Int32 | SÌ | Numero di applicazioni nel gruppo di applicazioni. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata la riga del gruppo di applicazioni. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+|===
+
+
+[[businessentitydimension]]
+=== business_entity_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: business_entity_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga dell'entità aziendale. 
+
+
+| nome e cognome | Stringa | SÌ | Nome dell'entità aziendale. 
+
+
+| tenant | Stringa | SÌ | Nome del tenant. 
+
+
+| lob | Stringa | SÌ | Nome della linea di business. 
+
+
+| businessUnit | Stringa | SÌ | Nome dell'entità aziendale. 
+
+
+| progetto | Stringa | SÌ | Nome del progetto. 
+
+
+| id | Int64 | SÌ | GUID dell'entità aziendale in dwh_inventory.annotation_value. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questa entità aziendale. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga dell'entità aziendale. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+|===
+
+
+[[capacitytype]]
+=== capacity_type
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità:capacity_type
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| digita *[PK]* | Stringa | SÌ |  
+
+
+| usato | Stringa | SÌ | Indica la capacità utilizzata da host e applicazioni. 
+
+
+| vmSpecific | Stringa | SÌ | Tipi utilizzati in vm_capacity_fact. 
+
+
+| replicationSpecific | Stringa | SÌ | Tipi utilizzati con capacità di protezione/replicazione. 
+
+
+| descrizione | Stringa | SÌ | Descrizione per questo tipo di capacità. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+|===
+
+
+[[cardinals]]
+=== cardinali
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme(i) di entità: cardinals
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| cifra | Int32 | SÌ | Un numero compreso tra 0 e 99. 
+|===
+
+
+[[chargebackfact]]
+=== chargeback_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: chargeback_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della data. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede la capacità. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk | Int32 | SÌ | TK del pool di storage in cui risiede la capacità. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk | Int32 | SÌ | TK del volume interno in cui risiede la capacità. 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_dimension"].tk | Int32 | SÌ | TK del qtree in cui risiede la capacità. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["host_dimension"].tk | Int32 | SÌ | TK dell'host che rappresenta il gruppo host. 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["host_group_dimension"].tk | Int32 | SÌ | TK del gruppo host. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["dimensione_applicazione"].tk | Int32 | SÌ | TK dell'applicazione. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | SÌ | TK del gruppo applicativo. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | SÌ | TK del livello di servizio. 
+
+
+| businessUnit | Stringa | SÌ | Business Unit associata al qtree. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | SÌ | TK dell'entità aziendale. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | SÌ | TK dello spazio dei nomi k8s. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | SÌ | TK del gruppo di namespace k8s. 
+
+
+| protectionType | Stringa | SÌ | Specifica il tipo di protezione. 
+
+
+| storageAccessType | Stringa | SÌ | Descrive come viene utilizzata questa capacità. SAN per volumi o qtree/volumi interni che hanno un volume, OTHER per cloud storages, NAS altrimenti. 
+
+
+| resourceName | Stringa | SÌ | Nome della risorsa su cui risiede la capacità. N/D quando il tipo di risorsa è VOLUME 
+
+
+| resourceType | Stringa | SÌ | Descrive quali capacità sono state aggregate per ottenere questa capacità. 
+
+
+| mappedByVM | Stringa | SÌ | Indica se questa risorsa è mappata da VM 
+
+
+| virtualStorage | Stringa | SÌ | Indica se questa capacità è virtualizzata da un backend storage 
+
+
+| provisionedCapacityMB | Int64 | SÌ | Capacità fornita. 
+
+
+| usedCapacityMB | Int64 | SÌ | Capacità utilizzata. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| dimensione_volume_interno | link:#entity-internal_volume_dimension["dimensione_volume_interno"] | un JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | un JOIN:businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| host_group_dimension | link:#entity-host_group_dimension["host_group_dimension"] | un JOIN:hostGroupTk=link:#entity-host_group_dimension["host_group_dimension"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | un JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | un JOIN:applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | un JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | un JOIN:serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| dimensione_applicazione | link:#entity-application_dimension["dimensione_applicazione"] | un JOIN:applicationTk=link:#entity-application_dimension["dimensione_applicazione"].tk 
+
+
+| qtree_dimension | link:#entity-qtree_dimension["qtree_dimension"] | un JOIN:qtreeTk=link:#entity-qtree_dimension["qtree_dimension"].tk 
+
+
+| dimensione_pool_di_storage | link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | un JOIN:storagePoolTk=link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk 
+
+
+| host_dimension | link:#entity-host_dimension["host_dimension"] | un JOIN:hostTk=link:#entity-host_dimension["host_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| volume_fact_current | link:#entity-volume_fact_current["volume_fact_current"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[datastoredimension]]
+=== datastore_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: datastore_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga del datastore. 
+
+
+| naturalKey | Stringa | SÌ | Oid del datastore. 
+
+
+| nome | Stringa | SÌ | Nome del datastore. 
+
+
+| moid | Stringa | SÌ | ID oggetto gestito del datastore. 
+
+
+| virtualCenterIp | Stringa | SÌ | Indirizzo IP del virtual center del datastore. 
+
+
+| url | Stringa | SÌ | URL di questo datastore in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID del datastore in dwh_inventory.hv_data_store 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo datastore. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del datastore. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+|===
+
+
+[[datedimension]]
+=== date_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: date_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK dell'oggetto data. 
+
+
+| fullDate | DateTimeOffset | SÌ | Data dell'oggetto data. 
+
+
+| dayInMonth | Byte | SÌ | Giorno del mese per l'oggetto data. Il primo giorno del mese ha valore 1. 
+
+
+| dayInYear | Int32 | SÌ | Giorno dell'anno dell'oggetto data. Il primo giorno dell'anno ha valore 1. 
+
+
+| dateYear | Int32 | SÌ | Anno dell'oggetto data. 
+
+
+| yearLabel | Stringa | SÌ | Anno formattato come stringa 
+
+
+| monthNum | Byte | SÌ | Mese dell'oggetto data. Gennaio ha valore 1. 
+
+
+| monthLabel | Stringa | SÌ | Mese formattato come stringa 
+
+
+| dayInWeekNum | Byte | SÌ | Giorno della settimana per l'oggetto data. La domenica ha valore 1. 
+
+
+| trimestre | Byte | SÌ | Trimestre dell'oggetto data. Il primo trimestre ha valore 1. 
+
+
+| quarterLabel | Stringa | SÌ | Trimestre formattato come stringa 
+
+
+| dayInQuarter | Int32 | SÌ | Giorno del trimestre dell'oggetto data. Il primo giorno del trimestre ha valore 1. 
+
+
+| repQuarter | Byte | SÌ | Indica se questa data è la prima data disponibile per il trimestre. 
+
+
+| repMonth | Byte | SÌ | Indica se questa data è la prima data disponibile per il suo mese. 
+
+
+| repWeek | Byte | SÌ | Indica se questa data è la prima data disponibile per la sua settimana. 
+
+
+| repDay | Byte | SÌ | Indica se questa data è la prima data disponibile per il suo giorno. 
+
+
+| repMonthOrLatest | Byte | SÌ | Indica se questa data è il repmonth o l'ultima. Questo flag viene utilizzato da Datamarts che lavora su rep mensili. L'unica differenza è che per il mese corrente è l'ultima 
+
+
+| sspFlag | Byte | SÌ | Indica se questa data viene utilizzata nel Datamart di Storage e Storage Pool. È vero per i rappresentanti del mese e per gli ultimi giorni come definito nella configurazione. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa data è l'ultima data disponibile nella tabella. 
+
+
+| futuro | Stringa | SÌ | Indica se questa data è una data futura (proiezione) o una data normale. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| capacità_gruppo_di_dischi_fact | link:#entity-disk_group_capacity_fact["capacità_gruppo_di_dischi_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| capacità_gruppo_dischi_fatto_futuro | link:#entity-disk_group_capacity_future_fact["capacità_gruppo_dischi_fatto_futuro"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | molti 
+
+
+| storage_and_storage_pool_capacity_fact | link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+
+
+| capacità_futura_di_storage_e_pool_di_storage | link:#entity-storage_and_storage_pool_capacity_future_fact["capacità_futura_di_storage_e_pool_di_storage"] | molti 
+
+
+| storage_node_capacity_fact | link:#entity-storage_node_capacity_fact["storage_node_capacity_fact"] | molti 
+|===
+
+
+[[diskgroupcapacityfact]]
+=== capacità_gruppo_di_dischi_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: disk_group_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della data. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede il gruppo di dischi. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk | Int32 | SÌ | TK del pool di storage in cui risiede il gruppo di dischi. 
+
+
+| diskGroupTk *[FK]* →link:#entity-disk_group_dimension["dimensione_gruppo_disci"].tk | Int32 | SÌ | TK del gruppo di dischi. 
+
+
+| capacityMB | Int64 | SÌ | La capacità utilizzabile del gruppo di dischi. 
+
+
+| usedCapacityMB | Int64 | SÌ | La capacità utilizzata del gruppo di dischi. 
+
+
+| physicalDiskCapacityMB | Int64 | SÌ | La capacità fisica del gruppo di dischi. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| dimensione_gruppo_disci | link:#entity-disk_group_dimension["dimensione_gruppo_disci"] | un JOIN:diskGroupTk=link:#entity-disk_group_dimension["dimensione_gruppo_disci"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| dimensione_pool_di_storage | link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | un JOIN:storagePoolTk=link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[diskgroupcapacityfuturefact]]
+=== capacità_gruppo_dischi_fatto_futuro
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: disk_group_capacity_future_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della dimensione data. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede la capacità. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk | Int32 | SÌ | TK del pool di storage in cui risiede la capacità. 
+
+
+| diskGroupTk *[FK]* →link:#entity-disk_group_dimension["dimensione_gruppo_disci"].tk | Int32 | SÌ | TK del gruppo di dischi in cui risiede la capacità. 
+
+
+| capacityMB | Int64 | SÌ | Capacità utilizzabile del gruppo di dischi come riportato dallo storage-array in MB. 
+
+
+| usedCapacityMB | Int64 | SÌ | Capacità utilizzata del gruppo di dischi come riportato dallo storage-array in MB. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| dimensione_gruppo_disci | link:#entity-disk_group_dimension["dimensione_gruppo_disci"] | un JOIN:diskGroupTk=link:#entity-disk_group_dimension["dimensione_gruppo_disci"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| dimensione_pool_di_storage | link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | un JOIN:storagePoolTk=link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[diskgroupdimension]]
+=== dimensione_gruppo_disci
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: disk_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga del gruppo di dischi. 
+
+
+| nome | Stringa | SÌ | Nome del gruppo di dischi. 
+
+
+| identificatore | Stringa | SÌ | Identificativo del gruppo di dischi. 
+
+
+| vendorDiskGroupType | Stringa | SÌ | Tipo di vendor del gruppo di dischi. 
+
+
+| diskType | Stringa | SÌ | Tipo di dischi nel gruppo di dischi. 
+
+
+| stato | Stringa | SÌ | Stato del gruppo di dischi. 
+
+
+| ridondanza | Stringa | SÌ | Ridondanza del gruppo di dischi. 
+
+
+| isVirtual | Stringa | SÌ | Indica se il gruppo di dischi è virtuale. 
+
+
+| vendorTier | Stringa | SÌ | Livello del fornitore del gruppo di dischi. 
+
+
+| id | Int64 | SÌ | GUID del gruppo di dischi in dwh_inventory.disk_group 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo gruppo di dischi. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del gruppo di dischi. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità_gruppo_di_dischi_fact | link:#entity-disk_group_capacity_fact["capacità_gruppo_di_dischi_fact"] | molti 
+
+
+| capacità_gruppo_dischi_fatto_futuro | link:#entity-disk_group_capacity_future_fact["capacità_gruppo_dischi_fatto_futuro"] | molti 
+|===
+
+
+[[hostdimension]]
+=== host_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insiemi di entità: host_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga host. 
+
+
+| nome | Stringa | SÌ | Nome dell'host. 
+
+
+| identificatore | Stringa | SÌ | Identificativo del dispositivo. 
+
+
+| ip | Stringa | SÌ | Elenco separato da virgole degli indirizzi IP dell'host. 
+
+
+| sistema operativo | Stringa | SÌ | Sistema operativo in esecuzione sull'host. 
+
+
+| modello | Stringa | SÌ | Numero di modello. 
+
+
+| produttore | Stringa | SÌ | Produttore dell'host. 
+
+
+| url | Stringa | SÌ | URL di questo host in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID dell'host in dwh_inventory.host. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo host. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga host. 
+
+
+| dataCenter | Stringa | SÌ | dataCenter valore di annotazione assegnato a dwh_dimensions.host_dimension 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[hostgroupbridge]]
+=== host_group_bridge
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: host_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| hostGroupTk | Int32 | SÌ | TK del gruppo host. 
+
+
+| hostTk | Int32 | SÌ | TK dell'host. 
+
+
+| isRep | Stringa | SÌ | Indica se questo host rappresenta il suo gruppo host. 
+|===
+
+
+[[hostgroupdimension]]
+=== host_group_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: host_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK del gruppo host. 
+
+
+| repHost | Stringa | SÌ | Nome dell'host che rappresenta il gruppo host. 
+
+
+| repHostTk | Int32 | SÌ | TK dell'host che rappresenta il gruppo host. 
+
+
+| cardinalità | Int32 | SÌ | Numero di host nel gruppo host. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del gruppo host. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[internalvolumecapacityfact]]
+=== capacità del volume interno
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità:internal_volume_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della data. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede il volume interno. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk | Int32 | SÌ | TK del pool di storage in cui risiede il volume interno. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk | Int32 | SÌ | TK del volume interno. 
+
+
+| virtualStorageTk | Int32 | SÌ | TK dell'array frontend nel caso in cui si tratti di un volume interno virtuale. Altrimenti, il valore è N/A. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["dimensione_applicazione"].tk | Int32 | SÌ | TK dell'applicazione. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | SÌ | TK del gruppo applicativo. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | SÌ | TK del livello di servizio. 
+
+
+| businessUnit | Stringa | SÌ | Unità aziendale associata al volume interno. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | SÌ | TK dell'entità aziendale. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | SÌ | TK dello spazio dei nomi k8s. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | SÌ | TK del gruppo di namespace k8s. 
+
+
+| storageAccessType | Stringa | SÌ | Descrive come viene utilizzato questo volume interno. SAN se contiene un volume, NAS altrimenti. 
+
+
+| protectionType | Stringa | SÌ | Specifica il tipo di protezione per questo volume interno o N/A se non è una replica. 
+
+
+| allocatedCapacityMB | Int64 | SÌ | Capacità totale allocata sul volume interno. 
+
+
+| consumedCapacityMB | Int64 | SÌ | Capacità consumata da questo volume interno dal pool di storage. 
+
+
+| usedCapacityMB | Int64 | SÌ | Capacità totale utilizzata su questo volume interno. 
+
+
+| dataUsedCapacityMB | Int64 | SÌ | Capacità utilizzata su questo volume interno senza snapshot. 
+
+
+| dataUnusedCapacityMB | Int64 | SÌ | Capacità disponibile per la scrittura dei dati sul volume interno. 
+
+
+| snapshotAllocatedCapacityMB | Int64 | SÌ | Capacità allocata per gli snapshot su questo volume interno. 
+
+
+| snapshotUsedCapacityMB | Int64 | SÌ | Spazio utilizzato dagli snapshot su questo volume interno. 
+
+
+| totalCloneSavedCapacityMB | Int64 | SÌ | Capacità che il volume interno del clone condivide con il volume interno di origine. 
+
+
+| dedupeRatio | Raddoppia | SÌ | Il rapporto di compressione dedupe su questo volume interno. 
+
+
+| dedupeSavingsGB | Int64 | SÌ | La dedupe compression su questo volume interno (in GB). 
+
+
+| rawToUsableRatio | Raddoppia | SÌ | Il rapporto tra la capacità raw del disco e la capacità utilizzabile del volume interno. È influenzato dal livello RAID e da altri overhead. 
+
+
+| snapshotCount | Int32 | SÌ | Numero di snapshot su questo volume interno. 
+
+
+| lastSnapshotTime | DateTimeOffset | SÌ | Ora dell'ultima istantanea. 
+
+
+| compressionRatio | Raddoppia | SÌ | Il rapporto di compressione su questo volume interno. 
+
+
+| compressionSavingsGB | Int64 | SÌ | La compressione su questo volume interno (in GB). 
+
+
+| compressionSavingsPercent | Raddoppia | SÌ | La compressione su questo volume interno (%). 
+
+
+| objectStoreUsedSpaceGB | Int64 | SÌ | Lo spazio utilizzato dell'archivio di oggetti in questo volume interno (in GB) 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | un JOIN:serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| dimensione_volume_interno | link:#entity-internal_volume_dimension["dimensione_volume_interno"] | un JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | un JOIN:businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| dimensione_applicazione | link:#entity-application_dimension["dimensione_applicazione"] | un JOIN:applicationTk=link:#entity-application_dimension["dimensione_applicazione"].tk 
+
+
+| dimensione_pool_di_storage | link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | un JOIN:storagePoolTk=link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | un JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | un JOIN:applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | un JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+|===
+
+
+[[internalvolumedimension]]
+=== dimensione_volume_interno
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: dimensione del volume interno
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di volume interno. 
+
+
+| nome | Stringa | SÌ | Nome del volume interno. 
+
+
+| identificatore | Stringa | SÌ | Identificatore del volume interno. 
+
+
+| storagePoolIdentifier | Stringa | SÌ | Identificatore del pool di storage in cui risiede questo volume interno. 
+
+
+| storageName | Stringa | SÌ | Nome dello storage in cui risiede questo volume interno. 
+
+
+| storageIP | Stringa | SÌ | IP dello storage in cui risiede questo volume interno. 
+
+
+| tipo | Stringa | SÌ | tipo di volume interno. 
+
+
+| virtualStorage | Stringa | SÌ | Specifica VirtualStorage(ad esempio vFiler) 
+
+
+| spaceGuarantee | Stringa | SÌ | garanzia di spazio del volume interno. 
+
+
+| thinProvisioningSupported | Stringa | SÌ | il thin provisioning è supportato per il volume interno? 
+
+
+| thinProvisioned | Stringa | SÌ | il volume interno è thin provisioned. 
+
+
+| uuid | Stringa | SÌ | UUID del volume interno. 
+
+
+| flexGroupIdentifier | Stringa | SÌ | FlexGroup identifier a cui appartiene questo volume interno. 
+
+
+| url | Stringa | SÌ | URL di questo volume interno in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID del volume interno in dwh_inventory.internal_volume 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo volume interno. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del volume interno. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[k8sclusterdimension]]
+=== k8s_cluster_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insiemi di entità: k8s_cluster_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga del cluster. 
+
+
+| identificatore | Stringa | SÌ | identificatore univoco del cluster. 
+
+
+| nome | Stringa | SÌ | Nome del cluster. 
+
+
+| id | Int64 | SÌ | GUID del cluster in dwh_inventory.k8s_cluster 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo cluster. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del cluster. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | molti 
+|===
+
+
+[[k8snamespacedimension]]
+=== k8s_namespace_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: k8s_namespace_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga dello spazio dei nomi. 
+
+
+| identificatore | Stringa | SÌ | identificatore univoco dello spazio dei nomi. 
+
+
+| nome | Stringa | SÌ | Nome del namespace. 
+
+
+| clusterName | Stringa | SÌ | Nome del cluster dello spazio dei nomi. 
+
+
+| id | Int64 | SÌ | GUID dello spazio dei nomi in dwh_inventory.k8s_namespace 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo namespace. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del namespace. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | molti 
+|===
+
+
+[[k8snamespacegroupbridge]]
+=== k8s_namespace_group_bridge
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: k8s_namespace_group_bridge
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| k8sNamespaceGroupTk | Int32 | SÌ | TK del gruppo di namespace k8s. 
+
+
+| k8sNamespaceTk | Int32 | SÌ | TK dello spazio dei nomi k8s. 
+
+
+| isRep | Stringa | SÌ | Indica se questo namespace k8s rappresenta il suo gruppo di namespace k8s. 
+|===
+
+
+[[k8snamespacegroupdimension]]
+=== k8s_namespace_group_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: k8s_namespace_group_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK del gruppo di namespace k8s. 
+
+
+| repK8sNamespace | Stringa | SÌ | Nome dell'applicazione che rappresenta il gruppo di namespace k8s. 
+
+
+| repK8sNamespaceTk | Int32 | SÌ | TK dello spazio dei nomi k8s che rappresenta il gruppo. 
+
+
+| cardinalità | Int32 | SÌ | Numero di namespace k8s nel gruppo di applicazioni. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata la riga del gruppo namespace k8s. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[k8snodedimension]]
+=== k8s_node_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: k8s_node_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di nodi. 
+
+
+| identificatore | Stringa | SÌ | identificatore univoco del nodo. 
+
+
+| nome | Stringa | SÌ | Nome del nodo. 
+
+
+| clusterName | Stringa | SÌ | Nome del cluster del nodo. 
+
+
+| internalIp | Stringa | SÌ | Indirizzo IP interno del nodo K8S 
+
+
+| osImage | Stringa | SÌ | Immagine del sistema operativo del nodo K8S 
+
+
+| id | Int64 | SÌ | GUID del nodo in dwh_inventory.k8s_node 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo nodo. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del nodo. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+|===
+
+
+[[k8spvdimension]]
+=== k8s_pv_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: k8s_pv_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga pv. 
+
+
+| identificatore | Stringa | SÌ | identificatore univoco del pv. 
+
+
+| nome | Stringa | SÌ | Nome del pv. 
+
+
+| clusterName | Stringa | SÌ | Nome del cluster del pv. 
+
+
+| fase | Stringa | SÌ | Fase del volume persistente K8S (Bound, ecc.) 
+
+
+| pvcName | Stringa | SÌ | Nome del PVC a cui è associato il volume persistente K8S 
+
+
+| storageClass | Stringa | SÌ | Nome della storage class per il volume persistente di K8S 
+
+
+| id | Int64 | SÌ | GUID del pvc in dwh_inventory.k8s_pv 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo pv. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga pv. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | molti 
+|===
+
+
+[[k8spvccapacityfact]]
+=== k8s_pvc_capacity_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: k8s_pvc_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della dimensione data. 
+
+
+| pvcTk *[FK]* →link:#entity-k8s_pvc_dimension["k8s_pvc_dimension"].tk | Int32 | SÌ | TK del k8s PVC. 
+
+
+| clusterTk *[FK]* →link:#entity-k8s_cluster_dimension["k8s_cluster_dimension"].tk | Int32 | SÌ | TK del cluster k8s. 
+
+
+| namespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | SÌ | TK dello spazio dei nomi k8s. 
+
+
+| pvTk *[FK]* →link:#entity-k8s_pv_dimension["k8s_pv_dimension"].tk | Int32 | SÌ | TK del k8s pv. 
+
+
+| pvSizeBytes | Raddoppia | SÌ | Dimensione del volume persistente di K8S (in byte) 
+
+
+| pvcSizeBytes | Raddoppia | SÌ | Dimensione della richiesta di volume persistente K8S (in byte) 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| k8s_pvc_dimension | link:#entity-k8s_pvc_dimension["k8s_pvc_dimension"] | un JOIN:pvcTk=link:#entity-k8s_pvc_dimension["k8s_pvc_dimension"].tk 
+
+
+| k8s_cluster_dimension | link:#entity-k8s_cluster_dimension["k8s_cluster_dimension"] | un JOIN:clusterTk=link:#entity-k8s_cluster_dimension["k8s_cluster_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | un JOIN:namespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| k8s_pv_dimension | link:#entity-k8s_pv_dimension["k8s_pv_dimension"] | un JOIN:pvTk=link:#entity-k8s_pv_dimension["k8s_pv_dimension"].tk 
+|===
+
+
+[[k8spvcdimension]]
+=== k8s_pvc_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: k8s_pvc_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga pvc. 
+
+
+| identificatore | Stringa | SÌ | identificatore univoco del pvc. 
+
+
+| nome | Stringa | SÌ | Nome del PVC. 
+
+
+| clusterName | Stringa | SÌ | Nome del cluster del PVC. 
+
+
+| namespaceName | Stringa | SÌ | Nome del namespace del PVC. 
+
+
+| pvName | Stringa | SÌ | Nome del PV collegato a questo PVC. 
+
+
+| fase | Stringa | SÌ | Fase della richiesta di volume persistente K8S (Bound, etc.) 
+
+
+| id | Int64 | SÌ | GUID del pvc in dwh_inventory.k8s_pvc 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo pvc. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga PVC. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| k8s_pvc_capacity_fact | link:#entity-k8s_pvc_capacity_fact["k8s_pvc_capacity_fact"] | molti 
+|===
+
+
+[[k8sworkloaddimension]]
+=== k8s_workload_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: k8s_workload_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di workload. 
+
+
+| identificatore | Stringa | SÌ | identificatore univoco del carico di lavoro. 
+
+
+| nome | Stringa | SÌ | Nome del workload. 
+
+
+| clusterName | Stringa | SÌ | Nome del cluster del carico di lavoro. 
+
+
+| namespaceName | Stringa | SÌ | Nome dello spazio dei nomi del workload. 
+
+
+| tipo | Stringa | SÌ | Tipo di workload (pod, statefulset, ecc.) 
+
+
+| id | Int64 | SÌ | GUID del workload in dwh_inventory.k8s_workload 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo workload. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga di workload. 
+|===
+
+
+[[qtreecapacityfact]]
+=== qtree_capacity_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: qtree_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della data. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede il qtree. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk | Int32 | SÌ | TK del pool di storage dove si trova il qtree. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk | Int32 | SÌ | TK del volume interno in cui risiede il qtree. 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_dimension"].tk | Int32 | SÌ | TK del qtree. 
+
+
+| virtualStorageTk | Int32 | SÌ | TK dell'array frontend nel caso in cui questo qtree si trovi su un volume interno virtuale. Altrimenti, il valore è N/A. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | SÌ | TK del livello di servizio. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["dimensione_applicazione"].tk | Int32 | SÌ | TK dell'applicazione. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | SÌ | TK del gruppo applicativo. 
+
+
+| businessUnit | Stringa | SÌ | Business Unit associata al qtree. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | SÌ | TK dell'entità aziendale. 
+
+
+| k8sNamespaceTk *[FK]* →link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk | Int32 | SÌ | TK dello spazio dei nomi k8s. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | SÌ | TK del gruppo di namespace k8s. 
+
+
+| storageAccessType | Stringa | SÌ | Descrive come viene utilizzato questo qtree. SAN se contiene un volume, NAS altrimenti. 
+
+
+| protectionType | Stringa | SÌ | Specifica il tipo di protezione per questa capacità o N/A se non è una replica. 
+
+
+| hardLimitCapacityMB | Int64 | SÌ | Il limite di spazio su disco imposto a questo qtree da una quota. Quando viene superato, non è possibile scrivere dati. 
+
+
+| softLimitCapacityMB | Int64 | SÌ | Il limite di spazio su disco imposto a questo qtree da una quota. Quando viene superato, viene emesso un avviso ma i dati possono comunque essere scritti. 
+
+
+| usedCapacityMB | Int64 | SÌ | Capacità utilizzata rispetto al limite di capacità hard e soft impostato sulla quota. 
+
+
+| rawToUsableRatio | Raddoppia | SÌ | Il rapporto tra la capacità raw del disco e la capacità utilizzabile per il qtree. Influenzato dal livello RAID e da altri overhead. 
+
+
+| missingQuotaLimits | Stringa | SÌ | Indica quali limiti rigidi e flessibili mancavano e sono stati inizializzati con valori predefiniti. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| dimensione_volume_interno | link:#entity-internal_volume_dimension["dimensione_volume_interno"] | un JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | un JOIN:businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | un JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | un JOIN:applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| k8s_namespace_dimension | link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"] | un JOIN:k8sNamespaceTk=link:#entity-k8s_namespace_dimension["k8s_namespace_dimension"].tk 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | un JOIN:serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| dimensione_applicazione | link:#entity-application_dimension["dimensione_applicazione"] | un JOIN:applicationTk=link:#entity-application_dimension["dimensione_applicazione"].tk 
+
+
+| qtree_dimension | link:#entity-qtree_dimension["qtree_dimension"] | un JOIN:qtreeTk=link:#entity-qtree_dimension["qtree_dimension"].tk 
+
+
+| dimensione_pool_di_storage | link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | un JOIN:storagePoolTk=link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[qtreedimension]]
+=== qtree_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: qtree_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga qtree. 
+
+
+| nome | Stringa | SÌ | Nome del qtree. 
+
+
+| identificatore | Stringa | SÌ | Identificatore del qtree. 
+
+
+| storageIdentifier | Stringa | SÌ | Identificatore dello storage in cui risiede questo qtree. 
+
+
+| tipo | Stringa | SÌ | Tipo qtree. 
+
+
+| url | Stringa | SÌ | URL di questo qtree in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID del qtree in dwh_inventory.qtree 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo qtree. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga qtree. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[serviceleveldimension]]
+=== service_level_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: service_level_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga del livello di servizio. 
+
+
+| nome | Stringa | SÌ | Nome identificativo per il livello di servizio. 
+
+
+| sequenza | Int32 | SÌ | Numero sequenziale del livello di servizio come definito in dwh_inventory.annotation_value. 
+
+
+| costo | Raddoppia | SÌ | Costo associato a questo livello di servizio. 
+
+
+| id | Int64 | SÌ | GUID del livello di servizio in dwh_inventory.annotation_value. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo livello di servizio. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del livello di servizio. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[sptimetofill]]
+=== sp_time_to_fill
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: sp_time_to_fill
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| saspFactTk *[PK]* | Int32 | SÌ | TK dello storage e del pool di storage fact. 
+
+
+| daysToStoragePoolFull | Int32 | SÌ | Numero di giorni perché la UsedCapacity sia uguale alla Capacity 
+
+
+| dateAtStoragePoolFull | DateTimeOffset | SÌ | Data in cui la UsedCapacity sarebbe uguale alla Capacity 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| storage_and_storage_pool_capacity_fact | link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"] | un JOIN:saspFactTk=link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"].tk 
+|===
+
+
+[[storageandstoragepoolcapacityfact]]
+=== storage_and_storage_pool_capacity_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: storage_and_storage_pool_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della dimensione data. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk | Int32 | SÌ | TK del pool di storage in cui risiede la capacità. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede la capacità. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| backend | Stringa | SÌ | Vero quando StoragePool è backend 
+
+
+| isVirtual | Stringa | SÌ | Vero quando StoragePool è virtuale 
+
+
+| capacityMB | Int64 | SÌ | Capacità allocata per un pool di storage come riportato dallo storage-array in MB. 
+
+
+| rawCapacityMB | Int64 | SÌ | capacità * rawToUsableRatio 
+
+
+| usedCapacityMB | Int64 | SÌ | Capacità utilizzata in un pool di storage come riportato dallo storage-array in MB. 
+
+
+| usedRawCapacityMB | Int64 | SÌ | usedCapcacity * rawToUsableRatio 
+
+
+| snapshotUsedCapacityMB | Int64 | SÌ | Capacità utilizzata per gli snapshot a livello di pool di storage in MB 
+
+
+| snapshotUsedRawCapacityMB | Int64 | SÌ | snapshotUsedCapacityMB * rawToUsableRatio 
+
+
+| softLimitCapacityMB | Int64 | SÌ | Limite di capacità per pool di storage thin provisioning in MB. 
+
+
+| unconfiguredRawCapacityMB | Int64 | SÌ | Capacità raw non configurata dello storage (include dischi guasti, di riserva e non utilizzati) in MB. 
+
+
+| spareRawCapacityMB | Int64 | SÌ | Capacità raw dei dischi di riserva in MB. 
+
+
+| failedRawCapacityMB | Int64 | SÌ | Capacità raw dei dischi guasti in MB. 
+
+
+| volumeCapacityMB | Int64 | SÌ | Capacità allocata di tutti i volumi su questo pool di storage in MB. 
+
+
+| unusedVolumeCapacityMB | Int64 | SÌ | Capacità allocata dei volumi non utilizzati su questo pool di storage in MB. 
+
+
+| volumeConsumedCapacityMB | Int64 | SÌ | Capacità fisica utilizzata dai volumi su questo pool di storage in MB. 
+
+
+| mappedVolumeCapacityMB | Int64 | SÌ | Capacità allocata dei volumi mappati su questo pool di storage in MB. 
+
+
+| maskedVolumeCapacityMB | Int64 | SÌ | Capacità allocata dei volumi mascherati su questo pool di storage in MB. 
+
+
+| internalVolumeAllocatedCapacityMB | Int64 | SÌ | Capacità totale allocata dei volumi interni su questo pool di storage in MB. 
+
+
+| internalVolumeUsedCapacityMB | Int64 | SÌ | Capacità totale utilizzata dei volumi interni su questo pool di storage in MB. 
+
+
+| internalVolumeConsumedCapacityMB | Int64 | SÌ | Capacità utilizzata dai volumi interni su questo pool di storage in MB. 
+
+
+| dedupeRatio | Raddoppia | SÌ | Il rapporto di deduplicazione su questo pool di storage 
+
+
+| dedupeSavingsGB | Int64 | SÌ | La deduplicazione su questo pool di storage (in GB). 
+
+
+| compressionRatio | Raddoppia | SÌ | Il rapporto di compressione su questo pool di storage 
+
+
+| compressionSavingsGB | Int64 | SÌ | La compressione su questo pool di storage (in GB). 
+
+
+| compressionSavingsPercent | Raddoppia | SÌ | La compressione su questo pool di storage (%). 
+
+
+| compactionRatio | Raddoppia | SÌ | Il rapporto di compaction su questo pool di storage 
+
+
+| compactionSavingsGB | Int64 | SÌ | La compaction su questo pool di storage (in GB). 
+
+
+| objectStoreUsedSpaceGB | Int64 | SÌ | Spazio utilizzato dall'archivio di oggetti di questo pool di storage (in GB) 
+
+
+| provisionedIops | Int64 | SÌ | IOPS allocati su questo storage. 
+
+
+| provisionedThroughput | Int64 | SÌ | Throughput provisionato su questo storage (MiB/s). 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| dimensione_pool_di_storage | link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | un JOIN:storagePoolTk=link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| sp_time_to_fill | link:#entity-sp_time_to_fill["sp_time_to_fill"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[storageandstoragepoolcapacityfuturefact]]
+=== capacità_futura_di_storage_e_pool_di_storage
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: storage_and_storage_pool_capacity_future_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della dimensione data. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk | Int32 | SÌ | TK del pool di storage in cui risiede la capacità. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede la capacità. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| backend | Stringa | SÌ | Vero quando StoragePool è backend 
+
+
+| isVirtual | Stringa | SÌ | Vero quando StoragePool è virtuale 
+
+
+| capacityMB | Int64 | SÌ | Capacità allocata per un pool di storage come riportato dallo storage-array in MB. 
+
+
+| rawCapacityMB | Int64 | SÌ | capacità * rawToUsableRatio 
+
+
+| usedCapacityMB | Int64 | SÌ | Capacità utilizzata in un pool di storage come riportato dallo storage-array in MB. 
+
+
+| usedRawCapacityMB | Int64 | SÌ | usedCapacity * rawToUsableRatio 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| dimensione_pool_di_storage | link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | un JOIN:storagePoolTk=link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[storagedimension]]
+=== storage_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: storage_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga dello storage array. 
+
+
+| nome | Stringa | SÌ | Nome dello storage array. 
+
+
+| identificatore | Stringa | SÌ | Identificativo del dispositivo. 
+
+
+| ip | Stringa | SÌ | Indirizzo IP dello storage array. 
+
+
+| modello | Stringa | SÌ | Modello dell'array di storage. 
+
+
+| produttore | Stringa | SÌ | Produttore dello storage array. 
+
+
+| serialNumber | Stringa | SÌ | Numero di serie dell'array di storage. 
+
+
+| microcodeVersion | Stringa | SÌ | Versione del firmware in esecuzione sull'array di storage. 
+
+
+| famiglia | Stringa | SÌ | Nome della famiglia del sistema di archiviazione (ad esempio Clariion, Symmetrix ecc). 
+
+
+| url | Stringa | SÌ | URL di questo archivio in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID dell'array di storage in dwh_inventory.storage. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo storage. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga dello storage array. 
+
+
+| dataCenter | Stringa | SÌ | dataCenter valore di annotazione assegnato a dwh_dimensions.storage_dimension 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| capacità_gruppo_di_dischi_fact | link:#entity-disk_group_capacity_fact["capacità_gruppo_di_dischi_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| capacità_gruppo_dischi_fatto_futuro | link:#entity-disk_group_capacity_future_fact["capacità_gruppo_dischi_fatto_futuro"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| storage_and_storage_pool_capacity_fact | link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+
+
+| capacità_futura_di_storage_e_pool_di_storage | link:#entity-storage_and_storage_pool_capacity_future_fact["capacità_futura_di_storage_e_pool_di_storage"] | molti 
+
+
+| storage_node_capacity_fact | link:#entity-storage_node_capacity_fact["storage_node_capacity_fact"] | molti 
+|===
+
+
+[[storagenodecapacityfact]]
+=== storage_node_capacity_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: storage_node_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della data. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede il gruppo di dischi. 
+
+
+| storageNodeTk *[FK]* →link:#entity-storage_node_dimension["storage_node_dimension"].tk | Int32 | SÌ | TK del nodo di storage. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| totalNodeCapacityUtilizationMB | Int64 | SÌ | Spazio totale del nodo di storage (MB) 
+
+
+| usableNodeCapacityUtilizationMB | Int64 | SÌ | Spazio disponibile nodo di storage (MB) 
+
+
+| usedNodeCapacityUtilizationMB | Int64 | SÌ | Spazio utilizzato del nodo di storage (MB) 
+
+
+| usedMetaDataNodeCapacityUtilizationMB | Int64 | SÌ | Spazio utilizzato per i metadati del nodo di storage (MB) 
+
+
+| allowedMetaDataNodeCapacityUtilizationMB | Int64 | SÌ | Spazio consentito per i metadati del nodo di storage (MB) 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| storage_node_dimension | link:#entity-storage_node_dimension["storage_node_dimension"] | un JOIN:storageNodeTk=link:#entity-storage_node_dimension["storage_node_dimension"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[storagenodedimension]]
+=== storage_node_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: storage_node_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga del nodo di storage. 
+
+
+| nome | Stringa | SÌ | Nome del nodo di storage. 
+
+
+| identificatore | Stringa | SÌ | Identificativo del nodo di storage. 
+
+
+| versione | Stringa | SÌ | Versione del nodo di storage. 
+
+
+| modello | Stringa | SÌ | Modello del nodo di storage. 
+
+
+| serialNumber | Stringa | SÌ | SerialNumber del nodo di storage. 
+
+
+| siteName | Stringa | SÌ | Nome del sito del nodo di storage. 
+
+
+| url | Stringa | SÌ | URL di questo nodo di storage in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID del nodo di storage in dwh_inventory.storage_node 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo storage node. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui hai creato questa riga del nodo di storage. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| storage_node_capacity_fact | link:#entity-storage_node_capacity_fact["storage_node_capacity_fact"] | molti 
+|===
+
+
+[[storagepooldimension]]
+=== dimensione_pool_di_storage
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: storage_pool_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga del pool di storage. 
+
+
+| identificatore | Stringa | SÌ | Identificativo del dispositivo. 
+
+
+| nome | Stringa | SÌ | Nome del pool di storage. 
+
+
+| storageName | Stringa | SÌ | Nome dello storage in cui risiede questo pool di storage. 
+
+
+| storageIP | Stringa | SÌ | IP dello storage in cui risiede questo pool di storage. 
+
+
+| tipo | Stringa | SÌ | Tipo di pool di storage (ad esempio, RAID, AGGREGATE, ecc.). 
+
+
+| ridondanza | Stringa | SÌ | Ridondanza del pool di storage. 
+
+
+| thinProvisioningSupported | Stringa | SÌ | Indica se il thin provisioning è supportato dal pool di storage. 
+
+
+| isVirtual | Stringa | SÌ | Virtual indica che si tratta di un pool di storage frontend nella virtualizzazione dell'array. 
+
+
+| usesFlashPools | Stringa | SÌ | Indica se questo pool di storage utilizza flash pool. 
+
+
+| url | Stringa | SÌ | URL di questo pool di storage in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID del pool di storage in dwh_inventory.storage_pool 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo pool di storage. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del pool di storage. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| capacità_gruppo_di_dischi_fact | link:#entity-disk_group_capacity_fact["capacità_gruppo_di_dischi_fact"] | molti 
+
+
+| capacità_gruppo_dischi_fatto_futuro | link:#entity-disk_group_capacity_future_fact["capacità_gruppo_dischi_fatto_futuro"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| storage_and_storage_pool_capacity_fact | link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+
+
+| capacità_futura_di_storage_e_pool_di_storage | link:#entity-storage_and_storage_pool_capacity_future_fact["capacità_futura_di_storage_e_pool_di_storage"] | molti 
+|===
+
+
+[[tierdimension]]
+=== tier_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Insieme di entità: tier_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di tier. 
+
+
+| nome | Stringa | SÌ | Nome identificativo per il tier. 
+
+
+| sequenza | Int32 | SÌ | Numero sequenziale del livello come definito in dwh_inventory.annotation_value. 
+
+
+| costo | Raddoppia | SÌ | Costo associato a questo livello. 
+
+
+| id | Int64 | SÌ | GUID del livello in dwh_inventory.annotation_value. 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo tier. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga di tier. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| capacità del volume interno | link:#entity-internal_volume_capacity_fact["capacità del volume interno"] | molti 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | molti 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+
+
+| qtree_capacity_fact | link:#entity-qtree_capacity_fact["qtree_capacity_fact"] | molti 
+
+
+| storage_and_storage_pool_capacity_fact | link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"] | molti 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+
+
+| capacità_futura_di_storage_e_pool_di_storage | link:#entity-storage_and_storage_pool_capacity_future_fact["capacità_futura_di_storage_e_pool_di_storage"] | molti 
+
+
+| storage_node_capacity_fact | link:#entity-storage_node_capacity_fact["storage_node_capacity_fact"] | molti 
+|===
+
+
+[[vmcapacityfact]]
+=== vm_capacity_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: vm_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[FK]* →link:#entity-date_dimension["date_dimension"].tk | Int32 | SÌ | TK della data. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["host_dimension"].tk | Int32 | SÌ | TK dell'host che rappresenta il gruppo host. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede la capacità. 
+
+
+| virtualStorageTk | Int32 | SÌ | TK dell'array frontend nel caso in cui la capacità si trovi su un array backend. Altrimenti, il valore è N/A. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk | Int32 | SÌ | TK del volume interno in cui risiede la capacità. 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_dimension"].tk | Int32 | SÌ | TK del qtree in cui risiede la capacità. 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["host_group_dimension"].tk | Int32 | SÌ | TK del gruppo host. 
+
+
+| applicationTk *[FK]* →link:#entity-application_dimension["dimensione_applicazione"].tk | Int32 | SÌ | TK dell'applicazione che rappresenta il gruppo di applicazioni. 
+
+
+| applicationGroupTk *[FK]* →link:#entity-application_group_dimension["application_group_dimension"].tk | Int32 | SÌ | TK del gruppo applicativo. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | SÌ | TK del livello di servizio. 
+
+
+| vmTk *[FK]* →link:#entity-vm_dimension["vm_dimension"].tk | Int32 | SÌ | TK della macchina virtuale. 
+
+
+| dataStoreTk *[FK]* →link:#entity-datastore_dimension["datastore_dimension"].tk | Int32 | SÌ | TK del datastore. 
+
+
+| dataStoreName | Stringa | SÌ | Nome del data-store contenente la capacità. 
+
+
+| dataStoreId | Int64 | SÌ | GUID del data-store in dwh_inventory.host - impostato su null quando il data-store viene rimosso dall'inventario. 
+
+
+| virtualCenterIp | Stringa | SÌ | IP del virtual center. 
+
+
+| businessUnit | Stringa | SÌ | Business Unit associata alla capacità. 
+
+
+| businessEntityTk *[FK]* →link:#entity-business_entity_dimension["business_entity_dimension"].tk | Int32 | SÌ | TK dell'entità aziendale. 
+
+
+| k8sNodeTk *[FK]* →link:#entity-k8s_node_dimension["k8s_node_dimension"].tk | Int32 | SÌ | TK del nodo k8s. 
+
+
+| storageAccessType | Stringa | SÌ | Tipo di accesso allo storage. I valori possibili sono: NAS, SAN o SCONOSCIUTO. 
+
+
+| capacityType *[FK]* →link:#entity-capacity_type["capacity_type"].tipo | Stringa | SÌ | Identifica l'utilizzo della capacità: ogni bit di capacità di data-store ha esattamente un solo utilizzo in un dato momento. 
+
+
+| actualMB | Int64 | SÌ | La quantità di capacità di data-store utilizzata (o disco virtuale RDM). Questa misurazione non tiene conto dei risparmi ottenuti nello storage back-end tramite thin provisioning e deduplica. 
+
+
+| provisionedMB | Int64 | SÌ | La quantità di capacità allocata per una VM. Questa misurazione include i VMDK e altri file relativi alla VM. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| dimensione_volume_interno | link:#entity-internal_volume_dimension["dimensione_volume_interno"] | un JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| business_entity_dimension | link:#entity-business_entity_dimension["business_entity_dimension"] | un JOIN:businessEntityTk=link:#entity-business_entity_dimension["business_entity_dimension"].tk 
+
+
+| k8s_node_dimension | link:#entity-k8s_node_dimension["k8s_node_dimension"] | un JOIN:k8sNodeTk=link:#entity-k8s_node_dimension["k8s_node_dimension"].tk 
+
+
+| host_group_dimension | link:#entity-host_group_dimension["host_group_dimension"] | un JOIN:hostGroupTk=link:#entity-host_group_dimension["host_group_dimension"].tk 
+
+
+| vm_dimension | link:#entity-vm_dimension["vm_dimension"] | un JOIN:vmTk=link:#entity-vm_dimension["vm_dimension"].tk 
+
+
+| application_group_dimension | link:#entity-application_group_dimension["application_group_dimension"] | un JOIN:applicationGroupTk=link:#entity-application_group_dimension["application_group_dimension"].tk 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | un JOIN:serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| capacity_type | link:#entity-capacity_type["capacity_type"] | un JOIN:capacityType=link:#entity-capacity_type["capacity_type"].tipo 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| dimensione_applicazione | link:#entity-application_dimension["dimensione_applicazione"] | un JOIN:applicationTk=link:#entity-application_dimension["dimensione_applicazione"].tk 
+
+
+| datastore_dimension | link:#entity-datastore_dimension["datastore_dimension"] | un JOIN:dataStoreTk=link:#entity-datastore_dimension["datastore_dimension"].tk 
+
+
+| qtree_dimension | link:#entity-qtree_dimension["qtree_dimension"] | un JOIN:qtreeTk=link:#entity-qtree_dimension["qtree_dimension"].tk 
+
+
+| host_dimension | link:#entity-host_dimension["host_dimension"] | un JOIN:hostTk=link:#entity-host_dimension["host_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+|===
+
+
+[[vmdimension]]
+=== vm_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: vm_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di macchina virtuale. 
+
+
+| nome | Stringa | SÌ | Nome della macchina virtuale. 
+
+
+| naturalKey | Stringa | SÌ | Identificatore naturale della macchina virtuale. 
+
+
+| sistema operativo | Stringa | SÌ | Sistema operativo guest. 
+
+
+| virtualCenterIp | Stringa | SÌ | Indirizzo IP del virtual center della macchina virtuale. 
+
+
+| ips | Stringa | SÌ | Elenco separato da virgole di indirizzi IP della macchina virtuale. 
+
+
+| url | Stringa | SÌ | URL di questa macchina virtuale in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID della macchina virtuale in dwh_inventory.hv_virtual_machine 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questa macchina virtuale. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga della macchina virtuale. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| vm_capacity_fact | link:#entity-vm_capacity_fact["vm_capacity_fact"] | molti 
+|===
+
+
+[[volumecapacityfact]]
+=== volume_capacity_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: volume_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| volumeTk | Int32 | SÌ | TK del volume in cui risiede la capacità. 
+
+
+| chargebackFactTk | Int32 | SÌ | TK della riga dei fatti di chargeback in cui viene conteggiata la capacità del volume. 
+
+
+| storageAndSpFactTk | Int32 | SÌ | TK della riga dei fatti sulla capacità di storage e pool di storage dove viene conteggiata la capacità del volume. 
+
+
+| hostTk | Int32 | SÌ | TK dell'host che rappresenta il gruppo host. 
+
+
+| storageTk | Int32 | SÌ | TK dello storage in cui risiede la capacità. 
+
+
+| hostGroupTk | Int32 | SÌ | TK del gruppo host. 
+
+
+| tierTk | Int32 | SÌ | TK del tier. 
+
+
+| serviceLevelTk | Int32 | SÌ | TK del livello di servizio. 
+
+
+| storagePoolTk | Int32 | SÌ | TK del pool di storage in cui risiede la capacità. 
+
+
+| internalVolumeTk | Int32 | SÌ | TK del volume interno in cui risiede la capacità. 
+
+
+| qtreeTk | Int32 | SÌ | TK del qtree in cui risiede la capacità. 
+
+
+| k8sNamespaceTk | Int32 | SÌ | TK dello spazio dei nomi k8s. 
+
+
+| k8sNamespaceGroupTk | Int32 | SÌ | TK del gruppo di namespace k8s. 
+
+
+| isVirtual | Stringa | SÌ | Specifica se questa capacità si trova su un pool di storage virtuale. 
+
+
+| isBackend | Stringa | SÌ | Specifica se questa capacità si trova nel pool di storage backend. 
+
+
+| protectionType | Stringa | SÌ | Specifica il tipo di protezione per questa capacità o N/A se non è una replica. 
+
+
+| isAccessed | Stringa | SÌ | Specifica se questo volume è accessibile dall'host. 
+
+
+| isOrphaned | Stringa | SÌ | Specifica se questo volume è mascherato ma non ha un percorso attivo verso di esso. 
+
+
+| isProtection | Stringa | SÌ | Specifica se questo volume viene utilizzato per la replica. 
+
+
+| isUnused | Stringa | SÌ | Specifica se questo volume non è accessibile dagli host. 
+
+
+| provisionedCapacityMB | Int64 | SÌ | Capacità allocata dei volumi in MB. 
+
+
+| accessedCapacityMB | Int64 | SÌ | Capacità allocata dei volumi a cui accedono gli host in MB. 
+
+
+| orphanedCapacityMB | Int64 | SÌ | Capacità allocata dei volumi mascherati ma privi di percorso attivo in MB. 
+
+
+| protectionCapacityMB | Int64 | SÌ | Capacità allocata dei volumi utilizzati per la replica in MB. 
+
+
+| unusedCapacityMB | Int64 | SÌ | Capacità allocata dei volumi che non sono accessati dagli host in MB. 
+
+
+| daysSinceLastAccessed | Int32 | SÌ | Numero di giorni trascorsi dall'ultimo accesso in lettura o scrittura al volume. 
+|===
+
+
+[[volumedimension]]
+=== volume_dimension
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: volume_dimension
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk | Int32 | SÌ | TK di questa riga di volume. 
+
+
+| storageIdentifier | Stringa | SÌ | Identificativo dello storage del volume. 
+
+
+| nome | Stringa | SÌ | Nome del volume. 
+
+
+| etichetta | Stringa | SÌ | Etichetta del volume. 
+
+
+| thinProvisioned | Stringa | SÌ | Il volume è thin provisioned? 
+
+
+| tipo | Stringa | SÌ | tipo di volume. 
+
+
+| isVirtual | Stringa | SÌ | Il volume è un volume virtuale? 
+
+
+| meta | Stringa | SÌ | Il volume è un meta volume? 
+
+
+| Snapshot | Stringa | SÌ | Indica se questo volume è un volume Snapshot. 
+
+
+| technologyType | Stringa | SÌ | Specifica il tipo di tecnologia (FC/ISCSI/UNKNOWN). 
+
+
+| uuid | Stringa | SÌ | UUID del volume. 
+
+
+| isMainframe | Stringa | SÌ | È un volume mainframe? 
+
+
+| url | Stringa | SÌ | Url di questo volume in Insight Server. 
+
+
+| id | Int64 | SÌ | GUID del volume in dwh_inventory.volume 
+
+
+| ultimo | Stringa | SÌ | Indica se questa riga è la più recente per questo volume. 
+
+
+| dateTk | Int32 | SÌ | TK della data in cui è stata creata questa riga del volume. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| volume_history_capacity_fact | link:#entity-volume_history_capacity_fact["volume_history_capacity_fact"] | molti 
+|===
+
+
+[[volumefactcurrent]]
+=== volume_fact_current
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: volume_fact_current
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| chargebackFactTk *[FK]* →link:#entity-chargeback_fact["chargeback_fact"].tk | Int32 | SÌ | TK della riga dei fatti di chargeback in cui viene conteggiata la capacità del volume. 
+
+
+| volumeId *[PK]* | Int64 | SÌ | GUID del volume come appare nell'inventario 
+
+
+| storageId | Int64 | SÌ | GUID dello storage in cui risiede questo volume, come appare nell'inventario 
+
+
+| volumeName | Stringa | SÌ | Nome del volume 
+
+
+| volumeType | Stringa | SÌ | Tipologia di volume specifica del vendor (ad esempio, SFS, BCV). 
+
+
+| thinProvisioned | Stringa | SÌ | Indica se questo volume è thin provisioned. 
+
+
+| isVirtual | Stringa | SÌ | Indica se questo volume è un volume virtuale. 
+
+
+| Snapshot | Stringa | SÌ | Indica se questo volume è un volume Snapshot. 
+
+
+| technologyType | Stringa | SÌ | Specifica il tipo di tecnologia (FC/ISCSI/UNKNOWN). 
+
+
+| physicalUsableMB | Int64 | SÌ | La quantità di capacità volumetrica utilizzabile che viene consumata dallo storage e conteggiata nella riga dei fatti, in MB. 
+
+
+| physicalRawMB | Int64 | SÌ | La quantità di capacità raw del volume consumata dallo storage e conteggiata nella riga dei fatti, in MB. 
+
+
+| provisionedUsableMB | Int64 | SÌ | La quantità di capacità utilizzabile in volume assegnata agli host/utenti conteggiata nella riga dei fatti, in MB. 
+
+
+| provisionedRawMB | Int64 | SÌ | La quantità di capacità raw di volume assegnata agli host/utenti, conteggiata nella riga dei fatti, in MB. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | un JOIN:chargebackFactTk=link:#entity-chargeback_fact["chargeback_fact"].tk 
+|===
+
+
+[[volumehistorycapacityfact]]
+=== volume_history_capacity_fact
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: volume_history_capacity_fact
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| tk *[PK]* | Int32 | SÌ | TK del fatto. 
+
+
+| dateTk *[PK]* | Int32 | SÌ | TK della data. 
+
+
+| volumeTk *[FK]* →link:#entity-volume_dimension["volume_dimension"].tk | Int32 | SÌ | TK del volume in cui risiede la capacità. 
+
+
+| chargebackFactTk *[FK]* →link:#entity-chargeback_fact["chargeback_fact"].tk | Int32 | SÌ | TK della riga dei fatti di chargeback in cui viene conteggiata la capacità del volume. 
+
+
+| storageAndSpFactTk *[FK]* →link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"].tk | Int32 | SÌ | TK della riga dei fatti sulla capacità di storage e pool di storage dove viene conteggiata la capacità del volume. 
+
+
+| hostTk *[FK]* →link:#entity-host_dimension["host_dimension"].tk | Int32 | SÌ | TK dell'host che rappresenta il gruppo host. 
+
+
+| storageTk *[FK]* →link:#entity-storage_dimension["storage_dimension"].tk | Int32 | SÌ | TK dello storage in cui risiede la capacità. 
+
+
+| hostGroupTk *[FK]* →link:#entity-host_group_dimension["host_group_dimension"].tk | Int32 | SÌ | TK del gruppo host. 
+
+
+| tierTk *[FK]* →link:#entity-tier_dimension["tier_dimension"].tk | Int32 | SÌ | TK del tier. 
+
+
+| serviceLevelTk *[FK]* →link:#entity-service_level_dimension["service_level_dimension"].tk | Int32 | SÌ | TK del livello di servizio. 
+
+
+| storagePoolTk *[FK]* →link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk | Int32 | SÌ | TK del pool di storage in cui risiede la capacità. 
+
+
+| internalVolumeTk *[FK]* →link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk | Int32 | SÌ | TK del volume interno in cui risiede la capacità. 
+
+
+| qtreeTk *[FK]* →link:#entity-qtree_dimension["qtree_dimension"].tk | Int32 | SÌ | TK del qtree in cui risiede la capacità. 
+
+
+| k8sNamespaceTk | Int32 | SÌ | TK dello spazio dei nomi k8s. 
+
+
+| k8sNamespaceGroupTk *[FK]* →link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk | Int32 | SÌ | TK del gruppo di namespace k8s. 
+
+
+| isVirtual | Stringa | SÌ | Specifica se questa capacità si trova su un pool di storage virtuale. 
+
+
+| isBackend | Stringa | SÌ | Specifica se questa capacità si trova nel pool di storage backend. 
+
+
+| protectionType | Stringa | SÌ | Specifica il tipo di protezione per questa capacità o N/A se non è una replica. 
+
+
+| isAccessed | Stringa | SÌ | Specifica se questo volume è accessibile dall'host. 
+
+
+| isOrphaned | Stringa | SÌ | Specifica se questo volume è mascherato ma non ha un percorso attivo verso di esso. 
+
+
+| isProtection | Stringa | SÌ | Specifica se questo volume viene utilizzato per la replica. 
+
+
+| isUnused | Stringa | SÌ | Specifica se questo volume non è accessibile dagli host. 
+
+
+| isMasked | Stringa | SÌ | Specifica se questo volume è mascherato. 
+
+
+| isMapped | Stringa | SÌ | Specifica se questo volume è mappato. 
+
+
+| provisionedCapacityMB | Int64 | SÌ | Capacità allocata dei volumi in MB. 
+
+
+| accessedCapacityMB | Int64 | SÌ | Capacità allocata dei volumi a cui accedono gli host in MB. 
+
+
+| orphanedCapacityMB | Int64 | SÌ | Capacità allocata dei volumi mascherati ma privi di percorso attivo in MB. 
+
+
+| protectionCapacityMB | Int64 | SÌ | Capacità allocata dei volumi utilizzati per la replica in MB. 
+
+
+| unusedCapacityMB | Int64 | SÌ | Capacità allocata dei volumi che non sono accessati dagli host in MB. 
+
+
+| consumedCapacityMB | Int64 | SÌ | Capacità consumata dei volumi in MB. 
+
+
+| daysSinceLastAccessed | Int32 | SÌ | Numero di giorni trascorsi dall'ultimo accesso in lettura o scrittura al volume. 
+|===
+
+
+==== Proprietà di navigazione (Join)
+
+[cols="1,1,1"]
+|===
+| Proprietà di navigazione | Entità correlata | Cardinalità / Join 
+
+
+| chargeback_fact | link:#entity-chargeback_fact["chargeback_fact"] | un JOIN:chargebackFactTk=link:#entity-chargeback_fact["chargeback_fact"].tk 
+
+
+| dimensione_volume_interno | link:#entity-internal_volume_dimension["dimensione_volume_interno"] | un JOIN:internalVolumeTk=link:#entity-internal_volume_dimension["dimensione_volume_interno"].tk 
+
+
+| storage_dimension | link:#entity-storage_dimension["storage_dimension"] | un JOIN:storageTk=link:#entity-storage_dimension["storage_dimension"].tk 
+
+
+| storage_and_storage_pool_capacity_fact | link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"] | un JOIN:storageAndSpFactTk=link:#entity-storage_and_storage_pool_capacity_fact["storage_and_storage_pool_capacity_fact"].tk 
+
+
+| host_group_dimension | link:#entity-host_group_dimension["host_group_dimension"] | un JOIN:hostGroupTk=link:#entity-host_group_dimension["host_group_dimension"].tk 
+
+
+| k8s_namespace_group_dimension | link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"] | un JOIN:k8sNamespaceGroupTk=link:#entity-k8s_namespace_group_dimension["k8s_namespace_group_dimension"].tk 
+
+
+| service_level_dimension | link:#entity-service_level_dimension["service_level_dimension"] | un JOIN:serviceLevelTk=link:#entity-service_level_dimension["service_level_dimension"].tk 
+
+
+| tier_dimension | link:#entity-tier_dimension["tier_dimension"] | un JOIN:tierTk=link:#entity-tier_dimension["tier_dimension"].tk 
+
+
+| dimensione_pool_di_storage | link:#entity-storage_pool_dimension["dimensione_pool_di_storage"] | un JOIN:storagePoolTk=link:#entity-storage_pool_dimension["dimensione_pool_di_storage"].tk 
+
+
+| qtree_dimension | link:#entity-qtree_dimension["qtree_dimension"] | un JOIN:qtreeTk=link:#entity-qtree_dimension["qtree_dimension"].tk 
+
+
+| host_dimension | link:#entity-host_dimension["host_dimension"] | un JOIN:hostTk=link:#entity-host_dimension["host_dimension"].tk 
+
+
+| date_dimension | link:#entity-date_dimension["date_dimension"] | un JOIN:dateTk=link:#entity-date_dimension["date_dimension"].tk 
+
+
+| volume_dimension | link:#entity-volume_dimension["volume_dimension"] | un JOIN:volumeTk=link:#entity-volume_dimension["volume_dimension"].tk 
+|===
+
+
+[[volumelastaccessedtime]]
+=== volume_last_accessed_time
+
+
+
+[[top]]
+=== ↑ inizio pagina
+
+Set di entità: volume_last_accessed_time
+
+[cols="1,1,1,1"]
+|===
+| Campo | Tipo | Nullabile | Commento 
+
+
+| volumeId | Int64 | SÌ | ID del volume 
+
+
+| volumeName *[PK]* | Stringa | SÌ | Nome del volume 
+
+
+| storageIdentifier *[PK]* | Stringa | SÌ | Identificativo di storage 
+
+
+| lastAccessed | DateTimeOffset | SÌ | L'ultima volta che hai effettuato l'accesso al volume 
+|===
