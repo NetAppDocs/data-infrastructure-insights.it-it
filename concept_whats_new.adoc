@@ -19,6 +19,45 @@ NetApp migliora e potenzia costantemente i suoi prodotti e servizi.  Ecco alcune
 
 
 
+[[september-2026]]
+== Settembre 2026
+
+
+
+[[ai-assistant-visualizations]]
+=== Visualizzazioni dell'assistente AI
+
+Trasforma istantaneamente dati complessi in informazioni grafiche. Chiedi all'Assistente AI di creare una dashboard e visualizzerà la risposta con grafici e tabelle interattivi, aiutandoti a identificare le tendenze e risolvere i problemi più velocemente senza creare manualmente i grafici.
+
+image:ai_assistant-column_graph.png["Visualizzazione dell'assistente AI"]
+
+
+
+[[enhanced-vm-analyzer-filtering]]
+=== Filtro avanzato di VM Analyzer
+
+Una nuova opzione nella vista VM Analyzer ti permette di nascondere i volumi montati senza datastore, offrendo una visualizzazione più chiara per semplificare la risoluzione dei problemi delle VM.
+
+image:vm_analyzer_datastore_only_view.png["cursore di visualizzazione solo datastore"]
+
+
+
+[[ui-update-user-data-edit-mode]]
+=== Aggiornamento dell'interfaccia utente: Modalità di modifica dei dati utente
+
+Mantieni accurate le informazioni sugli asset riducendo il rischio di modifiche involontarie. Annotazioni e attributi (cioè "User Data") ora vengono visualizzati in modalità di sola lettura per impostazione predefinita, così puoi prima esaminare i dettagli e scegliere quando sei pronto a modificarli.
+
+Modifica solo quando ne hai bisogno. Da un pannello a scomparsa, espandi i dettagli della risorsa e seleziona l'icona della matita. La landing page della risorsa si apre in modalità Modifica, dove puoi aggiornare le informazioni e selezionare Salva quando hai finito.
+
+Puoi anche aprire direttamente la landing page della risorsa e selezionare Modifica nell'angolo in alto a destra.
+
+image:UserDataEdit-Slideout.png["Modifica i dati utente nel pannello a scomparsa - icona a forma di matita, larghezza=400"]
+
+image:UserDataEdit-LP.png["Modalità di modifica della landing page, larghezza=200"]
+
+'''
+
+
 [[july-2026]]
 == Luglio 2026
 
