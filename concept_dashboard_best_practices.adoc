@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_best_practices.html 
-summary: Le migliori pratiche per sfruttare al meglio le tue dashboard 
+summary: Scopri le migliori pratiche per individuare le metriche giuste, filtrare efficacemente gli asset e configurare i widget per creare dashboard potenti e ricche di informazioni. 
 keywords: dashboard, hints, tips, best practice, widgets, metrics, 
 ---
 = Best Practice per Dashboard e Widget
@@ -14,7 +14,7 @@ keywords: dashboard, hints, tips, best practice, widgets, metrics,
 
 
 [role="lead"]
-Suggerimenti e trucchi per aiutarti a sfruttare al meglio le potenti funzionalità di dashboard e widget.
+Padroneggia la creazione di dashboard con strategie collaudate per individuare le metriche giuste, filtrare le risorse in modo efficace e configurare i widget per ottenere la massima visibilità. Queste best practice ti aiutano a creare dashboard più efficaci che forniscono informazioni infrastrutturali concrete e utilizzabili.
 
 
 

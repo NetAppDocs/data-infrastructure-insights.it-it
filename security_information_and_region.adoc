@@ -7,6 +7,10 @@ keywords: security, risk, protection
 = Informazioni e Regione
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -99,10 +103,4 @@ Le regioni ospitanti includono:
 [[more-information]]
 == Ulteriori informazioni
 
-Per maggiori informazioni sulla privacy e la sicurezza di NetApp, consulta i seguenti link:
-
-* link:https://www.netapp.com/us/company/trust-center/index.aspx["Centro di fiducia"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/data-location-cross-border-transfers.aspx["Trasferimenti transfrontalieri di dati"]
-* link:https://www.netapp.com/us/company/trust-center/transparency/third-party-data-requests.aspx["Rispondere alle richieste di dati di terze parti"]
-* link:https://www.netapp.com/us/company/trust-center/privacy/privacy-principles-security-safeguards.aspx["Principi sulla privacy NetApp"]
-
+Puoi leggere di più sulla privacy e la sicurezza di NetApp su * NetApp link:https://www.netapp.com/responsibility/trust-center/["Centro di fiducia"].

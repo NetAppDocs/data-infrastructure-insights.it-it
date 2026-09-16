@@ -7,10 +7,14 @@ summary: Presenta le dipendenze e i flussi del carico di lavoro di Kubernetes e 
 = Monitoraggio e mappa delle prestazioni della rete Kubernetes
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-La funzionalità Kubernetes Network Performance Monitoring and Map semplifica la risoluzione dei problemi mappando le dipendenze tra i servizi (chiamati anche carichi di lavoro) e fornisce visibilità in tempo reale sulle latenze e sulle anomalie delle prestazioni di rete per identificare i problemi di prestazioni prima che influiscano sugli utenti.  Questa funzionalità aiuta le organizzazioni a ridurre i costi complessivi analizzando e verificando i flussi di traffico di Kubernetes.
+Data Infrastructure Insights offre un monitoraggio completo delle prestazioni di rete e una mappatura visiva per gli ambienti Kubernetes. Ottieni visibilità in real-time sulle dipendenze dei carichi di lavoro, le latenze di rete e i flussi di traffico per identificare in modo proattivo i problemi di prestazioni e ottimizzare i costi attraverso un'analisi dettagliata del traffico.
 
 Caratteristiche principali: • La mappa del carico di lavoro presenta le dipendenze e i flussi del carico di lavoro di Kubernetes e mette in evidenza i problemi di rete e prestazioni.  • Monitora il traffico di rete tra pod, carichi di lavoro e nodi Kubernetes; identifica l'origine del traffico e i problemi di latenza.  • Ridurre i costi complessivi analizzando il traffico di rete in ingresso, in uscita, tra regioni e tra zone.
 

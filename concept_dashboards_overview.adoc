@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboards_overview.html 
-summary: Panoramica delle dashboard in Data Infrastructure Insights. 
+summary: 'Crea dashboard personalizzate con widget flessibili per visualizzare i dati dell"infrastruttura, monitorare le tendenze delle prestazioni e creare viste operative su misura per le tue specifiche esigenze di monitoraggio.' 
 keywords: dashboard, widget, custom, view, data 
 ---
 = Panoramica delle dashboard
@@ -14,7 +14,7 @@ keywords: dashboard, widget, custom, view, data
 
 
 [role="lead"]
-Data Infrastructure Insights offre agli utenti la flessibilità di creare visualizzazioni operative dei dati dell'infrastruttura, consentendo di creare dashboard personalizzate con una varietà di widget, ognuno dei quali offre un'ampia flessibilità nella visualizzazione e nella rappresentazione grafica dei dati.
+Crea dashboard personalizzate che ti forniscano le informazioni operative di cui hai più bisogno. Scegli tra diversi tipi di widget, tra cui tabelle, grafici, indicatori e diagrammi, per visualizzare i dati della tua infrastruttura esattamente come vuoi, permettendo decisioni migliori e un monitoraggio più efficace.
 
 
 IMPORTANT: Gli esempi riportati in queste sezioni hanno solo scopo esplicativo e non coprono tutti gli scenari possibili.  I concetti e i passaggi descritti in questo documento possono essere utilizzati per creare dashboard personalizzate, evidenziando i dati specifici per le proprie esigenze specifiche.

@@ -1,20 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: task_view_queries.html 
-summary: Visualizzazione delle query create 
+summary: Visualizza e gestisci le tue query salvate con opzioni di visualizzazione personalizzabili, inclusi filtraggio, ordinamento e disposizione delle colonne, per organizzare e accedere alle query in modo efficiente. 
 keywords: query, queries, viewing 
 ---
 = Visualizzazione delle query
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Puoi visualizzare le tue query per monitorare le tue risorse e modificare il modo in cui le query visualizzano i dati relativi alle tue risorse.
+Accedi e gestisci le tue query salvate tramite l'interfaccia di query, dove puoi filtrare, ordinare e personalizzare la visualizzazione per organizzare e individuare in modo efficiente le query di cui hai bisogno per il monitoraggio e l'analisi degli asset.
 
 .Passi
 . Accedi al tuo tenant Data Infrastructure Insights .
-. Fare clic su *Query* e selezionare *Mostra tutte le query*.  È possibile modificare la modalità di visualizzazione delle query eseguendo una delle seguenti operazioni:
+. Fai clic su *Esplora* e seleziona *Tutte le query sulle metriche*. Puoi modificare la modalità di visualizzazione delle query eseguendo una delle seguenti operazioni:
 . È possibile immettere del testo nella casella filtro per cercare di visualizzare query specifiche.
 . È possibile modificare l'ordinamento delle colonne nella tabella delle query in crescente (freccia su) o decrescente (freccia giù) facendo clic sulla freccia nell'intestazione della colonna.
 . Per ridimensionare una colonna, passa il mouse sull'intestazione della colonna finché non appare una barra blu.  Posiziona il mouse sulla barra e trascinalo verso destra o verso sinistra.

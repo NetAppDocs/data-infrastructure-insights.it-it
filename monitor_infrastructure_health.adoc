@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: monitor_infrastructure_health.html 
 keywords: infra, infrastructure, health, monitor 
-summary: 'Monitora lo stato di salute dell"infrastruttura con un punteggio unificato basato su prestazioni, capacità, configurazione e avvisi sui componenti per una risoluzione proattiva dei problemi.' 
+summary: Ottieni una visione unificata dello stato di salute del tuo ambiente di storage grazie a un monitoraggio completo che combina prestazioni, capacità, configurazione e avvisi sui componenti in punteggi di salute utilizzabili. 
 ---
 = Monitorare lo stato di salute delle infrastrutture
 :hardbreaks:
@@ -14,15 +14,12 @@ summary: 'Monitora lo stato di salute dell"infrastruttura con un punteggio unifi
 
 
 [role="lead"]
-Data Infrastructure Insights fornisce un monitoraggio completo dello stato dell'infrastruttura che tiene traccia delle prestazioni, della capacità, della configurazione e dello stato dei componenti del tuo ambiente di archiviazione. I punteggi di integrità vengono calcolati in base agli avvisi di monitoraggio in queste categorie, offrendo una visione unificata dello stato di integrità del sistema e consentendo una risoluzione proattiva dei problemi.
+Data Infrastructure Insights monitora lo stato di salute del tuo ambiente di storage tenendo traccia di prestazioni, capacità, configurazione e stato dei componenti. Il sistema calcola punteggi di salute unificati a partire dagli avvisi di monitoraggio in queste categorie, fornendo una chiara visibilità sullo stato di salute del sistema e consentendo una risoluzione proattiva dei problemi.
 
 
 
 [[the-infrastructure-health-dashboard]]
 == Il dashboard sulla salute delle infrastrutture
-
-
-NOTE: Il monitoraggio della salute delle infrastrutture è unlink:concept_preview_features.html["Anteprima"] funzionalità ed è soggetta a modifiche.
 
 Vai su *Osservabilità > Analizza* e seleziona *Stato dell'infrastruttura*. La dashboard fornisce una panoramica dello stato di salute del sistema, in base alle categorie di avviso del monitor e ai punteggi, come spiegato di seguito. Imposta i filtri in alto per restringere il campo della tua indagine.
 

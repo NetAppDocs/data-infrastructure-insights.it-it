@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: reporting_storage_manager_dashboard.html 
-summary: Puoi utilizzare la Dashboard di Storage Manager per la gestione quotidiana dei tuoi servizi di archiviazione. 
+summary: 'Accedi a informazioni centralizzate sulla gestione dello storage con report completi sull"utilizzo della capacità, le tendenze delle prestazioni e le previsioni delle risorse per una gestione proattiva del data center.' 
 keywords: reporting, cognos, data warehouse, dwh, smd, storage manager dashboard 
 ---
 = Dashboard del gestore dell'archiviazione
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-La dashboard di Storage Manager fornisce una visualizzazione centralizzata che consente di confrontare e contrapporre l'utilizzo delle risorse nel tempo rispetto agli intervalli accettabili e ai giorni di attività precedenti.  Visualizzando solo le metriche chiave delle prestazioni per i tuoi servizi di archiviazione, puoi prendere decisioni su come gestire i tuoi data center.
+La dashboard di Storage Manager offre informazioni centralizzate sull'ambiente di storage tramite report e visualizzazioni complete. Monitora l'utilizzo della capacità, tieni traccia delle tendenze delle prestazioni nel tempo e confronta le metriche attuali con gli intervalli accettabili per prendere decisioni informate sulla manutenzione del data center e sulla pianificazione delle risorse.
 
 
 NOTE: La funzionalità di reporting è disponibile in Data Infrastructure Insightslink:concept_subscribing_to_cloud_insights.html["Edizione Premium"] .

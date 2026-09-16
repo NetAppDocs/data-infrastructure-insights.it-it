@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_query_copy_table_values.html 
-summary: È possibile copiare i valori da una tabella negli appunti per utilizzarli in altre applicazioni. 
+summary: Copia i valori delle tabelle negli appunti tramite selezione del testo o copia con un clic per un trasferimento efficiente dei dati ai campi di ricerca e alle applicazioni esterne. 
 keywords: query, queries, copy, values, clipboard 
 ---
 = Copia dei valori della tabella
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-È possibile copiare i valori delle tabelle negli appunti per utilizzarli nelle caselle di ricerca o in altre applicazioni.
+Ottimizza il tuo flusso di lavoro copiando i valori delle tabelle direttamente negli appunti per usarli nelle ricerche o in applicazioni esterne. Scegli tra la selezione manuale del testo o la comoda copia con un clic per i campi a valore singolo con asset link.
 
 .Informazioni su questo compito
 Esistono due metodi per copiare i valori dalle tabelle o i risultati delle query negli appunti.

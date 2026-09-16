@@ -2,11 +2,15 @@
 sidebar: sidebar 
 permalink: faq-config-support.html 
 keywords: FAQ, Frequently asked questions, questions, configuration, 
-summary:  
+summary: 'Domande frequenti sulla configurazione di Data Infrastructure Insights, il supporto dei dispositivi, l"impatto ambientale, le autorizzazioni e le funzionalità di raccolta di dati.' 
 ---
 = Configurazione e dispositivi supportati
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]

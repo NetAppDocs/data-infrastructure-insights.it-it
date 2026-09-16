@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_create_query.html 
-summary: Le query consentono di identificare in modo rapido e semplice le risorse e le metriche di interesse. 
+summary: Crea query personalizzate per cercare, filtrare e analizzare le risorse della tua infrastruttura e le metriche con un controllo granulare, raggruppamenti flessibili e visualizzazione dei risultati personalizzabile. 
 keywords: query, queries 
 ---
 = Creazione di query
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Le query consentono di cercare le risorse del tenant a livello granulare, consentendo di filtrare i dati desiderati e ordinare i risultati a proprio piacimento.
+Crea query potenti per cercare le tue risorse infrastrutturali a un livello granulare con funzionalità flessibili di filtraggio, raggruppamento e ordinamento. Crea ricerche mirate che ti aiutano a identificare asset specifici, analizzare metriche di performance e organizzare i risultati esattamente come ti servono.
 
 Ad esempio, è possibile creare una query per _volumi_, aggiungere un filtro per trovare specifici _archiviazioni_ associati ai volumi selezionati, aggiungere un altro filtro per trovare una specifica _annotazione_ come "Livello 1" sulle archiviazioni selezionate e infine aggiungere un altro filtro per trovare tutte le archiviazioni con _IOPS - Lettura (IO/s)_ maggiore di 25.  Una volta visualizzati i risultati, è possibile ordinare le colonne di informazioni associate alla query in ordine crescente o decrescente.
 

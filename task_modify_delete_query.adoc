@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_modify_delete_query.html 
-summary: Modifica o eliminazione di una query 
+summary: Modifica le query esistenti cambiando criteri e colonne, con opzioni di salvataggio flessibili per aggiornare, rinominare o creare nuove versioni, oltre alla possibilità di eliminare le query quando non sono più necessarie. 
 keywords: query, queries, modify, edit, delete, remove 
 ---
 = Modifica o eliminazione di una query
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-È possibile modificare i criteri associati a una query quando si desidera modificare i criteri di ricerca per le risorse su cui si sta eseguendo la query.
+Gestisci le tue query in modo efficace modificando i criteri di ricerca, aggiungendo o rimuovendo colonne e scegliendo tra opzioni di salvataggio flessibili. Aggiorna le query esistenti, crea nuove versioni o elimina query che non sono più necessarie per mantenere la tua libreria di query organizzata e aggiornata.
 
 
 

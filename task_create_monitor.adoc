@@ -49,6 +49,8 @@ Quando si aggiunge un nuovo monitor, viene richiesto di creare un monitor delle 
 +
 ** _Metric_ monitora gli avvisi sui trigger correlati all'infrastruttura o alle prestazioni
 ** _Log_ monitora gli avvisi sulle attività correlate al registro
+** _Rilevamento anomalie_ monitora e segnala i cambiamenti nei modelli dei tuoi dati
+** I monitor degli attributi segnalano le modifiche agli attributi di un oggetto, come lo spostamento di un oggetto in un nuovo data center
 
 
 +
@@ -171,6 +173,17 @@ image:AnomalyDetectionMonitorMetricChoosing.png["Filtraggio delle metriche per i
 
 
 image:AnomalyDetectionMonitorDefineConditions.png["Definizione delle condizioni per attivare un rilevamento di anomalie"]
+
+
+
+[[attribute-monitor]]
+=== Monitor degli attributi
+
+I monitor degli attributi avvisano automaticamente il tuo team quando le risorse vengono spostate tra data center, un pool di storage non è crittografato o si verificano modifiche agli attributi. Questo ti aiuta a mantenere le configurazioni di base e ad assicurarti che nulla sfugga al controllo durante nuove implementazioni o modifiche.
+
+image:attribute_monitor_in_list.png["I monitor degli attributi vengono aggiunti ai tipi di monitor"]
+
+Scegli semplicemente il tipo di oggetto e seleziona gli attributi che vuoi monitorare per le modifiche.
 
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_import_from_dashboard_gallery.html 
-summary: È possibile importare dashboard consigliate per rispondere alle domande di approfondimento aziendale. Puoi anche importare dashboard personalizzate che hai precedentemente esportato. 
+summary: Importa dashboard predefinite dalla galleria per ottenere rapidamente informazioni aziendali, oppure importa dashboard personalizzate che hai esportato per condividere le configurazioni tra i tenant. 
 keywords: dashboard, gallery, import, export 
 ---
 = Importazione di dashboard
@@ -14,7 +14,7 @@ keywords: dashboard, gallery, import, export
 
 
 [role="lead"]
-Data Infrastructure Insights fornisce una serie di dashboard consigliate per ottenere informazioni aziendali sui tuoi dati. Ogni dashboard contiene widget progettati per aiutarti a rispondere a una domanda specifica o a risolvere un problema specifico rilevante per i dati attualmente raccolti sul tuo tenant. DII consente inoltre di esportare una dashboard utile e di importarla in un altro tenant.
+Accedi ai dashboard predefiniti dalla galleria per ottenere rapidamente informazioni dettagliate sulla tua infrastruttura, oppure importa dashboard personalizzati che hai esportato da altri tenant. I dashboard della galleria sono personalizzati in base ai data collector del tuo ambiente e progettati per rispondere a specifiche domande aziendali, mentre i dashboard esportati ti permettono di condividere configurazioni utili tra più tenant.
 
 
 

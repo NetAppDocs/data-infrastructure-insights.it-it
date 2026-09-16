@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_querying_assets.html 
-summary: 'Esegui query sulle risorse di inventario e sulle metriche di integrazione per monitorare, risolvere i problemi e analizzare le prestazioni dell"intera infrastruttura, inclusi storage, compute e risorse di rete.' 
+summary: 'Interroga le risorse dell"infrastruttura fisica e virtuale, così come le metriche di integrazione, per monitorare le prestazioni, risolvere i problemi e creare visualizzazioni mirate del tuo ambiente utilizzando criteri di ricerca granulari.' 
 keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, Host, Internal Volume, iSCSI, Network, Portal, Path, Port, Qtree, Quota, Share, Storage, Node, Pool, SVM, Switch, Tape, VMDK, Virtual Machine, VM, Volume, Zone, Member 
 ---
 = Interrogazione di asset e metriche
@@ -14,7 +14,7 @@ keywords: query, queries, Application, Datastore, Disk, Fabric, Generic Device, 
 
 
 [role="lead"]
-Interroga le risorse fisiche e virtuali della tua infrastruttura per monitorare le prestazioni, risolvere i problemi ed eseguire ricerche granulari basate su criteri personalizzati come le annotazioni. Data Infrastructure Insights consente di eseguire query su diverse tipologie di risorse—dagli array di storage e host alle applicazioni e alle macchine virtuali—insieme a metriche di integrazione da Kubernetes, Docker e ONTAP Advanced Data per una visibilità completa.
+Utilizza le query per cercare e analizzare le risorse della tua infrastruttura e le metriche a un livello granulare. Interroga le risorse di inventario fisiche e virtuali, i dati di integrazione da Kubernetes e ONTAP e le metriche sulle performance per monitorare il tuo ambiente, risolvere problemi e creare viste mirate in base ai tuoi criteri specifici.
 
 Si noti che le regole di annotazione, che assegnano automaticamente annotazioni alle risorse, richiedono una query che è stata condivisa con tutti. Vedere di seguito per ulteriori informazioni sulla condivisione delle query.
 

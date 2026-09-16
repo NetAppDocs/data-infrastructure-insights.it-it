@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_export_query_results.html 
-summary: Come esportare i risultati di una query in un file .csv 
+summary: Esporta i risultati delle query, le tabelle del dashboard, la landing page e altri dati in file .CSV per analisi esterne, reportistica e integrazione con altre applicazioni tramite elaborazione asincrona. 
 keywords: query, queries, export, csv 
 ---
 = Esportazione dei risultati della query in un file .CSV
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-È possibile esportare i risultati di qualsiasi query in un file .CSV, che consentirà di analizzare i dati o di importarli in un'altra applicazione.
+Esporta i dati in file .CSV da query, widget di tabelle dashboard e tabelle di landing page per analisi esterne, reportistica e integrazione con altre applicazioni. Il processo di esportazione asincrono ti permette di continuare a lavorare mentre grandi set di dati vengono elaborati in background.
 
 .Passi
 . Accedi a Data Infrastructure Insights.

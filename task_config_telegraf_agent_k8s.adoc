@@ -420,7 +420,7 @@ Ecco alcune cose da provare se riscontri problemi durante la configurazione dell
 | Ho riscontrato problemi nel tentativo di distribuire l'Operatore e sto utilizzando PSP/PSA. | 1. Modificare l'agente utilizzando il seguente comando: kubectl -n <name-space> edit agent 2.  Contrassegna 'security-policy-enabled' come 'false'.  In questo modo verranno disattivati i criteri di sicurezza del Pod e l'ammissione di sicurezza del Pod e sarà consentito all'operatore di effettuare la distribuzione.  Confermare utilizzando i seguenti comandi: kubectl get psp (dovrebbe mostrare che la politica di sicurezza del pod è stata rimossa) kubectl get all -n <namespace> | grep -i psp (dovrebbe mostrare che non è stato trovato nulla) 
 
 
-| Errori "ImagePullBackoff" rilevati | Questi errori possono verificarsi se hai un repository docker personalizzato o privato e non hai ancora configurato il Kubernetes Monitoring Operator per riconoscerlo correttamente. <<Utilizzo di un repository Docker personalizzato o privato,Per saperne di più>> informazioni sulla configurazione per repo personalizzati/privati. 
+| Errori "ImagePullBackoff" rilevati | Questi errori possono verificarsi se hai un repository docker personalizzato o privato e non hai ancora configurato il Kubernetes Monitoring Operator per riconoscerlo correttamente. <<using-a-custom-or-private-docker-repository,Per saperne di più>> informazioni sulla configurazione per repo personalizzati/privati. 
 
 
 | Ho un problema con la distribuzione del mio operatore di monitoraggio e la documentazione attuale non mi aiuta a risolverlo.  a| 

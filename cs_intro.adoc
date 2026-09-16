@@ -7,10 +7,14 @@ summary: 'Proteggi i tuoi dati con il rilevamento delle minacce interne, la visi
 = Informazioni sulla sicurezza del carico di lavoro di archiviazione
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights Storage Workload Security (in precedenza Cloud Secure) aiuta a proteggere i tuoi dati con informazioni fruibili sulle minacce interne.  Fornisce visibilità e controllo centralizzati di tutti gli accessi ai dati aziendali negli ambienti cloud ibridi, per garantire il raggiungimento degli obiettivi di sicurezza e conformità.
+Data Infrastructure Insights Storage Workload Security (precedentemente Cloud Secure) protegge i dati della tua organizzazione con un rilevamento avanzato delle minacce interne e informazioni utili. Ottieni visibilità e controllo centralizzati su tutti gli accessi ai dati aziendali in ambienti cloud ibridi, garantendo il raggiungimento degli obiettivi di sicurezza e conformità grazie al monitoraggio in real-time e alle funzionalità di risposta automatizzata.
 
 
 

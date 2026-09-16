@@ -1,16 +1,20 @@
 ---
 sidebar: sidebar 
 permalink: task_dashboard_example_VM_performance.html 
-summary: Esempio di dashboard che evidenzia le prestazioni della macchina virtuale. 
+summary: Tutorial dettagliato per creare una dashboard delle prestazioni delle macchine virtuali con tabelle, grafici e widget che confrontano le metriche di VM e storage. 
 keywords: dashboard, widget, custom, example, virtual machine, vm, performance 
 ---
 = Esempio di dashboard: prestazioni della macchina virtuale
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Oggigiorno le operazioni IT devono affrontare numerose sfide.  Agli amministratori viene chiesto di fare di più con meno e avere una visibilità completa sui propri data center dinamici è fondamentale.  In questo esempio, ti mostreremo come creare una dashboard con widget che ti forniscono informazioni operative sulle prestazioni della macchina virtuale (VM) sul tuo tenant.  Seguendo questo esempio e creando widget adatti alle tue esigenze specifiche, puoi fare cose come visualizzare le prestazioni dello storage backend rispetto alle prestazioni della macchina virtuale frontend oppure visualizzare la latenza della VM rispetto alla richiesta di I/O.
+Impara a creare una dashboard completa per le prestazioni delle macchine virtuali con questo tutorial passo passo. Creerai widget che visualizzano i dati sulle prestazioni delle VM, confronterai le metriche di storage backend con le prestazioni frontend delle VM e analizzerai le relazioni tra la latenza delle VM e la domanda di I/O per ottenere migliori informazioni operative.
 
 .Informazioni su questo compito
 Qui creeremo una dashboard delle prestazioni della macchina virtuale contenente quanto segue:

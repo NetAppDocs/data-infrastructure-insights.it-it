@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept_dashboard_features.html 
-summary: Funzionalità e concetti della dashboard. 
+summary: Padroneggia le funzionalità avanzate del dashboard, tra cui la personalizzazione dei widget, il filtraggio delle query, la configurazione delle variabili, le trasformazioni dei dati e le opzioni di formattazione per creare visualizzazioni potenti e flessibili. 
 keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll up, grouping, aggregate, aggregation, filter, axis, group by, expressions, timeseries, exact match, theme, visibility, formatting, conditional, hide, collapse, expand 
 ---
 = Funzionalità della dashboard
@@ -14,7 +14,7 @@ keywords: dashboard, widget, custom, concepts, queries, variables, rollup, roll 
 
 
 [role="lead"]
-Dashboard e widget consentono una grande flessibilità nella visualizzazione dei dati.  Ecco alcuni concetti che ti aiuteranno a sfruttare al meglio le tue dashboard personalizzate.
+Sfrutta appieno il potenziale delle tue dashboard con funzionalità avanzate e opzioni di personalizzazione. Impara a configurare le query dei widget, applicare trasformazioni dei dati, usare variabili per il filtraggio dinamico e implementare formattazioni sofisticate per creare visualizzazioni estremamente efficaci e su misura per le tue esigenze di monitoraggio dell'infrastruttura.
 
 indice:[]
 

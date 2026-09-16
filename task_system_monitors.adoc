@@ -1,29 +1,30 @@
 ---
 sidebar: sidebar 
 permalink: task_system_monitors.html 
-keywords: monitors, alerts, log, metric 
-summary: Crea monitor per ricevere avvisi sulle soglie di prestazioni o di inventario, nonché sulle condizioni di metriche o registri. 
+keywords: monitors, alerts, log, metric, attribute 
+summary: Esamina i monitor definiti dal sistema per le condizioni relative a metriche, log, attributi e raccolta di dati. 
 ---
 = Monitor di sistema
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
-Data Infrastructure Insights include una serie di monitor definiti dal sistema sia per le metriche che per i log.  I monitor di sistema disponibili dipendono dai collettori di dati presenti sul tenant.  Per questo motivo, i monitor disponibili in Data Infrastructure Insights potrebbero cambiare man mano che vengono aggiunti raccoglitori di dati o ne vengono modificate le configurazioni.
+Data Infrastructure Insights include monitor predefiniti per metriche, log, attributi e condizioni di raccolta di dati. I monitor di sistema disponibili dipendono dai data collector presenti nel tuo tenant. Per questo motivo, i monitor disponibili in Data Infrastructure Insights possono cambiare quando vengono aggiunti data collector o modificate le loro configurazioni.
 
 
 NOTE: Per impostazione predefinita, molti monitor di sistema sono in stato _In pausa_.  È possibile abilitare un monitor di sistema selezionando l'opzione _Riprendi_ per il monitor.  Assicurarsi che le opzioni _Raccolta dati contatore avanzata_ e _Abilita raccolta log ONTAP EMS_ siano abilitate nel Data Collector.  Queste opzioni sono disponibili in ONTAP Data Collector in _Configurazione avanzata_:image:Enable_Log_Monitor_Collection.png["Abilitazione della raccolta di contatori avanzati e registri EMS per ONTAP"]
-
-[[top]]
-indice:[]
 
 
 
 [[monitor-descriptions]]
 == Descrizioni del monitor
 
-I monitor definiti dal sistema sono composti da metriche e condizioni predefinite, nonché da descrizioni predefinite e azioni correttive, che non possono essere modificate.  È possibile modificare l'elenco dei destinatari delle notifiche per i monitor definiti dal sistema.  Per visualizzare le metriche, le condizioni, la descrizione e le azioni correttive, oppure per modificare l'elenco dei destinatari, aprire un gruppo di monitor definito dal sistema e fare clic sul nome del monitor nell'elenco.
+I monitor definiti dal sistema sono costituiti da metriche o attributi e condizioni predefinite, nonché da descrizioni e azioni correttive predefinite, che non possono essere modificate. Puoi modificare l'elenco dei destinatari delle notifiche per i monitor definiti dal sistema. Per visualizzare le metriche o gli attributi, le condizioni, la descrizione e le azioni correttive, oppure per modificare l'elenco dei destinatari, apri un gruppo di monitor definiti dal sistema e fai clic sul nome del monitor nell'elenco.
 
 I gruppi di monitor definiti dal sistema non possono essere modificati o rimossi.
 
@@ -31,7 +32,8 @@ Sono disponibili i seguenti monitor definiti dal sistema, nei gruppi indicati.
 
 * * ONTAP Infrastructure* include monitor per problemi relativi all'infrastruttura nei cluster ONTAP .
 * * Esempi di carico di lavoro ONTAP * include monitor per problemi correlati al carico di lavoro.
-* Per impostazione predefinita, i monitor di entrambi i gruppi sono impostati sullo stato _Paused_.
+* *CVO Infrastructure* e *CVO Workload Examples* includono i monitor corrispondenti per Cloud Volumes ONTAP.
+* Lo stato predefinito varia a seconda del monitor. Consulta le tabelle qui sotto ed esamina un monitor prima di abilitare le notifiche.
 
 
 Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infrastructure Insights:
@@ -86,10 +88,7 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Limite massimo della capacità della quota utente | CRITICO | ONTAP riconosce gli utenti dei sistemi Unix o Windows che hanno i diritti di accesso ai volumi, ai file o alle directory all'interno di un volume.  Di conseguenza, ONTAP consente ai clienti di configurare la capacità di archiviazione per i propri utenti o gruppi di utenti dei propri sistemi Linux o Windows.  La quota dei criteri utente o di gruppo limita la quantità di spazio che l'utente può utilizzare per i propri dati. Un limite rigido di questa quota consente di notificare all'utente quando la quantità di capacità utilizzata all'interno del volume è appena prima di raggiungere la quota di capacità totale.  Il monitoraggio della quantità di dati archiviati all'interno di una quota utente o di un gruppo garantisce che l'utente riceva un servizio dati ininterrotto. | Se viene superata la soglia critica, valutare le seguenti azioni immediate per ridurre al minimo l'interruzione del servizio: 1.  Aumentare lo spazio della quota utente o del gruppo per far fronte alla crescita. 2.  Chiedere all'utente o al gruppo di eliminare i dati indesiderati per liberare spazio. 
 
 
-| Limite flessibile della capacità della quota utente | AVVERTIMENTO | ONTAP riconosce gli utenti dei sistemi Unix o Windows che hanno i diritti di accesso ai volumi, ai file o alle directory all'interno di un volume.  Di conseguenza, ONTAP consente ai clienti di configurare la capacità di archiviazione per i propri utenti o gruppi di utenti dei propri sistemi Linux o Windows.  La quota dei criteri utente o di gruppo limita la quantità di spazio che l'utente può utilizzare per i propri dati. Un limite flessibile di questa quota consente di inviare notifiche proattive all'utente quando la quantità di capacità utilizzata all'interno del volume raggiunge la quota di capacità totale.  Il monitoraggio della quantità di dati archiviati all'interno di una quota utente o di un gruppo garantisce che l'utente riceva un servizio dati ininterrotto. | Se la soglia di allerta viene superata, pianificare di adottare immediatamente le seguenti misure: 1.  Aumentare lo spazio della quota utente o del gruppo per far fronte alla crescita. 2.  Elimina i dati indesiderati per liberare spazio. 
-
-
-| Capacità del volume completa | CRITICO | La capacità di archiviazione di un volume è necessaria per archiviare i dati delle applicazioni e dei clienti.  Maggiore è la quantità di dati memorizzati nel volume ONTAP , minore sarà la disponibilità di spazio di archiviazione per i dati futuri.  Se la capacità di archiviazione dati all'interno di un volume raggiunge la capacità di archiviazione totale, il cliente potrebbe non essere in grado di archiviare i dati a causa della mancanza di capacità di archiviazione.  Il monitoraggio del volume di capacità di archiviazione utilizzato garantisce la continuità dei servizi dati. | Se viene superata la soglia critica, valutare le seguenti azioni immediate per ridurre al minimo l'interruzione del servizio: 1.  Aumentare lo spazio del volume per assecondare la crescita. 2.  Elimina i dati indesiderati per liberare spazio. 3.  Se le copie snapshot occupano più spazio della riserva snapshot, eliminare i vecchi snapshot o abilitare l'eliminazione automatica degli snapshot del volume. Se la soglia di avviso viene superata, pianificare di intraprendere le seguenti azioni immediate: 1.  Aumentare lo spazio del volume per accogliere la crescita 2.  Se le copie degli snapshot occupano più spazio della riserva di snapshot, eliminare i vecchi snapshot o abilitare l'eliminazione automatica degli snapshot del volume. 
+| Capacità del volume ONTAP completa | CRITICO | La capacità di archiviazione di un volume è necessaria per archiviare i dati delle applicazioni e dei clienti.  Maggiore è la quantità di dati memorizzati nel volume ONTAP , minore sarà la disponibilità di spazio di archiviazione per i dati futuri.  Se la capacità di archiviazione dati all'interno di un volume raggiunge la capacità di archiviazione totale, il cliente potrebbe non essere in grado di archiviare i dati a causa della mancanza di capacità di archiviazione.  Il monitoraggio del volume di capacità di archiviazione utilizzato garantisce la continuità dei servizi dati. | Se viene superata la soglia critica, valutare le seguenti azioni immediate per ridurre al minimo l'interruzione del servizio: 1.  Aumentare lo spazio del volume per assecondare la crescita. 2.  Elimina i dati indesiderati per liberare spazio. 3.  Se le copie snapshot occupano più spazio della riserva snapshot, eliminare i vecchi snapshot o abilitare l'eliminazione automatica degli snapshot del volume. Se la soglia di avviso viene superata, pianificare di intraprendere le seguenti azioni immediate: 1.  Aumentare lo spazio del volume per accogliere la crescita 2.  Se le copie degli snapshot occupano più spazio della riserva di snapshot, eliminare i vecchi snapshot o abilitare l'eliminazione automatica degli snapshot del volume. 
 
 
 | Limite di volume inode | CRITICO | I volumi che archiviano i file utilizzano nodi di indice (inode) per archiviare i metadati dei file.  Quando un volume esaurisce la sua allocazione di inode, non è possibile aggiungervi altri file. Un avviso di avvertenza indica che è necessario intraprendere un'azione pianificata per aumentare il numero di inode disponibili. Un avviso critico indica che l'esaurimento del limite di file è imminente e che è necessario adottare misure di emergenza per liberare inode e garantire la continuità del servizio. | Se viene superata la soglia critica, valutare le seguenti azioni immediate per ridurre al minimo l'interruzione del servizio: 1.  Aumentare il valore degli inode per il volume.  Se il valore degli inode è già al valore massimo, allora bisogna dividere il volume in due o più volumi perché il file system ha superato la dimensione massima. 2.  Utilizzare FlexGroup perché aiuta a gestire file system di grandi dimensioni.  Se la soglia di allerta viene superata, pianificare di adottare immediatamente le seguenti misure: 1.  Aumentare il valore degli inode per il volume.  Se il valore degli inode è già al massimo, allora bisogna dividere il volume in due o più volumi perché il file system ha superato la dimensione massima. 2.  Utilizzare FlexGroup poiché aiuta ad ospitare file system di grandi dimensioni 
@@ -121,8 +120,6 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 
 | Sovracommit della quota Qtree del volume | ATTENZIONE / CRITICO | Volume Qtree Quota Overcommit specifica la percentuale in cui un volume è considerato in eccesso rispetto alle quote qtree.  È stata raggiunta la soglia impostata per la quota qtree per il volume.  Il monitoraggio del superamento della quota qtree del volume garantisce che l'utente riceva un servizio dati ininterrotto. | Se viene superata la soglia critica, è necessario adottare misure immediate per ridurre al minimo l'interruzione del servizio: 1.  Aumentare lo spazio del volume 2.  Eliminare i dati indesiderati Quando viene superata la soglia di avviso, valutare l'aumento dello spazio del volume. 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[log-monitors]]
@@ -146,22 +143,10 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Costituente FlexGroup completo | CRITICO | Un componente all'interno di un volume FlexGroup è pieno, il che potrebbe causare una potenziale interruzione del servizio.  È ancora possibile creare o espandere file sul volume FlexGroup .  Tuttavia, nessuno dei file memorizzati sul costituente può essere modificato.  Di conseguenza, potrebbero verificarsi errori casuali di spazio insufficiente quando si tenta di eseguire operazioni di scrittura sul volume FlexGroup . | Si consiglia di aggiungere capacità al volume FlexGroup utilizzando il comando "volume modify -files +X". In alternativa, eliminare i file dal volume FlexGroup .  Tuttavia, è difficile stabilire quali fascicoli siano stati inoltrati al costituente. 
 
 
-| Costituente Flexgroup quasi pieno | AVVERTIMENTO | Un componente all'interno di un volume FlexGroup ha quasi esaurito lo spazio, il che potrebbe causare una potenziale interruzione del servizio.  I file possono essere creati ed espansi.  Tuttavia, se lo spazio disponibile sul costituente esaurisce, potresti non essere in grado di aggiungere o modificare i file sul costituente. | Si consiglia di aggiungere capacità al volume FlexGroup utilizzando il comando "volume modify -files +X". In alternativa, eliminare i file dal volume FlexGroup .  Tuttavia, è difficile stabilire quali fascicoli siano stati inoltrati al costituente. 
-
-
-| Il componente FlexGroup ha quasi esaurito gli inode | AVVERTIMENTO | Un componente all'interno di un volume FlexGroup è quasi senza inode, il che potrebbe causare una potenziale interruzione del servizio.  Il costituente riceve meno richieste di creazione rispetto alla media.  Ciò potrebbe avere un impatto sulle prestazioni complessive del volume FlexGroup , poiché le richieste vengono indirizzate ai componenti con più inode. | Si consiglia di aggiungere capacità al volume FlexGroup utilizzando il comando "volume modify -files +X". In alternativa, eliminare i file dal volume FlexGroup .  Tuttavia, è difficile stabilire quali fascicoli siano stati inoltrati al costituente. 
-
-
 | Costituente FlexGroup fuori dagli inode | CRITICO | Un componente di un volume FlexGroup ha esaurito gli inode, il che potrebbe causare una potenziale interruzione del servizio.  Non è possibile creare nuovi file su questo costituente.  Ciò potrebbe portare a una distribuzione complessivamente sbilanciata dei contenuti nel volume FlexGroup . | Si consiglia di aggiungere capacità al volume FlexGroup utilizzando il comando "volume modify -files +X". In alternativa, eliminare i file dal volume FlexGroup .  Tuttavia, è difficile stabilire quali fascicoli siano stati inoltrati al costituente. 
 
 
-| LUN offline | INFORMAZIONI | Questo evento si verifica quando una LUN viene portata offline manualmente. | Riportare online la LUN. 
-
-
 | Ventola dell'unità principale guasta | AVVERTIMENTO | Una o più ventole dell'unità principale sono guaste.  Il sistema rimane operativo. Tuttavia, se la condizione persiste troppo a lungo, la sovratemperatura potrebbe innescare uno spegnimento automatico. | Riposizionare le ventole guaste.  Se l'errore persiste, sostituirli. 
-
-
-| Ventola dell'unità principale in stato di avviso | INFORMAZIONI | Questo evento si verifica quando una o più ventole dell'unità principale sono in stato di avviso. | Sostituire le ventole indicate per evitare il surriscaldamento. 
 
 
 | Batteria NVRAM scarica | AVVERTIMENTO | La capacità della batteria NVRAM è estremamente bassa.  Potrebbe verificarsi una potenziale perdita di dati se la batteria si scarica. Il sistema genera e trasmette un messaggio AutoSupport o "call home" al supporto tecnico NetApp e alle destinazioni configurate, se configurato per farlo.  La corretta consegna di un messaggio AutoSupport migliora significativamente la determinazione e la risoluzione dei problemi. | Eseguire le seguenti azioni correttive:…Visualizzare lo stato attuale della batteria, la capacità e lo stato di carica utilizzando il comando "system node environment sensors show".…Se la batteria è stata sostituita di recente o il sistema non è stato operativo per un periodo di tempo prolungato, monitorare la batteria per verificare che si stia caricando correttamente.…Contattare l'assistenza tecnica NetApp se l'autonomia della batteria continua a scendere al di sotto dei livelli critici e il sistema di storage si spegne automaticamente. 
@@ -173,7 +158,7 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Processore di servizi offline | CRITICO | ONTAP non riceve più heartbeat dal Service Processor (SP), anche se sono state eseguite tutte le azioni di ripristino SP .  ONTAP non può monitorare lo stato dell'hardware senza SP. …Il sistema si spegnerà per evitare danni all'hardware e perdita di dati.  Imposta un avviso di panico per essere avvisato immediatamente se l' SP va offline. | Spegnere e riaccendere il sistema eseguendo le seguenti operazioni:… Estrarre il controller dallo chassis.… Reinserire il controller.… Riaccendere il controller.… Se il problema persiste, sostituire il modulo del controller. 
 
 
-| I ventilatori dello scaffale sono guasti | CRITICO | La ventola di raffreddamento indicata o il modulo ventola dello scaffale sono guasti.  I dischi nello scaffale potrebbero non ricevere un flusso d'aria di raffreddamento sufficiente, il che potrebbe causare guasti al disco. | Eseguire le seguenti azioni correttive:…Verificare che il modulo ventola sia completamente inserito e fissato.  NOTA: la ventola è integrata nel modulo di alimentazione in alcuni alloggiamenti per dischi. Se il problema persiste, sostituire il modulo ventola. Se il problema persiste, contattare l'assistenza tecnica NetApp per ricevere assistenza. 
+| Ventola dello shelf guasta | CRITICO | La ventola di raffreddamento indicata o il modulo ventola dello scaffale sono guasti.  I dischi nello scaffale potrebbero non ricevere un flusso d'aria di raffreddamento sufficiente, il che potrebbe causare guasti al disco. | Eseguire le seguenti azioni correttive:…Verificare che il modulo ventola sia completamente inserito e fissato.  NOTA: la ventola è integrata nel modulo di alimentazione in alcuni alloggiamenti per dischi. Se il problema persiste, sostituire il modulo ventola. Se il problema persiste, contattare l'assistenza tecnica NetApp per ricevere assistenza. 
 
 
 | Il sistema non può funzionare a causa di un guasto della ventola dell'unità principale | CRITICO | Una o più ventole dell'unità principale sono guaste, interrompendo il funzionamento del sistema.  Ciò potrebbe comportare una potenziale perdita di dati. | Sostituire le ventole guaste. 
@@ -209,7 +194,7 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Limite di utilizzo dello spazio FabricPool raggiunto | CRITICO | L'utilizzo totale dello spazio FabricPool a livello di cluster degli archivi di oggetti provenienti da provider con licenza di capacità ha raggiunto il limite di licenza. | Eseguire le seguenti azioni correttive:…Verificare la percentuale di capacità concessa in licenza utilizzata da ciascun livello di archiviazione FabricPool utilizzando il comando "storage aggregate object-store show-space".…Eliminare le copie snapshot dai volumi con il criterio di suddivisione in livelli "snapshot" o "backup" utilizzando il comando "volume snapshot delete" per liberare spazio.…Installare una nuova licenza sul cluster per aumentare la capacità concessa in licenza. 
 
 
-| Restituzione dell'aggregato fallita | CRITICO | Questo evento si verifica durante la migrazione di un aggregato come parte di un giveback di failover di archiviazione (SFO), quando il nodo di destinazione non riesce a raggiungere gli archivi di oggetti. | Eseguire le seguenti azioni correttive:…Verificare che il LIF intercluster sia online e funzionante utilizzando il comando "network interface show".…Verificare la connettività di rete al server dell'archivio oggetti utilizzando il comando "ping" sul LIF intercluster del nodo di destinazione.  …Verificare che la configurazione dell'archivio oggetti non sia cambiata e che le informazioni di accesso e connettività siano ancora corrette utilizzando il comando "aggregate object-store config show".…In alternativa, è possibile ignorare l'errore specificando false per il parametro "require-partner-waiting" del comando giveback.…Per ulteriori informazioni o assistenza, contattare l'assistenza tecnica NetApp . 
+| Il giveback del pool di storage non è riuscito | CRITICO | Questo evento si verifica durante la migrazione di un aggregato come parte di un giveback di failover di archiviazione (SFO), quando il nodo di destinazione non riesce a raggiungere gli archivi di oggetti. | Eseguire le seguenti azioni correttive:…Verificare che il LIF intercluster sia online e funzionante utilizzando il comando "network interface show".…Verificare la connettività di rete al server dell'archivio oggetti utilizzando il comando "ping" sul LIF intercluster del nodo di destinazione.  …Verificare che la configurazione dell'archivio oggetti non sia cambiata e che le informazioni di accesso e connettività siano ancora corrette utilizzando il comando "aggregate object-store config show".…In alternativa, è possibile ignorare l'errore specificando false per il parametro "require-partner-waiting" del comando giveback.…Per ulteriori informazioni o assistenza, contattare l'assistenza tecnica NetApp . 
 
 
 | Interconnessione HA inattiva | AVVERTIMENTO | L'interconnessione ad alta disponibilità (HA) non funziona.  Rischio di interruzione del servizio quando il failover non è disponibile. | Le azioni correttive dipendono dal numero e dal tipo di collegamenti di interconnessione HA supportati dalla piattaforma, nonché dal motivo per cui l'interconnessione non funziona.  …Se i collegamenti sono inattivi:…Verificare che entrambi i controller nella coppia HA siano operativi.…Per i collegamenti collegati esternamente, assicurarsi che i cavi di interconnessione siano collegati correttamente e che i moduli SFP (Small Form-Factor Pluggable), se applicabili, siano posizionati correttamente su entrambi i controller.…Per i collegamenti collegati internamente, disattivare e riattivare i collegamenti, uno dopo l'altro, utilizzando i comandi "ic link off" e "ic link on".  …Se i collegamenti sono disabilitati, abilitarli utilizzando il comando "ic link on".  …Se un peer non è connesso, disabilitare e riabilitare i collegamenti, uno dopo l'altro, utilizzando i comandi "ic link off" e "ic link on".…Se il problema persiste, contattare l'assistenza tecnica NetApp . 
@@ -242,13 +227,13 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Spazio dei nomi NVMe esaurito | CRITICO | Uno spazio dei nomi NVMe è stato messo offline a causa di un errore di scrittura causato dalla mancanza di spazio. | Aggiungere spazio al volume e quindi portare online lo spazio dei nomi NVMe utilizzando il comando "vserver nvme namespace modify". 
 
 
-| Periodo di grazia NVMe-oF attivo | AVVERTIMENTO | Questo evento si verifica quotidianamente quando è in uso il protocollo NVMe over Fabrics (NVMe-oF) e il periodo di grazia della licenza è attivo.  La funzionalità NVMe-oF richiede una licenza dopo la scadenza del periodo di grazia della licenza.  La funzionalità NVMe-oF viene disabilitata al termine del periodo di grazia della licenza. | Contatta il tuo rappresentante di vendita per ottenere una licenza NVMe-oF e aggiungerla al cluster oppure rimuovi tutte le istanze della configurazione NVMe-oF dal cluster. 
+| Periodo di grazia della licenza NVMe-oF attivo | AVVERTIMENTO | Questo evento si verifica quotidianamente quando è in uso il protocollo NVMe over Fabrics (NVMe-oF) e il periodo di grazia della licenza è attivo.  La funzionalità NVMe-oF richiede una licenza dopo la scadenza del periodo di grazia della licenza.  La funzionalità NVMe-oF viene disabilitata al termine del periodo di grazia della licenza. | Contatta il tuo rappresentante di vendita per ottenere una licenza NVMe-oF e aggiungerla al cluster oppure rimuovi tutte le istanze della configurazione NVMe-oF dal cluster. 
 
 
-| Periodo di grazia NVMe-oF scaduto | AVVERTIMENTO | Il periodo di grazia della licenza NVMe over Fabrics (NVMe-oF) è terminato e la funzionalità NVMe-oF è disabilitata. | Contatta il tuo rappresentante commerciale per ottenere una licenza NVMe-oF e aggiungerla al cluster. 
+| Periodo di grazia della licenza NVMe-oF scaduto | AVVERTIMENTO | Il periodo di grazia della licenza NVMe over Fabrics (NVMe-oF) è terminato e la funzionalità NVMe-oF è disabilitata. | Contatta il tuo rappresentante commerciale per ottenere una licenza NVMe-oF e aggiungerla al cluster. 
 
 
-| Inizio del periodo di grazia NVMe-oF | AVVERTIMENTO | La configurazione NVMe over Fabrics (NVMe-oF) è stata rilevata durante l'aggiornamento al software ONTAP 9.5.  La funzionalità NVMe-oF richiede una licenza dopo la scadenza del periodo di grazia della licenza. | Contatta il tuo rappresentante commerciale per ottenere una licenza NVMe-oF e aggiungerla al cluster. 
+| Inizio del periodo di grazia della licenza NVMe-oF | AVVERTIMENTO | La configurazione NVMe over Fabrics (NVMe-oF) è stata rilevata durante l'aggiornamento al software ONTAP 9.5.  La funzionalità NVMe-oF richiede una licenza dopo la scadenza del periodo di grazia della licenza. | Contatta il tuo rappresentante commerciale per ottenere una licenza NVMe-oF e aggiungerla al cluster. 
 
 
 | Host archivio oggetti non risolvibile | CRITICO | Il nome host del server di archiviazione degli oggetti non può essere risolto in un indirizzo IP.  Il client dell'archivio oggetti non può comunicare con il server dell'archivio oggetti senza risolvere un indirizzo IP.  Di conseguenza, i dati potrebbero risultare inaccessibili. | Controllare la configurazione DNS per verificare che il nome host sia configurato correttamente con un indirizzo IP. 
@@ -263,7 +248,7 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Timeout READDIR | CRITICO | Un'operazione sul file READDIR ha superato il timeout consentito per l'esecuzione in WAFL.  Ciò può essere dovuto a directory molto grandi o sparse.  Si raccomanda un'azione correttiva. | Eseguire le seguenti azioni correttive:…Trovare informazioni specifiche sulle directory recenti le cui operazioni sui file READDIR sono scadute utilizzando il seguente comando CLI nodeshell con privilegio 'diag': wafl readdir notice show.…Controllare se le directory sono indicate come sparse o meno:…Se una directory è indicata come sparse, si consiglia di copiare il contenuto della directory in una nuova directory per rimuovere la scarsità del file della directory.  …Se una directory non è indicata come sparse e la directory è di grandi dimensioni, si consiglia di ridurre le dimensioni del file della directory riducendo il numero di voci di file nella directory. 
 
 
-| Trasferimento dell'aggregato non riuscito | CRITICO | Questo evento si verifica durante lo spostamento di un aggregato, quando il nodo di destinazione non riesce a raggiungere gli archivi degli oggetti. | Eseguire le seguenti azioni correttive:…Verificare che il LIF intercluster sia online e funzionante utilizzando il comando "network interface show".…Verificare la connettività di rete al server dell'archivio oggetti utilizzando il comando "ping" sul LIF intercluster del nodo di destinazione.  …Verificare che la configurazione dell'archivio oggetti non sia cambiata e che le informazioni di accesso e connettività siano ancora corrette utilizzando il comando "aggregate object-store config show".…In alternativa, è possibile ignorare l'errore utilizzando il parametro "override-destination-checks" del comando di rilocazione.…Per ulteriori informazioni o assistenza, contattare l'assistenza tecnica NetApp . 
+| Spostamento del pool di storage non riuscito | CRITICO | Questo evento si verifica durante lo spostamento di un aggregato, quando il nodo di destinazione non riesce a raggiungere gli archivi degli oggetti. | Eseguire le seguenti azioni correttive:…Verificare che il LIF intercluster sia online e funzionante utilizzando il comando "network interface show".…Verificare la connettività di rete al server dell'archivio oggetti utilizzando il comando "ping" sul LIF intercluster del nodo di destinazione.  …Verificare che la configurazione dell'archivio oggetti non sia cambiata e che le informazioni di accesso e connettività siano ancora corrette utilizzando il comando "aggregate object-store config show".…In alternativa, è possibile ignorare l'errore utilizzando il parametro "override-destination-checks" del comando di rilocazione.…Per ulteriori informazioni o assistenza, contattare l'assistenza tecnica NetApp . 
 
 
 | Copia shadow non riuscita | CRITICO | Si è verificato un errore nel servizio Copia Shadow del volume (VSS), un'operazione di backup e ripristino del servizio Microsoft Server. | Verificare quanto segue utilizzando le informazioni fornite nel messaggio dell'evento:…La configurazione della copia shadow è abilitata?…Sono installate le licenze appropriate?  …Su quali condivisioni viene eseguita l'operazione di copia shadow?…Il nome della condivisione è corretto?…Il percorso della condivisione esiste?…Quali sono gli stati del set di copie shadow e delle relative copie shadow? 
@@ -281,19 +266,8 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Virus rilevato | AVVERTIMENTO | Un server Vscan ha segnalato un errore al sistema di archiviazione.  In genere questo indica che è stato trovato un virus.  Tuttavia, altri errori sul server Vscan possono causare questo evento.…L'accesso del client al file è negato.  A seconda delle impostazioni e della configurazione, il server Vscan potrebbe pulire il file, metterlo in quarantena o eliminarlo. | Controllare il registro del server Vscan riportato nell'evento "syslog" per verificare se è riuscito a pulire, mettere in quarantena o eliminare correttamente il file infetto.  Se ciò non fosse possibile, un amministratore di sistema potrebbe dover eliminare manualmente il file. 
 
 
-| Volume offline | INFORMAZIONI | Questo messaggio indica che un volume è stato reso offline. | Ripristinare il volume online. 
-
-
-| Volume limitato | INFORMAZIONI | Questo evento indica che un volume flessibile è stato reso limitato. | Ripristinare il volume online. 
-
-
-| Arresto della VM di archiviazione riuscito | INFORMAZIONI | Questo messaggio viene visualizzato quando un'operazione di 'arresto del vserver' riesce. | Utilizzare il comando 'vserver start' per avviare l'accesso ai dati su una VM di archiviazione. 
-
-
 | Nodo Panico | AVVERTIMENTO | Questo evento viene emesso quando si verifica un panico | Contattare l'assistenza clienti NetApp . 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[anti-ransomware-log-monitors]]
@@ -331,8 +305,6 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 
 | Attività ransomware rilevata | CRITICO | Per proteggere i dati dal ransomware rilevato, è stata creata una copia Snapshot che può essere utilizzata per ripristinare i dati originali.  Il sistema genera e trasmette un messaggio AutoSupport o "chiama casa" al supporto tecnico NetApp e a tutte le destinazioni configurate.  Il messaggio AutoSupport migliora la determinazione e la risoluzione dei problemi. | Fare riferimento a "FINAL-DOCUMENT-NAME" per adottare misure correttive in caso di attività ransomware. 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[fsx-for-netapp-ontap-monitors]]
@@ -361,8 +333,6 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 
 | Rapporto di mancata ricezione della cache del volume FSx | Attenzione @ > 95 %…Critico @ > 100 % | Il rapporto di mancata lettura nella cache del volume è la percentuale di richieste di lettura provenienti dalle applicazioni client che vengono restituite dal disco anziché dalla cache.  Ciò significa che il volume ha raggiunto la soglia impostata. | Se viene superata la soglia critica, è necessario adottare misure immediate per ridurre al minimo l'interruzione del servizio: 1.  Spostare alcuni carichi di lavoro dal nodo del volume per ridurre il carico di I/O 2.  Ridurre la richiesta di carichi di lavoro a priorità inferiore sullo stesso nodo tramite limiti QoS... Prendere in considerazione azioni immediate quando viene superata la soglia di avviso: 1.  Spostare alcuni carichi di lavoro dal nodo del volume per ridurre il carico di I/O 2.  Ridurre la richiesta di carichi di lavoro a priorità inferiore sullo stesso nodo tramite limiti QoS 3.  Modificare le caratteristiche del carico di lavoro (dimensione del blocco, memorizzazione nella cache dell'applicazione, ecc.) 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[k8s-monitors]]
@@ -413,7 +383,7 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Creazione del nodo non riuscita | Non è stato possibile pianificare il nodo a causa di un errore di configurazione. | Controllare il registro eventi di Kubernetes per individuare la causa dell'errore di configurazione. | Critico 
 
 
-| Recupero del volume persistente non riuscito | Il volume non ha superato il recupero automatico. |  | Attenzione @ > 0 B 
+| Recupero del volume persistente di Kubernetes non riuscito | Il volume non ha superato il recupero automatico. |  | Attenzione @ > 0 B 
 
 
 | Limitazione della CPU del contenitore | I limiti della CPU del contenitore sono impostati su un valore troppo basso.  I processi dei contenitori vengono rallentati. | Aumentare i limiti della CPU del contenitore. | Attenzione @ > 95 % Critico @ > 98 % 
@@ -446,7 +416,7 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | I limiti della CPU di ResourceQuota stanno per essere superati | I limiti della CPU per Namespace stanno per superare ResourceQuota |  | Attenzione @ > 80 % Critico @ > 90 % 
 
 
-| Pod Crash Loop Backoff | Pod si è bloccato e ha tentato di riavviarsi più volte. |  | Critico @ > 3 
+| Crash Loop Backoff del pod Kubernetes | Pod si è bloccato e ha tentato di riavviarsi più volte. |  | Critico @ > 3 
 
 
 | Nodo CPU alto | L'utilizzo della CPU del nodo è elevato. | Aggiungi nodi.  Correggere eventuali nodi non programmati.  Pod di dimensioni adeguate per liberare CPU sui nodi. | Attenzione @ > 80 % Critico @ > 90 % 
@@ -455,7 +425,7 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Latenza di rete del carico di lavoro RTT elevata | Elevata latenza TCP RTT (tempo di andata e ritorno) | Verifica la congestione della rete ▒ Identifica i carichi di lavoro che consumano molta larghezza di banda della rete.  Verificare l'elevato utilizzo della CPU del Pod.  Controllare le prestazioni della rete hardware. | Attenzione @ > 150 ms Critico @ > 300 ms 
 
 
-| Lavoro fallito | Il processo non è stato completato correttamente a causa di un arresto anomalo o riavvio del nodo, esaurimento delle risorse, timeout del processo o errore di pianificazione del pod. | Controllare i registri eventi di Kubernetes per individuare le cause degli errori. | Attenzione @ > 1 
+| Job Kubernetes non riuscito | Il processo non è stato completato correttamente a causa di un arresto anomalo o riavvio del nodo, esaurimento delle risorse, timeout del processo o errore di pianificazione del pod. | Controllare i registri eventi di Kubernetes per individuare le cause degli errori. | Attenzione @ > 1 
 
 
 | Volume persistente pieno in pochi giorni | Il volume persistente esaurirà lo spazio tra qualche giorno | -Aumentare le dimensioni del volume per garantire che ci sia spazio sufficiente per i file dell'applicazione.  -Ridurre la quantità di dati memorizzati nelle applicazioni. | Attenzione @ < 8 giorni Critico @ < 3 giorni 
@@ -487,8 +457,6 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 
 | Saturazione CPU cluster elevata | La saturazione della CPU allocabile nel cluster è elevata.  La saturazione della CPU del cluster viene calcolata come la somma dell'utilizzo della CPU divisa per la somma delle CPU allocabili su tutti i nodi K8. | Aggiungi nodi.  Correggere eventuali nodi non programmati.  Pod di dimensioni adeguate per liberare CPU sui nodi. | Attenzione @ > 80 % Critico @ > 90 % 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[change-log-monitors]]
@@ -500,16 +468,16 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Nome del monitor | Gravità | Descrizione del monitor 
 
 
-| Volume interno scoperto | Informativo | Questo messaggio viene visualizzato quando viene rilevato un volume interno. 
+| Volume scoperto | Informativo | Questo messaggio viene visualizzato quando viene rilevato un volume interno. 
 
 
-| Volume interno modificato | Informativo | Questo messaggio viene visualizzato quando viene modificato un volume interno. 
+| Volume modificato | Informativo | Questo messaggio viene visualizzato quando viene modificato un volume interno. 
 
 
-| Nodo di archiviazione scoperto | Informativo | Questo messaggio viene visualizzato quando viene rilevato un nodo di archiviazione. 
+| Nodo rilevato | Informativo | Questo messaggio viene visualizzato quando viene rilevato un nodo di archiviazione. 
 
 
-| Nodo di archiviazione rimosso | Informativo | Questo messaggio viene visualizzato quando viene rimosso un nodo di archiviazione. 
+| Nodo rimosso | Informativo | Questo messaggio viene visualizzato quando viene rimosso un nodo di archiviazione. 
 
 
 | Pool di archiviazione scoperto | Informativo | Questo messaggio viene visualizzato quando viene rilevato un pool di archiviazione. 
@@ -520,8 +488,6 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 
 | Macchina virtuale di archiviazione modificata | Informativo | Questo messaggio viene visualizzato quando viene modificata una macchina virtuale di archiviazione. 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[data-collection-monitors]]
@@ -533,73 +499,79 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Nome del monitor | Descrizione | Azione correttiva 
 
 
-| Arresto dell'unità di acquisizione | Le unità di acquisizione Data Infrastructure Insights vengono riavviate periodicamente come parte degli aggiornamenti per introdurre nuove funzionalità.  In un ambiente tipico, questo accade una volta al mese o meno.  Un avviso di avviso che segnala l'arresto di un'unità di acquisizione dovrebbe essere seguito subito dopo da una risoluzione che segnala che l'unità di acquisizione appena riavviata ha completato una registrazione con Data Infrastructure Insights.  In genere, il ciclo di spegnimento-registrazione dura dai 5 ai 15 minuti. | Se l'avviso si verifica frequentemente o dura più di 15 minuti, verificare il funzionamento del sistema che ospita l'Unità di acquisizione, della rete e di qualsiasi proxy che collega l'AU a Internet. 
-
-
 | Collettore fallito | Il sondaggio di un raccoglitore di dati ha riscontrato una situazione di errore imprevista. | Per saperne di più sulla situazione, visita la pagina del raccoglitore dati in Data Infrastructure Insights . 
 
 
 | Avviso al collezionista | Questo avviso può in genere verificarsi a causa di una configurazione errata del raccoglitore dati o del sistema di destinazione.  Rivedere le configurazioni per evitare futuri avvisi.  Può anche essere dovuto al recupero di dati incompleti, mentre il raccoglitore di dati ha raccolto tutti i dati che poteva.  Ciò può accadere quando le situazioni cambiano durante la raccolta dei dati (ad esempio, una macchina virtuale presente all'inizio della raccolta dei dati viene eliminata durante la raccolta dei dati e prima che i dati vengano acquisiti). | Controllare la configurazione del raccoglitore dati o del sistema di destinazione.  Si noti che il monitor per Collector Warning può inviare più avvisi rispetto ad altri tipi di monitor, pertanto si consiglia di non impostare alcun destinatario di avviso, a meno che non si stia risolvendo un problema. 
 |===
-<<top,Torna all'inizio>>
+
+
+[[attribute-monitors]]
+=== Monitor degli attributi
+
+I monitor degli attributi valutano gli attributi di configurazione segnalati per un oggetto. A differenza dei monitor delle metriche, non confrontano una metrica di serie temporali con una soglia numerica. Ciascuna delle condizioni seguenti genera un avviso di tipo _Warning_ quando l'attributo segnalato corrisponde a uno stato non conforme o non disponibile.
+
+I precedenti monitor autonomi delle metriche di sicurezza di ONTAP Essentials sono stati sostituiti dai monitor consolidati degli attributi *ONTAP Cluster Misconfigured* e *ONTAP Storage Misconfigured*. I corrispondenti monitor CVO applicano gli stessi controlli a Cloud Volumes ONTAP.
 
 
 
-[[security-monitors]]
-=== Monitor di sicurezza
+==== Monitor degli attributi ONTAP
 
+|===
+| Nome del monitor | Gruppo | Stato predefinito | Condizioni | Azione correttiva 
+
+
+| Configurazione errata del cluster ONTAP | Infrastruttura ONTAP | Attivo | Avvisi quando viene rilevata una o più di queste 12 condizioni di sicurezza: * AutoSupport HTTPS non è configurato * Web HTTP è abilitato * SSH non è protetto * Il banner di accesso è disabilitato * La comunicazione peer del cluster non è crittografata * L'emittente del certificato è autofirmato * L'amministratore locale predefinito è abilitato * FIPS è disabilitato * L'inoltro dei log non è crittografato * L'hashing della password MD5 è abilitato * Remote Shell (RSH) è abilitato * Telnet è abilitato | Esamina gli attributi interessati nell'avviso. Disabilita i protocolli non sicuri e l'hashing delle password, proteggi SSH e la comunicazione peer, abilita i controlli di sicurezza necessari e sostituisci i certificati autofirmati secondo la policy di sicurezza della tua organizzazione. 
+
+
+| Configurazione errata dello storage ONTAP | Infrastruttura ONTAP | Attivo | Ricevi avvisi quando una VM di storage ONTAP ha la registrazione degli audit disabilitata, SSH non è protetto o il banner di accesso è disabilitato. | Abilita la registrazione degli audit delle Storage VM, proteggi SSH e configura un banner di accesso appropriato. 
+
+
+| Il cluster ONTAP non dispone di dischi di riserva | Infrastruttura ONTAP | Attivo | Avvisi quando il cluster segnala che i dischi di riserva sono in esaurimento. | Esamina i dischi di riserva per nodo e aggiungi capacità di riserva compatibile per mantenere la protezione dei dati. 
+
+
+| Servizio di storage ONTAP non disponibile | Esempi di carico di lavoro ONTAP | Attivo | Ricevi avvisi quando un servizio FCP o iSCSI abilitato non è disponibile su una Storage VM ONTAP. | Verifica lo stato della Storage VM, del protocollo e della LIF dei dati. Controlla i messaggi recenti di stato e degli eventi di ONTAP e ripristina il servizio SAN interessato. 
+
+
+| Nodo ONTAP configurato in modo errato | Esempi di carico di lavoro ONTAP | In pausa | Avvisi quando Cisco Discovery Protocol (CDP) è disabilitato su un nodo ONTAP. | Verifica l'impostazione CDP del nodo e lo stato della porta di rete, quindi abilita CDP dove necessario per il rilevamento della rete e il monitoraggio della topologia. 
 |===
 
 
-| Nome del monitor | Soglia | Descrizione del monitor | Azione correttiva 
+==== Cloud Volumes ONTAP Monitor degli attributi
 
-
-| AutoSupport HTTPS AutoSupport disabilitato | Attenzione @ < 1 | AutoSupport supporta HTTPS, HTTP e SMTP per i protocolli di trasporto. Data la natura sensibile dei messaggi AutoSupport , NetApp consiglia vivamente di utilizzare HTTPS come protocollo di trasporto predefinito per l'invio dei messaggi AutoSupport al supporto NetApp . | Per impostare HTTPS come protocollo di trasporto per i messaggi AutoSupport , eseguire il seguente comando ONTAP :…system node autosupport modify -transport https 
-
-
-| Cifrari non sicuri del cluster per SSH | Attenzione @ < 1 | Indica che SSH utilizza cifrari non sicuri, ad esempio cifrari che iniziano con *cbc. | Per rimuovere i cifrari CBC, eseguire il seguente comando ONTAP :…security ssh remove -vserver <admin vserver> -ciphers aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc 
-
-
-| Banner di accesso al cluster disabilitato | Attenzione @ < 1 | Indica che il banner di accesso è disabilitato per gli utenti che accedono al sistema ONTAP .  La visualizzazione di un banner di accesso è utile per stabilire le aspettative relative all'accesso e all'utilizzo del sistema. | Per configurare il banner di accesso per un cluster, eseguire il seguente comando ONTAP :…security login banner modify -vserver <admin svm> -message "Accesso limitato agli utenti autorizzati" 
-
-
-| Comunicazione peer del cluster non crittografata | Attenzione @ < 1 | Quando si replicano dati per il ripristino di emergenza, la memorizzazione nella cache o il backup, è necessario proteggere tali dati durante il trasporto via cavo da un cluster ONTAP a un altro.  La crittografia deve essere configurata sia sul cluster di origine che su quello di destinazione. | Per abilitare la crittografia sulle relazioni tra peer del cluster create prima di ONTAP 9.6, il cluster di origine e quello di destinazione devono essere aggiornati alla versione 9.6.  Quindi utilizzare il comando "cluster peer modify" per modificare sia i peer del cluster di origine che quelli di destinazione in modo che utilizzino la crittografia del peering del cluster. Per i dettagli, consultare la Guida al rafforzamento della sicurezza NetApp per ONTAP 9. 
-
-
-| Utente amministratore locale predefinito abilitato | Attenzione @ > 0 | NetApp consiglia di bloccare (disabilitare) tutti gli account utente amministratore predefiniti (integrati) non necessari con il comando lock.  Si tratta principalmente di account predefiniti le cui password non sono mai state aggiornate o modificate. | Per bloccare l'account "admin" predefinito, eseguire il seguente comando ONTAP :…security login lock -username admin 
-
-
-| Modalità FIPS disabilitata | Attenzione @ < 1 | Quando è abilitata la conformità FIPS 140-2, TLSv1 e SSLv3 sono disabilitati e rimangono abilitati solo TLSv1.1 e TLSv1.2.  ONTAP impedisce di abilitare TLSv1 e SSLv3 quando è abilitata la conformità FIPS 140-2. | Per abilitare la conformità FIPS 140-2 su un cluster, eseguire il seguente comando ONTAP in modalità privilegio avanzata:…security config modify -interface SSL -is-fips-enabled true 
-
-
-| Inoltro del registro non crittografato | Attenzione @ < 1 | Lo scaricamento delle informazioni syslog è necessario per limitare la portata o l'impatto di una violazione su un singolo sistema o soluzione.  Pertanto, NetApp consiglia di scaricare in modo sicuro le informazioni syslog in un luogo di archiviazione o conservazione sicuro. | Una volta creata una destinazione di inoltro dei log, il suo protocollo non può essere modificato.  Per passare a un protocollo crittografato, eliminare e ricreare la destinazione di inoltro del registro utilizzando il seguente comando ONTAP :…cluster log-forwarding create -destination <destination ip> -protocol tcp-encrypted 
-
-
-| Password con hash MD5 | Attenzione @ > 0 | NetApp consiglia vivamente di utilizzare la funzione hash SHA-512 più sicura per le password degli account utente ONTAP .  Gli account che utilizzano la funzione hash MD5 meno sicura dovrebbero migrare alla funzione hash SHA-512. | NetApp consiglia vivamente agli account utente di migrare alla soluzione SHA-512 più sicura, chiedendo agli utenti di modificare le proprie password. Per bloccare gli account con password che utilizzano la funzione hash MD5, eseguire il seguente comando ONTAP : security login lock -vserver * -username * -hash-function md5 
-
-
-| Nessun server NTP è configurato | Attenzione @ < 1 | Indica che il cluster non ha server NTP configurati.  Per garantire ridondanza e un servizio ottimale, NetApp consiglia di associare almeno tre server NTP al cluster. | Per associare un server NTP al cluster, eseguire il seguente comando ONTAP : cluster time-service ntp server create -server <nome host o indirizzo IP del server ntp> 
-
-
-| Il numero di server NTP è basso | Attenzione @ < 3 | Indica che il cluster ha meno di 3 server NTP configurati.  Per garantire ridondanza e un servizio ottimale, NetApp consiglia di associare almeno tre server NTP al cluster. | Per associare un server NTP al cluster, eseguire il seguente comando ONTAP :…cluster time-service ntp server create -server <nome host o indirizzo IP del server ntp> 
-
-
-| Shell remota abilitata | Attenzione @ > 0 | Remote Shell non è un metodo sicuro per stabilire l'accesso tramite riga di comando alla soluzione ONTAP .  Per un accesso remoto sicuro, Remote Shell deve essere disabilitato. | NetApp consiglia Secure Shell (SSH) per l'accesso remoto sicuro. Per disabilitare la shell remota su un cluster, eseguire il seguente comando ONTAP in modalità privilegio avanzato: security protocol modify -application rsh- enabled false 
-
-
-| Registro di controllo della VM di archiviazione disabilitato | Attenzione @ < 1 | Indica che la registrazione di controllo è disabilitata per SVM. | Per configurare il registro di controllo per un vserver, eseguire il seguente comando ONTAP :…vserver audit enable -vserver <svm> 
-
-
-| Cifrature non sicure per SSH nella VM di archiviazione | Attenzione @ < 1 | Indica che SSH utilizza cifrari non sicuri, ad esempio cifrari che iniziano con *cbc. | Per rimuovere i cifrari CBC, eseguire il seguente comando ONTAP :…security ssh remove -vserver <vserver> -ciphers aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc 
-
-
-| Banner di accesso alla VM di archiviazione disabilitato | Attenzione @ < 1 | Indica che il banner di accesso è disabilitato per gli utenti che accedono alle SVM sul sistema.  La visualizzazione di un banner di accesso è utile per stabilire le aspettative relative all'accesso e all'utilizzo del sistema. | Per configurare il banner di accesso per un cluster, eseguire il seguente comando ONTAP :…security login banner modify -vserver <svm> -message "Accesso limitato agli utenti autorizzati" 
-
-
-| Protocollo Telnet abilitato | Attenzione @ > 0 | Telnet non è un metodo sicuro per stabilire l'accesso tramite riga di comando alla soluzione ONTAP .  Per un accesso remoto sicuro, Telnet dovrebbe essere disabilitato. | NetApp consiglia Secure Shell (SSH) per un accesso remoto sicuro.  Per disabilitare Telnet su un cluster, eseguire il seguente comando ONTAP in modalità privilegio avanzato:…security protocol modify -application telnet -enabled false 
 |===
-<<top,Torna all'inizio>>
+| Nome del monitor | Gruppo | Stato predefinito | Condizioni | Azione correttiva 
 
+
+| Cluster CVO configurato in modo errato | Infrastruttura CVO | Attivo | Applica i controlli di configurazione della sicurezza del cluster descritti per *ONTAP Cluster Misconfigured* a Cloud Volumes ONTAP. | Esamina gli attributi interessati e correggi le impostazioni del cluster segnalate come non sicure o non conformi. 
+
+
+| Archiviazione CVO configurata in modo errato | Infrastruttura CVO | Attivo | Avvisi quando una Storage VM di Cloud Volumes ONTAP ha la registrazione degli audit disabilitata, SSH non è protetto o il banner di accesso è disabilitato. | Abilita la registrazione degli audit delle Storage VM, proteggi SSH e configura un banner di accesso appropriato. 
+
+
+| Nodo CVO configurato in modo errato | Esempi di workload CVO | In pausa | Avvisi quando CDP è disabilitato su un nodo Cloud Volumes ONTAP. | Verifica le impostazioni CDP e di rete del nodo, poi abilita CDP dove necessario. 
+|===
+
+
+==== Monitor di configurazione NTP
+
+I seguenti monitor NTP rimangono disponibili come monitor di sistema autonomi per ONTAP e Cloud Volumes ONTAP.
+
+|===
+| Nome del monitor | Piattaforma | Soglia | Descrizione del monitor | Azione correttiva 
+
+
+| Nessun server NTP è configurato | ONTAP | Attenzione @ < 1 | Il cluster non ha server NTP configurati. Per garantire ridondanza e un servizio ottimale, NetApp consiglia di associare almeno tre server NTP al cluster. | Associa un server NTP al cluster utilizzando  `cluster time-service ntp server create -server <ntp_server>`. 
+
+
+| Il numero di server NTP è basso | ONTAP | Attenzione @ < 3 | Il cluster ha meno di tre server NTP configurati. | Associa server NTP aggiuntivi al cluster utilizzando  `cluster time-service ntp server create -server <ntp_server>`. 
+
+
+| CVO Nessun server NTP è configurato | Cloud Volumes ONTAP | Attenzione @ < 1 | Il cluster non ha server NTP configurati. | Associa un server NTP al cluster utilizzando  `cluster time-service ntp server create -server <ntp_server>`. 
+
+
+| Il numero di server NTP CVO è basso | Cloud Volumes ONTAP | Attenzione @ < 3 | Il cluster ha meno di tre server NTP configurati. | Associa server NTP aggiuntivi al cluster utilizzando  `cluster time-service ntp server create -server <ntp_server>`. 
+|===
 
 
 [[data-protection-monitors]]
@@ -616,8 +588,6 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 
 | Ritardo nella relazione SnapMirror | Attenzione @ > 150%…Critico @ > 300% | Il ritardo nella relazione SnapMirror è la differenza tra il timestamp dello snapshot e l'ora sul sistema di destinazione.  lag_time_percent è il rapporto tra il tempo di ritardo e l'intervallo di pianificazione della policy SnapMirror .  Se il tempo di ritardo è uguale all'intervallo di pianificazione, lag_time_percent sarà pari al 100%.  Se il criterio SnapMirror non ha una pianificazione, lag_time_percent non verrà calcolato. | Monitorare lo stato SnapMirror utilizzando il comando "snapmirror show".  Controlla la cronologia dei trasferimenti SnapMirror usando il comando "snapmirror show-history" 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[cloud-volume-cvo-monitors]]
@@ -677,9 +647,6 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Copia shadow CVO non riuscita | CRITICO | Si è verificato un errore nel servizio Copia Shadow del volume (VSS), un'operazione di backup e ripristino del servizio Microsoft Server. | Verificare quanto segue utilizzando le informazioni fornite nel messaggio dell'evento: la configurazione della copia shadow è abilitata?  Sono installate le licenze appropriate?  Su quali condivisioni viene eseguita l'operazione di copia shadow?  Il nome della condivisione è corretto?  Esiste il percorso di condivisione?  Quali sono gli stati del set di copie shadow e delle sue copie shadow? 
 
 
-| Arresto riuscito della VM di archiviazione CVO | INFORMAZIONI | Questo messaggio viene visualizzato quando un'operazione di 'arresto del vserver' riesce. | Utilizzare il comando 'vserver start' per avviare l'accesso ai dati su una VM di archiviazione. 
-
-
 | CVO Troppe autenticazioni CIFS | AVVERTIMENTO | Si sono verificate contemporaneamente numerose negoziazioni di autenticazione.  Ci sono 256 richieste di nuove sessioni incomplete da questo client. | Indagare sul motivo per cui il client ha creato 256 o più nuove richieste di connessione.  Potrebbe essere necessario contattare il fornitore del client o dell'applicazione per determinare il motivo per cui si è verificato l'errore. 
 
 
@@ -690,15 +657,7 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 
 
 | Rilevato virus CVO | AVVERTIMENTO | Un server Vscan ha segnalato un errore al sistema di archiviazione.  In genere questo indica che è stato trovato un virus.  Tuttavia, altri errori sul server Vscan possono causare questo evento.  L'accesso del client al file è negato.  A seconda delle impostazioni e della configurazione, il server Vscan potrebbe pulire il file, metterlo in quarantena o eliminarlo. | Controllare il registro del server Vscan riportato nell'evento "syslog" per verificare se è riuscito a pulire, mettere in quarantena o eliminare correttamente il file infetto.  Se ciò non fosse possibile, un amministratore di sistema potrebbe dover eliminare manualmente il file. 
-
-
-| Volume CVO offline | INFORMAZIONI | Questo messaggio indica che un volume è stato reso offline. | Ripristinare il volume online. 
-
-
-| Volume CVO limitato | INFORMAZIONI | Questo evento indica che un volume flessibile è stato reso limitato. | Ripristinare il volume online. 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[snapmirror-for-business-continuity-smbc-mediator-log-monitors]]
@@ -742,8 +701,6 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 
 | Certificato del server SMBC in scadenza | AVVERTIMENTO | Questo messaggio viene visualizzato quando il certificato del server ONTAP Mediator scade entro i prossimi 30 giorni. | Prima che questo certificato scada, rimuovere la configurazione dell'attuale mediatore ONTAP utilizzando il comando "snapmirror mediator remove".  Aggiornare un nuovo certificato server sul server ONTAP Mediator.  Riconfigurare l'accesso al mediatore ONTAP utilizzando il comando "snapmirror mediator add". 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[additional-power-heartbeat-and-miscellaneous-system-monitors]]
@@ -780,16 +737,16 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | I partner MetroCluster non sono raggiungibili tramite la rete di peering | CRITICO | La connettività al cluster peer è interrotta. | 1) Assicurarsi che la porta sia collegata alla rete/switch corretto.  2) Assicurarsi che il LIF intercluster sia connesso al cluster peer.  3) Assicurarsi che il cluster peer sia attivo e funzionante utilizzando il comando "cluster peer ping".  Se il cluster peer è inattivo, fare riferimento alla Guida al ripristino di emergenza MetroCluster . 
 
 
-| MetroCluster Inter Switch Tutti i collegamenti non attivi | CRITICO | Tutti i collegamenti Inter-Switch (ISL) sullo switch di archiviazione sono inattivi. | 1) Riparare gli ISL del fabric back-end sullo switch di archiviazione.  2) Assicurarsi che lo switch del partner sia attivo e che i suoi ISL siano operativi.  3) Assicurarsi che le apparecchiature intermedie, come i dispositivi xWDM, siano operative. 
+| MetroCluster Tutti i collegamenti tra gli switch sono interrotti | CRITICO | Tutti i collegamenti Inter-Switch (ISL) sullo switch di archiviazione sono inattivi. | 1) Riparare gli ISL del fabric back-end sullo switch di archiviazione.  2) Assicurarsi che lo switch del partner sia attivo e che i suoi ISL siano operativi.  3) Assicurarsi che le apparecchiature intermedie, come i dispositivi xWDM, siano operative. 
 
 
 | Collegamento SAS tra nodo MetroCluster e stack di archiviazione non attivo | AVVERTIMENTO | Il problema potrebbe essere dovuto all'adattatore SAS o al cavo collegato. | 1. Verificare che l'adattatore SAS sia online e in esecuzione. 2.  Verificare che il collegamento fisico del cavo sia sicuro e funzionante e, se necessario, sostituire il cavo. 3.  Se l'adattatore SAS è collegato agli scaffali dei dischi, assicurarsi che gli IOM e i dischi siano posizionati correttamente. 
 
 
-| Collegamenti dell'iniziatore MetroClusterFC non attivi | CRITICO | L'adattatore dell'iniziatore FC è difettoso. | 1. Assicurarsi che il collegamento dell'iniziatore FC non sia stato manomesso. 2.  Verificare lo stato operativo dell'adattatore dell'iniziatore FC utilizzando il comando "system node run -node local -command storage show adapter". 
+| Link dell'iniziatore FC MetroCluster down | CRITICO | L'adattatore dell'iniziatore FC è difettoso. | 1. Assicurarsi che il collegamento dell'iniziatore FC non sia stato manomesso. 2.  Verificare lo stato operativo dell'adattatore dell'iniziatore FC utilizzando il comando "system node run -node local -command storage show adapter". 
 
 
-| Collegamento di interconnessione FC-VI inattivo | CRITICO | Il collegamento fisico sulla porta FC-VI è offline. | 1. Assicurarsi che il collegamento FC-VI non sia stato manomesso. 2.  Verificare che lo stato fisico dell'adattatore FC-VI sia "Up" utilizzando il comando "metrocluster interconnect adapter show". 3.  Se la configurazione include switch fabric, assicurarsi che siano cablati e configurati correttamente. 
+| MetroCluster FC-VI Interconnect Link non funzionante | CRITICO | Il collegamento fisico sulla porta FC-VI è offline. | 1. Assicurarsi che il collegamento FC-VI non sia stato manomesso. 2.  Verificare che lo stato fisico dell'adattatore FC-VI sia "Up" utilizzando il comando "metrocluster interconnect adapter show". 3.  Se la configurazione include switch fabric, assicurarsi che siano cablati e configurati correttamente. 
 
 
 | Dischi di riserva MetroCluster lasciati indietro | AVVERTIMENTO | Il disco di riserva è stato lasciato indietro durante il ritorno. | Se il disco non è danneggiato, restituirlo al proprietario originale utilizzando il comando "metrocluster switchback". 
@@ -813,13 +770,8 @@ Di seguito sono elencati i monitor di sistema attualmente inclusi in Data Infras
 | Temperatura anomala dell'interruttore MetroCluster | CRITICO | Il sensore di temperatura sullo switch Fibre Channel ha segnalato una temperatura anomala. | 1) Verificare lo stato operativo dei sensori di temperatura sullo switch di accumulo utilizzando il comando "storage switch show -cooling".  2) Verificare che l'interruttore funzioni alle condizioni di temperatura consigliate. 
 
 
-| Heartbeat del processore di servizio perso | INFORMATIVO | Questo messaggio viene visualizzato quando ONTAP non riceve il segnale "heartbeat" previsto dal Service Processor (SP).  Insieme a questo messaggio, verranno inviati i file di registro di SP per il debug.  ONTAP reimposterà l' SP per tentare di ripristinare la comunicazione.  Durante il riavvio, l' SP non sarà disponibile per un massimo di due minuti. | Contattare l'assistenza tecnica NetApp . 
-
-
 | Heartbeat del processore di servizio arrestato | AVVERTIMENTO | Questo messaggio viene visualizzato quando ONTAP non riceve più heartbeat dal Service Processor (SP).  A seconda della progettazione hardware, il sistema potrebbe continuare a fornire dati oppure potrebbe decidere di spegnersi per evitare perdite di dati o danni all'hardware.  Il sistema continua a fornire dati, ma poiché il SP potrebbe non funzionare, non è in grado di inviare notifiche di dispositivi inattivi, errori di avvio o errori POST (Power-On Self-Test) di Open Firmware (OFW).  Se il sistema è configurato per farlo, genera e trasmette un messaggio AutoSupport (o "chiamata a casa") al supporto tecnico NetApp e alle destinazioni configurate.  La corretta consegna di un messaggio AutoSupport migliora significativamente la determinazione e la risoluzione dei problemi. | Se il sistema si è spento, provare a eseguire un hard power cycle: estrarre il controller dallo chassis, spingerlo nuovamente dentro e accendere il sistema.  Contattare l'assistenza tecnica NetApp se il problema persiste dopo il ciclo di accensione e spegnimento o per qualsiasi altra condizione che potrebbe richiedere attenzione. 
 |===
-<<top,Torna all'inizio>>
-
 
 
 [[more-information]]
