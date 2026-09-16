@@ -7,6 +7,10 @@ summary: Installazione, disinstallazione, configurazione del supporto proxy e al
 = Configurazione delle unità di acquisizione
 :hardbreaks:
 :allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -89,7 +93,15 @@ Il modo più semplice per farlo è specificare la configurazione jolly nel proxy
 
 NOTE: L'uso di un asterisco (*) come carattere jolly è comune, ma la configurazione del proxy/firewall potrebbe utilizzare un formato diverso.  Consultare la documentazione del proxy per garantire la corretta specifica dei caratteri jolly nel proprio ambiente.
 
+Se noti che il tuo AU è bloccato mentre tenta di connettersi a DII, prova ad aggiungere questi endpoint al tuo proxy:
+
+....
+api.bluexp.netapp.com
+netapp-cloud-account.auth0.com
+....
 Ulteriori informazioni sulla configurazione del proxy sono disponibili in NetApplink:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/Where_is_the_proxy_information_saved_to_in_the_Cloud_Insights_Acquisition_Unit["Base di conoscenza"] .
+
+Gli endpoint proxy specifici della NetApp Console di cui potresti aver bisogno sono elencati nella link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["Configurazione console Admin"] documentazione.
 
 
 
