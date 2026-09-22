@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task_add_collector_svm.html 
-keywords: data collector, ONTAP, NetApp, SVM, cloud ontap, firewall 
-summary: Aggiunta di raccoglitori di dati di sicurezza del carico di lavoro 
+keywords: data collector, ONTAP, NetApp, SVM, cloud ontap, firewall, Workload Security 
+summary: Configura e risolvi i problemi del data collector ONTAP SVM per Workload Security. 
 ---
 = Configurazione del raccoglitore dati ONTAP SVM
 :hardbreaks:
@@ -14,163 +14,219 @@ summary: Aggiunta di raccoglitori di dati di sicurezza del carico di lavoro
 
 
 [role="lead"]
-ONTAP SVM Data Collector consente a Workload Security di monitorare le attività di accesso ai file e agli utenti sulle macchine virtuali di storage (SVM) NetApp ONTAP . Questa guida illustra la configurazione e la gestione del raccoglitore dati SVM per garantire un monitoraggio completo della sicurezza del tuo ambiente ONTAP .
+Il Data Collector SVM di ONTAP consente a Workload Security di monitorare l'attività di accesso a file e utenti sulle NetApp ONTAP storage virtual machines (SVM). Il collector si connette a ONTAP tramite HTTPS per configurare FPolicy; ONTAP si connette poi all'agente Workload Security per trasmettere in streaming gli eventi di accesso a file e utenti. Questa guida copre le versioni supportate, i prerequisiti, i metodi di connessione, le autorizzazioni, il pre-check Test Connection, i campi di configurazione, la configurazione specifica delle funzionalità e i problemi comuni con le relative soluzioni.
+
+[quote]
+____
+*Consigliato:* Per una configurazione più rapida e affidabile, connettiti tramite l'indirizzo IP di gestione del cluster {plus} il nome SVM con le credenziali del cluster ed esegui Test Connessione prima di salvare. Questa singola best practice previene la maggior parte dei problemi di configurazione del collector.
+
+____
+
+
+
+[[supported-versions-and-platforms]]
+== Versioni e piattaforme supportate
+
+[cols="50%,50%"]
+|===
+| *Elemento* | *Supporto* 
+
+
+| ONTAP (minimo) | ONTAP 9.2 e versioni successive. Per prestazioni ottimali, usa ONTAP successivo alla 9.13.1. 
+
+
+| PMI | SMB 3.1 e versioni precedenti. 
+
+
+| NFS | Fino a NFS 4.1 incluso (NFS 4.1 richiede ONTAP 9.15 o versioni successive). 
+
+
+| FlexGroup | ONTAP 9.4 e versioni successive. 
+
+
+| FlexCache (NFS) | ONTAP 9.7 e versioni successive. 
+
+
+| FlexCache (SMB) | ONTAP 9.14.1 e versioni successive. 
+
+
+| ONTAP Select | Supportato. 
+
+
+| Tipo/sottotipo SVM | Solo SVM di dati (nessun volume infinito). Sottotipi supportati: default, sync++_++source, sync++_++destination. Le SVM di destinazione DP vengono escluse dall'audit per progettazione. 
+
+
+| policy di servizio data-fpolicy-client | Obbligatorio da ONTAP 9.8 in poi (vedi Service policy). Nelle versioni precedenti non è necessario impostarlo. 
+
+
+| Versioni minime delle funzionalità | Accesso negato: 9.13.0{plus} • Eventi Autonomous Ransomware Protection (ARP): 9.11.1{plus} • Archivio persistente: 9.14.1{plus} • Formato evento Protobuf: 9.15{plus} 
+|===
+[quote]
+____
+*Important:* La policy di servizio data-fpolicy-client è obbligatoria a partire da ONTAP 9.8. Nelle versioni precedenti non è necessario impostarla.
+
+____
 
 
 
 [[before-you-begin]]
 == Prima di iniziare
 
-* Questo raccoglitore di dati è supportato da quanto segue:
-+
-** Data ONTAP 9.2 e versioni successive.  Per prestazioni ottimali, utilizzare una versione Data ONTAP successiva alla 9.13.1.
-** Protocollo SMB versione 3.1 e precedenti.
-** Versioni NFS fino a NFS 4.1 inclusa (si noti che NFS 4.1 è supportato con ONTAP 9.15 o versioni successive).
-** Flexgroup è supportato da ONTAP 9.4 e versioni successive
-** FlexCache è supportato per NFS con ONTAP 9.7 e versioni successive.
-** FlexCache è supportato per SMB con ONTAP 9.14.1 e versioni successive.
-** ONTAP Select è supportato
-
-
-* Sono supportati solo i tipi di dati SVM.  Le SVM con volumi infiniti non sono supportate.
-* SVM ha diversi sottotipi.  Di questi, sono supportati solo _default_, _sync_source_ e _sync_destination_.
-* Un agentelink:task_cs_add_agent.html["deve essere configurato"] prima di poter configurare i raccoglitori di dati.
-* Assicurati di avere configurato correttamente un connettore directory utente, altrimenti gli eventi mostreranno nomi utente codificati e non il nome effettivo dell'utente (come memorizzato in Active Directory) nella pagina "Attività forense".
-* ONTAP Persistent Store è supportato dalla versione 9.14.1.
-* Per prestazioni ottimali, è consigliabile configurare il server FPolicy in modo che si trovi sulla stessa subnet del sistema di archiviazione.
-
-
-[[fpolicy-best-practices]]
-* Per le migliori pratiche e raccomandazioni complete riguardanti la configurazione di Workload Security FPolicy, vederelink:https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/DII_Storage_Workload_Security__Fpolicy_Best_Practice_and_Recommendations["Articolo della Knowledge Base sulle migliori pratiche di FPolicy"^] .
-* È necessario aggiungere una SVM utilizzando uno dei due metodi seguenti:
-+
-** Utilizzando l'IP del cluster, il nome SVM e il nome utente e la password di gestione del cluster.  *_Questo è il metodo consigliato._*
-+
-*** Il nome SVM deve essere esattamente come mostrato in ONTAP e deve essere sensibile alle maiuscole e alle minuscole.
-
-
-** Utilizzando l'IP di gestione del server virtuale SVM, nome utente e password
-** Se non si è in grado o non si desidera utilizzare il nome utente e la password completi di gestione del cluster/SVM dell'amministratore, è possibile creare un utente personalizzato con privilegi inferiori come indicato in<<a-note-about-permissions,“Una nota sui permessi”>> sezione sottostante.  Questo utente personalizzato può essere creato per l'accesso SVM o Cluster.
-+
-*** È anche possibile utilizzare un utente AD con un ruolo che abbia almeno le autorizzazioni di csrole, come indicato nella sezione "Nota sulle autorizzazioni" di seguito.  Fare riferimento anche alink:https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2FGUID-0DB65B04-71DB-43F4-9A0F-850C93C4896C.html["Documentazione ONTAP"] .
+* Devi installare e connettere un agente prima di poter eseguire Test Connection o aggiungere un data collector. Vedi Deploy Workload Security Agents e Agent Requirements.
+* Configura un User Directory Collector per ogni dominio i cui utenti accedono all'SVM monitorato. Test Connection non è disponibile per i User Directory collector; senza uno, Activity Forensics mostra i SID invece dei nomi utente.
+* Riserva le porte di callback FPolicy necessarie verso l'Agent. Il test di connessione utilizza solo le porte attive allocate, non l'intero intervallo riservato. Assicurati inoltre che ogni LIF dati SVM possa instradare verso l'Agent; il risultato IP dell'Agent seleziona un indirizzo locale ma non testa il percorso.
+* Configura un solo collector, in un solo ambiente di Workload Security, per una SVM. Test Connection non rileva un collector duplicato in un altro ambiente.
 
 
 
 
-* Assicurarsi che siano impostate le applicazioni corrette per l'SVM eseguendo il seguente comando:
-+
- clustershell:> security login show -vserver <vservername> -user-or-group-name <username>
+[[network-requirements]]
+== Requisiti di rete
+
+[cols="34%,33%,33%"]
+|===
+| *Percorso* | *Porta(e)* | *Scopo* 
 
 
-Esempio di output:image:cs_svm_sample_output.png["Esempio di output del comando SVM"]
-
-* Assicurarsi che l'SVM abbia un server CIFS configurato: clustershell:> `vserver cifs show`
-+
-Il sistema restituisce il nome del Vserver, il nome del server CIFS e campi aggiuntivi.
-
-* Imposta una password per l'utente SVM vsadmin.  Se si utilizza un utente personalizzato o un utente amministratore del cluster, saltare questo passaggio. clustershell:> `security login password -username vsadmin -vserver svmname`
-* Sbloccare l'utente SVM vsadmin per l'accesso esterno.  Se si utilizza un utente personalizzato o un utente amministratore del cluster, saltare questo passaggio. clustershell:> `security login unlock -username vsadmin -vserver svmname`
-* Assicurarsi che la policy del firewall dei dati LIF sia impostata su 'mgmt' (non 'data').  Salta questo passaggio se utilizzi un lif di gestione dedicato per aggiungere l'SVM. clustershell:> `network interface modify -lif <SVM_data_LIF_name> -firewall-policy mgmt`
-* Quando un firewall è abilitato, è necessario definire un'eccezione per consentire il traffico TCP per la porta utilizzando Data ONTAP Data Collector.
-+
-Vederelink:concept_cs_agent_requirements.html["Requisiti dell'agente"] per informazioni sulla configurazione.  Ciò vale per gli agenti on-premise e per gli agenti installati nel cloud.
-
-* Quando un agente viene installato in un'istanza AWS EC2 per monitorare un Cloud ONTAP SVM, l'agente e lo storage devono trovarsi nella stessa VPC.  Se si trovano in VPC separate, deve esserci un percorso valido tra le VPC.
+| Agente → ONTAP (IP di gestione del cluster o SVM) | TCP 443 | REST/ONTAPI su HTTPS per configurare FPolicy. 
 
 
+| ONTAP SVM data LIFs → Agente | TCP 35000–55000 | Eventi di accesso a file/utente FPolicy (ONTAP richiama l'agente). 
 
 
-[[test-connectivity-for-data-collectors]]
-== Test di connettività per i collettori di dati
-
-La funzionalità di test della connettività (introdotta a marzo 2025) ha lo scopo di aiutare gli utenti finali a identificare le cause specifiche dei guasti durante la configurazione dei raccoglitori di dati in Data Infrastructure Insights (DII) Workload Security.  Ciò consente agli utenti di correggere autonomamente i problemi relativi alla comunicazione di rete o ai ruoli mancanti.
-
-Questa funzionalità aiuterà gli utenti a determinare se tutti i controlli relativi alla rete sono stati eseguiti prima di configurare un raccoglitore dati.  Inoltre, informerà gli utenti sulle funzionalità a cui possono accedere in base alla versione ONTAP , ai ruoli e alle autorizzazioni loro assegnate in ONTAP.
+| IP di gestione del cluster ONTAP → Agente | TCP 35000–55000 | Eventi EMS (ad esempio ARP), quando usi queste funzionalità. 
 
 
-NOTE: La connettività di prova non è supportata per i collettori di directory utente
+| Agente → Gestione del cluster ONTAP | SSH 22 | Blocco utenti CIFS/SMB (credenziali del cluster). 
+|===
+Non è necessario aprire l'intero intervallo 35000–55000. Ogni SVM utilizza fino a 4 porte (2 per protocollo abilitato — NFS e CIFS/SMB); riserva circa 200 porte per un Agent completamente carico (50 collector). Apri l'intervallo verso l'Agent, includendo qualsiasi firewall presente sull'host dell'Agent stesso.
+
+[quote]
+____
+*Nota:* Quando è attivo un firewall, definisci un'eccezione per le porte utilizzate dal collector. Quando l'Agent viene eseguito in AWS per monitorare una Cloud ONTAP SVM, l'Agent e lo storage devono trovarsi nella stessa VPC oppure deve esistere una rotta valida tra le VPC.
+
+____
 
 
 
-[[prerequisites-for-connection-testing]]
-=== Prerequisiti per il test di connessione
+[[choose-a-connection-method]]
+== Scegli un metodo di connessione
 
-* Per il pieno funzionamento di questa funzionalità sono necessarie le credenziali a livello di cluster.
-* Il controllo dell'accesso alle funzionalità non è supportato in modalità SVM.
-* Se si utilizzano credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
-* Se si utilizza un utente personalizzato (ad esempio, _csuser_), fornire le autorizzazioni obbligatorie e le autorizzazioni specifiche per le funzionalità che si desidera utilizzare.
+Aggiungi un SVM utilizzando uno dei due metodi. Cluster IP {plus} nome SVM è fortemente consigliato.
 
-
-image:ws_test_connection_button.png["pulsante di connessione del test di sicurezza del carico di lavoro"]
-
-Assicurati di rivedere il<<a-note-about-permissions,Permessi>> anche nella sezione sottostante.
+[cols="25%,25%,25%,25%"]
+|===
+| *Metodo* | *Credenziali* | *Cosa ottieni* | *Note* 
 
 
-
-[[test-the-connection]]
-=== Testare la connessione
-
-L'utente può andare alla pagina Aggiungi/Modifica collettore, immettere i dettagli a livello di cluster (in modalità Cluster) o i dettagli a livello di SVM (in modalità SVM) e fare clic sul pulsante *Test connessione*.  Workload Security elaborerà quindi la richiesta e visualizzerà un messaggio appropriato di successo o fallimento.
-
-image:ws_test_connection_success_example.png["Messaggio di successo \"Test connessione\" di Workload Security"]
+| IP di gestione del cluster {plus} Nome SVM (consigliato) | Cluster-admin, o csuser, o un utente AD con un ruolo equivalente a csrole | Funzionalità completa, incluse la funzione Test Connection, i controlli RBAC e le funzionalità basate su EMS (ARP). | Il nome SVM deve corrispondere esattamente a ONTAP (fa distinzione tra maiuscole e minuscole). 
 
 
+| IP di gestione SVM | vsadmin, o csuser, o un utente AD con un ruolo equivalente a csrole | Controllo principale. Test Connection non può eseguire controlli delle funzionalità/RBAC in modalità SVM (l'account SVM non ha l'autorizzazione per eseguirli). | Usa un LIF di gestione SVM dedicato oppure imposta la policy del firewall del LIF dati su mgmt (vedi sotto). 
+|===
+[quote]
+____
+*Errore comune:* Quando ti connetti tramite IP SVM con vsadmin e il LIF ha un ruolo combinato di dati {plus} e gestione, il ping funziona ma SSH no. Crea un LIF solo per la gestione SVM oppure imposta la policy del firewall del LIF dati su mgmt.
 
-[[things-to-note-for-ontap-multi-admin-verify-mav]]
-== Cose da notare per ONTAP Multi Admin Verify (MAV)
-
-Alcune funzionalità, come la creazione e l'eliminazione di snapshot o il blocco utente (SMB), potrebbero non funzionare in base ai comandi MAV aggiunti nella tua versione di ONTAP.
-
-Seguire i passaggi indicati di seguito per aggiungere esclusioni ai comandi MAV che consentono a Workload Security di creare o eliminare snapshot e bloccare gli utenti.
-
-Comandi per consentire la creazione e l'eliminazione di snapshot:
-
-....
-multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !*cloudsecure_*"
-multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !*cloudsecure_*"
-....
-Comando per consentire il blocco dell'utente:
-
- multi-admin-verify rule delete -operation set
-
-
-[[prerequisites-for-user-access-blocking]]
-== Prerequisiti per il blocco dell'accesso utente
-
-Tieni presente quanto segue perlink:cs_restrict_user_access.html["Blocco dell'accesso utente"] :
-
-Per il funzionamento di questa funzionalità sono necessarie le credenziali a livello di cluster.
-
-Se si utilizzano credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
-
-Se si utilizza un utente personalizzato (ad esempio, _csuser_) con autorizzazioni concesse all'utente, seguire i passaggi inlink:cs_restrict_user_access.html["Blocco dell'accesso utente"] per concedere a Workload Security l'autorizzazione a bloccare l'utente.
+____
 
 
 
-[[a-note-about-permissions]]
-== Una nota sui permessi
+[[if-you-use-svm-management-ip]]
+=== Se usi l'IP di gestione SVM
+
+_Si consiglia di utilizzare il nome SVM per l'IP di gestione del cluster {plus}. Se devi usare la modalità SVM, completa questa configurazione prima di testare la connessione:_
+
+*Imposta e sblocca la password vsadmin per l'accesso esterno:*
+
+[listing]
+----
+security login password -username vsadmin -vserver ++<++svmname++>++
+
+security login unlock -username vsadmin -vserver ++<++svmname++>++
+----
+*Usa un LIF di gestione SVM dedicato. Se non è disponibile, imposta la policy del firewall del LIF dati su mgmt:*
+
+[listing]
+----
+network interface modify -lif ++<++SVM++_++data++_++LIF++_++name++>++ -firewall-policy mgmt
+----
+.Esempio di output di accesso SVM.
+image:ontap-svm-login-output.png["Esempio di output di login SVM,title=\"Esempio di output di login SVM\",width=646,height=164"]
+
+[quote]
+____
+*Importante:* La modalità SVM non può eseguire la funzionalità e i controlli RBAC. Usa l'indirizzo IP di gestione del cluster {plus} nome SVM quando possibile.
+
+____
 
 
 
-[[permissions-when-adding-via-cluster-management-ip]]
-=== Autorizzazioni durante l'aggiunta tramite *IP di gestione cluster*:
+[[permissions-rbac]]
+== Autorizzazioni (RBAC)
 
-Se non è possibile utilizzare l'utente amministratore di gestione del cluster per consentire a Workload Security di accedere al raccoglitore dati ONTAP SVM, è possibile creare un nuovo utente denominato "csuser" con i ruoli indicati nei comandi seguenti.  Utilizzare il nome utente "csuser" e la password per "csuser" quando si configura il raccoglitore dati Workload Security per utilizzare l'IP di gestione cluster.
+Test Connection viene eseguito con l'account ONTAP inserito nel modulo del collector. Prima di eseguirlo, usa le credenziali di cluster-admin oppure crea csuser/csrole con i privilegi richiesti indicati qui sotto. Senza questi privilegi, Test Connection non può convalidare o configurare FPolicy e le funzionalità selezionate.
 
-Nota: è possibile creare un singolo ruolo da utilizzare per tutte le autorizzazioni delle funzionalità per un utente personalizzato.  Se esiste già un utente, eliminare prima l'utente e il ruolo esistenti utilizzando questi comandi:
+*Privilegi minimi per funzionalità*
 
-....
-security login delete -user-or-group-name csuser -application *
-security login role delete -role csrole -cmddirname *
-security login rest-role delete -role csrestrole -api *
-security login rest-role delete -role arwrole -api *
-....
-Per creare il nuovo utente, accedere a ONTAP con il nome utente/password dell'amministratore di gestione del cluster ed eseguire i seguenti comandi sul server ONTAP :
+[cols="34%,33%,33%"]
+|===
+| *Capacità* | *Privilegi richiesti* | *floor ONTAP* 
 
- security login role create -role csrole -cmddirname DEFAULT -access readonly
-....
+
+| FPolicy (obbligatorio per tutte le implementazioni) | vserver fpolicy: all | Qualsiasi supportato 
+
+
+| Collegamento amministratore | ruolo DEFAULT: sola lettura (cluster) — soddisfa i controlli di lettura; fpolicy ha ancora bisogno di tutto | — 
+
+
+| Istantanee | snapshot del volume: tutti (ambito fino a cloudsecure++_*++ dove possibile) | Qualunque 
+
+
+| Monitoraggio basato su EMS | catalogo eventi, filtro eventi, notifica eventi, destinazione notifica eventi, certificato di sicurezza: tutti | Qualunque 
+
+
+| Accesso ONTAP negato | Accesso REST {plus} vserver fpolicy events | 9.13.0{plus} 
+
+
+| Eventi di Autonomous Ransomware Protection (ARP) | sicurezza anti-ransomware volume {plus} volume: sola lettura/tutto | 9.11.1{plus} 
+
+
+| Archivio persistente | vserver fpolicy: all {plus} job show: readonly (o all) | 9.14.1{plus} 
+
+
+| Formato evento Protobuf | vserver fpolicy: all | 9.15{plus} 
+
+
+| Blocco dell'accesso utente (SMB e NFS) | SSH (applicazione ssh {plus} porta 22) {plus} impostato: all, e vserver export-policy rule, vserver cifs session, vserver services access-check authentication translate, vserver name-mapping: all. Solo credenziali del cluster. | Qualunque 
+|===
+[quote]
+____
+*Errore comune:* Per gli account ONTAP basati su Active Directory, assegna il ruolo direttamente all'utente. Se il ruolo viene assegnato solo a livello di gruppo, il controllo delle autorizzazioni non può leggerlo e Test Connection segnala "Ruoli assegnati a livello di gruppo anziché a livello di utente per questo utente di Active Directory".
+
+____
+
+
+
+[[create-csuser-via-cluster-management-ip]]
+=== Crea csuser tramite IP di gestione del cluster
+
+Se devi prima sostituire un csuser/csrole esistente:
+
+[listing]
+----
+security login delete -user-or-group-name csuser -application ++*++
+security login role delete -role csrole -cmddirname ++*++
+security login rest-role delete -role csrestrole -api ++*++
+security login rest-role delete -role arwrole -api ++*++
+----
+Crea il ruolo e l'utente (esegui come amministratore del cluster):
+
+[listing]
+----
+security login role create -role csrole -cmddirname DEFAULT -access readonly
 security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure_*"
+security login role create -role csrole -cmddirname "volume snapshot" -access all -query "-snapshot cloudsecure++_*++"
 security login role create -role csrole -cmddirname "event catalog" -access all
 security login role create -role csrole -cmddirname "event filter" -access all
 security login role create -role csrole -cmddirname "event notification destination" -access all
@@ -180,254 +236,335 @@ security login role create -role csrole -cmddirname "cluster application-record"
 security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole
 security login create -user-or-group-name csuser -application ssh -authmethod password -role csrole
 security login create -user-or-group-name csuser -application http -authmethod password -role csrole
-....
+----
 
 
-[[permissions-when-adding-via-vserver-management-ip]]
-=== Autorizzazioni durante l'aggiunta tramite *IP di gestione Vserver*:
+[[create-csuser-via-svm-vserver-management-ip]]
+=== Crea csuser tramite IP di gestione SVM (Vserver)
 
-Se non è possibile utilizzare l'utente amministratore di gestione del cluster per consentire a Workload Security di accedere al raccoglitore dati ONTAP SVM, è possibile creare un nuovo utente denominato "csuser" con i ruoli indicati nei comandi seguenti.  Utilizzare il nome utente "csuser" e la password per "csuser" quando si configura il raccoglitore dati Workload Security per utilizzare l'IP di gestione Vserver.
+Se devi prima sostituire un csuser/csrole esistente:
 
-Nota: è possibile creare un singolo ruolo da utilizzare per tutte le autorizzazioni delle funzionalità per un utente personalizzato.  Se esiste già un utente, eliminare prima l'utente e il ruolo esistenti utilizzando questi comandi:
+[listing]
+----
+security login delete -user-or-group-name csuser -application ++*++ -vserver ++<++vservername++>++
+security login role delete -role csrole -cmddirname ++*++ -vserver ++<++vservername++>++
+security login rest-role delete -role csrestrole -api ++*++ -vserver ++<++vservername++>++
+----
+Crea il ruolo e l'utente (sostituisci ++<++vservername++>++ prima di eseguire):
 
-....
-security login delete -user-or-group-name csuser -application * -vserver <vservername>
-security login role delete -role csrole -cmddirname * -vserver <vservername>
-security login rest-role delete -role csrestrole -api * -vserver <vservername>
-....
-Per creare il nuovo utente, accedere a ONTAP con il nome utente e la password dell'amministratore di gestione del cluster ed eseguire i seguenti comandi sul server ONTAP .  Per semplicità, copia questi comandi in un editor di testo e sostituisci <vservername> con il nome del tuo Vserver prima di eseguire questi comandi su ONTAP:
+[listing]
+----
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname DEFAULT -access none
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "network interface" -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname version -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname volume -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname vserver -access readonly
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -vserver ++<++vservername++>++ -role csrole -cmddirname "volume snapshot" -access all
+security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver ++<++vservername++>++
+security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver ++<++vservername++>++
+----
 
- security login role create -vserver <vservername> -role csrole -cmddirname DEFAULT -access none
-....
-security login role create -vserver <vservername> -role csrole -cmddirname "network interface" -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname version -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname volume -access readonly
-security login role create -vserver <vservername> -role csrole -cmddirname vserver -access readonly
-....
-....
-security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -vserver <vservername> -role csrole -cmddirname "volume snapshot" -access all
-....
-....
-security login create -user-or-group-name csuser -application ontapi -authmethod password -role csrole -vserver <vservername>
-security login create -user-or-group-name csuser -application http -authmethod password -role csrole -vserver <vservername>
-....
+
+[[feature-specific-permissions]]
+=== Autorizzazioni specifiche per le funzionalità
+
+*Archivio persistente (modalità cluster mostrata; aggiungi -vserver ++<++vservername++>++ per la modalità SVM):*
+
+[listing]
+----
+security login role create -role csrole -cmddirname "vserver fpolicy" -access all
+security login role create -role csrole -cmddirname "job show" -access readonly
+----
+*Protobuf (modalità cluster mostrata; aggiungi -vserver ++<++vservername++>++ per la modalità SVM):*
+
+[listing]
+----
+security login role create -role csrole -cmddirname "vserver fpolicy" -access all
+----
+Per Access Denied e ARP, le credenziali dell'amministratore del cluster non richiedono autorizzazioni aggiuntive. Per un utente personalizzato, aggiungi i privilegi indicati nella tabella delle funzionalità sopra. Consulta le guide di integrazione di ONTAP Access Denied e ONTAP Autonomous Ransomware Protection.
+
+
+
+[[configure-and-test-the-data-collector]]
+== Configura e testa il raccoglitore di dati
+
+. Accedi come Administrator o Account Owner a Data Infrastructure Insights.
+. Seleziona Workload Security ++>++ Collectors ++>++ &#43;Data Collectors.
+. Passa il mouse sopra il riquadro SVM di NetApp e fai clic su +Monitor.
+. Inserisci i campi qui sotto. Non salvare ancora il collector.
+
+
+[cols="50%,50%"]
+|===
+| *Campo* | *Descrizione* 
+
+
+| Nome | Nome univoco per il data collector. 
+
+
+| Agente | Seleziona un agente configurato e connesso. 
+
+
+| Connettiti tramite IP di gestione per | Scegli l'indirizzo IP del cluster (consigliato) o l'indirizzo IP di gestione SVM. 
+
+
+| Indirizzo IP di gestione cluster/SVM | Indirizzo IP di gestione per il cluster o SVM, in base alla tua selezione. 
+
+
+| Nome SVM | Il nome SVM (richiesto quando ti connetti tramite IP del cluster). Deve corrispondere esattamente a ONTAP (rispettando le maiuscole e minuscole). 
+
+
+| Nome utente | Cluster IP: cluster-admin, csuser o utente AD con csrole-equivalente. SVM IP: vsadmin, csuser o utente AD con csrole-equivalente. 
+
+
+| Password | Password per l'account sopra. 
+
+
+| Filtra Condivisioni/Volumi | Scegli se includere o escludere share/volumi specifici dalla raccolta degli eventi. 
+
+
+| Nomi delle condivisioni da includere/escludere | Nomi completi delle share, separati da virgole (senza virgolette). Per elenchi lunghi, filtra per volume invece che per share. 
+
+
+| Nomi dei volumi da includere/escludere | Nomi completi dei volumi separati da virgole (senza virgolette). 
+
+
+| Monitora l'accesso alle cartelle | Abilita gli eventi generali di accesso alle cartelle. La creazione, la ridenominazione e l'eliminazione delle cartelle vengono registrate anche senza questa opzione. Abilitando questa opzione, aumenta il volume degli eventi. 
+
+
+| Imposta la dimensione del buffer di invio ONTAP | Regola il buffer di invio di FPolicy. Su ONTAP precedenti alla versione 9.8p7 con problemi di prestazioni, regola questa impostazione per migliorare le prestazioni di ONTAP. Contatta il Supporto NetApp se l'opzione non viene visualizzata. 
+|===
+[quote]
+____
+*Importante:* Estensioni di file escluse per impostazione predefinita: per progettazione, Workload Security configura l'ambito FPolicy per escludere le estensioni ini e DS++_++Store. Gli eventi relativi a questi file vengono filtrati su ONTAP e non raggiungono mai Workload Security, quindi non compaiono in Activity Forensics. Questo è separato dalle esclusioni di avviso configurabili dal cliente. È un comportamento previsto; la verifica di queste estensioni non è configurabile nell'interfaccia utente.
+
+____
+
+
+
+[[run-test-connection-before-saving]]
+=== Esegui Test Connessione prima di salvare
+
+La funzione "Verifica connessione" (introdotta a marzo 2025) convalida la connettività, le credenziali, i LIF dei dati, il callback di FPolicy e il controllo degli accessi basato sui ruoli (RBAC) per singola funzionalità prima della creazione del raccoglitore, così puoi correggere autonomamente eventuali problemi di rete e di autorizzazione. Nella pagina di aggiunta/modifica del raccoglitore, inserisci i dettagli e fai clic su "Verifica connessione".
+
+image:ws-test-connection-button.png["Pulsante Test Connection, title=\"Test Connection button\", width=433, height=54"]
+
+.Dopo aver inserito i dettagli del collettore, usa Test Connection.
+image:ws-test-connection-success.png["Risultato del test di connessione riuscito,title=\"Risultato del test di connessione riuscito\",width=937,height=298"]
+
+Esempio di risultato positivo di Test Connection.
+
+*Eseguilo tramite l'indirizzo IP di gestione del cluster {plus} nome SVM con le credenziali del cluster per una copertura completa.*
+
+[cols="34%,33%,33%"]
+|===
+| *Verifica* | *Cosa conferma* | *Se fallisce* 
+
+
+| Https | L'agente può raggiungere la gestione ONTAP sulla porta TCP 443. | Verifica IP/modalità e firewall 443. 
+
+
+| versione di ONTAP | Le credenziali funzionano; idoneità della versione e delle funzionalità. | Verifica le credenziali/RBAC e la versione di ONTAP. 
+
+
+| LIF dati | Esiste un LIF di dati utilizzabile con data-fpolicy-client (9.8{plus}), up. | Aggiungi data-fpolicy-client alla service policy (vedi Service policy). 
+
+
+| IP dell'agente | L'agente ha un indirizzo locale attivo nella stessa famiglia IPv4 o IPv6 dei LIF dati SVM. Non dimostra il routing. | Assicurati che l'agente abbia un indirizzo locale idoneo. Se in seguito Fpolicy Server smette di funzionare, verifica il routing da ciascun LIF dati SVM all'agente. 
+
+
+| Server Fpolicy | ONTAP può richiamare l'agente e completare la stretta di mano sulle porte attive. | Apri 35000–55000 verso l'agente; verifica one-SVM-one-collector. 
+
+
+| Caratteristiche | Controllo degli accessi basato sui ruoli (RBAC) per singola funzionalità e idoneità alla versione ONTAP (solo modalità cluster). | Concedi i privilegi mancanti (vedi Permissions). 
+|===
+[quote]
+____
+Importante*: Limitazioni: Test Connection testa solo un sottoinsieme delle porte 35000–55000 (mantieni aperto l'intero intervallo riservato). Il risultato dell'indirizzo IP dell'Agent seleziona un indirizzo locale attivo nella stessa famiglia IPv4 o IPv6 dei LIF dati; non testa il routing da ciascun LIF dati all'Agent. Test Connection inoltre non genera né convalida il flusso reale degli eventi dei file. I controlli delle funzionalità/RBAC non vengono eseguiti in modalità SVM perché all'account SVM mancano le autorizzazioni necessarie e Test Connection non è disponibile per i collector User Directory.
+
+____
+
+*Quando tutti e quattro i controlli di rete risultano superati, esamina i risultati delle funzionalità che intendi utilizzare, quindi salva il collector.*
+
+[quote]
+____
+*Important:* Test Connection SUCCESS si basa sui quattro controlli di rete. I risultati delle funzionalità sono a scopo informativo, quindi SUCCESS non significa che ogni funzionalità opzionale disponga del RBAC richiesto. Correggi i controlli delle funzionalità non riusciti prima di abilitare tali funzionalità.
+
+____
+
+
+
+[[if-the-data-lifs-check-fails]]
+== Se il controllo Data Lifs fallisce
+
+Non verificare manualmente il data LIF prima di eseguire Test Connection. Se il risultato dei Data LIF fallisce, usa i seguenti comandi per correggere la service policy. Da ONTAP 9.8 in poi, almeno un data LIF operativo SVM deve includere data-fpolicy-client con data-nfs e/o data-cifs:
+
+[listing]
+----
+net int service-policy create -policy only++_++data++_++fpolicy -vserver ++<++svm++>++ ++\++ \
+-allowed-addresses 0.0.0.0/0 -services data-cifs,data-nfs,data,-core,data-fpolicy-client
+----
+Verifica il LIF:
+
+[listing]
+----
+network interface show -vserver ++<++svm++>++ -fields service-policy,status-admin,status-oper
+----
+Nelle versioni di ONTAP precedenti alla 9.8, non è necessario impostare data-fpolicy-client; è sufficiente un LIF con role data (up) che supporti NFS e/o CIFS.
+
+
+
+[[feature-setup]]
+== Configurazione delle funzionalità
+
+
+
+[[multi-admin-verify-mav]]
+=== Verifica multi-amministratore (MAV)
+
+Se MAV è abilitato, può bloccare i comandi che Workload Security utilizza per gli snapshot e il blocco degli utenti. Aggiungi esclusioni:
+
+[listing]
+----
+multi-admin-verify rule modify -operation "volume snapshot create" -query "-snapshot !++*++cloudsecure++_*++"
+multi-admin-verify rule modify -operation "volume snapshot delete" -query "-snapshot !++*++cloudsecure++_*++"
+multi-admin-verify rule delete -operation set # allow user blocking
+----
+
+
+[[user-access-blocking-smb-nfs]]
+=== *Blocco dell'accesso utente (SMB e NFS)*
+
+* Richiede credenziali a livello di cluster (SMB blocca l'utente; NFS blocca l'IP dell'host). Con cluster-admin non servono autorizzazioni aggiuntive: basta assicurarsi che SSH (porta 22) sia disponibile per la gestione del cluster.
+* Con un utente personalizzato (csuser), concedi i privilegi a livello di cluster indicati di seguito, assicurati che l'utente possa accedere tramite SSH, quindi riavvia i collector ONTAP e User Directory.
+
+
+[listing]
+----
+security login role create -role csrole -cmddirname "vserver export-policy rule" -access all
+security login role create -role csrole -cmddirname set -access all
+security login role create -role csrole -cmddirname "vserver cifs session" -access all
+security login role create -role csrole -cmddirname "vserver services access-check authentication translate" -access all
+security login role create -role csrole -cmddirname "vserver name-mapping" -access all
+----
+
+
+[[persistent-store]]
+=== Archivio persistente
+
+Supportato a partire da ONTAP 9.14.1. Abilitalo selezionando la casella di controllo nella pagina di aggiunta/modifica e specifica un nome per il volume (obbligatorio). Il comportamento varia a seconda della versione:
+
+* *ONTAP 9.14.1:* crea tu stesso il volume (16 GB consigliati) e inseriscine il nome.
+* *ONTAP 9.15.1:* il collector crea automaticamente un volume da 16 GB utilizzando il nome che fornisci.
+
+
+Richiede vserver fpolicy: all più job show: readonly (vedi le autorizzazioni specifiche della funzionalità).
+
 
 
 [[protobuf-mode]]
 === Modalità Protobuf
 
-Workload Security configurerà il motore FPolicy in modalità protobuf quando questa opzione è abilitata nelle impostazioni _Configurazione avanzata_ del raccoglitore.  La modalità Protobuf è supportata nella versione ONTAP 9.15 e successive.
-
-Maggiori dettagli su questa funzionalità possono essere trovati nellink:https://docs.netapp.com/us-en/ontap/nas-audit/steps-setup-fpolicy-config-concept.html["Documentazione ONTAP"] .
-
-Per protobuf sono richieste autorizzazioni specifiche (alcune o tutte potrebbero già esistere):
-
-Modalità cluster:
-
- security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-Modalità Vserver:
-
- security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-
-
-[[permissions-for-ontap-autonomous-ransomware-protection-and-ontap-access-denied]]
-=== Autorizzazioni per la protezione autonoma da ransomware ONTAP e l'accesso negato a ONTAP
-
-Se si utilizzano credenziali di amministrazione del cluster, non sono necessarie nuove autorizzazioni.
-
-Se si utilizza un utente personalizzato (ad esempio, _csuser_) con autorizzazioni concesse all'utente, seguire i passaggi sottostanti per concedere a Workload Security le autorizzazioni per raccogliere informazioni relative ad ARP da ONTAP.
-
-Per maggiori informazioni, leggilink:concept_ws_integration_with_ontap_access_denied.html["Integrazione con ONTAP Accesso negato"]
-
-Elink:concept_cs_integration_with_ontap_arp.html["Integrazione con la protezione autonoma dai ransomware ONTAP"]
-
-
-
-[[configure-the-data-collector]]
-== Configurare il raccoglitore dati
-
-.Passaggi per la configurazione
-. Accedi come amministratore o proprietario dell'account al tuo ambiente Data Infrastructure Insights .
-. Fare clic su *Sicurezza del carico di lavoro > Collettori > +Collettori dati*
-+
-Il sistema visualizza i Data Collector disponibili.
-
-. Passare il mouse sul riquadro * NetApp SVM e fare clic su *+Monitoraggio*.
-+
-Il sistema visualizza la pagina di configurazione ONTAP SVM.  Inserisci i dati richiesti per ogni campo.
-
-
-
-[cols="2*"]
-|===
-
-
-| Campo | Descrizione 
-
-
-| Nome | Nome univoco per il Data Collector 
-
-
-| Agente | Selezionare un agente configurato dall'elenco. 
-
-
-| Connettiti tramite IP di gestione per: | Selezionare l'IP del cluster o l'IP di gestione SVM 
-
-
-| Indirizzo IP di gestione cluster/SVM | L'indirizzo IP per il cluster o l'SVM, a seconda della selezione effettuata sopra. 
-
-
-| Nome SVM | Il nome dell'SVM (questo campo è obbligatorio quando ci si connette tramite IP del cluster) 
-
-
-| Nome utente | Nome utente per accedere a SVM/Cluster Quando si aggiunge tramite IP del cluster, le opzioni sono: 1.  Cluster-admin 2.  'csuser' 3.  AD-user con ruolo simile a csuser.  Quando si aggiunge tramite IP SVM le opzioni sono: 4. vsadmin 5.  'csuser' 6.  AD-username ha un ruolo simile a csuser. 
-
-
-| Password | Password per il nome utente sopra indicato 
-
-
-| Filtra Condivisioni/Volumi | Scegli se includere o escludere Condivisioni/Volumi dalla raccolta eventi 
-
-
-| Inserisci i nomi completi delle condivisioni da escludere/includere | Elenco separato da virgole delle azioni da escludere o includere (a seconda dei casi) dalla raccolta di eventi 
-
-
-| Inserisci i nomi completi dei volumi da escludere/includere | Elenco separato da virgole dei volumi da escludere o includere (a seconda dei casi) dalla raccolta di eventi 
-
-
-| Monitora l'accesso alle cartelle | Se selezionata, abilita gli eventi per il monitoraggio dell'accesso alle cartelle.  Si noti che la creazione/rinomina e l'eliminazione delle cartelle verranno monitorate anche senza selezionare questa opzione.  Abilitando questa opzione aumenterà il numero di eventi monitorati. 
-
-
-| Imposta la dimensione del buffer di invio ONTAP | Imposta la dimensione del buffer di invio Fpolicy ONTAP .  Se si utilizza una versione ONTAP precedente alla 9.8p7 e si riscontrano problemi di prestazioni, è possibile modificare la dimensione del buffer di invio ONTAP per ottenere prestazioni ONTAP migliori.  Se non vedi questa opzione e desideri provarla, contatta l'assistenza NetApp . 
-|===
-.Dopo aver finito
-* Nella pagina Collettori dati installati, utilizzare il menu delle opzioni a destra di ciascun collettore per modificare il collettore dati.  È possibile riavviare il raccoglitore dati o modificarne gli attributi di configurazione.
-
+Quando abilitata nella configurazione avanzata, Workload Security configura il motore FPolicy in modalità protobuf. Supportata da ONTAP 9.15. Richiede vserver fpolicy: all. Consulta la documentazione di ONTAP per i dettagli.
 
 
 
 [[recommended-configuration-for-metrocluster]]
 == Configurazione consigliata per MetroCluster
 
-Per MetroCluster si consiglia quanto segue:
-
-. Collegare due raccoglitori di dati, uno all'SVM di origine e l'altro all'SVM di destinazione.
-. I collettori di dati devono essere connessi tramite _Cluster IP_.
-. In qualsiasi momento, il raccoglitore dati dell'SVM attualmente in esecuzione verrà visualizzato come _In esecuzione_. Il raccoglitore dati dell'SVM attualmente 'arrestato' verrà visualizzato come _Arrestato_.
-. Ogni volta che si verifica un passaggio, lo stato del raccoglitore dati cambierà da _In esecuzione_ a _Arrestato_ e viceversa.
-. Ci vorranno fino a due minuti affinché il raccoglitore dati passi dallo stato _Arrestato_ allo stato _In esecuzione_.
+* Configura due collettori: uno per l'SVM di origine e uno per l'SVM di destinazione.
+* Collega entrambi tramite IP del cluster.
+* In qualsiasi momento il collector dell'SVM attivo mostra Running e quello di standby mostra Stopped.
+* Durante il passaggio, gli stati si invertono; consenti fino a due minuti per la transizione.
 
 
+[quote]
+____
+*Nota:* Un collettore MetroCluster arrestato sul lato standby è previsto, non è un errore. Indaga solo se il lato attivo non è in esecuzione.
 
-
-[[service-policy]]
-== Politica di servizio
-
-Se si utilizza la policy di servizio con ONTAP *versione 9.9.1 o successiva*, per connettersi al Data Source Collector è necessario il servizio _data-fpolicy-client_ insieme al servizio dati _data-nfs_ e/o _data-cifs_.
-
-Esempio:
-
-....
-Testcluster-1:*> net int service-policy create -policy only_data_fpolicy -allowed-addresses 0.0.0.0/0 -vserver aniket_svm
--services data-cifs,data-nfs,data,-core,data-fpolicy-client
-(network interface service-policy create)
-....
-Nelle versioni di ONTAP precedenti alla 9.9.1, non è necessario impostare _data-fpolicy-client_.
+____
 
 
 
-[[play-pause-data-collector]]
-== Raccolta dati di riproduzione e pausa
+[[pause-and-resume-a-collector]]
+== Metti in pausa e riprendi un collector
 
-Se il Data Collector è in stato _In esecuzione_, è possibile mettere in pausa la raccolta.  Aprire il menu "tre punti" del raccoglitore e selezionare PAUSA.  Mentre il collettore è in pausa, nessun dato viene raccolto da ONTAP e nessun dato viene inviato dal collettore a ONTAP.  Ciò significa che nessun evento Fpolicy verrà trasmesso da ONTAP al raccoglitore dati e da lì a Data Infrastructure Insights.
+Le funzioni Pausa e Riprendi si applicano a un raccoglitore di dati, non a un Agent. Puoi eseguirle dall'UI (Collectors ++>++ the collector ++>++ options menu) o tramite API.
 
-Si noti che se vengono creati nuovi volumi, ecc. su ONTAP mentre il raccoglitore è in pausa, Workload Security non raccoglierà i dati e tali volumi, ecc. non verranno visualizzati nei dashboard o nelle tabelle.
+La sospensione di un collector in esecuzione rimuove la configurazione FPolicy da ONTAP. Durante la sospensione, non fluiscono eventi e non vengono inviati dati in nessuna delle due direzioni.
 
-
-NOTE: Un collector non può essere messo in pausa se ha utenti limitati.  Ripristinare l'accesso dell'utente prima di mettere in pausa il raccoglitore.
-
-Tieni presente quanto segue:
-
-* L'eliminazione degli snapshot non avverrà secondo le impostazioni configurate su un collector in pausa.
-* Gli eventi EMS (come ONTAP ARP) non verranno elaborati su un collector in pausa. Ciò significa che se ONTAP identifica un attacco di manomissione dei file, Data Infrastructure Insights Workload Security non sarà in grado di acquisire quell'evento.
-* Le email di notifica sullo stato di salute NON verranno inviate per un raccoglitore in pausa.
-* Le azioni manuali o automatiche (ad esempio Snapshot o Blocco utente) non saranno supportate su un collector in pausa.
-* Durante gli aggiornamenti dell'agente o del collettore, i riavvii/riavvii della VM dell'agente o il riavvio del servizio dell'agente, un collettore in pausa rimarrà nello stato _Paused_.
-* Se il raccoglitore dati è nello stato _Errore_, non è possibile modificarlo nello stato _Pausa_.  Il pulsante Pausa sarà abilitato solo se lo stato del raccoglitore è _In esecuzione_.
-* Se l'agente è disconnesso, non è possibile modificare lo stato del collettore in _Pausa_.  Il raccoglitore passerà allo stato _Arrestato_ e il pulsante Pausa verrà disabilitato.
+* I nuovi volumi creati durante la pausa non vengono rilevati finché non riprendi.
+* La pulizia degli Snapshot non viene eseguita su un collector in pausa.
+* Gli eventi EMS (come ONTAP ARP) non vengono elaborati durante la pausa: eventi di manomissione dei file possono essere persi.
+* Le email di notifica sullo stato di salute non vengono inviate per un raccoglitore in pausa.
+* Le azioni manuali o automatiche (snapshot, blocco utente) non sono supportate durante la pausa.
+* Un collector in pausa rimane in pausa anche dopo gli aggiornamenti dell'agente/collector e i riavvii o reboot dell'agente.
+* Un collector in stato di errore non può essere messo in pausa; la pausa è abilitata solo dallo stato di esecuzione.
+* Se l'agente viene disconnesso, il collector passa allo stato Stopped e la funzione Pause viene disabilitata.
 
 
+*Quando usare Pausa*
+
+* Usa Pausa per manutenzione ONTAP prolungata, come un aggiornamento ONTAP pianificato o un'interruzione SVM, così la configurazione FPolicy viene rimossa correttamente mentre lo storage non è disponibile.
+* Riprendi non appena la manutenzione è completata. L'attività che si verifica mentre un collector è in pausa non viene raccolta.
+* Non utilizzare la funzione Pausa per controllare quando un agente o un collector viene aggiornato. Blocca e sblocca invece l'agente (vedi Deploy Workload Security Agents).
 
 
-[[persistent-store]]
-== Archivio persistente
+[quote]
+____
+*Nota:* Un collector non può essere messo in pausa mentre ha utenti con accesso limitato (bloccati). Ripristina prima l'accesso degli utenti.
 
-L'archivio persistente è supportato con ONTAP 9.14.1 e versioni successive.  Si noti che le istruzioni relative al nome del volume variano da ONTAP 9.14 a 9.15.
-
-È possibile abilitare Persistent Store selezionando la casella di controllo nella pagina di modifica/aggiunta del raccoglitore.  Dopo aver selezionato la casella di controllo, viene visualizzato un campo di testo per accettare il nome del volume.  Il nome del volume è un campo obbligatorio per abilitare Persistent Store.
-
-* Per ONTAP 9.14.1, è necessario creare il volume prima di abilitare la funzionalità e fornire lo stesso nome nel campo _Nome volume_.  La dimensione consigliata del volume è 16 GB.
-* Per ONTAP 9.15.1, il volume verrà creato automaticamente con una dimensione di 16 GB dal collettore, utilizzando il nome fornito nel campo _Nome volume_.
-
-
-Per Persistent Store sono necessarie autorizzazioni specifiche (alcune o tutte potrebbero già esistere):
-
-Modalità cluster:
-
-....
-security login role create -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -role csrole -cmddirname "job show" -access readonly
-....
-Modalità Vserver:
-
-....
-security login role create -vserver <vservername> -role csrole -cmddirname "vserver fpolicy" -access all
-security login role create -vserver <vservername> -role csrole -cmddirname "job show" -access readonly
-....
-
-
-[[migrate-collectors]]
-== Migrazione dei collezionisti
-
-È possibile migrare facilmente un collettore Workload Security da un agente all'altro, consentendo un efficiente bilanciamento del carico dei collettori tra gli agenti.
+____
 
 
 
-[[prerequisites]]
-=== Prerequisiti
+[[migrate-a-collector-to-another-agent]]
+== Migra un collettore su un altro agente
 
-* L'agente sorgente deve essere nello stato _connesso_.
-* Il collector da migrare deve essere nello stato _running_.
+Puoi spostare un collector tra gli agenti per bilanciare il carico.
+
+* L'agente sorgente deve essere connesso; il collector deve essere in esecuzione.
+* Supportato sia per i raccoglitori di dati che per quelli di directory utenti; non supportato per i tenant gestiti manualmente.
+* Modifica il collector, scegli un agente di destinazione e fai clic su Salva collector. Le modifiche alla configurazione apportate nella pagina di modifica vengono mantenute dopo una migrazione riuscita.
 
 
-Nota:
+image:ws-agent-selector.png["Selettore agente per la migrazione di un collector,title=\"Agent selector for migrating a collector\",width=957,height=304"]
 
-* La migrazione è supportata sia per i raccoglitori di dati che per quelli di directory utente.
-* La migrazione di un collector non è supportata per i tenant gestiti manualmente.
+Seleziona un altro agente per migrare il collector.
+
+
+
+[[best-practices-for-data-collectors]]
+== Best practice per i data collector
+
+* Esegui Test Connection prima di salvare un collector e risolvi ogni controllo fallito. La maggior parte degli errori del collector sono prerequisiti non soddisfatti che Test Connection rileva.
+* Connettiti tramite l'indirizzo IP di gestione del cluster con il nome SVM e le credenziali del cluster. La modalità SVM non può eseguire i controlli delle funzionalità e RBAC.
+* Configura un solo collector per SVM, in un solo ambiente Workload Security. Un secondo collector sostituisce la destinazione FPolicy del primo.
+* Configura un User Directory Collector per ogni dominio i cui utenti accedono agli SVM monitorati, prima o insieme al primo collector SVM ONTAP, così che l'attività mostri i nomi utente invece dei SID.
+* Inserisci i nomi completi delle share e dei volumi senza virgolette. Per elenchi lunghi, filtra per volume anziché per share.
+* Abilita "Monitora accesso alle cartelle" solo quando hai bisogno di eventi generali di accesso alle cartelle, perché aumenta il volume degli eventi.
+* Assicurati che l'agente di hosting rientri nei limiti di capacità — al massimo 50 collettori, con un limite di 20.000 eventi al secondo — e usa l'Event Rate Checker per dimensionare il sistema in base al picco di frequenza degli eventi.
+* Per MetroCluster, configura un collettore per l'SVM di origine e uno per l'SVM di destinazione, entrambi connessi tramite IP del cluster.
+* Usa Pausa solo per manutenzione prolungata lato ONTAP. Per controllare quando avvengono gli aggiornamenti, blocca e sblocca l'Agent (vedi Deploy Workload Security Agents).
+* Per ottenere le migliori prestazioni di FPolicy, posiziona l'agente vicino alla rete di archiviazione e riduci al minimo la latenza di rete.
 
 
 
 
-[[migrate-collector]]
-=== Migrare il raccoglitore
+[[if-the-collector-reports-an-error-after-saving]]
+== Se il collector segnala un errore dopo il salvataggio
 
-Per migrare un collector, seguire questi passaggi:
+Il test di connessione include la verifica della connettività in fase di configurazione, delle credenziali, dei LIF dati, della connettività di callback sulle porte allocate, il controllo del server CIFS quando è selezionato SMB e l'accesso alle funzionalità in modalità cluster. Non ripetere manualmente questi controlli dopo un test riuscito.
 
-. Vai alla pagina "Modifica raccoglitore".
-. Selezionare un agente di destinazione dal menu a discesa degli agenti.
-. Fare clic sul pulsante "Salva raccoglitore".
-
-
-Workload Security elaborerà la richiesta.  Una volta completata la migrazione, l'utente verrà reindirizzato alla pagina dell'elenco dei collezionisti.  In caso di errore, verrà visualizzato un messaggio appropriato nella pagina di modifica.
-
-Nota: tutte le modifiche alla configurazione apportate in precedenza nella pagina "Modifica raccoglitore" rimarranno applicate quando il raccoglitore verrà migrato correttamente all'agente di destinazione.
-
-image:ws_migrate_collector_to_another_agent.png["migrare un collezionista scegliendo un altro agente"]
+Se il raccoglitore passa successivamente allo stato Errore o Degradato, apri Stato ++>++ Maggiori dettagli e segui la procedura di risoluzione dei problemi del raccoglitore di dati ONTAP SVM. Le condizioni di runtime, come raccoglitori duplicati, sovraccarico della frequenza degli eventi, raccoglitori in pausa, posizionamento del Persistent Store, transizioni MetroCluster, attività mancanti e risoluzione dell'identità, sono al di fuori del flusso di lavoro di Test Connection pre-salvataggio.
 
 
 
-[[troubleshooting]]
-== Risoluzione dei problemi
+[[after-you-finish]]
+== Dopo aver finito
 
-Vedi illink:troubleshooting_collector_svm.html["Risoluzione dei problemi del collettore SVM"] pagina per suggerimenti sulla risoluzione dei problemi.
+* Nella pagina "Collettori di dati installati", usa il menu delle opzioni per modificare o riavviare un collettore.
+* Conferma che il collector raggiunga lo stato "Running" e che gli eventi appaiano in Workload Security ++>++ Activity Forensics dopo un reale I/O del client.
+* Verifica che i nomi utente siano risolvibili (non i SID); se non lo sono, controlla User Directory Collector.
+

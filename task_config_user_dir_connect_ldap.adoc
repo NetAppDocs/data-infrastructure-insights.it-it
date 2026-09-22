@@ -14,86 +14,126 @@ summary: Configurazione del raccoglitore directory utente LDAP per la sicurezza 
 
 
 [role="lead"]
-È possibile configurare Workload Security per raccogliere gli attributi utente dai server della directory LDAP.
+Workload Security utilizza i dati di directory per risolvere le identità nelle attività di accesso ai file. I raccoglitori di directory utente non forniscono una funzione di Test Connection.
 
-.Prima di iniziare
-* Per eseguire questa attività, devi essere un amministratore di Data Infrastructure Insights o un proprietario dell'account.
-* È necessario disporre dell'indirizzo IP del server che ospita il server della directory LDAP.
-* Prima di configurare un connettore di directory LDAP, è necessario configurare un agente.
+*Configura il collector della directory utente prima del collector dati ONTAP SVM.*
 
+image:config_ldap_directory_image1.png["Aggiungi la finestra di dialogo Directory utenti con le opzioni Active Directory e LDAP Directory Server.,title=\"Scegli un tipo di User Directory\",width=652,height=211"]
 
-.Passaggi per configurare un raccoglitore di directory utente
-. Nel menu Sicurezza del carico di lavoro, fare clic su: *Collector > User Directory Collector > + User Directory Collector* e selezionare *LDAP Directory Server*
-+
-Il sistema visualizza la schermata Aggiungi directory utente.
+[cols="50%,50%"]
+|===
+| *Seleziona* | *Usalo quando* 
 
 
+| Active Directory | Gli utenti sono memorizzati in Active Directory e l'attività monitorata è SMB; oppure gli utenti Unix sono memorizzati in Active Directory con valori uidNumber ed eseguono attività NFS. 
 
-Configurare User Directory Collector inserendo i dati richiesti nelle seguenti tabelle:
 
-[cols="2*"]
+| Server di directory LDAP | Gli utenti Unix sono memorizzati principalmente in una directory LDAP e l'attività monitorata è NFS. 
+
+
+| Entrambi | Le identità sono suddivise tra Active Directory e LDAP. Aggiungi un collettore per ogni directory autorevole così tutte le identità monitorate possono essere risolte. 
+|===
+[cols="100%"]
+|===
+| *Questa pagina riguarda LDAP Directory Server* Usa questo collector per le identità Unix gestite in LDAP e utilizzate per l'accesso NFS. 
 |===
 
 
-| Nome | Descrizione 
+[[before-you-begin]]
+== Prima di iniziare
+
+* Accedi come amministratore di Data Infrastructure Insights o come titolare dell'account.
+* Distribuisci e connetti un Workload Security Agent che può raggiungere il server di directory.
+* Raccogli l'indirizzo IP o il FQDN del server di directory LDAP, la Search Base, il Bind DN e la Bind password.
+* Consenti all'agente di accedere al servizio di directory. Le porte tipiche sono 389 per LDAP o StartTLS e 636 per LDAPS; usa la porta configurata sul tuo server.
+* Usa un account Bind DN che possa cercare nell'ambito della directory richiesto e leggere ogni attributo mappato nel collector.
 
 
-| Nome | Nome univoco per la directory utente.  Ad esempio _GlobalLDAPCollector_ 
 
 
-| Agente | Seleziona un agente configurato dall'elenco 
+[[add-the-ldap-directory-server-collector]]
+== Aggiungi il collector del server di directory LDAP
+
+*1.* Vai a Workload Security ++>++ Collectors ++>++ User Directory Collectors e seleziona {plus} User Directory Collector.
+
+*2.* Seleziona LDAP Directory Server e seleziona Continua.
+
+*3.* Completa i campi di connessione e le mappature degli attributi descritti di seguito.
+
+*4.* Controlla la configurazione avanzata se gli account di servizio usano classi di oggetti che non sono incluse nella ricerca predefinita.
+
+*5.* Convalida la configurazione con ldapsearch o un browser LDAP, poi seleziona Salva Collector.
+
+image:config_ldap_directory_image2.png["Modulo di raccolta del server di directory LDAP che mostra i campi di connessione, le mappature degli attributi obbligatori e facoltativi e la query di ricerca di configurazione avanzata.,title=\"Aggiungi raccoglitore del server di directory LDAP\",width=504,height=729"]
+
+Campi del collector del server di directory LDAP e mappature degli attributi predefinite.
 
 
-| IP del server/nome di dominio | Indirizzo IP o nome di dominio completo (FQDN) del server che ospita il server di directory LDAP 
 
+[[connection-fields]]
+=== Campi di connessione
 
-| Base di ricerca | Base di ricerca del server LDAP La base di ricerca consente entrambi i seguenti formati: _x.y.z_ => nome di dominio diretto così come è presente sul tuo SVM.  [Esempio: hq.companyname.com] _DC=x,DC=y,DC=z_ => Nomi distinti relativi [Esempio: DC=hq,DC= companyname,DC=com] Oppure puoi specificare come segue: _OU=engineering,DC=hq,DC= companyname,DC=com_ [per filtrare in base a OU engineering specifica] _CN=username,OU=engineering,DC=companyname, DC=netapp, DC=com_ [per ottenere solo un utente specifico con <username> da OU <engineering>] _CN=Acrobat Users,CN=Users,DC=hq,DC=companyname,DC=com,O= companyname,L=Boston,S=MA,C=US_ [per ottenere tutti gli utenti Acrobat all'interno degli utenti di quell'organizzazione] 
-
-
-| Associa DN | Utente autorizzato a effettuare ricerche nella directory.  Ad esempio: uid=ldapuser,cn=users,cn=accounts,dc=domain,dc=companyname,dc=com uid=john,cn=users,cn=accounts,dc=dorp,dc=company,dc=com per un utente john@dorp.company.com. dorp.company.com 
-
-
-| --conti | --utenti 
-
-
-| --Giovanni | --anna 
-
-
-| Password BIND | Password del server di directory (ovvero password per il nome utente utilizzato in Bind DN) 
-
-
-| Protocollo | ldap, ldaps, ldap-start-tls 
-
-
-| porti | Seleziona la porta 
+[cols="34%,33%,33%"]
 |===
-Immettere i seguenti attributi obbligatori del Directory Server se i nomi degli attributi predefiniti sono stati modificati nel Directory Server LDAP.  Nella maggior parte dei casi i nomi di questi attributi non vengono modificati in LDAP Directory Server, nel qual caso è possibile procedere semplicemente con il nome dell'attributo predefinito.
+| *Campo* | *Requisito* | *Cosa inserire* 
 
-[cols="2*"]
+
+| Nome++*++ | Obbligatorio | Un nome univoco per il collector. 
+
+
+| Agente | Obbligatorio | Un agente connesso in grado di raggiungere questo LDAP server. 
+
+
+| Indirizzo IP del server/Nome di dominio++*++ | Obbligatorio | L'indirizzo IP o FQDN del LDAP server. 
+
+
+| Base di ricerca++*++ | Obbligatorio | Il DN di base contenente gli utenti da importare, ad esempio cn=accounts,dc=example,dc=com. Usa un DN OU/CN più specifico solo quando la ricerca deve essere limitata a quel sottoalbero. 
+
+
+| Bind DN++*++ | Obbligatorio | Il DN completo di un account autorizzato a cercare nella base, ad esempio uid=ws-reader,cn=users,cn=accounts,dc=example,dc=com. 
+
+
+| Password di bind++*++ | Obbligatorio | La password per l'account Bind DN. 
+
+
+| Protocollo | Predefinito | LDAP, LDAPS o LDAP con StartTLS. Seleziona il protocollo utilizzato dal tuo server. 
+
+
+| Porta++*++ | Obbligatorio | La porta numerica della directory; comunemente 389 o 636. 
 |===
 
 
-| Attributi | Nome dell'attributo nel server di directory 
+[[mandatory-attribute-mappings]]
+=== Mappature degli attributi obbligatorie
 
+I campi contrassegnati da un asterisco devono avere mappature valide. Mantieni le impostazioni predefinite a meno che il tuo schema LDAP non usi nomi di attributi diversi.
 
-| Nome da visualizzare | nome 
-
-
-| UNIXID | numero uid 
-
-
-| Nome utente | fluido 
+[cols="34%,33%,33%"]
 |===
-Fare clic su Includi attributi facoltativi per aggiungere uno qualsiasi dei seguenti attributi:
+| *Campo Workload Security* | *Attributo LDAP predefinito* | *Scopo* 
 
-[cols="2*"]
+
+| Nome visualizzato++*++ | nome | Nome visualizzato in Workload Security 
+
+
+| UNIXID++*++ | numero uid | Risolve gli ID utente Unix numerici nell'attività NFS 
+
+
+| Nome utente++*++ | fluido | Nome di accesso o account Unix 
 |===
 
 
-| Attributi | Nome attributo nel server directory 
+[[optional-attribute-mappings]]
+=== Mappature degli attributi opzionali
+
+Seleziona "Includi attributi opzionali" solo per i dati del profilo che vuoi importare. Ogni mappatura deve corrispondere allo schema LDAP effettivo, incluso il caso in cui il server lo consideri significativo.
+
+[cols="50%,50%"]
+|===
+| *Valore del profilo* | *Attributo LDAP predefinito* 
 
 
-| Indirizzo e-mail | posta 
+| Indirizzo e-mail | indirizzo e-mail 
 
 
 | Numero di telefono | numero di telefono 
@@ -102,10 +142,10 @@ Fare clic su Includi attributi facoltativi per aggiungere uno qualsiasi dei segu
 | Ruolo | titolo 
 
 
+| Stato | st 
+
+
 | Paese | co 
-
-
-| Stato | stato 
 
 
 | Dipartimento | numerodipartimento 
@@ -114,87 +154,106 @@ Fare clic su Includi attributi facoltativi per aggiungere uno qualsiasi dei segu
 | Foto | foto 
 
 
-| ManagerDN | manager 
+| DN manager | manager 
 
 
-| Gruppi | membroDi 
+| Gruppi | membro di 
 |===
 
 
-[[testing-your-user-directory-collector-configuration]]
-== Test della configurazione del raccoglitore di directory utente
+[[advanced-configuration-include-the-accounts-you-need]]
+== Configurazione avanzata: includi gli account di cui hai bisogno
 
-È possibile convalidare le autorizzazioni utente e le definizioni degli attributi LDAP utilizzando le seguenti procedure:
+La query di ricerca controlla quali oggetti LDAP vengono importati. La query predefinita include le classi di oggetti comuni di Unix e person:
 
-* Utilizzare il seguente comando per convalidare l'autorizzazione utente LDAP di Workload Security:
-+
- ldapsearch -D "uid=john ,cn=users,cn=accounts,dc=dorp,dc=company,dc=com" -W -x -LLL -o ldif-wrap=no -b "cn=accounts,dc=dorp,dc=company,dc=com" -H ldap://vmwipaapp08.dorp.company.com
-* Utilizzare LDAP Explorer per navigare in un database LDAP, visualizzare le proprietà e gli attributi degli oggetti, visualizzare le autorizzazioni, visualizzare lo schema di un oggetto, eseguire ricerche sofisticate che è possibile salvare e rieseguire.
-+
-** Installa link:http://ldaptool.sourceforge.net/["LDAP Explorer"] o link:http://jxplorer.org/["Java LDAP Explorer"] su qualsiasi macchina Windows che può connettersi al server LDAP.
-** Connettersi al server LDAP utilizzando il nome utente/password del server di directory LDAP.
-
-
-
-
-image:CloudSecure_LDAPDialog.png["Connessione LDAP"]
-
-
-
-[[troubleshooting-ldap-directory-collector-configuration-errors]]
-== Risoluzione dei problemi di configurazione del raccoglitore directory LDAP
-
-Nella tabella seguente vengono descritti i problemi noti e le relative soluzioni che possono verificarsi durante la configurazione del collettore:
-
-[cols="2*"]
+[cols="100%"]
 |===
-| Problema: | Risoluzione: 
-
-
-| L'aggiunta di un connettore di directory LDAP genera lo stato "Errore".  L'errore dice: "Credenziali non valide fornite per il server LDAP". | Bind DN o Bind Password o Search Base forniti non corretti.  Modifica e fornisci le informazioni corrette. 
-
-
-| L'aggiunta di un connettore di directory LDAP genera lo stato "Errore".  L'errore dice: "Impossibile ottenere l'oggetto corrispondente a DN=DC=hq,DC=domainname,DC=com fornito come nome foresta". | Base di ricerca fornita errata.  Modifica e fornisci il nome corretto della foresta. 
-
-
-| Gli attributi facoltativi dell'utente di dominio non vengono visualizzati nella pagina Profilo utente di Workload Security. | Ciò è probabilmente dovuto a una mancata corrispondenza tra i nomi degli attributi facoltativi aggiunti in CloudSecure e i nomi effettivi degli attributi in Active Directory.  I campi sono sensibili alle maiuscole e alle minuscole.  Modifica e fornisci i nomi corretti degli attributi facoltativi. 
-
-
-| Il raccoglitore dati è in stato di errore con "Impossibile recuperare gli utenti LDAP.  Motivo dell'errore: Impossibile connettersi al server, la connessione è nulla" | Riavviare il raccoglitore cliccando sul pulsante _Riavvia_. 
-
-
-| L'aggiunta di un connettore di directory LDAP genera lo stato "Errore". | Assicurati di aver fornito valori validi per i campi obbligatori (Server, nome foresta, DN di associazione, password di associazione).  Assicurarsi che l'input bind-DN sia sempre fornito come uid=ldapuser,cn=users,cn=accounts,dc=domain,dc=companyname,dc=com. 
-
-
-| L'aggiunta di un connettore di directory LDAP determina lo stato "RITIRO".  Mostra l'errore "Impossibile determinare lo stato del collettore, quindi riprovare" | Assicurarsi che siano forniti l'IP del server e la base di ricerca corretti //// 
-
-
-| Durante l'aggiunta della directory LDAP viene visualizzato il seguente errore: "Impossibile determinare lo stato del collector entro 2 tentativi, provare a riavviare nuovamente il collector (codice errore: AGENT008)" | Assicurarsi che siano forniti l'IP del server e la base di ricerca corretti 
-
-
-| L'aggiunta di un connettore di directory LDAP determina lo stato "RITIRO".  Mostra l'errore "Impossibile definire lo stato del collettore, motivo per cui il comando TCP [Connect(localhost:35012,None,List(),Some(,seconds),true)] non è riuscito a causa di java.net.ConnectionException:Connessione rifiutata." | IP o FQDN non corretti forniti per il server AD.  Modifica e fornisci l'indirizzo IP o il nome di dominio completo (FQDN) corretto.  //// 
-
-
-| L'aggiunta di un connettore di directory LDAP genera lo stato "Errore".  L'errore dice: "Impossibile stabilire la connessione LDAP". | IP o FQDN non corretti forniti per il server LDAP.  Modifica e fornisci l'indirizzo IP o il nome di dominio completo (FQDN) corretto.  Oppure Valore errato per la porta fornita.  Provare a utilizzare i valori di porta predefiniti o il numero di porta corretto per il server LDAP. 
-
-
-| L'aggiunta di un connettore di directory LDAP genera lo stato "Errore".  L'errore dice: "Impossibile caricare le impostazioni.  Motivo: la configurazione dell'origine dati presenta un errore.  Motivo specifico: /connector/conf/application.conf: 70: ldap.ldap-port ha il tipo STRING anziché NUMBER” | Valore non corretto per la porta fornita.  Provare a utilizzare i valori di porta predefiniti o il numero di porta corretto per il server AD. 
-
-
-| Ho iniziato con gli attributi obbligatori e ha funzionato.  Dopo aver aggiunto quelli facoltativi, i dati degli attributi facoltativi non vengono recuperati da AD. | Ciò è probabilmente dovuto a una mancata corrispondenza tra gli attributi facoltativi aggiunti in CloudSecure e i nomi effettivi degli attributi in Active Directory.  Modifica e fornisci il nome corretto dell'attributo obbligatorio o facoltativo. 
-
-
-| Dopo aver riavviato il collector, quando avverrà la sincronizzazione LDAP? | La sincronizzazione LDAP avverrà immediatamente dopo il riavvio del collector.  Ci vorranno circa 15 minuti per recuperare i dati di circa 300.000 utenti e i dati vengono aggiornati automaticamente ogni 12 ore. 
-
-
-| I dati utente vengono sincronizzati da LDAP a CloudSecure.  Quando verranno eliminati i dati? | In caso di mancato aggiornamento, i dati dell'utente vengono conservati per 13 mesi.  Se l'inquilino viene eliminato, anche i dati verranno eliminati. 
-
-
-| Il connettore della directory LDAP genera lo stato "Errore".  "Il connettore è in stato di errore.  Nome del servizio: usersLdap.  Motivo dell'errore: impossibile recuperare gli utenti LDAP.  Motivo dell'errore: 80090308: LdapErr: DSID-0C090453, commento: errore AcceptSecurityContext, dati 52e, v3839" | Nome foresta fornito errato.  Per informazioni su come fornire il nome corretto della foresta, vedere sopra. 
-
-
-| Il numero di telefono non viene inserito nella pagina del profilo utente. | Molto probabilmente ciò è dovuto a un problema di mappatura degli attributi con Active Directory. 1.  Modificare lo specifico raccoglitore di Active Directory che recupera le informazioni dell'utente da Active Directory. 2.  Si noti che tra gli attributi facoltativi è presente un campo denominato "Numero di telefono" mappato all'attributo di Active Directory "telephonenumber". 4.  Ora, utilizzare lo strumento Active Directory Explorer come descritto sopra per esplorare il server della directory LDAP e visualizzare il nome corretto dell'attributo. 3.  Assicurarsi che nella directory LDAP sia presente un attributo denominato "numero di telefono" che contenga effettivamente il numero di telefono dell'utente. 5.  Supponiamo che nella directory LDAP sia stato modificato in "numero di telefono". 6.  Quindi modifica il raccoglitore CloudSecure User Directory.  Nella sezione degli attributi facoltativi, sostituire 'telephonenumber' con 'phonenumber'. 7.  Salvare il raccoglitore di Active Directory, il raccoglitore verrà riavviato e otterrà il numero di telefono dell'utente e lo visualizzerà nella pagina del profilo utente. 
-
-
-| Se il certificato di crittografia (SSL) è abilitato sul server Active Directory (AD), Workload Security User Directory Collector non può connettersi al server AD. | Disattivare la crittografia del server AD prima di configurare un User Directory Collector.  Una volta recuperati, i dati dell'utente rimarranno disponibili per 13 mesi.  Se il server AD viene disconnesso dopo aver recuperato i dettagli dell'utente, gli utenti appena aggiunti in AD non verranno recuperati.  Per recuperare nuovamente la directory utente, è necessario connettersi ad AD. 
+| ({vbar}(objectClass=posixAccount)(objectClass=person)(objectClass=nsperson)) 
 |===
+Gli account computer, gli account dispositivo, le identità delle applicazioni o gli account di servizio che utilizzano un altro objectClass rimangono non risolti. Esamina l'oggetto in un browser LDAP o con ldapsearch, poi estendi la query solo per i tipi di oggetto richiesti. Per esempio:
+
+[cols="100%"]
+|===
+| (objectClass=posixAccount) + (objectClass=person) + (objectClass=nsperson) + (objectClass=device) + (objectClass=applicationProcess) + (objectClass=applicationEntity)) 
+|===
+[cols="100%"]
+|===
+| *Il tuo schema LDAP è quello autorevole* Le classi degli oggetti e i nomi degli attributi variano a seconda dell'implementazione della directory. Verifica lo schema effettivo dell'oggetto e assicurati che le mappature obbligatorie abbiano valori prima di salvare. Non ampliare la query più del necessario. 
+|===
+
+
+[[validate-the-configuration]]
+== Convalida la configurazione
+
+[cols="100%"]
+|===
+| *La funzione di test della connessione non è disponibile per i collector della User Directory.* Convalida l'accesso di rete, le credenziali di bind, l'ambito di ricerca, i risultati delle query e gli attributi mappati da un host con accesso equivalente prima di salvare il collector. 
+|===
+
+
+[[use-ldapsearch]]
+=== Usa ldapsearch
+
+Esegui una ricerca mirata utilizzando il Bind DN previsto. Sostituisci gli esempi con i valori della tua directory e aggiungi la Search Query del collector come filtro LDAP.
+
+[cols="100%"]
+|===
+| ldapsearch -o ldif-wrap=no -LLL -x -H ldap://ldap.example.com:389 -D "uid=ws-reader,cn=users,cn=accounts,dc=example,dc=com" -W -b "cn=accounts,dc=example,dc=com" '({vbar}(objectClass=posixAccount)(objectClass=person)(objectClass=nsperson))' name uidNumber uid 
+|===
+* L'autenticazione ha esito positivo con l'account e la password esatti che il collector utilizzerà.
+* La ricerca restituisce l'account umano, computer o di servizio previsto.
+* Ogni attributo mappato obbligatorio esiste e ha un valore nell'oggetto restituito.
+* L'agente ha la stessa risoluzione DNS e lo stesso percorso di rete verso il server di directory.
+
+
+
+
+[[after-you-save]]
+== Dopo aver salvato
+
+* La sincronizzazione LDAP si avvia quando il collector si avvia o si riavvia.
+* La sincronizzazione di una directory con circa 300.000 utenti può richiedere circa 15 minuti.
+* I dati dell'utente si aggiornano automaticamente ogni 12 ore.
+* Se la directory diventa non disponibile, i dettagli utente precedentemente recuperati rimangono, ma non puoi recuperare utenti nuovi o modificati finché la connessione non viene ripristinata.
+* I dati degli utenti vengono conservati per 13 mesi senza essere aggiornati. I dati della directory degli utenti non possono essere eliminati indipendentemente dal tenant.
+
+
+
+
+[[troubleshooting]]
+== Risoluzione dei problemi
+
+[cols="50%,50%"]
+|===
+| *Messaggio o sintomo* | *Cosa controllare* 
+
+
+| Credenziali non valide fornite per l'LDAP server. | Verifica il Bind DN e la password. Assicurati anche che l'account possa cercare nella Search Base configurata. 
+
+
+| Impossibile ottenere l'oggetto corrispondente a DN=… fornito come base di ricerca. | Correggi la base di ricerca. Utilizza il dominio, il DN, l'OU o un altro ambito supportato esatto. 
+
+
+| Impossibile stabilire la connessione LDAP. | Verifica l'indirizzo IP/FQDN del LDAP server, la risoluzione DNS, il protocollo, la porta e il percorso del firewall dall'Agent. 
+
+
+| Impossibile recuperare gli utenti LDAP... la connessione è nulla. | Riavvia il raccoglitore. Se il problema si ripresenta, verifica la connettività e la ricerca con ldapsearch da una posizione di rete equivalente. 
+
+
+| Il collector sta RIPROVANDO o segnala AGENT008. | Verifica l'indirizzo del server e la Search Base; poi conferma che l'Agent possa raggiungere il servizio di directory. 
+
+
+| Un attributo utente o facoltativo non viene visualizzato. | Verifica che la query di ricerca includa l'oggetto e che il nome dell'attributo mappato corrisponda allo schema della directory, comprese le maiuscole e minuscole ove applicabile. Salva per riavviare e risincronizzare. 
+
+
+| AcceptSecurityContext error, dati 52e. | Verifica le credenziali e la Search Base. In Active Directory, il dato 52e indica credenziali non valide. 
+
+
+| ldap-port ha tipo STRING anziché NUMBER. | Inserisci un valore numerico per la porta, come 389 o 636. 
+|===
+
+
+[[related-information]]
+== Informazioni correlate
+
+https://docs.netapp.com/us-en/data-infrastructure-insights/task_config_user_dir_connect_ldap.html["[.sottolineare"]#Pagina di documentazione corrente di NetApp#]
