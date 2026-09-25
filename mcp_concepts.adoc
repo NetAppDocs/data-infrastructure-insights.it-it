@@ -1,0 +1,161 @@
+---
+sidebar: sidebar 
+permalink: mcp_concepts.html 
+summary: 'Capire questi concetti aiuta un assistente basato sull"intelligenza artificiale a selezionare gli strumenti giusti e a formulare query valide.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Concetti e modello dati di DII MCP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Capire questi concetti aiuta un assistente basato sull'intelligenza artificiale a selezionare gli strumenti giusti e a formulare query valide.
+
+
+NOTE: Il DII MCP è una funzionalità link:concept_preview_features.html["Anteprima"] ed è pertanto soggetto a modifiche.
+
+
+
+[[tenant-scope]]
+== Ambito del tenant
+
+Ogni richiesta DII MCP viene eseguita all'interno del tenant DII e con le autorizzazioni dell'utente autenticato. Uno strumento può restituire solo i dati che esistono in quel tenant e sono visibili a quell'identità.
+
+
+
+[[acquisition-units]]
+== Unità di acquisizione
+
+Un'unità di acquisizione (AU) è un agente installato in remoto che interroga le sorgenti dati e invia i dati di telemetria a DII. I record dell'AU includono lo stato della connessione, l'aggiornamento dei dati, il sistema operativo, la versione e il numero di sorgenti dati assegnate.
+
+Connessione e segnalazione sono segnali diversi. Ad esempio, un AU può accettare una connessione pur non avendo una cronologia di segnalazione riuscita. Valuta sia lo stato che `lastReported`.
+
+
+
+[[data-sources]]
+== Fonti di dati
+
+Una sorgente dati, detta anche collector, è una connessione configurata a un sistema infrastrutturale come un array di storage, uno switch, un hypervisor o un servizio cloud.
+
+Utilizza l'operazione di elenco per visualizzare l'inventario e lo stato. Recupera un'origine dati specifica quando hai bisogno di dettagli di configurazione come pacchetti di raccolta, intervalli di polling o attività recenti.
+
+I tipi di origine dati supportati descrivono il catalogo più ampio dei collector DII. Non corrispondono ai collector configurati nel tenant corrente.
+
+
+
+[[objects]]
+== Oggetti
+
+Gli oggetti sono entità infrastrutturali normalizzate come sistemi di storage, pool, volumi, host, macchine virtuali, workload Kubernetes e risorse specifiche del prodotto.
+
+I tipi di oggetto sono dinamici. Sempre:
+
+. Elenca i tipi di oggetti.
+. Seleziona il tipo esatto.
+. Recupera i metadati per quel tipo.
+. Interroga solo gli attributi e le metriche dichiarati dai metadati.
+
+
+
+
+[[attributes-and-metrics]]
+=== Attributi e metriche
+
+* Gli *attributi* descrivono identità, configurazione, proprietà, etichette o relazioni.
+* Le *metriche* sono misurazioni variabili nel tempo, come capacità, latenza, throughput o utilizzo.
+* Gli attributi raggruppabili possono segmentare una query aggregata.
+
+
+I filtri delle metriche vengono valutati rispetto ai valori raw delle metriche prima che venga applicata l'aggregazione della finestra temporale richiesta.
+
+
+
+[[logs]]
+== Registri
+
+I tipi di log rappresentano flussi di eventi come ONTAP EMS, eventi Kubernetes, eventi StorageGRID, eventi VMware ed eventi della piattaforma DII.
+
+Anche l'interrogazione dei log è basata sui metadati:
+
+. Elenca i tipi di log disponibili.
+. Recupera i metadati per il tipo selezionato.
+. Richiedi solo attributi validi.
+. Cerca eventi o crea un istogramma del conteggio degli eventi.
+
+
+
+
+[[monitors-and-alerts]]
+== Monitoraggio e avvisi
+
+Un monitor definisce una condizione che DII valuta. Un avviso è un risultato specifico del monitor per uno o più oggetti correlati.
+
+* Usa gli strumenti di monitoraggio per esaminare l'intento, lo stato, il tipo di oggetto e le indicazioni correttive.
+* Usa i metadati degli avvisi prima di interrogare gli avvisi.
+* Usa il nome dell'avviso, ad esempio  `AL-123456`, o il relativo UUID per recuperare un avviso.
+
+
+Lo stato di allerta e la gravità sono dimensioni distinte. Richiedi entrambi quando assegni priorità ai risultati.
+
+
+
+[[maintenance-windows]]
+== Finestre di manutenzione
+
+Una finestra di manutenzione sopprime gli avvisi che corrispondono a un'espressione durante un periodo definito. Un risultato positivo vuoto significa che non esistono finestre corrispondenti; non è una prova di dati mancanti.
+
+
+
+[[notification-rules-and-targets]]
+== Regole e destinazioni di notifica
+
+Le regole di notifica instradano gli avvisi corrispondenti. I destinatari possono includere Slack, Microsoft Teams, PagerDuty o integrazioni HTTP personalizzate.
+
+Gli indirizzi Webhook possono contenere informazioni riservate. Per la segnalazione, richiedi solo il nome del target, il tipo di motore e lo stato. Non riprodurre mai l'indirizzo completo.
+
+
+
+[[metadata-first-query-flow]]
+== Flusso di query basato sui metadati
+
+[source, text]
+----
+Discover types
+    → retrieve type metadata
+        → select valid attributes and metrics
+            → query a bounded time range
+                → paginate, group, or retrieve time series
+----
+
+
+[[filters]]
+== Filtri
+
+Gli strumenti di query di DII supportano condizioni e operatori logici nidificati:
+
+* Confronti: `EQ`, `NE`, `GT`, `LT`, `GE`, `LE`
+* Corrispondenza dei modelli: `WILDCARD`
+* Presenza: `EXISTS`
+* Logica: `and`, `or`, `not`
+
+
+Usa il nome del campo esatto e il tipo di valore compatibile dichiarato nei metadati. Per `EXISTS`, ometti un valore di confronto se supportato dalla versione del server connesso.
+
+
+
+[[time-ranges-and-pagination]]
+== Intervalli di tempo e impaginazione
+
+* Usa timestamp ISO-8601 con offset espliciti o `Z`.
+* Fornisci un fuso orario IANA come +America/New_York+ o  `UTC` quando richiesto.
+* Limita gli intervalli di tempo delle query a 30 giorni o meno, a meno che uno strumento non documenti un limite inferiore.
+* Le query di oggetti e avvisi in genere utilizzano `limit` e `offset`.
+* Le query degli eventi di log utilizzano il cursore restituito per la pagina successiva.
+
+
+Per gli errori e le procedure di ripristino, vedi link:mcp_troubleshooting.html["Risoluzione dei problemi"].

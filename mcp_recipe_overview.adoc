@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_overview.html 
+summary: Le ricette combinano più strumenti DII di sola lettura in flussi di lavoro di infrastruttura ripetibili. Utilizzale come punti di partenza e sostituisci i nomi delle risorse fittizie con i valori del tuo tenant. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Ricette operative DII MCP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le ricette combinano più strumenti DII di sola lettura in flussi di lavoro di infrastruttura ripetibili. Utilizzale come punti di partenza e sostituisci i nomi delle risorse fittizie con i valori del tuo tenant.
+
+
+NOTE: Il DII MCP è una funzionalità link:concept_preview_features.html["Anteprima"] ed è pertanto soggetto a modifiche.
+
+
+
+[[choose-a-workflow]]
+== Scegli un flusso di lavoro
+
+|===
+| Obiettivo | Ricetta | Superfici DII primarie 
+
+
+| Verifica la copertura e l'aggiornamento della raccolta | link:mcp_recipe_environment_inventory.html["Ambiente di inventario e integrità della raccolta"] | Unità di acquisizione, fonti di dati 
+
+
+| Dai priorità ai problemi dell'infrastruttura attivi | link:mcp_recipe_storage_health.html["Valuta lo stato dello storage"] | Avvisi, monitor, registri, oggetti 
+
+
+| Trova i pool che si stanno avvicinando alla saturazione della capacità | link:mcp_recipe_capacity_risk.html["Identifica il rischio di capacità"] | Metadati degli oggetti, raggruppamento, serie temporali 
+
+
+| Controlla le versioni dei componenti di raccolta Kubernetes | link:mcp_recipe_kubernetes_collector_currency.html["Verifica l'aggiornamento del collector Kubernetes"] | Collector Kubernetes 
+
+
+| Analizza un volume o un carico di lavoro lento | link:mcp_recipe_performance_rca.html["Risoluzione dei problemi delle prestazioni"] | Metriche degli oggetti, avvisi, registri 
+
+
+| Esamina in sicurezza il routing e la soppressione | link:mcp_recipe_notification_posture.html["Rivedi la postura di notifica"] | Regole, obiettivi, finestre di manutenzione 
+|===
+
+
+[[standard-investigation-pattern]]
+== Modello di indagine standard
+
+. Chiarisci l'ambito delle risorse e l'intervallo di tempo.
+. Scopri i tipi disponibili.
+. Recupera i metadati prima di utilizzare i campi dinamici.
+. Interroga un intervallo di tempo limitato.
+. Correla i segnali indipendenti.
+. Distingui i fatti osservati dalle inferenze.
+. Segnala le limitazioni e le azioni di follow-up consigliate.
+
+
+
+
+[[safety]]
+== Sicurezza
+
+* Queste ricette utilizzano strumenti di sola lettura.
+* Mantieni gli intervalli di tempo a 30 giorni o meno.
+* Ometti le credenziali, gli indirizzi privati, gli UUID, gli endpoint webhook raw e i payload di log non necessari.
+* Conferma le azioni operative ad alto impatto al di fuori del flusso di lavoro MCP.
+
+
+
+
+[[related-documentation]]
+== Documentazione correlata
+
+* link:mcp_overview.html["Panoramica di DII MCP"]
+* link:mcp_concepts.html["Concetti e modello dati"]
+* link:mcp_tools_overview.html["Riferimento dello strumento"]
+* link:mcp_security.html["Sicurezza e privacy"]
+

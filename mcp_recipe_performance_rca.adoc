@@ -1,0 +1,163 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_performance_rca.html 
+summary: Usa questa procedura per analizzare un volume, un datastore, una macchina virtuale, un carico di lavoro Kubernetes o un altro oggetto DII lento, correlando metriche, avvisi e log della piattaforma. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Risoluzione dei problemi delle prestazioni
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usa questa procedura per analizzare un volume, un datastore, una macchina virtuale, un carico di lavoro Kubernetes o un altro oggetto DII lento, correlando metriche, avvisi e log della piattaforma.
+
+
+NOTE: Il DII MCP è una funzionalità link:concept_preview_features.html["Anteprima"] ed è pertanto soggetto a modifiche.
+
+
+
+[[prerequisites]]
+== Prerequisiti
+
+* Il nome della risorsa interessata e l'ora approssimativa dell'incidente.
+* Un intervallo di tempo di 30 giorni o meno.
+* Un periodo di confronto o una baseline nota in stato di salute, ove possibile.
+
+
+
+
+[[tools-used]]
+== Strumenti utilizzati
+
+* +ObjectService_getObjectTypes+
+* +ObjectService_getMetadataForObjectType+
+* +ObjectService_query+
+* +ObjectService_queryPerformanceMetricsForObjects+
+* +ObjectService_groupObjects+
+* +AlertsService_getMetadata+
+* +AlertsService_queryForAlerts+
+* +LogService_getLogTypes+
+* +LogService_getLogTypeMetadata+
+* +LogService_queryLogEvents+
+
+
+
+
+[[starter-prompt]]
+== Richiesta iniziale
+
+[]
+====
+Analizza perché il volume `example-volume` era lento tra le 09:00 e le 11:00 UTC. Individua il tipo di oggetto corretto e le metriche valide, confronta latenza, IOPS e throughput durante la finestra dell'incidente, esamina gli avvisi attivi correlati e i log della piattaforma e confronta con un periodo senza problemi. Distingui le prove dalle ipotesi e identifica la prossima misurazione necessaria.
+
+====
+
+
+[[agent-workflow]]
+== Flusso di lavoro dell'agente
+
+. Risolvi la risorsa associandola a un tipo di oggetto e a un'identità precisi.
+. Recupera i metadati per quel tipo di oggetto.
+. Identifica metriche valide di latenza, operazioni, throughput, utilizzo e capacità.
+. Interroga gli attributi correnti dell'oggetto per stabilire il posizionamento e le relazioni.
+. Recupera le serie temporali in un periodo di:
++
+** La finestra dell'incidente
+** Una finestra integra comparabile
+
+
+. Allinea i timestamp e le funzioni di aggregazione tra le metriche.
+. Recupera gli avvisi relativi alla risorsa, contenenti il sistema, l'host, il nodo o il pool di storage.
+. Seleziona i flussi di log pertinenti, recupera i metadati e cerca in un intervallo ristretto intorno alle variazioni delle metriche.
+. Verifica ipotesi plausibili:
++
+** Picco della domanda
+** Saturazione delle risorse
+** Errori di storage o del fabric
+** Pressione sulla capacità
+** Contesa dell'host o della VM
+** Lacuna nella raccolta
+
+
+. Riporta la spiegazione più supportata e le alternative irrisolte.
+
+
+
+
+[[evidence-standards]]
+== Standard di evidenza
+
+Risultati dell'etichettatura:
+
+* *Osservato:* restituito direttamente da uno strumento.
+* *Correlati:* segnali indipendenti cambiati nello stesso intervallo.
+* *Dedotto:* una spiegazione plausibile non ancora dimostrata.
+* *Sconosciuto:* le prove richieste non sono disponibili.
+
+
+La correlazione non implica causalità. Un allarme simultaneo va considerato come elemento a supporto, non come prova definitiva, a meno che il meccanismo non sia stabilito.
+
+
+
+[[metric-guidance]]
+== Guida alle metriche
+
+* Usa  `AVG`per il comportamento generale, ma controlla  `MAX`quando i brevi picchi sono importanti.
+* Usa  `SUM`solo per metriche additive.
+* Usa `CHANGE` o +CHANGE_RATIO+ per i contatori o la crescita dove i metadati lo supportano.
+* Evita di confrontare serie con limiti di intervallo o unità di misura diversi.
+* I filtri si applicano prima dell'aggregazione degli intervalli temporali.
+
+
+
+
+[[suggested-output]]
+== Output suggerito
+
+. Ambito e cronologia dell'incidente
+. Evidenza delle metriche
+. Avviso e prove del log
+. Confronto del periodo integro
+. Spiegazione più probabile
+. Ipotesi alternative
+. Affidabilità e prove mancanti
+. Controllo successivo consigliato
+
+
+
+
+[[limits-and-privacy]]
+== Limiti e privacy
+
+* Le finestre delle serie temporali non possono superare i 30 giorni.
+* Lo strumento di analisi delle prestazioni restituisce un numero limitato di serie; restringi il filtro prima di aumentare il limite.
+* Ometti i campi di log raw sensibili che non contribuiscono alla diagnosi.
+* Non proporre interventi correttivi invasivi senza averli prima convalidati attraverso i normali controlli operativi.
+
+
+
+
+[[follow-up-prompts]]
+== Suggerimenti di approfondimento
+
+[]
+====
+Confronta la latenza massima e media durante l'incidente con la stessa ora del giorno precedente in cui il sistema era in buone condizioni.
+
+====
+[]
+====
+Raggruppa i carichi di lavoro correlati per host o pool di storage e identifica se il rallentamento era isolato o condiviso.
+
+====
+[]
+====
+Mostra gli eventi della piattaforma entro 15 minuti dal primo aumento della latenza.
+
+====
+link:mcp_recipe_overview.html["Torna alle ricette"]

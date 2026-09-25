@@ -11799,7 +11799,6 @@
   <block id="48c0a89dc87860e6c3b42a70bbd13c53" category="paragraph"><block ref="48c0a89dc87860e6c3b42a70bbd13c53" category="inline-link-macro-rx"></block></block>
   <block id="10fcc85a32e000abd9a522eb086aa8b9" category="list-text">Nota: il programma di installazione dell'agente deve essere scaricato in una cartella diversa da quella in cui è in esecuzione l'agente.</block>
   <block id="323d0a1ff366ae52ecb4199bd4c94bcc" category="paragraph">Ad esempio, se l'agente è in esecuzione in "/test_user/apps", il comando sarebbe:</block>
-  <block id="e952e6787cbba83c2e3f618512962673" category="paragraph"><block ref="0ec52641b6ccb1942a8a239f999b7e3e" category="inline-link-macro-rx"></block> <block ref="3b5464e5227ca5bca8202e73f38f8484" category="inline-link-macro-rx"></block> <block ref="b5b2a212e3db2ebf0698577bb3fa110c" category="inline-link-macro-rx"></block> <block ref="6dcfbee49c44a8328938bbb4835169ec" category="inline-link-macro-rx"></block> <block ref="93625d442049bb401e7127dc86f547f7" category="inline-link-macro-rx"></block> <block ref="02d8f86e7604c160ff33f6098d5ab0fe" category="inline-link-macro-rx"></block></block>
   <block id="22e2d1e386d2ea8093c75a43b1b0223e" category="summary">Tabelle dello schema per il data warehouse Capacity</block>
   <block id="88bf9a2e65ee5333fd86a914ed4d4dac" category="doc">Schema di capacità</block>
   <block id="3e2cec995200da54685821607fd1b34b" category="paragraph">Fonte: endpoint OData *dwh_capacity* — Data Infrastructure Insights</block>
@@ -15587,4 +15586,720 @@
   <block id="a6fa4aea2a61c78e74a437025bfc4121" category="list-text">Per le prestazioni: la cronologia di latenza e IOPS e la cronologia della frequenza degli eventi.</block>
   <block id="2f5a98a7fe17728f8b6f19bb7dde8ff4" category="list-text">Per la capacità: utilizzo dell'abbonamento prima e dopo e la capacità raw riportata da ciascun collector.</block>
   <block id="7db2da5d72ca4cfd4dc3591cdb8b5f7a" category="paragraph">Usa Guida ++&gt;++ Supporto in Data Infrastructure Insights per aprire un caso.</block>
+  <block id="a0d5cf132ea60556950b6db3b75e1331" category="summary">Capire questi concetti aiuta un assistente basato sull'intelligenza artificiale a selezionare gli strumenti giusti e a formulare query valide.</block>
+  <block id="3e22aa14b911d8584c3de2cb2d09c8e3" category="doc">Concetti e modello dati di DII MCP</block>
+  <block id="845c2e1f81c7167073b0b3f255d00af4" category="admonition">Il DII MCP è una funzionalità <block ref="312c0c6b46ba32b4b11ba8c9da5788ed" category="inline-link-macro-rx"></block> ed è pertanto soggetto a modifiche.</block>
+  <block id="c24a6a0fbcf468cb15836f361c982306" category="section-title">Ambito del tenant</block>
+  <block id="3af465bc8340a91d0857dbc69ece54c0" category="paragraph">Ogni richiesta DII MCP viene eseguita all'interno del tenant DII e con le autorizzazioni dell'utente autenticato. Uno strumento può restituire solo i dati che esistono in quel tenant e sono visibili a quell'identità.</block>
+  <block id="1f6e96f30866692561631a04bbf5df94" category="section-title">Unità di acquisizione</block>
+  <block id="a80dc875900b75f5008a683662daf66c" category="paragraph">Un'unità di acquisizione (AU) è un agente installato in remoto che interroga le sorgenti dati e invia i dati di telemetria a DII. I record dell'AU includono lo stato della connessione, l'aggiornamento dei dati, il sistema operativo, la versione e il numero di sorgenti dati assegnate.</block>
+  <block id="975b85564f5db13da28fc5630881bfe9" category="paragraph">Connessione e segnalazione sono segnali diversi. Ad esempio, un AU può accettare una connessione pur non avendo una cronologia di segnalazione riuscita. Valuta sia lo stato che<block ref="98590730af2b11154a1d93e8c46b2778" prefix=" " category="inline-code"></block>.</block>
+  <block id="d1107e5839e1db0f331201116234fc6d" category="section-title">Fonti di dati</block>
+  <block id="a509aa78fd503264cb66caf0b0b4c886" category="paragraph">Una sorgente dati, detta anche collector, è una connessione configurata a un sistema infrastrutturale come un array di storage, uno switch, un hypervisor o un servizio cloud.</block>
+  <block id="568d4a528f825f2b510b1c9ab7c3ce19" category="paragraph">Utilizza l'operazione di elenco per visualizzare l'inventario e lo stato. Recupera un'origine dati specifica quando hai bisogno di dettagli di configurazione come pacchetti di raccolta, intervalli di polling o attività recenti.</block>
+  <block id="b84b607efe924feea91502be7beaf0da" category="paragraph">I tipi di origine dati supportati descrivono il catalogo più ampio dei collector DII. Non corrispondono ai collector configurati nel tenant corrente.</block>
+  <block id="c8308b1eba7ba926a61b8fd802194386" category="section-title">Oggetti</block>
+  <block id="24b109764b9aac525d735f917e2f5e46" category="paragraph">Gli oggetti sono entità infrastrutturali normalizzate come sistemi di storage, pool, volumi, host, macchine virtuali, workload Kubernetes e risorse specifiche del prodotto.</block>
+  <block id="f3dca07a26430634f6cec4b435251e1b" category="paragraph">I tipi di oggetto sono dinamici. Sempre:</block>
+  <block id="d0bed2595156ec71cef87ede5f81ab52" category="list-text">Elenca i tipi di oggetti.</block>
+  <block id="5fb92ef33a24cf6866dff53e4a406f7b" category="list-text">Seleziona il tipo esatto.</block>
+  <block id="a8e549a4a967534ec12d46ec9c4ff5fc" category="list-text">Recupera i metadati per quel tipo.</block>
+  <block id="0a10742f07dbe57270789d5bd98792d5" category="list-text">Interroga solo gli attributi e le metriche dichiarati dai metadati.</block>
+  <block id="422f71b1f5d388ac6cccffff67483a06" category="section-title">Attributi e metriche</block>
+  <block id="e4d097a57c0dc386fcbbef9a49f83b4e" category="list-text">Gli *attributi* descrivono identità, configurazione, proprietà, etichette o relazioni.</block>
+  <block id="efebf0adaea31de8301ecfc61630e072" category="list-text">Le *metriche* sono misurazioni variabili nel tempo, come capacità, latenza, throughput o utilizzo.</block>
+  <block id="d01ae68441042fb1048edc996a62ed84" category="list-text">Gli attributi raggruppabili possono segmentare una query aggregata.</block>
+  <block id="888531a76f183011c680c6dc96e68a50" category="paragraph">I filtri delle metriche vengono valutati rispetto ai valori raw delle metriche prima che venga applicata l'aggregazione della finestra temporale richiesta.</block>
+  <block id="b2d37ae1cedf42ff874289b721860af2" category="section-title">Registri</block>
+  <block id="f4c76edb2343ecf5f73db48a2e92f490" category="paragraph">I tipi di log rappresentano flussi di eventi come ONTAP EMS, eventi Kubernetes, eventi StorageGRID, eventi VMware ed eventi della piattaforma DII.</block>
+  <block id="dca3d16dba5b965ca9da9fa8028f78f3" category="paragraph">Anche l'interrogazione dei log è basata sui metadati:</block>
+  <block id="51d90cb90f5e0a12203382f4f9174d4a" category="list-text">Elenca i tipi di log disponibili.</block>
+  <block id="e93069e2487f472e54df4b5d7aef3a90" category="list-text">Recupera i metadati per il tipo selezionato.</block>
+  <block id="b239ee178d458c6e53f3bac134c4af9c" category="list-text">Richiedi solo attributi validi.</block>
+  <block id="514c25fe8547042a78a13b2d6c74e402" category="list-text">Cerca eventi o crea un istogramma del conteggio degli eventi.</block>
+  <block id="db5ca14432bcc36721aaad0cc76bc588" category="section-title">Monitoraggio e avvisi</block>
+  <block id="baa7b16bc6a241889f4464c42f8d4097" category="paragraph">Un monitor definisce una condizione che DII valuta. Un avviso è un risultato specifico del monitor per uno o più oggetti correlati.</block>
+  <block id="7f724d0b72144c6415fb7cdb22477eb1" category="list-text">Usa gli strumenti di monitoraggio per esaminare l'intento, lo stato, il tipo di oggetto e le indicazioni correttive.</block>
+  <block id="f14a688b148475dc52c6013806361111" category="list-text">Usa i metadati degli avvisi prima di interrogare gli avvisi.</block>
+  <block id="a257b0ef6cf67a52780be88c0e27e3a5" category="list-text">Usa il nome dell'avviso, ad esempio <block ref="fea18275d08c39713b6dcad48bb36fa6" prefix=" " category="inline-code"></block>, o il relativo UUID per recuperare un avviso.</block>
+  <block id="6f1d44ed8bb0ef6a8b11965160804e1f" category="paragraph">Lo stato di allerta e la gravità sono dimensioni distinte. Richiedi entrambi quando assegni priorità ai risultati.</block>
+  <block id="4a383c6031bb01ff64bf826213bd8b0a" category="section-title">Finestre di manutenzione</block>
+  <block id="ce51c2973116361d3e357d367e724820" category="paragraph">Una finestra di manutenzione sopprime gli avvisi che corrispondono a un'espressione durante un periodo definito. Un risultato positivo vuoto significa che non esistono finestre corrispondenti; non è una prova di dati mancanti.</block>
+  <block id="89fb65faa11daecda4dcad2b6a6aa3ca" category="section-title">Regole e destinazioni di notifica</block>
+  <block id="4df6394b7dbcdb605f97caca5667a783" category="paragraph">Le regole di notifica instradano gli avvisi corrispondenti. I destinatari possono includere Slack, Microsoft Teams, PagerDuty o integrazioni HTTP personalizzate.</block>
+  <block id="ad9e356a50e347924fe2c3b70e20a7d7" category="paragraph">Gli indirizzi Webhook possono contenere informazioni riservate. Per la segnalazione, richiedi solo il nome del target, il tipo di motore e lo stato. Non riprodurre mai l'indirizzo completo.</block>
+  <block id="9cca89eab839e79d026c8a8fac2cc1c4" category="section-title">Flusso di query basato sui metadati</block>
+  <block id="f3f43e30c8c7d78c6ac0173515e57a00" category="section-title">Filtri</block>
+  <block id="922e4449ab96be457735ddbfa6cb3da0" category="paragraph">Gli strumenti di query di DII supportano condizioni e operatori logici nidificati:</block>
+  <block id="1c8d54e324e6f36a3b4007744ff51e68" category="list-text">Confronti:<block ref="2dcbad7477fd40561e8b8198f173bd47" prefix=" " category="inline-code"></block>,<block ref="dc33066c3993e0d50896e533fd692ce0" prefix=" " category="inline-code"></block>,<block ref="cd6a9bd2a175104eed40f0d33a8b4020" prefix=" " category="inline-code"></block>,<block ref="c562607189d77eb9dfb707464c1e7b0b" prefix=" " category="inline-code"></block>,<block ref="f803729628adf4199f224c2a225038e9" prefix=" " category="inline-code"></block>,<block ref="cfe6055d2e0503be378bb63449ec7ba6" prefix=" " category="inline-code"></block></block>
+  <block id="c412a5dba74dfeb8f5a25525359c5282" category="list-text">Corrispondenza dei modelli:<block ref="15f4cff81d9ee10b162eac10c339d5f4" prefix=" " category="inline-code"></block></block>
+  <block id="84aba758d5fe359561d79cd096288b8a" category="list-text">Presenza:<block ref="6a240802522e95fc9e2c1d09122d8ec4" prefix=" " category="inline-code"></block></block>
+  <block id="46531a3b544b47f31b0c2f1dddd9a4f8" category="list-text">Logica:<block ref="be5d5d37542d75f93a87094459f76678" prefix=" " category="inline-code"></block>,<block ref="e81c4e4f2b7b93b481e13a8553c2ae1b" prefix=" " category="inline-code"></block>,<block ref="d529e941509eb9e9b9cfaeae1fe7ca23" prefix=" " category="inline-code"></block></block>
+  <block id="4d3b1d156e67d976d13df98d3cb0c490" category="paragraph">Usa il nome del campo esatto e il tipo di valore compatibile dichiarato nei metadati. Per<block ref="6a240802522e95fc9e2c1d09122d8ec4" prefix=" " category="inline-code"></block>, ometti un valore di confronto se supportato dalla versione del server connesso.</block>
+  <block id="e476e3c9172cb2064ba1739baf6be204" category="section-title">Intervalli di tempo e impaginazione</block>
+  <block id="1c060490ca0703bb45a853ed3fde3aad" category="list-text">Usa timestamp ISO-8601 con offset espliciti o<block ref="21c2e59531c8710156d34a3c30ac81d5" prefix=" " category="inline-code"></block>.</block>
+  <block id="783d7ec762585244231c6f01986fa556" category="list-text">Fornisci un fuso orario IANA come +America/New_York+ o <block ref="9234324ddf6b4176b57d803a925b7961" prefix=" " category="inline-code"></block> quando richiesto.</block>
+  <block id="9374d63674f21af0454b8f1bb33a7ee7" category="list-text">Limita gli intervalli di tempo delle query a 30 giorni o meno, a meno che uno strumento non documenti un limite inferiore.</block>
+  <block id="aa0d33f2727fffbdea5607e601027004" category="list-text">Le query di oggetti e avvisi in genere utilizzano<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> e<block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>.</block>
+  <block id="c43b8a868e06ae46b05208b49e27df39" category="list-text">Le query degli eventi di log utilizzano il cursore restituito per la pagina successiva.</block>
+  <block id="2f38d4343969490ae48e613f3de832bf" category="paragraph">Per gli errori e le procedure di ripristino, vedi <block ref="5498ec94416004e6b68822d8a755ce71" category="inline-link-macro-rx"></block>.</block>
+  <block id="8e87b8fcaaab63d270d3caef57eb597c" category="summary">Collega gli assistenti AI a Data Infrastructure Insights (DII) in modo che possano analizzare l'inventario dell'infrastruttura, la telemetria, gli avvisi e l'integrità della raccolta utilizzando il linguaggio naturale.</block>
+  <block id="3e923f7f281fa681b6b446f4107cd7e0" category="doc">DII MCP Server</block>
+  <block id="3021d5e0dccba3ca739ce39b733f507e" category="paragraph">Collega gli assistenti/agenti di intelligenza artificiale a Data Infrastructure Insights (DII) in modo che possano analizzare l'inventario dell'infrastruttura, la telemetria, gli avvisi e lo stato di integrità della raccolta utilizzando il linguaggio naturale.</block>
+  <block id="f6bbce1e4278dc6a570847525a6d6d25" category="paragraph">Il server DII MCP implementa il Model Context Protocol (MCP) ed espone strumenti con ambito tenant ai client AI supportati. L'attuale toolset del prodotto è *di sola lettura*: recupera e analizza i dati DII, ma non modifica l'infrastruttura o le risorse DII.</block>
+  <block id="c5819b15a0e272c53a506715c03c08b0" category="section-title">Cosa puoi analizzare</block>
+  <block id="68b7c7f45c752d5301706abc9348a8d0" category="list-text">*Inventario dell'infrastruttura:* archiviazione, virtualizzazione, Kubernetes, ONTAP, Azure NetApp Files, StorageGRID e risorse correlate.</block>
+  <block id="d974b2a73bed742051b1482dd3f74eb9" category="list-text">*Prestazioni e capacità:* metriche degli oggetti, aggregati raggruppati e andamento delle serie temporali.</block>
+  <block id="18412cbb840e7dd27d456bf170e2a015" category="list-text">*Log ed eventi:* scopri i tipi di log, cerca gli eventi e crea istogrammi del conteggio degli eventi.</block>
+  <block id="858194edc526343c116acf769973d013" category="list-text">*Avvisi:* esamina gli avvisi attivi, le definizioni dei monitor, i livelli di gravità e le linee guida correttive.</block>
+  <block id="b903dcc6c944edc358ebb3a3bcfe3754" category="list-text">*Stato di salute della raccolta:* esamina le unità di acquisizione, le origini dati, i tipi di collector supportati e le versioni dei collector Kubernetes.</block>
+  <block id="d8f2460aa91803a2b80333935f452c9c" category="list-text">*Stato delle notifiche:* ispeziona le finestre di manutenzione, le regole di notifica e i tipi di destinazione dei webhook.</block>
+  <block id="a22f2b07f3532967877f12fbcb10d4ba" category="section-title">Scegli un punto di ingresso</block>
+  <block id="09d298c703d37f941d18f505e350c5c4" category="section-title">Connetti un client AI</block>
+  <block id="475bdd61a23a75eafbd484af4e863f22" category="inline-link-macro">Configura il server DII MCP</block>
+  <block id="f666cc1807907346335aeee8d93f2993" category="paragraph">Segui <block ref="b0abb521018fe4eb467a66367286751f" category="inline-link-macro-rx"></block> per Cursor, Claude Code, VS Code, Codex o un altro client compatibile con MCP.</block>
+  <block id="b11f8c7d52de0b7674c6a1e4680ff21a" category="section-title">Esplora gli strumenti disponibili</block>
+  <block id="124b9417760f5748d365e86f1d4d5092" category="inline-link-macro">riferimento del toolset</block>
+  <block id="7d7627b71a67ff60643737eab6195583" category="paragraph">Usa <block ref="e83a2a8ca0e307114e8e048d4c25c43d" category="inline-link-macro-rx"></block> per comprendere tutti gli strumenti attualmente disponibili, le chiamate di rilevamento necessarie, i limiti delle query e i nomi visualizzati dall'utente.</block>
+  <block id="62a81233ec02cfc871d0b03db8169e02" category="section-title">Inizia con un flusso di lavoro operativo</block>
+  <block id="ae18fe4e01e61a9862ceaf165003213a" category="inline-link-macro">ricetta</block>
+  <block id="001e84898f721e9666b33fe46bcd171f" category="paragraph">Utilizza un<block ref="804387b76dc98afb54c8e2b2ce094cb6" category="inline-link-macro-rx"></block> quando conosci già il risultato di cui hai bisogno:</block>
+  <block id="329a3a20abb70f901de4ae2479ffd6c4" category="list-text">Integrità della raccolta dell'inventario</block>
+  <block id="3290b75c1ba79cc5205543672ee9743d" category="list-text">Valuta lo stato dello storage</block>
+  <block id="462bf3ed1d95099dae9e1a5f0fdfc1b9" category="list-text">Identifica il rischio di capacità</block>
+  <block id="692a66b615fe229939932b5726c43926" category="list-text">Verifica l'aggiornamento del collector Kubernetes</block>
+  <block id="d1bccbec1c0db5ca547e527eb08c8ce2" category="list-text">Risoluzione dei problemi delle prestazioni</block>
+  <block id="46e96ae0f6f3cfc97db2ed0fa673e648" category="list-text">Rivedi la postura di notifica</block>
+  <block id="9efa5e977515bddd26a5017232c81b8c" category="section-title">Come funzionano le query DII MCP</block>
+  <block id="d986f29a734a31ff00f9fc150521d1ae" category="paragraph">Molte risorse DII hanno schemi dinamici. Un'indagine affidabile segue una sequenza che parte dalla scoperta:</block>
+  <block id="d1f464ce3b52ef809c9e0ca8f757fdee" category="list-text">Elenca i tipi di oggetto o di log disponibili.</block>
+  <block id="3d991cc8fdbd0606bbc04ea0b975ae31" category="list-text">Usa solo attributi e metriche di quei metadati.</block>
+  <block id="dbb585659e6e146cf9bbb8b8f43abe73" category="list-text">Interroga un intervallo di tempo limitato.</block>
+  <block id="489875bd9e0ee746a644985b342ea331" category="list-text">Affina i risultati con filtri, raggruppamenti, ordinamenti o impaginazione.</block>
+  <block id="4a376152a5611c302f0dd80dbc506004" category="inline-link-macro">Concetti e modello dati</block>
+  <block id="62bad144d8e2516e566b0245fb2ebe16" category="paragraph">Per i dettagli, consulta <block ref="3a5585cb726e7b542ce3d7b91aac8bc1" category="inline-link-macro-rx"></block>.</block>
+  <block id="406aad28adb685420b2496b274c01a08" category="section-title">Limitazioni importanti</block>
+  <block id="1461737afecbd2444e5aa7679f72a3c3" category="list-text">Tutti gli strumenti di prodotto attualmente disponibili sono di sola lettura.</block>
+  <block id="3f168ef7442029dd3a55cafbbc59f0d0" category="list-text">Le query relative a oggetti, prestazioni e log impongono finestre temporali limitate. Usa finestre di 30 giorni o meno, a meno che la pagina di uno strumento non indichi esplicitamente un limite inferiore.</block>
+  <block id="2e0522af74c1376b4c7a9a56f8a90362" category="list-text">I campi della query devono corrispondere ai metadati restituiti per il tipo di risorsa selezionato.</block>
+  <block id="e5eccd010544a14fec89dd9967edbdf3" category="list-text">I risultati di grandi dimensioni sono impaginati o limitati.</block>
+  <block id="ccea86745c107be00119a47be9317bc1" category="list-text">La disponibilità degli strumenti e i dati restituiti dipendono dai collector del tenant, dalle funzionalità abilitate e dalle autorizzazioni dell'utente.</block>
+  <block id="60a8a2df8a0c4e55080bb30d0a8e1e2c" category="inline-link-macro">Sicurezza e privacy</block>
+  <block id="49cdbfec80e940928dcae8754ad0f9bb" category="list-text">Non richiedere o riprodurre gli indirizzi completi degli endpoint webhook. Vedi <block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block>.</block>
+  <block id="cce78dc6ebbec7385a01f2146d6d01c8" category="section-title">Prossimi passi</block>
+  <block id="00be2877892bf7a7171ac6f6a49533e5" category="inline-link-macro">Collega il tuo client</block>
+  <block id="2295cb01af592c1e12ee57d5b7b9e41f" category="list-text"><block ref="fb7d969ff0093fd4611c668ef8461c15" category="inline-link-macro-rx"></block>.</block>
+  <block id="61c84588006b722cff7a3863b1b38cf0" category="inline-link-macro">ricetta dell'inventario dell'ambiente</block>
+  <block id="d2c17a8eb702953e412346a1a7fd11af" category="list-text">Prova <block ref="3c65db3f9e7ade5ed02afb71e65e8ca5" category="inline-link-macro-rx"></block>.</block>
+  <block id="73232880df62414c2d8d0c34052ffdee" category="list-text">Verifica <block ref="5498ec94416004e6b68822d8a755ce71" category="inline-link-macro-rx"></block> se una query viene rifiutata o restituisce risultati inattesi.</block>
+  <block id="e7a70e94622953c3236ee0a7ae4e8bc8" category="summary">Utilizza questa ricetta per identificare i pool di storage o i domini di capacità equivalenti che si stanno avvicinando alla saturazione e per individuare i potenziali candidati per il ribilanciamento.</block>
+  <block id="c44b016987d7f95c7680e967fd494727" category="list-text">Un ambito di storage o un'autorizzazione per esaminare tutti i pool di storage visibili.</block>
+  <block id="b0b203fd3b1df2f04d68d1de00d2c0e1" category="list-text">Un periodo di osservazione retrospettiva di 30 giorni o meno.</block>
+  <block id="cad1e2a40c136ac23bc41185f6f14b38" category="list-text">Accordo sui segnali di allarme organizzativi e sulle soglie critiche.</block>
+  <block id="581f0c912738e251311f0ad82ba8e378" category="section-title">Strumenti utilizzati</block>
+  <block id="45327a7e56d6699def1f5c41edf4770a" category="list-text">+ObjectService_getObjectTypes+</block>
+  <block id="83e407d9d755bb01bc069e300174647d" category="list-text">+ObjectService_getMetadataForObjectType+</block>
+  <block id="49e7198d68ef63d211026c7cf00a8f0d" category="list-text">+ObjectService_query+</block>
+  <block id="a7ad5b5c0428809970832567d587c0a3" category="list-text">+ObjectService_groupObjects+</block>
+  <block id="97513837a534e44cab5d635408132ba9" category="list-text">+ObjectService_queryPerformanceMetricsForObjects+</block>
+  <block id="8a131b001c484d5b055ba13c400f3908" category="list-text">+AlertsService_getMetadata+</block>
+  <block id="7369ee6777bb0bdb6a56e38182e7b4ae" category="list-text">+AlertsService_queryForAlerts+</block>
+  <block id="afe1dd876bc297348bddbe621b6a6933" category="section-title">Richiesta iniziale</block>
+  <block id="5df81fe11945be4cfb61313582162f9b" category="paragraph">Valuta il rischio relativo alla capacità del sistema storage negli ultimi 30 giorni. Individua il tipo di oggetto del pool di storage e i metadati corretti, quindi classifica i pool utilizzando il rapporto della capacità utilizzata disponibile, la capacità libera, la crescita e i segnali di tempo al riempimento. Identifica i pool critici, di avviso e nell'elenco di controllo e suggerisci candidati al ribilanciamento basati su prove. Indica le soglie e le funzioni di aggregazione utilizzate.</block>
+  <block id="13ed57dd36bfc146ef34347b7a9039c5" category="section-title">Flusso di lavoro dell'agente</block>
+  <block id="bdca77ae386bcb2504e138fd893ed442" category="list-text">Elenca i tipi di oggetto e seleziona il tipo di pool normalizzato o specifico del prodotto appropriato.</block>
+  <block id="6b544e08a446b98741ed008fa5b9e879" category="list-text">Recupera i metadati.</block>
+  <block id="8a57e77d98a867838a6cb661f90b91ca" category="list-text">Identifica ciò che è valido:</block>
+  <block id="e34185888ab796736b019b19f1ee1b18" category="list-text">Nomi dei pool e dei sistemi storage</block>
+  <block id="6a593c1001b5d5ede6495e783a1d9cdc" category="list-text">Metriche della capacità totale, utilizzata e libera</block>
+  <block id="8ae1962f921fa156b7c2625aae13ad77" category="list-text">Metrica del rapporto utilizzato</block>
+  <block id="9a135b783b5fe5c627bcb201a9d01d04" category="list-text">Metrica del tempo al riempimento completo o previsione</block>
+  <block id="03f98f5ba670204e96085fa1025e8939" category="list-text">Attributi raggruppabili relativi a storage, tier, posizione o livello di servizio</block>
+  <block id="507c5fbe45f15d02da16f855f1de2376" category="list-text">Interroga uno snapshot classificato corrente utilizzando aggregazioni compatibili.</block>
+  <block id="0cdbed90f0905380e3158d9c68dcf5d3" category="list-text">Recupera le serie temporali per le metriche sensibili alla crescita nel periodo retrospettivo richiesto.</block>
+  <block id="3f763029d306c3e42469b9f6a11d5658" category="list-text">Dove supportato, raggruppa la capacità per sistema storage, tier o posizione.</block>
+  <block id="8f5709591112d139de64ace3bdd50215" category="list-text">Per una conferma, consulta gli avvisi attivi relativi alla capacità.</block>
+  <block id="c86ad2432bf30f22961c610b3cbe9f4b" category="list-text">Classifica il rischio utilizzando le soglie concordate.</block>
+  <block id="7038138027bb6f322eeaa6e1b51bae08" category="list-text">Identifica le potenziali fonti e destinazioni di riequilibrio in base sia alla capacità che ai vincoli operativi.</block>
+  <block id="5f824363f6893a32d34d16c7091467c6" category="section-title">Esempio di modello di rischio</block>
+  <block id="3178ef9dda99dd2ecce9bd05737a5c4d" category="paragraph">Usa i criteri tenant quando disponibili. Altrimenti, etichetta quanto segue come modello illustrativo:</block>
+  <block id="0446236a81b8896a954567c0e5a82d6f" category="list-text">*Critico:* rapporto di utilizzo pari o superiore al 90%, oppure tempo al riempimento completo inferiore a 30 giorni</block>
+  <block id="f415bcea33a0906ccc8246e3f4199b62" category="list-text">*Attenzione:* rapporto di utilizzo pari o superiore all'80% o tempo al riempimento completo inferiore a 90 giorni</block>
+  <block id="7ec967e0732f52cb3d2c4c3183fd5e8a" category="list-text">*Osserva:* crescita positiva sostenuta con tempo al completamento completo inferiore a 180 giorni</block>
+  <block id="e51980e126230069d1a0b78807da1d0f" category="list-text">*Rischio inferiore:* nessuna delle condizioni sopra elencate</block>
+  <block id="910b412f47685f91d7eb6214a4ff389d" category="paragraph">Non dedurre il tempo al riempimento completo da soli due campioni quando DII fornisce una metrica di previsione. Se non è disponibile alcuna previsione, descrivi l'andamento senza presentare una data di esaurimento precisa.</block>
+  <block id="ac8e114efcc6a60e59ba78b5f8459863" category="section-title">Guida al ribilanciamento</block>
+  <block id="4008afcaac8b35128646c0643c66c287" category="paragraph">Una destinazione non è adatta solo perché ha capacità libera. Considera:</block>
+  <block id="6a6e7c83d145eb7bedf1cc56300e7237" category="list-text">Compatibilità del sistema storage e del protocollo</block>
+  <block id="57b133a9fe22d9c7d2063e28c54e2695" category="list-text">Livello di servizio e margine di prestazioni</block>
+  <block id="059bed65ffb23a1f456ab5b27a726d66" category="list-text">Relazioni di protezione e replica dei dati</block>
+  <block id="c1263315dc2a04246b6c45d263bf36ad" category="list-text">Vincoli di posizionamento del workload</block>
+  <block id="63cf0c735c94a7cf498c22432742a45b" category="list-text">Thin provisioning e assegnazione in eccesso</block>
+  <block id="2332343dbcab9886e1ce9c7afa9e4be4" category="list-text">Finestre di modifica operative</block>
+  <block id="e349761660073e91d78c4924e89f4e02" category="section-title">Output suggerito</block>
+  <block id="1864353042fc5474b3b2da90f2270c6c" category="list-text">Riepilogo del rischio di capacità</block>
+  <block id="f0880706d8eea27ff3dae74aa976bab2" category="list-text">Pool critici e di avviso</block>
+  <block id="a93476ddb16104cd7a1fcf0734386dd2" category="list-text">Narrativa di crescita</block>
+  <block id="ef6ba5160c901beec4f95b29e26a7520" category="list-text">Avvisi di capacità attiva</block>
+  <block id="504d99013aba3f5c33afdf828a6d5810" category="list-text">Coppie candidate di origine e destinazione</block>
+  <block id="6b9b1fa1927bce7830f3be27a7caed5f" category="list-text">Presupposti e dati mancanti</block>
+  <block id="b76c17a7414218ef9e8c23f5f621472a" category="section-title">Limiti e privacy</block>
+  <block id="0d19fadbd2d9b42fe76f74be79380860" category="list-text">Le finestre temporali degli oggetti non possono superare i 30 giorni per chiamata. Per i trend di durata maggiore, usa finestre consecutive non sovrapposte.</block>
+  <block id="f1409cd7e416a747e6cc6f7b017ba927" category="list-text">I filtri si applicano ai valori raw delle metriche prima dell'aggregazione.</block>
+  <block id="2537cc4e0c91de4d6854e46f4a313dbf" category="list-text">Raggruppa solo in base agli attributi contrassegnati come raggruppabili nei metadati.</block>
+  <block id="acafa56b8a1478ea8f7a4201f902e98d" category="list-text">I valori di capacità possono utilizzare unità di misura diverse; normalizzali prima di confrontarli.</block>
+  <block id="7e3817162b33d7920786df85f7e105dc" category="section-title">Suggerimenti di approfondimento</block>
+  <block id="946cdff6b94d508078ef67cbda6d95b0" category="paragraph">Mostra l'andamento della capacità utilizzata negli ultimi 30 giorni per i cinque pool a rischio più elevato.</block>
+  <block id="bcd5ff93de98ef7cb81e2f608e4868a1" category="paragraph">Raggruppa la capacità del pool per sistema storage e identifica i sistemi con un pool critico e una destinazione a rischio inferiore praticabile.</block>
+  <block id="c9dbf2a662fc0a120dc30591296a8ce0" category="paragraph">Correla i pool a più alto rischio con i monitor di capacità attivi e gli avvisi.</block>
+  <block id="5bad1810530ef525fa355d75fe783ac6" category="inline-link-macro">Torna alle ricette</block>
+  <block id="95197ff12bd6e54cc19fe8cfcb841567" category="paragraph"><block ref="95197ff12bd6e54cc19fe8cfcb841567" category="inline-link-macro-rx"></block></block>
+  <block id="8316d2edd3afed6f6af2689e874d2688" category="summary">Utilizza questa procedura per capire se le unità di acquisizione di DII e le origini dati configurate sono connesse, inviano report e raccolgono dati correttamente.</block>
+  <block id="ed1c0d4f7640d15c95af1b6e3a687690" category="doc">Ambiente di inventario e integrità della raccolta</block>
+  <block id="5e4ec732f254bb8f5899379cc7d04bfc" category="list-text">Accesso all'unità di acquisizione e agli strumenti di raccolta.</block>
+  <block id="e11c48b2be31d68444a78dac23db5f27" category="list-text">Un nome facoltativo dell'unità di acquisizione o del collector per restringere l'indagine.</block>
+  <block id="169ef6df047ea8cdf1523b7763896055" category="list-text">+AcquisitionUnitsService_getAcquisitionUnits+</block>
+  <block id="cce85d6c6e6e23e97f10ba1892e1c581" category="list-text">+AcquisitionUnitsService_getAcquisitionUnitByUuid+</block>
+  <block id="cab238e59566ee4550704abfc3320825" category="list-text">+CollectorService_getDataSources+</block>
+  <block id="6dcd43a376b504d945bb6de714e00451" category="list-text">+CollectorService_getDataSourceById+</block>
+  <block id="900d7f4abf83627dc7ebbc270a3ea4b3" category="list-text">+CollectorService_getDataSourceTypes+</block>
+  <block id="bfff656658f9a999cf82e8e8d140f30a" category="paragraph">Esamina il mio ambiente di raccolta DII. Riepiloga le unità di acquisizione in base allo stato della connessione e alla freschezza dei report, quindi riepiloga le origini dati configurate in base allo stato di acquisizione e al fornitore. Evidenzia le unità di acquisizione che non hanno mai inviato report, le unità senza collettori assegnati, i collettori con errori e le acquisizioni riuscite non aggiornate. Non visualizzare indirizzi IP, UUID o credenziali.</block>
+  <block id="df5947bfccd2c317f6209c660d6217c7" category="list-text">Elenca tutte le unità di acquisizione.</block>
+  <block id="731c94de5a32cb6afce48135ed599a4c" category="list-text">Classifica ogni AU utilizzando sia lo stato della connessione sia <block ref="98590730af2b11154a1d93e8c46b2778" prefix=" " category="inline-code"></block>.</block>
+  <block id="1e1ddefbde3cd9faf4105a9811ff60c2" category="list-text">Conta le fonti di dati assegnate per AU.</block>
+  <block id="8260502e634e58c0a8abc4f87b3cfbf2" category="list-text">Elenca tutte le origini dati configurate.</block>
+  <block id="0b09226e84ebf02c76fb13598f1dfb2c" category="list-text">Raggruppa i collector per stato, vendor, modello e AU.</block>
+  <block id="30f6aecfc15a0ab94c7e9ca927fad02a" category="list-text">Identifica:</block>
+  <block id="32b14fb05f2eb5a70455a77d018af120" category="list-text">AU disconnesse o con heartbeat non riuscito</block>
+  <block id="15af971f9ab22613da464b434b6ec10f" category="list-text">AU connesse che non hanno mai segnalato</block>
+  <block id="d095b90a352254c5363ea27fa0f21b73" category="list-text">Unità amministrative senza origini dati</block>
+  <block id="c6da05b272d042ec5bef9acf9d86b329" category="list-text">Collector non riusciti</block>
+  <block id="c628af3e788030b7d14a589399a5cf76" category="list-text">Collector senza acquisizione riuscita</block>
+  <block id="389c4ab4a6ce1ad70e35e5c30eb85691" category="list-text">Collezionisti di successo la cui ultima acquisizione è inaspettatamente vecchia</block>
+  <block id="257e4e15ae60899b01baed737a58e28f" category="list-text">Recupera i dettagli completi dell'AU o del collector solo per le eccezioni.</block>
+  <block id="7e0600b34da2a57fed170f2d8497e47b" category="list-text">Restituisci un riepilogo prioritario e indica chiaramente la soglia di freschezza utilizzata.</block>
+  <block id="ed5f9d72f11181ff3b05bf535e384183" category="section-title">Interpretazione</block>
+  <block id="12abb02146ab07ef58afe9013a97841b" category="paragraph">Utilizza queste distinzioni:</block>
+  <block id="e058417792171e657600a717a5242baf" category="list-text">*Connessa e con reporting:* l'AU è connessa e ha un valore <block ref="98590730af2b11154a1d93e8c46b2778" prefix=" " category="inline-code"></block>recente.</block>
+  <block id="8476b2757c7d4518d3d1e8417c7073d2" category="list-text">*Connesso ma mai segnalato:* la connettività esiste, ma non hai ancora configurato correttamente la segnalazione dei dati di telemetria.</block>
+  <block id="ec3404c076189ec4fa2c20bc13dde3b5" category="list-text">*Heartbeat non riuscito:* esamina l'host AU, il percorso di rete e il servizio.</block>
+  <block id="877ffc16ff7b4a70233b4b2038db1a2f" category="list-text">*Raccolta dati del collector non riuscita:* controlla l'attività di polling recente del collector, lo stato del pacchetto, la configurazione e l'ultima acquisizione riuscita.</block>
+  <block id="36f04184107b30d3948d3dd3eb1f1ef9" category="list-text">*Nessun collettore assegnato:* questo può essere intenzionale; verifica prima di considerarlo un errore.</block>
+  <block id="5008b8f24208812654274725be4f919a" category="paragraph">Il catalogo dei tipi di origine dati supportati descrive i prodotti che DII può raccogliere. Non dimostra che tali prodotti siano configurati nel tenant.</block>
+  <block id="7919e821dc18f3e88c0201e01bf6a240" category="list-text">Riepilogo esecutivo</block>
+  <block id="fd379e735d7981278b83eefc92b3df40" category="list-text">Conteggi dello stato dell'unità di acquisizione</block>
+  <block id="0eae51f57f4021eaf942a112fd4a3afb" category="list-text">Conteggi dello stato del collector</block>
+  <block id="19f3737ec767865dd63e688efd0d7054" category="list-text">Eccezioni classificate in base all'impatto operativo</block>
+  <block id="e123baf083c19e002d980bd9473bdbb3" category="list-text">Controlli consigliati</block>
+  <block id="467ea0fb0b54918827a3cff40b8a7e99" category="list-text">Limitazioni dei dati</block>
+  <block id="d8b104079ee8c294080f4bcfa3fb6f78" category="list-text">Evita di restituire UUID AU, indirizzi IP, nomi host privati o credenziali del collector.</block>
+  <block id="889a7c82601ebd3e16f183a0a0b79681" category="list-text">Un valore di stato da solo non garantisce l'aggiornamento dei dati.</block>
+  <block id="b1dbe8962d9ea0f619ef50e3bab2981c" category="list-text">Recupera la configurazione dettagliata solo per le eccezioni denominate.</block>
+  <block id="b6c53be9253996a52f828f0c4fa5edfa" category="paragraph">Esamina il collector con errore denominato<block ref="6c4358d342d4a6c6f01a3b07cb190045" prefix=" " category="inline-code"></block>. Riepiloga la recente attività di polling e gli errori dei pacchetti di raccolta senza mostrare credenziali o indirizzi privati.</block>
+  <block id="ba61a287c22a9d975f5f63ed194f0f1d" category="paragraph">Quali unità di acquisizione non hanno inviato report negli ultimi 30 minuti e quali collector dipendono da esse?</block>
+  <block id="dc49dcee5bac6ee8b8bcb50118000ee4" category="paragraph">Confronta i fornitori di collector configurati con il catalogo dei tipi di origine dati supportati da DII.</block>
+  <block id="0db1fda8044f572db18109871e3b2392" category="summary">Usa questa ricetta per identificare i cluster Kubernetes i cui componenti dell'operatore DII o della raccolta sono obsoleti, disabilitati o non aggiornati.</block>
+  <block id="cc684c915b41168af2c117ce54ed094e" category="list-text">La raccolta Kubernetes è configurata nel tenant DII.</block>
+  <block id="211962daa43b6fbe936ae03b791d5adc" category="list-text">Accesso alle informazioni del collector di Kubernetes.</block>
+  <block id="c2252e9c57df694e083bbe1379174543" category="list-text">+OperatorsManagement_getKubernetesCollectors+</block>
+  <block id="c29dbeda345af1a3236e6e47e6e85e71" category="list-text">Opzionale: +AcquisitionUnitsService_getAcquisitionUnits+</block>
+  <block id="fe04d577d15b78754931d7a00c9633f5" category="list-text">Opzionale: +CollectorService_getDataSources+</block>
+  <block id="b70cff5b8307a23413180cd52d65ae4a" category="paragraph">Controlla l'attualità del collector Kubernetes di DII. Raggruppa i cluster in base allo stato generale, identifica operatori e componenti obsoleti o disabilitati e segnala i timestamp dell'ultimo report non aggiornati. Non visualizzare indirizzi interni o UUID.</block>
+  <block id="19165db325c7f713d00bb6abf6a490f9" category="list-text">Elenca i collector di Kubernetes.</block>
+  <block id="f47fa959482a8b4beea99bd45efbeec4" category="list-text">Normalizza ciascun cluster in:</block>
+  <block id="092671d6fbcfa9171424fcc805c6ac4a" category="list-text">Aggiornato</block>
+  <block id="6f64ae857ab55cba2c3941fbc59285d5" category="list-text">Obsoleto</block>
+  <block id="88183b946cc5f0e8c96b2e66e1c74a7e" category="list-text">Sconosciuto</block>
+  <block id="a257a9fd6cf8bf1875362e2cd14dbd68" category="list-text">Confronta:</block>
+  <block id="826bd13a92e49352d28b368b6ad310c9" category="list-text">Versione dell'operatore</block>
+  <block id="b0ffecb26711cbd1b8ad984110e4a8a2" category="list-text">Versione del componente Prestazioni di rete e mappa</block>
+  <block id="80b8e4e43fefb8ee2fe14ebdcb6fb311" category="list-text">Modifica la versione del componente Analisi delle modifiche</block>
+  <block id="a00224336d1ae7360ec0d259e2ea3c79" category="list-text">Converti l'ultimo timestamp riportato nel fuso orario richiesto.</block>
+  <block id="1ff65c13a04bb38188c12bd26bb58739" category="list-text">Segnala i cluster che non hanno riportato dati entro la soglia di aggiornamento concordata.</block>
+  <block id="97618c6d0e32061b6c8eceef5a766e42" category="list-text">Distinguila<block ref="382b0f5185773fa0f67a8ed8056c7759" prefix=" " category="inline-code"></block> da una versione obsoleta:</block>
+  <block id="f174d76a7e7e68b78119bdca2c84dcd5" category="list-text"><block ref="382b0f5185773fa0f67a8ed8056c7759" prefix="" category="inline-code"></block> può significare che il componente non è installato, non è abilitato o non è applicabile.</block>
+  <block id="e4f4230e27f1340d331c489c88eb1aa8" category="list-text">Se i dati riportati non sono aggiornati, controlla lo stato dell'unità di acquisizione e del collector correlati, ove disponibili.</block>
+  <block id="5459198282a37716ce52292a65d024a7" category="list-text">Restituisci un elenco prioritario di aggiornamenti e indagini.</block>
+  <block id="0a13a0dc882bf6ff1a51a48da92d8566" category="list-text">*Obsoleto:* almeno un componente installato non è aggiornato alla versione prevista da DII.</block>
+  <block id="8a6659cd5a6dc1082af3523b1a59d9d8" category="list-text">*Disabilitato:* la raccolta è disattivata intenzionalmente o amministrativamente.</block>
+  <block id="ce07813d91f14a9e27cdae05e964494b" category="list-text">*Report obsoleti:* i dati sulla versione potrebbero non riflettere lo stato attuale del cluster.</block>
+  <block id="3af3509e6a3ce57e4cdedcc0dfd115f7" category="list-text">*N/D:* richiede contesto; non classificarlo automaticamente come un errore.</block>
+  <block id="4d5332083b90a999a8053324d7a4954f" category="paragraph">Lo strumento segnala le versioni e lo stato. Non esegue aggiornamenti.</block>
+  <block id="54f8bdf953f47f5e0bf76e6007cf2dde" category="list-text">Conteggio dei cluster per stato</block>
+  <block id="7fd59d9da85ce816088cf6b4f0ca2eaf" category="list-text">Cluster obsoleti classificati in base alla freschezza del report</block>
+  <block id="467a439400e02a1c1f1223799f6dd394" category="list-text">Differenze di versione a livello di componente</block>
+  <block id="a4f1ba3e471a15dba8dc9d1f6033ad6b" category="list-text">Componenti disabilitati o non disponibili</block>
+  <block id="144fb7d712d2c699e9caec5cbb83aefb" category="list-text">Passaggi di verifica consigliati</block>
+  <block id="5e6e84a17d35bfdaa35988f1f8c8c8a2" category="list-text">I nomi dei cluster possono essere informazioni sensibili; usa procedure di gestione approvate quando condividi i risultati.</block>
+  <block id="27bed063b81584aba868fcbb0ab7f41e" category="list-text">Non dedurre l'esposizione alle vulnerabilità basandoti unicamente sulla versione del software.</block>
+  <block id="ba3de09a1ea49aa0b7f2bfa64516d278" category="list-text">Convalida la compatibilità dell'aggiornamento ed esegui il processo al di fuori di questo flusso di lavoro di sola lettura.</block>
+  <block id="d936a057ec5402b8bfd9bb9cf51446bb" category="paragraph">Quali cluster hanno un operatore obsoleto e non hanno inviato report nell'ultima ora?</block>
+  <block id="b72cc5defa940bc559507ec132386673" category="paragraph">Separa i cluster con un componente Change Analysis obsoleto dai cluster in cui tale componente non è disponibile.</block>
+  <block id="cce837c51576a22ba28d8a93f7718b60" category="paragraph">Per i cluster obsoleti, verifica che l'infrastruttura di raccolta DII associata sia integra.</block>
+  <block id="05eff39ce870bca7f35a5dc13286d80a" category="summary">Usa questa ricetta per capire come gli avvisi DII vengono instradati e soppressi senza esporre gli indirizzi degli endpoint webhook.</block>
+  <block id="847d6170be3ceb1920dd33a2f80cbf3a" category="list-text">Accesso agli strumenti di notifica e alle finestre di manutenzione.</block>
+  <block id="c09737bc95dd5cb7f8af97a6212bf597" category="list-text">Un tipo di monitor, risorsa o integrazione opzionale per restringere la revisione.</block>
+  <block id="ec05267c82982af7068e41483e012c9c" category="list-text">+NotificationService_getNotificationRules+</block>
+  <block id="f3248bf9f74182fc9a61d596c99a5fda" category="list-text">+NotificationService_getNotificationRuleById+</block>
+  <block id="5825bd50bc1cc7ad09e366f92212a312" category="list-text">+NotificationService_getWebhooks+</block>
+  <block id="b39497185fd280000d06e4f432551d4a" category="list-text">+MaintenanceWindowService_getMaintenanceWindows+</block>
+  <block id="071e7e04a221bc1381b3df6ee5db5cc8" category="list-text">+MaintenanceWindowService_getMaintenanceWindowById+</block>
+  <block id="b9634a5999dbe8afebafa635284362e5" category="list-text">Opzionale: +MonitorsService_queryMonitors+</block>
+  <block id="8c3d6d1bdbaf96be14b64d6f735f4bff" category="paragraph">Esamina lo stato delle notifiche DII. Riepiloga le regole di notifica attive e inattive, l'ambito di monitoraggio o della risorsa di ciascuna regola, il numero di destinazioni webhook per tipo di integrazione e le finestre di manutenzione correnti. Restituisci solo i nomi delle destinazioni, i tipi di motore e lo stato, mai gli indirizzi degli endpoint.</block>
+  <block id="307db9ac665d3e3a8c5e75d3f989719b" category="list-text">Elenca le regole di notifica.</block>
+  <block id="9b479b3817d529bfcfe1ea7026f6c1b1" category="list-text">Classifica le regole come attive, inattive, in scadenza o senza scadenza.</block>
+  <block id="db66a31ff3713d82d4a950d03266a150" category="list-text">Riassumi l'ambito di espressione di ciascuna regola:</block>
+  <block id="2855bdcbb02d9c091a436d1f06aadda6" category="list-text">Nome o gruppo del monitor</block>
+  <block id="6ed11248b24c2511a2006109bbfb28f4" category="list-text">Oggetto correlato</block>
+  <block id="148333b888c07fd705a065170bb6207c" category="list-text">Ambito di applicazione ampio dei caratteri jolly</block>
+  <block id="bf51672ce0a57e61af25f96a88f91b76" category="list-text">Recupera una regola specifica solo quando hai bisogno di ulteriori dettagli.</block>
+  <block id="5e217a9653f8a20908968f948d76d991" category="list-text">Elenca le destinazioni del webhook ed elimina immediatamente il campo address dal risultato di lavoro.</block>
+  <block id="2a4cb9ca170e6707871e19b0584be8b2" category="list-text">Raggruppa gli obiettivi in base al tipo di motore e allo stato.</block>
+  <block id="b9373e8b4898b9b669e30cf8118a31f6" category="list-text">Elenca le finestre di manutenzione attive.</block>
+  <block id="66d39000468c3e2a9660fab8795e8520" category="list-text">Individua le finestre di soppressione che si sovrappongono a risorse importanti o a periodi insolitamente lunghi.</block>
+  <block id="284035b588f9803f1d37555d33a66ed3" category="list-text">Facoltativamente, confronta le espressioni delle regole con i monitor disponibili.</block>
+  <block id="d60c43c797882a23b6032e14d38ef8e0" category="list-text">Segnala la copertura del routing, le regole generali, le regole inattive e i rischi di soppressione.</block>
+  <block id="61eba1934ae68592e10f1e0cdbb728b3" category="section-title">Requisito di sicurezza</block>
+  <block id="d4f2dba448de4454dc5137d020fd62a1" category="paragraph">Gli indirizzi webhook completi possono contenere:</block>
+  <block id="73bc54ee835c767cdf02f542ec949389" category="list-text">Percorsi di accesso Slack o Teams</block>
+  <block id="46a64126516ba025441412e6fab52907" category="list-text">chiavi di routing di PagerDuty</block>
+  <block id="38bb49d0eb7601bf0e891825f8ee8437" category="list-text">Token API</block>
+  <block id="5f2dff937a4a65939bc47aeede2cdd91" category="list-text">Firme univoche del flusso di lavoro</block>
+  <block id="956929e1f9cf0a1cef77a863659b2094" category="list-text">Credenziali di integrazione personalizzate</block>
+  <block id="83b0329f04b3f36525e455bae69d6feb" category="paragraph">Non visualizzare, citare, riassumere, memorizzare o inoltrare mai il campo indirizzo. Anche un suffisso mascherato non è necessario per questo flusso di lavoro.</block>
+  <block id="148493494d72b92807fa877df229493c" category="paragraph">Se un endpoint completo appare in una trascrizione o in un artefatto condiviso, segui i passaggi relativi all'incidente in <block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block>.</block>
+  <block id="95a43c47951c549ef94ec02d0f932efa" category="list-text">Una regola inattiva potrebbe essere intenzionale; verifica a chi appartiene prima di consigliarne la rimozione.</block>
+  <block id="fbfabd4c8f4e3d3b8745e907fedfc03f" category="list-text">Un'espressione con caratteri jolly troppo ampia può generare rumore nelle notifiche o un instradamento indesiderato.</block>
+  <block id="23a6486b72e5ef4455eac9dfd7354dc7" category="list-text">Lo stato di un target può essere nullo o sconosciuto; non segnalarlo come abilitato.</block>
+  <block id="80e4165057c24cae9d3396f20e9cc7e7" category="list-text">Un risultato positivo della finestra di manutenzione vuota significa che non esistono finestre corrispondenti.</block>
+  <block id="97182b7c90cbabd288adec7468eddc7e" category="list-text">Una finestra temporale di lunga durata può nascondere problemi reali anche quando è tecnicamente attiva e valida.</block>
+  <block id="b36b7fe8bbd1a92fde102ff802714aea" category="list-text">Conteggio delle regole per stato</block>
+  <block id="697cf98c5fe6fa5fd0c78eea0f1e829d" category="list-text">Ambito della regola e tipo di destinazione</block>
+  <block id="07c0f7a9fc1b4843e1de3f9783a94465" category="list-text">Conteggi di destinazione per motore</block>
+  <block id="16fe2c196ceea15c29f71c4c1f94f03b" category="list-text">Finestre di manutenzione attive</block>
+  <block id="b558c26d5d1657172dff976536f87dff" category="list-text">Configurazioni ampie, inattive o ambigue</block>
+  <block id="f7adea46486b7094b9ae1fa6cae0d741" category="list-text">Avvertenze in materia di sicurezza e qualità dei dati</block>
+  <block id="1dc47db3329823bd7b2ba4522e2185f3" category="list-text">Non restituire indirizzi, token, UUID o identificatori di risorse private.</block>
+  <block id="c20faf00ade415e31594b7f3fbee0910" category="list-text">Questo flusso di lavoro verifica la configurazione ma non testa la consegna dei messaggi.</block>
+  <block id="a50fabc59e868b864b4d02908e775d5b" category="list-text">Gli strumenti attualmente disponibili non consentono di creare, aggiornare, disabilitare o eliminare regole e obiettivi.</block>
+  <block id="d2c0d8539e5b4e91c19e35cdb2eebe17" category="paragraph">Quali regole di notifica attive hanno espressioni jolly ampie e a quali gruppi monitor possono corrispondere?</block>
+  <block id="c57b46497f16e5aefc1f0e4c9ba9a77c" category="paragraph">Elenca le finestre di manutenzione attuali e future e spiega quali ambiti di avviso sopprimono.</block>
+  <block id="b1100d2bab458d58dc19507081776da4" category="paragraph">Conta i destinatari delle notifiche per tipo di integrazione e identifica i destinatari con stato sconosciuto. Non visualizzare gli indirizzi.</block>
+  <block id="4c992409b3b28d620882728a33ac6b8c" category="summary">Le ricette combinano più strumenti DII di sola lettura in flussi di lavoro di infrastruttura ripetibili. Utilizzale come punti di partenza e sostituisci i nomi delle risorse fittizie con i valori del tuo tenant.</block>
+  <block id="19c68a1eb2efcf22174899c794513466" category="doc">Ricette operative DII MCP</block>
+  <block id="ff5a3877e37c9049384a942e1004523c" category="section-title">Scegli un flusso di lavoro</block>
+  <block id="12c74214cb4c18cf36d885303d6aa2e1" category="cell">Obiettivo</block>
+  <block id="aef6ec2224f7ef3c74b4942b0e7f2969" category="cell">Ricetta</block>
+  <block id="4e8221b943f971cf937a7f02bb29452d" category="cell">Superfici DII primarie</block>
+  <block id="5c67fe2f8d346bce25d1434a44ea5c0d" category="cell">Verifica la copertura e l'aggiornamento della raccolta</block>
+  <block id="5dd7ee5a5e4ed3fdd7c7d864dcd97845" category="cell"><block ref="5dd7ee5a5e4ed3fdd7c7d864dcd97845" category="inline-link-macro-rx"></block></block>
+  <block id="56fb3d4d29cd5a5f2f39d67b78d8fbb8" category="cell">Unità di acquisizione, fonti di dati</block>
+  <block id="3365ba8fa249590900199e1b8fe63fe6" category="cell">Dai priorità ai problemi dell'infrastruttura attivi</block>
+  <block id="210f8d8a7ba52477c5aafeea415f0136" category="cell"><block ref="210f8d8a7ba52477c5aafeea415f0136" category="inline-link-macro-rx"></block></block>
+  <block id="dbf4c5e43f3ad7adb2890416ad626d72" category="cell">Avvisi, monitor, registri, oggetti</block>
+  <block id="2abaa9e35a19ed7ceedd29789a704523" category="cell">Trova i pool che si stanno avvicinando alla saturazione della capacità</block>
+  <block id="95639ee75da87550a5bc967b612d5f7b" category="cell"><block ref="95639ee75da87550a5bc967b612d5f7b" category="inline-link-macro-rx"></block></block>
+  <block id="3a8483873d6e9339ac9c5ddc43843fc0" category="cell">Metadati degli oggetti, raggruppamento, serie temporali</block>
+  <block id="8581caa1526f087be0fc34b44deb1b3b" category="cell">Controlla le versioni dei componenti di raccolta Kubernetes</block>
+  <block id="20ddc970df6e0f43fbd7bf40f9b1c8df" category="cell"><block ref="20ddc970df6e0f43fbd7bf40f9b1c8df" category="inline-link-macro-rx"></block></block>
+  <block id="c2b8f77591f1eb90daea1011e0c874a4" category="cell">Collector Kubernetes</block>
+  <block id="869b60ec7d87b95d57cd897035bd2d2c" category="cell">Analizza un volume o un carico di lavoro lento</block>
+  <block id="c8f0f04e0d795105c32051797968dfcf" category="cell"><block ref="c8f0f04e0d795105c32051797968dfcf" category="inline-link-macro-rx"></block></block>
+  <block id="48fdfcb07db03e9ae7b2e6fd980023b9" category="cell">Metriche degli oggetti, avvisi, registri</block>
+  <block id="423284668ada671240e42dc6bf176469" category="cell">Esamina in sicurezza il routing e la soppressione</block>
+  <block id="b4f4a7051901b7becdded97777fbe13a" category="cell"><block ref="b4f4a7051901b7becdded97777fbe13a" category="inline-link-macro-rx"></block></block>
+  <block id="fc36b7a1cf782bef3d7732da2d382ca5" category="cell">Regole, obiettivi, finestre di manutenzione</block>
+  <block id="9758973458adae3e86e066142d4c01f9" category="section-title">Modello di indagine standard</block>
+  <block id="f3fcd2888d95aaaec35655ed90ae82f1" category="list-text">Chiarisci l'ambito delle risorse e l'intervallo di tempo.</block>
+  <block id="53904d83d95aa2b6984f3c47b16b5f69" category="list-text">Scopri i tipi disponibili.</block>
+  <block id="51165c50e248855af0a2841721b7f53d" category="list-text">Recupera i metadati prima di utilizzare i campi dinamici.</block>
+  <block id="2ee3fd8dfd8efb827f6787d0d683e4de" category="list-text">Interroga un intervallo di tempo limitato.</block>
+  <block id="4e8f6c3abb258cb3c83f1d4694df824b" category="list-text">Correla i segnali indipendenti.</block>
+  <block id="13285792e1387311df347b806a715f43" category="list-text">Distingui i fatti osservati dalle inferenze.</block>
+  <block id="3e186f3294257815826d548b7854c118" category="list-text">Segnala le limitazioni e le azioni di follow-up consigliate.</block>
+  <block id="6472ce41c26babff27b4c28028093d77" category="section-title">Sicurezza</block>
+  <block id="898deaee8a8c7bdb4f0e2b4025559c32" category="list-text">Queste ricette utilizzano strumenti di sola lettura.</block>
+  <block id="09d2f71c6bad34a1e5e687ed56bb663e" category="list-text">Mantieni gli intervalli di tempo a 30 giorni o meno.</block>
+  <block id="7c940f1cd84ea2c782801de994993f2a" category="list-text">Ometti le credenziali, gli indirizzi privati, gli UUID, gli endpoint webhook raw e i payload di log non necessari.</block>
+  <block id="39aaa9f2fc63f2331e844e3b939658cb" category="list-text">Conferma le azioni operative ad alto impatto al di fuori del flusso di lavoro MCP.</block>
+  <block id="ff85555af8179cc34334b01001630ce6" category="section-title">Documentazione correlata</block>
+  <block id="e802ab55e9a2f1b6d25718c465cac825" category="inline-link-macro">Panoramica di DII MCP</block>
+  <block id="123d559811513229f3b64140f8fa6fae" category="list-text"><block ref="123d559811513229f3b64140f8fa6fae" category="inline-link-macro-rx"></block></block>
+  <block id="3a5585cb726e7b542ce3d7b91aac8bc1" category="list-text"><block ref="3a5585cb726e7b542ce3d7b91aac8bc1" category="inline-link-macro-rx"></block></block>
+  <block id="7b8ecf690b4e932a4bb808b7cdadd106" category="inline-link-macro">Riferimento dello strumento</block>
+  <block id="14eca6c7a8b62644627593e3da67efb4" category="list-text"><block ref="14eca6c7a8b62644627593e3da67efb4" category="inline-link-macro-rx"></block></block>
+  <block id="c3d0d96dc88bb2d999220c1ec6124dd1" category="list-text"><block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block></block>
+  <block id="32bb352de8e97d2bd3797f6cd842196a" category="summary">Usa questa procedura per analizzare un volume, un datastore, una macchina virtuale, un carico di lavoro Kubernetes o un altro oggetto DII lento, correlando metriche, avvisi e log della piattaforma.</block>
+  <block id="1924c0a2e1958aea69445cf5d2b711de" category="list-text">Il nome della risorsa interessata e l'ora approssimativa dell'incidente.</block>
+  <block id="6cd40a1d013cfe98d161dfc07ec25891" category="list-text">Un intervallo di tempo di 30 giorni o meno.</block>
+  <block id="c0b60312ce0a835271e407ab900f3c6b" category="list-text">Un periodo di confronto o una baseline nota in stato di salute, ove possibile.</block>
+  <block id="b68dffb22801465f628307cb88c10e72" category="list-text">+LogService_getLogTypes+</block>
+  <block id="d5bb621f0988a2b7c9cae18368d3d9d3" category="list-text">+LogService_getLogTypeMetadata+</block>
+  <block id="c8e6373c3d6e5975ce7c632a0e31b55f" category="list-text">+LogService_queryLogEvents+</block>
+  <block id="c05a8e98925a47fde09e9886a5cc3433" category="paragraph">Analizza perché il volume<block ref="b03663ef9f13cbe835fec939342a434a" prefix=" " category="inline-code"></block> era lento tra le 09:00 e le 11:00 UTC. Individua il tipo di oggetto corretto e le metriche valide, confronta latenza, IOPS e throughput durante la finestra dell'incidente, esamina gli avvisi attivi correlati e i log della piattaforma e confronta con un periodo senza problemi. Distingui le prove dalle ipotesi e identifica la prossima misurazione necessaria.</block>
+  <block id="ab5f9fab01bfb2981b7d4bb3237e4358" category="list-text">Risolvi la risorsa associandola a un tipo di oggetto e a un'identità precisi.</block>
+  <block id="0e53b9b78a5c9fd169a0aeb06335e94b" category="list-text">Recupera i metadati per quel tipo di oggetto.</block>
+  <block id="6bbb6e0069d7535cfcec40ebff58b064" category="list-text">Identifica metriche valide di latenza, operazioni, throughput, utilizzo e capacità.</block>
+  <block id="86793b704771c0dc30279b1ed9e6666f" category="list-text">Interroga gli attributi correnti dell'oggetto per stabilire il posizionamento e le relazioni.</block>
+  <block id="6e5a0cdd7535fe1fda227ed9d8146b04" category="list-text">Recupera le serie temporali in un periodo di:</block>
+  <block id="c22a746c5b8051666f855532b1c47136" category="list-text">La finestra dell'incidente</block>
+  <block id="eaed52c34466ca16e6d3df426d560590" category="list-text">Una finestra integra comparabile</block>
+  <block id="ad024ef9211ff2451628aa6d11f9426e" category="list-text">Allinea i timestamp e le funzioni di aggregazione tra le metriche.</block>
+  <block id="05b20316af5c8f7530001982280bd4e6" category="list-text">Recupera gli avvisi relativi alla risorsa, contenenti il sistema, l'host, il nodo o il pool di storage.</block>
+  <block id="35cbdd4d6943b19f0849b1dd43377816" category="list-text">Seleziona i flussi di log pertinenti, recupera i metadati e cerca in un intervallo ristretto intorno alle variazioni delle metriche.</block>
+  <block id="aeef23cabe41f59cc1e4689e355cfb3e" category="list-text">Verifica ipotesi plausibili:</block>
+  <block id="1422884ce8eae8df82a39bd0831e7876" category="list-text">Picco della domanda</block>
+  <block id="76e5d910c38df548caee8123eb064c6a" category="list-text">Saturazione delle risorse</block>
+  <block id="6c46f1edd47df9e89b731dfa5f3514fb" category="list-text">Errori di storage o del fabric</block>
+  <block id="9154a16f42ccc3b60c82bb60ea91e541" category="list-text">Pressione sulla capacità</block>
+  <block id="5307ad844ffeb1438524ecc441523db2" category="list-text">Contesa dell'host o della VM</block>
+  <block id="0110af9d90a0be20606664b2431094e3" category="list-text">Lacuna nella raccolta</block>
+  <block id="300e0f5223cc6b3aa2aef7f95dd49383" category="list-text">Riporta la spiegazione più supportata e le alternative irrisolte.</block>
+  <block id="add3675abba67ecfb7a6382bde8fbcb6" category="section-title">Standard di evidenza</block>
+  <block id="b6848c410f64bee0cb94f879f5fe44de" category="paragraph">Risultati dell'etichettatura:</block>
+  <block id="941389ae23f5a66b2a790ae6040b1037" category="list-text">*Osservato:* restituito direttamente da uno strumento.</block>
+  <block id="22d949509d9337b0b50e394cc16985ea" category="list-text">*Correlati:* segnali indipendenti cambiati nello stesso intervallo.</block>
+  <block id="c099a536a0dd007b4154de963b86150a" category="list-text">*Dedotto:* una spiegazione plausibile non ancora dimostrata.</block>
+  <block id="24b3e3fc282c9b508cea9d92f612f2ba" category="list-text">*Sconosciuto:* le prove richieste non sono disponibili.</block>
+  <block id="b82feacca4439782a8dc8c45b35fb1bc" category="paragraph">La correlazione non implica causalità. Un allarme simultaneo va considerato come elemento a supporto, non come prova definitiva, a meno che il meccanismo non sia stabilito.</block>
+  <block id="8fcd4db512c90de436046f7b140b8b72" category="section-title">Guida alle metriche</block>
+  <block id="6ebb032cc1f1eeaf7b653b18856dc6d2" category="list-text">Usa <block ref="fcefd647d6a866603c627b11347c707a" prefix=" " category="inline-code"></block>per il comportamento generale, ma controlla <block ref="26a4b44a837bf97b972628509912b4a5" prefix=" " category="inline-code"></block>quando i brevi picchi sono importanti.</block>
+  <block id="62269835b3cc782a90be299005d0c4e0" category="list-text">Usa <block ref="6970bdc2201030b9c03fbdcf3973858a" prefix=" " category="inline-code"></block>solo per metriche additive.</block>
+  <block id="f4d6e4240cfd86d7996a1c56fc9a68d0" category="list-text">Usa<block ref="421cfd143e450c3f5814a0495409e073" prefix=" " category="inline-code"></block> o +CHANGE_RATIO+ per i contatori o la crescita dove i metadati lo supportano.</block>
+  <block id="4887250d9f0036c43f07b7e37427ad70" category="list-text">Evita di confrontare serie con limiti di intervallo o unità di misura diversi.</block>
+  <block id="8e466e49d91d217bd3b30db3699ae500" category="list-text">I filtri si applicano prima dell'aggregazione degli intervalli temporali.</block>
+  <block id="25c1b106fb95f7eab4ccd99871f824f8" category="list-text">Ambito e cronologia dell'incidente</block>
+  <block id="41dc3155d274ef39975d9239d3817bf9" category="list-text">Evidenza delle metriche</block>
+  <block id="c5bbf1553f0a79d68be3589d8071e657" category="list-text">Avviso e prove del log</block>
+  <block id="fef64149a9282bc72532000d8bc88528" category="list-text">Confronto del periodo integro</block>
+  <block id="3c952fb812960dc8aee7c15412ab7e9e" category="list-text">Spiegazione più probabile</block>
+  <block id="06f6fa8f26d3b78087a91a5308503545" category="list-text">Ipotesi alternative</block>
+  <block id="d96c17aaf1eb12d27d6d2322fc565430" category="list-text">Affidabilità e prove mancanti</block>
+  <block id="5a8f144245ab77c2d314b61351949e72" category="list-text">Controllo successivo consigliato</block>
+  <block id="32a5647ed22be5f151282c5abcd8bfdd" category="list-text">Le finestre delle serie temporali non possono superare i 30 giorni.</block>
+  <block id="0711fbc642b9320392fc217f3bb9d4aa" category="list-text">Lo strumento di analisi delle prestazioni restituisce un numero limitato di serie; restringi il filtro prima di aumentare il limite.</block>
+  <block id="045833e5168fb55f4484d03dab30f2c5" category="list-text">Ometti i campi di log raw sensibili che non contribuiscono alla diagnosi.</block>
+  <block id="a42031851d7dd65683250de541d156a7" category="list-text">Non proporre interventi correttivi invasivi senza averli prima convalidati attraverso i normali controlli operativi.</block>
+  <block id="54eadf81acc64ae0fe348886daa5bb8c" category="paragraph">Confronta la latenza massima e media durante l'incidente con la stessa ora del giorno precedente in cui il sistema era in buone condizioni.</block>
+  <block id="2d311cd7fe4cda7a18e332511eccd7f0" category="paragraph">Raggruppa i carichi di lavoro correlati per host o pool di storage e identifica se il rallentamento era isolato o condiviso.</block>
+  <block id="b12e4e5d0f79264ca241c03e37ee934c" category="paragraph">Mostra gli eventi della piattaforma entro 15 minuti dal primo aumento della latenza.</block>
+  <block id="1593f55ee6e73845b15b773a1eeefdfe" category="summary">Utilizza questa ricetta per dare priorità ai problemi di storage combinando avvisi attivi, intenti di monitoraggio, indicazioni correttive, log della piattaforma pertinenti e contesto degli oggetti.</block>
+  <block id="95b46f5a68f52fd1ae30e4e69159c76e" category="list-text">Ambito opzionale di sistema di archiviazione, cluster, pool o volume.</block>
+  <block id="5268b7390248983f214c732b9bf44d12" category="list-text">Accesso agli strumenti di avviso, monitoraggio, log e oggetti.</block>
+  <block id="d8cad398c38b1d551f46a9573fb7131e" category="list-text">+AlertsService_getAlertByName+</block>
+  <block id="72a6b260d561d2cf7fcc6390f24c7a3c" category="list-text">+MonitorsService_getMonitorById+</block>
+  <block id="eb19b4fb3be3bb3c0c6a3112d54f76cd" category="paragraph">Valuta lo stato di salute dello storage nelle ultime 24 ore. Identifica gli avvisi attivi critici e di avvertimento per sistemi di storage, nodi, pool e volumi. Per gli avvisi con l'impatto maggiore, spiega la condizione del monitor e le indicazioni correttive, quindi esamina i log EMS pertinenti o i log della piattaforma di storage relativi all'ora del trigger. Separa le prove confermate dalle cause probabili.</block>
+  <block id="353bdfc8c879986963234b23ee1e9826" category="list-text">Ottieni i metadati dell'avviso.</block>
+  <block id="571195d33cbffaf45f7c66ed3bd2fb05" category="list-text">Identifica i campi validi per gravità, stato, monitor, oggetto correlato e ora di attivazione.</block>
+  <block id="5ec971c056a6f5d436cdf381c87c38ab" category="list-text">Interroga gli avvisi attivi relativi allo storage nell'intervallo richiesto.</block>
+  <block id="f4df2ba3dcdf16e91374317eb5e4b175" category="list-text">Classifica gli avvisi utilizzando:</block>
+  <block id="351d191b6a8d16ee63baef6bb87ece9c" category="list-text">Tipo di oggetto interessato</block>
+  <block id="f4c8698b1c77881c8c06a24e875e0503" category="list-text">Numero di oggetti interessati</block>
+  <block id="a18f7019342f853bc1c590efd6f32033" category="list-text">Recency e recurrence</block>
+  <block id="8e6afcd5b7023f512bcd89ebf3083ed2" category="list-text">Impatto su disponibilità, protezione dei dati, prestazioni o capacità</block>
+  <block id="e47d1dcc86fefa16ce0da5c6223c21ee" category="list-text">Visualizza i dettagli completi degli avvisi con la massima priorità.</block>
+  <block id="b33077dcd3d9ceca67636f745eee687c" category="list-text">Recupera le definizioni dei monitor e le indicazioni correttive.</block>
+  <block id="0375391afe2e70569e8a229a6bdfbe0d" category="list-text">Elenca i tipi di log e seleziona il flusso nativo della piattaforma pertinente a ciascun avviso, ad esempio ONTAP EMS o eventi StorageGRID.</block>
+  <block id="d67cae6790c5285af873b1f7ce71af38" category="list-text">Recupera i metadati del log, quindi esegui una query su un intervallo ristretto intorno all'avviso.</block>
+  <block id="af133cb5077da848b4a847568c33d383" category="list-text">Recupera gli attributi o le metriche necessari per confermare lo stato attuale.</block>
+  <block id="ad5c5427dcf8c99964b57079c1a36993" category="list-text">Crea un riepilogo dello stato di salute con prove, causa probabile, impatto e controllo successivo.</block>
+  <block id="fd78129ae6672a17933b0a4bf00e731e" category="paragraph">Non considerare un singolo segnale come una valutazione completa dello stato di salute:</block>
+  <block id="daf7fd7737982ae30ff454d3aefe0576" category="list-text">Gli *avvisi* mostrano le condizioni rilevate.</block>
+  <block id="85ddae3bcfc9bfc70d4579b960fd89eb" category="list-text">*I monitor* spiegano la regola di rilevamento e l'azione correttiva prevista.</block>
+  <block id="d3cc036da5757a9d97519e5ae8692941" category="list-text">I *log* forniscono il contesto degli eventi nativo della piattaforma.</block>
+  <block id="fb3cbe1731324de5e6fe48e80710f4f1" category="list-text">*Oggetti e metriche* mostrano l'inventario corrente o lo stato misurato.</block>
+  <block id="8d2e06e86c536940b30dcf6ba78cada5" category="paragraph">Un avviso attivo può rimanere aperto anche dopo che la condizione sottostante è cambiata. Ove possibile, usa dati aggiornati relativi a oggetti e metriche.</block>
+  <block id="bb524eac8bbcde2b2349fb5e69da8463" category="paragraph">Per ciascun problema prioritario:</block>
+  <block id="e93c66a46da3f7529ec90bec40603e85" category="list-text">Risorsa interessata</block>
+  <block id="7848856790fc9e79a5eec69712cd8139" category="list-text">Gravità e stato di avviso</block>
+  <block id="1d2915d3297fe231774aa99c31393c79" category="list-text">Ora di attivazione</block>
+  <block id="859a1b8477ce9b4e282ee45ad7028edf" category="list-text">Monitoraggio e condizionamento</block>
+  <block id="c2da6a6c47969e225a88dfd502d746c5" category="list-text">Log o metriche di conferma</block>
+  <block id="981c11f267222f852961d40066754d00" category="list-text">Prove confermate</block>
+  <block id="9023cb2bfd4d7ce5aeaad9bd6b040544" category="list-text">Causa probabile, etichettata come inferenza</block>
+  <block id="1ae7df2f807cad7672c8f4ced95a8500" category="list-text">Guida correttiva</block>
+  <block id="8e48a5aa780489955a48c0378f68ad35" category="list-text">Mantieni le finestre di avviso e di log al di sotto di 30 giorni.</block>
+  <block id="72b9615806027d02fa488ec958e3ed22" category="list-text">Usa finestre di registro ristrette per ridurre gli eventi non correlati.</block>
+  <block id="73ee4892cd894fccffe7e0ed8fc2490f" category="list-text">Ometti UUID, indirizzi, annotazioni e payload raw non necessari.</block>
+  <block id="f5c44996a11e0310da26e5de672ff8e2" category="list-text">Le indicazioni correttive sono a scopo informativo; verifica i comandi in base alla documentazione del prodotto pertinente e al processo di modifica.</block>
+  <block id="69878fdb9cae52189372f3506a00690a" category="paragraph">Per l'allerta<block ref="fea18275d08c39713b6dcad48bb36fa6" prefix=" " category="inline-code"></block>, mostra le indicazioni del monitor e gli eventi EMS correlati entro 30 minuti prima e dopo il trigger.</block>
+  <block id="20e57e1705da4d2ebf4e686cd6afa318" category="paragraph">Raggruppa gli avvisi di storage attivo in base al sistema interessato e all'area di impatto. Quale sistema richiede attenzione per primo e perché?</block>
+  <block id="daa51c0bdcf364c577f92e20277ce8f4" category="paragraph">Verifica se l'avviso con la priorità più alta è ancora supportato dalle metriche correnti dell'oggetto.</block>
+  <block id="f549e843bf2e322aca0c126ad37ed428" category="summary">Il server DII MCP consente a un client AI di accedere al contesto dell'infrastruttura del tenant. Tratta tale contesto con la stessa cura riservata all'interfaccia utente e alle API di DII.</block>
+  <block id="46c0eeda223536b258e18ecf1aa37578" category="section-title">Accesso con privilegi minimi</block>
+  <block id="0d89869234b6d6ca83025e9f1c3befad" category="list-text">Usa un'identità dedicata alla persona, all'applicazione o all'automazione che si connette a MCP.</block>
+  <block id="abfea9a720216d47384d64dd9b78a4c4" category="list-text">Concedi solo le autorizzazioni di lettura DII necessarie per i workflow previsti.</block>
+  <block id="2992c12646cc02ded9084db327f468e1" category="list-text">Rivedi l'accesso quando cambiano il ruolo o le responsabilità operative di un utente.</block>
+  <block id="f81f4c9375fd4a7d7acd4a804fb5058a" category="list-text">Usa un'identità di servizio separata per l'automazione non presidiata.</block>
+  <block id="2b2260c1ef0fbbd8ee53c717da5114f2" category="paragraph">L'attuale toolset del prodotto DII qui documentato è di sola lettura. L'accesso in sola lettura può comunque rivelare nomi sensibili, topologia, configurazione, telemetria e stato operativo.</block>
+  <block id="c75f7811d70d17dbcd88e9d03752cbed" category="section-title">Autenticazione</block>
+  <block id="79c4c75b034726dc4a89f3add5334ca7" category="paragraph">Preferisci l'autenticazione OAuth interattiva o un altro flusso di autenticazione di breve durata supportato dalla tua implementazione. Se sono necessarie credenziali non interattive:</block>
+  <block id="16056f55dc8e6c336a31a6c81a52aaa4" category="list-text">Conservali in un gestore di segreti approvato.</block>
+  <block id="c4a18b068272010765633a46ef04fd46" category="list-text">Definisci l'ambito e ruotali in base alle policy dell'organizzazione.</block>
+  <block id="3c6a3d50808bb5a59a39e3399d2e934b" category="list-text">Non inserirli mai nei file di progetto, nella cronologia della shell, nei prompt, negli screenshot o nella documentazione.</block>
+  <block id="b0b4010b0873e646491e3898c0269083" category="section-title">Campi sensibili</block>
+  <block id="99235b1349ca4949e8c8530d2885d656" category="paragraph">I dati DII potenzialmente sensibili includono:</block>
+  <block id="7d68f1f2e731953ebcedad14346ed144" category="list-text">Indirizzi IP, nomi host, nomi di risorse specifici del tenant e UUID</block>
+  <block id="d3f5d079550d0064e9d750b5947775de" category="list-text">Topologia e configurazione dell'infrastruttura</block>
+  <block id="4e9d6caf464f9b21f2640001c5d46197" category="list-text">Descrizioni degli avvisi e payload dei log</block>
+  <block id="f5d18e5db90e3f6c1d1c2508b856767c" category="list-text">Valori di utente, proprietario, etichetta e annotazione</block>
+  <block id="1e4729b9cc70f625cb6e478003ed2ed2" category="list-text">Indirizzi degli endpoint webhook</block>
+  <block id="76af65106ac783c3f88db84201d0059d" category="paragraph">Gli URL dei webhook spesso includono chiavi di instradamento, firme, token o percorsi univoci. Non chiedere a un agente di restituire l'indirizzo completo del webhook. Richiedi solo:</block>
+  <block id="609533249224f911d86bed676877d9cd" category="list-text">Nome target</block>
+  <block id="f36d2da123874fa056921d120133b5bc" category="list-text">Tipo di integrazione o tipo di motore</block>
+  <block id="2d14e6849bf98b2e0701bac988bd3195" category="list-text">Abilitato o stato di consegna</block>
+  <block id="3350fdbca3c7672723ecda6958e38ea3" category="paragraph">Le applicazioni che integrano il server MCP devono oscurare gli indirizzi webhook prima di visualizzare, memorizzare o inoltrare i risultati degli strumenti.</block>
+  <block id="cd9f898b40e8af549956903085d9bbad" category="section-title">Igiene di prompt e output</block>
+  <block id="e3808a6bafea8b0d81d9460bb9fc5a6a" category="list-text">Usa identificatori fittizi in prompt ed esempi riutilizzabili.</block>
+  <block id="a9db47c8dba15cde137061b27022d994" category="list-text">Chiedi all'agente di omettere gli indirizzi IP, gli UUID, gli indirizzi degli endpoint e i payload raw dei log, a meno che non siano necessari.</block>
+  <block id="0a7396d90b01cae05595c51301bcfc58" category="list-text">Riassumi i risultati invece di copiare grandi risposte raw.</block>
+  <block id="78f8a1e265095b06b376efafb4b8a52e" category="list-text">Rivedi il contenuto generato prima di inserirlo nei ticket, nei canali di chat o nei documenti esterni.</block>
+  <block id="e9e991b52f0256c487d88e2a071074e7" category="list-text">Segui i requisiti organizzativi per la gestione dei dati relativi al client AI selezionato.</block>
+  <block id="1384bba3f2eb78dcdcf23363d9ba0b3f" category="section-title">Isolamento dei tenant</block>
+  <block id="1029e60210a0272da70fd35b0f6ecff9" category="paragraph">I risultati di MCP sono limitati al tenant e al contesto DII autenticato. Non combinare i risultati di più tenant a meno che il flusso di lavoro e l'autorizzazione non lo consentano esplicitamente.</block>
+  <block id="bfd6f324ce3ccb8d689b58bd153bd096" category="section-title">Audit e conservazione</block>
+  <block id="84ad3a2f4ed102c0a158b6696c2c47ca" category="paragraph">La copertura e la conservazione degli eventi di audit dipendono dall'implementazione di DII e dal client AI connesso. Prima dell'utilizzo in produzione, gli amministratori devono verificare:</block>
+  <block id="ab5ac511d0a65c4d42fcf5f450037057" category="list-text">Se l'autenticazione MCP e le chiamate agli strumenti vengono registrate</block>
+  <block id="ca13ae388e1c2fe2e99be5e68bb73de4" category="list-text">Quali argomenti della richiesta e metadati vengono conservati</block>
+  <block id="fae9d6e695be95d30b797637119168fc" category="list-text">Chi può esaminare quei documenti</block>
+  <block id="c6bc158997784727e9eb5c28640085a0" category="list-text">Per quanto tempo il client AI conserva i prompt e i risultati degli strumenti</block>
+  <block id="88878a392611009c5aa979f896716d14" category="paragraph">Non dare per scontato che esistano eventi di audit specifici per MCP o garanzie di conservazione, a meno che non siano documentati per la tua implementazione.</block>
+  <block id="7fb1ca7b0dfce3a9a7eaedc329cecc27" category="section-title">Risposta agli incidenti</block>
+  <block id="8934435d6c493fb1448258876a032fe1" category="paragraph">Se una credenziale o un endpoint contenente credenziali compare in un risultato, una richiesta, una trascrizione o un documento pubblicato di MCP:</block>
+  <block id="bb72323b613332952d12e81f7657f05e" category="list-text">Smetti di condividere il contenuto interessato.</block>
+  <block id="98f60a627f83440761b5533e3b0864bb" category="list-text">Revoca o ruota la credenziale o il segreto di integrazione.</block>
+  <block id="119f3a75896226f51c4ed76463c9c42f" category="list-text">Se possibile, rimuovi il valore dagli artefatti memorizzati.</block>
+  <block id="183f2842be3c8a7ada082511e4925efb" category="list-text">Esamina gli accessi e i record di audit.</block>
+  <block id="6089901b29c0050bcc73ef9e50459bb5" category="list-text">Segnala l'esposizione tramite il processo di sicurezza della tua organizzazione.</block>
+  <block id="b0abb521018fe4eb467a66367286751f" category="list-text"><block ref="b0abb521018fe4eb467a66367286751f" category="inline-link-macro-rx"></block></block>
+  <block id="d2d60333ee8663f577ccc446f01efd03" category="inline-link-macro">Ricetta per la configurazione delle notifiche</block>
+  <block id="15e4d787c6f526e2d488a4b6a92f58c5" category="list-text"><block ref="15e4d787c6f526e2d488a4b6a92f58c5" category="inline-link-macro-rx"></block></block>
+  <block id="5498ec94416004e6b68822d8a755ce71" category="list-text"><block ref="5498ec94416004e6b68822d8a755ce71" category="inline-link-macro-rx"></block></block>
+  <block id="4f1809ce5bf0cb69274ecf1ae0174d85" category="summary">Usa questa guida per connettere un client AI compatibile con MCP a DII.</block>
+  <block id="36ee27bc3fc7c617977b35534609c979" category="paragraph">Ti serve:</block>
+  <block id="65eb9bb79bd1552bf98cb5b56231a272" category="list-text">Accesso a un tenant DII.</block>
+  <block id="f772127f3db8f318292bc2d80e4975a1" category="list-text">Un'identità utente o di servizio DII autorizzata a leggere le risorse che intendi interrogare.</block>
+  <block id="d4553a133328162900cb1fd55cc320e0" category="list-text">L'endpoint MCP remoto fornito per il tuo ambiente DII.</block>
+  <block id="7835d762213fc7667200932b4f7426b8" category="list-text">Un client MCP che supporta server HTTP remoti e il metodo di autenticazione della tua organizzazione.</block>
+  <block id="3098d3462bffd986fba6d2c17b456e00" category="paragraph">Gli esempi utilizzano +&lt;DII_HOST_URL&gt;+ come segnaposto. Non incollare i token di accesso nei file soggetti al controllo del codice sorgente. Ad esempio, l'URL utilizzato da Cursor è:</block>
+  <block id="90c095cbafa658cd89c07a04d8f2d025" category="paragraph">Consulta gli snippet di codice specifici per la tua connessione.</block>
+  <block id="27927a53ea0457a334ca543b6dbbc8b2" category="section-title">Configura il client MCP</block>
+  <block id="db082e61a5e1ddfeebd2f12354c05396" category="list-text">Vai a Amministrazione &gt; Accesso API e seleziona la scheda "Configurazione MCP".</block>
+  <block id="97c9b276a57129305d764ace4b001e56" category="list-text">Seleziona il client che desideri configurare.</block>
+  <block id="c9782cf8e7b647a90cf0092c13246574" category="list-text">Inserisci un nome significativo e una data di scadenza, quindi seleziona _Generate Token_.</block>
+  <block id="4e2ac3b5e3a43c9cd62e4e73d61d98eb" category="list-text">*Copia il frammento di codice* Potrai copiarlo solo durante questo passaggio. Il token è nascosto nel frammento, ma verrà incollato correttamente nella tua applicazione client.</block>
+  <block id="6668800913a6abce65f5403fa1709e56" category="list-text">Nelle impostazioni del client, inserisci l'URL host DII corretto nel campo "url".</block>
+  <block id="25812ed1432cfe46632186b5957ebe26" category="list-text">Salva la configurazione.</block>
+  <block id="5458558ee03b38020cb38eb29ffaf74b" category="admonition">Non inserire i bearer token nella cronologia della shell, nei prompt, negli screenshot, nei file di progetto o nel controllo del codice sorgente.</block>
+  <block id="77a745fef2e2a8107bde2d67a25c2132" category="section-title">Verifica l'accesso</block>
+  <block id="fa2d5a335a488d72c93c26ac6dd722cb" category="paragraph">Dopo che il client segnala di essere connesso al server, puoi iniziare a inviare richieste come le seguenti:</block>
+  <block id="909f299cfcff030d6663a6a800f4a43f" category="paragraph">Elenca i tipi di oggetto DII a mia disposizione. Elenca i tipi di log DII a mia disposizione. Elenca le mie unità di acquisizione senza visualizzare indirizzi IP o UUID.</block>
+  <block id="564ceeaf74b5fb2d33010f8f6017393c" category="paragraph">L'individuazione riuscita conferma la connettività, ma non garantisce l'accesso a tutte le risorse sottostanti. Le funzionalità del tenant, i collector e le autorizzazioni determinano quali dati vengono restituiti.</block>
+  <block id="d0933f1f9dafed905df9382828393e72" category="section-title">Sicurezza delle credenziali</block>
+  <block id="68e6711bb4dbd9236bba771e62c2cfd7" category="list-text">Preferisci OAuth interattivo o un altro flusso di credenziali a breve termine, se disponibile.</block>
+  <block id="fdb53dccd211ca3cf85903a17f3017c7" category="list-text">Usa un'identità di servizio dedicata per i client non presidiati.</block>
+  <block id="01e72edd6581541217551e48b59c6676" category="list-text">Non inserire token in prompt, screenshot, esempi, descrizioni dei problemi o nel controllo del codice sorgente.</block>
+  <block id="7ab95051d7c6e31cd3a342ee78a3509b" category="list-text">Non chiedere all'agente di visualizzare gli indirizzi webhook completi.</block>
+  <block id="39e500834d094c3efb03a29a0938b114" category="paragraph">Per ulteriori indicazioni, consulta <block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block>.</block>
+  <block id="158acc2febd8c10f0c89f298170caa6c" category="inline-link-macro">Comprendi il modello di dati DII</block>
+  <block id="f4bd74113f0d1e6481ec67d6c82e7946" category="list-text"><block ref="f4bd74113f0d1e6481ec67d6c82e7946" category="inline-link-macro-rx"></block></block>
+  <block id="cfc65dac4f41aa76e220e96c4adb1ab3" category="inline-link-macro">Consulta il riferimento dello strumento</block>
+  <block id="9a445f2f1ba8c9e5d07d883d04cdbcce" category="list-text"><block ref="9a445f2f1ba8c9e5d07d883d04cdbcce" category="inline-link-macro-rx"></block></block>
+  <block id="fb4abb0a2247d7ff1d689eaf17cac853" category="inline-link-macro">Esegui la ricetta di inventario dell'ambiente</block>
+  <block id="6c1200ed1837128a2c15b498fb4983d9" category="list-text"><block ref="6c1200ed1837128a2c15b498fb4983d9" category="inline-link-macro-rx"></block></block>
+  <block id="53a0dba0699d94685889a4587ce0ce4a" category="inline-link-macro">Risolvi i problemi di connessione e gli errori di query</block>
+  <block id="e947be8d7ffd896cb8af98ddb433fd5b" category="list-text"><block ref="e947be8d7ffd896cb8af98ddb433fd5b" category="inline-link-macro-rx"></block></block>
+  <block id="47b53ae2be6a2659db00cf1e38671a6d" category="summary">Il server DII MCP attualmente espone 26 strumenti di prodotto in sola lettura distribuiti su nove domini. Una finestra di dialogo separata<block ref="39ecf7d31ec6be886d7707f9c9bf5923" prefix=" " category="inline-code"></block> può comparire quando il client connesso deve autenticarsi.</block>
+  <block id="299cb2faf525e7f06443893b539fad20" category="doc">Riferimento allo strumento DII MCP</block>
+  <block id="5966c913596c008e37e32c6327726464" category="paragraph">Il server DII MCP attualmente espone 26 strumenti di prodotto in sola lettura in nove domini. Un helper separato +mcp_auth+ potrebbe comparire quando il client connesso deve autenticarsi.</block>
+  <block id="2ac097a4311270553371c107a4bf5779" category="paragraph">La disponibilità dello strumento e i risultati dipendono dal tenant autenticato, dalle funzionalità DII abilitate, dai collector configurati e dalle autorizzazioni dell'utente.</block>
+  <block id="0742bafe6c0f34000c58d9432dc59b1e" category="section-title">Convenzioni di interrogazione</block>
+  <block id="bc2b07536952692ce9b589d7379d0e5c" category="list-text">Scopri i tipi e i metadati prima di interrogare i campi dinamici.</block>
+  <block id="217a130c1ced658b456e98e2fc11995e" category="list-text">Usa i nomi esatti di attributi e metriche, con distinzione tra maiuscole e minuscole, restituiti dai metadati.</block>
+  <block id="d764b5de11d12da532a223104136397f" category="list-text">Usa i timestamp ISO-8601 e i nomi dei fusi orari IANA ove necessario.</block>
+  <block id="eac701ba0c2931b58b52ee283194af56" category="list-text">Mantieni le finestre di query a 30 giorni o meno.</block>
+  <block id="6107f7d5836263df9803a330bfbeae6c" category="list-text">Usa <block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> e <block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block> per la paginazione di oggetti e avvisi.</block>
+  <block id="6c35263a7bd13c5db530d62506eeecdf" category="list-text">Usa il cursore restituito per la paginazione degli eventi del registro.</block>
+  <block id="0eedaad2cb458e80e10bcdfc8a9d3ccd" category="list-text">Non visualizzare gli indirizzi completi degli endpoint webhook.</block>
+  <block id="6ce9e21d859805f08af092d395b869f7" category="section-title">Elenca le unità di acquisizione</block>
+  <block id="994494e9e5165ca067ac21d604bc05a3" category="paragraph">Restituisce tutte le unità di acquisizione con lo stato della connessione, l'aggiornamento dei report, il sistema operativo, la versione, l'indirizzo IP e il numero di origini dati assegnate.</block>
+  <block id="f9a671f1e8130723e6f12e6ce7da466f" category="paragraph">Elenca le unità di acquisizione. Riepiloga le unità connesse, non funzionanti e mai segnalate, senza visualizzare indirizzi IP o UUID.</block>
+  <block id="630f7823aa395a334fbe74a6f34d3001" category="section-title">Ottieni un'unità di acquisizione</block>
+  <block id="65cc2dbb7689d220cf62264b097e2566" category="paragraph">Recupera i dettagli completi di una singola unità di acquisizione. Se fornisci un nome, elenca prima le unità di acquisizione per determinarne l'UUID.</block>
+  <block id="4965a3363d861a8494bba608cbc48865" category="paragraph">Input richiesto:<block ref="ef7c876f00f3acddd00fa671f52d0b1f" prefix=" " category="inline-code"></block></block>
+  <block id="762d92c1d4d35cda03206cb649a3ac96" category="section-title">Ottieni i metadati dell'avviso</block>
+  <block id="37a64a7798a50e66ff71ef87bbdade2e" category="paragraph">Restituisce i nomi dei campi di avviso e i tipi di dati validi. Chiama questa funzione prima di interrogare gli avvisi.</block>
+  <block id="cea03a9ad95ce8bf9d80fa66008282b0" category="section-title">Avvisi query</block>
+  <block id="325ad6b8c9b23b9fd08a33d64ec42256" category="paragraph">Esegue query sugli avvisi attivi o inattivi con attributi selezionati, filtri, ordinamento, limiti di tempo e paginazione con offset.</block>
+  <block id="7ae428f64de58d13bc99bbac22bb71e6" category="paragraph">Dati richiesti:</block>
+  <block id="a28abcf329411971cd72532cd0b6e398" category="list-text"><block ref="c76a5e84e4bdee527e274ea30c680d79" prefix="" category="inline-code"></block></block>
+  <block id="32f1bb8669108c1a8bb3598a196d876b" category="list-text"><block ref="c8a6dd9da0fcee4306d96d2862a56d9d" prefix="" category="inline-code"></block></block>
+  <block id="b6d8058581b58de0b39be36cc91e3893" category="list-text"><block ref="a4bdd86ad6ce1ef74538de5a02bcafce" prefix="" category="inline-code"></block></block>
+  <block id="241085b8c5281cdef5445d733f1832fa" category="list-text"><block ref="9f8d22daa83e2d0780e97116054ab5dc" prefix="" category="inline-code"></block></block>
+  <block id="794a2b1f842007d85813d169d39c6ea8" category="list-text"><block ref="b2c6cc48f97ccd71b16d31d88fc177a6" prefix="" category="inline-code"></block></block>
+  <block id="bff3155fd6a2acb798bbb06ea6e21a99" category="paragraph">Gli input opzionali includono<block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>,<block ref="2d151e4f9ba01068bebf0f8e5068723a" prefix=" " category="inline-code"></block>,<block ref="50025d4296811c9f52fde7683774c16f" prefix=" " category="inline-code"></block>,<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> e<block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>.<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> è 1-500;<block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block> è 0-1000. Mantieni la finestra temporale sotto i 30 giorni.</block>
+  <block id="4d97c67f7559517eefc9f2c83f1bbb24" category="paragraph">Recupera gli avvisi critici di storage attivi degli ultimi sette giorni. Restituisci l'ID dell'avviso, il nome del monitor, la gravità, lo stato e il nome dello storage correlato.</block>
+  <block id="52319f3ec04be9214cb24e36f72f17a0" category="section-title">Ottieni un avviso per nome</block>
+  <block id="b61a95d45128a114c0d9f7da9a08565e" category="paragraph">Recupera un avviso utilizzando un ID avviso nel formato <block ref="fea18275d08c39713b6dcad48bb36fa6" prefix=" " category="inline-code"></block>.</block>
+  <block id="f419ab569a8201ee96aabc99f5b9da28" category="paragraph">Dati richiesti:<block ref="b068931cc450442b63f5b3d276ea4297" prefix=" " category="inline-code"></block></block>
+  <block id="6a4ed6562e0de5eb6c3ca426f308d56c" category="section-title">Ricevi un avviso tramite UUID</block>
+  <block id="98745c0827fc4db11ab7c99c6f04ad32" category="paragraph">+AlertsService_getAlertByUUID+</block>
+  <block id="d2091f36ebc49eda33bdd666d786c036" category="paragraph">Recupera un avviso utilizzando il suo UUID.</block>
+  <block id="e9f4bbab6c552d0e2bea33effd816977" category="section-title">Raccoglitori di dati</block>
+  <block id="0bed1046b06dfa30779e62a6324e158a" category="section-title">Elenca le origini dati</block>
+  <block id="517c41285c12a855b63ef17cac437e89" category="paragraph">Elenca i collettori configurati con nome, stato, fornitore, modello, unità di acquisizione, versione e ultima acquisizione riuscita. Facoltativamente, puoi filtrare per un UUID AU.</block>
+  <block id="c888ec43b912d5e18b84ff583683d5ef" category="paragraph">Raggruppa le origini dati configurate per stato e fornitore. Evidenzia gli errori e le acquisizioni riuscite obsolete.</block>
+  <block id="cebc2df7b7ef831717afc3866eed707c" category="section-title">Ottieni un'origine dati</block>
+  <block id="71a9df4bf0f542c90ff2521a3cd80adb" category="paragraph">Recupera un collector con configurazione, stato del collection package, attività di polling, dispositivi rilevati, informazioni sulle patch e contesto dell'acquisition unit.</block>
+  <block id="511f133a29804e5180fc6324d39b4756" category="paragraph">Input richiesto:<block ref="b80bb7740288fda1f201890375a60c8f" prefix=" " category="inline-code"></block></block>
+  <block id="b2ed35aee46122a60cf22388b1511ec9" category="paragraph">Utilizza questo strumento per gli intervalli di polling, le metriche configurate, le impostazioni di raccolta o l'analisi degli errori.</block>
+  <block id="f0d4567828a9e9a760dcd3c58dfb6d71" category="section-title">Elenco dei tipi di origine dati supportati</block>
+  <block id="8e95e68125c18cf04c7293348aad7f2e" category="paragraph">Elenca i tipi di prodotto supportati dal catalogo dei collettori DII. Non si tratta di un elenco dei collettori configurati nel tenant.</block>
+  <block id="5035fb83a0a0fb1fc39267a336201b8f" category="section-title">Elenco dei tipi di log</block>
+  <block id="7a28624c0226e6b42b7d87fcd2ae83f9" category="paragraph">Elenca i tipi di log attualmente disponibili nel tenant.</block>
+  <block id="adc5b26e1564f4fd7a006fab84ceaefc" category="section-title">Ottieni i metadati del tipo di log</block>
+  <block id="c80654af1ec771d8dfdcce16a8fc4734" category="paragraph">Restituisce attributi validi per un tipo di log. Chiamala prima di cercare o raggruppare gli eventi.</block>
+  <block id="b79550b61888c3f687fb477f97287291" category="paragraph">Input richiesto:<block ref="599dcce2998a6b40b1e38e8c6006cb0a" prefix=" " category="inline-code"></block></block>
+  <block id="6b780a259e427d9b7bbc571192467ac7" category="section-title">Eventi del log delle query</block>
+  <block id="2e8855bf556e086f644e74889a59485e" category="paragraph">Restituisce gli eventi del registro in ordine decrescente del timestamp.</block>
+  <block id="415ce7b551e9decd6aac5fb465bd367b" category="list-text"><block ref="599dcce2998a6b40b1e38e8c6006cb0a" prefix="" category="inline-code"></block></block>
+  <block id="92276b2a9fcd78fa8677c4c98001b9a9" category="paragraph">Gli input opzionali includono<block ref="736b91750e516139acc13c5eb6564f92" prefix=" " category="inline-code"></block>,<block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>,<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> e<block ref="1791a97a8403730ee0760489a2aeb992" prefix=" " category="inline-code"></block>.<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> è 1-200. La finestra dell'evento non può superare 30 giorni. Passa il cursore della risposta precedente per recuperare la pagina successiva.</block>
+  <block id="4ed4b0c2fb43c05c4ab6a4f7c91482dc" category="section-title">Conta gli eventi di log nel tempo</block>
+  <block id="52c377cf2bf22ed956b7862fcad2eef3" category="paragraph">+LogService_queryLogEventsCountHistogram+</block>
+  <block id="98f87af6aa79b490af36b4e23a3d184b" category="paragraph">Restituisce intervalli di tempo di dimensioni fisse contenenti il numero di eventi. Facoltativamente, puoi raggruppare ciascun intervallo in base a un attributo raggruppabile valido; i risultati raggruppati restituiscono i segmenti principali e un segmento "+__other__+".</block>
+  <block id="97e02bcd2922ccb021e5e23572fc0d46" category="paragraph">Input facoltativi:<block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>,<block ref="a2adfb5bd89626055a805d8102720c88" prefix=" " category="inline-code"></block></block>
+  <block id="db56524dcb8418e3c0600c4d72f4e200" category="section-title">Elenca le finestre di manutenzione</block>
+  <block id="6f1cfbef9d4bdba542815d7ec238dfae" category="paragraph">Elenca le finestre di soppressione degli avvisi attive e non scadute. Imposta <block ref="d39acf57014820cefc8394ffd61ad405" prefix=" " category="inline-code"></block> su <block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block> per includere le finestre scadute.</block>
+  <block id="f0e1526b1c63b1b205cc17b190073bab" category="paragraph">Una risposta vuota indica che non esistono finestre di manutenzione corrispondenti.</block>
+  <block id="0831365630a6250e7ecc8800bfea41a4" category="section-title">Ottieni una finestra di manutenzione</block>
+  <block id="ce053c0505fa686566009a6abf47a525" category="paragraph">Recupera una finestra di manutenzione.</block>
+  <block id="71fa301a68bd0fc8d012a11c905ee94d" category="section-title">Elenca i monitor</block>
+  <block id="775b5da445f5bb3b887ebb5e6194d58d" category="paragraph">+MonitorsService_queryMonitors+</block>
+  <block id="6eb4f2f94ab22ac4511cf3725d98151c" category="paragraph">Elenca i monitor DII. Usa <block ref="03c1f379372e00d33098fed2f34f423a" prefix=" " category="inline-code"></block> per restituire solo i monitor di sistema, escludere i monitor di sistema o restituire tutti i monitor.</block>
+  <block id="81e388f7796f7e747f5439a78bb7e4c4" category="section-title">Procurati un monitor</block>
+  <block id="0e0dc68c7e141437fcf9ebe136873b54" category="paragraph">Recupera un monitor, inclusa la sua descrizione e le indicazioni correttive, se disponibili.</block>
+  <block id="cbb25772851c21af96bee8a00fdbe816" category="section-title">Elenca le regole di notifica</block>
+  <block id="73bbd39b9c800f0741667fd7b108c97e" category="paragraph">Elenca le regole che instradano gli avvisi corrispondenti ai destinatari delle notifiche. Una risposta vuota indica che non esistono regole corrispondenti.</block>
+  <block id="84874fbaafe06789f59999ac727c79b0" category="section-title">Ottieni una regola di notifica</block>
+  <block id="d7754c5a4c0c8d4729dae026bef4eec8" category="paragraph">Recupera una regola di routing.</block>
+  <block id="fbd7ef78b83ee1b89c0d5e16e69d80e6" category="section-title">Elenca i target dei webhook</block>
+  <block id="7d246229986b5a7fb84f0bfd6b769242" category="paragraph">Elenca i metadati di destinazione del webhook per Slack, Microsoft Teams, Discord, PagerDuty e integrazioni HTTP personalizzate. Facoltativamente, filtra per tipi di motore separati da virgole.</block>
+  <block id="00504b54467e7bb51a7d516a7865e9cd" category="paragraph">Requisito di sicurezza: gli indirizzi endpoint completi possono contenere credenziali. Le applicazioni e gli agenti devono omettere o oscurare il campo indirizzo dai risultati visualizzati o inoltrati.</block>
+  <block id="58fbe25ddf8018ec263a8fa9a2af0d3a" category="paragraph">Esempio sicuro:</block>
+  <block id="2439d255e0f310c48b3c944a1b703fc4" category="paragraph">Conta i target webhook per tipo di motore ed elenca solo i nomi dei target e lo stato. Non restituire gli indirizzi degli endpoint.</block>
+  <block id="b90079a54d747cb398e165c412ee2432" category="section-title">Oggetti e metriche</block>
+  <block id="523cf9be142cd4a84c9cc627bcaf3408" category="section-title">Elenca i tipi di oggetti</block>
+  <block id="80587015339dfbffaf25b60049a91de1" category="paragraph">Elenca i tipi di oggetto attualmente disponibili nel tenant.</block>
+  <block id="5db98635d57040de872dc385b017c147" category="section-title">Ottieni metadati dell'oggetto</block>
+  <block id="3cb280753356d7296fb75b02afaf83bb" category="paragraph">Restituisce attributi, metriche, tipi e funzionalità di raggruppamento validi per un tipo di oggetto.</block>
+  <block id="3d27481cd2e35cffe13f6f340ca64f23" category="paragraph">Input richiesto:<block ref="726e8e4809d4c1b28a6549d86436a124" prefix=" " category="inline-code"></block></block>
+  <block id="822c179e3dc91570456d3ecc9fb0c958" category="section-title">Oggetti query</block>
+  <block id="92a0566df7c7cd9d7c3f22f25114b1e8" category="paragraph">Recupera oggetti, attributi selezionati e metriche facoltative. I filtri che fanno riferimento alle metriche vengono applicati ai valori raw prima dell'aggregazione per finestra temporale.</block>
+  <block id="6b415e19199169f357f4b475155784e1" category="list-text"><block ref="726e8e4809d4c1b28a6549d86436a124" prefix="" category="inline-code"></block></block>
+  <block id="ee32799594a4a716a132df0fe0e235ba" category="paragraph">Gli input opzionali includono<block ref="a69e8bebc7db12d25513d660c49b759b" prefix=" " category="inline-code"></block>,<block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>,<block ref="13c2a8d3bf179d619c90d3f217f0cc03" prefix=" " category="inline-code"></block>,<block ref="eb047ddc07ae2d475c91d4d0e5bc1666" prefix=" " category="inline-code"></block>,<block ref="a4bdd86ad6ce1ef74538de5a02bcafce" prefix=" " category="inline-code"></block>,<block ref="9f8d22daa83e2d0780e97116054ab5dc" prefix=" " category="inline-code"></block>,<block ref="d4f1582143a1afc626dedd560475665b" prefix=" " category="inline-code"></block>,<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> e<block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>.</block>
+  <block id="2f826b9e79ccdcbc6498f06d095c1890" category="paragraph">Aggregazioni di query supportate:<block ref="26a4b44a837bf97b972628509912b4a5" prefix=" " category="inline-code"></block>,<block ref="ce31e2a082d17e038fcc6e3006166653" prefix=" " category="inline-code"></block>,<block ref="fcefd647d6a866603c627b11347c707a" prefix=" " category="inline-code"></block>,<block ref="6970bdc2201030b9c03fbdcf3973858a" prefix=" " category="inline-code"></block>,<block ref="f447f5c03508de4d88e340390ba7c78f" prefix=" " category="inline-code"></block>.<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> è 1-500. Se ometti i limiti temporali, lo strumento usa per impostazione predefinita una finestra recente di tre ore.</block>
+  <block id="c77992eacc8cb23c41748ed433bcd3b3" category="section-title">Oggetti di gruppo</block>
+  <block id="9e4858afd3fb8728f10451a793c23171" category="paragraph">Raggruppa gli oggetti in base a un attributo di raggruppamento valido e aggrega le metriche selezionate. I filtri si applicano ai valori raw prima dell'aggregazione.</block>
+  <block id="995fc42a264582bdf46f042e03569e91" category="list-text"><block ref="bc77066a6cd8c9b9baebaaa8dace6f53" prefix="" category="inline-code"></block></block>
+  <block id="fea848ee5f68bbe562aa7ac62289ddc3" category="list-text"><block ref="a69e8bebc7db12d25513d660c49b759b" prefix="" category="inline-code"></block></block>
+  <block id="cf96f1438e714f9de87807fd9bfd473d" category="paragraph">Gli input opzionali includono<block ref="d4f1582143a1afc626dedd560475665b" prefix=" " category="inline-code"></block>,<block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>, ordinamento, limiti temporali,<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> e<block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block>.</block>
+  <block id="35b03ceb928f7e6c089a692af552088a" category="paragraph">Aggregazioni di gruppo supportate:<block ref="26a4b44a837bf97b972628509912b4a5" prefix=" " category="inline-code"></block>,<block ref="ce31e2a082d17e038fcc6e3006166653" prefix=" " category="inline-code"></block>,<block ref="fcefd647d6a866603c627b11347c707a" prefix=" " category="inline-code"></block>,<block ref="6970bdc2201030b9c03fbdcf3973858a" prefix=" " category="inline-code"></block>,<block ref="2c2624a5059934a947d6e25fe8332ade" prefix=" " category="inline-code"></block>,<block ref="421cfd143e450c3f5814a0495409e073" prefix=" " category="inline-code"></block>, +CHANGE_RATIO+.</block>
+  <block id="08ebae22aa6c8ffe6e4f629093fcd891" category="section-title">Serie temporali delle prestazioni delle query</block>
+  <block id="dbf43daa40eaf3d7964619bd97ab50e5" category="paragraph">Restituisce dati di serie temporali raggruppati in bucket per una metrica e gli oggetti corrispondenti.</block>
+  <block id="aa6f2daf14e6f97b9cf0e4f58aabe39f" category="list-text"><block ref="f42b20b08d8a6db9b00f4a3721d2a459" prefix="" category="inline-code"></block></block>
+  <block id="2d7fcea1245c9bcaee19de767c9f4601" category="paragraph">Gli input opzionali includono<block ref="b2c97ae425dd751b0e48a3acae79cf4a" prefix=" " category="inline-code"></block>,<block ref="9e5a42df3511323d1d417e97fa2a8220" prefix=" " category="inline-code"></block>,<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block>, e<block ref="eb047ddc07ae2d475c91d4d0e5bc1666" prefix=" " category="inline-code"></block>.<block ref="aa9f73eea60a006820d0f8768bc8a3fc" prefix=" " category="inline-code"></block> controlla il numero di serie restituite e deve essere compreso tra 1 e 50.</block>
+  <block id="d8107672e721a347bca90bbdb5fe6302" category="paragraph">Aggregazioni di bucket supportate:<block ref="26a4b44a837bf97b972628509912b4a5" prefix=" " category="inline-code"></block>,<block ref="ce31e2a082d17e038fcc6e3006166653" prefix=" " category="inline-code"></block>,<block ref="fcefd647d6a866603c627b11347c707a" prefix=" " category="inline-code"></block>,<block ref="6970bdc2201030b9c03fbdcf3973858a" prefix=" " category="inline-code"></block>,<block ref="2c2624a5059934a947d6e25fe8332ade" prefix=" " category="inline-code"></block>,<block ref="421cfd143e450c3f5814a0495409e073" prefix=" " category="inline-code"></block>, +CHANGE_RATIO+.</block>
+  <block id="b97c2c0c104a2b7df7f86d3f7caa9e37" category="section-title">Elenca i collector di Kubernetes</block>
+  <block id="c3db24282c6edc8a43ab82d82b6bc4c4" category="paragraph">Restituisce il nome del cluster, lo stato generale corrente, la versione dell'operatore, la versione del componente Network Performance and Map, la versione del componente Change Analysis e il timestamp dell'ultimo report.</block>
+  <block id="855e0673a72847ac65c605b5db5167f1" category="paragraph">Identifica i collector Kubernetes obsoleti e riepiloga quali componenti richiedono attenzione.</block>
+  <block id="ad595f2314671c72fc47c1577dc94f7e" category="section-title">Operatori di filtro</block>
+  <block id="aea172616ee551bdb3635e690c1294a0" category="paragraph">Le query di avvisi, log e oggetti supportano condizioni annidate:</block>
+  <block id="cdc85db381695ddad389e31fb04a1c99" category="list-text"><block ref="2dcbad7477fd40561e8b8198f173bd47" prefix="" category="inline-code"></block>,<block ref="dc33066c3993e0d50896e533fd692ce0" prefix=" " category="inline-code"></block></block>
+  <block id="9e06ee5cc0ace3d365581d75145e819c" category="list-text"><block ref="cd6a9bd2a175104eed40f0d33a8b4020" prefix="" category="inline-code"></block>,<block ref="c562607189d77eb9dfb707464c1e7b0b" prefix=" " category="inline-code"></block>,<block ref="f803729628adf4199f224c2a225038e9" prefix=" " category="inline-code"></block>,<block ref="cfe6055d2e0503be378bb63449ec7ba6" prefix=" " category="inline-code"></block></block>
+  <block id="56c67195947238eb4569f6ed7b437162" category="list-text"><block ref="15f4cff81d9ee10b162eac10c339d5f4" prefix="" category="inline-code"></block> utilizzando<block ref="2e5c58593e161bfc5f0b462a2edbeca1" prefix=" " category="inline-code"></block> e<block ref="d1457b72c3fb323a2671125aef3eab5d" prefix=" " category="inline-code"></block></block>
+  <block id="e55e77caf184dbd072c8906b1799599a" category="list-text"><block ref="6a240802522e95fc9e2c1d09122d8ec4" prefix="" category="inline-code"></block></block>
+  <block id="b5b331763607db751aee8972b1826c20" category="list-text">Annidato<block ref="be5d5d37542d75f93a87094459f76678" prefix=" " category="inline-code"></block>,<block ref="e81c4e4f2b7b93b481e13a8553c2ae1b" prefix=" " category="inline-code"></block>, e<block ref="d529e941509eb9e9b9cfaeae1fe7ca23" prefix=" " category="inline-code"></block></block>
+  <block id="2ee7caa3b8aa9512e3f9101f7eef0d20" category="paragraph">Il server connesso convalida i campi rispetto ai metadati. Se una query viene rifiutata, aggiorna i metadati pertinenti e ricostruisci il filtro.</block>
+  <block id="5fe5b3453a2f3b9df77af11559d9951c" category="inline-link-macro">Ricette operative</block>
+  <block id="1b3885661a25271636d6446e1a49cd8b" category="list-text"><block ref="1b3885661a25271636d6446e1a49cd8b" category="inline-link-macro-rx"></block></block>
+  <block id="5be5d95c8863a0ff4b75894eb5db082c" category="summary">Soluzioni comuni per problemi di connessione al server MCP, errori di autenticazione, rifiuto delle query e limitazione della frequenza delle API.</block>
+  <block id="d382b6b9cbd8fdb1a9a8efc66fe393fa" category="doc">Risoluzione dei problemi di DII MCP</block>
+  <block id="355134cd58fa356416edb65f882230f3" category="section-title">Il server non si connette</block>
+  <block id="ef83f8cb33ad61a9f76fd07fde393cb7" category="paragraph">Controlla:</block>
+  <block id="f2fdcdd36f210dddb1ed4060a5df74fb" category="list-text">L'URL configurato corrisponde all'endpoint fornito per il tuo ambiente DII.</block>
+  <block id="bef1020a681f9d3a73a92d825cb3a656" category="list-text">Il client supporta server HTTP MCP remoti e il flusso di autenticazione richiesto.</block>
+  <block id="1001e7e283e6cc93400d48345ae4be37" category="list-text">Autenticazione completata con successo.</block>
+  <block id="1d33f6e7519dbf59c7d86da9965e7970" category="list-text">La policy di rete consente l'accesso all'endpoint.</block>
+  <block id="4678c86a439acca7f24beeccb7f681d4" category="list-text">L'identità connessa può accedere al tenant DII.</block>
+  <block id="7b7983653a1387b7bb98896560a1d064" category="paragraph">Riavvia o ricarica il server MCP dopo aver modificato la configurazione del client.</block>
+  <block id="e8583414c11fe6fffebe22dee75e7dcf" category="section-title">È richiesta l'autenticazione</block>
+  <block id="35ffd81d55db481e95a4fd5a8b5b33d6" category="paragraph">Completa la procedura di accesso del client, quindi riprova la richiesta originale. Se utilizzi un'identità di servizio, verifica che la relativa credenziale sia valida e memorizzata tramite un meccanismo di gestione dei secret approvato.</block>
+  <block id="e3ef799216fd535ea20f2d7edddc57cf" category="paragraph">Non riprovare ripetutamente dopo un rifiuto di autorizzazione confermato. Chiedi a un amministratore di DII di verificare le autorizzazioni dell'utente per tenant e risorse.</block>
+  <block id="d79c6f7344036f0b684030f808ecc06a" category="section-title">Una query di oggetti rifiuta un campo</block>
+  <block id="a3c25ad86f7c9381c2731acd6c871a30" category="paragraph">Gli attributi e le metriche variano in base al tipo.</block>
+  <block id="d5009a898b6dccd7f6e6c02cc94de59c" category="list-text">Chiama +ObjectService_getObjectTypes+.</block>
+  <block id="453bef272ff51ef6ec94aa34a9ca9066" category="list-text">Conferma il tipo di oggetto esatto.</block>
+  <block id="162b411023d4b87cfebadbc206e8eae3" category="list-text">Chiama +ObjectService_getMetadataForObjectType+.</block>
+  <block id="d2f7811da7b5491580f0e70f816e4c5d" category="list-text">Copia i nomi dei campi esattamente dai metadati.</block>
+  <block id="c1d6a85d420f9958d7e6742765783b0b" category="list-text">Verifica che il tipo di valore e la funzione di aggregazione siano compatibili.</block>
+  <block id="f40464dd0882303bd3f14d93700ba2cc" category="paragraph">Puoi usare per raggruppare gli oggetti solo gli attributi contrassegnati come raggruppabili.</block>
+  <block id="52d14538033cc1caffc28c5bc8219bd9" category="section-title">Una query di log rifiuta un attributo</block>
+  <block id="f08d404d9a85bc4bf2763b37275a6d47" category="list-text">Chiama +LogService_getLogTypes+.</block>
+  <block id="28a6cf0b8991f85902ebebdd9ec065eb" category="list-text">Conferma il tipo di log esatto.</block>
+  <block id="5951f5c8fe05ebff77b07518a0b4344c" category="list-text">Chiama +LogService_getLogTypeMetadata+.</block>
+  <block id="aec76932f305d42c394cf8e24c5334d5" category="list-text">Usa solo gli attributi restituiti per quel tipo di log.</block>
+  <block id="8f6ccda98ccb370a5d6d64525bc06ce9" category="paragraph">Le query degli eventi di log utilizzano la paginazione basata sul cursore. Passa il cursore restituito dalla pagina precedente anziché un offset.</block>
+  <block id="b6e3b7628aad361a7a09955f42c7d936" category="section-title">Una query di avviso rifiuta un campo</block>
+  <block id="f1cdee4f58df803e77f25d8579f6fc35" category="paragraph">Chiama +AlertsService_getMetadata+ immediatamente prima di costruire la query. I metadati degli avvisi possono essere generici e dipendere dal tenant; usa i nomi esatti dei campi.</block>
+  <block id="c6af9f074b93a48a580cd0adaf0efa50" category="section-title">L'intervallo di tempo non è valido</block>
+  <block id="655048c88aa5416e2f13e1cf04d269cb" category="list-text">Assicurati che <block ref="a4bdd86ad6ce1ef74538de5a02bcafce" prefix=" " category="inline-code"></block>sia precedente o uguale a <block ref="9f8d22daa83e2d0780e97116054ab5dc" prefix=" " category="inline-code"></block>.</block>
+  <block id="d8e820234a41a7d70f60938968a60e2e" category="list-text">Usa timestamp ISO-8601 con un offset o<block ref="21c2e59531c8710156d34a3c30ac81d5" prefix=" " category="inline-code"></block>.</block>
+  <block id="cd0abfa669fda4a141cd0a3163def055" category="list-text">Mantieni il periodo richiesto sotto i 30 giorni.</block>
+  <block id="e6faa55bdbc9e4cfa0d0f933d4df1305" category="list-text">Suddividi le indagini più lunghe in finestre consecutive e non sovrapposte e riassumi i risultati.</block>
+  <block id="28d09296acf0542939284c47dec494e9" category="list-text">Fornisci un fuso orario IANA valido quando lo strumento lo richiede.</block>
+  <block id="73d0117552bcc0f91c7774bd6f2198ef" category="paragraph">L'applicazione in fase di esecuzione è autorevole se è più rigorosa di una descrizione dello strumento memorizzata nella cache del client.</block>
+  <block id="14c43f3821288aeaa08ba90f6dc021fb" category="section-title">Una query restituisce troppi risultati</block>
+  <block id="afa9ffe16edcb0c1f8d7cff94471638e" category="list-text">Aggiungi un filtro valido.</block>
+  <block id="7844cc90ba7464cf7e349481e2bc3cb6" category="list-text">Riduci l'intervallo di tempo.</block>
+  <block id="d7da635a9ed1a13e63a714b383a61a04" category="list-text">Ordina in base alla metrica più rilevante.</block>
+  <block id="92d71586a849f240646c52b58d4804a2" category="list-text">Riduci il limite dei risultati.</block>
+  <block id="3883859e88254bac85024cff1e3bcc18" category="list-text">Usa il raggruppamento o un istogramma quando i singoli record non sono necessari.</block>
+  <block id="060472321e0aeceebd402196daa756fd" category="list-text">Continua con<block ref="7a86c157ee9713c34fbd7a1ee40f0c5a" prefix=" " category="inline-code"></block> o un cursore del registro solo quando sono necessari più dettagli.</block>
+  <block id="f9b9be3c6471563d697117d3fc2ff0d5" category="section-title">Una chiamata andata a buon fine non restituisce righe</block>
+  <block id="0be1782d0559882a9530bc74e7f7f0ad" category="paragraph">Un risultato vuoto è spesso una risposta valida. Può significare:</block>
+  <block id="3058feae0f2b720ed68ef9ff9bab1f5d" category="list-text">Nessuna risorsa corrisponde al filtro.</block>
+  <block id="92669de0cb15b7b747e6c3553e299307" category="list-text">Nell'intervallo di tempo selezionato non si è verificato alcun evento.</block>
+  <block id="c25557ccc693830e05bea444da34efb4" category="list-text">Non sono configurate finestre di manutenzione né regole di notifica.</block>
+  <block id="de8cc582bbdd90a9a0058466f95984f4" category="list-text">Il tipo di dati selezionato non viene popolato dai collector del tenant.</block>
+  <block id="365061b0ac161eb4f41dbe48f3bca4fe" category="paragraph">Non descrivere un risultato vuoto ma valido come dato mancante, a meno che altre prove non indichino un problema di raccolta.</block>
+  <block id="1599abeaa06db5eb56dbc39f27d09a03" category="section-title">Un'unità di acquisizione è connessa ma non ha mai inviato report</block>
+  <block id="715e7b19030f034e0973572185f27f95" category="paragraph">Lo stato della connessione e la segnalazione di successo sono due cose separate. Verifica:</block>
+  <block id="3f1fcb9aad20359afeea944082bb3519" category="list-text"><block ref="98590730af2b11154a1d93e8c46b2778" prefix="" category="inline-code"></block></block>
+  <block id="2152887ae464373788d36e75f1f13230" category="list-text">Conteggio delle fonti di dati assegnate</block>
+  <block id="44a00a8b331a640d0791ec6c7f93ce41" category="list-text">Stato di acquisizione dell'origine dati</block>
+  <block id="212637912aa8191d536573f9a7671da0" category="list-text">Connettività host e versione dell'AU</block>
+  <block id="af139fa258a82f1b92d475e0a6dd46aa" category="list-text">Attività di polling per l'origine dati assegnata</block>
+  <block id="d2578a77b1df186f223ae80f2eadfd31" category="section-title">Un collector ha avuto un errore</block>
+  <block id="526582eda60fc066ab851b12a1bf4bfc" category="paragraph">Usa +CollectorService_getDataSourceById+ per il collector interessato. Controlla l'attività di polling recente, le informazioni sulle patch attive, lo stato del pacchetto, la configurazione e l'ora dell'ultima acquisizione riuscita. Evita di visualizzare credenziali o valori di configurazione privati.</block>
+  <block id="caacea8ee3dab59385640af7ec832fb3" category="section-title">I risultati del webhook includono gli indirizzi completi</block>
+  <block id="6af07ab5a9c2913d8b3aab994bddb65a" category="paragraph">Non ripetere i valori. Riassumi solo i nomi dei target, i tipi di integrazione, i conteggi e lo stato. Segui <block ref="c3d0d96dc88bb2d999220c1ec6124dd1" category="inline-link-macro-rx"></block> se sono stati visualizzati o condivisi materiali riservati.</block>
+  <block id="833b4c3abea9dda26d1c9ab1f2c2b8dd" category="section-title">L'assistente IA ha selezionato lo strumento sbagliato</block>
+  <block id="5266587ad9178a28dba8105973d046fb" category="paragraph">Utilizza un prompt più esplicito:</block>
+  <block id="1932e8ea5eb73f970642cb5b2a4fc78c" category="paragraph">Innanzitutto, elenca i tipi di oggetto disponibili. Recupera i metadati per il tipo selezionato. Quindi, interroga solo i campi validi e spiega quali strumenti DII hai utilizzato.</block>
+  <block id="8e9b644da11d503c688045991989fb08" category="inline-link-macro">procedura operativa</block>
+  <block id="84b0b2d2ff7bce9fcd6cfbf9e254a8d6" category="paragraph">Per le indagini comuni, inizia da un <block ref="46c9045eff432af233929989c542e090" category="inline-link-macro-rx"></block>.</block>
+  <block id="a23e7bf3f0e7e94fbc944ad274535e4f" category="admonition">La funzionalità di reporting è disponibile in Data Infrastructure Insights <block ref="e53fcfe2d8e430963458770e616738bd" category="inline-link-macro-rx"></block>. <block ref="0ec52641b6ccb1942a8a239f999b7e3e" category="inline-link-macro-rx"></block> <block ref="3b5464e5227ca5bca8202e73f38f8484" category="inline-link-macro-rx"></block> <block ref="b5b2a212e3db2ebf0698577bb3fa110c" category="inline-link-macro-rx"></block> <block ref="6dcfbee49c44a8328938bbb4835169ec" category="inline-link-macro-rx"></block> <block ref="93625d442049bb401e7127dc86f547f7" category="inline-link-macro-rx"></block> <block ref="02d8f86e7604c160ff33f6098d5ab0fe" category="inline-link-macro-rx"></block></block>
+  <block id="056e089a06825ff9cfdc7d8a4300fc74" category="sidebar">Panoramica di AI Assistant</block>
+  <block id="2d58e9779fa68c4a5c50267077c89115" category="sidebar">DII MCP</block>
+  <block id="4d0566ae20cdd246f277a26a7f13a2f5" category="sidebar">Panoramica di DII MCP</block>
+  <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">Concetti</block>
+  <block id="8625e1de7be14c39b1d14dc03d822497" category="sidebar">Strumenti</block>
+  <block id="1cf7e301510c711b73d2b182b9dcf084" category="sidebar">Casi d'uso</block>
+  <block id="e251010eb0cac5793d760ab2e5f51473" category="sidebar">Panoramica dei casi d'uso</block>
+  <block id="2ac21a73971586e92654a9bebf1f13f8" category="sidebar">Analisi del rischio di capacità</block>
+  <block id="20e5685830d94211d24777272fbcb29e" category="sidebar">Inventario dell'ambiente</block>
+  <block id="5224f411bcf47833c655b19d061e8ba9" category="sidebar">Valuta del collector Kubernetes</block>
+  <block id="6ce78279e85ae6fe9f97051d8bc3c13e" category="sidebar">Stato delle notifiche</block>
+  <block id="b349cdb464a16150566e060380a1b77f" category="sidebar">Analisi delle cause principali delle prestazioni</block>
+  <block id="aa70f40c4ba41bbc875ee1b79a091d75" category="sidebar">Integrità dello storage</block>
 </blocks>

@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: mcp_setup.html 
+summary: Usa questa guida per connettere un client AI compatibile con MCP a DII. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Configura il server DII MCP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usa questa guida per connettere un client AI compatibile con MCP a DII.
+
+
+NOTE: Il DII MCP è una funzionalità link:concept_preview_features.html["Anteprima"] ed è pertanto soggetto a modifiche.
+
+
+
+[[before-you-begin]]
+== Prima di iniziare
+
+Ti serve:
+
+* Accesso a un tenant DII.
+* Un'identità utente o di servizio DII autorizzata a leggere le risorse che intendi interrogare.
+* L'endpoint MCP remoto fornito per il tuo ambiente DII.
+* Un client MCP che supporta server HTTP remoti e il metodo di autenticazione della tua organizzazione.
+
+
+Gli esempi utilizzano +<DII_HOST_URL>+ come segnaposto. Non incollare i token di accesso nei file soggetti al controllo del codice sorgente. Ad esempio, l'URL utilizzato da Cursor è:
+
+ https://<DII_HOST_URL>/api/v1/mcp
+Consulta gli snippet di codice specifici per la tua connessione.
+
+
+
+[[configure-the-mcp-client]]
+== Configura il client MCP
+
+. Vai a Amministrazione > Accesso API e seleziona la scheda "Configurazione MCP".
+. Seleziona il client che desideri configurare.
+. Inserisci un nome significativo e una data di scadenza, quindi seleziona _Generate Token_.
+. *Copia il frammento di codice* Potrai copiarlo solo durante questo passaggio. Il token è nascosto nel frammento, ma verrà incollato correttamente nella tua applicazione client.
+. Nelle impostazioni del client, inserisci l'URL host DII corretto nel campo "url".
+. Salva la configurazione.
+
+
+
+IMPORTANT: Non inserire i bearer token nella cronologia della shell, nei prompt, negli screenshot, nei file di progetto o nel controllo del codice sorgente.
+
+
+
+[[verify-access]]
+== Verifica l'accesso
+
+Dopo che il client segnala di essere connesso al server, puoi iniziare a inviare richieste come le seguenti:
+
+[]
+====
+Elenca i tipi di oggetto DII a mia disposizione. Elenca i tipi di log DII a mia disposizione. Elenca le mie unità di acquisizione senza visualizzare indirizzi IP o UUID.
+
+====
+L'individuazione riuscita conferma la connettività, ma non garantisce l'accesso a tutte le risorse sottostanti. Le funzionalità del tenant, i collector e le autorizzazioni determinano quali dati vengono restituiti.
+
+
+
+[[credential-safety]]
+== Sicurezza delle credenziali
+
+* Preferisci OAuth interattivo o un altro flusso di credenziali a breve termine, se disponibile.
+* Usa un'identità di servizio dedicata per i client non presidiati.
+* Non inserire token in prompt, screenshot, esempi, descrizioni dei problemi o nel controllo del codice sorgente.
+* Non chiedere all'agente di visualizzare gli indirizzi webhook completi.
+
+
+Per ulteriori indicazioni, consulta link:mcp_security.html["Sicurezza e privacy"].
+
+
+
+[[next-steps]]
+== Prossimi passi
+
+* link:mcp_concepts.html["Comprendi il modello di dati DII"]
+* link:mcp_tools_overview.html["Consulta il riferimento dello strumento"]
+* link:mcp_recipe_environment_inventory.html["Esegui la ricetta di inventario dell'ambiente"]
+* link:mcp_troubleshooting.html["Risolvi i problemi di connessione e gli errori di query"]
+

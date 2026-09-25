@@ -1,0 +1,127 @@
+---
+sidebar: sidebar 
+permalink: mcp_security.html 
+summary: 'Il server DII MCP consente a un client AI di accedere al contesto dell"infrastruttura del tenant. Tratta tale contesto con la stessa cura riservata all"interfaccia utente e alle API di DII.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Sicurezza e privacy
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il server DII MCP consente a un client AI di accedere al contesto dell'infrastruttura del tenant. Tratta tale contesto con la stessa cura riservata all'interfaccia utente e alle API di DII.
+
+
+NOTE: Il DII MCP è una funzionalità link:concept_preview_features.html["Anteprima"] ed è pertanto soggetto a modifiche.
+
+
+
+[[least-privilege-access]]
+== Accesso con privilegi minimi
+
+* Usa un'identità dedicata alla persona, all'applicazione o all'automazione che si connette a MCP.
+* Concedi solo le autorizzazioni di lettura DII necessarie per i workflow previsti.
+* Rivedi l'accesso quando cambiano il ruolo o le responsabilità operative di un utente.
+* Usa un'identità di servizio separata per l'automazione non presidiata.
+
+
+L'attuale toolset del prodotto DII qui documentato è di sola lettura. L'accesso in sola lettura può comunque rivelare nomi sensibili, topologia, configurazione, telemetria e stato operativo.
+
+
+
+[[authentication]]
+== Autenticazione
+
+Preferisci l'autenticazione OAuth interattiva o un altro flusso di autenticazione di breve durata supportato dalla tua implementazione. Se sono necessarie credenziali non interattive:
+
+* Conservali in un gestore di segreti approvato.
+* Definisci l'ambito e ruotali in base alle policy dell'organizzazione.
+* Non inserirli mai nei file di progetto, nella cronologia della shell, nei prompt, negli screenshot o nella documentazione.
+
+
+
+
+[[sensitive-fields]]
+== Campi sensibili
+
+I dati DII potenzialmente sensibili includono:
+
+* Indirizzi IP, nomi host, nomi di risorse specifici del tenant e UUID
+* Topologia e configurazione dell'infrastruttura
+* Descrizioni degli avvisi e payload dei log
+* Valori di utente, proprietario, etichetta e annotazione
+* Indirizzi degli endpoint webhook
+
+
+Gli URL dei webhook spesso includono chiavi di instradamento, firme, token o percorsi univoci. Non chiedere a un agente di restituire l'indirizzo completo del webhook. Richiedi solo:
+
+* Nome target
+* Tipo di integrazione o tipo di motore
+* Abilitato o stato di consegna
+
+
+Le applicazioni che integrano il server MCP devono oscurare gli indirizzi webhook prima di visualizzare, memorizzare o inoltrare i risultati degli strumenti.
+
+
+
+[[prompt-and-output-hygiene]]
+== Igiene di prompt e output
+
+* Usa identificatori fittizi in prompt ed esempi riutilizzabili.
+* Chiedi all'agente di omettere gli indirizzi IP, gli UUID, gli indirizzi degli endpoint e i payload raw dei log, a meno che non siano necessari.
+* Riassumi i risultati invece di copiare grandi risposte raw.
+* Rivedi il contenuto generato prima di inserirlo nei ticket, nei canali di chat o nei documenti esterni.
+* Segui i requisiti organizzativi per la gestione dei dati relativi al client AI selezionato.
+
+
+
+
+[[tenant-isolation]]
+== Isolamento dei tenant
+
+I risultati di MCP sono limitati al tenant e al contesto DII autenticato. Non combinare i risultati di più tenant a meno che il flusso di lavoro e l'autorizzazione non lo consentano esplicitamente.
+
+
+
+[[audit-and-retention]]
+== Audit e conservazione
+
+La copertura e la conservazione degli eventi di audit dipendono dall'implementazione di DII e dal client AI connesso. Prima dell'utilizzo in produzione, gli amministratori devono verificare:
+
+* Se l'autenticazione MCP e le chiamate agli strumenti vengono registrate
+* Quali argomenti della richiesta e metadati vengono conservati
+* Chi può esaminare quei documenti
+* Per quanto tempo il client AI conserva i prompt e i risultati degli strumenti
+
+
+Non dare per scontato che esistano eventi di audit specifici per MCP o garanzie di conservazione, a meno che non siano documentati per la tua implementazione.
+
+
+
+[[incident-response]]
+== Risposta agli incidenti
+
+Se una credenziale o un endpoint contenente credenziali compare in un risultato, una richiesta, una trascrizione o un documento pubblicato di MCP:
+
+. Smetti di condividere il contenuto interessato.
+. Revoca o ruota la credenziale o il segreto di integrazione.
+. Se possibile, rimuovi il valore dagli artefatti memorizzati.
+. Esamina gli accessi e i record di audit.
+. Segnala l'esposizione tramite il processo di sicurezza della tua organizzazione.
+
+
+
+
+[[related-documentation]]
+== Documentazione correlata
+
+* link:mcp_setup.html["Configura il server DII MCP"]
+* link:mcp_concepts.html["Concetti e modello dati"]
+* link:mcp_recipe_notification_posture.html["Ricetta per la configurazione delle notifiche"]
+* link:mcp_troubleshooting.html["Risoluzione dei problemi"]
+

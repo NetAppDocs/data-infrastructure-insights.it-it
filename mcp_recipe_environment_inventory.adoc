@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_environment_inventory.html 
+summary: Utilizza questa procedura per capire se le unità di acquisizione di DII e le origini dati configurate sono connesse, inviano report e raccolgono dati correttamente. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Ambiente di inventario e integrità della raccolta
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizza questa procedura per capire se le unità di acquisizione di DII e le origini dati configurate sono connesse, inviano report e raccolgono dati correttamente.
+
+
+NOTE: Il DII MCP è una funzionalità link:concept_preview_features.html["Anteprima"] ed è pertanto soggetto a modifiche.
+
+
+
+[[prerequisites]]
+== Prerequisiti
+
+* Accesso all'unità di acquisizione e agli strumenti di raccolta.
+* Un nome facoltativo dell'unità di acquisizione o del collector per restringere l'indagine.
+
+
+
+
+[[tools-used]]
+== Strumenti utilizzati
+
+* +AcquisitionUnitsService_getAcquisitionUnits+
+* +AcquisitionUnitsService_getAcquisitionUnitByUuid+
+* +CollectorService_getDataSources+
+* +CollectorService_getDataSourceById+
+* +CollectorService_getDataSourceTypes+
+
+
+
+
+[[starter-prompt]]
+== Richiesta iniziale
+
+[]
+====
+Esamina il mio ambiente di raccolta DII. Riepiloga le unità di acquisizione in base allo stato della connessione e alla freschezza dei report, quindi riepiloga le origini dati configurate in base allo stato di acquisizione e al fornitore. Evidenzia le unità di acquisizione che non hanno mai inviato report, le unità senza collettori assegnati, i collettori con errori e le acquisizioni riuscite non aggiornate. Non visualizzare indirizzi IP, UUID o credenziali.
+
+====
+
+
+[[agent-workflow]]
+== Flusso di lavoro dell'agente
+
+. Elenca tutte le unità di acquisizione.
+. Classifica ogni AU utilizzando sia lo stato della connessione sia  `lastReported`.
+. Conta le fonti di dati assegnate per AU.
+. Elenca tutte le origini dati configurate.
+. Raggruppa i collector per stato, vendor, modello e AU.
+. Identifica:
++
+** AU disconnesse o con heartbeat non riuscito
+** AU connesse che non hanno mai segnalato
+** Unità amministrative senza origini dati
+** Collector non riusciti
+** Collector senza acquisizione riuscita
+** Collezionisti di successo la cui ultima acquisizione è inaspettatamente vecchia
+
+
+. Recupera i dettagli completi dell'AU o del collector solo per le eccezioni.
+. Restituisci un riepilogo prioritario e indica chiaramente la soglia di freschezza utilizzata.
+
+
+
+
+[[interpretation]]
+== Interpretazione
+
+Utilizza queste distinzioni:
+
+* *Connessa e con reporting:* l'AU è connessa e ha un valore  `lastReported`recente.
+* *Connesso ma mai segnalato:* la connettività esiste, ma non hai ancora configurato correttamente la segnalazione dei dati di telemetria.
+* *Heartbeat non riuscito:* esamina l'host AU, il percorso di rete e il servizio.
+* *Raccolta dati del collector non riuscita:* controlla l'attività di polling recente del collector, lo stato del pacchetto, la configurazione e l'ultima acquisizione riuscita.
+* *Nessun collettore assegnato:* questo può essere intenzionale; verifica prima di considerarlo un errore.
+
+
+Il catalogo dei tipi di origine dati supportati descrive i prodotti che DII può raccogliere. Non dimostra che tali prodotti siano configurati nel tenant.
+
+
+
+[[suggested-output]]
+== Output suggerito
+
+. Riepilogo esecutivo
+. Conteggi dello stato dell'unità di acquisizione
+. Conteggi dello stato del collector
+. Eccezioni classificate in base all'impatto operativo
+. Controlli consigliati
+. Limitazioni dei dati
+
+
+
+
+[[limits-and-privacy]]
+== Limiti e privacy
+
+* Evita di restituire UUID AU, indirizzi IP, nomi host privati o credenziali del collector.
+* Un valore di stato da solo non garantisce l'aggiornamento dei dati.
+* Recupera la configurazione dettagliata solo per le eccezioni denominate.
+
+
+
+
+[[follow-up-prompts]]
+== Suggerimenti di approfondimento
+
+[]
+====
+Esamina il collector con errore denominato `example-array`. Riepiloga la recente attività di polling e gli errori dei pacchetti di raccolta senza mostrare credenziali o indirizzi privati.
+
+====
+[]
+====
+Quali unità di acquisizione non hanno inviato report negli ultimi 30 minuti e quali collector dipendono da esse?
+
+====
+[]
+====
+Confronta i fornitori di collector configurati con il catalogo dei tipi di origine dati supportati da DII.
+
+====
+link:mcp_recipe_overview.html["Torna alle ricette"]

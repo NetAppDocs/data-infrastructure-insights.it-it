@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_storage_health.html 
+summary: Utilizza questa ricetta per dare priorità ai problemi di storage combinando avvisi attivi, intenti di monitoraggio, indicazioni correttive, log della piattaforma pertinenti e contesto degli oggetti. 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Valuta lo stato dello storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizza questa ricetta per dare priorità ai problemi di storage combinando avvisi attivi, intenti di monitoraggio, indicazioni correttive, log della piattaforma pertinenti e contesto degli oggetti.
+
+
+NOTE: Il DII MCP è una funzionalità link:concept_preview_features.html["Anteprima"] ed è pertanto soggetto a modifiche.
+
+
+
+[[prerequisites]]
+== Prerequisiti
+
+* Un intervallo di tempo di 30 giorni o meno.
+* Ambito opzionale di sistema di archiviazione, cluster, pool o volume.
+* Accesso agli strumenti di avviso, monitoraggio, log e oggetti.
+
+
+
+
+[[tools-used]]
+== Strumenti utilizzati
+
+* +AlertsService_getMetadata+
+* +AlertsService_queryForAlerts+
+* +AlertsService_getAlertByName+
+* +MonitorsService_getMonitorById+
+* +LogService_getLogTypes+
+* +LogService_getLogTypeMetadata+
+* +LogService_queryLogEvents+
+* +ObjectService_getObjectTypes+
+* +ObjectService_getMetadataForObjectType+
+* +ObjectService_query+
+
+
+
+
+[[starter-prompt]]
+== Richiesta iniziale
+
+[]
+====
+Valuta lo stato di salute dello storage nelle ultime 24 ore. Identifica gli avvisi attivi critici e di avvertimento per sistemi di storage, nodi, pool e volumi. Per gli avvisi con l'impatto maggiore, spiega la condizione del monitor e le indicazioni correttive, quindi esamina i log EMS pertinenti o i log della piattaforma di storage relativi all'ora del trigger. Separa le prove confermate dalle cause probabili.
+
+====
+
+
+[[agent-workflow]]
+== Flusso di lavoro dell'agente
+
+. Ottieni i metadati dell'avviso.
+. Identifica i campi validi per gravità, stato, monitor, oggetto correlato e ora di attivazione.
+. Interroga gli avvisi attivi relativi allo storage nell'intervallo richiesto.
+. Classifica gli avvisi utilizzando:
++
+** Gravità
+** Tipo di oggetto interessato
+** Numero di oggetti interessati
+** Recency e recurrence
+** Impatto su disponibilità, protezione dei dati, prestazioni o capacità
+
+
+. Visualizza i dettagli completi degli avvisi con la massima priorità.
+. Recupera le definizioni dei monitor e le indicazioni correttive.
+. Elenca i tipi di log e seleziona il flusso nativo della piattaforma pertinente a ciascun avviso, ad esempio ONTAP EMS o eventi StorageGRID.
+. Recupera i metadati del log, quindi esegui una query su un intervallo ristretto intorno all'avviso.
+. Recupera gli attributi o le metriche necessari per confermare lo stato attuale.
+. Crea un riepilogo dello stato di salute con prove, causa probabile, impatto e controllo successivo.
+
+
+
+
+[[interpretation]]
+== Interpretazione
+
+Non considerare un singolo segnale come una valutazione completa dello stato di salute:
+
+* Gli *avvisi* mostrano le condizioni rilevate.
+* *I monitor* spiegano la regola di rilevamento e l'azione correttiva prevista.
+* I *log* forniscono il contesto degli eventi nativo della piattaforma.
+* *Oggetti e metriche* mostrano l'inventario corrente o lo stato misurato.
+
+
+Un avviso attivo può rimanere aperto anche dopo che la condizione sottostante è cambiata. Ove possibile, usa dati aggiornati relativi a oggetti e metriche.
+
+
+
+[[suggested-output]]
+== Output suggerito
+
+Per ciascun problema prioritario:
+
+* Risorsa interessata
+* Gravità e stato di avviso
+* Ora di attivazione
+* Monitoraggio e condizionamento
+* Log o metriche di conferma
+* Prove confermate
+* Causa probabile, etichettata come inferenza
+* Guida correttiva
+* Affidabilità e prove mancanti
+
+
+
+
+[[limits-and-privacy]]
+== Limiti e privacy
+
+* Mantieni le finestre di avviso e di log al di sotto di 30 giorni.
+* Usa finestre di registro ristrette per ridurre gli eventi non correlati.
+* Ometti UUID, indirizzi, annotazioni e payload raw non necessari.
+* Le indicazioni correttive sono a scopo informativo; verifica i comandi in base alla documentazione del prodotto pertinente e al processo di modifica.
+
+
+
+
+[[follow-up-prompts]]
+== Suggerimenti di approfondimento
+
+[]
+====
+Per l'allerta `AL-123456`, mostra le indicazioni del monitor e gli eventi EMS correlati entro 30 minuti prima e dopo il trigger.
+
+====
+[]
+====
+Raggruppa gli avvisi di storage attivo in base al sistema interessato e all'area di impatto. Quale sistema richiede attenzione per primo e perché?
+
+====
+[]
+====
+Verifica se l'avviso con la priorità più alta è ancora supportato dalle metriche correnti dell'oggetto.
+
+====
+link:mcp_recipe_overview.html["Torna alle ricette"]

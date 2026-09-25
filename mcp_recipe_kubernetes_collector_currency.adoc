@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: mcp_recipe_kubernetes_collector_currency.html 
+summary: 'Usa questa ricetta per identificare i cluster Kubernetes i cui componenti dell"operatore DII o della raccolta sono obsoleti, disabilitati o non aggiornati.' 
+keywords: MCP, DII, Data Infrastructure Insights, AI assistant 
+---
+= Verifica l'aggiornamento del collector Kubernetes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usa questa ricetta per identificare i cluster Kubernetes i cui componenti dell'operatore DII o della raccolta sono obsoleti, disabilitati o non aggiornati.
+
+
+NOTE: Il DII MCP è una funzionalità link:concept_preview_features.html["Anteprima"] ed è pertanto soggetto a modifiche.
+
+
+
+[[prerequisites]]
+== Prerequisiti
+
+* La raccolta Kubernetes è configurata nel tenant DII.
+* Accesso alle informazioni del collector di Kubernetes.
+
+
+
+
+[[tools-used]]
+== Strumenti utilizzati
+
+* +OperatorsManagement_getKubernetesCollectors+
+* Opzionale: +AcquisitionUnitsService_getAcquisitionUnits+
+* Opzionale: +CollectorService_getDataSources+
+
+
+
+
+[[starter-prompt]]
+== Richiesta iniziale
+
+[]
+====
+Controlla l'attualità del collector Kubernetes di DII. Raggruppa i cluster in base allo stato generale, identifica operatori e componenti obsoleti o disabilitati e segnala i timestamp dell'ultimo report non aggiornati. Non visualizzare indirizzi interni o UUID.
+
+====
+
+
+[[agent-workflow]]
+== Flusso di lavoro dell'agente
+
+. Elenca i collector di Kubernetes.
+. Normalizza ciascun cluster in:
++
+** Aggiornato
+** Obsoleto
+** Disabili
+** Sconosciuto
+
+
+. Confronta:
++
+** Versione dell'operatore
+** Versione del componente Prestazioni di rete e mappa
+** Modifica la versione del componente Analisi delle modifiche
+
+
+. Converti l'ultimo timestamp riportato nel fuso orario richiesto.
+. Segnala i cluster che non hanno riportato dati entro la soglia di aggiornamento concordata.
+. Distinguila `N/A` da una versione obsoleta:
++
+** `N/A` può significare che il componente non è installato, non è abilitato o non è applicabile.
+
+
+. Se i dati riportati non sono aggiornati, controlla lo stato dell'unità di acquisizione e del collector correlati, ove disponibili.
+. Restituisci un elenco prioritario di aggiornamenti e indagini.
+
+
+
+
+[[interpretation]]
+== Interpretazione
+
+* *Obsoleto:* almeno un componente installato non è aggiornato alla versione prevista da DII.
+* *Disabilitato:* la raccolta è disattivata intenzionalmente o amministrativamente.
+* *Report obsoleti:* i dati sulla versione potrebbero non riflettere lo stato attuale del cluster.
+* *N/D:* richiede contesto; non classificarlo automaticamente come un errore.
+
+
+Lo strumento segnala le versioni e lo stato. Non esegue aggiornamenti.
+
+
+
+[[suggested-output]]
+== Output suggerito
+
+. Conteggio dei cluster per stato
+. Cluster obsoleti classificati in base alla freschezza del report
+. Differenze di versione a livello di componente
+. Componenti disabilitati o non disponibili
+. Passaggi di verifica consigliati
+
+
+
+
+[[limits-and-privacy]]
+== Limiti e privacy
+
+* I nomi dei cluster possono essere informazioni sensibili; usa procedure di gestione approvate quando condividi i risultati.
+* Non dedurre l'esposizione alle vulnerabilità basandoti unicamente sulla versione del software.
+* Convalida la compatibilità dell'aggiornamento ed esegui il processo al di fuori di questo flusso di lavoro di sola lettura.
+
+
+
+
+[[follow-up-prompts]]
+== Suggerimenti di approfondimento
+
+[]
+====
+Quali cluster hanno un operatore obsoleto e non hanno inviato report nell'ultima ora?
+
+====
+[]
+====
+Separa i cluster con un componente Change Analysis obsoleto dai cluster in cui tale componente non è disponibile.
+
+====
+[]
+====
+Per i cluster obsoleti, verifica che l'infrastruttura di raccolta DII associata sia integra.
+
+====
+link:mcp_recipe_overview.html["Torna alle ricette"]
