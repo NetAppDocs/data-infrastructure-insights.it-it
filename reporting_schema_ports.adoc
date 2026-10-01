@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, ports
 :imagesdir: ./media/
 
 
+[role="lead"]
+Lo schema Porte contiene dati relativi a porte di rete e switch, inclusi connettività delle porte, stato e relazioni con i dispositivi connessi. Utilizza questo schema per analizzare la topologia di rete e lo stato di salute del fabric all'interno della tua infrastruttura di storage.
+
 Fonte: endpoint OData *dwh_ports* — Data Infrastructure Insights
 
 Tabelle trovate: *7* | Associazioni: *4*

@@ -13,6 +13,9 @@ keywords: dwh, data warehouse, schema, reporting, capacity efficiency
 :imagesdir: ./media/
 
 
+[role="lead"]
+Lo schema Capacity Efficiency fornisce metriche sull'efficienza dello storage, inclusi i rapporti di riduzione dei dati e le opportunità di ottimizzazione. Usa questo schema per monitorare e analizzare l'efficacia delle tecnologie di storage come la deduplicazione e la compressione.
+
 Fonte: endpoint OData *dwh_capacity_efficiency* — Data Infrastructure Insights
 
 Tabelle trovate: *3* | Associazioni: *2*
