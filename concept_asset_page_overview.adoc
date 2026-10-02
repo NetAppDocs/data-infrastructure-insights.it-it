@@ -29,6 +29,18 @@ Nella parte superiore di una landing page si trova la sezione espandibile Riepil
 
 La sezione Riepilogo visualizza e consente anche di modificare le annotazioni assegnate alla risorsa.
 
+Puoi cliccare su uno qualsiasi dei link delle risorse per visualizzare le relative pagine.  Ad esempio, se stai visualizzando un nodo di archiviazione, puoi fare clic su un collegamento per visualizzare la pagina delle risorse dell'archiviazione a cui è associato.
+
+
+NOTE: Potresti notare che la capacità del volume potrebbe essere superiore al 100% su alcune risorse di archiviazione.  Ciò è dovuto al fatto che i metadati relativi alla capacità del volume fanno parte dei dati sulla capacità consumata segnalati dalla risorsa.
+
+
+NOTE: Potresti anche notare che i valori di capacità per FlexGroups possono mostrare "0", mentre i costituenti mostrano dei valori. In DII, i FlexGroups stessi azzerano la maggior parte delle metriche di capacità, mentre i costituenti le includono. Il problema è il doppio conteggio: se entrambe le entità riportassero metriche di capacità complete, DII riporterebbe la stessa capacità due volte (una volta sul FlexGroup e una volta sul costituente). Privilegiare la reportistica a livello di costituente supporta i principali casi d'uso evitando tale duplicazione.
+
++ In questo caso, per riportare la capacità di un FlexGroup in una query, dashboard o monitor, usa il riferimento del costituente al FlexGroup padre. Puoi quindi raggruppare i costituenti in base a tale riferimento e aggregarne i valori di capacità.
+
++ DII imposta intenzionalmente a zero la capacità del parent di FlexGroup; ONTAP continua comunque a segnalare la capacità. Questo si applica alle metriche di capacità/efficienza, non alle metriche delle prestazioni. Si consiglia di raggruppare i costituenti per ID gruppo, poiché il nome del gruppo potrebbe non essere univoco a livello globale.
+
 
 
 [[performance-section]]
