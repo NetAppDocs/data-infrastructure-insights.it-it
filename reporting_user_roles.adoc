@@ -76,6 +76,28 @@ Nella tabella seguente sono illustrate le funzioni disponibili per ciascun ruolo
 |===
 
 
+[[reporting-administration]]
+== Amministrazione dei report
+
+La precedente Console di amministrazione dei report non è più disponibile. Usa Manage per l'amministrazione dei report.
+
+. In Data Infrastructure Insights, apri *Reports*.
+. Seleziona *Menu > Manage*.
+
+
+Da Manage, un amministratore di Reporting può configurare i report e lavorare con le attività di reporting correnti, passate e imminenti.
+
+Per aprire i dettagli di esecuzione di un'attività completata:
+
+. Seleziona *Menu > Gestisci > Attività > Passate*.
+. Nell'attività, apri il menu con i tre puntini.
+. Seleziona *Run Details*.
+
+
+Per maggiori informazioni, consulta questo link:https://kb.netapp.com/Cloud/ncds/nds/dii/dii_kbs/IBM_Cognos_Administration_Console_Does_Not_Load_for_DII_Reporting_Scheduled_Reports["Articolo della Knowledge Base"^].
+
+
+
 [[setting-reporting-cognos-email-preferences]]
 == Impostazione delle preferenze e-mail di Reporting (Cognos)
 
