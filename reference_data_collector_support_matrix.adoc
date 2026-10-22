@@ -27,7 +27,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| AFX-1K | NetApp Release 9.19.1: sab 18 lug 20:33:10 UTC 2026 NetApp Release 9.19.1RC1: sab 02 mag 12:38:22 UTC 2026 
+| AFX-1K | NetApp Versione 9.19.1: sabato 18 luglio 2026 20:33:10 UTC NetApp Versione 9.19.1P2: mercoledì 19 agosto 2026 19:38:56 UTC NetApp Versione 9.19.1RC1: sabato 2 maggio 2026 12:38:22 UTC 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -1236,7 +1236,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
 
 
-.18+| prestazione .6+| Volume interno | Capacità totale | Implementato | HTTPS |  
+.19+| prestazione .6+| Volume interno | Capacità totale | Implementato | HTTPS |  
 
 
 | Capacità utilizzata | Implementato | HTTPS |  
@@ -1278,7 +1278,7 @@ Prodotti supportati da questo raccoglitore dati:
 | ID del server | Implementato | HTTPS |  
 
 
-.4+| Disco StoragePool | Capacità fornita | Implementato | HTTPS |  
+.5+| Disco StoragePool | Capacità fornita | Implementato | HTTPS |  
 
 
 | Capacità grezza | Implementato | HTTPS |  
@@ -1288,6 +1288,9 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | Rapporto di capacità di impegno eccessivo | Implementato | HTTPS | Segnalato come serie temporale 
+
+
+| Rapporto di capacità utilizzata | Implementato | HTTPS |  
 |===
 API di gestione utilizzate da questo raccoglitore dati:
 
@@ -2390,7 +2393,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| ASA-A1K ASA-A20 ASA-A30 ASA-A50 ASA-A70 ASA-A90 ASA-C30 | NetApp Release 9.16.1P10: gio 27 nov 17:12:10 UTC 2025 NetApp Release 9.16.1P11: gio 15 gen 11:21:38 UTC 2026 NetApp Release 9.16.1P3: gio 24 apr 02:50:10 UTC 2025 NetApp Release 9.16.1P6: mer 16 lug 03:10:07 UTC 2025 NetApp Release 9.16.1P7: gio 21 ago 10:29:10 UTC 2025 NetApp Release 9.16.1P8: sab 04 ott 03:23:15 UTC 2025 NetApp Release 9.17.1P10: mar 21 lug 21:51:01 UTC 2026 NetApp Release 9.17.1P1: sab 04 ott 06:37:53 UTC 2025 NetApp Release 9.17.1P2: ven 07 nov 09:39:01 UTC 2025 NetApp Release 9.17.1P3: dom 07 dic 04:46:28 UTC 2025 NetApp Release 9.17.1P4: gio 15 gen 22:33:51 UTC 2026 NetApp Release 9.17.1P5: mer 18 feb 10:54:36 UTC 2026 NetApp Release 9.17.1P6: mer 25 mar 15:38:10 UTC 2026 NetApp Release 9.17.1P7: lun 20 apr 13:57:24 UTC 2026 NetApp Release 9.17.1P9: mer 24 giu 13:09:36 UTC 2026 NetApp Release 9.18.1P3: gio 07 mag 19:01:14 UTC 2026 NetApp Release 9.18.1P4: gio 04 giu 11:38:00 UTC 2026 NetApp Release 9.18.1P5: gio 09 lug 23:05:16 UTC 2026 
+| ASA-A1K ASA-A20 ASA-A30 ASA-A50 ASA-A70 ASA-A90 ASA-C30 | NetApp Versione 9.16.1P10: gio 27 nov 17:12:10 UTC 2025 NetApp Versione 9.16.1P11: gio 15 gen 11:21:38 UTC 2026 NetApp Versione 9.16.1P3: gio 24 apr 02:50:10 UTC 2025 NetApp Versione 9.16.1P6: mer 16 lug 03:10:07 UTC 2025 NetApp Versione 9.16.1P7: gio 21 ago 10:29:10 UTC 2025 NetApp Versione 9.16.1P8: sab 04 ott 03:23:15 UTC 2025 NetApp Versione 9.17.1P10: mar 21 lug 21:51:01 UTC 2026 NetApp Versione 9.17.1P1: sab 04 ott 06:37:53 UTC 2025 NetApp Versione 9.17.1P2: ven 07 nov 09:39:01 UTC 2025 NetApp Versione 9.17.1P3: dom 07 dic 04:46:28 UTC 2025 NetApp Versione 9.17.1P4: gio 15 gen 22:33:51 UTC 2026 NetApp Versione 9.17.1P5: mer 18 feb 10:54:36 UTC 2026 NetApp Versione 9.17.1P6: mer 25 mar 15:38:10 UTC 2026 NetApp Versione 9.17.1P7: lun 20 apr 13:57:24 UTC 2026 NetApp Versione 9.17.1P9: mer 24 giu 13:09:36 UTC 2026 NetApp Versione 9.18.1P4: gio 04 giu 11:38:00 UTC 2026 NetApp Versione 9.18.1P5: gio 09 lug 23:05:16 UTC 2026 NetApp Versione 9.18.1P7: gio 03 set 20:55:20 UTC 2026 NetApp Versione 9.19.1P2: mer 19 ago 19:38:56 UTC 2026 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -3097,7 +3100,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 205.5 Brocade 300E Brocade 32Gb Fibre Channel SAN Switch Module per HPE Synergy Brocade 4024 Embedded Brocade 4900 Brocade 5000 Brocade 5300 Brocade 5480 Embedded Brocade 6505 Brocade 6510 Brocade 6520 Brocade 6547 Embedded Brocade 6548 Brocade 6558 Brocade 7800 Brocade 7810 Extension Switch Brocade 7840 Brocade 7850 Extension Switch Brocade DCX Brocade DCX-4S Backbone Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G710 Brocade G720 Brocade G730 Brocade G820 Brocade M6505 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v10.0.0a v10.0.0a1 v6.2.2b v6.2.2f v6.2.2f9 v6.3.1a v6.3.2b v6.4.1a v6.4.1b v6.4.3 v6.4.3c v6.4.3d v6.4.3f3 v6.4.3h v7.0.0c v7.0.1b v7.0.2a v7.0.2b1 v7.0.2c v7.1.0b v7.1.1 v7.1.1c v7.2.0d v7.2.1 v7.2.1c1 v7.2.1g v7.3.1c v7.3.1d v7.4.0a v7.4.1d v7.4.1e v7.4.2 v7.4.2a v7.4.2a4 v7.4.2c v7.4.2d v7.4.2f v7.4.2g v7.4.2h v7.4.2j1 v8.0.2c v8.0.2d v8.1.2a v8.1.2d v8.1.2f v8.1.2g v8.2.0 v8.2.0a v8.2.0b v8.2.1a v8.2.1c v8.2.2a v8.2.2b v8.2.2d v8.2.3 v8.2.3a v8.2.3a1 v8.2.3a_cvr_855776_01 v8.2.3b v8.2.3c v8.2.3c1 v8.2.3d v8.2.3e v8.2.3e1 v8.2.3e2 v8.2.3f v9.0.1a v9.0.1b v9.0.1c v9.0.1d v9.1.1 v9.1.1a v9.1.1b v9.1.1b_lw v9.1.1c v9.1.1d v9.1.1d2 v9.1.1d2_lw v9.1.1d7 v9.2.0a v9.2.0b v9.2.0b1 v9.2.0b1_lw v9.2.0c3 v9.2.0c4 v9.2.0c5 v9.2.1a v9.2.1a1 v9.2.1b v9.2.1c v9.2.1c2 v9.2.1c3 v9.2.2 v9.2.2a v9.2.2b v9.2.2c v9.2.2c1 
+| Brocade 300E Brocade 32Gb Fibre Channel SAN Switch Module for HPE Synergy Brocade 4024 Embedded Brocade 4900 Brocade 5000 Brocade 5300 Brocade 5480 Embedded Brocade 6505 Brocade 6510 Brocade 6520 Brocade 6547 Embedded Brocade 6548 Brocade 6558 Brocade 7800 Brocade 7810 Extension Switch Brocade 7840 Brocade 7850 Extension Switch Brocade DCX Brocade DCX-4S Backbone Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G710 Brocade G720 Brocade G730 Brocade G820 Brocade M6505 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 | v10.0.0a1 v6.2.2b v6.2.2f v6.2.2f9 v6.3.1a v6.3.2b v6.4.1a v6.4.1b v6.4.3 v6.4.3c v6.4.3d v6.4.3f3 v6.4.3h v7.0.0c v7.0.1b v7.0.2a v7.0.2b1 v7.0.2c v7.1.0b v7.1.1 v7.2.0d v7.2.1 v7.2.1c1 v7.2.1g v7.3.1d v7.4.0a v7.4.1d v7.4.2 v7.4.2a v7.4.2a4 v7.4.2c v7.4.2f v7.4.2g v7.4.2h v7.4.2j1 v8.0.2c v8.0.2d v8.1.2a v8.1.2d v8.1.2g v8.2.0 v8.2.0a v8.2.1a v8.2.1c v8.2.2a v8.2.2b v8.2.2d v8.2.3 v8.2.3a v8.2.3a1 v8.2.3a_cvr_855776_01 v8.2.3b v8.2.3c v8.2.3c1 v8.2.3d v8.2.3e v8.2.3e1 v8.2.3e2 v8.2.3f v9.0.1a v9.0.1b v9.0.1c v9.0.1d v9.1.1 v9.1.1b v9.1.1b_lw v9.1.1c v9.1.1d v9.1.1d2 v9.1.1d2_lw v9.1.1d7 v9.2.0a v9.2.0b v9.2.0b1 v9.2.0b1_lw v9.2.0c3 v9.2.0c4 v9.2.0c5 v9.2.1a v9.2.1a1 v9.2.1b v9.2.1c v9.2.1c2 v9.2.1c3 v9.2.2 v9.2.2a v9.2.2b v9.2.2c v9.2.2c1 v9.2.2c1_cvr_866435_01 v9.2.2d 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -3423,7 +3426,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 202.0 203.0 Brocade 6505 Brocade 6510 Brocade 6520 Brocade 6558 Brocade 7810 Extension Switch Brocade 7840 Brocade 7850 Extension Switch Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G710 Brocade G720 Brocade G730 Brocade G820 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 Brocade X8-8 | v10.0.0a v10.0.0a1 v10.0.0a1_cvr_881241_01 v10.0.0a_cvr_875417_01 v8.2.2d v8.2.3 v8.2.3b v8.2.3c v8.2.3d v8.2.3e v8.2.3e2 v8.2.3f v9.0.0b v9.0.1c v9.0.1e1 v9.1.1a v9.1.1b v9.1.1c v9.1.1d v9.1.1d2 v9.1.1d7 v9.2.0a v9.2.0b v9.2.0b1 v9.2.0c1 v9.2.0c1_lw v9.2.0c3 v9.2.0c3_lw v9.2.0c5 v9.2.1 v9.2.1a v9.2.1b v9.2.1c v9.2.1c2 v9.2.1c3 v9.2.2 v9.2.2a v9.2.2b v9.2.2c v9.2.2c1 v9.2.2c1_lw v9.2.2c_lw 
+| 202.0 Brocade 6505 Brocade 6510 Brocade 6520 Brocade 6558 Brocade 7840 Brocade 7850 Extension Switch Brocade DCX8510-4 Brocade DCX8510-8 Brocade G610 Brocade G620 Brocade G630 Brocade G720 Brocade G730 Brocade G820 Brocade X6-4 Brocade X6-8 Brocade X7-4 Brocade X7-8 Brocade X8-8 | v10.0.0a v10.0.0a1 v10.0.0a1_cvr_881241_01 v10.0.0a_cvr_875417_01 v8.2.2d v8.2.3b v8.2.3c v8.2.3d v8.2.3e v8.2.3e2 v8.2.3f v9.0.0b v9.0.1c v9.0.1e1 v9.1.1a v9.1.1b v9.1.1c v9.1.1d v9.1.1d2 v9.1.1d7 v9.2.0a v9.2.0b v9.2.0b1 v9.2.0c1 v9.2.0c1_lw v9.2.0c3 v9.2.0c3_lw v9.2.0c5 v9.2.1 v9.2.1a v9.2.1b v9.2.1c v9.2.1c2 v9.2.1c3 v9.2.2 v9.2.2a v9.2.2b v9.2.2c v9.2.2c1 v9.2.2c1_lw v9.2.2c_lw v9.2.2d 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -3743,7 +3746,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 8977-T48 8978-E04 8978-E08 8978-E16 DS-C9124-K9 DS-C9132T-K9 DS-C9148-16P-K9 DS-C9148-32P-K9 DS-C9148-48P-K9 DS-C9148S-K9 DS-C9148T-K9 DS-C9148V-K9 DS-C9220I-K9 DS-C9250I-K9 DS-C9396S-K9 DS-C9396T-K9 DS-C9396V-K9 DS-C9506 DS-C9509 DS-C9513 DS-C9706 DS-C9710 DS-C9718 DS-HP-8GFC-K9 DS-HP-FC-K9 UCS-FI-6248UP UCS-FI-6296UP UCS-FI-6332-16UP UCS-FI-6454 UCS-FI-6536 | 3.3(1c) 5.0(1a) 5.0(3)N2(4.13i) 5.0(3)N2(4.21j) 5.0(3)N2(4.21k) 5.0(3)N2(4.22c) 5.0(3)N2(4.23f) 5.0(3)N2(4.23g) 5.0(3)N2(4.34a) 5.0(3)N2(4.36d) 5.0(4b) 5.0(8) 5.2(2d) 5.2(8a) 5.2(8b) 5.2(8c) 5.2(8d) 5.2(8g) 5.2(8h) 5.2(8i) 6.2(11) 6.2(11b) 6.2(11c) 6.2(13) 6.2(13a) 6.2(17) 6.2(19) 6.2(21) 6.2(25) 6.2(29) 6.2(31) 6.2(33) 6.2(5a) 6.2(9) 6.2(9a) 6.2(9b) 7.3(0)DY(1) 8.1(1) 8.3(1) 8.3(2) 8.4(1) 8.4(1a) 8.4(2a) 8.4(2b) 8.4(2c) 8.4(2d) 8.4(2e) 8.4(2f) 8.5(1) 9.2(1) 9.2(1a) 9.2(2) 9.3(1) 9.3(2) 9.3(2a) 9.3(5)I42(1k) 9.3(5)I42(3f) 9.3(5)I42(3j) 9.3(5)I43(4b) 9.3(5)I43(6b) 9.4(1) 9.4(1a) 9.4(2a) 9.4(3) 9.4(3a) 9.4(3b) 9.4(4) 9.4(5) 
+| 8977-T48 8978-E04 8978-E08 8978-E16 DS-C9132T-K9 DS-C9148-16P-K9 DS-C9148-32P-K9 DS-C9148-48P-K9 DS-C9148S-K9 DS-C9148T-K9 DS-C9148V-K9 DS-C9220I-K9 DS-C9250I-K9 DS-C9396S-K9 DS-C9396T-K9 DS-C9396V-K9 DS-C9509 DS-C9513 DS-C9706 DS-C9710 DS-C9718 DS-HP-8GFC-K9 DS-HP-FC-K9 UCS-FI-6248UP UCS-FI-6296UP UCS-FI-6332-16UP UCS-FI-6454 UCS-FI-6536 | 5.0(1a) 5.0(3)N2(4.13i) 5.0(3)N2(4.21j) 5.0(3)N2(4.21k) 5.0(3)N2(4.22c) 5.0(3)N2(4.23g) 5.0(3)N2(4.34a) 5.0(3)N2(4.36d) 5.0(4b) 5.2(2d) 5.2(8a) 5.2(8b) 5.2(8c) 5.2(8d) 5.2(8h) 5.2(8i) 6.2(11) 6.2(11b) 6.2(13) 6.2(13a) 6.2(17) 6.2(19) 6.2(21) 6.2(25) 6.2(29) 6.2(31) 6.2(33) 6.2(5a) 6.2(9) 6.2(9a) 7.3(0)DY(1) 8.1(1) 8.3(1) 8.3(2) 8.4(1) 8.4(1a) 8.4(2a) 8.4(2b) 8.4(2c) 8.4(2d) 8.4(2e) 8.4(2f) 8.5(1) 9.2(1) 9.2(1a) 9.2(2) 9.3(1) 9.3(2) 9.3(2a) 9.3(5)I42(1k) 9.3(5)I42(3f) 9.3(5)I42(3j) 9.3(5)I43(4b) 9.3(5)I43(6b) 9.4(1) 9.4(1a) 9.4(2a) 9.4(3) 9.4(3a) 9.4(3b) 9.4(4) 9.4(5) 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -4039,7 +4042,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| C4000 Compute Node C4600 C5036 C5066 C5212S C5218 C6025 C6035 C6055 C6208S PXG1 Virtual ROBO | 6.8.2_u1_release-20240509_a5da4644 7.1.2_u2_release-20240925_66722648 7.1.2_u4_release-20250529_205b971c 7.3.2_release-20260123_529553a9 
+| C4000 Nodo di calcolo C4600 C5036 C5066 C5212S C5218 C6025 C6035 C6055 C6208S CX8405 PXG1 Virtual ROBO | 6.8.2_u1_release-20240509_a5da4644 7.1.2_u2_release-20240925_66722648 7.1.2_u4_release-20250529_205b971c 7.3.2_release-20260123_529553a9 7.4.1_release-20260723_91509e0b 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -4431,7 +4434,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| A200 A2000 A300 A3000 A310 F200 F210 F710 F800 F900 F910 H400 H500 H5600 H600 H700 H7000 H710 NL410 SIMULATOR X210 | 9.10.1.2 9.10.1.3 9.10.1.4 9.10.1.5 9.10.1.6 9.10.1.7 9.11.0.0 9.12.0.1 9.13.0.0 9.13.0.1 9.13.1.0 9.2.1.13 9.2.1.8 9.4.0.12 9.4.0.14 9.4.0.17 9.4.0.6 9.5.0.6 9.5.0.8 9.5.1.1 9.7.1.13 9.7.1.2 9.7.1.4 9.7.1.5 9.7.1.6 9.7.1.7 9.7.1.8 v8.0.0.6 v8.0.0.7 
+| A200 A2000 A300 A3000 A310 F200 F210 F710 F800 F900 F910 H400 H500 H5600 H600 H700 H7000 H710 NL410 X210 | 9.10.1.2 9.10.1.3 9.10.1.4 9.10.1.5 9.10.1.6 9.10.1.7 9.10.1.8 9.12.0.1 9.13.0.0 9.13.0.1 9.13.1.0 9.13.1.1 9.14.0.1 9.2.1.13 9.2.1.8 9.4.0.12 9.4.0.6 9.5.0.6 9.5.0.8 9.7.1.13 9.7.1.16 9.7.1.2 9.7.1.4 9.7.1.5 9.7.1.6 9.7.1.7 v8.0.0.6 v8.0.0.7 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -5048,7 +5051,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| A200 F800 H400 H500 H5600 H700 NL400 NL410 S210 Traceback (most recent call last): X200 X400 X410 sudo python | 9.10.1.2 9.10.1.4 9.2.1.13 9.5.0.3 9.5.0.6 9.8.0.2 v7.2.0.5 v7.2.1.3 v7.2.1.6 v8.0.0.6 v8.0.0.7 v8.0.1.1 v8.1.2.0 
+| A200 F800 H500 H5600 H700 NL400 NL410 S210 X200 X400 X410 | 9.10.1.2 9.10.1.4 9.2.1.13 9.8.0.2 v7.2.1.6 v8.0.0.6 v8.0.0.7 v8.0.1.1 v8.1.2.0 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -5548,7 +5551,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| V10.0.0.2 V10.0.0.5 V10.0.1.5 V10.1.0.1 V10.1.0.5 V10.1.0.6 V10.1.0.8 V10.2.0.1 V10.2.0.12 V10.2.0.14 V10.2.0.2 V10.2.0.9 V10.3.0.1 V10.3.0.5 V10.3.0.7 V10.4.0.1 V10.4.0.11 V10.4.0.5 V9.2.3.11 V9.2.3.20 V9.2.3.22 V9.2.4.1 V9.2.4.11 V9.2.4.12 V9.2.4.15 V9.2.4.17 V9.2.4.18 V9.2.4.19 V9.2.4.20 V9.2.4.22 V9.2.4.9 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX100K VMAX200K VMAX250F VMAX400K VMAX450F | 5977.1131.1131 build 615 5977.1151.1151 build 60 build 60 5978.711.711 build 416 5978.711.711 build 436 build 436 5978.711.711 build 484 5978.711.711 build 484 build 484 5978.714.711 build 49 5978.714.714 build 101 build 101 5978.714.714 build 117 5978.714.714 build 117 build 117 5978.714.714 build 137 5978.714.714 build 137 build 137 5978.714.714 build 145 5978.714.714 build 145 build 145 5978.714.714 build 147 build 147 5978.714.714 build 149 build 149 5978.714.714 build 184 5978.714.714 build 184 build 184 5978.714.714 build 185 build 185 5978.714.714 build 236 5978.714.714 build 252 5978.714.714 build 252 build 252 5978.714.714 build 49 5978.714.714 build 49 build 49 5978.714.714 build 79 build 79 5978.720.720 build 1 5978.720.720 build 17 5978.720.720 build 27 5978.720.720 build 27 build 27 5978.720.720 build 32 build 32 5978.720.720 build 33 5978.720.720 build 33 build 33 5978.720.720 build 38 build 38 5978.720.720 build 56 5978.720.720 build 56 build 56 5978.720.720 build 6 5978.720.720 build 77 build 77 6079.225.0 build 216 build 216 6079.275.0 build 221 build 221 6079.275.0 build 250 build 250 6079.275.0 build 292 build 292 6079.275.0 build 396 build 396 6079.280.0 build 37 build 37 6079.280.0 build 53 build 53 6079.325.0 build 216 build 216 6079.325.0 build 231 build 231 6079.325.0 build 244 build 244 6079.325.0 build 253 build 253 6079.325.0 build 275 build 275 6079.325.0 build 84 build 84 
+| V10.0.0.2 V10.0.0.5 V10.0.1.5 V10.1.0.1 V10.1.0.5 V10.1.0.6 V10.1.0.8 V10.2.0.1 V10.2.0.12 V10.2.0.14 V10.2.0.9 V10.3.0.1 V10.3.0.5 V10.3.0.7 V10.3.0.9 V10.4.0.1 V10.4.0.11 V10.4.0.5 V9.2.3.11 V9.2.4.12 V9.2.4.15 V9.2.4.17 V9.2.4.18 V9.2.4.19 V9.2.4.20 V9.2.4.22 V9.2.4.9 | PowerMax_2000 PowerMax_2500 PowerMax_8000 PowerMax_8500 VMAX100K VMAX200K VMAX250F VMAX400K VMAX450F | 5977.1131.1131 build 615 5977.1151.1151 build 60 build 60 5978.711.711 build 436 build 436 5978.711.711 build 484 build 484 5978.714.714 build 101 build 101 5978.714.714 build 117 build 117 5978.714.714 build 137 5978.714.714 build 137 build 137 5978.714.714 build 145 5978.714.714 build 145 build 145 5978.714.714 build 147 build 147 5978.714.714 build 149 build 149 5978.714.714 build 184 5978.714.714 build 184 build 184 5978.714.714 build 185 build 185 5978.714.714 build 252 5978.714.714 build 252 build 252 5978.714.714 build 79 build 79 5978.720.720 build 1 5978.720.720 build 17 5978.720.720 build 27 5978.720.720 build 27 build 27 5978.720.720 build 32 build 32 5978.720.720 build 33 5978.720.720 build 33 build 33 5978.720.720 build 38 build 38 5978.720.720 build 56 5978.720.720 build 56 build 56 5978.720.720 build 6 5978.720.720 build 69 build 69 5978.720.720 build 77 build 77 5978.720.720 build 79 6079.225.0 build 216 build 216 6079.275.0 build 221 build 221 6079.275.0 build 250 build 250 6079.275.0 build 292 build 292 6079.275.0 build 396 build 396 6079.280.0 build 37 build 37 6079.280.0 build 53 build 53 6079.325.0 build 216 build 216 6079.325.0 build 231 build 231 6079.325.0 build 244 build 244 6079.325.0 build 253 build 253 6079.325.0 build 275 build 275 6079.325.0 build 310 build 310 6079.325.0 build 324 build 324 6079.325.0 build 84 build 84 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -6081,7 +6084,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| NSX VG8 VNX5200 VNX5300 | 5.5.38-1 7.1.76-4 7.1.79-8 8.1.9-155 
+| VG8 VNX5200 VNX5300 | 7.1.76-4 7.1.79-8 8.1.9-155 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -6089,7 +6092,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.85+| fondazione .6+| Condivisione file | È InternalVolume | Implementato | SSH | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
+.84+| fondazione .6+| Condivisione file | È InternalVolume | Implementato | SSH | se la condivisione file rappresenta un volume interno (volume netapp) o è un qtree/cartella all'interno del volume interno 
 
 
 | È condiviso | Implementato | SSH | se questo fileShare ha delle condivisioni associate 
@@ -6296,7 +6299,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Virtuale | Implementato | SSH | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
 
 
-.16+| Pool di archiviazione | Capacità dati allocata | Spacco | SSH | capacità assegnata per i dati 
+.15+| Pool di archiviazione | Capacità dati allocata | Spacco | SSH | capacità assegnata per i dati 
 
 
 | Capacità dati utilizzata | Implementato | SSH |  
@@ -6309,9 +6312,6 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | Nome | Implementato | SSH |  
-
-
-| Capacità del disco fisico (MB) | Implementato | SSH | utilizzato come capacità grezza per il pool di archiviazione 
 
 
 | Gruppo di incursione | Implementato | SSH | indica se questo storagePool è un gruppo raid 
@@ -6362,7 +6362,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| 7.32 7.33 | VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX5700 VNX7600 | 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.225 05.32.000.5.249 05.33.009.5.155 05.33.009.5.184 05.33.009.5.186 05.33.009.5.231 05.33.021.5.256 05.33.021.5.266 
+| 7.32 7.33 | VNX5100 VNX5200 VNX5300 VNX5400 VNX5500 VNX5600 VNX7600 | 05.32.000.5.218 05.32.000.5.219 05.32.000.5.221 05.32.000.5.249 05.33.009.5.155 05.33.009.5.184 05.33.009.5.231 05.33.021.5.256 05.33.021.5.266 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -6919,7 +6919,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| DD VE DD2500 DD3300 DD6300 DD6400 DD6410 DD6900 DD9300 DD9400 DD9410 DD9800 DD9900 DD9910 | 6.2.1.30-663869 7.10.1.15-1078832 7.10.1.60-1161253 7.10.1.80-1198417 7.13.1.20-1148611 7.13.1.25-1161300 7.13.1.40-1186473 7.13.1.80-1246402 7.7.5.25-1078970 8.3.0.15-1161254 8.3.1.0-1175411 8.3.1.10-1194895 8.3.1.20-1208918 8.3.1.30-1226406 8.3.1.40-1247360 8.4.0.0-1175068 8.6.1.20-1246795 
+| DD VE DD2500 DD3300 DD6300 DD6400 DD6410 DD6900 DD9300 DD9400 DD9410 DD9800 DD9900 DD9910 | 6.2.1.30-663869 7.10.1.15-1078832 7.10.1.60-1161253 7.10.1.80-1198417 7.13.1.20-1148611 7.13.1.40-1186473 7.13.1.80-1246402 7.7.5.25-1078970 8.3.0.15-1161254 8.3.1.0-1175411 8.3.1.10-1194895 8.3.1.20-1208918 8.3.1.30-1226406 8.3.1.40-1247360 8.3.1.45-1261709 8.3.1.50-1268129 8.4.0.0-1175068 8.6.1.20-1246795 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -7230,7 +7230,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| ECS | 3.7.0.0 3.8.0.2 3.8.1.1 3.8.1.3 3.8.1.4 3.8.1.6 3.9.0.0 4.1.0.2 4.1.0.3 4.2.0.0 
+| ECS | 3.7.0.0 3.8.0.2 3.8.1.1 3.8.1.3 3.8.1.4 3.8.1.6 3.9.0.0 4.1.0.2 4.1.0.3 4.1.0.4 4.2.0.0 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -7541,7 +7541,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 500T PowerStore 5200Q PowerStore 5200T PowerStore 7000T PowerStore 9000T PowerStore 9200T | 3.2.0.1 3.6.1.1 3.6.1.2 4.0.0.1 4.0.1.3 4.1.0.0 4.1.0.1 4.1.0.2 4.1.0.3 4.1.0.4 4.1.0.5 4.3.1.0 4.3.1.1 5.0.0.1 
+| PowerStore 1000T PowerStore 1200T PowerStore 3000T PowerStore 3200T PowerStore 5000T PowerStore 500T PowerStore 5200Q PowerStore 5200T PowerStore 7000T PowerStore 9000T PowerStore 9200T | 3.2.0.1 3.6.1.1 4.0.1.3 4.1.0.0 4.1.0.1 4.1.0.2 4.1.0.3 4.1.0.4 4.1.0.5 4.3.1.0 4.3.1.1 4.3.1.2 5.0.0.1 5.0.0.2 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -7882,7 +7882,7 @@ Prodotti supportati da questo raccoglitore dati:
 | WWN | Implementato |  |  
 
 
-.63+| prestazione .5+| Volume interno | Capacità totale | Implementato |  |  
+.73+| prestazione .15+| Volume interno | Capacità totale | Implementato |  |  
 
 
 | Capacità utilizzata | Implementato |  |  
@@ -7891,10 +7891,40 @@ Prodotti supportati da questo raccoglitore dati:
 | Rapporto di capacità utilizzata | Implementato |  |  
 
 
+| Altri IOP | Implementato |  |  
+
+
+| IOP letti | Implementato |  | Numero di IOPS di lettura sul disco 
+
+
+| IOP totali | Implementato |  |  
+
+
+| Scrittura IOP | Implementato |  |  
+
+
 | Chiave | Implementato |  |  
 
 
+| Latenza di lettura | Implementato |  |  
+
+
+| Latenza totale | Implementato |  |  
+
+
+| Latenza di scrittura | Implementato |  |  
+
+
 | ID del server | Implementato |  |  
+
+
+| Lettura di throughput | Implementato |  |  
+
+
+| Portata totale | Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s 
+
+
+| Scrittura di throughput | Implementato |  |  
 
 
 .2+| Qtree | Chiave | Implementato |  |  
@@ -8208,6 +8238,221 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
+[[emc-scaleio-powerflex-rest]]
+== EMC ScaleIO e PowerFlex REST
+
+Modelli e versioni supportati da questo raccoglitore dati:
+
+|===
+| Modelli | Versioni del firmware 
+
+
+| ScaleIO | R3_5.1201.101 R3_6.1000.134 
+|===
+Prodotti supportati da questo raccoglitore dati:
+
+|===
+| Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
+
+
+.51+| fondazione .8+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
+
+
+| ID disco | Implementato | HTTPS | Identifica in modo univoco questo disco nell'array 
+
+
+| Posizione | Spacco | HTTPS | Dove si trova fisicamente questo disco nell'array 
+
+
+| Nome | Implementato | HTTPS |  
+
+
+| Numero di serie | Implementato | HTTPS |  
+
+
+| Velocità | Implementato | HTTPS | Velocità del disco (RPM) 
+
+
+| Stato | Implementato | HTTPS |  
+
+
+| Enumerazione dello stato | Implementato | HTTPS | enum per lo stato del disco 
+
+
+.8+| Informazioni | Versione API | Implementato | HTTPS |  
+
+
+| Descrizione dell'API client | Implementato | HTTPS |  
+
+
+| Nome API client | Implementato | HTTPS |  
+
+
+| Versione API client | Implementato | HTTPS |  
+
+
+| Nome dell'origine dati | Implementato | HTTPS | Informazioni 
+
+
+| Data | Implementato | HTTPS |  
+
+
+| ID dell'originatore | Implementato | HTTPS |  
+
+
+| Chiave di origine | Implementato | HTTPS |  
+
+
+.13+| Magazzinaggio | Visualizza IP | Implementato | HTTPS |  
+
+
+| Capacità grezza non riuscita | Implementato | HTTPS | Capacità grezza dei dischi guasti (somma di tutti i dischi guasti) 
+
+
+| Famiglia | Implementato | HTTPS | La famiglia di storage potrebbe essere Clariion, Symmetrix, et al 
+
+
+| Proprietà intellettuale | Implementato | HTTPS |  
+
+
+| Produttore | Implementato | HTTPS |  
+
+
+| Versione del microcodice | Implementato | HTTPS |  
+
+
+| Modello | Implementato | HTTPS |  
+
+
+| Nome | Implementato | HTTPS |  
+
+
+| Capacità grezza totale | Implementato | HTTPS | Capacità grezza totale (somma di tutti i dischi nell'array) 
+
+
+| Numero di serie | Implementato | HTTPS |  
+
+
+| Capacità grezza di riserva | Implementato | HTTPS | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
+
+
+| SupportoAttivo Attivo | Implementato | HTTPS | Specificato se l'archiviazione supporta configurazioni attive-attive 
+
+
+| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+
+
+.2+| Nodo di archiviazione | Nome | Implementato | HTTPS |  
+
+
+| UUID | Implementato | HTTPS |  
+
+
+.12+| Pool di archiviazione | Includi nella capacità DWH | Implementato | HTTPS | Un modo da ACQ per controllare quali pool di archiviazione sono interessanti in DWH Capacity 
+
+
+| Nome | Implementato | HTTPS |  
+
+
+| Capacità del disco fisico (MB) | Implementato | HTTPS | utilizzato come capacità grezza per il pool di archiviazione 
+
+
+| Gruppo di incursione | Implementato | HTTPS | indica se questo storagePool è un gruppo raid 
+
+
+| Rapporto grezzo/utilizzabile | Implementato | HTTPS | rapporto per convertire dalla capacità utilizzabile alla capacità grezza 
+
+
+| Stato | Implementato | HTTPS |  
+
+
+| ID pool di archiviazione | Implementato | HTTPS |  
+
+
+| Thin Provisioning supportato | Implementato | HTTPS | Se questo volume interno supporta il provisioning sottile per il livello del volume sopra di esso 
+
+
+| Capacità totale assegnata | Implementato | HTTPS |  
+
+
+| Capacità totale utilizzata | Implementato | HTTPS | Capacità totale in MB 
+
+
+| Tipo | Spacco | HTTPS |  
+
+
+| Virtuale | Implementato | HTTPS | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
+
+
+.8+| Volume | Capacità | Implementato | HTTPS | Snapshot Capacità utilizzata in MB 
+
+
+| Percorso di giunzione | Implementato | HTTPS |  
+
+
+| Nome | Implementato | HTTPS |  
+
+
+| Capacità grezza totale | Implementato | HTTPS | Capacità grezza totale (somma di tutti i dischi nell'array) 
+
+
+| ID pool di archiviazione | Implementato | HTTPS |  
+
+
+| Fornito in modo sottile | Implementato | HTTPS |  
+
+
+| UUID | Implementato | HTTPS |  
+
+
+| Indirizzi IP host | Implementato | HTTPS |  
+
+
+.12+| prestazione .12+| Magazzinaggio | Capacità grezza non riuscita | Implementato |  |  
+
+
+| Capacità grezza | Implementato |  |  
+
+
+| Capacità grezza di riserva | Implementato |  | Capacità grezza dei dischi di riserva (somma di tutti i dischi di riserva) 
+
+
+| Capacità di StoragePools | Implementato |  |  
+
+
+| IOP letti | Implementato |  | Numero di IOPS di lettura sul disco 
+
+
+| IOP totali | Implementato |  |  
+
+
+| Scrittura IOP | Implementato |  |  
+
+
+| Chiave | Implementato |  |  
+
+
+| ID del server | Implementato |  |  
+
+
+| Lettura di throughput | Implementato |  |  
+
+
+| Portata totale | Implementato |  | Velocità media totale del disco (lettura e scrittura su tutti i dischi) in MB/s 
+
+
+| Scrittura di throughput | Implementato |  |  
+|===
+API di gestione utilizzate da questo raccoglitore dati:
+
+|===
+| API | Protocollo utilizzato | Protocollo di livello di trasporto utilizzato | Porte in entrata utilizzate | Porte in uscita utilizzate | Supporta l'autenticazione | Richiede solo credenziali di "sola lettura" | Supporta la crittografia | Compatibile con firewall (porte statiche) 
+
+
+| EMC ScaleIO e PowerFlex REST API | HTTPS | HTTPS | 443 |  | VERO | VERO | VERO | VERO 
+|===
+
+
 [[emc-symmetrix-cli]]
 == Interfaccia a riga di comando EMC Symmetrix
 
@@ -8217,7 +8462,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| V10.0.0.0 V10.2.0.0 V10.2.0.2 V10.3.0.0 V10.3.0.1 V9.1.0.6 V9.2.3.0 V9.2.3.1 V9.2.3.6 V9.2.4.11 V9.2.4.13 V9.2.4.14 V9.2.4.3 V9.2.4.6 V9.2.4.7 V9.2.4.8 V9.2.4.9 non disponibile | PowerMax_2000 PowerMax_8000 VMAX-1 VMAX100K VMAX10K VMAX250F VMAX400K VMAX450F VMAX950F | 5876.286.194(16F40000) build 115 5876.309.196(16F40000) build 162 5876.309.196(16F40000) build 94 5977.1151.1151(17590000) build 60 5978.711.711(175A0000) build 448 5978.711.711(175A0000) build 484 5978.714.714(175A0000) build 101 5978.714.714(175A0000) build 117 5978.714.714(175A0000) build 137 5978.714.714(175A0000) build 145 5978.714.714(175A0000) build 147 5978.714.714(175A0000) build 149 5978.714.714(175A0000) build 184 5978.714.714(175A0000) build 185 5978.714.714(175A0000) build 236 5978.714.714(175A0000) build 252 5978.714.714(175A0000) build 49 5978.714.714(175A0000) build 53 5978.720.720(175A0000) build 1 5978.720.720(175A0000) build 27 5978.720.720(175A0000) build 38 5978.720.720(175A0000) build 56 5978.720.720(175A0000) build 6 
+| V10.0.0.0 V10.2.0.0 V10.2.0.2 V10.3.0.0 V10.3.0.1 V9.1.0.6 V9.2.3.0 V9.2.3.1 V9.2.3.6 V9.2.4.13 V9.2.4.14 V9.2.4.15 V9.2.4.3 V9.2.4.6 V9.2.4.7 V9.2.4.8 V9.2.4.9 non disponibile | PowerMax_2000 PowerMax_8000 VMAX-1 VMAX100K VMAX250F VMAX400K VMAX450F VMAX950F | 5876.286.194(16F40000) build 115 5876.309.196(16F40000) build 94 5977.1151.1151(17590000) build 60 5978.711.711(175A0000) build 448 5978.714.714(175A0000) build 117 5978.714.714(175A0000) build 137 5978.714.714(175A0000) build 145 5978.714.714(175A0000) build 147 5978.714.714(175A0000) build 185 5978.714.714(175A0000) build 252 5978.714.714(175A0000) build 49 5978.714.714(175A0000) build 53 5978.720.720(175A0000) build 1 5978.720.720(175A0000) build 27 5978.720.720(175A0000) build 38 5978.720.720(175A0000) build 56 5978.720.720(175A0000) build 6 5978.720.720(175A0000) build 75 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -8225,7 +8470,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.144+| fondazione .3+| Gruppo di dispositivi | Nome | Implementato |  |  
+.125+| fondazione .3+| Gruppo di dispositivi | Nome | Implementato |  |  
 
 
 | ID di gestione dell'archiviazione | Implementato |  |  
@@ -8292,63 +8537,6 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | Virtuale | Implementato |  | Si tratta di un dispositivo di virtualizzazione dell'archiviazione? 
-
-
-.4+| Portale di rete ISCSI | Proprietà intellettuale | Implementato |  |  
-
-
-| Porta di ascolto | Implementato |  |  
-
-
-| Nic | Implementato |  |  
-
-
-| OID | Implementato |  |  
-
-
-.3+| Gruppo portale di rete ISCSI | OID | Implementato |  |  
-
-
-| Nome del gruppo del portale | Implementato |  |  
-
-
-| Tag del gruppo del portale | Implementato |  |  
-
-
-.3+| Nodo ISCSI | Nome del nodo | Implementato |  |  
-
-
-| OID | Implementato |  |  
-
-
-| Tipo | Spacco |  |  
-
-
-.2+| Mappa dei nodi ISCSI | OID | Implementato |  |  
-
-
-| OID del gruppo portale | Implementato |  |  
-
-
-.7+| Sessione ISCSI | Iniziatore Ips | Implementato |  |  
-
-
-| Iniziatore OID | Implementato |  |  
-
-
-| Numero massimo di connessioni | Implementato |  |  
-
-
-| Numero di connessioni | Implementato |  |  
-
-
-| OID | Implementato |  |  
-
-
-| OID del gruppo portale | Implementato |  |  
-
-
-| Sicurezza | Implementato |  |  
 
 
 .10+| Informazioni | Descrizione dell'API | Implementato |  |  
@@ -9601,7 +9789,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| Unity 300 Unity 300F Unity 350F Unity 380F Unity 400 Unity 450F Unity 480 Unity 480F Unity 550F Unity 600 Unity 650F Unity 680 Unity 880 Unity 880F UnityVSA | 4.1.2.9257522 5.1.1.0.5.005 5.1.2.0.5.007 5.2.1.0.5.013 5.3.0.0.5.120 5.3.1.0.5.008 5.4.0.0.5.094 5.4.1.0.5.006 5.5.0.0.5.259 5.5.2.0.5.014 5.5.4.0.5.037 
+| Unity 300 Unity 300F Unity 350F Unity 380F Unity 400 Unity 450F Unity 480 Unity 480F Unity 550F Unity 600 Unity 650F Unity 680 Unity 880 Unity 880F | 4.1.2.9257522 5.1.2.0.5.007 5.3.0.0.5.120 5.3.1.0.5.008 5.4.0.0.5.094 5.4.1.0.5.006 5.5.0.0.5.259 5.5.2.0.5.014 5.5.3.0.5.057 5.5.4.0.5.037 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -9609,7 +9797,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.121+| fondazione .15+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
+.116+| fondazione .15+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
 
 
 | ID disco | Implementato | HTTPS | Identifica in modo univoco questo disco nell'array 
@@ -9685,18 +9873,6 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | ID Qtree | Implementato | HTTPS | ID univoco del qtree 
-
-
-.4+| Portale di rete ISCSI | Proprietà intellettuale | Implementato | HTTPS |  
-
-
-| Porta di ascolto | Implementato | HTTPS |  
-
-
-| Nic | Implementato | HTTPS |  
-
-
-| OID | Implementato | HTTPS |  
 
 
 .3+| Gruppo portale di rete ISCSI | OID | Implementato | HTTPS |  
@@ -9846,13 +10022,10 @@ Prodotti supportati da questo raccoglitore dati:
 | UUID | Implementato | HTTPS |  
 
 
-.17+| Pool di archiviazione | Compressione abilitata | Implementato | HTTPS | La compressione è abilitata sul pool di archiviazione 
+.16+| Pool di archiviazione | Compressione abilitata | Implementato | HTTPS | La compressione è abilitata sul pool di archiviazione 
 
 
 | Risparmio di compressione | Implementato | HTTPS | rapporto di risparmio di compressione in percentuale 
-
-
-| Deduplicazione abilitata | Implementato | HTTPS | La deduplicazione è abilitata sul pool di archiviazione? 
 
 
 | Includi nella capacità DWH | Implementato | HTTPS | Un modo da ACQ per controllare quali pool di archiviazione sono interessanti in DWH Capacity 
@@ -10161,7 +10334,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| VPLEX mn-216 | 6.2.0.03.00.02 6.2.0.04.00.07 6.2.0.06.00.07 6.2.0.07.00.02 6.2.1.0.0.519 6.2.1.1.0.78 6.2.2.0.1.3 9.1.0.0.0 
+| VPLEX mn-216 | 6.2.0.03.00.02 6.2.0.07.00.02 6.2.1.0.0.519 6.2.1.1.0.78 6.2.2.0.1.3 9.1.0.0.0 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -11615,7 +11788,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| Piattaforma di contenuti Hitachi | 10.0.1.4 9.7.2.27 9.7.3.14 
+| Piattaforma di contenuti Hitachi | 10.0.1.4 10.1.0.100 9.7.2.27 9.7.3.14 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -12141,7 +12314,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| 7.6.1 8.7.1 | DF850MH P9500 XP24000 XP8 | 0983/A-H 0984/B-H 0986/A-H DKC:60-08-22 DKC:70-06-43 DKC:90-09-25 DKC:90-09-28 SVP:60-08-21/00 SVP:70-06-30/00 SVP:90-09-25/00 SVP:90-09-28/00 
+| 7.6.1 8.7.1 | DF850MH P9500 XP24000 XP8 | 0983/A-H 0984/B-H 0986/A-H DKC:60-08-22 DKC:70-06-43 DKC:90-09-28 SVP:60-08-21/00 SVP:70-06-30/00 SVP:90-09-28/00 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -12632,7 +12805,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| VSP 5100 VSP 5200 VSP 5200H VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E1090H VSP E590 VSP E590H VSP E790 VSP F1500 VSP F370 VSP F700 VSP F900 VSP G1000 VSP G350 VSP G700 VSP G800 VSP One B26 VSP One B28 XP8 | 80-06-86-00/00:01-76-03/03 80-06-96-00/00:01-76-03/03 83-05-51-60/00:01-76-03/03 88-08-10-60/00:01-76-03/03 88-08-12-60/00:01-57-03/00 88-08-12-60/00:01-76-03/03 88-08-13-60/01:01-76-03/03 88-08-15-21/00:01-76-03/03 88-08-16-21/10:01-76-03/03 88-08-19-60/00:01-76-03/03 88-08-20-60/00:01-76-03/03 90-09-24-00/01:01-76-03/03 90-09-24:01.65.05 90-09-24:01.72.00 90-09-26-00/00:01-76-03/03 90-09-27-00/01:01-76-03/03 90-09-28-00/00:01-65-03/05 90-09-28-00/00:01-76-03/03 90-09-30-00/00:01-65-03/05 90-09-30-00/00:01-76-03/03 90-09-30-00/00:01-87-03/03 90-09-30-00/00:01-88-03/03 90-09-31-00/20:01-76-03/03 90-09-31-00/20:01-88-03/03 93-07-22-40/00:01-76-03/03 93-07-25-40/00:01-76-03/03 93-07-29-40/00:01-76-03/03 93-07-29-80/00:01-65-03/05 93-07-29-80/00:01-76-03/03 93-07-29-80/00:01-87-03/03 A3-04-21-40/00:01-88-03/03 A3-04-22-40/00:01-76-03/03 A3-04-22-40/00:01-88-03/03 A3-04-23-40/01:01-88-03/03 null:null 
+| VSP 5100 VSP 5200 VSP 5200H VSP 5500 VSP 5600 VSP 5600H VSP E1090 VSP E1090H VSP E590 VSP E590H VSP E790 VSP F1500 VSP F370 VSP F700 VSP F900 VSP G1000 VSP G350 VSP G800 VSP One B26 VSP One B28 VSP One B85 XP8 | 80-06-86-00/00:01-76-03/03 80-06-96-00/00:01-76-03/03 80-06-96-00/00:01-88-03/03 83-05-51-60/00:01-76-03/03 83-05-51-60/00:01-88-03/03 88-08-10-60/00:01-76-03/03 88-08-12-60/00:01-76-03/03 88-08-13-60/01:01-76-03/03 88-08-16-21/10:01-76-03/03 88-08-19-60/00:01-76-03/03 88-08-19-60/00:01-88-03/03 88-08-20-60/00:01-76-03/03 88-08-21-60/00:01-76-03/03 88-08-21-60/00:01-88-03/03 90-09-24-00/01:01-76-03/03 90-09-24:01.72.00 90-09-26-00/00:01-76-03/03 90-09-27-00/01:01-76-03/03 90-09-28-00/00:01-65-03/05 90-09-28-00/00:01-76-03/03 90-09-30-00/00:01-76-03/03 90-09-30-00/00:01-87-03/03 90-09-30-00/00:01-88-03/03 90-09-31-00/20:01-76-03/03 90-09-31-00/20:01-88-03/03 90-09-32-00/00:01-76-03/03 90-09-32-00/00:01-87-03/03 93-07-22-40/00:01-76-03/03 93-07-29-40/00:01-76-03/03 93-07-29-80/00:01-76-03/03 93-07-29-80/00:01-87-03/03 93-07-30-40/20:01-76-03/03 93-07-30-40/20:01-88-03/03 93-07-30-80/20:01-76-03/03 93-07-30-80/20:01-88-03/03 93-07-31-80/00:01-87-03/03 A0-05-43-00/00:01-88-03/03 A3-04-21-40/00:01-88-03/03 A3-04-22-40/00:01-76-03/03 A3-04-22-40/00:01-88-03/03 A3-04-23-40/01:01-88-03/03 A3-05-22-40/00:01-88-03/03 null:null 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -12640,7 +12813,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.103+| fondazione .15+| Disco | Capacità (GB) | Implementato |  |  
+.110+| fondazione .15+| Disco | Capacità (GB) | Implementato |  |  
 
 
 | ID disco | Implementato |  |  
@@ -12749,6 +12922,27 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | OID del gruppo portale | Implementato |  |  
+
+
+.7+| Sessione ISCSI | Iniziatore Ips | Implementato |  |  
+
+
+| Iniziatore OID | Implementato |  |  
+
+
+| Numero massimo di connessioni | Implementato |  |  
+
+
+| Numero di connessioni | Implementato |  |  
+
+
+| OID | Implementato |  |  
+
+
+| OID del gruppo portale | Implementato |  |  
+
+
+| Sicurezza | Implementato |  |  
 
 
 .4+| Informazioni | Nome dell'origine dati | Implementato |  |  
@@ -13153,7 +13347,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| HPE Alletra 9080 HPE Alletra Storage MP HPE_3PAR 20450 HPE_3PAR 20800_R2 HPE_3PAR 7200c HPE_3PAR 7440c HPE_3PAR 7450c HPE_3PAR 8200 HPE_3PAR 8400 HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR 9450 HPE_3PAR A630 HPE_3PAR A650 HPE_3PAR A670 HPE_3PAR C650 HP_3PAR 7200 HP_3PAR 7200c HP_3PAR 7400 HP_3PAR 7400c HP_3PAR 8200 InServ T400 InServ V400 | 10.4.20 Tipo di rilascio: Rilascio di supporto standard 10.5.50 Tipo di rilascio: Rilascio di supporto standard 10.5.55 Tipo di rilascio: Rilascio di supporto standard 10.5.64 Tipo di rilascio: Rilascio a disponibilità limitata 3.1.2 (MU3) P16 3.1.3 (MU1) P07 3.2.1 (MU3) P17 3.2.2 (MU4) P51 3.2.2 (MU4) P56 3.2.2 (MU6) 3.2.2 (MU6) P99 3.3.1 (MU2) P30 3.3.1 (MU2) P32 3.3.1 (MU3) P50 3.3.1 (MU5) P126 3.3.1 (MU5) P132 3.3.2 (MU1) P08 3.3.2 (MU1) P10 4.4.1 Tipo di rilascio: Rilascio di supporto standard 4.5.15 Tipo di rilascio: Rilascio di supporto esteso 4.5.3 Tipo di rilascio: Rilascio di supporto esteso 4.5.8 Tipo di rilascio: Rilascio di supporto esteso 4.6.1 Tipo di rilascio: Rilascio di supporto esteso 4.6.20 Tipo di rilascio: Rilascio di supporto esteso 4.6.21 Tipo di rilascio: Rilascio a disponibilità limitata 4.6.5 Tipo di rilascio: Rilascio di supporto esteso 9.6.20 Tipo di rilascio: Rilascio di supporto esteso P09 P10 P102 P103 P106 P107 P109 P111 P112 P113 P114 P115 P118 P119 P120 P122 P125 P126 P127 P128 P129 P131 P132 P133 P135 P136 P137 P138 P139 P140 P141 P142 P145 P146 P148 P149 P15 P150 P151 P153 P154 P155 P156 P157 P160 P161 P162 P164 P165 P166 P167 P168 P170 P172 P173 P175 P177 P18 P180 P185 P19 P20 P23 P25 P27 P28 P29 P30 P32 P34 P37 P38 P40 P45 P48 P49 P50 P51 P52 P56 P58 P59 P60 P61 P72 P74 P76 P77 P78 P84 P85 P90 P91 P92 P93 P94 P96 P97 P98 
+| HPE Alletra 9080 HPE Alletra Storage MP HPE_3PAR 20450 HPE_3PAR 20800_R2 HPE_3PAR 7200c HPE_3PAR 7440c HPE_3PAR 7450c HPE_3PAR 8200 HPE_3PAR 8400 HPE_3PAR 8440 HPE_3PAR 8450 HPE_3PAR 9450 HPE_3PAR A630 HPE_3PAR A650 HPE_3PAR A670 HPE_3PAR C650 HP_3PAR 7200 HP_3PAR 7200c HP_3PAR 7400 HP_3PAR 7400c HP_3PAR 8200 InServ T400 InServ V400 | 10.4.20 Tipo di rilascio: Rilascio con supporto standard 10.5.50 Tipo di rilascio: Rilascio con supporto standard 10.5.55 Tipo di rilascio: Rilascio con supporto standard 10.5.64 Tipo di rilascio: Rilascio a disponibilità limitata 3.1.2 (MU3) P16 3.1.3 (MU1) P07 3.2.1 (MU3) P17 3.2.2 (MU4) P51 3.2.2 (MU4) P56 3.2.2 (MU6) 3.2.2 (MU6) P99 3.3.1 (MU2) P30 3.3.1 (MU2) P32 3.3.1 (MU3) P50 3.3.1 (MU5) P126 3.3.1 (MU5) P132 3.3.2 (MU1) P08 3.3.2 (MU1) P10 4.4.1 Tipo di rilascio: Rilascio con supporto standard 4.5.15 Tipo di rilascio: Rilascio con supporto esteso 4.5.3 Tipo di rilascio: Rilascio con supporto esteso 4.5.8 Tipo di rilascio: Rilascio con supporto esteso 4.6.1 Tipo di rilascio: Rilascio con supporto esteso 4.6.20 Tipo di rilascio: Rilascio con supporto esteso 4.6.21 Tipo di rilascio: Rilascio a disponibilità limitata 4.6.5 Tipo di rilascio: Rilascio con supporto esteso 9.6.20 Tipo di rilascio: Rilascio con supporto esteso P09 P10 P102 P106 P107 P109 P111 P112 P113 P114 P115 P118 P119 P120 P122 P125 P126 P127 P128 P129 P131 P132 P133 P135 P136 P137 P138 P139 P140 P141 P142 P145 P146 P148 P149 P15 P150 P151 P153 P154 P155 P156 P157 P160 P161 P162 P164 P165 P166 P167 P168 P170 P172 P173 P175 P177 P18 P180 P185 P19 P20 P23 P25 P27 P28 P29 P30 P32 P34 P37 P38 P40 P45 P48 P49 P50 P51 P52 P56 P58 P59 P61 P72 P74 P76 P77 P84 P85 P90 P91 P92 P93 P94 P96 P97 P98 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -14303,7 +14497,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 5310 V5 5500 V3 5500 V5 5800 V3 6800 V3 Dorado 18000 V6 NVMe Dorado 5000 V3 Dorado 6000 V3 Dorado 6000 V6 NVMe | V300R002C10 V300R006C50 V500R007C61 V500R007C71 Kunpeng V600R005C26 V600R005C27 V600R005C50 
+| 5310 V5 5500 V3 5500 V5 5800 V3 6800 V3 6800 V5 Dorado 18000 V6 NVMe Dorado 5000 V3 Dorado 6000 V3 Dorado 6000 V6 NVMe | V300R001C01 V300R001C21 V300R002C10 V300R006C50 V500R007C10 V500R007C61 V500R007C71 Kunpeng V600R005C26 V600R005C27 V600R005C50 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -14311,7 +14505,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.107+| fondazione .14+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
+.126+| fondazione .14+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
 
 
 | ID disco | Implementato | HTTPS | Identifica in modo univoco questo disco nell'array 
@@ -14366,6 +14560,63 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | ID Qtree | Implementato | HTTPS | ID univoco del qtree 
+
+
+.4+| Portale di rete ISCSI | Proprietà intellettuale | Implementato | HTTPS |  
+
+
+| Porta di ascolto | Implementato | HTTPS |  
+
+
+| Nic | Implementato | HTTPS |  
+
+
+| OID | Implementato | HTTPS |  
+
+
+.3+| Gruppo portale di rete ISCSI | OID | Implementato | HTTPS |  
+
+
+| Nome del gruppo del portale | Implementato | HTTPS |  
+
+
+| Tag del gruppo del portale | Implementato | HTTPS |  
+
+
+.3+| Nodo ISCSI | Nome del nodo | Implementato | HTTPS |  
+
+
+| OID | Implementato | HTTPS |  
+
+
+| Tipo | Spacco | HTTPS |  
+
+
+.2+| Mappa dei nodi ISCSI | OID | Implementato | HTTPS |  
+
+
+| OID del gruppo portale | Implementato | HTTPS |  
+
+
+.7+| Sessione ISCSI | Iniziatore Ips | Implementato | HTTPS |  
+
+
+| Iniziatore OID | Implementato | HTTPS |  
+
+
+| Numero massimo di connessioni | Implementato | HTTPS |  
+
+
+| Numero di connessioni | Implementato | HTTPS |  
+
+
+| OID | Implementato | HTTPS |  
+
+
+| OID del gruppo portale | Implementato | HTTPS |  
+
+
+| Sicurezza | Implementato | HTTPS |  
 
 
 .4+| Informazioni | Nome dell'origine dati | Implementato | HTTPS | Informazioni 
@@ -15697,7 +15948,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 2072-24F 2072-24G 2072-2H4 2072-2N4 2072-324 2072-3N4 2076-12F 2076-24F 2076-24G 2076-524 2076-624 2076-724 2076-824 2076-AF6 2076-AFF 2078-12C 2078-12E 2078-12F 2078-224 2078-24C 2078-24E 2078-24F 2078-324 2078-AF3 4657-924 4657-92G 4662-12G 4662-24G 4662-6H2 4662-7H2 4666-AH8 4666-UH8 4680-24H 4680-3P2 4680-3P4 4680-92H 4983-AH8 5075-A30 5078-A40 9848-AF7 9848-AF8 9848-AG8 9848-UG8 SVC | 7.7.1.8 7.8.1.10 7.8.1.11 7.8.1.12 7.8.1.14 7.8.1.5 7.8.1.8 8.1.3.5 8.2.1.8 8.3.1.5 8.3.1.7 8.4.0.11 8.4.0.15 8.4.0.9 8.4.2.0 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.14 8.5.0.15 8.5.0.16 8.5.0.17 8.5.0.5 8.5.0.6 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.10 8.6.0.11 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.6.0.6 8.6.0.7 8.6.0.9 8.7.0.0 8.7.0.10 8.7.0.11 8.7.0.13 8.7.0.4 8.7.0.5 8.7.0.6 8.7.0.7 8.7.0.8 8.7.0.9 8.7.3.3 9.1.0.4 9.1.0.5 9.1.0.6 9.1.0.7 9.1.2.1 9.1.3.0 9.1.3.1 
+| 2072-24F 2072-24G 2072-2H4 2072-2N4 2072-324 2072-3N4 2076-12F 2076-24F 2076-24G 2076-524 2076-624 2076-724 2076-824 2076-AF6 2076-AFF 2078-12C 2078-12E 2078-12F 2078-224 2078-24C 2078-24E 2078-24F 2078-324 2078-AF3 4657-924 4657-92G 4662-12G 4662-6H2 4662-7H2 4666-AH8 4666-UH8 4680-24H 4680-3P2 4680-3P4 4680-92H 4983-AH8 5075-A30 5078-A40 5127-A20 9848-AF8 9848-AG8 9848-UG8 SVC | 7.7.1.8 7.8.1.10 7.8.1.11 7.8.1.12 7.8.1.5 8.1.3.5 8.2.1.8 8.3.1.5 8.4.0.11 8.4.0.15 8.4.0.9 8.5.0.11 8.5.0.12 8.5.0.13 8.5.0.14 8.5.0.16 8.5.0.17 8.5.0.18 8.5.0.5 8.5.0.7 8.5.0.8 8.5.0.9 8.6.0.10 8.6.0.11 8.6.0.2 8.6.0.3 8.6.0.4 8.6.0.5 8.6.0.6 8.6.0.9 8.7.0.0 8.7.0.10 8.7.0.11 8.7.0.13 8.7.0.4 8.7.0.5 8.7.0.6 8.7.0.7 8.7.0.8 8.7.0.9 8.7.3.3 9.1.0.4 9.1.0.5 9.1.0.6 9.1.0.7 9.1.2.1 9.1.3.0 9.1.3.1 9.1.3.2 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -17851,7 +18102,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| ONTAPI version=1.17 ONTAPI version=1.19 ONTAPI version=1.21 ONTAPI version=1.9 | FAS2040 FAS2220 FAS2240-2 FAS2552 FAS3140 FAS3250 FAS3270 FAS8040 | 7.3.2P3 8.1.1 7-Mode 8.1.4P9D18 7-Mode 8.2.3P2 7-Mode 8.2.4P4 7-Mode 8.2.4P5 7-Mode 8.2.5P4 7-Mode 8.2.5P5 7-Mode 
+| ONTAPI version=1.17 ONTAPI version=1.19 ONTAPI version=1.21 | FAS2040 FAS2220 FAS2240-2 FAS2552 FAS3250 FAS3270 FAS8040 | 8.1.1 7-Mode 8.1.4P9D18 7-Mode 8.2.3P2 7-Mode 8.2.4P4 7-Mode 8.2.4P5 7-Mode 8.2.5P4 7-Mode 8.2.5P5 7-Mode 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -17859,7 +18110,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.178+| fondazione .4+| Capacità | Attivo | Implementato |  |  
+.177+| fondazione .4+| Capacità | Attivo | Implementato |  |  
 
 
 | Con licenza | Implementato |  |  
@@ -18198,7 +18449,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Permesso | Implementato |  | Autorizzazioni per questa particolare condivisione 
 
 
-.15+| Magazzinaggio | Numero di CPU | Implementato |  | Numero di CPU dell'archiviazione 
+.14+| Magazzinaggio | Numero di CPU | Implementato |  | Numero di CPU dell'archiviazione 
 
 
 | Visualizza IP | Implementato |  |  
@@ -18211,9 +18462,6 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | Proprietà intellettuale | Implementato |  |  
-
-
-| Gestisci URL | Implementato |  |  
 
 
 | Produttore | Implementato |  |  
@@ -18824,190 +19072,192 @@ Modelli e versioni supportati da questo raccoglitore dati:
 * SIMBOX
 
  a| 
-* 8.2.3P5
-* 8.3.2P12
-* 9.0.0
-* 9.1.0P17
-* 9.1.0P19
-* 9.1.0P3
-* 9.10.0
-* 9.10.1
-* 9.10.1P10
-* 9.10.1P12
-* 9.10.1P13
-* 9.10.1P15
-* 9.10.1P17
-* 9.10.1P20
-* 9.10.1P4
-* 9.10.1P6
-* 9.11.0P1
-* 9.11.1
-* 9.11.1P10
-* 9.11.1P11
-* 9.11.1P12
-* 9.11.1P13
-* 9.11.1P14
-* 9.11.1P15
-* 9.11.1P17
-* 9.11.1P18
-* 9.11.1P19
-* 9.11.1P20
-* 9.11.1P3
-* 9.11.1P5
-* 9.11.1P7
-* 9.11.1P8
-* 9.12.1
-* 9.12.1P1
-* 9.12.1P10
-* 9.12.1P11
-* 9.12.1P12
-* 9.12.1P13
-* 9.12.1P14
-* 9.12.1P15
-* 9.12.1P16
-* 9.12.1P17
-* 9.12.1P18
-* 9.12.1P19
-* 9.12.1P2
-* 9.12.1P20
-* 9.12.1P3
-* 9.12.1P4
-* 9.12.1P5
-* 9.12.1P6
-* 9.12.1P7
-* 9.12.1P9
-* 9.13.0
-* 9.13.1
-* 9.13.1P1
-* 9.13.1P10
-* 9.13.1P11
-* 9.13.1P12
-* 9.13.1P13
-* 9.13.1P14
-* 9.13.1P16
-* 9.13.1P17
-* 9.13.1P18
-* 9.13.1P19
-* 9.13.1P2
-* 9.13.1P20
-* 9.13.1P3
-* 9.13.1P4
-* 9.13.1P6
-* 9.13.1P7
-* 9.13.1P8
-* 9.13.1P9
-* 9.14.0
-* 9.14.0P1
-* 9.14.1
-* 9.14.1P1
-* 9.14.1P10
-* 9.14.1P11
-* 9.14.1P12
-* 9.14.1P13
-* 9.14.1P14
-* 9.14.1P15
-* 9.14.1P16
-* 9.14.1P17
-* 9.14.1P2
-* 9.14.1P4
-* 9.14.1P5
-* 9.14.1P6
-* 9.14.1P7
-* 9.14.1P8
-* 9.14.1P9
-* 9.15.0P1
-* 9.15.1
-* 9.15.1P10
-* 9.15.1P11
-* 9.15.1P12
-* 9.15.1P13
-* 9.15.1P14
-* 9.15.1P15
-* 9.15.1P16
-* 9.15.1P17
-* 9.15.1P19
-* 9.15.1P2
-* 9.15.1P3
-* 9.15.1P4
-* 9.15.1P5
-* 9.15.1P6
-* 9.15.1P7
-* 9.15.1P8
-* 9.16.1
-* 9.16.1P1
-* 9.16.1P10
-* 9.16.1P11
-* 9.16.1P11D1
-* 9.16.1P12
-* 9.16.1P12D1
-* 9.16.1P13
-* 9.16.1P14
-* 9.16.1P2
-* 9.16.1P3
-* 9.16.1P4
-* 9.16.1P5
-* 9.16.1P6
-* 9.16.1P7
-* 9.16.1P8
-* 9.16.1P9
-* 9.17.1
-* 9.17.1P1
-* 9.17.1P10
-* 9.17.1P2
-* 9.17.1P3
-* 9.17.1P4
-* 9.17.1P5
-* 9.17.1P6
-* 9.17.1P6D2
-* 9.17.1P7
-* 9.17.1P8
-* 9.17.1P9
-* 9.18.1
-* 9.18.1D4
-* 9.18.1P1
-* 9.18.1P2
-* 9.18.1P3
-* 9.18.1P4
-* 9.18.1P5
-* 9.18.1P6
-* 9.19.1
-* 9.19.1X30
-* 9.19.1X39
-* 9.19.1X42
-* 9.19.1X43
-* 9.4.0P2
-* 9.5.0P16
-* 9.5.0P18
-* 9.5.0P2
-* 9.5.0P6
-* 9.5.0P7
-* 9.6.0
-* 9.6.0P11
-* 9.6.0P2
-* 9.7.0P12
-* 9.7.0P17
-* 9.7.0P19
-* 9.7.0P20
-* 9.7.0P21
-* 9.7.0P22
-* 9.7.0P23
-* 9.7.0P6
-* 9.8.0P10
-* 9.8.0P11
-* 9.8.0P12
-* 9.8.0P14
-* 9.8.0P18
-* 9.8.0P19
-* 9.8.0P20
-* 9.8.0P21
-* 9.8.0P4
-* 9.8.0P8
-* 9.8.0P9
-* 9.9.1P15
-* 9.9.1P16
-* 9.9.1P20
-* 9.9.1P7
-* 9.9.1P8
+* 8.2.3P5 Clustered Data ONTAP
+* 8.3.2P12 Clustered Data ONTAP
+* 9.0.0 Clustered Data ONTAP
+* 9.1.0P17 Clustered Data ONTAP
+* 9.1.0P19 Clustered Data ONTAP
+* 9.1.0P3 Clustered Data ONTAP
+* 9.10.0 Clustered Data ONTAP
+* 9.10.1 Clustered Data ONTAP
+* 9.10.1P10 Clustered Data ONTAP
+* 9.10.1P12 Clustered Data ONTAP
+* 9.10.1P13 Clustered Data ONTAP
+* 9.10.1P14 Clustered Data ONTAP
+* 9.10.1P17 Clustered Data ONTAP
+* 9.10.1P20 Clustered Data ONTAP
+* Clustered Data ONTAP 9.10.1P4
+* 9.11.1 Clustered Data ONTAP
+* 9.11.1P10 Clustered Data ONTAP
+* 9.11.1P11 Clustered Data ONTAP
+* 9.11.1P12 Clustered Data ONTAP
+* 9.11.1P13 Clustered Data ONTAP
+* 9.11.1P14 Clustered Data ONTAP
+* 9.11.1P15 Clustered Data ONTAP
+* 9.11.1P17 Clustered Data ONTAP
+* 9.11.1P18 Clustered Data ONTAP
+* 9.11.1P19 Clustered Data ONTAP
+* 9.11.1P20 Clustered Data ONTAP
+* 9.11.1P3 Clustered Data ONTAP
+* 9.11.1P5 Clustered Data ONTAP
+* 9.11.1P7 Clustered Data ONTAP
+* 9.11.1P8 Clustered Data ONTAP
+* 9.12.1 Clustered Data ONTAP
+* 9.12.1P1 Clustered Data ONTAP
+* Clustered Data ONTAP 9.12.1P10
+* 9.12.1P11 Clustered Data ONTAP
+* 9.12.1P12 Clustered Data ONTAP
+* 9.12.1P13 Clustered Data ONTAP
+* 9.12.1P14 Clustered Data ONTAP
+* 9.12.1P15 Clustered Data ONTAP
+* 9.12.1P16 Clustered Data ONTAP
+* 9.12.1P17 Clustered Data ONTAP
+* 9.12.1P18 Clustered Data ONTAP
+* 9.12.1P19 Clustered Data ONTAP
+* 9.12.1P2 Clustered Data ONTAP
+* 9.12.1P20 Clustered Data ONTAP
+* 9.12.1P3 Clustered Data ONTAP
+* 9.12.1P4 Clustered Data ONTAP
+* 9.12.1P5 Clustered Data ONTAP
+* 9.12.1P6 Clustered Data ONTAP
+* 9.12.1P7 Clustered Data ONTAP
+* 9.12.1P9 Clustered Data ONTAP
+* 9.13.0 Clustered Data ONTAP
+* 9.13.1 Clustered Data ONTAP
+* 9.13.1P1 Clustered Data ONTAP
+* 9.13.1P10 Clustered Data ONTAP
+* 9.13.1P11 Clustered Data ONTAP
+* 9.13.1P12 Clustered Data ONTAP
+* 9.13.1P13 Clustered Data ONTAP
+* 9.13.1P14 Clustered Data ONTAP
+* 9.13.1P16 Clustered Data ONTAP
+* 9.13.1P17 Clustered Data ONTAP
+* 9.13.1P18 Clustered Data ONTAP
+* 9.13.1P19 Clustered Data ONTAP
+* 9.13.1P2 Clustered Data ONTAP
+* 9.13.1P20 Clustered Data ONTAP
+* 9.13.1P21 Clustered Data ONTAP
+* 9.13.1P3 Clustered Data ONTAP
+* 9.13.1P4 Clustered Data ONTAP
+* 9.13.1P6 Clustered Data ONTAP
+* 9.13.1P7 Clustered Data ONTAP
+* 9.13.1P8 Clustered Data ONTAP
+* 9.13.1P9 Clustered Data ONTAP
+* 9.14.0 Clustered Data ONTAP
+* 9.14.0P1 Clustered Data ONTAP
+* 9.14.1 Clustered Data ONTAP
+* 9.14.1P1 Clustered Data ONTAP
+* 9.14.1P10 Clustered Data ONTAP
+* 9.14.1P11 Clustered Data ONTAP
+* 9.14.1P12 Clustered Data ONTAP
+* 9.14.1P13 Clustered Data ONTAP
+* 9.14.1P14 Clustered Data ONTAP
+* 9.14.1P15 Clustered Data ONTAP
+* 9.14.1P16 Clustered Data ONTAP
+* 9.14.1P17 Clustered Data ONTAP
+* 9.14.1P18 Clustered Data ONTAP
+* 9.14.1P2 Clustered Data ONTAP
+* 9.14.1P4 Clustered Data ONTAP
+* 9.14.1P5 Clustered Data ONTAP
+* 9.14.1P6 Clustered Data ONTAP
+* 9.14.1P7 Clustered Data ONTAP
+* 9.14.1P8 Clustered Data ONTAP
+* 9.14.1P9 Clustered Data ONTAP
+* 9.15.0P1 Clustered Data ONTAP
+* 9.15.1 Clustered Data ONTAP
+* 9.15.1P10 Clustered Data ONTAP
+* 9.15.1P11 Clustered Data ONTAP
+* 9.15.1P12 Clustered Data ONTAP
+* 9.15.1P13 Clustered Data ONTAP
+* 9.15.1P14 Clustered Data ONTAP
+* 9.15.1P15 Clustered Data ONTAP
+* 9.15.1P16 Clustered Data ONTAP
+* 9.15.1P17 Clustered Data ONTAP
+* 9.15.1P19 Clustered Data ONTAP
+* 9.15.1P2 Clustered Data ONTAP
+* 9.15.1P20 Clustered Data ONTAP
+* 9.15.1P3 Clustered Data ONTAP
+* 9.15.1P4 Clustered Data ONTAP
+* 9.15.1P5 Clustered Data ONTAP
+* 9.15.1P6 Clustered Data ONTAP
+* 9.15.1P7 Clustered Data ONTAP
+* 9.15.1P8 Clustered Data ONTAP
+* 9.16.1 Clustered Data ONTAP
+* 9.16.1P1 Clustered Data ONTAP
+* 9.16.1P10 Clustered Data ONTAP
+* 9.16.1P11 Clustered Data ONTAP
+* 9.16.1P12 Clustered Data ONTAP
+* 9.16.1P13 Clustered Data ONTAP
+* 9.16.1P14 Clustered Data ONTAP
+* 9.16.1P15 Clustered Data ONTAP
+* 9.16.1P2 Clustered Data ONTAP
+* 9.16.1P3 Clustered Data ONTAP
+* 9.16.1P4 Clustered Data ONTAP
+* 9.16.1P5 Clustered Data ONTAP
+* 9.16.1P6 Clustered Data ONTAP
+* 9.16.1P7 Clustered Data ONTAP
+* 9.16.1P8 Clustered Data ONTAP
+* 9.16.1P9 Clustered Data ONTAP
+* 9.17.1 Clustered Data ONTAP
+* 9.17.1P1 Clustered Data ONTAP
+* 9.17.1P10 Clustered Data ONTAP
+* 9.17.1P11 Clustered Data ONTAP
+* 9.17.1P2 Clustered Data ONTAP
+* 9.17.1P3 Clustered Data ONTAP
+* 9.17.1P4 Clustered Data ONTAP
+* 9.17.1P5 Clustered Data ONTAP
+* 9.17.1P6 Clustered Data ONTAP
+* 9.17.1P6D2 Clustered Data ONTAP
+* 9.17.1P7 Clustered Data ONTAP
+* 9.17.1P8 Clustered Data ONTAP
+* 9.17.1P9 Clustered Data ONTAP
+* 9.18.1 Clustered Data ONTAP
+* 9.18.1P1 Clustered Data ONTAP
+* 9.18.1P2 Clustered Data ONTAP
+* 9.18.1P3 Clustered Data ONTAP
+* 9.18.1P4 Clustered Data ONTAP
+* 9.18.1P5 Clustered Data ONTAP
+* 9.18.1P6 Clustered Data ONTAP
+* 9.18.1P7 Clustered Data ONTAP
+* 9.19.1 Clustered Data ONTAP
+* 9.19.1P2 Clustered Data ONTAP
+* 9.19.1P3 Clustered Data ONTAP
+* 9.19.1X39 Clustered Data ONTAP
+* 9.19.1X42 Clustered Data ONTAP
+* 9.19.1X43 Clustered Data ONTAP
+* 9.20.1 Clustered Data ONTAP
+* 9.4.0P2 Clustered Data ONTAP
+* 9.5.0P16 Clustered Data ONTAP
+* 9.5.0P18 Clustered Data ONTAP
+* 9.5.0P2 Clustered Data ONTAP
+* 9.5.0P7 Clustered Data ONTAP
+* 9.6.0 Clustered Data ONTAP
+* 9.6.0P11 Clustered Data ONTAP
+* 9.6.0P2 Clustered Data ONTAP
+* 9.7.0P12 Clustered Data ONTAP
+* 9.7.0P17 Clustered Data ONTAP
+* 9.7.0P19 Clustered Data ONTAP
+* 9.7.0P20 Clustered Data ONTAP
+* 9.7.0P21 Clustered Data ONTAP
+* 9.7.0P22 Clustered Data ONTAP
+* 9.7.0P23 Clustered Data ONTAP
+* 9.7.0P6 Clustered Data ONTAP
+* 9.8.0P10 Clustered Data ONTAP
+* 9.8.0P11 Clustered Data ONTAP
+* 9.8.0P12 Clustered Data ONTAP
+* 9.8.0P14 Clustered Data ONTAP
+* 9.8.0P18 Clustered Data ONTAP
+* 9.8.0P19 Clustered Data ONTAP
+* 9.8.0P20 Clustered Data ONTAP
+* 9.8.0P21 Clustered Data ONTAP
+* 9.8.0P4 Clustered Data ONTAP
+* 9.8.0P8 Clustered Data ONTAP
+* 9.8.0P9 Clustered Data ONTAP
+* 9.9.1P15 Clustered Data ONTAP
+* 9.9.1P16 Clustered Data ONTAP
+* 9.9.1P20 Clustered Data ONTAP
+* 9.9.1P7 Clustered Data ONTAP
+* 9.9.1P8 Clustered Data ONTAP
 
 
 |===
@@ -20283,7 +20533,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 2700 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5600 5700 5700B 7999 | 08.40.60.01 08.80.00.00 58.90.55.79 68.90.0.44 7.84.46.0 8.20.16.0 8.20.27.0 8.20.30.0 8.25.14.0 8.25.6.0 8.25.9.0 8.30.20.0 8.40.10.1 8.40.20.0 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.42.20.0 8.50.0.4 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.4 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.72.1.0 8.73.0.0 8.74.2.0 8.74.3.0 8.75.0.1 8.75.1.0 8.80.0.0 8.80.1.0 8.81.0.2 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.81.7.0 8.90.0.0 8.90.12.0 8.90.15.0 8.90.2.0 8.90.6.0 8.90.9.0 82.0.56.24 82.0.57.37 82.10.59.53 88.81.54.43 92.0.13.0 92.0.16.0 92.0.19.0 92.10.0.0 92.10.4.0 98.81.9.0 98.90.10.0 98.90.28.0 98.90.33.0 98.90.52.0 98.90.56.0 98.90.57.0 98.90.9.0 
+| 2700 2702 2704 2800B 2804 2806 3000 4000 5486 5488 5600 5700 5700B 7999 | 08.40.60.01 08.80.00.00 2.10.1.0 58.90.55.79 7.84.46.0 8.20.16.0 8.20.27.0 8.20.30.0 8.25.14.0 8.25.6.0 8.25.9.0 8.30.20.0 8.40.10.1 8.40.20.0 8.40.40.0 8.40.50.0 8.40.60.1 8.40.60.2 8.42.20.0 8.51.0.0 8.52.0.0 8.52.0.1 8.53.0.4 8.62.0.2 8.63.0.2 8.70.0.2 8.70.0.3 8.71.2.0 8.71.3.0 8.72.0.0 8.72.1.0 8.73.0.0 8.74.2.0 8.74.3.0 8.75.0.1 8.75.1.0 8.80.0.0 8.80.1.0 8.81.0.2 8.81.0.3 8.81.1.0 8.81.2.0 8.81.3.0 8.81.7.0 8.90.0.0 8.90.12.0 8.90.15.0 8.90.2.0 8.90.6.0 8.90.9.0 82.0.56.24 82.0.57.37 82.10.59.53 88.81.54.43 92.0.13.0 92.0.16.0 92.0.19.0 92.10.0.0 92.10.4.0 98.81.9.0 98.90.10.0 98.90.28.0 98.90.33.0 98.90.56.0 98.90.57.0 98.90.9.0 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -20834,7 +21084,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| 2800B 2806 3000 4000 5700 EF570 | 08.52.00.01 08.53.00.04 08.53.00.09 08.62.00.02 08.70.00.03 08.71.02.00 08.71.03.00 08.72.00.00 08.72.01.00 08.73.00.00 08.74.02.00 08.74.03.00 08.75.00.01 08.75.01.00 08.80.00.00 08.81.00.02 08.81.00.03 08.81.01.00 08.81.02.00 08.81.03.00 08.81.07.00 08.90.02.00 08.90.04.00 08.90.06.00 08.90.09.00 08.90.12.00 08.90.15.00 58.90.55.79 82.00.56.24 82.00.57.37 82.10.59.53 88.81.54.43 92.00.13.00 92.00.19.00 92.10.00.00 92.10.04.00 98.81.09.00 98.90.09.00 98.90.33.00 98.90.52.00 98.90.56.00 98.90.57.00 
+| 2800B 2806 3000 4000 5700 EF570 | 02.10.01.00 08.52.00.01 08.53.00.04 08.53.00.09 08.62.00.02 08.70.00.03 08.71.02.00 08.71.03.00 08.72.00.00 08.72.01.00 08.73.00.00 08.74.02.00 08.74.03.00 08.75.00.01 08.75.01.00 08.80.00.00 08.81.00.02 08.81.00.03 08.81.01.00 08.81.02.00 08.81.03.00 08.81.07.00 08.90.02.00 08.90.04.00 08.90.06.00 08.90.09.00 08.90.12.00 08.90.15.00 58.90.55.79 82.00.56.24 82.00.57.37 82.10.59.53 88.81.54.43 92.00.13.00 92.00.19.00 92.10.00.00 92.10.04.00 98.81.09.00 98.90.09.00 98.90.33.00 98.90.56.00 98.90.57.00 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -21379,155 +21629,6 @@ API di gestione utilizzate da questo raccoglitore dati:
 |===
 
 
-[[netapp-hci-virtual-center]]
-== Centro virtuale NetApp HCI
-
-Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
-
-* VMware vCenter Server 7.0.3 build-20395099
-
-
-Prodotti supportati da questo raccoglitore dati:
-
-|===
-| Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
-
-
-.42+| fondazione .6+| LUN | Nome del disco | Implementato | Servizi Web |  
-
-
-| OID host | Implementato | Servizi Web |  
-
-
-| Numero | Implementato | Servizi Web |  
-
-
-| OID | Implementato | Servizi Web |  
-
-
-| Politica | Implementato | Servizi Web |  
-
-
-| TID | Implementato | Servizi Web |  
-
-
-.6+| Sentiero | Attivo | Implementato | Servizi Web |  
-
-
-| Lun OID | Implementato | Servizi Web |  
-
-
-| Porta host WWPN | Implementato | Servizi Web |  
-
-
-| OID | Implementato | Servizi Web |  
-
-
-| Porto di stoccaggio WWPN | Implementato | Servizi Web |  
-
-
-| Tipo | Spacco | Servizi Web |  
-
-
-.6+| Server | Grappolo | Implementato | Servizi Web | Nome del cluster 
-
-
-| Nome del Data Center | Implementato | Servizi Web |  
-
-
-| OID host | Implementato | Servizi Web |  
-
-
-| MOID | Implementato | Servizi Web |  
-
-
-| OID | Implementato | Servizi Web |  
-
-
-| IP del centro virtuale | Implementato | Servizi Web |  
-
-
-.12+| Ospite | Conteggio CPU host | Implementato | Servizi Web |  
-
-
-| Velocità della CPU host | Implementato | Servizi Web |  
-
-
-| Dominio host | Implementato | Servizi Web |  
-
-
-| Memoria installata dall'host | Implementato | Servizi Web |  
-
-
-| Modello host | Implementato | Servizi Web |  
-
-
-| conteggio NIC | Implementato | Servizi Web |  
-
-
-| Velocità NIC | Implementato | Servizi Web |  
-
-
-| IP | Implementato | Servizi Web |  
-
-
-| Produttore | Implementato | Servizi Web |  
-
-
-| Nome | Implementato | Servizi Web |  
-
-
-| OID | Implementato | Servizi Web |  
-
-
-| Tipo di piattaforma | Implementato | Servizi Web |  
-
-
-.4+| Nodo ISCSI | Alias host | Implementato | Servizi Web |  
-
-
-| Nome del nodo | Implementato | Servizi Web |  
-
-
-| OID | Implementato | Servizi Web |  
-
-
-| Tipo | Spacco | Servizi Web |  
-
-
-.8+| Informazioni | Descrizione dell'API | Implementato | Servizi Web |  
-
-
-| Nome API | Implementato | Servizi Web |  
-
-
-| Versione API | Implementato | Servizi Web |  
-
-
-| Nome API client | Implementato | Servizi Web |  
-
-
-| Versione API client | Implementato | Servizi Web |  
-
-
-| Nome dell'origine dati | Implementato | Servizi Web | Informazioni 
-
-
-| Data | Implementato | Servizi Web |  
-
-
-| ID dell'originatore | Implementato | Servizi Web |  
-|===
-API di gestione utilizzate da questo raccoglitore dati:
-
-|===
-| API | Protocollo utilizzato | Protocollo di livello di trasporto utilizzato | Porte in entrata utilizzate | Porte in uscita utilizzate | Supporta l'autenticazione | Richiede solo credenziali di "sola lettura" | Supporta la crittografia | Compatibile con firewall (porte statiche) 
-
-
-| API REST VMware | Servizi Web | HTTP/HTTPS | 80/443 |  | VERO | VERO | VERO | VERO 
-|===
-
-
 [[netapp-ontap-rest]]
 == NetApp ONTAP REST
 
@@ -21537,7 +21638,82 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| AFF-A150 AFF-A1K AFF-A20 AFF-A220 AFF-A250 AFF-A30 AFF-A300 AFF-A400 AFF-A50 AFF-A70 AFF-A700 AFF-A800 AFF-A90 AFF-A900 AFF-C250 AFF-C30 AFF-C400 AFF-C60 AFF-C80 AFF-C800 ASA-A250 ASA-A800 ASA-A900 ASA-C250 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS50 FAS500f FAS70 FAS8200 FAS8300 FAS8700 FAS90 FAS9000 FAS9500 FASDvM300 SIMBOX | NetApp Release 9.14.1P10: Gio 28 Nov 12:32:16 UTC 2024 NetApp Release 9.14.1P12: Mar 25 Mar 23:16:26 UTC 2025 NetApp Release 9.14.1P14: Dom 24 Ago 04:57:05 UTC 2025 NetApp Release 9.14.1P1: Gio 15 Feb 00:45:21 UTC 2024 NetApp Release 9.14.1P6: Mar 18 Giu 16:11:44 UTC 2024 NetApp Release 9.15.1: Gio 04 Lug 07:17:54 UTC 2024 NetApp Release 9.15.1P10: Gio 17 Apr 14:04:43 UTC 2025 NetApp Release 9.15.1P11: Mer 21 Mag 22:53:05 UTC 2025 NetApp Release 9.15.1P13: Mar 15 Lug 14:07:45 UTC 2025 NetApp Release 9.15.1P14: Mar 05 Ago 15:53:54 UTC 2025 NetApp Release 9.15.1P15: Dom 05 Ott 06:25:31 UTC 2025 NetApp Release 9.15.1P16: Sab 29 Nov 23:46:11 UTC 2025 NetApp Release 9.15.1P17: Mar 10 Feb 12:35:50 UTC 2026 NetApp Release 9.15.1P19: Sab 09 Mag 17:13:04 UTC 2026 NetApp Release 9.15.1P3: Mer 25 Set 22:33:44 UTC 2024 NetApp Release 9.15.1P4: Dom 27 Ott 20:15:53 UTC 2024 NetApp Release 9.15.1P6: Mer 04 Dic 01:42:39 UTC 2024 NetApp Release 9.15.1P7: Sab 18 Gen 21:34:02 UTC 2025 NetApp Release 9.15.1P8: Ven 07 Mar 22:41:00 UTC 2025 NetApp Release 9.16.1: Sab 18 Gen 19:31:15 UTC 2025 NetApp Release 9.16.1P10: Gio 27 Nov 17:12:10 UTC 2025 NetApp Release 9.16.1P11: Gio 15 Gen 11:21:38 UTC 2026 NetApp Release 9.16.1P12: Mer 11 Mar 12:37:44 UTC 2026 NetApp Release 9.16.1P12D1: Ven 15 Mag 20:58:40 UTC 2026 NetApp Release 9.16.1P13: Ven 08 Mag 03:41:42 UTC 2026 NetApp Release 9.16.1P14: Gio 09 Lug 16:46:59 UTC 2026 NetApp Release 9.16.1P2: Mer 19 Mar 10:28:11 UTC 2025 NetApp Release 9.16.1P3: Gio 24 Apr 02:50:10 UTC 2025 NetApp Release 9.16.1P4: Mar 27 Mag 23:22:56 UTC 2025 NetApp Release 9.16.1P5: Sab 21 Giu 02:06:33 UTC 2025 NetApp Release 9.16.1P6: Mer 16 Lug 03:10:07 UTC 2025 NetApp Release 9.16.1P7: Gio 21 Ago 10:29:10 UTC 2025 NetApp Release 9.16.1P8: Sab 04 Ott 03:23:15 UTC 2025 NetApp Release 9.16.1P9: Ven 07 Nov 08:49:09 UTC 2025 NetApp Release 9.17.1: Ven 05 Set 00:50:54 UTC 2025 NetApp Release 9.17.1P10: Mar 21 Lug 21:51:01 UTC 2026 NetApp Release 9.17.1P2: Ven 07 Nov 09:39:01 UTC 2025 NetApp Release 9.17.1P3: Dom 07 Dic 04:46:28 UTC 2025 NetApp Release 9.17.1P4: Gio 15 Gen 22:33:51 UTC 2026 NetApp Release 9.17.1P5: Mer 18 Feb 10:54:36 UTC 2026 NetApp Release 9.17.1P6: Mer 25 Mar 15:38:10 UTC 2026 NetApp Release 9.17.1P7: Lun 20 Apr 13:57:24 UTC 2026 NetApp Release 9.17.1P8: Dom 17 Mag 22:59:03 UTC 2026 NetApp Release 9.17.1P9: Mer 24 Giu 13:09:36 UTC 2026 NetApp Release 9.17.1RC1: Ven 18 Lug 12:39:11 UTC 2025 NetApp Release 9.18.1: Gio 29 Gen 07:43:55 UTC 2026 NetApp Release 9.18.1P1: Gio 05 Mar 07:06:39 UTC 2026 NetApp Release 9.18.1P2: Dom 29 Mar 12:49:32 UTC 2026 NetApp Release 9.18.1P3: Gio 07 Mag 19:01:14 UTC 2026 NetApp Release 9.18.1P4: Gio 04 Giu 11:38:00 UTC 2026 NetApp Release 9.18.1P5: Gio 09 Lug 23:05:16 UTC 2026 NetApp Release 9.19.1: Sab 18 Lug 20:33:10 UTC 2026 NetApp Release 9.19.1: Gio 16 Lug 06:07:43 UTC 2026 NetApp Release 9.19.1RC1D2: Sab 30 Mag 08:35:20 UTC 2026 NetApp Release 9.19.1X30: Mar 09 Giu 10:08:09 UTC 2026 NetApp Release 9.19.1X39: Gio 09 Lug 22:50:24 UTC 2026 NetApp Release 9.19.1X42: Mar 14 Lug 08:11:23 UTC 2026 NetApp Release 9.19.1X43: Sab 18 Lug 20:33:10 UTC 2026 NetApp Release Cloudstream__9.16.1: Sab 18 Gen 14:32:15 UTC 2025 NetApp Release Cloudstream__9.16.1: Dom 19 Ott 07:41:54 UTC 2025 NetApp Release Electricjellyfish__9.17.1: Ven 24 Ott 06:23:44 UTC 2025 NetApp Release Electricjellyfish__9.17.1: Sab 04 Ott 01:37:59 UTC 2025 NetApp Release Kingsue__9.20.1: Mer 27 Mag 07:06:53 UTC 2026 
+| AFF-A150 AFF-A1K AFF-A20 AFF-A220 AFF-A250 AFF-A30 AFF-A300 AFF-A400 AFF-A50 AFF-A70 AFF-A700 AFF-A800 AFF-A90 AFF-A900 AFF-C190 AFF-C250 AFF-C30 AFF-C400 AFF-C60 AFF-C80 AFF-C800 ASA-A250 ASA-A800 ASA-A900 ASA-C250 ASA-C800 CDvM200 FAS2720 FAS2750 FAS2820 FAS50 FAS500f FAS70 FAS8200 FAS8300 FAS8700 FAS90 FAS9000 FAS9500 FASDvM300 SIMBOX  a| 
+* NetApp Release 9.14.1P10: gio 28 nov 12:32:16 UTC 2024
+* NetApp Versione 9.14.1P12: mar 25 mar 23:16:26 UTC 2025
+* NetApp rilascio 9.14.1P14: dom 24 ago 04:57:05 UTC 2025
+* NetApp Release 9.14.1P1: gio 15 feb 00:45:21 UTC 2024
+* NetApp Release 9.14.1P6: mar 18 giu 16:11:44 UTC 2024
+* NetApp Release 9.15.1: gio 04 lug 07:17:54 UTC 2024
+* NetApp Release 9.15.1P10: gio 17 apr 14:04:43 UTC 2025
+* NetApp Versione 9.15.1P11: mercoledì 21 maggio 2025, 22:53:05 UTC
+* NetApp Versione 9.15.1P12: ven 20 giu 16:04:19 UTC 2025
+* NetApp Release 9.15.1P13: mar 15 lug 14:07:45 UTC 2025
+* NetApp Release 9.15.1P14: mar 05 ago 15:53:54 UTC 2025
+* NetApp Versione 9.15.1P15: dom 05 ott 06:25:31 UTC 2025
+* NetApp Versione 9.15.1P16: sab 29 nov 23:46:11 UTC 2025
+* NetApp versione 9.15.1P17: mar 10 feb 12:35:50 UTC 2026
+* NetApp Release 9.15.1P19: sab 09 mag 17:13:04 UTC 2026
+* NetApp Release 9.15.1P20: gio 20 ago 10:17:54 UTC 2026
+* NetApp Release 9.15.1P3: mer 25 set 22:33:44 UTC 2024
+* NetApp Release 9.15.1P6: mer 04 dic 01:42:39 UTC 2024
+* NetApp Release 9.15.1P7: sab 18 gen 21:34:02 UTC 2025
+* NetApp Versione 9.15.1P8: ven 7 mar 22:41:00 UTC 2025
+* NetApp Release 9.16.1: sab 18 gen 19:31:15 UTC 2025
+* NetApp Release 9.16.1P10: gio 27 nov 17:12:10 UTC 2025
+* NetApp Versione 9.16.1P11: gio 15 gen 11:21:38 UTC 2026
+* NetApp Versione 9.16.1P12: mercoledì 11 marzo 2026, 12:37:44 UTC
+* NetApp Versione 9.16.1P12D1: ven 15 mag 2026 20:58:40 UTC
+* NetApp Versione 9.16.1P13: ven 8 mag 03:41:42 UTC 2026
+* NetApp Versione 9.16.1P14: gio 09 lug 16:46:59 UTC 2026
+* NetApp Versione 9.16.1P15: venerdì 14 agosto 04:40:34 UTC 2026
+* NetApp Release 9.16.1P1: ven 14 feb 03:53:50 UTC 2025
+* NetApp Versione 9.16.1P2: mercoledì 19 marzo 2025 10:28:11 UTC
+* NetApp Release 9.16.1P3: gio 24 apr 02:50:10 UTC 2025
+* NetApp Versione 9.16.1P4: martedì 27 maggio 2025, 23:22:56 UTC
+* NetApp Release 9.16.1P5: sab 21 giu 02:06:33 UTC 2025
+* NetApp Versione 9.16.1P6: mercoledì 16 luglio 2025 03:10:07 UTC
+* NetApp Versione 9.16.1P7: gio 21 ago 10:29:10 UTC 2025
+* NetApp Versione 9.16.1P8: Sab 04 Ott 03:23:15 UTC 2025
+* NetApp Versione 9.16.1P9: venerdì 7 novembre 08:49:09 UTC 2025
+* NetApp Versione 9.17.1: ven 05 set 00:50:54 UTC 2025
+* NetApp Release 9.17.1P10: mar 21 lug 21:51:01 UTC 2026
+* NetApp Versione 9.17.1P11: gio 20 ago 00:43:57 UTC 2026
+* NetApp Versione 9.17.1P11D2: lun 14 set 21:18:54 UTC 2026
+* NetApp Release 9.17.1P1: sab 04 ott 06:37:53 UTC 2025
+* NetApp Versione 9.17.1P2: ven 7 nov 09:39:01 UTC 2025
+* NetApp Versione 9.17.1P3: dom 07 dic 04:46:28 UTC 2025
+* NetApp Versione 9.17.1P4: gio 15 gen 22:33:51 UTC 2026
+* NetApp Versione 9.17.1P5: mer 18 feb 10:54:36 UTC 2026
+* NetApp Release 9.17.1P6: mer 25 mar 15:38:10 UTC 2026
+* NetApp Versione 9.17.1P7: lun 20 apr 13:57:24 UTC 2026
+* NetApp Release 9.17.1P8: dom 17 mag 22:59:03 UTC 2026
+* NetApp Versione 9.17.1P9: mercoledì 24 giugno 2026, 13:09:36 UTC
+* NetApp Release 9.17.1RC1: venerdì 18 luglio 12:39:11 UTC 2025
+* NetApp versione 9.18.1: gio 29 gen 07:43:55 UTC 2026
+* NetApp Versione 9.18.1P1: Thu Mar 05 07:06:39 UTC 2026
+* NetApp Versione 9.18.1P2: dom 29 mar 12:49:32 UTC 2026
+* NetApp Versione 9.18.1P3: gio 7 mag 19:01:14 UTC 2026
+* NetApp Versione 9.18.1P4: gio 4 giu 11:38:00 UTC 2026
+* NetApp Versione 9.18.1P5: gio 09 lug 23:05:16 UTC 2026
+* NetApp Versione 9.18.1P6: ven 7 ago 23:43:59 UTC 2026
+* NetApp Versione 9.18.1P7: gio 03 set 20:55:20 UTC 2026
+* NetApp Release 9.19.1: sab 18 lug 2026 20:33:10 UTC
+* NetApp Release 9.19.1: gio 16 lug 06:07:43 UTC 2026
+* NetApp Versione 9.19.1P2: mercoledì 19 agosto 2026 19:38:56 UTC
+* NetApp Release 9.19.1RC1D2: sab 30 mag 08:35:20 UTC 2026
+* NetApp Versione 9.19.1X39: gio 09 lug 22:50:24 UTC 2026
+* NetApp Release 9.19.1X42: mar 14 lug 08:11:23 UTC 2026
+* NetApp Versione 9.19.1X43: sab 18 lug 2026 20:33:10 UTC
+* NetApp Release 9.20.1RC1X11: lun 28 set 13:47:02 UTC 2026
+* NetApp Release 9.20.1RC1X9: mer 16 set 13:58:14 UTC 2026
+* NetApp Release Cloudstream__9.16.1: Sab 18 Gen 14:32:15 UTC 2025
+* NetApp Rilascio di Cloudstream__9.16.1: domenica 19 ottobre 2025, 07:41:54 UTC
+* NetApp Rilascio Kingsue__9.20.1: mercoledì 27 maggio 07:06:53 UTC 2026
+* NetApp Release Tropicallightning__9.18.1: ven 7 ago 2026 20:52:40 UTC
+* NetApp Release Wookeyjack__9.21.1: lun 21 set 2026 06:55:54 UTC
+
+
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -22220,7 +22396,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Tipo | Spacco | HTTPS |  
 
 
-.152+| prestazione .11+| Disco | IOP letti | Implementato | HTTPS | Numero di IOPS di lettura sul disco 
+.155+| prestazione .11+| Disco | IOP letti | Implementato | HTTPS | Numero di IOPS di lettura sul disco 
 
 
 | IOP totali | Implementato | HTTPS |  
@@ -22628,7 +22804,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Scrittura di throughput | Implementato | HTTPS |  
 
 
-.16+| Volume | Capacità grezza | Implementato | HTTPS |  
+.19+| Volume | Capacità grezza | Implementato | HTTPS |  
 
 
 | Capacità totale | Implementato | HTTPS |  
@@ -22638,6 +22814,15 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | Rapporto di capacità utilizzata | Implementato | HTTPS |  
+
+
+| Lettura densità IO | Implementato | HTTPS |  
+
+
+| Densità IO totale | Implementato | HTTPS |  
+
+
+| Scrivi densità IO | Implementato | HTTPS |  
 
 
 | IOP letti | Implementato | HTTPS | Numero di IOPS di lettura sul disco 
@@ -23308,7 +23493,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Versioni API | Modelli | Versioni del firmware 
 
 
-| 3.4 3.5 4.0 4.1 4.2 4.3 | Scala Web | 11.6.0.7 11.7.0.14 11.7.0.4 11.7.0.6 11.7.0.8 11.8.0.11 11.8.0.12 11.8.0.13 11.8.0.14 11.8.0.15 11.8.0.3 11.8.0.5 11.8.0.7 11.8.0.8 11.9.0 11.9.0.11 11.9.0.12 11.9.0.13 11.9.0.14 11.9.0.3 11.9.0.6 11.9.0.7 11.9.0.9 12.0.0 12.0.0.1 12.0.0.3 12.0.0.4 12.0.0.6 12.0.0.7 12.1.0 12.2.0 
+| 3.4 3.5 4.0 4.1 4.2 4.3 | Scala Web | 11.6.0.7 11.7.0.14 11.7.0.4 11.7.0.6 11.7.0.8 11.8.0.11 11.8.0.12 11.8.0.13 11.8.0.14 11.8.0.15 11.8.0.3 11.8.0.5 11.8.0.7 11.8.0.8 11.9.0 11.9.0.11 11.9.0.12 11.9.0.13 11.9.0.14 11.9.0.3 11.9.0.6 11.9.0.7 11.9.0.9 12.0.0 12.0.0.3 12.0.0.4 12.0.0.6 12.0.0.7 12.0.0.8 12.0.0.9 12.1.0 12.2.0 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -24628,7 +24813,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| Sun Storage 7000 Sun ZFS Storage 7120 Sun ZFS Storage 7330 Sun ZFS Storage 7350 Sun ZFS Storage 7370 Sun ZFS Storage 7390 Sun ZFS Storage 7420 | 1-1.1 1-1.2 1-1.3 1-1.34 1-1.4 1-2.68.5603.1 1-2.92.5919.1 2013.06.05.7.24 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.65 2013.06.05.8.68 2013.06.05.8.72 2013.06.05.8.74 2013.06.05.8.76 2013.06.05.8.83 2013.06.05.8.85 2013.06.05.8.86 2013.06.05.8.87 2013.06.05.8.89 2013.06.05.8.90 2013.06.05.8.91 2013.06.05.8.92 2026.04.20.8.93 2026.04.20.8.94 
+| Sun Storage 7000 Sun ZFS Storage 7120 Sun ZFS Storage 7330 Sun ZFS Storage 7350 Sun ZFS Storage 7370 Sun ZFS Storage 7390 Sun ZFS Storage 7420 | 1-1.1 1-1.2 1-1.3 1-1.34 1-1.4 1-2.68.5603.1 1-2.92.5919.1 2013.06.05.7.24 2013.06.05.7.29 2013.06.05.8.0 2013.06.05.8.44 2013.06.05.8.50 2013.06.05.8.56 2013.06.05.8.6 2013.06.05.8.65 2013.06.05.8.68 2013.06.05.8.72 2013.06.05.8.74 2013.06.05.8.76 2013.06.05.8.83 2013.06.05.8.86 2013.06.05.8.87 2013.06.05.8.89 2013.06.05.8.90 2013.06.05.8.91 2013.06.05.8.92 2026.04.20.8.93 2026.04.20.8.94 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -25209,7 +25394,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| DFSC1 DFSC2 FA-C40R3 FA-C50R4 FA-C60R3 FA-C70R4 FA-C90R4 FA-X20R2 FA-X20R3 FA-X20R4 FA-X20R5 FA-X50R2 FA-X50R3 FA-X50R4 FA-X50R5 FA-X70R3 FA-X70R4 FA-X70R5 FA-X90R2 FA-X90R3 FA-X90R4 FA-X90R5 FA-XL130 FA-XL130R5 FA-XL170 FA-XL170R5 FA-m20r2 FA-m50r2 FA-x70 | 6.1.14 6.1.17 6.10.3 6.10.4 6.10.6 6.3.10 6.3.14 6.3.21 6.5.10 6.5.11 6.5.12 6.5.12.post3 6.5.13 6.5.2 6.5.3 6.5.4 6.5.7 6.5.8 6.5.9 6.7.2 6.7.3 6.7.4 6.7.6 6.7.7 6.7.8 6.9.2 6.9.3 6.9.4 6.9.5 6.9.6 6.9.7 
+| DFSC1 DFSC2 FA-C40R3 FA-C50R4 FA-C60R3 FA-C70R4 FA-C90R4 FA-X20R2 FA-X20R3 FA-X20R4 FA-X20R5 FA-X50R2 FA-X50R3 FA-X50R4 FA-X50R5 FA-X70R3 FA-X70R4 FA-X70R5 FA-X90R2 FA-X90R3 FA-X90R4 FA-X90R5 FA-XL130 FA-XL130R5 FA-XL170 FA-XL170R5 FA-m20 FA-m20r2 | 6.1.14 6.10.3 6.10.4 6.10.6 6.10.7 6.3.10 6.3.14 6.3.17 6.3.21 6.5.10 6.5.11 6.5.12 6.5.12.post3 6.5.13 6.5.3 6.5.7 6.5.8 6.5.9 6.7.3 6.7.4 6.7.6 6.7.7 6.7.8 6.9.1 6.9.2 6.9.3 6.9.4 6.9.5 6.9.6 6.9.7 6.9.8 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -25706,7 +25891,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| FlashBlade FlashBlade//S200 FlashBlade//S200R2 FlashBlade//S500 | Purity//FB 3.3.3 Purity//FB 4.3.11 Purity//FB 4.3.14 Purity//FB 4.3.5 Purity//FB 4.5.11 Purity//FB 4.5.14 Purity//FB 4.5.17 Purity//FB 4.6.6 Purity//FB 4.6.7 Purity//FB 4.7.10 Purity//FB 4.7.11 
+| FlashBlade FlashBlade//S200 FlashBlade//S200R2 FlashBlade//S500 | Purity//FB 4.3.11 Purity//FB 4.3.5 Purity//FB 4.5.11 Purity//FB 4.5.14 Purity//FB 4.5.17 Purity//FB 4.6.6 Purity//FB 4.6.7 Purity//FB 4.7.10 Purity//FB 4.7.11 Purity//FB 4.7.12 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -26141,13 +26326,14 @@ Modelli e versioni supportati da questo raccoglitore dati: Versioni firmware:
 
 * 6.0.3-p16-13857
 * 9.3.3-p4-29749
-* 9.4.2-p3-31101
-* 9.4.3-31180
 * 9.4.3-p1-31252
 * 9.4.3-p4-31485
 * 9.5.1-p2-36376
 * 9.5.1-p2-36376_HP72dc853
 * 9.5.2-36527
+* 9.6.0-p1-33410
+* 9.6.0-p2-33501
+* 9.6.1-p1-33607
 
 
 Prodotti supportati da questo raccoglitore dati:
@@ -26456,7 +26642,7 @@ Modelli e versioni supportati da questo raccoglitore dati:
 | Modelli | Versioni del firmware 
 
 
-| VAST Data | Versione build: release-5.3.3-hf5-2058254 Versione build: release-5.3.3-hf7-2198162 Versione build: release-5.3.3-sp3-2009124 Versione build: release-5.4.3-sp2-hf24-2483981 Versione sistema: 5.3.3.0.10090135699003918747 Versione sistema: 5.3.3.1.3876442573258902143 Versione sistema: 5.4.3.1.1891089545684643723 
+| VAST Data | Versione build: release-5.3.3-hf5-2058254 Versione build: release-5.3.3-hf7-2198162 Versione build: release-5.3.3-sp3-2009124 Versione build: release-5.4.3-sp2-hf24-2483981 Versione build: release-5.4.3-sp4-hf21-2650650 Versione build: release-5.4.6-hf6-2650431 Versione build: release-5.4.6-sp1-2679416 Versione sistema: 5.3.3.0.10090135699003918747 Versione sistema: 5.3.3.1.3876442573258902143 Versione sistema: 5.4.3.1.1891089545684643723 Versione sistema: 5.4.3.1.7633800423310192645 Versione sistema: 5.4.6.0.15923970655878004698 Versione sistema: 5.4.6.0.17320657730101426841 
 |===
 Prodotti supportati da questo raccoglitore dati:
 
@@ -26464,7 +26650,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.109+| fondazione .14+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
+.108+| fondazione .14+| Disco | Capacità (GB) | Implementato | HTTPS | Capacità utilizzata 
 
 
 | ID disco | Implementato | HTTPS | Identifica in modo univoco questo disco nell'array 
@@ -26599,16 +26785,13 @@ Prodotti supportati da questo raccoglitore dati:
 | Tipo | Spacco | HTTPS |  
 
 
-.7+| Quota | Limite di capacità rigido (MB) | Implementato | HTTPS | quantità massima di spazio su disco consentita per l'obiettivo della quota (limite rigido) 
+.6+| Quota | Limite di capacità rigido (MB) | Implementato | HTTPS | quantità massima di spazio su disco consentita per l'obiettivo della quota (limite rigido) 
 
 
 | ID volume interno | Implementato | HTTPS |  
 
 
 | ID quota | Implementato | HTTPS | ID univoco della quota 
-
-
-| Limite di capacità software (MB) | Implementato | HTTPS | Quantità massima di spazio su disco consentita per l'obiettivo di quota 
 
 
 | Tipo | Spacco | HTTPS |  
@@ -27069,9 +27252,7 @@ API di gestione utilizzate da questo raccoglitore dati:
 
 Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
 
-* VMware vCenter Server 8.0.2 build-24721900
 * VMware vCenter Server 8.0.3 build-24322831
-* VMware vCenter Server 8.0.3 build-25413364
 
 
 Prodotti supportati da questo raccoglitore dati:
@@ -27080,7 +27261,7 @@ Prodotti supportati da questo raccoglitore dati:
 | Prodotto | Categoria | Caratteristica/attributo | Stato | Protocollo utilizzato | Informazioni aggiuntive 
 
 
-.74+| fondazione .8+| Archivio dati | Capacità | Implementato | Servizi Web | Snapshot Capacità utilizzata in MB 
+.73+| fondazione .8+| Archivio dati | Capacità | Implementato | Servizi Web | Snapshot Capacità utilizzata in MB 
 
 
 | MOID | Implementato | Servizi Web |  
@@ -27161,7 +27342,7 @@ Prodotti supportati da questo raccoglitore dati:
 | IP del centro virtuale | Implementato | Servizi Web |  
 
 
-.7+| Disco virtuale | Capacità | Implementato | Servizi Web | Snapshot Capacità utilizzata in MB 
+.6+| Disco virtuale | Capacità | Implementato | Servizi Web | Snapshot Capacità utilizzata in MB 
 
 
 | OID dell'archivio dati | Implementato | Servizi Web |  
@@ -27174,9 +27355,6 @@ Prodotti supportati da questo raccoglitore dati:
 
 
 | Tipo | Spacco | Servizi Web |  
-
-
-| Capacità utilizzata | Implementato | Servizi Web | capacità utilizzata per la segnalazione (MB) 
 
 
 | Capacità utilizzata | Implementato | Servizi Web |  
@@ -27503,7 +27681,6 @@ Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
 * VMware vCenter Server 6.5.0 build-14020092
 * VMware vCenter Server 6.5.0 build-22499743
 * VMware vCenter Server 6.7.0 build-10244857
-* VMware vCenter Server 6.7.0 build-14070654
 * VMware vCenter Server 6.7.0 build-15129973
 * VMware vCenter Server 6.7.0 build-17137327
 * VMware vCenter Server 6.7.0 build-19299595
@@ -27529,14 +27706,15 @@ Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
 * VMware vCenter Server 7.0.3 build-24614210
 * VMware vCenter Server 7.0.3 build-24730281
 * VMware vCenter Server 7.0.3 build-24927011
+* VMware vCenter Server 7.0.3 build-25606036
 * VMware vCenter Server 8.0.0 build-20519528
 * VMware vCenter Server 8.0.1 build-21560480
 * VMware vCenter Server 8.0.1 build-21860503
 * VMware vCenter Server 8.0.1 build-22368047
 * VMware vCenter Server 8.0.2 build-22617221
 * VMware vCenter Server 8.0.2 build-23504390
-* VMware vCenter Server 8.0.2 build-23929136
 * VMware vCenter Server 8.0.2 build-24321653
+* VMware vCenter Server 8.0.2 build-25624321
 * VMware vCenter Server 8.0.3 build-24022515
 * VMware vCenter Server 8.0.3 build-24262322
 * VMware vCenter Server 8.0.3 build-24305161
@@ -27554,6 +27732,7 @@ Modelli e versioni supportati da questo raccoglitore dati: Versioni API:
 * VMware vCenter Server 9.1.0.0100.25417926
 * VMware vCenter Server 9.1.0.0200.25573614
 * VMware vCenter Server 9.1.0.0300.25629530
+* VMware vCenter Server 9.1.1.0.25712839
 
 
 Prodotti supportati da questo raccoglitore dati:
