@@ -197,6 +197,9 @@ Elenco alfabetico dei Data Collector supportati da Data Infrastructure Insights:
 | link:task_dc_na_storagegrid.html["NetApp StorageGRID"] | Infrastruttura 
 
 
+| link:task_dc_nvidia_bcm_rest.html["NVIDIA Base Command Manager REST"] | Infrastruttura 
+
+
 | link:task_dc_nutanix.html["Serie Nutanix NX"] | Infrastruttura 
 
 
